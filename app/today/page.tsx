@@ -19,6 +19,7 @@ import {
   resolveOutingAnchor,
   type OutingPlan,
 } from '@/lib/outing-plan';
+import { getVerifiedStores } from '@/lib/station-verified-stores';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import { TodayConditionForm } from '@/components/today/TodayConditionForm';
@@ -559,9 +560,23 @@ export default async function TodayPage({ searchParams }: Props) {
 
   // ?slot=lunch: お昼スロット単体ビュー（子連れで入れる店一覧。最多需要）
   if (isTokyoAnchor && slotParam === 'lunch') {
-    const anchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
+    const baseAnchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
+    // 区起点（駅の指定なし）は、プランと同じ決め方でお昼を探す駅を1つ決め、その駅の実在店だけを並べる
+    const wardLunchStation =
+      baseAnchor && !baseAnchor.stationSlug
+        ? buildOutingPlan({
+            ward: wardParam,
+            age: query.age as AgeTag | undefined,
+            weather: query.weather as Weather | undefined,
+            morningVariant: num(sp.vm),
+          })?.lunchStation
+        : undefined;
+    const anchor =
+      baseAnchor && wardLunchStation
+        ? { ...baseAnchor, stationSlug: wardLunchStation.slug, stationName: wardLunchStation.name }
+        : baseAnchor;
     if (anchor) {
-      const { ward: wardRest, chain } = lunchCandidates(
+      const { ward: wardRestAll, chain } = lunchCandidates(
         anchor.areaKey,
         anchor.regionLabel,
         {
@@ -570,6 +585,8 @@ export default async function TodayPage({ searchParams }: Props) {
         },
         anchor.stationSlug,
       );
+      // 区起点では、実在を確かめていない区内の実店舗スポットは並べない
+      const wardRest = wardLunchStation ? [] : wardRestAll;
       // 駅近の個人店（チェーンより先に出す）。/spot ページは無いので駅ページの個人店一覧へ
       const indieRests = indieLunchCandidates(anchor.stationSlug).map(indieToLunchSpot);
       const indieHref = anchor.stationSlug
@@ -589,13 +606,21 @@ export default async function TodayPage({ searchParams }: Props) {
               </nav>
             </div>
             <LunchListView
-              anchorLabel={anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel}
+              anchorLabel={
+                wardLunchStation
+                  ? `${anchor.regionLabel}・${wardLunchStation.name}駅`
+                  : anchor.stationName
+                    ? `${anchor.stationName}駅`
+                    : anchor.regionLabel
+              }
               wardName={anchor.regionLabel}
               wardRest={wardRest}
               chain={chain}
               ageLabel={ageLabel}
               indies={indieRests}
               indieHref={indieHref}
+              chainVerifiedAt={anchor.stationSlug ? getVerifiedStores(anchor.stationSlug)?.verifiedAt : undefined}
+              chainHref={anchor.stationSlug ? `/station/${anchor.stationSlug}#section-chains` : undefined}
             />
             <KkFooter />
           </div>

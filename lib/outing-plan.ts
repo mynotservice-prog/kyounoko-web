@@ -17,7 +17,7 @@
  *   - 午後   : 別spot→おうちミニプラン(531本) で必ず1件
  */
 
-import { WARD_NAMES, type TokyoWard } from './tokyo-stations';
+import { WARD_NAMES, getStationsByWard, type TokyoWard } from './tokyo-stations';
 import {
   findStationBySlug,
   getStationCoords,
@@ -35,8 +35,14 @@ import {
   type AgeTag,
 } from './spots';
 import type { AreaSlug } from './area';
-import { pickTopPlan, type PlanMeta } from './plans';
+import { getAllPlanMetas, pickTopPlan, type PlanMeta } from './plans';
 import type { Weather } from './types';
+import { getVerifiedStores, type VerifiedStore } from './station-verified-stores';
+import { getSpotHours, isSpotOpenOn, spotHoursLine } from './spot-hours';
+import { isSpotAvailableNow } from './spot-temp-closed';
+import { SPOT_CLOSED } from './spot-closed';
+import { getTokyoNow } from './date';
+import { getSeasonState, getSpotSeason } from './spot-season';
 import {
   getIndieRestaurantsByStation,
   INDIE_GENRE_LABEL,
@@ -75,6 +81,8 @@ export type OutingSlot = {
   plan?: PlanMeta;
   /** お昼スロットの子連れ設備（ベビーチェア等） */
   facets?: string[];
+  /** 午前・午後の行き先の、公式の休み・営業時間（lib/spot-hours.ts にあるスポットだけ） */
+  hoursLine?: string;
   /** 前スロットからの移動表示 */
   move?: OutingMove;
   tier: CoherenceTier;
@@ -104,6 +112,8 @@ export type OutingPlan = {
     regionLabel: string;
     scale?: string;
   };
+  /** 区起点のとき、お昼を探した駅（駅起点では undefined） */
+  lunchStation?: { slug: string; name: string };
   slots: OutingSlot[];
   /** 全体の質: ideal=午前が同駅 / ward=同地域 / mixed=広域フォールバック含む */
   coverage: 'ideal' | 'ward' | 'mixed';
@@ -116,6 +126,26 @@ function areaKeyOf(st: AnyStation): string {
 }
 
 const NON_RESTAURANT = (s: Spot) => s.category !== 'restaurant';
+
+const WATER_PLAY_NAME = /じゃぶじゃぶ|ジャブジャブ|水遊び場|プール$/;
+
+/**
+ * 季節ものを、時期外に案内しない。
+ * - 会期データ（lib/spot-season.ts）があるスポットは、いま会期中の窓が1つも無ければ外す。
+ * - 収穫体験・季節カテゴリ（梨狩り・じゃぶじゃぶ池など）は、会期データか営業期間（lib/spot-hours.ts の
+ *   openSeason）で「いま営業中」と分かるものだけ出す。時期が分からないものは勧めない。
+ */
+function inSeasonNow(s: Spot): boolean {
+  const windows = getSpotSeason(s.name);
+  if (windows.length) return windows.some((w) => getSeasonState(w) === 'open');
+  if (s.category === 'harvest' || s.category === 'seasonal') return Boolean(getSpotHours(s.name)?.openSeason);
+  // 名前が水遊び場で、営業期間のデータが無いもの（公式で期間を読めなかった池）は、6〜9月の外では出さない
+  if (WATER_PLAY_NAME.test(s.name) && !getSpotHours(s.name)?.openSeason) {
+    const m = getTokyoNow().month;
+    return m >= 6 && m <= 9;
+  }
+  return true;
+}
 
 function ageOk(s: Spot, age?: AgeTag): boolean {
   if (!age) return true;
@@ -168,10 +198,18 @@ function pickSpotCascade(
   viaStationName?: string;
   distanceKm?: number;
 } | null {
+  // 今日（JST）が定休日・営業期間外のスポット、長期休館中・閉館済みのスポットは案内しない。
+  // 休みのデータが無いスポットは外さない（開いているとも休みとも分からない）。
+  const today = getTokyoNow();
+  const todayIso = `${today.year}-${String(today.month).padStart(2, '0')}-${String(today.day).padStart(2, '0')}`;
   const filt = (list: Spot[]) =>
     list.filter(
       (s) =>
         NON_RESTAURANT(s) &&
+        !SPOT_CLOSED[s.name] &&
+        isSpotAvailableNow(s.name, todayIso) &&
+        isSpotOpenOn(s.name, today) &&
+        inSeasonNow(s) &&
         ageOk(s, q.age) &&
         (!strictWeather || weatherOk(s, q.weather)) &&
         !exclude.has(s.name),
@@ -401,10 +439,81 @@ export function lunchCandidates(
   // 近接の登録店が無い駅向け。「家族で入れるファミレス」を先頭に出す（IKEA等の特殊店は降格）。
   // 駅ごとに先頭を回転させ、どの空白駅でも同じ店ばかりにならないようにする。
   const chainRank = chainRankFor(anchorSlug);
-  const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(
+  const chainAll = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(
     (a, b) => chainRank(a) - chainRank(b) || byFacets(a, b),
   );
+  // 照合済みの駅では、徒歩10分圏に実在を確認できたチェーンだけを、店名・距離つきで返す。
+  // （以前は実在を確かめずに「どの駅にもある」前提で出していた。2026-10 の照合で、駅ページに
+  //  表示していたチェーンのうち実在したのは3〜4割だった。）
+  const chain = isStationChainVerified(anchorSlug)
+    ? chainAll.flatMap((s) => {
+        const store = nearestVerifiedStore(anchorSlug, s.name);
+        return store ? [withVerifiedStore(s, store)] : [];
+      })
+    : chainAll;
   return { ward, chain };
+}
+
+// 「どの駅にもある」前提のチェーン枠（TOKYO_RESTAURANTS の ward:'複数'）→ 駅ページのチェーンslug。
+// 駅ごとの実在確認（lib/station-verified-stores.ts）と突き合わせるための対応表。
+// ここに無いチェーン（IKEA・ビッグボーイ・和食さと 等）は実在を確かめる手段が無いので、
+// 照合済みの駅では候補に出さない。
+const CHAIN_SPOT_TO_SLUG: Record<string, string> = {
+  ココス: 'cocos',
+  ガスト: 'gusto',
+  サイゼリヤ: 'saizeriya',
+  くら寿司: 'kura-sushi',
+  スシロー: 'sushiro',
+  ジョナサン: 'jonathan',
+  デニーズ: 'denny-s',
+  バーミヤン: 'bamiyan',
+  ロイヤルホスト: 'royal-host',
+  びっくりドンキー: 'bikkuri-donkey',
+  マクドナルド: 'mcdonalds',
+  モスバーガー: 'mos-burger',
+  ケンタッキーフライドチキン: 'kfc',
+  フレッシュネスバーガー: 'freshness-burger',
+  リンガーハット: 'ringer-hut',
+  丸亀製麺: 'marugame',
+  なか卯: 'nakau',
+  松屋: 'matsuya',
+  すき家: 'sukiya',
+  吉野家: 'yoshinoya',
+  ミスタードーナツ: 'mister-donut',
+  焼肉きんぐ: 'yakiniku-king',
+  しゃぶ葉: 'shabu-yo',
+  かっぱ寿司: 'kappa-sushi',
+  はま寿司: 'hama-sushi',
+  コメダ珈琲店: 'komeda',
+};
+
+/** 照合済みの駅で、そのチェーンのいちばん近い実在店（無ければ undefined）。 */
+function nearestVerifiedStore(anchorSlug: string | undefined, chainSpotName: string): VerifiedStore | undefined {
+  if (!anchorSlug) return undefined;
+  const chainSlug = CHAIN_SPOT_TO_SLUG[chainSpotName];
+  if (!chainSlug) return undefined;
+  // stores はチェーンごとに駅から近い順で並んでいる（scripts/station-verify/gen_ts.py）
+  return getVerifiedStores(anchorSlug)?.stores.find((st) => st.chain === chainSlug);
+}
+
+/** その駅が公式店舗検索で照合済みか（照合済みなら、実在を確認できたチェーンだけを候補にする）。 */
+export function isStationChainVerified(anchorSlug: string | undefined): boolean {
+  return Boolean(anchorSlug && getVerifiedStores(anchorSlug));
+}
+
+/** 実在店の店名・距離を添えたチェーン枠（スポット名は変えない＝/spot へのリンクはそのまま）。 */
+function withVerifiedStore(s: Spot, store: VerifiedStore): Spot {
+  return {
+    ...s,
+    city: `${store.name}（${store.distance}）`,
+    // タグ（ベビーチェア等）はチェーン共通の目安。store.fac は、その店について公式の店舗検索が
+    // 「あり」と表示している項目（無い項目は「無い」ではなく、公式に表示が無いだけ）。
+    note:
+      `${store.name}（${store.distance}・${store.address}）。` +
+      (store.fac && store.fac.length
+        ? `この店の公式ページにある設備: ${store.fac.join('・')}。ほかの設備は店舗によって違うので、行く前に公式ページでご確認を。`
+        : '設備は店舗によって違うので、行く前に公式ページでご確認を。'),
+  };
 }
 
 // チェーンフォールバックの優先順（家族で入れる定番ファミレス・回転寿司・麺類）。
@@ -456,12 +565,41 @@ export function indieLunchScore(r: IndieRestaurant): number {
   return score;
 }
 
-/** アンカー駅の個人店を子連れ向きスコア順で返す。 */
+// 子連れの昼ごはんに勧めない店（店名で判定）。ホットペッパーの「お子様連れOK」は居酒屋・バー・
+// ビアレストラン・ホルモン焼きにも付くので、「今日の流れ」では名前に酒場系の語が入る店を出さない。
+// 駅ページの個人店一覧はそのまま（掲載情報どおりに載せる）。「酒家」は中華料理店の屋号なので除かない。
+const KANA = 'ァ-ヶー';
+const INDIE_NOT_FAMILY_LUNCH = new RegExp(
+  [
+    'ビール|ビア(?:ホール|ガーデン|バー|ダイニング|レストラン|カフェ)|デリリウム',
+    '\\b(?:BEER|Beer|beer|BAR|Bar|bar|PUB|Pub|WINE|Wine|BBQ)\\b',
+    `(?<![${KANA}])(?:バル|バー|パブ)(?![${KANA}])`,
+    '(?:パスタ|ピザ|肉|魚|海鮮|チーズ|スペイン|イタリアン|大衆|和)バル',
+    'ダイニングバー|ワインバー|スポーツバー|酒(?!家)|ワイン|ホルモン|やきとり|焼鳥|焼き鳥|もつ鍋|もつ焼',
+    'バーベキュー|シーシャ|スナック|立ち飲み|立呑|ダーツ|カラオケ',
+  ].join('|'),
+);
+// 説明文が酒・宴会を売りにしている店は、外さずに後ろへ回す
+const INDIE_DRINK_DESC = /飲み放題|お酒|ビール|ワイン|日本酒|地酒|焼酎|カクテル|宴会|女子会|合コン|二次会/;
+
+/** 「今日の流れ」のお昼に出してよい個人店か。 */
+export function isFamilyLunchIndie(r: IndieRestaurant): boolean {
+  return !INDIE_NOT_FAMILY_LUNCH.test(r.name);
+}
+
+/** アンカー駅の個人店を子連れ向きの順で返す（酒場系は除く）。 */
 export function indieLunchCandidates(anchorSlug: string | undefined): IndieRestaurant[] {
   if (!anchorSlug) return [];
-  return [...getIndieRestaurantsByStation(anchorSlug)].sort(
-    (a, b) => indieLunchScore(b) - indieLunchScore(a) || a.name.localeCompare(b.name, 'ja'),
-  );
+  const rank = (r: IndieRestaurant) =>
+    indieLunchScore(r) +
+    (r.childNote?.includes('歓迎') ? 2 : 0) -
+    (INDIE_DRINK_DESC.test(r.description ?? '') ? 2 : 0);
+  return getIndieRestaurantsByStation(anchorSlug)
+    .filter(isFamilyLunchIndie)
+    .sort(
+      (a, b) =>
+        rank(b) - rank(a) || (a.distanceM ?? 9999) - (b.distanceM ?? 9999) || a.name.localeCompare(b.name, 'ja'),
+    );
 }
 
 /** 個人店を表示用の擬似 Spot に変換する（/spot ページは無いので slug は作らない）。 */
@@ -480,34 +618,118 @@ export function indieToLunchSpot(r: IndieRestaurant): Spot {
   };
 }
 
+/**
+ * 区を起点にしたとき（駅の指定なし）の、お昼を探す駅を決める。
+ *
+ * 以前は区内の「実店舗スポット」（lib/spots.ts の TOKYO_RESTAURANTS）から選んでいたが、これは店舗の
+ * 実在を確かめていないデータで、「レストラン◯◯（△△周辺ほか）」のような場所の定まらない枠が出ていた。
+ * 駅を1つ決めて、駅起点と同じ「ホットペッパー掲載の個人店＋公式で実在を確認したチェーン店」から選ぶ。
+ * 駅は、午前の行き先の最寄り駅 → 区内の駅（子連れ向き・規模の大きい順）の順に、候補がある最初の駅。
+ */
+export function resolveWardLunchStation(
+  ward: TokyoWard | undefined,
+  morningSpot?: Spot,
+): { slug: string; name: string } | undefined {
+  if (!ward) return undefined;
+  const cands: string[] = [];
+  if (morningSpot?.nearestStation) {
+    const slug = findStationBySlug(morningSpot.nearestStation)
+      ? morningSpot.nearestStation
+      : resolveStationSlugByName(morningSpot.nearestStation);
+    if (slug) cands.push(slug);
+  }
+  const scaleRank = { terminal: 0, major: 1, minor: 2 } as const;
+  for (const st of [...getStationsByWard(ward)].sort(
+    (a, b) => Number(b.familyFriendly) - Number(a.familyFriendly) || scaleRank[a.scale] - scaleRank[b.scale],
+  )) {
+    cands.push(st.slug);
+  }
+  for (const slug of cands) {
+    const st = findStationBySlug(slug);
+    if (!st) continue;
+    const hasChain = Boolean(
+      getVerifiedStores(slug)?.stores.some((x) => Object.values(CHAIN_SPOT_TO_SLUG).includes(x.chain)),
+    );
+    if (indieLunchCandidates(slug).length || hasChain) return { slug, name: st.name };
+  }
+  return undefined;
+}
+
 function pickLunch(
   areaKey: string,
   regionLabel: string,
   q: OutingQuery,
   variant = 0,
   anchorSlug?: string,
+  /** 区起点で、お昼だけ駅を決めて探すときの駅名（指定時は実在未確認の候補へ落とさない） */
+  wardLunchStationName?: string,
 ): { spot: Spot; tier: CoherenceTier; href?: string; moveText?: string } | null {
   const at = <T,>(list: T[]) => list[((variant % list.length) + list.length) % list.length];
-  // ① 駅近の個人店（駅×個人店データ・子連れ設備スコア順）。チェーンより先に出す。
+  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
+  const verified = isStationChainVerified(anchorSlug);
+  // 照合済みの駅のチェーンは「この駅の徒歩10分圏に実在する店」なので、駅近の候補として扱える。
+  const stationChains = verified ? chain : [];
+  type Pick = { spot: Spot; tier: CoherenceTier; href?: string; moveText?: string };
+  // 区起点のときは「◯◯駅の近く」と駅名を添える（プランの起点が駅ではないため）
+  const near = (text?: string) => (wardLunchStationName ? `${wardLunchStationName}駅の近く${text ? `・${text}` : ''}` : text);
+  const chainPick = (sp: Spot): Pick => ({
+    spot: sp,
+    tier: 'station',
+    href: `/station/${anchorSlug}#section-chains`,
+    moveText: near(sp.city),
+  });
+  // ① 駅近の個人店（駅×個人店データ・子連れ設備スコア順）。最初の候補は個人店のまま。
+  //    「別の候補」を押したときは、実在を確認した駅近のファミリー向けチェーンと交互に出す。
   const indies = indieLunchCandidates(anchorSlug);
   if (indies.length) {
-    const r = at(indies);
-    return {
+    const indiePicks: Pick[] = indies.map((r) => ({
       spot: indieToLunchSpot(r),
       tier: 'station',
       href: `/station/${anchorSlug}#section-indies`,
-      moveText: r.area,
-    };
+      moveText: near(r.area),
+    }));
+    const chainPicks = stationChains.slice(0, 6).map(chainPick);
+    const mixed: Pick[] = [];
+    for (let i = 0; i < Math.max(indiePicks.length, chainPicks.length); i++) {
+      if (indiePicks[i]) mixed.push(indiePicks[i]);
+      if (chainPicks[i]) mixed.push(chainPicks[i]);
+    }
+    return at(mixed);
   }
-  // ② 区/市内の実店舗スポット → ③ 全国ファミリー向けチェーン
-  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
+  // ② 駅近に実在を確認したチェーン → ③ 区/市内の実店舗スポット → ④ 全国ファミリー向けチェーン（未照合の駅のみ）
+  if (stationChains.length) return chainPick(at(stationChains));
+  // 区起点では、実在を確かめていない候補（区内の実店舗スポット・全国チェーンの一般枠）へは落とさない
+  if (wardLunchStationName) return null;
   if (ward.length) return { spot: at(ward), tier: 'ward' };
   if (chain.length) return { spot: at(chain), tier: 'chain' };
   return null;
 }
 
 /** 午後のおうちミニプラン（休憩・お昼寝考慮）。 */
+// 天気・時間帯の条件つきで書かれたプラン（「寒い日の…」「雨の日の…」「…夜は」）
+// と、行事・季節が決まっているプラン（「ひな祭り当日…」「ハロウィン…」）。条件の指定が無いときは出さない
+const CONDITIONAL_PLAN_TEXT =
+  /寒い|冷え|雨の日|雨で|雨天|猛暑|暑い日|真夏|真冬|夜|夕食|寝る前|朝|お風呂|入浴|ひな祭り|ハロウィン|クリスマス|正月|節分|七夕|こどもの日|母の日|父の日|敬老|お月見|花見|お盆|年末|年始|バレンタイン|イースター|誕生日|当日|春|夏|秋|冬/;
+
 function pickHomePlan(q: OutingQuery): PlanMeta | null {
+  // 天気の指定が無いとき、天気の条件つきプラン（weather: ['cold'] の「寒い日の入浴優先…」など）を
+  // 出さない。pickTopPlan は天気未指定だと天気を絞らないので、条件つきのものが先頭に来ることがあった。
+  // 午後の枠なので、夜・朝の段取りを書いたプランも外す。
+  if (!q.weather || q.weather === 'any') {
+    const general = getAllPlanMetas()
+      .filter(
+        (p) =>
+          p.kind !== 'meal' &&
+          p.place.includes('home') &&
+          // 年齢の指定が無いときは、1つの年齢だけに向けたプラン（「ハイハイ…」など）を出さない
+          (q.age ? p.ageRanges.includes(q.age) : p.ageRanges.length >= 2) &&
+          (p.weather.includes('any') || p.weather.length >= 3) &&
+          !CONDITIONAL_PLAN_TEXT.test(`${p.title} ${p.shortAnswer}`),
+      )
+      .sort((a, b) => Math.abs(a.durationMin - 60) - Math.abs(b.durationMin - 60) || a.id.localeCompare(b.id));
+    // 合うものが無ければプランを付けず、枠の既定文（お昼寝・休憩）を出す
+    return general[0] ?? null;
+  }
   const m = pickTopPlan({
     age: q.age,
     place: 'home',
@@ -622,13 +844,18 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
+      hoursLine: spotHoursLine(morning.spot.name) ?? undefined,
       move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName, morning.distanceKm),
       tier: morning.tier,
     });
   }
 
   // ---- お昼: たべる ----
-  const lunch = pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0, stationSlug);
+  // 区起点（駅の指定なし）は、午前の行き先の最寄り駅か区内の駅を1つ決めて、その駅の実在店から選ぶ
+  const wardLunchStation = stationSlug ? undefined : resolveWardLunchStation(q.ward, morning?.spot);
+  const lunch = wardLunchStation
+    ? pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0, wardLunchStation.slug, wardLunchStation.name)
+    : pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0, stationSlug);
   if (lunch) {
     used.add(lunch.spot.name);
     slots.push({
@@ -674,6 +901,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
+      hoursLine: spotHoursLine(afternoon.spot.name) ?? undefined,
       move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName, afternoon.distanceKm),
       tier: afternoon.tier,
     });
@@ -697,6 +925,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
 
   return {
     anchor: { stationSlug, stationName, areaKey, regionLabel, scale },
+    lunchStation: wardLunchStation,
     slots,
     coverage,
   };

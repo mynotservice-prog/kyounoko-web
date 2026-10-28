@@ -18,6 +18,7 @@ import { TOKYO_STATIONS, type TokyoStation } from './tokyo-stations';
 import { KANSAI_STATIONS } from './kansai-stations';
 import { KANAGAWA_STATIONS } from './kanagawa-stations';
 import { SAICHI_STATIONS } from './saitama-chiba-stations';
+import { STATION_VERIFIED_STORES } from './station-verified-stores';
 
 export type ChainCategory =
   | 'family-restaurant'  // ファミレス
@@ -420,7 +421,8 @@ export const CHAINS: Chain[] = [
   },
   {
     slug: 'lotteria',
-    name: 'ロッテリア',
+    // 公式の店舗検索はゼッテリアに統合されている（lotteria.jp は zetteria.jp へ転送・2026-10-08確認）
+    name: 'ゼッテリア（ロッテリア）',
     category: 'fast-food',
     stroller: 'ok',
     kidsMenu: true,
@@ -1627,6 +1629,13 @@ const STATION_CHAIN_EXCLUDE: Record<string, readonly string[]> = {
 };
 
 export function getChainsForStation(stationSlug: string): Chain[] {
+  // 公式店舗検索で全チェーンを照合済みの駅は、実在を確認できたチェーンだけを返す
+  // （lib/station-verified-stores.ts）。一律付与・明示マッピングより照合結果を優先する。
+  const verified = STATION_VERIFIED_STORES[stationSlug];
+  if (verified) {
+    const verifiedSlugs = new Set(verified.stores.map((s) => s.chain));
+    return CHAINS.filter((c) => verifiedSlugs.has(c.slug));
+  }
   const explicit = STATION_CHAIN_MAPPING[stationSlug];
   if (!explicit && !UBIQUITY_FALLBACK_STATION_SLUGS.has(stationSlug)) return [];
   // 明示マッピングに加え、ubiquity で全駅／主要駅に自動付与してランチ選択肢を底上げする。
@@ -1725,10 +1734,11 @@ export function getStationWithChains(
 }
 
 /**
- * 全駅×チェーンの総レコード数（参考値）。
+ * 全駅×チェーンの総レコード数。実際にページへ出しているチェーンを数える
+ * （照合済みの駅は実在を確認できたチェーンだけ）。
  */
-export const TOTAL_STATION_CHAIN_RECORDS: number = Object.values(STATION_CHAIN_MAPPING).reduce(
-  (sum, arr) => sum + arr.length,
+export const TOTAL_STATION_CHAIN_RECORDS: number = [...STATION_BY_SLUG.keys()].reduce(
+  (sum, slug) => sum + getChainsForStation(slug).length,
   0,
 );
 

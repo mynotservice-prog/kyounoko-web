@@ -105,6 +105,12 @@ export type SpotVerification = {
 
 export type Spot = {
   name: string;
+  /**
+   * URL slug の固定値。ふつうは持たない（spotToSlug が name・市区町村から作る）。
+   * 上書きで別の施設に差し替わった枠だけ、name を差し替え後に直しても URL が変わらないようにここへ入れる
+   * （このファイル末尾の「差し替え枠の名寄せ」を参照）。手で書かない。
+   */
+  slug?: string;
   category: SpotCategory;
   place: SpotPlace;      // 屋内なら雨天OK
   ages: AgeTag[];        // 特に楽しめる年齢層
@@ -677,7 +683,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '菓子屋横丁の駄菓子・芋スイーツが安く、子どもが喜ぶ。蔵造りの街並み散策',
     },
     {
-      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '【長期休館中】大規模リニューアル工事のため2025年9月1日〜2027年3月末（予定）まで休館・記念館駐車場も閉鎖（2026-10-02 公式で確認）。航空公園駅前、実機展示と大型映像', budget: 'low',
+      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '【長期休館中】大規模改修工事のため2025年9月1日から休館・2027年5月1日リニューアルオープン予定（2026-10-28 公式で確認）。航空公園駅前、実機展示と大型映像', budget: 'low',
       pricing: { adult: '520円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -3782,6 +3788,7 @@ export function getSpotsForRegion(areaKey: string, regionLabel: string): Spot[] 
  * 例: 'よみうりランド (川崎市)' → 'yomiuri-land-kawasaki-1a2b'
  */
 export function spotToSlug(spot: Spot, area: AreaSlug | string): string {
+  if (spot.slug) return spot.slug;
   const base = spot.name
     .replace(/[（(].*?[）)]/g, '') // 括弧書き除外
     .trim();
@@ -5088,3 +5095,38 @@ for (const { spot, slug } of allSpotsForMerge()) {
   }
 }
 
+// ============================================================================
+// 差し替え枠の名寄せ（必ずこのファイルの最後に置く）
+// ============================================================================
+/**
+ * 上書きで別の施設に差し替わっている枠は、素データの name・市区町村が**元の施設のまま**残る。
+ * スポットページは上書き後の施設を表示するが、SPOTS を直接読む一覧・おすすめ枠
+ * （「今日の流れ」・駅ページの近くのスポット・ランキングなど）は元の施設名で案内していた。
+ * 実例（2026-10-08）: 荒川遊園地前駅の「今日の流れ」に「0123吉祥寺・0123はらっぱ」（武蔵野市の施設）が出て、
+ * リンク先はあらかわ遊園のページ。「上柚木公園 じゃぶじゃぶ池」は実在しない（公園に水遊び施設は無い）。
+ *
+ * ここで、差し替え枠の素データそのものを上書き後の施設に直す（name・市区町村・カテゴリ・屋内外・
+ * 対象年齢・説明・料金帯）。URL は変えない（slug を固定する）。name を鍵にした素データの継承
+ * （アクセス・訪問レポート・確認日など）は上で済んでいるので、順番を入れ替えないこと。
+ *
+ * 対象 = 自動判定の差し替え枠（REBRANDED_SPOT_SLUGS）＋ 下の手動リスト。
+ * 新しく name を変える上書きを足したら `node scripts/check-spot-identity.mjs` が止める。
+ */
+const IDENTITY_SWAP_EXTRA_SLUGS: readonly string[] = [
+  // 「上柚木公園 じゃぶじゃぶ池」→「上柚木公園」。同じ市内なので自動判定に掛からないが、じゃぶじゃぶ池は実在しない
+  '-upgm',
+];
+const IDENTITY_FIELDS = ['name', 'city', 'ward', 'category', 'place', 'ages', 'note', 'budget'] as const;
+
+/** 差し替え枠の slug（検査スクリプト用）。 */
+export const IDENTITY_SWAP_SLUGS: ReadonlySet<string> = new Set([...REBRANDED_SPOT_SLUGS, ...IDENTITY_SWAP_EXTRA_SLUGS]);
+
+for (const { spot, slug } of allSpotsForMerge()) {
+  if (!IDENTITY_SWAP_SLUGS.has(slug)) continue;
+  const ov = BUNDLED_SPOT_OVERRIDES[slug];
+  if (!ov) continue;
+  spot.slug = slug;
+  for (const f of IDENTITY_FIELDS) {
+    if (ov[f] !== undefined) (spot as Record<string, unknown>)[f] = ov[f];
+  }
+}
