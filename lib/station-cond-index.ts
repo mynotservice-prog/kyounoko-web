@@ -16,12 +16,40 @@
 // 表示実績のある外食系の面は、404 にせず駅トップへ301する（shouldRedirectStationCondition）。
 import { STATION_COND_INDEX_ALLOWLIST } from './station-cond-index-allowlist';
 import { STATION_COND_DEMAND } from './station-cond-demand';
+import { STATION_COND_LIVE_2026_10 } from './station-cond-live-2026-10';
+import { STATION_COND_ZERO_TRIAL } from './station-cond-zero-trial';
+import { STATION_COND_LOST_2026_10 } from './station-cond-lost-2026-10';
+import { getConditionStores } from './station-cond-stores';
 import type { ConditionKind, StationConditionSlug } from './station-conditions';
 
 /** 内容充実度ゲートの最小 matched 件数。 */
 export const STATION_CONDITION_MIN_MATCHES = 3;
 
 export type StationScale = 'terminal' | 'major' | 'minor';
+
+/**
+ * 店単位で作り直した面（照合済みの575駅×6条件・lib/station-cond-stores.ts）の配信の型（2026-10-28・Phase 2）。
+ *   'full'  … 主要駅・ターミナル駅（または表示実績の救済リスト）で、根拠のある店が1km以内に3店以上
+ *   'few'   … 店が少ない（0〜2店）が残す面: 2026-10-28 時点で配信していた面／同日に外れた面で表示実績があり1店以上／店0の試験面
+ *   null    … 配信しない
+ *   undefined … 作り直しの対象外（従来の判定を使う）
+ * 設計: docs/station-cond-rebuild-2026-10.md §5〜§6（配信の基準は1km以内に3店以上・社長決定）。
+ */
+export function stationConditionServeMode(
+  slug: string,
+  condition: string,
+  scale: StationScale | undefined,
+): 'full' | 'few' | null | undefined {
+  const cs = getConditionStores(slug, condition);
+  if (!cs) return undefined;
+  const key = `${slug}/${condition}`;
+  const significant = scale === 'terminal' || scale === 'major' || STATION_COND_INDEX_ALLOWLIST.has(key);
+  if (significant && cs.within1000 >= STATION_CONDITION_MIN_MATCHES) return 'full';
+  if (STATION_COND_LIVE_2026_10.has(key)) return 'few';
+  if (STATION_COND_LOST_2026_10.has(key) && STATION_COND_DEMAND.has(key) && cs.within1000 >= 1) return 'few';
+  if (STATION_COND_ZERO_TRIAL.has(key)) return 'few';
+  return null;
+}
 
 export function isStationConditionIndexable(
   slug: string,
@@ -31,6 +59,9 @@ export function isStationConditionIndexable(
   scale: StationScale | undefined,
 ): boolean {
   if (kind === 'spot') return false;
+  // 店単位で作り直した面は、チェーン単位の件数（matchedCount）ではなく根拠のある店の数で決める
+  const mode = stationConditionServeMode(slug, condition, scale);
+  if (mode !== undefined) return mode !== null;
   if (STATION_COND_INDEX_ALLOWLIST.has(`${slug}/${condition}`)) return true;
   const significant = scale === 'terminal' || scale === 'major';
   return significant && matchedCount >= STATION_CONDITION_MIN_MATCHES;
@@ -52,6 +83,10 @@ export function shouldRedirectStationCondition(
   kind: ConditionKind,
   scale: StationScale | undefined,
 ): boolean {
+  if (kind !== 'spot') {
+    const mode = stationConditionServeMode(slug, condition, scale);
+    if (mode !== undefined) return !mode && STATION_COND_DEMAND.has(`${slug}/${condition}`);
+  }
   if (kind !== 'spot' && matchedCount > 0 && isStationConditionIndexable(slug, condition, matchedCount, kind, scale)) return false;
   return STATION_COND_DEMAND.has(`${slug}/${condition}`);
 }

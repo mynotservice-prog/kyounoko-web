@@ -17,6 +17,7 @@ import {
   type StationConditionSlug,
 } from '@/lib/station-conditions';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getConditionStores } from '@/lib/station-cond-stores';
 import { conditionEvidenceCount } from '@/lib/station-evidence';
 import { AdSlot } from '@/components/ads/AdSlot';
 
@@ -92,7 +93,8 @@ export default async function LinePage({ params }: Props) {
       if (!cond) return null;
       const cn = filterChainsByCondition(chainsBase, slug).length;
       const inn = filterIndiesByCondition(indiesBase, slug).length;
-      const count = cn + inn;
+      const lcs = getConditionStores(x.station.slug, slug);
+      const count = lcs ? lcs.within1000 : cn + inn;
       if (count === 0) return null;
       // 404化した noindex combo（需要なしminor駅）へリンクしない
       if (!isStationConditionIndexable(x.station.slug, slug, count, 'restaurant', x.station.scale)) {
@@ -100,6 +102,7 @@ export default async function LinePage({ params }: Props) {
       }
       // 表示する件数は、設備の条件なら根拠のある店の数（lib/station-evidence.ts・2026-10-28）
       const shown =
+        getConditionStores(x.station.slug, slug)?.within1000 ??
         conditionEvidenceCount(
           x.station.slug,
           slug,

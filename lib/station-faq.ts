@@ -16,6 +16,7 @@ import type { IndieRestaurant } from './indie-restaurants';
 import type { Spot } from './spots';
 import { getVerifiedStores } from './station-verified-stores';
 import { evidenceStoresAt, type EvidenceNeed } from './station-evidence';
+import type { ConditionStores } from './station-cond-stores';
 
 export type FaqItem = { question: string; answer: string };
 
@@ -172,4 +173,34 @@ export function faqToJsonLd(items: FaqItem[]): object | null {
       acceptedAnswer: { '@type': 'Answer', text: q.answer },
     })),
   };
+}
+
+/**
+ * 店単位で作り直した駅×条件ページ（lib/station-cond-stores.ts）のFAQ（2026-10-28・Phase 2）。
+ * 数えた店と根拠の段だけから組む。0店のときも「確かめられた店は無い」と答える（作らない）。
+ */
+export function buildConditionStoresFaq(stationName: string, conditionLabel: string, cs: ConditionStores): FaqItem[] {
+  const faq: FaqItem[] = [];
+  const near = cs.stores.filter((s) => s.band !== '少し歩く');
+  const far = cs.stores.filter((s) => s.band === '少し歩く');
+  faq.push({
+    question: `${stationName}駅の近くで「${conditionLabel}」に当てはまる子連れOKの店は何店ありますか？`,
+    answer:
+      cs.within1000 === 0
+        ? `駅から直線1km以内で、公式の店舗検索・チェーン公式・ホットペッパーの店の掲載で確かめられた店はありませんでした。近くの駅や、同じ駅のほかの条件のページもご覧ください。`
+        : `駅から直線1km以内に${cs.within1000}店あります（うち800m以内が${cs.within800}店）。チェーン店は公式の店舗検索で実在を確認した店、個人店はホットペッパーグルメでお子様連れ歓迎と掲載されている店です。`,
+  });
+  if (near.length > 0) {
+    faq.push({
+      question: `${stationName}駅から歩いて行きやすい店は？`,
+      answer: `直線800m以内（大人の足で徒歩10分前後）なら${listNames(near.map((s) => s.name))}です。営業状況は行く前に各店のページでご確認ください。`,
+    });
+  }
+  if (far.length > 0) {
+    faq.push({
+      question: '少し歩いてもよければ、ほかにどんな店がありますか？',
+      answer: `直線800m〜1km（子連れだと15〜20分ほど）に${listNames(far.map((s) => s.name))}があります。線路や大きな道路の向こう側は、道のりが長くなることがあります。`,
+    });
+  }
+  return faq;
 }

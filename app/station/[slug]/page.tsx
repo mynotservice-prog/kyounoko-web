@@ -41,6 +41,7 @@ import {
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getConditionStores } from '@/lib/station-cond-stores';
 import { getAreaArticleLinks } from '@/lib/area-articles';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 import { conditionEvidenceCount, evidenceStoresAt, type EvidenceNeed, type EvidenceStore } from '@/lib/station-evidence';
@@ -765,7 +766,7 @@ export default async function StationPage({ params }: Props) {
               // 表示する件数: 設備の条件は根拠のある店の数（業態の条件は従来どおり）。リンクの有無は配信の判定のまま
               const shown =
                 k === 'restaurant'
-                  ? conditionEvidenceCount(
+                  ? getConditionStores(slug, c.slug)?.within1000 ?? conditionEvidenceCount(
                       slug,
                       c.slug,
                       filterChainsByCondition(chains, c.slug).map((x) => ({ slug: x.slug, name: x.name })),

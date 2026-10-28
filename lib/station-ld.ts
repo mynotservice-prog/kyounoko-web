@@ -12,6 +12,7 @@ import type { IndieRestaurant } from './indie-restaurants';
 import { INDIE_GENRE_LABEL } from './indie-restaurants';
 import { getVerifiedStores } from './station-verified-stores';
 import { storeDisplayName } from './station-evidence';
+import type { ConditionStores } from './station-cond-stores';
 
 type LdRestaurant = {
   '@type': 'Restaurant';
@@ -59,5 +60,28 @@ export function buildStoreItemListLd(
     description,
     numberOfItems: items.length,
     itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, item })),
+  };
+}
+
+/** 店単位で作り直した駅×条件ページ（lib/station-cond-stores.ts）の ItemList。0店なら null */
+export function buildConditionStoresLd(cs: ConditionStores, name: string, description: string) {
+  if (cs.stores.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    description,
+    numberOfItems: cs.stores.length,
+    itemListElement: cs.stores.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Restaurant',
+        name: s.name,
+        ...(s.genre ? { servesCuisine: s.genre } : {}),
+        ...(s.address ? { address: { '@type': 'PostalAddress', streetAddress: s.address, addressCountry: 'JP' } } : {}),
+        ...(s.url ? { url: s.url } : {}),
+      },
+    })),
   };
 }
