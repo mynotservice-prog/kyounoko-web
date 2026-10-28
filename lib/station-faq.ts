@@ -14,6 +14,8 @@
 import type { Chain } from './station-restaurants';
 import type { IndieRestaurant } from './indie-restaurants';
 import type { Spot } from './spots';
+import { getVerifiedStores } from './station-verified-stores';
+import { evidenceStoresAt, type EvidenceNeed } from './station-evidence';
 
 export type FaqItem = { question: string; answer: string };
 
@@ -25,107 +27,74 @@ function listNames(names: string[], max = 6): string {
   return rest > 0 ? `${shown.join('・')}ほか${rest}店` : shown.join('・');
 }
 
-/** ランチ価格帯の代表バンドを集計（insight と整合）。 */
-function priceBand(values: (string | undefined)[]): string | null {
-  const nums = values
-    .map((s) => (s ? Number(s.replace(/[^\d]/g, '')) : NaN))
-    .filter((n) => Number.isFinite(n) && n > 0)
-    .sort((a, b) => a - b);
-  if (nums.length === 0) return null;
-  const fmt = (n: number) => n.toLocaleString('ja-JP');
-  const min = nums[0];
-  const max = nums[nums.length - 1];
-  return min === max ? `〜${fmt(max)}円台が中心` : `${fmt(min)}〜${fmt(max)}円台`;
-}
-
 /**
- * レストラン系（駅×条件）のページ固有FAQを生成する。
- * 該当チェーン店＋個人店の実データのみから、最大6問を組む。
+ * レストラン系（駅・駅×条件）のページ固有FAQを生成する。
+ *
+ * 2026-10-28（Phase 0）: 設備の設問は lib/station-evidence.ts の根拠（店の公式店舗検索の表示・
+ * チェーン公式の全店向けの記載）がある店だけで答える。以前は Chain 型の手入力の値（kidsMenu・babyChair・
+ * privateRoom・babyFoodOk・stroller）で「〜があります」と答えていたが、出典が無かった。
+ * ベビーカーの設問と価格帯は根拠が無いので出さない。個人店の個室はホットペッパーの店の掲載情報。
  */
 export function buildRestaurantFaq(
+  stationSlug: string,
   stationName: string,
   conditionLabel: string,
   chains: Chain[],
   indies: IndieRestaurant[],
 ): FaqItem[] {
-  const total = chains.length + indies.length;
+  const verified = getVerifiedStores(stationSlug);
+  const shown = new Set(chains.map((c) => c.slug));
+  const chainStoreCount = verified
+    ? verified.stores.filter((s) => shown.has(s.chain)).length +
+      Object.entries(verified.more ?? {}).reduce((n, [c, k]) => n + (shown.has(c) ? k : 0), 0)
+    : 0;
+  const total = (verified ? chainStoreCount : chains.length) + indies.length;
   if (total === 0) return [];
-
   const faq: FaqItem[] = [];
-  const allNames = [...chains.map((c) => c.name), ...indies.map((i) => i.name)];
+  const chainRefs = chains.map((c) => ({ slug: c.slug, name: c.name }));
 
   // 1) 件数（常に出す）
-  const price = priceBand([...chains.map((c) => c.lunchPrice), ...indies.map((i) => i.priceLunch)]);
   faq.push({
     question: `${stationName}駅で「${conditionLabel}」に合う子連れOKランチ・カフェは何件ありますか？`,
-    answer:
-      `現在${total}店を掲載しています（チェーン${chains.length}店・個人店${indies.length}店）。` +
-      `具体的には${listNames(allNames, 6)}です。` +
-      (price ? `ランチの価格帯は${price}です。` : ''),
+    answer: verified
+      ? `各チェーンの公式店舗検索で駅からおよそ800m以内に実在を確認したチェーン店${chainStoreCount}店` +
+        (indies.length > 0 ? `と、ホットペッパーグルメでお子様連れOKと掲載されている個人店${indies.length}店` : '') +
+        `を載せています（確認日 ${verified.verifiedAt}）。営業状況は行く前に各店の公式ページでご確認ください。`
+      : `チェーン${chains.length}ブランド` +
+        (indies.length > 0 ? `・個人店${indies.length}店` : '') +
+        'を載せています。この駅のチェーン店は公式の店舗検索での実在確認がまだのため、行く前に各チェーンの公式店舗検索でご確認ください。',
   });
 
-  // 2) ベビーカーで入りやすい
-  const strollerNames = [
-    ...chains.filter((c) => c.stroller === 'good').map((c) => c.name),
-    ...indies.filter((i) => i.strollerOk).map((i) => i.name),
-  ];
-  if (strollerNames.length > 0) {
+  const ask = (need: EvidenceNeed, question: string, tail: string, extraIndies: string[] = []) => {
+    const { stores, moreCount } = evidenceStoresAt(stationSlug, need, chainRefs);
+    const names = [...stores.map((s) => s.name), ...extraIndies];
+    if (names.length === 0) return;
+    const bySource = stores.some((s) => s.source === 'store') && stores.some((s) => s.source === 'brand')
+      ? '各店の公式店舗検索の表示、またはチェーン公式の全店向けの記載'
+      : stores.some((s) => s.source === 'store')
+        ? '各店の公式店舗検索の表示'
+        : stores.length > 0
+          ? 'チェーン公式の全店向けの記載'
+          : '';
     faq.push({
-      question: 'ベビーカーのまま入りやすい店はありますか？',
+      question,
       answer:
-        `${listNames(strollerNames)}がベビーカーで入りやすい店です。` +
-        '混雑する時間帯を避けると、より落ち着いて利用できます。',
+        `${listNames(names)}${moreCount > 0 ? `（ほか同じチェーンの${moreCount}店）` : ''}です。` +
+        (bySource ? `${bySource}にもとづきます。` : '') +
+        (extraIndies.length > 0 ? '個人店はホットペッパーグルメの店の掲載情報です。' : '') +
+        tail,
     });
-  }
-
-  // 3) キッズメニュー
-  const kidsMenuNames = [
-    ...chains.filter((c) => c.kidsMenu).map((c) => c.name),
-    ...indies.filter((i) => i.kidsMenu).map((i) => i.name),
-  ];
-  if (kidsMenuNames.length > 0) {
-    faq.push({
-      question: '子ども向けのキッズメニューがある店は？',
-      answer: `${listNames(kidsMenuNames)}にキッズメニューの用意があります。内容や価格は時期により変わるため、来店前に各店の最新メニューもご確認ください。`,
-    });
-  }
-
-  // 4) 個室・仕切り席
-  const privateNames = [
-    ...chains.filter((c) => c.privateRoom).map((c) => c.name),
-    ...indies.filter((i) => i.privateRoom).map((i) => i.name),
-  ];
-  if (privateNames.length > 0) {
-    faq.push({
-      question: '個室や仕切り席など、落ち着いて食べられる店は？',
-      answer: `${listNames(privateNames)}に個室・仕切り席（座敷を含む）があります。子どもがぐずっても周りを気にしにくく、子連れ利用に向いています。`,
-    });
-  }
-
-  // 5) キッズチェア
-  const chairNames = [
-    ...chains.filter((c) => c.babyChair).map((c) => c.name),
-    ...indies.filter((i) => i.kidsChair).map((i) => i.name),
-  ];
-  if (chairNames.length > 0) {
-    faq.push({
-      question: '子ども用の椅子（キッズチェア）が置いてある店は？',
-      answer: `${listNames(chairNames)}に子ども用の椅子があります。台数に限りがある場合もあるため、混雑時は早めの来店がおすすめです。`,
-    });
-  }
-
-  // 6) 離乳食持ち込み
-  const babyFoodNames = [
-    ...chains.filter((c) => c.babyFoodOk || c.bringBabyFood).map((c) => c.name),
-    ...indies.filter((i) => i.bringBabyFood).map((i) => i.name),
-  ];
-  if (babyFoodNames.length > 0) {
-    faq.push({
-      question: '離乳食の持ち込みができる店は？',
-      answer: `${listNames(babyFoodNames)}は離乳食の持ち込みに対応しています。月齢に合わせた食事を持参すれば、まだ取り分けが難しい時期でも安心です。`,
-    });
-  }
-
+  };
+  ask('kidsMenu', '公式にキッズメニューの表示・記載がある店は？', '内容や価格は時期で変わるため、来店前に最新のメニューをご確認ください。');
+  ask(
+    'privateRoom',
+    '個室や座敷がある店は？',
+    '席数に限りがあるので、混む時間は予約・事前の確認がおすすめです。',
+    indies.filter((i) => i.privateRoom).map((i) => i.name),
+  );
+  ask('babyChair', '子ども用の椅子が公式に案内されている店は？', '台数に限りがある場合があります。');
+  ask('diaper', 'おむつ替え台が公式に案内されている店は？', '店内か、入っている建物の設備かは店によって違います。');
+  ask('babyFood', '離乳食の持ち込みが公式に案内されている店は？', '持ち込みの条件は各チェーンの公式案内をご確認ください。');
   return faq.slice(0, 6);
 }
 

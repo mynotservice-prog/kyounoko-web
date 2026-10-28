@@ -11,6 +11,8 @@
 import type { Chain } from './station-restaurants';
 import type { IndieRestaurant } from './indie-restaurants';
 import type { Spot } from './spots';
+import { getVerifiedStores } from './station-verified-stores';
+import { evidenceStoresAt, type EvidenceNeed } from './station-evidence';
 
 type Scale = 'terminal' | 'major' | 'minor';
 
@@ -63,60 +65,38 @@ export type Insight = {
   priceText: string | null;
 };
 
-/** 価格帯バンド文字列（'〜1,500' '4,000〜' '〜2,000円' 等）から代表値（円）を取り出す。 */
-function parsePriceBand(s: string | undefined): number | null {
-  if (!s) return null;
-  const digits = s.replace(/[^\d]/g, '');
-  if (!digits) return null;
-  const n = Number(digits);
-  return Number.isFinite(n) && n > 0 ? n : null;
-}
-
-function priceRangeText(values: number[]): string | null {
-  const nums = values.filter((n) => n > 0).sort((a, b) => a - b);
-  if (nums.length === 0) return null;
-  const min = nums[0];
-  const max = nums[nums.length - 1];
-  const fmt = (n: number) => n.toLocaleString('ja-JP');
-  if (min === max) return `ランチは〜${fmt(max)}円台が中心`;
-  return `ランチは${fmt(min)}〜${fmt(max)}円台`;
-}
-
 /**
  * 該当レストラン（チェーン＋個人店）の設備内訳を集計する。
  * 駅×条件ごとに必ず異なる、データ由来の固有サマリーになる。
+ *
+ * 2026-10-28（Phase 0）: 内訳は lib/station-evidence.ts の根拠（店の公式店舗検索の表示・チェーン公式の
+ * 全店向けの記載）がある店だけを数える。以前は Chain 型の手入力の値で数えていて出典が無かった。
+ * 件数は照合済みの駅なら実在店の数（チェーン単位ではない）。価格帯はチェーンの手入力の目安なので出さない。
  */
-export function buildRestaurantInsight(chains: Chain[], indies: IndieRestaurant[]): Insight {
-  const total = chains.length + indies.length;
-  const count = (cPred: (c: Chain) => boolean, iPred: (i: IndieRestaurant) => boolean) =>
-    chains.filter(cPred).length + indies.filter(iPred).length;
+export function buildRestaurantInsight(stationSlug: string, chains: Chain[], indies: IndieRestaurant[]): Insight {
+  const verified = getVerifiedStores(stationSlug);
+  const shown = new Set(chains.map((c) => c.slug));
+  const chainStores = verified
+    ? verified.stores.filter((s) => shown.has(s.chain)).length +
+      Object.entries(verified.more ?? {}).reduce((n, [c, k]) => n + (shown.has(c) ? k : 0), 0)
+    : chains.length;
+  const total = chainStores + indies.length;
+  const refs = chains.map((c) => ({ slug: c.slug, name: c.name }));
+  const ev = (need: EvidenceNeed) => {
+    const { stores, moreCount } = evidenceStoresAt(stationSlug, need, refs);
+    return stores.length + moreCount;
+  };
 
   const raw: InsightStat[] = [
-    {
-      label: 'ベビーカーで入りやすい',
-      count: count((c) => c.stroller === 'good', (i) => !!i.strollerOk),
-    },
-    { label: 'キッズチェアあり', count: count((c) => !!c.babyChair, (i) => !!i.kidsChair) },
-    { label: 'キッズメニューあり', count: count((c) => !!c.kidsMenu, (i) => !!i.kidsMenu) },
-    { label: '個室・仕切り席あり', count: count((c) => !!c.privateRoom, (i) => !!i.privateRoom) },
-    {
-      label: '離乳食持込OK',
-      count: count((c) => !!c.babyFoodOk || !!c.bringBabyFood, (i) => !!i.bringBabyFood),
-    },
-    {
-      label: 'おむつ替え台あり',
-      count: count((c) => !!c.diaperChangingTable, (i) => !!i.diaperChangingTable),
-    },
-    { label: '授乳室あり', count: count((c) => !!c.nursingRoom, (i) => !!i.nursingRoom) },
+    { label: 'キッズメニュー（公式）', count: ev('kidsMenu') },
+    { label: '子ども用の椅子（公式）', count: ev('babyChair') },
+    { label: 'おむつ替え台（公式）', count: ev('diaper') },
+    { label: '離乳食の持ち込み（公式）', count: ev('babyFood') },
+    { label: '個室・座敷（公式・店の掲載）', count: ev('privateRoom') + indies.filter((i) => i.privateRoom).length },
   ];
 
   const stats = raw.filter((s) => s.count > 0).sort((a, b) => b.count - a.count).slice(0, 5);
-  const prices = [
-    ...chains.map((c) => parsePriceBand(c.lunchPrice)),
-    ...indies.map((i) => parsePriceBand(i.priceLunch)),
-  ].filter((n): n is number => n != null);
-
-  return { total, stats, priceText: priceRangeText(prices) };
+  return { total, stats, priceText: null };
 }
 
 /** 該当スポットの設備内訳を集計する。 */

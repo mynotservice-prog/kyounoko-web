@@ -43,6 +43,9 @@ import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots'
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { getAreaArticleLinks } from '@/lib/area-articles';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
+import { conditionEvidenceCount, evidenceStoresAt, type EvidenceNeed, type EvidenceStore } from '@/lib/station-evidence';
+import { buildStoreItemListLd } from '@/lib/station-ld';
+import { EvidenceChips, EVIDENCE_CHIPS_NOTE } from '@/components/station/EvidenceChips';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
@@ -84,7 +87,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
   const description =
     seoOverride?.description ??
-    `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、${isHotpepperStation(slug) ? 'ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : '雑誌やSNSで話題の個人店・人気店も厳選'}。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+    `${station.name}駅周辺で子連れOKのファミレス・カフェ・チェーン店に加え、${isHotpepperStation(slug) ? 'ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : '雑誌やSNSで話題の個人店・人気店も厳選'}。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものだけを店ごとに掲載。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
   // 2026-08-31: 全ページ監査で og:image 欠落 2,061本のうち 2,049本が /station/ だと判明した。
   // /station/ は3週で唯一プラス成長している面（+6.8%／週1,945クリック）なのに、
   // SNS・LINE共有とDiscoverで画像が出ない状態だった。spot/[slug] と同じ /api/og を配線する。
@@ -110,17 +113,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
-const STROLLER_LABEL: Record<Chain['stroller'], string> = {
-  good: '◎',
-  ok: '○',
-  limited: '△',
-};
-const STROLLER_DESC: Record<Chain['stroller'], string> = {
-  good: 'ベビーカーで余裕入店',
-  ok: '通路でやや配慮',
-  limited: '混雑時は折り畳み推奨',
-};
 
 export default async function StationPage({ params }: Props) {
   const { slug } = await params;
@@ -154,6 +146,16 @@ export default async function StationPage({ params }: Props) {
   // 公式店舗検索で実在を確認した店（登録がある駅だけ。lib/station-verified-stores.ts）
   const verifiedStores = getVerifiedStores(slug);
 
+  // 設備の件数・抽出は根拠のある店だけ（店の公式店舗検索の表示・チェーン公式の全店向けの記載）。
+  // 以前は Chain 型の手入力の値で数えていて出典が無かった（2026-10-28・lib/station-evidence.ts）。
+  const chainRefs = chains.map((c) => ({ slug: c.slug, name: c.name }));
+  const evStores = (need: EvidenceNeed): EvidenceStore[] => evidenceStoresAt(slug, need, chainRefs).stores;
+  const evCount = (need: EvidenceNeed) => {
+    const r = evidenceStoresAt(slug, need, chainRefs);
+    return r.stores.length + r.moreCount;
+  };
+  const indiePrivate = indies.filter((r) => r.privateRoom);
+
   // カテゴリ別グルーピング
   const byCategory = new Map<ChainCategory, Chain[]>();
   for (const c of chains) {
@@ -166,39 +168,14 @@ export default async function StationPage({ params }: Props) {
   // 区・市ごとのエリア記事（室内遊び場・水遊び）。駅ページから内部リンクを集める（lib/area-articles.ts）
   const areaArticles = getAreaArticleLinks(wardName);
 
-  // JSON-LD: ItemList で各チェーン+個人店を列挙
-  const allItemsForLd = [
-    ...chains.map((c) => ({
-      name: c.name,
-      description: c.description,
-      cuisine: CHAIN_CATEGORY_LABEL[c.category],
-      priceRange: c.lunchPrice,
-    })),
-    ...indies.map((r) => ({
-      name: r.name,
-      description: r.description,
-      cuisine: INDIE_GENRE_LABEL[r.genre],
-      priceRange: r.priceLunch,
-    })),
-  ];
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `${station.name}駅 子連れランチ・ベビーカーOK店`,
-    description: `${station.name}駅周辺の子連れ歓迎チェーン店・個人店リスト`,
-    numberOfItems: allItemsForLd.length,
-    itemListElement: allItemsForLd.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Restaurant',
-        name: c.name,
-        description: c.description,
-        servesCuisine: c.cuisine,
-        priceRange: c.priceRange,
-      },
-    })),
-  };
+  // JSON-LD: ItemList（店単位。lib/station-ld.ts）
+  const jsonLd = buildStoreItemListLd(
+    slug,
+    chains,
+    indies,
+    `${station.name}駅 子連れランチ・ベビーカーOK店`,
+    `${station.name}駅周辺の子連れ歓迎チェーン店・個人店リスト`,
+  );
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -214,7 +191,7 @@ export default async function StationPage({ params }: Props) {
   // 親の駅ページ587本だけが両方ゼロだった（28日で3,121クリック / 44,762表示の面）。
   // 既存の lib/station-faq.ts をそのまま使う。実データ由来で捏造ゼロという
   // 同ファイルの設計思想を引き継ぐため、生成ロジックは子と共通のまま変えていない。
-  const faqItems = buildRestaurantFaq(station.name, '子連れランチ', chains, indies);
+  const faqItems = buildRestaurantFaq(slug, station.name, '子連れランチ', chains, indies);
   const faqLd = faqToJsonLd(faqItems);
 
   // スティッキーセクションナビ用の項目
@@ -234,7 +211,7 @@ export default async function StationPage({ params }: Props) {
       <V2Frame header="sub" active="home">
       <div className="station-v3">
       <StickySectionNav items={stickyNavItems} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
@@ -264,7 +241,7 @@ export default async function StationPage({ params }: Props) {
                   ) : (
                     <>雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。</>
                   )}
-                  ベビーカー入店可否、キッズメニュー、キッズチェア、個室、離乳食持込OKまで全項目チェックしました。
+                  キッズメニュー・子ども用の椅子・個室などの設備は、各チェーンの公式店舗検索・公式サイトで確認できたものだけを店ごとに示しています。
                   {wardName}で子連れランチ場所に迷ったらまずココから。
                 </>
               )}
@@ -272,7 +249,7 @@ export default async function StationPage({ params }: Props) {
 
             <div className="station-summary stv3-summary kk-chips">
               <span className="kk-chip">{station.lines.length}路線</span>
-              <span className="kk-chip">チェーン{chains.length}店</span>
+              <span className="kk-chip">チェーン{chains.length}ブランド</span>
               {indies.length > 0 && <span className="kk-chip">{isHotpepperStation(slug) ? '駅近の子連れOK店' : '個人店'}{indies.length}店</span>}
               {station.scale === 'terminal' && <span className="kk-chip">ターミナル駅</span>}
               {station.scale === 'major' && <span className="kk-chip">主要駅</span>}
@@ -301,7 +278,7 @@ export default async function StationPage({ params }: Props) {
             <ul className="stv3-jump">
               <li>
                 <a href="#section-chains">
-                  <span><strong>チェーン店</strong>: {chains.length}店（ファミレス・カフェ等）</span>
+                  <span><strong>チェーン店</strong>: {verifiedStores ? `${verifiedStores.stores.length + Object.values(verifiedStores.more ?? {}).reduce((n, k) => n + k, 0)}店（公式で実在を確認・${chains.length}チェーン）` : `${chains.length}チェーン（ファミレス・カフェ等）`}</span>
                   <KkIcon name="chevron-right" size={15} />
                 </a>
               </li>
@@ -313,33 +290,22 @@ export default async function StationPage({ params }: Props) {
                   </a>
                 </li>
               )}
-              <li>
-                <a href="#section-stroller">
-                  <span><strong>ベビーカーで余裕入店できる店</strong>: {chains.filter(c => c.stroller === 'good').length + indies.filter(r => r.strollerOk).length}店</span>
-                  <KkIcon name="chevron-right" size={15} />
-                </a>
-              </li>
-              <li>
-                <a href="#section-kidsmenu">
-                  <span><strong>キッズメニューあり</strong>: {chains.filter(c => c.kidsMenu).length + indies.filter(r => r.kidsMenu).length}店</span>
-                  <KkIcon name="chevron-right" size={15} />
-                </a>
-              </li>
-              <li>
-                <a href="#section-private">
-                  <span><strong>個室・仕切り席あり</strong>: {chains.filter(c => c.privateRoom).length + indies.filter(r => r.privateRoom).length}店</span>
-                  <KkIcon name="chevron-right" size={15} />
-                </a>
-              </li>
-              <li>
-                <a href="#section-babyfood">
-                  <span><strong>離乳食持込OK</strong>: {chains.filter(c => c.babyFoodOk).length}店</span>
-                  <KkIcon name="chevron-right" size={15} />
-                </a>
-              </li>
+              {([
+                { href: '#section-stepfree', label: '入口の段差なし・スロープ（公式の表示）', n: evCount('stepFree') },
+                { href: '#section-kidsmenu', label: 'キッズメニュー（公式の表示・記載）', n: evCount('kidsMenu') },
+                { href: '#section-private', label: '個室・座敷（公式・店の掲載）', n: evCount('privateRoom') + indiePrivate.length },
+                { href: '#section-babyfood', label: '離乳食の持ち込み（チェーン公式）', n: evCount('babyFood') },
+              ]).filter((x) => x.n > 0).map((x) => (
+                <li key={x.href}>
+                  <a href={x.href}>
+                    <span><strong>{x.label}</strong>: {x.n}店</span>
+                    <KkIcon name="chevron-right" size={15} />
+                  </a>
+                </li>
+              ))}
               <li>
                 <a href="#section-budget">
-                  <span><strong>ランチ800円以内</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}店</span>
+                  <span><strong>ランチ800円以内（チェーンの価格帯の目安）</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}チェーン</span>
                   <KkIcon name="chevron-right" size={15} />
                 </a>
               </li>
@@ -399,119 +365,121 @@ export default async function StationPage({ params }: Props) {
               SSR 非依存（クライアントのみ）。未設定なら設定への軽い CTA のみ。 */}
           <PersonalizedHint context="station" contextLabel={`${station.name}駅`} fallback="cta" />
 
-          {/* ===== サイトならでは: 年齢別おすすめ動線 =====
-              0-1歳 / 2-3歳 / 4-6歳 で「この駅で迷ったらこれ」を3つずつデータから自動抽出 */}
+          {/* ===== サイトならでは: 年齢別・シーン別のピックアップ =====
+              2026-10-28: 根拠のある店だけで選ぶ（店の公式店舗検索の表示・チェーン公式の全店向けの記載・
+              個人店はホットペッパーの店の掲載情報）。以前は Chain 型の手入力の値（出典なし）で選んでいた。
+              「雨の日でも安心」は建物の公式台帳ができるまで出さない（docs/station-cond-rebuild-2026-10.md）。 */}
           {(() => {
-            // 0-1歳向け: ベビーカー◎ + キッズチェア + 離乳食持込OK の重み付け
-            const babies = chains
-              .map(c => ({ c, score: (c.stroller === 'good' ? 3 : c.stroller === 'ok' ? 1 : 0) + (c.babyChair ? 2 : 0) + (c.babyFoodOk ? 2 : 0) }))
-              .filter(x => x.score >= 4)
-              .sort((a, b) => b.score - a.score)
-              .slice(0, 3)
-              .map(x => x.c);
-            // 2-3歳向け: キッズメニュー + キッズチェア + ファミリー価格帯
-            const toddlers = chains
-              .map(c => ({ c, score: (c.kidsMenu ? 3 : 0) + (c.babyChair ? 2 : 0) + (c.lunchPrice === '〜800' || c.lunchPrice === '〜1,500' ? 1 : 0) }))
-              .filter(x => x.score >= 3)
-              .sort((a, b) => b.score - a.score)
-              .slice(0, 3)
-              .map(x => x.c);
-            // 4-6歳向け: キッズメニュー + 個室/座敷 + メニューバラエティ
-            const kids = chains
-              .map(c => ({ c, score: (c.kidsMenu ? 3 : 0) + (c.privateRoom ? 2 : 0) + (c.category === 'family-restaurant' || c.category === 'sushi' || c.category === 'yakiniku' ? 2 : 0) }))
-              .filter(x => x.score >= 3)
-              .sort((a, b) => b.score - a.score)
-              .slice(0, 3)
-              .map(x => x.c);
-            if (babies.length === 0 && toddlers.length === 0 && kids.length === 0) return null;
-            return (
-              <section id="section-by-age" className="stv3-sec ruled">
-                <header className="stv3-sechead">
-                  <span className="stv3-eyebrow">子供の年齢で迷ったら</span>
-                  <h2 className="stv3-h2">
-                    年齢別おすすめ動線
-                  </h2>
-                  <p className="stv3-sublead">
-                    {station.name}駅周辺の店から、子供の年齢に合うTOP3を自動抽出。「迷ったらここ」をすぐ決められます。
-                  </p>
-                </header>
-                <div className="stv3-ages">
-                  {([
-                    { label: '0〜1歳と入れる店', sub: 'ベビーカー◎+ベビーチェア+離乳食持込', list: babies, art: 'age-0' as KkArtName },
-                    { label: '2〜3歳と楽しむ店', sub: 'キッズメニュー+キッズチェア+ファミリー価格', list: toddlers, art: 'age-2' as KkArtName },
-                    { label: '4〜6歳が満足する店', sub: 'キッズメニュー+個室+メニュー多彩', list: kids, art: 'age-4' as KkArtName },
-                  ]).map((g) => g.list.length > 0 && (
-                    <div key={g.label} className="stv3-age">
-                      <div className="stv3-age-head">
-                        <KkArt name={g.art} size={32} />
-                        <div>
-                          <div className="stv3-age-lab">{g.label}</div>
-                          <div className="stv3-age-sub">{g.sub}</div>
-                        </div>
-                      </div>
-                      <ul className="stv3-picks">
-                        {g.list.map((c, i) => (
-                          <li key={c.slug}>
-                            <strong>{i + 1}. {c.name}</strong>
-                            <span className="stv3-picks-price">ランチ {c.lunchPrice}円</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            );
-          })()}
-
-          {/* ===== サイトならでは: シーン別おすすめピックアップ =====
-              「赤ちゃん初めて」「ご褒美・お祝い」「雨の日」「サクッと800円」を実データから抽出 */}
-          {(() => {
-            const firstBaby = chains.filter(c => c.stroller === 'good' && c.babyChair && c.babyFoodOk).slice(0, 4);
-            const treat = [
-              ...chains.filter(c => c.privateRoom && (c.lunchPrice === '〜2,500' || c.lunchPrice === '〜4,000' || c.lunchPrice === '4,000〜')),
-              ...indies.filter(r => r.privateRoom && (r.priceLunch === '〜3,500円' || r.priceLunch === '〜5,000円' || r.priceLunch === '5,000円〜')).map(r => ({ name: r.name, lunchPrice: (r.priceLunch ?? '').replace(/円$/, '').replace(/〜/, '〜'), _indie: true } as { name: string; lunchPrice: string; _indie?: boolean })),
+            type Pick = { key: string; name: string; meta: string; needs: Set<EvidenceNeed> };
+            const picks = new Map<string, Pick>();
+            for (const need of ['babyChair', 'diaper', 'babyFood', 'nursing', 'kidsMenu', 'privateRoom'] as EvidenceNeed[]) {
+              for (const st of evStores(need)) {
+                const key = `${st.chain}|${st.name}`;
+                const p = picks.get(key) ?? { key, name: st.name, meta: st.distance ?? 'チェーン公式', needs: new Set<EvidenceNeed>() };
+                p.needs.add(need);
+                picks.set(key, p);
+              }
+            }
+            const all = [...picks.values()];
+            const has = (p: Pick, ...n: EvidenceNeed[]) => n.some((x) => p.needs.has(x));
+            const top = (list: Pick[], n: number) => list.sort((x, y) => y.needs.size - x.needs.size).slice(0, n);
+            const babies = top(all.filter((p) => has(p, 'babyChair', 'diaper', 'babyFood', 'nursing')), 3);
+            const toddlers = top(all.filter((p) => has(p, 'kidsMenu')), 3);
+            const kids = top(all.filter((p) => has(p, 'kidsMenu') && has(p, 'privateRoom')), 3);
+            const firstBaby = top(all.filter((p) => has(p, 'babyChair') && has(p, 'diaper', 'babyFood')), 4);
+            const treat: Pick[] = [
+              ...top(all.filter((p) => has(p, 'privateRoom')), 4),
+              ...indiePrivate.map((r) => ({ key: r.name, name: r.name, meta: '個室あり（店の掲載）', needs: new Set<EvidenceNeed>(['privateRoom']) })),
             ].slice(0, 4);
-            const rainy = chains.filter(c => c.category === 'mall-food' || c.category === 'family-restaurant' || c.category === 'cafe').filter(c => c.stroller !== 'limited').slice(0, 4);
-            const cheap = chains.filter(c => c.lunchPrice === '〜800').slice(0, 4);
+            const cheap: Pick[] = chains
+              .filter((c) => c.lunchPrice === '〜800')
+              .slice(0, 4)
+              .map((c) => ({ key: c.slug, name: c.name, meta: `${c.lunchPrice}円（目安）`, needs: new Set<EvidenceNeed>() }));
+            const needText = (p: Pick) =>
+              (['kidsMenu', 'babyChair', 'diaper', 'babyFood', 'nursing', 'privateRoom'] as EvidenceNeed[])
+                .filter((n) => p.needs.has(n))
+                .map((n) => ({ kidsMenu: 'キッズメニュー', babyChair: '子ども用の椅子', diaper: 'おむつ替え台', babyFood: '離乳食持ち込み', nursing: '授乳スペース', privateRoom: '個室・座敷' } as Record<string, string>)[n])
+                .join('・');
+            const ages = [
+              { label: '0〜1歳と行きやすい店', sub: '公式に子ども用の椅子・おむつ替え台・離乳食持ち込みのどれかがある店', list: babies, art: 'age-0' as KkArtName },
+              { label: '2〜3歳と行きやすい店', sub: '公式にキッズメニューの表示・記載がある店', list: toddlers, art: 'age-2' as KkArtName },
+              { label: '4〜6歳と行きやすい店', sub: '公式にキッズメニューと個室・座敷の両方がある店', list: kids, art: 'age-4' as KkArtName },
+            ].filter((g) => g.list.length > 0);
             const scenes = [
-              { id: 'first-baby', label: '赤ちゃん初めての外食', icon: 'baby' as const, desc: 'ベビーカー◎+ベビーチェア+離乳食持込OK', list: firstBaby },
-              { id: 'treat', label: '誕生日・ご褒美ランチ', icon: 'popular' as const, desc: '個室/仕切り席+少しグレード上の価格帯', list: treat },
-              { id: 'rainy', label: '雨の日でも安心', icon: 'umbrella' as const, desc: '駅直結or屋内モール内+ベビーカー対応', list: rainy },
-              { id: 'cheap', label: 'サクッと800円以内', icon: 'yen' as const, desc: '財布に優しい子連れランチ定番', list: cheap },
-            ].filter(s => s.list.length > 0);
-            if (scenes.length === 0) return null;
+              { id: 'first-baby', label: '赤ちゃん初めての外食', icon: 'baby' as const, desc: '公式に子ども用の椅子と、おむつ替え台か離乳食持ち込みの記載がある店', list: firstBaby },
+              { id: 'treat', label: '誕生日・ご褒美ランチ', icon: 'popular' as const, desc: '個室・座敷がある店（公式の表示・個人店は店の掲載）', list: treat },
+              { id: 'cheap', label: 'サクッと800円以内', icon: 'yen' as const, desc: 'チェーンのランチ価格帯の目安（店舗・メニューで変わります）', list: cheap },
+            ].filter((sc) => sc.list.length > 0);
+            if (ages.length === 0 && scenes.length === 0) return null;
             return (
-              <section id="section-by-scene" className="stv3-sec ruled">
-                <header className="stv3-sechead">
-                  <span className="stv3-eyebrow">こんな日に行くなら</span>
-                  <h2 className="stv3-h2">
-                    シーン別ピックアップ
-                  </h2>
-                  <p className="stv3-sublead">
-                    {station.name}駅で「初めての外食」「ご褒美」「雨の日」など、シーンごとに最適な店を厳選しました。
-                  </p>
-                </header>
-                <div className="stv3-groups">
-                  {scenes.map((s) => (
-                    <div key={s.id} className="stv3-group">
-                      <div className="stv3-group-head">
-                        <KkIcon name={s.icon} size={22} />
-                        <span className="stv3-group-lab">{s.label}</span>
-                      </div>
-                      <p className="stv3-group-desc">{s.desc}</p>
-                      <ul className="stv3-group-list">
-                        {s.list.map((c, i) => (
-                          <li key={i}>
-                            <strong>{c.name}</strong>
-                            <span className="meta">{c.lunchPrice}</span>
-                          </li>
-                        ))}
-                      </ul>
+              <>
+                {ages.length > 0 && (
+                  <section id="section-by-age" className="stv3-sec ruled">
+                    <header className="stv3-sechead">
+                      <span className="stv3-eyebrow">子供の年齢で迷ったら</span>
+                      <h2 className="stv3-h2">
+                        年齢別おすすめ動線
+                      </h2>
+                      <p className="stv3-sublead">
+                        {station.name}駅周辺の店から、公式に設備の表示・記載がある店を年齢別に並べました。設備は店舗で変わることがあるので、行く前に各店の公式ページでご確認ください。
+                      </p>
+                    </header>
+                    <div className="stv3-ages">
+                      {ages.map((g) => (
+                        <div key={g.label} className="stv3-age">
+                          <div className="stv3-age-head">
+                            <KkArt name={g.art} size={32} />
+                            <div>
+                              <div className="stv3-age-lab">{g.label}</div>
+                              <div className="stv3-age-sub">{g.sub}</div>
+                            </div>
+                          </div>
+                          <ul className="stv3-picks">
+                            {g.list.map((p, i) => (
+                              <li key={p.key}>
+                                <strong>{i + 1}. {p.name}</strong>
+                                <span className="stv3-picks-price">{needText(p)}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </section>
+                  </section>
+                )}
+                {scenes.length > 0 && (
+                  <section id="section-by-scene" className="stv3-sec ruled">
+                    <header className="stv3-sechead">
+                      <span className="stv3-eyebrow">こんな日に行くなら</span>
+                      <h2 className="stv3-h2">
+                        シーン別ピックアップ
+                      </h2>
+                      <p className="stv3-sublead">
+                        {station.name}駅で「初めての外食」「ご褒美」などのシーンに合う店を、公式に設備の表示・記載がある店から選びました。
+                      </p>
+                    </header>
+                    <div className="stv3-groups">
+                      {scenes.map((sc) => (
+                        <div key={sc.id} className="stv3-group">
+                          <div className="stv3-group-head">
+                            <KkIcon name={sc.icon} size={22} />
+                            <span className="stv3-group-lab">{sc.label}</span>
+                          </div>
+                          <p className="stv3-group-desc">{sc.desc}</p>
+                          <ul className="stv3-group-list">
+                            {sc.list.map((p) => (
+                              <li key={p.key}>
+                                <strong>{p.name}</strong>
+                                <span className="meta">{p.meta}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+              </>
             );
           })()}
 
@@ -553,51 +521,52 @@ export default async function StationPage({ params }: Props) {
           </section>
 
           {/* ===== 条件別フィルタービュー（TL;DRからのジャンプ先） =====
-              ベビーカー◎ / キッズメニュー / 個室 / 離乳食持込 / 800円以内 のフィルタ */}
+              2026-10-28: 根拠のある店だけ（店の公式店舗検索の表示・チェーン公式の全店向けの記載・個人店は店の掲載）。
+              以前は Chain 型の手入力の値で「ベビーカーで余裕入店」などを出していた。 */}
           {(() => {
+            const fromEvidence = (need: EvidenceNeed) =>
+              evStores(need).map((st) => ({
+                name: st.name,
+                price: st.distance ?? '',
+                type: st.source === 'store' ? '店の公式の表示' : 'チェーン公式（全店）',
+              }));
             const filters = [
               {
-                id: 'section-stroller',
-                label: 'ベビーカーで余裕入店できる店',
+                id: 'section-stepfree',
+                label: '入口の段差なし・スロープ',
                 icon: 'stroller' as const,
-                desc: 'ベビーカーのまま余裕を持って入れる店。狭い通路で気を遣うストレスなし',
-                items: [
-                  ...chains.filter(c => c.stroller === 'good').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.strollerOk).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
-                ],
+                desc: '公式の店舗検索で「段差なし」「スロープ」などの表示がある店。通路の広さまでは分からないので、ベビーカーのまま席まで行けるかは店舗へご確認ください',
+                items: fromEvidence('stepFree'),
               },
               {
                 id: 'section-kidsmenu',
-                label: 'キッズメニューあり',
+                label: 'キッズメニュー',
                 icon: 'kids-menu' as const,
-                desc: 'お子様メニューがある店。取り分け不要で偏食気味の子も安心',
-                items: [
-                  ...chains.filter(c => c.kidsMenu).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.kidsMenu).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
-                ],
+                desc: '公式の店舗検索・チェーン公式にキッズメニュー（お子様メニュー・キッズセット）の表示・記載がある店',
+                items: fromEvidence('kidsMenu'),
               },
               {
                 id: 'section-private',
-                label: '個室・仕切り席あり',
+                label: '個室・座敷',
                 icon: 'rest-space' as const,
-                desc: '個室・座敷・半個室で気兼ねなく食事できる店',
+                desc: '公式の店舗検索・チェーン公式に個室・座敷の表示・記載がある店と、ホットペッパーで個室ありと掲載している個人店',
                 items: [
-                  ...chains.filter(c => c.privateRoom).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.privateRoom).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
+                  ...fromEvidence('privateRoom'),
+                  ...indiePrivate.map((r) => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店（店の掲載）' })),
                 ],
               },
               {
                 id: 'section-babyfood',
-                label: '離乳食持込OK',
+                label: '離乳食の持ち込み',
                 icon: 'babyfood' as const,
-                desc: '離乳食を持ち込める店。ベビーフード派にも自宅冷凍派にも',
-                items: chains.filter(c => c.babyFoodOk).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+                desc: 'チェーン公式に離乳食の持ち込みについての記載がある店（条件は各チェーンの公式案内をご確認ください）',
+                items: fromEvidence('babyFood'),
               },
               {
                 id: 'section-budget',
-                label: 'ランチ800円以内',
+                label: 'ランチ800円以内（目安）',
                 icon: 'yen' as const,
-                desc: '財布に優しい子連れランチ定番',
+                desc: 'チェーンのランチ価格帯の目安（店舗・メニューで変わります）',
                 items: chains.filter(c => c.lunchPrice === '〜800').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
               },
             ].filter(f => f.items.length > 0);
@@ -644,13 +613,13 @@ export default async function StationPage({ params }: Props) {
           <div id="section-chains" className="stv3-anchor" />
           {verifiedStores && (
             <p className="stv3-shop-note">
-              ※ この駅のチェーン店は、各チェーンの公式店舗検索で{station.name}駅から徒歩10分圏（直線およそ800m以内）に実在を確認できた店だけを載せています（確認日 {verifiedStores.verifiedAt}）。店名・住所は公式の表記です。閉店・移転は反映が遅れることがあるため、行く前に各店の公式ページで営業状況をご確認ください。店名の下の「公式ページの設備」は、その店について公式の店舗検索が「あり」と表示している項目です（{STORE_FACILITY_CHECKED_RANGE}時点。項目を持たないチェーンもあります）。書かれていない設備は、無いという意味ではありません。色つきのタグはチェーン共通の目安で、店ごとに確かめたものではありません。
+              ※ この駅のチェーン店は、各チェーンの公式店舗検索で{station.name}駅から徒歩10分圏（直線およそ800m以内）に実在を確認できた店だけを載せています（確認日 {verifiedStores.verifiedAt}）。店名・住所は公式の表記です。閉店・移転は反映が遅れることがあるため、行く前に各店の公式ページで営業状況をご確認ください。店名の下の「公式ページの設備」は、その店について公式の店舗検索が「あり」と表示している項目です（{STORE_FACILITY_CHECKED_RANGE}時点。項目を持たないチェーンもあります）。書かれていない設備は、無いという意味ではありません。{EVIDENCE_CHIPS_NOTE}
             </p>
           )}
           {Array.from(byCategory.entries()).map(([cat, list]) => (
             <section key={cat} className="station-category stv3-sec ruled">
               <h2 className="stv3-h2">
-                {CHAIN_CATEGORY_LABEL[cat]} <span className="stv3-count">{list.length}店</span>
+                {CHAIN_CATEGORY_LABEL[cat]} <span className="stv3-count">{list.length}チェーン</span>
               </h2>
               <div className="station-chains stv3-shops">
                 {list.map((c) => (
@@ -683,18 +652,7 @@ export default async function StationPage({ params }: Props) {
                       </ul>
                     )}
                     <div className="station-chain-meta kk-chips">
-                      <span title={STROLLER_DESC[c.stroller]} className={'kk-pill ' + (c.stroller === 'good' ? 'yes' : 'text')}>
-                        ベビーカー {STROLLER_LABEL[c.stroller]}
-                      </span>
-                      {c.kidsMenu && <span className="kk-chip">キッズメニュー</span>}
-                      {c.babyChair && <span className="kk-chip">キッズチェア</span>}
-                      {c.privateRoom && <span className="kk-chip">個室あり</span>}
-                      {c.babyFoodOk && <span className="kk-chip">離乳食持込OK</span>}
-                      {c.stepFree && <span className="kk-chip">段差なし</span>}
-                      {c.seatingType?.includes('zashiki') && <span className="kk-chip">座敷あり</span>}
-                      {c.diaperChangingTable && <span className="kk-chip">おむつ替え台</span>}
-                      {c.nursingRoom && <span className="kk-chip">授乳室</span>}
-                      {c.shareDish && <span className="kk-chip">取り分けOK</span>}
+                      <EvidenceChips stationSlug={slug} chainSlug={c.slug} />
                     </div>
                   </article>
                 ))}
@@ -804,7 +762,17 @@ export default async function StationPage({ params }: Props) {
                   ? filterChainsByCondition(chains, c.slug).length +
                     filterIndiesByCondition(indies, c.slug).length
                   : filterSpotsByCondition(spotsAll, c.slug).length;
-              return { cond: c, count, kind: k };
+              // 表示する件数: 設備の条件は根拠のある店の数（業態の条件は従来どおり）。リンクの有無は配信の判定のまま
+              const shown =
+                k === 'restaurant'
+                  ? conditionEvidenceCount(
+                      slug,
+                      c.slug,
+                      filterChainsByCondition(chains, c.slug).map((x) => ({ slug: x.slug, name: x.name })),
+                      filterIndiesByCondition(indies, c.slug),
+                    ) ?? count
+                  : count;
+              return { cond: c, count, shown, kind: k };
               // 404化した noindex combo（spot系全部＋需要なしminor駅）へリンクしない
             }).filter((x) => isStationConditionIndexable(slug, x.cond.slug, x.count, x.kind, station.scale));
             if (conditionLinks.length === 0) return null;
@@ -817,14 +785,14 @@ export default async function StationPage({ params }: Props) {
                   雨の日・個室・赤ちゃん連れなど、シーン別の絞り込みページもあります。
                 </p>
                 <div className="stv3-rows two">
-                  {conditionLinks.map(({ cond: oc, count, kind }) => (
+                  {conditionLinks.map(({ cond: oc, shown, kind }) => (
                     <Link key={oc.slug} href={`/station/${slug}/${oc.slug}`} className="stv3-row">
                       <span className="stv3-row-body">
                         <span className="stv3-row-title">{oc.label}</span>
                         <span className="stv3-row-sub">{oc.tagline}</span>
                       </span>
                       <span className="stv3-row-meta">
-                        {count}{kind === 'spot' ? '件' : '店'}
+                        {shown > 0 ? `${shown}${kind === 'spot' ? '件' : '店'}` : ''}
                         <KkIcon name="chevron-right" size={15} />
                       </span>
                     </Link>

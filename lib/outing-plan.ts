@@ -17,6 +17,7 @@
  *   - 午後   : 別spot→おうちミニプラン(531本) で必ず1件
  */
 
+import { brandEvidence, storeEvidence } from './station-evidence';
 import { WARD_NAMES, getStationsByWard, type TokyoWard } from './tokyo-stations';
 import {
   findStationBySlug,
@@ -450,7 +451,7 @@ export function lunchCandidates(
         const store = nearestVerifiedStore(anchorSlug, s.name);
         return store ? [withVerifiedStore(s, store)] : [];
       })
-    : chainAll;
+    : chainAll.map((s) => withEvidenceFacets(s, CHAIN_SPOT_TO_SLUG[s.name]));
   return { ward, chain };
 }
 
@@ -501,13 +502,31 @@ export function isStationChainVerified(anchorSlug: string | undefined): boolean 
   return Boolean(anchorSlug && getVerifiedStores(anchorSlug));
 }
 
+/**
+ * チェーン枠のタグ（ベビーチェア・キッズメニュー・離乳食OK・ベビーカーOK）を、根拠のある項目だけにする
+ * （2026-10-28）。以前は lib/spots.ts のチェーン枠に手で入れた値（出典なし）をそのまま出していた。
+ * 店の公式店舗検索の表示、またはチェーン公式の全店向けの記載があるものだけ true。
+ * 「ベビーカーOK」に当たる公式の項目は無いので出さない。
+ */
+function withEvidenceFacets(s: Spot, chainSlug: string | undefined, store?: VerifiedStore): Spot {
+  const ev = new Set(chainSlug ? brandEvidence(chainSlug).keys() : []);
+  if (store) for (const n of storeEvidence(store)) ev.add(n);
+  return {
+    ...s,
+    babyChair: ev.has('babyChair') || undefined,
+    kidsMenu: ev.has('kidsMenu') || undefined,
+    babyFood: ev.has('babyFood') || undefined,
+    strollerAccess: undefined,
+  };
+}
+
 /** 実在店の店名・距離を添えたチェーン枠（スポット名は変えない＝/spot へのリンクはそのまま）。 */
 function withVerifiedStore(s: Spot, store: VerifiedStore): Spot {
   return {
-    ...s,
+    ...withEvidenceFacets(s, store.chain, store),
     city: `${store.name}（${store.distance}）`,
-    // タグ（ベビーチェア等）はチェーン共通の目安。store.fac は、その店について公式の店舗検索が
-    // 「あり」と表示している項目（無い項目は「無い」ではなく、公式に表示が無いだけ）。
+    // タグ（ベビーチェア等）は withEvidenceFacets で根拠のある項目だけ。store.fac は、その店について公式の
+    // 店舗検索が「あり」と表示している項目（無い項目は「無い」ではなく、公式に表示が無いだけ）。
     note:
       `${store.name}（${store.distance}・${store.address}）。` +
       (store.fac && store.fac.length
