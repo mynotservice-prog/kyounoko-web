@@ -264,9 +264,9 @@
 }
 .today-v3 a.td3-slot-name:hover { color: var(--kk-orange-deep); }
 .today-v3 .td3-slot-chev { flex: none; margin-top: 6px; color: var(--kk-orange); }
-/* 写真は spot データにあるときだけ。角丸は軽く。 */
+/* 写真は spot データ・管理画面の写真があるときだけ。名前より先に大きく（2026-10-28 案A）。角丸は軽く。 */
 .today-v3 .td3-slot-photo {
-  display: block; margin-top: 10px; border-radius: var(--kk-r-img); overflow: hidden;
+  display: block; margin: 0 0 10px; border-radius: var(--kk-r-img); overflow: hidden;
   background: var(--kk-paper-deep);
 }
 .today-v3 .td3-slot-photo img {
@@ -511,7 +511,7 @@
   .today-v3 .td3-tl-item + .td3-tl-item { padding-top: 10px; }
   .today-v3 .td3-slot-name { font-size: 24px; }
   .today-v3 .td3-slot-desc { font-size: 15.5px; max-width: 60ch; }
-  .today-v3 .td3-slot-photo { max-width: 460px; }
+  .today-v3 .td3-slot-photo { max-width: 560px; }
 
   .today-v3 .td3-map { padding: 20px; margin-top: 34px; }
   .today-v3 .td3-map-title { font-size: 17px; }
