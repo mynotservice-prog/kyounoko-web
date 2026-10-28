@@ -86,7 +86,11 @@ export type Chain = {
   lunchPrice: '〜800' | '〜1,500' | '〜2,500' | '〜4,000' | '4,000〜';
   /** 駅周辺で見つかりやすさ。'common'=ほぼどの主要駅にも、'major-only'=ターミナル中心、'specific'=特定エリアのみ */
   ubiquity: 'common' | 'major-only' | 'specific';
-  /** 店舗の特徴説明（80字以内） */
+  /**
+   * 店舗の特徴説明（80字以内）。業態・看板メニュー・注文方式など。
+   * 設備（椅子・ベビーカー・席・個室・離乳食・おむつ・遊び場）の断定は書かない（店ごとに違い、出典が無い）。
+   * キッズメニューは lib/chain-facilities.ts に公式の根拠があるときだけ書き、一部店舗なら「店舗による」と書く（2026-10-28）。
+   */
   description: string;
 };
 
@@ -119,7 +123,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: 'ミラノ風ドリア300円台、お子様プレート・キッズチェア完備。広めの座席でベビーカーOK。',
+    description: 'ミラノ風ドリアなど手頃なイタリアンのファミレス。公式に専用のキッズメニューは無い。',
   },
   {
     slug: 'gusto',
@@ -140,7 +144,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'common',
-    description: 'キッズメニュー充実、おもちゃ付きセット・ぬりえあり。ボックス席多くベビーカー横付け可。',
+    description: 'すかいらーく系のファミレス。公式のキッズメニューあり。和洋中のメニューが幅広い。',
   },
   {
     slug: 'jonathan',
@@ -161,7 +165,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'すかいらーく系の落ち着いた雰囲気のファミレス。お子様メニュー・キッズチェアあり。',
+    description: 'すかいらーく系の落ち着いた雰囲気のファミレス。公式のお子様メニューあり。',
   },
   {
     slug: 'denny-s',
@@ -182,7 +186,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'パンケーキ・キッズプレートが人気。ボックス席広めでベビーカー入店しやすい。',
+    description: 'パンケーキや洋食のファミレス。公式のキッズメニューあり。',
   },
   {
     slug: 'royal-host',
@@ -203,7 +207,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜2,500',
     ubiquity: 'major-only',
-    description: 'やや高めの落ち着いた家族向け。お子様セット・離乳食メニューあり。ターミナル駅中心。',
+    description: 'やや高めの落ち着いたファミレス。公式のお子様メニューあり。ターミナル駅に多い。',
   },
   {
     slug: 'cocos',
@@ -224,7 +228,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '誕生日無料デザートサービスあり。キッズプレート・ぬりえも用意される子連れ向きファミレス。',
+    description: 'ハンバーグや洋食のファミレス。公式のおこさまメニューあり。',
   },
   {
     slug: 'bamiyan',
@@ -245,7 +249,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'すかいらーく系中華ファミレス。お子様ラーメン・餃子セットあり。ボックス席広め。',
+    description: 'すかいらーく系の中華ファミレス。公式のお子様メニューあり。',
   },
 
   // ===== カフェ系 =====
@@ -268,7 +272,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: false,
     lunchPrice: '〜1,500',
     ubiquity: 'common',
-    description: 'キッズドリンク（ミルク・ジュース）あり。多くの店舗にベビーチェア常備。',
+    description: 'コーヒーチェーン。ドリンクのほかサンドイッチ・ペストリーなどの軽食あり。',
   },
   {
     slug: 'tully-coffee',
@@ -289,7 +293,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: false,
     lunchPrice: '〜1,500',
     ubiquity: 'common',
-    description: 'キッズメニューはないがミルクや軽食充実。ソファ席ありベビーカー横付けしやすい。',
+    description: 'コーヒーチェーン。公式のキッズメニュー（おやこパスタセット・キッズドリンクなど）あり。',
   },
   {
     slug: 'doutor',
@@ -310,7 +314,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: false,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: '価格安く便利だが店舗狭めの所多い。ベビーカーは店舗による。サンドイッチ・ミラノサンドあり。',
+    description: '手頃なセルフ式カフェ。ミラノサンドなどの軽食あり。店の広さは店舗によって違う。',
   },
   {
     slug: 'komeda',
@@ -331,7 +335,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'ボックス席広く滞在しやすい。お子様プレート・モーニング・かき氷あり。郊外型多い。',
+    description: '名古屋発の喫茶店。モーニングとかき氷が人気。公式のお子様メニューあり。郊外型の店舗が多い。',
   },
   {
     slug: 'excelsior',
@@ -352,7 +356,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: false,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'ドトール系のやや上品なカフェ。パスタ・サンドイッチ・スイーツあり。主要ターミナル駅中心。',
+    description: 'ドトール系のカフェ。パスタ・サンドイッチ・スイーツあり。主要ターミナル駅に多い。',
   },
 
   // ===== ファストフード系 =====
@@ -375,7 +379,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: 'ハッピーセット定番、ベビーチェア・おむつ替え台ある店舗多数。プレイランド併設店も。',
+    description: 'ハンバーガーチェーン。子ども向けのハッピーセットあり。',
   },
   {
     slug: 'mos-burger',
@@ -396,7 +400,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'common',
-    description: 'モスワイワイセット（おもちゃ付）あり。注文後着席方式で席確保しやすい。',
+    description: 'ハンバーガーチェーン。子ども向けのモスワイワイセットあり。注文後に席で待つ方式。',
   },
   {
     slug: 'kfc',
@@ -417,7 +421,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'お子様セット（KIDSパック）あり。ベビーチェア配備の店舗多い。',
+    description: 'フライドチキンのチェーン。公式のキッズメニューあり。',
   },
   {
     slug: 'lotteria',
@@ -439,7 +443,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'major-only',
-    description: 'お子様セット・絶品チーズバーガー人気。店舗数は減少傾向だが大型駅に残る。',
+    description: 'ハンバーガーチェーン（ロッテリアはゼッテリアに統合が進んでいる）。子ども向けのわくわくセットあり。',
   },
   {
     slug: 'subway',
@@ -460,7 +464,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '野菜たっぷりサンドが選べる、健康志向の家族に人気。キッズセットあり。',
+    description: 'パンや野菜を選べるサンドイッチのチェーン。キッズセットは店舗による。',
   },
 
   // ===== 牛丼・カレー・和食 =====
@@ -483,7 +487,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: '小盛り・お子様セットあり。カウンター中心の店も多くベビーカーは店舗による。',
+    description: '牛丼チェーン。小盛りあり、お子様メニューは店舗による。カウンター中心の店も多い。',
   },
   {
     slug: 'matsuya',
@@ -504,7 +508,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: '味噌汁無料の牛めし屋。キッズメニューはないがミニ牛めしあり。回転早い。',
+    description: '牛めしのチェーン。公式のおこさまメニュー（おこさま牛めしなど）あり。',
   },
   {
     slug: 'sukiya',
@@ -525,7 +529,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: '牛丼チェーンで唯一お子様セット（おもちゃ付）が充実。ベビーチェア配備の店舗多い。',
+    description: '牛丼チェーン。お子様メニューは店舗による。',
   },
   {
     slug: 'cocoichi',
@@ -546,7 +550,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '辛さ・ご飯量カスタム可、お子様カレーあり。ベビーチェア配備の店舗多い。',
+    description: 'カレーのチェーン。辛さ・ご飯の量を選べる。お子さまメニューは店舗による。',
   },
   {
     slug: 'ootoya',
@@ -567,7 +571,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '和定食中心、お子様膳あり。野菜豊富で離乳食卒業後の子にも好適。',
+    description: '和定食のチェーン。公式のお子様メニューあり。',
   },
   {
     slug: 'yayoiken',
@@ -588,7 +592,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'ご飯おかわり自由の和定食チェーン。お子様メニューあり、ボックス席あり。',
+    description: 'ご飯おかわり自由の和定食チェーン。お子様メニューは店舗による。',
   },
 
   // ===== 中華・寿司・ラーメン =====
@@ -611,7 +615,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '餃子・チャーハン・ラーメンが人気。お子様セット用意の店舗も。混雑時は注意。',
+    description: '餃子・チャーハン・ラーメンの中華チェーン。店内のメニューに子ども向けは無く、持ち帰りにお子様弁当がある。',
   },
   {
     slug: 'sushiro',
@@ -632,7 +636,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'common',
-    description: '回転寿司最大手、タッチパネル注文。ベビーカー席・キッズメニュー完備で家族層No.1人気。',
+    description: 'タッチパネル注文の回転寿司チェーン。公式のキッズメニューあり。',
   },
   {
     slug: 'kura-sushi',
@@ -653,7 +657,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: 'ビッくらポン！景品システムが子供に人気。ボックス席広く家族向き。',
+    description: '回転寿司チェーン。5皿ごとに遊べる「ビッくらポン！」がある。',
   },
   {
     slug: 'hama-sushi',
@@ -674,7 +678,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '平日90円・休日100円の低価格寿司。郊外型多くファミリー席広い。',
+    description: '低価格の回転寿司チェーン。公式のキッズメニューあり。郊外型の店舗が多い。',
   },
   {
     slug: 'ichiban',
@@ -695,7 +699,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'major-only',
-    description: '元気寿司系、注文レーン直送方式で子供が楽しめる。子連れ家族に人気。',
+    description: '元気寿司系の回転寿司。注文品はレーンで席まで届く方式。公式のキッズメニューあり。',
   },
   {
     slug: 'marugame',
@@ -716,7 +720,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜800',
     ubiquity: 'common',
-    description: '釜揚げうどん・天ぷらが人気。キッズうどんあり。セルフ式だが席広めで家族OK。',
+    description: '釜揚げうどん・天ぷらのセルフ式チェーン。公式のお子さま向けメニューあり。',
   },
 
   // ===== 焼肉・しゃぶしゃぶ =====
@@ -739,7 +743,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜2,500',
     ubiquity: 'major-only',
-    description: 'ボックス席・個室あり、キッズプレート用意。ランチセットも子連れに人気。',
+    description: '焼肉チェーン。公式のキッズメニューあり。',
   },
   {
     slug: 'shabu-yo',
@@ -760,7 +764,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜2,500',
     ubiquity: 'major-only',
-    description: 'すかいらーく系しゃぶしゃぶ食べ放題。小学生以下半額、未就学児無料の店舗多数。',
+    description: 'すかいらーく系のしゃぶしゃぶ食べ放題。子どもの料金は公式の料金案内で確認を。',
   },
 
   // ===== モール・特殊系 =====
@@ -783,7 +787,7 @@ export const CHAINS: Chain[] = [
     allergenInfo: true,
     lunchPrice: '〜1,500',
     ubiquity: 'specific',
-    description: 'スウェーデンミートボール・キッズメニュー充実。離乳食無料、キッズスペースあり。',
+    description: 'IKEA店内のレストラン。スウェーデンミートボールが名物。',
   },
   {
     slug: 'costco-food',
@@ -812,7 +816,7 @@ export const CHAINS: Chain[] = [
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'common',
-    description: 'ハンバーグ専門ファミレス。木製ベビーチェア完備、ボックス席中心で子連れ定番。',
+    description: 'ハンバーグ専門のファミレス。公式のキッズメニューあり。',
   },
   {
     slug: 'nakau', name: 'なか卯', category: 'gyudon',
@@ -833,7 +837,7 @@ export const CHAINS: Chain[] = [
     stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜800', ubiquity: 'common',
-    description: '手頃なとんかつ・カツ丼。ボックス席のある店舗が多く、ご飯ものを取り分けやすい。',
+    description: '手頃なとんかつ・カツ丼のチェーン。',
   },
   {
     slug: 'tenya', name: '天丼てんや', category: 'washoku',
@@ -847,49 +851,49 @@ export const CHAINS: Chain[] = [
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜800', ubiquity: 'common',
-    description: 'セルフ式うどん。やわらかいうどんは取り分けに最適、こどもセットあり。',
+    description: 'セルフ式うどんのチェーン。お子様メニューは店舗による。',
   },
   {
     slug: 'ringer-hut', name: 'リンガーハット', category: 'noodles',
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'common',
-    description: '長崎ちゃんぽん・皿うどん。野菜たっぷりで取り分けやすく、お子様メニューも。',
+    description: '長崎ちゃんぽん・皿うどんのチェーン。公式のお子様メニューあり。',
   },
   {
     slug: 'hidakaya', name: '日高屋', category: 'chinese',
     stroller: 'limited', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
     seatingType: ['table', 'counter'], shareDish: true,
     lunchPrice: '〜800', ubiquity: 'common',
-    description: '駅前立地の中華そばチェーン。手頃で取り分けやすいが、小型店が多くベビーカーは要確認。',
+    description: '駅前に多い中華そばチェーン。小型店が多い。お子様メニューは店舗による。',
   },
   {
     slug: 'osaka-ohsho', name: '大阪王将', category: 'chinese',
     stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'common',
-    description: '餃子・炒飯の中華チェーン。ボックス席のある店舗が多く、取り分け前提のメニューが豊富。',
+    description: '餃子・炒飯の中華チェーン。取り分けやすいメニューが多い。',
   },
   {
     slug: 'mister-donut', name: 'ミスタードーナツ', category: 'bakery',
     stroller: 'good', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜800', ubiquity: 'common',
-    description: 'ドーナツに加え点心・麺類も。ベビーチェアありの店舗が多く、休憩利用にも。',
+    description: 'ドーナツのチェーン。点心・麺類のある店舗も。',
   },
   {
     slug: 'saint-marc-cafe', name: 'サンマルクカフェ', category: 'cafe',
     stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['table', 'counter', 'terrace'],
     lunchPrice: '〜800', ubiquity: 'common',
-    description: 'チョコクロが看板のカフェ。ベビーチェアありの店舗が多く、軽食・休憩に。',
+    description: 'チョコクロが看板のカフェ。軽食・休憩に。',
   },
   {
     slug: 'veloce', name: 'カフェ・ベローチェ', category: 'cafe',
     stroller: 'limited', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
     seatingType: ['table', 'counter'],
     lunchPrice: '〜800', ubiquity: 'common',
-    description: '低価格のセルフカフェ。駅前小型店が多くベビーカーは要確認だが、短時間の休憩に便利。',
+    description: '低価格のセルフカフェ。駅前の小型店が多い。',
   },
   {
     slug: 'pronto', name: 'プロント', category: 'cafe',
@@ -903,63 +907,63 @@ export const CHAINS: Chain[] = [
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'common',
-    description: '回転寿司チェーン。ボックス席・ベビーチェア完備、サイドメニューも豊富で取り分けやすい。',
+    description: '回転寿司チェーン。公式のキッズメニューあり。サイドメニューも多い。',
   },
   {
     slug: 'freshness-burger', name: 'フレッシュネスバーガー', category: 'fast-food',
     stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['table', 'counter', 'terrace'], allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'common',
-    description: '野菜多めのこだわりバーガー。落ち着いた雰囲気でベビーチェアありの店舗も。',
+    description: '野菜多めのハンバーガーチェーン。キッズセットは店舗による。',
   },
   {
     slug: 'kushikatsu-tanaka', name: '串カツ田中', category: 'washoku',
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜2,500', ubiquity: 'common',
-    description: '串カツ店だが家族客向け施策が手厚い。お子様メニュー・ベビーチェアあり、昼営業の店舗も。',
+    description: '串カツのチェーン。昼営業の店舗も。子ども用の椅子・座敷は店舗による。',
   },
   {
     slug: 'yakiniku-king', name: '焼肉きんぐ', category: 'yakiniku',
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
     lunchPrice: '〜2,500', ubiquity: 'major-only',
-    description: '食べ放題焼肉。ボックス席・ベビーチェア完備、お子様メニューやデザートも充実。',
+    description: '焼肉の食べ放題チェーン。',
   },
   {
     slug: 'onyasai', name: 'しゃぶしゃぶ温野菜', category: 'yakiniku',
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: true, babyFoodOk: true,
     seatingType: ['box', 'table', 'zashiki'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜2,500', ubiquity: 'major-only',
-    description: 'しゃぶしゃぶ食べ放題。個室・座敷のある店舗が多く、鍋を取り分けて食べやすい。',
+    description: 'しゃぶしゃぶ食べ放題のチェーン。公式のお子様メニューあり。',
   },
   {
     slug: 'bronco-billy', name: 'ブロンコビリー', category: 'family-restaurant',
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
     lunchPrice: '〜2,500', ubiquity: 'major-only',
-    description: 'ステーキ・ハンバーグのファミレス。サラダバーが人気、ボックス席・ベビーチェア完備。',
+    description: 'ステーキ・ハンバーグのファミレス。サラダバーが人気。公式のキッズメニューあり。',
   },
   {
     slug: 'musashino-mori-coffee', name: 'むさしの森珈琲', category: 'cafe',
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'major-only',
-    description: 'すかいらーく系の落ち着いたカフェ。ふんわりパンケーキが看板、ボックス席で子連れもくつろぎやすい。',
+    description: 'すかいらーく系の落ち着いたカフェ。ふんわりパンケーキが看板。',
   },
   {
     slug: 'hoshino-coffee', name: '星乃珈琲店', category: 'cafe',
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table'],
     lunchPrice: '〜1,500', ubiquity: 'major-only',
-    description: '昭和喫茶風の落ち着いたカフェ。スフレパンケーキが名物、ソファ席のある店舗も多い。',
+    description: '昭和喫茶風の落ち着いたカフェ。スフレパンケーキが名物。',
   },
   {
     slug: 'kamakura-pasta', name: '鎌倉パスタ', category: 'italian',
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['box', 'table'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'major-only',
-    description: '生パスタと焼きたてパン食べ放題。お子様メニュー・ベビーチェアあり、ゆったり座席。',
+    description: '生パスタと焼きたてパン食べ放題のチェーン。',
   },
   {
     slug: 'goemon', name: '洋麺屋五右衛門', category: 'italian',
@@ -973,7 +977,7 @@ export const CHAINS: Chain[] = [
     stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
     seatingType: ['box', 'table'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜1,500', ubiquity: 'major-only',
-    description: 'ペコちゃんでおなじみのファミリーレストラン。お子様メニュー・ケーキが充実、ボックス席中心。',
+    description: 'ペコちゃんでおなじみの不二家のレストラン。ケーキが看板。',
   },
   {
     slug: 'tonkatsu-wako', name: 'とんかつ和幸', category: 'washoku',
