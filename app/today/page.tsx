@@ -898,8 +898,8 @@ export default async function TodayPage({ searchParams }: Props) {
                       : '今日は外で、子連れ歓迎のお店で食べる。'}
                   </h2>
                   <p className="td3-lg-p">
-                    ベビーカー入店OK・キッズメニュー・キッズチェアが揃った
-                    ファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
+                    子連れで入りやすいファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
+                    設備は店舗によって違うので、行く前に各店の公式ページでご確認ください。
                     {query.area === 'tokyo'
                       ? '駅単位でさらに細かく探したい場合は下の「駅から絞り込む」へ。'
                       : ''}
@@ -922,7 +922,7 @@ export default async function TodayPage({ searchParams }: Props) {
                     子連れ歓迎ファミレス・カフェ {restaurants.length}店
                   </h3>
                   <p className="today-section-lede">
-                    ベビーカー入店OK・キッズメニュー・キッズチェアありの実在店舗。
+                    子連れで入りやすいお店の候補です。設備は店舗によって違うので、行く前に各店の公式ページでご確認ください。
                     {query.area && query.area !== 'all'
                       ? `${getAreaName(query.area)}エリアから厳選。`
                       : '全国の人気店を popular順で。'}
@@ -962,7 +962,7 @@ export default async function TodayPage({ searchParams }: Props) {
                     <span className="td3-lg-cta-body">
                       <span className="td3-lg-lab">DEEPER · 駅から絞り込む</span>
                       <span className="td3-lg-cta-title">東京エリアの駅から子連れOK店を探す</span>
-                      <span className="td3-lg-note">23区484駅・40路線対応 / ベビーカーOK・個室・雨の日OK等で絞り込み可</span>
+                      <span className="td3-lg-note">23区484駅・40路線対応 / 個室・キッズメニュー・雨の日などの条件別ページあり</span>
                     </span>
                     <span className="td3-lg-cta-arrow" aria-hidden="true">
                       <KkIcon name="arrow-right" size={20} sw={2} />

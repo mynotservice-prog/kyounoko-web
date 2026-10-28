@@ -20,8 +20,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '駅別 子連れランチ・ベビーカーOK店ガイド｜東京23区・神奈川・埼玉・千葉・関西',
-  description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店および個人店を駅別にチェック。キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部表示。',
+  title: '駅別 子連れランチ・ベビーカー・キッズメニュー店ガイド｜東京23区・神奈川・埼玉・千葉・関西',
+  description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOKのファミレス・カフェ・チェーン店および個人店を駅別に掲載。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものを店ごとに表示。',
   alternates: { canonical: '/station' },
 };
 
@@ -75,7 +75,7 @@ export default function StationIndexPage() {
         <div className="container-narrow">
           <header className="page-head" style={{ marginBottom: 32 }}>
             <span className="eyebrow">東京23区 全484駅 + 関西主要18駅</span>
-            <h1>駅別 子連れランチ・ベビーカーOK店ガイド</h1>
+            <h1>駅別 子連れランチ・ベビーカー・キッズメニュー店ガイド</h1>
             <p className="lead">
               東京23区の全駅と、関西エリア（大阪・京都・神戸）の主要駅で、子連れOK・ベビーカー入店可・キッズメニューありの飲食チェーンや話題の個人店を駅単位で網羅。
               ターミナル駅から住宅地の小さな駅まで、行きたい駅をクリックすれば即わかる。
