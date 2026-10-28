@@ -152,7 +152,14 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
   const photo = slot.photo ?? spotPhoto(slot.spot);
 
   return (
-    <div className={'td3-slot ' + slot.key}>
+    <div className={'td3-slot ' + slot.key + (photo ? ' has-photo' : '')}>
+      {/* 写真があるときは行き先の名前より先に大きく出す（2026-10-28 案A） */}
+      {photo && (
+        <span className="td3-slot-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img {...optimizedImgAttrs(photo)} alt="" loading="lazy" decoding="async" />
+        </span>
+      )}
       <span className="td3-slotlab">
         <KkIcon name={slot.icon as KkIconName} size={14} />
         {slot.label}
@@ -164,12 +171,6 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
         </Link>
       ) : (
         <span className="td3-slot-name">{title}</span>
-      )}
-      {photo && (
-        <span className="td3-slot-photo">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img {...optimizedImgAttrs(photo)} alt="" loading="lazy" decoding="async" />
-        </span>
       )}
       {meta && <p className="td3-slot-desc">{meta}</p>}
       {slot.hoursLine && <p className="td3-slot-hours">{slot.hoursLine}（公式サイトの記載。臨時の休みは公式でご確認ください）</p>}
