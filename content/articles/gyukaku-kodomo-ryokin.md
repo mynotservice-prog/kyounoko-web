@@ -119,7 +119,7 @@ A. 単品注文なら子ども料金という枠はなく、キッズメニュ�
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [牛角のキッズメニュー](/article/gyukaku-kids-menu)
+- [牛角のキッズメニュー](/article/gyukaku-kodzure-koryaku)
 - [焼肉きんぐの子ども料金｜幼児は無料？小学生はいくら？](/article/yakiniku-king-kodomo-ryokin)
 - [焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)
 - [子供メニュー何歳から？年齢制限・無料/有料早見表](/article/kids-menu-nansai-kara-hayami)

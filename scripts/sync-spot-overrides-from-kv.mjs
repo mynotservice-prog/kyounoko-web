@@ -25,7 +25,7 @@
  *   node scripts/sync-spot-overrides-from-kv.mjs          # 書き込む
  *   node scripts/sync-spot-overrides-from-kv.mjs --site=https://kyounoko.jp
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 const arg = (k, d) => {
   const m = process.argv.find((a) => a.startsWith(`--${k}=`));
@@ -35,9 +35,31 @@ const DRY = process.argv.includes('--dry');
 const SITE = arg('site', 'https://kyounoko.jp');
 const FILE = 'lib/spot-overrides.json';
 
+/** .env.local を軽くパース（既存の env を上書きしない）。ADMIN_USER / ADMIN_PASSWORD 用。 */
+function loadEnvLocal() {
+  if (!existsSync('.env.local')) return;
+  for (const line of readFileSync('.env.local', 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+}
+loadEnvLocal();
+
+/**
+ * /api/admin/* は 2026-10-09 から middleware の Basic 認証の内側（Referer だけでは 401）。
+ * .env.local の ADMIN_USER / ADMIN_PASSWORD（本番と同じ値）から Authorization を組み立てる。
+ * 値はログに出さない。
+ */
+function adminBasicAuthHeader() {
+  const u = process.env.ADMIN_USER;
+  const p = process.env.ADMIN_PASSWORD;
+  if (!u || !p) return {};
+  return { Authorization: `Basic ${Buffer.from(`${u}:${p}`, 'utf8').toString('base64')}` };
+}
+
 const res = await fetch(`${SITE}/api/admin/spot-overrides`, {
-  // /api/admin/* は referer に /admin/ を含むことだけを見ている（本体は Basic 認証の内側）
-  headers: { Referer: `${SITE}/admin/spots/edit` },
+  // /api/admin/* は middleware の Basic 認証 ＋ route の Referer 判定（/admin/ を含むこと）
+  headers: { Referer: `${SITE}/admin/spots/edit`, ...adminBasicAuthHeader() },
 });
 if (!res.ok) {
   console.error(`KV取得に失敗: HTTP ${res.status}`, (await res.text()).slice(0, 200));

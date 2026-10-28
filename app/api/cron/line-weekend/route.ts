@@ -15,8 +15,8 @@ import { sendLineBroadcast, sendLinePush, isLineConfigured, isLinePushConfigured
  * 再びcron化するなら、手動の予約配信をやめてからにすること（詳細は docs/line-launch-kit.md §2-1）。
  *
  * ## 認可
- * CRON_SECRET がセットされている場合、`Authorization: Bearer <secret>` または
- * `?token=<secret>` を必須にする（Vercel Cron は自動で Authorization に付与）。
+ * CRON_SECRET の `Authorization: Bearer <secret>` または `?token=<secret>` を必須にする
+ * （Vercel Cron は自動で Authorization に付与）。未設定なら 503 で拒否（fail-closed）。
  *
  * ## クエリ（動作確認用）
  * - ?dryRun=1  … 送信せず、生成した本文と選定結果だけJSONで返す
@@ -31,7 +31,10 @@ export const maxDuration = 30;
 
 function isAuthorized(req: Request): boolean {
   const secret = process.env.CRON_SECRET;
-  if (!secret) return true;
+  // fail-closed: 未設定なら誰にも許可しない（以前は未設定だと誰でも実行できた）。
+  // 本番は CRON_SECRET 設定済み（2026-10-09 確認）。Vercel Cron はこの値を
+  // Authorization: Bearer に自動付与する。
+  if (!secret) return false;
   const url = new URL(req.url);
   const fromQuery = url.searchParams.get('token');
   const fromHeader = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
@@ -39,6 +42,10 @@ function isAuthorized(req: Request): boolean {
 }
 
 export async function GET(req: Request) {
+  if (!process.env.CRON_SECRET) {
+    // fail-closed: 未設定のままデプロイしても誰にも実行させない
+    return NextResponse.json({ ok: false, error: 'CRON_SECRET is not configured' }, { status: 503 });
+  }
   if (!isAuthorized(req)) {
     return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 });
   }

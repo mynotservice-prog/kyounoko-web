@@ -77,21 +77,93 @@ export const FROZEN_INBOUND_CUTOFF = '2026-09-25';
 export const FROZEN_TARGET_SLUGS = new Set([
   'bamiyan-kids-menu', 'bamiyan-kodzure-koryaku', 'bamiyan-morning-kosodate', 'bigboy-morning-kosodate',
   'bikkuri-donkey-kids-menu', 'bikkuri-donkey-kodzure-koryaku', 'bikkuri-donkey-morning-kosodate',
-  'cocoichi-kids-menu', 'cocos-kids-menu', 'dennys-morning-kosodate', 'fureai-nouen-setagaya-aki-kodzure',
-  'gusto-kids-menu', 'gusto-morning-kosodate', 'hanamaru-udon-kodzure-koryaku', 'hoshino-morning-kosodate',
-  'ichiran-kodzure-koryaku', 'komazawa-koen-jabujabuike', 'komeda-morning-kosodate',
+  'cocos-kids-menu', 'dennys-morning-kosodate', 'fureai-nouen-setagaya-aki-kodzure',
+  'gusto-morning-kosodate', 'hoshino-morning-kosodate',
+  'komazawa-koen-jabujabuike', 'komeda-morning-kosodate',
   'mikangari-musashimurayama-kodzure', 'mizumoto-koen-jabujabuike', 'mogitori-nerima-aki-kodzure',
-  'mos-burger-kids-menu', 'mos-burger-morning-kosodate', 'ootoya-morning-kosodate',
-  'royalhost-morning-kosodate', 'saizeriya-kids-menu', 'shabuyou-kodzure-koryaku',
-  'sukiya-morning-kosodate', 'yakiniku-king-kodzure-koryaku', 'yayoiken-kodzure-koryaku',
+  'mos-burger-morning-kosodate', 'ootoya-morning-kosodate',
+  'royalhost-morning-kosodate', 'saizeriya-kids-menu',
+  'sukiya-morning-kosodate', 'yayoiken-kodzure-koryaku',
   'yayoiken-morning-kosodate',
+  // 実験11（デニーズ title 語彙併記・2026-10-17）: 処置1本＋対照1本
+  'dennys-kids-menu', 'royal-host-kids-menu',
+  // 実験10（一蘭301・2026-10-17）: 処置1本＋対照ペア2本
+  'ichiran-kodzure-koryaku', 'yakiniku-king-kids-menu', 'yakiniku-king-kodomo-ryokin',
+  // 実験12（五右衛門型の先行2本・2026-10-17）
+  'machida-shoten-kodzure-koryaku', 'tadokoro-shoten-kodzure-koryaku',
+  // 実験15（五右衛門型 第2陣・2026-10-17）
+  'akakara-kodzure-koryaku', 'kamukura-kodzure-koryaku',
+  // 実験16（五右衛門型 第3陣・焼肉トラジ・2026-10-18）
+  'toraji-kodzure-koryaku',
+  // 実験17（サンマルクカフェ 店舗別キッズセット・2026-10-18）: 処置1本＋対照1本
+  'sanmarc-cafe-kodzure-koryaku', 'tullys-coffee-kodzure-koryaku',
+  // 実験19（華屋与兵衛 title 語彙併記・2026-10-18）: 処置1本＋対照2本
+  'hanaya-yohei-kodzure-koryaku', 'washoku-sato-kodzure-koryaku', 'nakau-kodzure-koryaku',
+  // 実験18（ステーキガスト料金記事の title・2026-10-18）: 処置1本＋測定対象1本＋対照2本
+  'steak-gusto-kodomo-ryokin', 'steakgusto-kids-menu', 'bigboy-kids-menu', 'bigboy-kodomo-ryokin',
+  // 実験20（五右衛門型 第4陣・やまなか家・2026-10-18）
+  'yamanakaya-kodzure-koryaku',
+  // 実験21（五右衛門型 第5陣・ラーメン横綱・2026-10-19）
+  'yokozuna-ramen-kodzure-koryaku',
+  // 実験22（1歳の献立1週間・2026-10-23）: 処置1本＋ガードレール（勝ち記事・不変）1本
+  'youjishoku-1sai-kondate-1week', 'youjishoku-kanryouki-1week-rota',
+  // 実験24（年齢別お出かけ 東京5本・2026-10-23登録）: 処置5本＋ガードレール2本
+  '1sai-odekake-tokyo', '1sai-han-odekake-tokyo', '2sai-odekake-tokyo', '3sai-odekake-tokyo', '4sai-odekake-tokyo',
+  'akachan-odekake-3months-1year', 'kosodate-muryou-spots-tokyo',
+  // 実験13（牛角・CoCo壱の301・2026-10-17）: 処置2本＋対照ペア2本
+  'gyukaku-kodzure-koryaku', 'cocoichi-kids-menu', 'kfc-kids-menu', 'kfc-kodzure-koryaku',
+  // R1b（事実だけの更新便・作り直し・24対・2026-10-24 登録）: 処置24本＋対照24本
+  'reitou-shokuhin-ranking', 'kodomo-grape-itsukara', 'gyuuniku-ryouri-kodomo-okiniiri', 'babyfuku-tatami',
+  'kodzure-deli-takeout-10', 'tokyo-kodomo-mushiyoke-spot', 'jiyugaoka-muse-square-kodzure',
+  'kurasushi-stroller', 'kodomo-nuts-itsukara', 'puroland-kosodate-guide', 'haneda-t1-babyroom',
+  'takaosan-kodzure-route', 'karuizawa-shopping-mall', 'kasai-aquarium-kosodate',
+  'hamasushi-rinyushoku-mochikomi', 'moony-vs-goon', 'pampers-vs-merries',
+  'tokyo-babycar-kodzure-gaishoku-50', 'sakana-kodomo-tabete-kureru', 'shinjuku-gyoen-kodzure',
+  'yurakucho-kodzure-lunch', 'costco-kodzure-koryaku', 'dessert-kodomo-tezukuri-5', 'yayoiken-kids-menu',
+  'fuji-safari-park-kosodate', 'shabuyo-koshitsu', 'tokyo-station-kodzure-lunch', 'kodomo-lemon-itsukara',
+  'kodomo-tkg-itsukara', 'takanawa-gateway-kodzure-lunch', 'kodomo-kamareta-taisho', 'junior-seat-2-3sai-hikaku-15',
+  'chichinohi-3sai-dekiru-tedukuri-10', 'ikea-smaland', 'tobu-zoo-kodzure', 'kodomo-ramen-itsukara',
+  'haneda-rinyushoku-milk', 'yoshinoya-kids-menu', 'fujiq-thomas-land-kosodate', 'ergo-vs-aprica-dakkohimo',
+  'tokyo-station-babyroom', 'kodomo-renji-mushipan-5min-asa', 'tokyo-kichijoji-kodzure-lunch',
+  'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo', 'showa-kinen-koen-kodzure',
+  'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
 ]);
+
+/**
+ * slug ごとのカットオフ（無ければ FROZEN_INBOUND_CUTOFF）。
+ * すでにリンクを受けている既存記事を凍結するときは登録日を置く。
+ * 9/25 のままだと、9/25〜登録日に公開した記事から張られているリンクと、
+ * 9/25 以降に足したルールのリンクが登録の時点で消え、処置・対照の描画が変わる。
+ */
+const R1B_CUTOFF = '2026-10-25';
+const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
+  [
+    'reitou-shokuhin-ranking', 'kodomo-grape-itsukara', 'gyuuniku-ryouri-kodomo-okiniiri', 'babyfuku-tatami',
+    'kodzure-deli-takeout-10', 'tokyo-kodomo-mushiyoke-spot', 'jiyugaoka-muse-square-kodzure',
+    'kurasushi-stroller', 'kodomo-nuts-itsukara', 'puroland-kosodate-guide', 'haneda-t1-babyroom',
+    'takaosan-kodzure-route', 'karuizawa-shopping-mall', 'kasai-aquarium-kosodate',
+    'hamasushi-rinyushoku-mochikomi', 'moony-vs-goon', 'pampers-vs-merries',
+    'tokyo-babycar-kodzure-gaishoku-50', 'sakana-kodomo-tabete-kureru', 'shinjuku-gyoen-kodzure',
+    'yurakucho-kodzure-lunch', 'costco-kodzure-koryaku', 'dessert-kodomo-tezukuri-5', 'yayoiken-kids-menu',
+    'fuji-safari-park-kosodate', 'shabuyo-koshitsu', 'tokyo-station-kodzure-lunch', 'kodomo-lemon-itsukara',
+    'kodomo-tkg-itsukara', 'takanawa-gateway-kodzure-lunch', 'kodomo-kamareta-taisho',
+    'junior-seat-2-3sai-hikaku-15', 'chichinohi-3sai-dekiru-tedukuri-10', 'ikea-smaland', 'tobu-zoo-kodzure',
+    'kodomo-ramen-itsukara', 'haneda-rinyushoku-milk', 'yoshinoya-kids-menu', 'fujiq-thomas-land-kosodate',
+    'ergo-vs-aprica-dakkohimo', 'tokyo-station-babyroom', 'kodomo-renji-mushipan-5min-asa',
+    'tokyo-kichijoji-kodzure-lunch', 'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo',
+    'showa-kinen-koen-kodzure', 'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
+  ].map((s) => [s, R1B_CUTOFF]),
+);
+
+export function frozenCutoff(slug: string): string {
+  return FROZEN_CUTOFF_BY_SLUG[slug] ?? FROZEN_INBOUND_CUTOFF;
+}
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
 export function mayLinkToFrozen(targetSlug: string, sourcePublishedAt?: string): boolean {
   if (!FROZEN_TARGET_SLUGS.has(targetSlug)) return true;
   if (!sourcePublishedAt) return true;
-  return sourcePublishedAt.slice(0, 10) < FROZEN_INBOUND_CUTOFF;
+  return sourcePublishedAt.slice(0, 10) < frozenCutoff(targetSlug);
 }
 
 const LINK_RULES: LinkRule[] = [
@@ -358,7 +430,7 @@ export function injectInternalLinks(
     // 新しく公開した記事から凍結面への被リンクを増やさない
     if (!mayLinkToFrozen(rule.targetSlug, opts.publishedAt)) continue;
     // カットオフ以降に足したルールは、凍結面（全件）では発火させない
-    if (FROZEN_TARGET_SLUGS.has(currentSlug) && rule.addedAt && rule.addedAt >= FROZEN_INBOUND_CUTOFF) continue;
+    if (FROZEN_TARGET_SLUGS.has(currentSlug) && rule.addedAt && rule.addedAt >= frozenCutoff(currentSlug)) continue;
 
     const escapedKeyword = escapeRegExp(rule.keyword);
     // マッチ: そのキーワードが既に<a>タグ内でない、見出し内でない、コードブロック内でない場所

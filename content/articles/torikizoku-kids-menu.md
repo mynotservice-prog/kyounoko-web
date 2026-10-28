@@ -189,7 +189,7 @@ A. 同じ2026年8月1日から**チュロ（キャラメル・いちご・チョ
 - [サイゼリヤのキッズメニュー](/article/saizeriya-kids-menu)
 - [ココスのキッズメニュー](/article/cocos-kids-menu)
 - [バーミヤンのキッズメニュー](/article/bamiyan-kids-menu)
-- [牛角のキッズメニュー](/article/gyukaku-kids-menu)
+- [牛角のキッズメニュー](/article/gyukaku-kodzure-koryaku)
 - [安楽亭のキッズメニュー](/article/anrakutei-kids-menu)
 - [キッズメニュー15チェーン徹底比較](/article/kids-menu-chain-15-hikaku)
 

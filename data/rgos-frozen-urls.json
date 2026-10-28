@@ -1,0 +1,205 @@
+{
+  "site": "kyounoko",
+  "generated_from": {
+    "experiments_version": "2026-10-10.1"
+  },
+  "_note": "rgos-ops data/experiments.json から export-frozen.mjs が生成。until まで本文・題・内部リンクを変えない（事実誤り・安全・法令の修正は例外。汚染の記録に残す）",
+  "frozen": [
+    {
+      "url": "https://kyounoko.jp/article/bamiyan-kids-menu",
+      "path": "/article/bamiyan-kids-menu",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bamiyan-kodzure-koryaku",
+      "path": "/article/bamiyan-kodzure-koryaku",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bamiyan-morning-kosodate",
+      "path": "/article/bamiyan-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8B-BAMIYAN-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bigboy-morning-kosodate",
+      "path": "/article/bigboy-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bigboy-morning-kosodate",
+      "path": "/article/bigboy-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bikkuri-donkey-kids-menu",
+      "path": "/article/bikkuri-donkey-kids-menu",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "control"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bikkuri-donkey-kodzure-koryaku",
+      "path": "/article/bikkuri-donkey-kodzure-koryaku",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bikkuri-donkey-morning-kosodate",
+      "path": "/article/bikkuri-donkey-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/bikkuri-donkey-morning-kosodate",
+      "path": "/article/bikkuri-donkey-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/cocos-kids-menu",
+      "path": "/article/cocos-kids-menu",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/fureai-nouen-setagaya-aki-kodzure",
+      "path": "/article/fureai-nouen-setagaya-aki-kodzure",
+      "until": "2026-12-01",
+      "experiment_id": "KY-E4-1201",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/imohori-kanto-kodzure",
+      "path": "/article/imohori-kanto-kodzure",
+      "until": "2026-12-01",
+      "experiment_id": "KY-E4-1201",
+      "role": "comparison_baseline"
+    },
+    {
+      "url": "https://kyounoko.jp/article/komazawa-koen-jabujabuike",
+      "path": "/article/komazawa-koen-jabujabuike",
+      "until": "2027-08-31",
+      "experiment_id": "KY-E3-2027-0831",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/mikangari-musashimurayama-kodzure",
+      "path": "/article/mikangari-musashimurayama-kodzure",
+      "until": "2026-12-01",
+      "experiment_id": "KY-E4-1201",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/mizumoto-koen-jabujabuike",
+      "path": "/article/mizumoto-koen-jabujabuike",
+      "until": "2027-08-31",
+      "experiment_id": "KY-E3-2027-0831",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/mogitori-nerima-aki-kodzure",
+      "path": "/article/mogitori-nerima-aki-kodzure",
+      "until": "2026-12-01",
+      "experiment_id": "KY-E4-1201",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/mos-burger-morning-kosodate",
+      "path": "/article/mos-burger-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/mos-burger-morning-kosodate",
+      "path": "/article/mos-burger-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/ootoya-morning-kosodate",
+      "path": "/article/ootoya-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/ootoya-morning-kosodate",
+      "path": "/article/ootoya-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/royalhost-morning-kosodate",
+      "path": "/article/royalhost-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/royalhost-morning-kosodate",
+      "path": "/article/royalhost-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/saizeriya-kids-menu",
+      "path": "/article/saizeriya-kids-menu",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/sukiya-morning-kosodate",
+      "path": "/article/sukiya-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/sukiya-morning-kosodate",
+      "path": "/article/sukiya-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/yayoiken-kodzure-koryaku",
+      "path": "/article/yayoiken-kodzure-koryaku",
+      "until": "2026-10-21",
+      "experiment_id": "KY-E2-1021",
+      "role": "control"
+    },
+    {
+      "url": "https://kyounoko.jp/article/yayoiken-morning-kosodate",
+      "path": "/article/yayoiken-morning-kosodate",
+      "until": "2026-11-20",
+      "experiment_id": "KY-E8-1120",
+      "role": "treated"
+    },
+    {
+      "url": "https://kyounoko.jp/article/yayoiken-morning-kosodate",
+      "path": "/article/yayoiken-morning-kosodate",
+      "until": "2026-12-20",
+      "experiment_id": "KY-E8-1220",
+      "role": "treated"
+    }
+  ]
+}

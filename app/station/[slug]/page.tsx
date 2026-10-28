@@ -49,6 +49,8 @@ import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getCatalogItems } from '@/lib/items-catalog';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 import { hotpepperShopHref } from '@/lib/reservation-cta';
+import { getStationPr } from '@/lib/pr-placements';
+import { PrCard } from '@/components/pr/PrCard';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -830,6 +832,12 @@ export default async function StationPage({ params }: Props) {
                 </div>
               </section>
             );
+          })()}
+
+          {/* 有償PR枠（lib/pr-placements.ts）。近隣スポットの直前に1枠 */}
+          {(() => {
+            const pr = getStationPr(station.slug);
+            return pr ? <PrCard pr={pr} /> : null;
           })()}
 
           {/* 近隣のおでかけスポット（公園・水族館・屋内遊び場等）

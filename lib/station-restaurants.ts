@@ -840,7 +840,7 @@ export const CHAINS: Chain[] = [
     stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
     seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
     lunchPrice: '〜800', ubiquity: 'common',
-    description: 'リーズナブルな天丼・天ぷら。お子様天丼あり、駅ビル内店舗も多い。',
+    description: 'リーズナブルな天丼・天ぷら。一部店舗に小学生以下のお子様メニューあり、駅ビル内店舗も多い。',
   },
   {
     slug: 'hanamaru-udon', name: 'はなまるうどん', category: 'noodles',

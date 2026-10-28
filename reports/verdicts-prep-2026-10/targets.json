@@ -1,0 +1,226 @@
+{
+ "_memo": "判定下準備（2026-10-01作成）。slugの出所は各setのsource。origin/main(7c81d3cd)版の台帳・計画から転記。",
+ "okuizome": {
+  "source": "PR #234 (fedb407c) の新規7本",
+  "groups": {
+   "all": [
+    "ajino-mingei-okuizome-shichigosan",
+    "bandotaro-okuizome-shichigosan",
+    "kagonoya-okuizome-shichigosan",
+    "kisoji-okuizome-shichigosan",
+    "sagami-okuizome-shichigosan",
+    "tonden-okuizome-shichigosan",
+    "umenohana-okuizome-shichigosan"
+   ]
+  }
+ },
+ "cohort137": {
+  "source": "origin/main:reports/cohort-2026-09-25/measurement-plan.md",
+  "groups": {
+   "A": [
+    "551-horai-kodzure-koryaku",
+    "aiya-kodzure-koryaku",
+    "akiyoshi-kodzure-koryaku",
+    "aw-okinawa-kodzure-koryaku",
+    "bannai-kodzure-koryaku",
+    "benitora-gyozabo-kodzure-koryaku",
+    "botejyu-kodzure-koryaku",
+    "capricciosa-kodzure-koryaku",
+    "chibo-kodzure-koryaku",
+    "coffeekan-kodzure-koryaku",
+    "daiki-suisan-kodzure-koryaku",
+    "daishogun-kodzure-koryaku",
+    "dengana-kodzure-koryaku",
+    "dohtonbori-kodzure-koryaku",
+    "domdom-hamburger-kodzure-koryaku",
+    "excelsior-caffe-kodzure-koryaku",
+    "fujiya-restaurant-kodzure-koryaku",
+    "furaibou-kodzure-koryaku",
+    "gindaco-kodzure-koryaku",
+    "gogo-curry-kodzure-koryaku",
+    "gyoza-no-mansyu-kodzure-koryaku",
+    "gyushige-kodzure-koryaku",
+    "gyutan-rikyu-kodzure-koryaku",
+    "hachiban-ramen-kodzure-koryaku",
+    "hamakatsu-kodzure-koryaku",
+    "heijoen-kodzure-koryaku",
+    "heiroku-sushi-kodzure-koryaku",
+    "hinoya-curry-kodzure-koryaku",
+    "ichikakuya-kodzure-koryaku",
+    "ikinari-steak-kodzure-koryaku",
+    "ippudo-kodzure-koryaku",
+    "isomaru-suisan-kodzure-koryaku",
+    "jojoen-kodzure-koryaku",
+    "jolly-pasta-kodzure-koryaku",
+    "joyfull-kodzure-koryaku",
+    "jujukarubi-kodomo-ryokin",
+    "jujukarubi-kodzure-koryaku",
+    "jukusei-yakiniku-ichiban-kodomo-ryokin",
+    "jukusei-yakiniku-ichiban-kodzure-koryaku",
+    "kairikiya-kodzure-koryaku",
+    "kaitenzushi-misaki-kodzure-koryaku",
+    "kamakura-pasta-kodzure-koryaku",
+    "kamimura-bokujo-kodomo-ryokin",
+    "kamimura-bokujo-kodzure-koryaku",
+    "kanazawa-maimon-sushi-kodzure-koryaku",
+    "karayama-kodzure-koryaku",
+    "katsuya-kodzure-koryaku",
+    "kineya-kodzure-koryaku",
+    "komoro-soba-kodzure-koryaku",
+    "kourakuen-rinyushoku-mochikomi",
+    "krispy-kreme-kodzure-koryaku",
+    "kuidon-kodzure-koryaku",
+    "kurashiki-coffee-kodzure-koryaku",
+    "kushiya-monogatari-kodomo-ryokin",
+    "kushiya-monogatari-kodzure-koryaku",
+    "lucky-pierrot-kodzure-koryaku",
+    "machikadoya-kodzure-koryaku",
+    "makino-udon-kodzure-koryaku",
+    "marugenramen-rinyushoku-mochikomi",
+    "matsunoya-kodzure-koryaku",
+    "miraizaka-kodzure-koryaku",
+    "motomachi-coffee-kodzure-koryaku",
+    "moukotanmen-nakamoto-kodzure-koryaku",
+    "my-curry-shokudo-kodzure-koryaku",
+    "negishi-kodzure-koryaku",
+    "nemuro-hanamaru-kodzure-koryaku",
+    "nikusho-sakai-kodzure-koryaku",
+    "one-karubi-kodomo-ryokin",
+    "one-karubi-kodzure-koryaku",
+    "osaka-ohsho-kodzure-koryaku",
+    "pietro-kodzure-koryaku",
+    "popolamama-kodzure-koryaku",
+    "pronto-kodzure-koryaku",
+    "rairaitei-kodzure-koryaku",
+    "sekai-no-yamachan-kodzure-koryaku",
+    "shabusai-kodomo-ryokin",
+    "shabusai-kodzure-koryaku",
+    "shabuyou-rinyushoku-mochikomi",
+    "shakeys-kodzure-koryaku",
+    "shichirinbo-kodzure-koryaku",
+    "shinjuku-saboten-kodzure-koryaku",
+    "steak-miya-kodomo-ryokin",
+    "steak-no-don-kodzure-koryaku",
+    "subway-kodzure-koryaku",
+    "sugakiya-kodzure-koryaku",
+    "sutadonya-kodzure-koryaku",
+    "sutamina-taro-kodomo-ryokin",
+    "sutamina-taro-kodzure-koryaku",
+    "sweets-paradise-kodomo-ryokin",
+    "sweets-paradise-kodzure-koryaku",
+    "takakuramachi-coffee-kodzure-koryaku",
+    "tempura-makino-kodzure-koryaku",
+    "tonkatsu-wako-kodzure-koryaku",
+    "torimero-kodzure-koryaku",
+    "toriton-kodzure-koryaku",
+    "totomaru-kodzure-koryaku",
+    "tsubakiya-coffee-kodzure-koryaku",
+    "tsukada-nojo-kodzure-koryaku",
+    "udon-west-kodzure-koryaku",
+    "volks-kodzure-koryaku",
+    "wendys-first-kitchen-kodzure-koryaku",
+    "yabaton-kodzure-koryaku",
+    "yakiniku-anan-kodzure-koryaku",
+    "yakiniku-like-kodzure-koryaku",
+    "yakiniku-nabeshima-kodzure-koryaku",
+    "yakiniku-watami-kodzure-koryaku",
+    "yamaokaya-kodzure-koryaku",
+    "yappari-steak-kodzure-koryaku",
+    "yomenya-goemon-kodzure-koryaku",
+    "yudetaro-kodzure-koryaku",
+    "yuzuan-rinyushoku-mochikomi",
+    "zundouya-kodzure-koryaku"
+   ],
+   "B": [
+    "adventure-world-kosodate",
+    "asahiyama-zoo-kosodate",
+    "edogawa-shizen-doubutsuen-kosodate",
+    "enoshima-aquarium-kosodate",
+    "hakkeijima-sea-paradise-kosodate",
+    "hamura-zoo-kosodate",
+    "higashiyama-zoo-kosodate",
+    "ichihara-zounokuni-kosodate",
+    "inokashira-shizen-bunkaen-kosodate",
+    "kaiyukan-kosodate",
+    "kanazawa-zoo-kosodate",
+    "kobe-animal-kingdom-kosodate",
+    "kyoto-aquarium-kosodate",
+    "maxell-aquapark-shinagawa-kosodate",
+    "nagoya-aquarium-kosodate",
+    "nasu-doubutsu-oukoku-kosodate",
+    "nogeyama-zoo-kosodate",
+    "notojima-aquarium-kosodate",
+    "oarai-aquaworld-kosodate",
+    "sumida-aquarium-kosodate",
+    "sunshine-aquarium-kosodate",
+    "tama-zoo-kosodate",
+    "tennoji-zoo-kosodate",
+    "yumemigasaki-zoo-kosodate",
+    "zoorasia-kosodate"
+   ]
+  }
+ },
+ "winpages6": {
+  "source": "divisions/kyounoko.md 判定カレンダー 2026-10-03 行（勝ち面6本）。slugはGMが記事名から対応付け",
+  "groups": {
+   "all": [
+    "ohsho-kids-menu",
+    "kurasushi-kids-menu",
+    "sushiro-kids-menu",
+    "saizeriya-kids-menu",
+    "hoshino-morning-kosodate",
+    "shitsunai-asobi-shibuya-tokyo"
+   ]
+  }
+ },
+ "exp3": {
+  "source": "docs/experiments-active.md 実験3（36〜41行）",
+  "groups": {
+   "treated": [
+    "komazawa-koen-jabujabuike",
+    "mizumoto-koen-jabujabuike"
+   ],
+   "reference": [
+    "toneri-koen-jabujabuike"
+   ]
+  }
+ },
+ "exp4": {
+  "source": "docs/experiments-active.md 実験4（43〜55行）",
+  "groups": {
+   "treated": [
+    "mikangari-musashimurayama-kodzure",
+    "mogitori-nerima-aki-kodzure",
+    "fureai-nouen-setagaya-aki-kodzure"
+   ],
+   "baseline": [
+    "imohori-kanto-kodzure"
+   ]
+  }
+ },
+ "titles15": {
+  "source": "docs/experiments-active.md 102〜106行＋reports/seo-geo-sprint-2026-09-04.md「タイトル変更（17本）」のうち60字超14本＋ドトール",
+  "groups": {
+   "all": [
+    "gusto-kodzure-koryaku",
+    "burger-king-kodzure-koryaku",
+    "kfc-kids-menu",
+    "kfc-kodzure-koryaku",
+    "hottomotto-kodzure-koryaku",
+    "cocoichi-kodzure-koryaku",
+    "mos-burger-kodzure-koryaku",
+    "mcdonalds-kids-menu",
+    "misdo-kodzure-koryaku",
+    "nakau-kids-menu",
+    "yayoiken-kids-menu",
+    "disney-omutsu-gae",
+    "doutor-kodzure-koryaku",
+    "sanmarc-cafe-kodzure-koryaku",
+    "haneda-rinyushoku-milk"
+   ],
+   "reference_canary": [
+    "hanamaru-udon-kodzure-koryaku"
+   ]
+  }
+ }
+}

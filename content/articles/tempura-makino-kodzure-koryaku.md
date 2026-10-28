@@ -192,7 +192,7 @@ A. 一覧表の公開はありません。運営元トリドールのお問い�
 
 ## 関連記事
 
-- [てんやのキッズメニュー｜お子様天丼・取り分けの完全ガイド](/article/tenya-kids-menu)
+- [てんやのキッズメニューは39店だけ｜小学生以下のお子様メニューがある店と取り分け](/article/tenya-kids-menu)
 - [丸亀製麺は子連れOK？](/article/marugame-kodzure-koryaku)
 - [定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)

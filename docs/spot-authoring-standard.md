@@ -30,6 +30,10 @@
 | `accessTips` | ○ | **100〜200字**。出口名→道の様子→分数、バス路線と停留所、**駐車場の有無**、営業時間 | 「…南口1を出て坂を少し登り徒歩2分。渋谷区ハチ公バス（丘を越えてルート）「古賀音楽博物館」下車徒歩1分。専用駐車場なし（近隣のコインパーキング）。営業時間は月〜金10:00〜17:00、土日10:00〜18:00（完全予約制・公式）。」 |
 | `hiddenTip` | ○ | **100〜200字**。行く前に知らないと困る**利用ルール・持ち物・追加料金・支払い方法**。混雑の主観や体験談は書かない | 「チューブスライダーは4歳以上で、長袖・長ズボン・靴下が必要（アームカバー・レッグカバーは各300円で貸出）。…おもちゃの持ち込みは不可。…支払いは来場時に受付で（クレジットカード・電子マネー・QRコード決済に対応）。」 |
 | `relatedArticleSlugs` | ○ | 実在し、noindex でない記事を1本以上（エリアの室内遊び記事など） | shitsunai-asobi-shibuya-tokyo |
+| `kidsMenu` / `babyChair` / `babyFood` / `strollerAccess` / `privateRoom` / `zashiki`（restaurant） | 任意 | 公式に記載があるものだけ `true`。`false` は書かない。**ページに出るのは `lib/spot-restaurant-amenities.ts` の `RESTAURANT_AMENITY_EVIDENCE` に出典（公式サイト・公式SNSのURL、または店からの回答の記録）がある設備だけ**。商業施設（`RESTAURANT_VENUE` で complex）はテナント単位の設備なので出典があっても出ない | （eatoco: babyChair・babyFood・strollerAccess = true、出典は eatoco.com/faq と店の回答） |
+| restaurant の `facilities` | 任意 | restaurant のページは、`lib/spot-facilities.ts`（公式裏取り台帳）と値が一致するか、`RESTAURANT_AMENITY_EVIDENCE` に出典がある設備だけを出す。新しい restaurant は `RESTAURANT_VENUE` に shop / chain / complex を足す（無いと shop 扱い） | — |
+| `businessHours` / `smoking`（restaurant 向け・どのカテゴリでも可） | 任意 | 公式の記載どおり。値があるときだけ「基本情報」に出る。`smoking` は no-smoking / separated / allowed | 「月〜土 10:00〜17:00（LO 16:30）・日祝定休」 |
+| `reservationUrl`（restaurant） | 任意 | **その店の**予約ページ（公式予約フォーム・LINE予約・TableCheck の店舗ページ・ホットペッパーの店舗ページ `/strJ…/`）。特集・検索結果の一覧は入れない。無ければ予約導線は出ない。ホットペッパーの店舗ページはネット予約を受けていない店もある（表示は「このお店のページ」） | — |
 | `crowdLevel` / `crowdTips` / `nearby` / `ageGuide` / `faq` | 任意 | 公式の根拠があるときだけ。無ければ自動生成に任せる | （Kids Base は未設定） |
 
 ## 2026-10-02 の料金監査で分かった、やってはいけない書き方

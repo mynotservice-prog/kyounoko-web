@@ -13,6 +13,12 @@
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
+import {
+  FACILITY_KEYS,
+  RESTAURANT_AMENITY_EVIDENCE,
+  RESTAURANT_VENUE,
+  type AmenityEvidenceMap,
+} from './spot-restaurant-amenities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { getSpotParking, type SpotParking } from './spot-parking';
@@ -130,10 +136,24 @@ export type Spot = {
   imageKind?: '実写' | '提供' | 'streetview' | 'UGC' | 'イメージ';
   /** 画像の出典/クレジット（例: '◯◯市提供' / 'by ゆうママ'）。 */
   imageCredit?: string;
+  /** カテゴリの表示名をスポット単位で差し替える（例: 喫茶店を「子連れOKカフェ」と表示）。絞り込みや集計は category のまま */
+  categoryLabel?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
+  /** トップ写真のすぐ下に出す注記（例: 家具・設備が掲載写真と異なる場合がある旨） */
+  imageNote?: string;
+  /** 「行く前に知っておきたいこと」の本文をスポット単位で差し替える（自動文が施設の実態に合わないとき） */
+  preVisitNote?: string;
+  /** 「対象年齢」の表示をスポット単位で差し替える（例: '0歳〜12歳'）。絞り込みやタグは ages のまま */
+  agesLabel?: string;
+  /** 「料金の目安」の表示をスポット単位で差し替える（例: '〜1,500円'）。絞り込みは budget のまま */
+  budgetLabel?: string;
+  /** 「持ち物のおすすめ」から外す商品のラベル（施設のルールに合わないもの。例: 靴下必須の施設で室内シューズ） */
+  excludeRecommendedItems?: string[];
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
     adult?: string;      // '2,300円'
+    /** 小学生と幼児を分けずに「子ども」1行で書く施設用（施設が年齢で料金を分けていないとき） */
+    child?: string;
     elementary?: string; // '1,100円'
     preschool?: string;  // '400円（3歳以上）'
     infant?: string;     // '無料（3歳未満）'
@@ -202,6 +222,34 @@ export type Spot = {
   kidsMenu?: boolean;        // キッズメニューあり
   privateRoom?: boolean;     // 個室あり
   babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
+  /** 座敷・小上がりあり（privateRoom＝個室とは別）。公式に記載があるときだけ true にする */
+  zashiki?: boolean;
+  /**
+   * 営業時間・定休日（公式の記載どおりの短い文。例: '月〜土 10:00〜17:00（LO 16:30）・日祝定休'）。
+   * スポットページの「基本情報」に、値があるときだけ出す。
+   */
+  businessHours?: string;
+  /**
+   * 喫煙の扱い（公式に記載があるときだけ）。'no-smoking'=全席禁煙 / 'separated'=分煙（喫煙室・喫煙席あり）/ 'allowed'=喫煙可。
+   * 「基本情報」に値があるときだけ出す。
+   */
+  smoking?: 'no-smoking' | 'separated' | 'allowed';
+  /**
+   * その店自身の予約ページURL（公式の予約フォーム・LINE予約・ホットペッパー等の**その店の個別ページ**）。
+   * restaurant のスポットページは、これがあるときだけ予約導線を出す（無ければ出さない）。
+   * 一般の検索結果・特集一覧（他店が並ぶページ）のURLは入れない。
+   */
+  reservationUrl?: string;
+  /**
+   * restaurant の種別（lib/spot-restaurant-amenities.ts の RESTAURANT_VENUE から name 一致でマージ）。
+   * shop=個別店 / chain=チェーン総称 / complex=商業施設・飲食店の集まり。complex はテナント単位の設備を表示しない。
+   */
+  venueType?: 'shop' | 'chain' | 'complex';
+  /**
+   * restaurant の設備ごとの出典（公式サイト・公式SNS・店からの回答・公式裏取り台帳）。
+   * restaurant のページは、出典がある設備だけを表示する（lib/spot-restaurant-amenities.ts の gateRestaurantAmenities）。
+   */
+  amenityEvidence?: import('./spot-restaurant-amenities').AmenityEvidenceMap;
   // ---- 夏季向けフラグ ----
   /** 水遊び可（じゃぶじゃぶ池/噴水/プール/水族館タッチプール等） */
   waterPlay?: boolean;
@@ -873,12 +921,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   ],
   tokyo: [
     {
-      // 工場見学。未就学児を含むコースがあり、授乳室・おむつ替えも完備の数少ない例。
-      name: 'キユーピー マヨテラス', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '調布市',
-      note: 'マヨネーズができるまでを体験しながら学べるキユーピーの見学施設。未就学児を含むコースが用意されている。', budget: 'free',
+      // 見学施設（工場ではない）。公式は「小学生以上を対象」「小学生以下は保護者同伴」、公式FAQは「0歳児も予約人数に含まれます」。
+      // 授乳室・おむつ替え・ベビーカーは公式（トップ・予約・施設マップ・アクセス・予約サイトFAQ）に記載なし＝facilities は入れない（2026-10-23確認）。
+      name: 'キユーピー マヨテラス', category: 'museum', place: 'indoor', ages: ['4-6'], city: '調布市',
+      agesLabel: '小学生以上（公式。小学生以下は保護者同伴で見学）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
+      note: 'マヨネーズについて学べるキユーピーの無料の見学施設。完全予約制で、公式は小学生以上が対象（小学生以下は保護者同伴・0歳児も予約人数に含める）。', budget: 'free',
       reservation: 'required',
-      crowdLevel: { weekday: 'mid', holiday: 'low' },
-      hiddenTip: '見学コースが「小学生以上対象」と「未就学を含む」に分かれているので、予約時に未就学児向けを選ぶ。館内はバリアフリーでベビーカーのまま回れ、授乳室・おむつ替えスペースもある',
+      crowdLevel: { weekday: 'mid' }, // 土・日・祝日は休館（公式）のため holiday は持たない
+      hiddenTip: '土・日・祝日は休館（土曜に臨時開館する場合あり）。館内へ入れるのは見学開始20分前からで待合スペースはなく、館内での食事は不可（水分補給は可）。',
       accessTips: '京王線 仙川駅から徒歩7分（新宿駅から仙川駅まで京王線快速で17分）。完全予約制で、翌月分の予約が毎月月初の営業日10時から始まります。平日のみで土日祝は休館。料金は公式サイトでご確認ください。',
     },
     {
@@ -966,6 +1016,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high',
+      agesLabel: '3〜15歳（公式。2歳以下は入場無料・仕事体験は対象外）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       nearestStation: 'toyosu',
       walkMinutes: 8,
       pricing: { adult: '2,000〜3,500円', elementary: '4,500〜7,000円', preschool: '4,500〜7,000円', infant: '無料（2歳以下）' },
@@ -1255,6 +1306,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 屋内遊び場（東京）=====
     {
       name: 'ASOBono!（東京ドームシティ アソボーノ）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '文京区', ward: '文京区', note: '都内最大級の屋内遊び場、雨の日の鉄板', budget: 'mid',
+      agesLabel: '6ヶ月〜小学生（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       nearestStation: 'korakuen',
       walkMinutes: 3,
       pricing: { adult: '1,000円', preschool: '1,000円（6ヶ月〜小学生）', infant: '無料（6ヶ月未満）' },
@@ -1284,6 +1336,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'レゴランド・ディスカバリー・センター東京', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場、3-10歳向けの屋内レゴ施設', budget: 'mid',
+      agesLabel: '3〜10歳（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '2,800円', elementary: '2,800円', preschool: '2,800円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1321,6 +1374,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キドキドよみうりランド店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '稲城市', note: 'ボーネルンド運営、よみうりランド内', budget: 'mid',
+      agesLabel: '6ヶ月〜12歳（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '600円', preschool: '1,500円（30分＋延長）', infant: '600円（6ヶ月〜）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1566,6 +1620,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '杉並アニメーションミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '杉並区', ward: '杉並区', note: '日本のアニメの歴史を学べる体験型ミュージアム、入館無料', budget: 'free',
+      agesLabel: '小さな子どもから大人まで（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       summerCool: true,
     },
     {
@@ -1574,6 +1629,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '京王あそびの森 HUGHUG', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '高幡不動駅前の屋内遊び場、大型ネット遊具が名物', budget: 'mid',
+      agesLabel: '6ヶ月〜小学生向けの遊具が中心（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       summerCool: true,
     },
     {
@@ -1871,6 +1927,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '池袋防災館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '豊島区', ward: '豊島区', note: '池袋駅徒歩5分、無料の防災体験', budget: 'free',
+      agesLabel: '体験ごとに年齢制限あり（地震体験は3歳以上・公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1879,6 +1936,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '本所防災館（墨田区）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '墨田区', ward: '墨田区', note: '東京消防庁、無料防災体験ツアー', budget: 'free',
+      agesLabel: '体験ごとに年齢制限あり（地震体験は満3歳以上・公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -4327,6 +4385,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     note: '東京駅丸の内側直結、ベビーカー入店OK・個室あり・禁煙',
     pricing: { adult: 'アフタヌーンティー6,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, privateRoom: true,
+    reservationUrl: 'https://www.tablecheck.com/ja/shops/lobbylounge/reserve',
     hiddenTip: '東京駅地下から雨に濡れずアクセス、滞在1.5〜2時間。新幹線待ちにも',
     popular: true,
       summerCool: true,
@@ -4972,6 +5031,26 @@ for (const { spot, slug } of allSpotsForMerge()) {
     }
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
+    }
+    // restaurant: 公式裏取り台帳（SPOT_FACILITIES）と値が一致する設備は、その設備の出典として記録する（2026-10-27）。
+    // インラインの facilities でも、台帳に同じ値があれば台帳が出典になる。台帳に無い・値が違うものは出典なし扱い。
+    if (spot.category === 'restaurant' && spot.facilities && SPOT_FACILITIES[spot.name]) {
+      const reg = SPOT_FACILITIES[spot.name];
+      const ev: AmenityEvidenceMap = { ...(spot.amenityEvidence ?? {}) };
+      const ver = SPOT_VERIFICATION[spot.name];
+      const checkedAt = ver?.method === 'official' ? ver.verifiedAt : undefined;
+      for (const k of FACILITY_KEYS) {
+        if (spot.facilities[k] !== undefined && spot.facilities[k] === reg[k] && !ev[k]) {
+          ev[k] = { kind: 'official-registry', ref: 'lib/spot-facilities.ts', checkedAt, value: reg[k] };
+        }
+      }
+      spot.amenityEvidence = ev;
+    }
+    // restaurant の種別と設備ごとの出典（lib/spot-restaurant-amenities.ts）。上書き前の name で引いて焼き付ける。
+    if (spot.category === 'restaurant') {
+      if (!spot.venueType && RESTAURANT_VENUE[spot.name]) spot.venueType = RESTAURANT_VENUE[spot.name].type;
+      const own = RESTAURANT_AMENITY_EVIDENCE[spot.name];
+      if (own) spot.amenityEvidence = { ...(spot.amenityEvidence ?? {}), ...own };
     }
     // 最終確認記録（SPOT_VERIFICATION）のマージ。overrides で表示名を変えても
     // 鮮度判定が外れないよう、上書き前の name で引いてスポットに焼き付ける。
