@@ -17,6 +17,7 @@ import {
   type StationConditionSlug,
 } from '@/lib/station-conditions';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { conditionEvidenceCount } from '@/lib/station-evidence';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 // 路線ページの「条件で探す」セクションで露出する主要条件（4種）。
@@ -97,7 +98,15 @@ export default async function LinePage({ params }: Props) {
       if (!isStationConditionIndexable(x.station.slug, slug, count, 'restaurant', x.station.scale)) {
         return null;
       }
-      return { slug, label: cond.label, count };
+      // 表示する件数は、設備の条件なら根拠のある店の数（lib/station-evidence.ts・2026-10-28）
+      const shown =
+        conditionEvidenceCount(
+          x.station.slug,
+          slug,
+          filterChainsByCondition(chainsBase, slug).map((c) => ({ slug: c.slug, name: c.name })),
+          filterIndiesByCondition(indiesBase, slug),
+        ) ?? count;
+      return { slug, label: cond.label, count: shown };
     }).filter((c): c is { slug: StationConditionSlug; label: string; count: number } => c !== null);
     return { station: x.station, total: x.total, conds };
   }).filter((x) => x.conds.length > 0);
@@ -293,7 +302,7 @@ export default async function LinePage({ params }: Props) {
                           style={{ textDecoration: 'none', color: 'var(--ink-sub)' }}
                         >
                           {c.label}
-                          <span style={{
+                          {c.count > 0 && <span style={{
                             fontSize: 11,
                             color: 'var(--sage-deep)',
                             background: 'var(--sage-soft)',
@@ -302,7 +311,7 @@ export default async function LinePage({ params }: Props) {
                             marginLeft: 2,
                           }}>
                             {c.count}
-                          </span>
+                          </span>}
                         </Link>
                       ))}
                     </div>

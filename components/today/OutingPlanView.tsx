@@ -291,7 +291,7 @@ export function LunchListView({
         <h1 className="td3-h1">子連れで入れるお店</h1>
         <CondRow anchorLabel={anchorLabel} ageLabel={ageLabel} />
       </div>
-      <p className="td3-lead">ベビーチェア・キッズメニュー・座敷など、子連れで入りやすいお店です。</p>
+      <p className="td3-lead">子連れで入りやすいお店の候補です。設備のタグは、公式に表示・記載があるものだけです。</p>
 
       {indies.length > 0 && (
         <>
