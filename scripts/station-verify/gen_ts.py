@@ -77,7 +77,10 @@ export type VerifiedStore = {
   name: string;
   /** 公式の住所表記（建物名・階を含む） */
   address: string;
-  distance: '駅前' | '徒歩圏';
+  /** 駅前＝直線300m以内、徒歩圏＝800m以内、少し歩く＝800m超〜1km（far にだけ入る・子連れで15〜20分） */
+  distance: '駅前' | '徒歩圏' | '少し歩く';
+  /** 駅中心からの直線距離（m・10m単位）。道のりは線路や幹線道路で長くなることがある */
+  m?: number;
   /** 公式の店舗ページ（チェーンによっては店舗一覧ページ） */
   url?: string;
   /**
@@ -95,6 +98,13 @@ export type StationVerifiedStores = {
   stores: VerifiedStore[];
   /** 6店以上あるチェーンの、stores に載せていない残りの店数 */
   more?: Record<string, number>;
+  /**
+   * 800m超〜1kmの店（2026-10-28 追加）。駅トップの一覧には出さず、駅×条件ページの判定と「少し歩く」枠で使う
+   * （docs/station-cond-rebuild-2026-10.md §4）。住所の位置が粗い店（uncertain）は入れない。1チェーン5店まで。
+   */
+  far?: VerifiedStore[];
+  /** far に載せていない残りの店数（チェーンごと） */
+  farMore?: Record<string, number>;
 };
 
 export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
@@ -113,8 +123,23 @@ for s in slugs:
         u=f", url: {q(x['url'])}" if x.get('url') else ''
         fc=store_fac(x); nfac+=fc is not None; used.add(x['chain'])
         if fc is not None: u+=f", fac: {json.dumps(fc,ensure_ascii=False)}"
-        L.append(f"      {{ chain: {q(x['chain'])}, name: {q(clean_name(x['name']))}, address: {q(x.get('show') or x['address'])}, distance: {q(d)}{u} }},")
-    L.append('    ],'+(f"\n    more: {json.dumps(more,ensure_ascii=False)}," if more else '')+'\n  },')
+        L.append(f"      {{ chain: {q(x['chain'])}, name: {q(clean_name(x['name']))}, address: {q(x.get('show') or x['address'])}, distance: {q(d)}, m: {round(x['m']/10)*10}{u} }},")
+    farrows=[x for x in m.get(s,[]) if not x['excluded'] and x['border'] and x['m']<=1000 and not x.get('uncertain')]
+    far=[];farmore={};fcnt={}
+    for x in sorted(farrows,key=lambda x:(x['chain'],x['m'])):
+        fcnt[x['chain']]=fcnt.get(x['chain'],0)+1
+        if fcnt[x['chain']]<=5: far.append(x)
+        else: farmore[x['chain']]=farmore.get(x['chain'],0)+1
+    L.append('    ],'+(f"\n    more: {json.dumps(more,ensure_ascii=False)}," if more else ''))
+    if far:
+        L.append('    far: [')
+        for x in far:
+            u=f", url: {q(x['url'])}" if x.get('url') else ''
+            fc=store_fac(x); used.add(x['chain'])
+            if fc is not None: u+=f", fac: {json.dumps(fc,ensure_ascii=False)}"
+            L.append(f"      {{ chain: {q(x['chain'])}, name: {q(clean_name(x['name']))}, address: {q(x.get('show') or x['address'])}, distance: \"少し歩く\", m: {round(x['m']/10)*10}{u} }},")
+        L.append('    ],'+(f"\n    farMore: {json.dumps(farmore,ensure_ascii=False)}," if farmore else ''))
+    L.append('  },')
     rows=allrows
     stat.append((s,len(rows),len({x['chain'] for x in rows})))
 L.append('};\n')
