@@ -18,6 +18,7 @@
  */
 
 import { brandEvidence, storeEvidence } from './station-evidence';
+import { BUNDLED_SPOT_OVERRIDES } from './spot-overrides';
 import { WARD_NAMES, getStationsByWard, type TokyoWard } from './tokyo-stations';
 import {
   findStationBySlug,
@@ -84,6 +85,8 @@ export type OutingSlot = {
   facets?: string[];
   /** 午前・午後の行き先の、公式の休み・営業時間（lib/spot-hours.ts にあるスポットだけ） */
   hoursLine?: string;
+  /** 午前・午後の行き先の写真（管理画面で登録した写真を優先。無ければ undefined） */
+  photo?: string;
   /** 前スロットからの移動表示 */
   move?: OutingMove;
   tier: CoherenceTier;
@@ -488,6 +491,17 @@ const CHAIN_SPOT_TO_SLUG: Record<string, string> = {
   コメダ珈琲店: 'komeda',
 };
 
+/**
+ * 行き先の写真。管理画面で登録した写真（lib/spot-overrides.json の images／image）を優先し、
+ * 無ければ lib/spots.ts の写真。スポットページ（mergeSpot）と同じ優先順。
+ * 以前は lib/spots.ts だけを見ていて、写真があるのは飲食以外755件中21件だった（2026-10-28）。
+ * 本番の KV 上書きは読まない（毎回読むと KV の転送量が増える・2026-10-03 の停止の再発防止）。
+ */
+export function spotPhotoFor(spot: Spot, slug: string): string | undefined {
+  const ov = BUNDLED_SPOT_OVERRIDES[slug];
+  return ov?.images?.[0] ?? ov?.image ?? spot.images?.[0] ?? spot.image ?? undefined;
+}
+
 /** 照合済みの駅で、そのチェーンのいちばん近い実在店（無ければ undefined）。 */
 function nearestVerifiedStore(anchorSlug: string | undefined, chainSpotName: string): VerifiedStore | undefined {
   if (!anchorSlug) return undefined;
@@ -864,6 +878,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
       hoursLine: spotHoursLine(morning.spot.name) ?? undefined,
+      photo: spotPhotoFor(morning.spot, spotToSlug(morning.spot, slugArea)),
       move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName, morning.distanceKm),
       tier: morning.tier,
     });
@@ -921,6 +936,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
       hoursLine: spotHoursLine(afternoon.spot.name) ?? undefined,
+      photo: spotPhotoFor(afternoon.spot, spotToSlug(afternoon.spot, slugArea)),
       move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName, afternoon.distanceKm),
       tier: afternoon.tier,
     });

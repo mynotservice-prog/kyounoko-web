@@ -149,7 +149,7 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
         ? slot.plan?.shortAnswer ?? 'お昼寝・休憩タイム。おうちで軽く遊ぶ'
         : slot.spot?.note ?? '';
   const href = slotHref(slot);
-  const photo = spotPhoto(slot.spot);
+  const photo = slot.photo ?? spotPhoto(slot.spot);
 
   return (
     <div className={'td3-slot ' + slot.key}>
