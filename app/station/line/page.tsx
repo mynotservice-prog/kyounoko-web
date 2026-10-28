@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '東京 路線別 子連れランチ・ベビーカー・キッズメニュー店ガイド｜きょうのこ',
+  title: '東京 路線別 子連れランチ・ベビーカー・キッズメニュー店ガイド',
   description: 'JR・東京メトロ・都営地下鉄・私鉄の主要路線で、各路線の全駅の子連れOKの飲食店を一覧で。山手線・丸ノ内線・東急東横線など23区を走る40路線対応。',
   alternates: { canonical: '/station/line' },
 };

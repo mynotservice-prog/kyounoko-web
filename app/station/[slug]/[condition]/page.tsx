@@ -149,7 +149,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description =
     kind === 'spot'
       ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
-      : `${stationName}駅周辺の${cond.label}を${countPart ? `${countPart}` : ''}掲載。${cond.description}設備は、公式で確認できたものだけを店ごとに示しています。${wardName}で${cond.label}を探すならここから。`;
+      : `${stationName}駅周辺の${cond.label}を${countPart ? `${countPart}` : ''}掲載。${cond.description}${wardName}で${cond.label}を探すならここから。`;
 
   // 剪定(2026-06): スポット系は常にnoindex / 外食系は需要実績 or (主要駅×matched>=閾値)のみindex。
   const shouldNoindex = !isStationConditionIndexable(
