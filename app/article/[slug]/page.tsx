@@ -73,6 +73,8 @@ import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
 import { KkIcon } from '@/components/kk/KkIcon';
 import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
 import { KkFooter } from '@/components/kk/KkFooter';
+import { getArticlePr } from '@/lib/pr-placements';
+import { PrCard } from '@/components/pr/PrCard';
 
 /**
  * 本文HTML内の <table> を横スクロール用ラッパで包む（2026-09 リニューアル）。
@@ -848,6 +850,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ? splitBodyAtSection(renderBodyHtml, /遊び方カード|遊びカード/) ?? [renderBodyHtml, '']
     : null;
 
+  // 有償PR枠（lib/pr-placements.ts）: 指定H2セクションの直後に1枠。該当H2が無ければ本文末尾。
+  const articlePr = homePlaySplit ? null : getArticlePr(article.slug);
+  const prSplit = articlePr
+    ? splitBodyAtSection(renderBodyHtml, articlePr.afterHeading) ?? [renderBodyHtml, '']
+    : null;
+
   // 末尾CTA用の関連商品（3点）。
   const endRelatedItems = getRelatedItemsForArticle(
     article.slug,
@@ -1108,8 +1116,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </Link>
 
             {/* PR/提供 開示: ヘッダ最上部に配置してファーストビューで表示（ステマ規制対応・編集方針5-4） */}
-            {(hasAffiliate || (article.photoProviders && article.photoProviders.length > 0)) && (
+            {(article.sponsor || hasAffiliate || (article.photoProviders && article.photoProviders.length > 0)) && (
               <div style={{ margin: '12px 0 16px' }}>
+                {article.sponsor && (
+                  <PRBadge text={`この記事は${article.sponsor}から対価を受けて制作したタイアップ記事（広告）です。`} />
+                )}
                 {hasAffiliate && <PRBadge />}
                 {article.photoProviders && article.photoProviders.length > 0 && (
                   <ProvidedBadge providers={article.photoProviders} />
@@ -1336,6 +1347,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
                   className="prose"
                   dangerouslySetInnerHTML={{ __html: prepareBody(homePlaySplit[1]) }}
                 />
+              )}
+            </>
+          ) : prSplit && articlePr ? (
+            <>
+              <div className="prose" dangerouslySetInnerHTML={{ __html: prepareBody(prSplit[0]) }} />
+              <PrCard pr={articlePr.pr} />
+              {prSplit[1] && (
+                <div className="prose" dangerouslySetInnerHTML={{ __html: prepareBody(prSplit[1]) }} />
               )}
             </>
           ) : (

@@ -52,6 +52,7 @@ export type ReservationOffer = {
  */
 const TIEUP_ARTICLE_SLUGS = new Set<string>([
   'ichiran-kodzure-koryaku', // 株式会社一蘭（2026-07 公式写真提供・掲載内容確認）
+  'kids-base-yoyogi-uehara', // Kids Base（2026-10 有償PR・契約締結 2026-10-05）
 ]);
 
 /** 明示 allowlist に載ったタイアップ記事か。 */
