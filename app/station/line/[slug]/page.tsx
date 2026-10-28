@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const line = getLineBySlug(slug);
   if (!line) return { title: '路線が見つかりません', robots: { index: false } };
   const stations = getStationsOnLine(line);
-  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店ガイド`;
-  const description = `${line.name}沿線の${stations.length}駅で子連れOK・ベビーカー入店OKのファミレス・カフェを駅別にチェック。キッズメニュー・キッズチェア・個室・離乳食持込まで全項目。`;
+  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカー・キッズメニュー店ガイド`;
+  const description = `${line.name}沿線の${stations.length}駅で子連れOKのファミレス・カフェを駅別に掲載。キッズメニュー・子ども用の椅子・個室などは、公式で確認できたものを店ごとに表示。`;
   return {
     title,
     description,
@@ -149,7 +149,7 @@ export default async function LinePage({ params }: Props) {
   const lineJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店`,
+    name: `${line.name} 全${stations.length}駅 子連れランチの店`,
     description: `${line.name}の各駅で、子連れで入れる飲食店を駅ごとに整理した一覧`,
     numberOfItems: stations.length,
     itemListElement: stations.map((st, i) => ({
@@ -197,7 +197,7 @@ export default async function LinePage({ params }: Props) {
             <h1 style={{ borderBottom: `4px solid ${line.color}`, paddingBottom: 12, display: 'inline-block' }}>
               {line.name}
               <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
-                全{stations.length}駅 子連れランチ・ベビーカーOK店ガイド
+                全{stations.length}駅 子連れランチ・ベビーカー・キッズメニュー店ガイド
               </small>
             </h1>
             <p className="lead">

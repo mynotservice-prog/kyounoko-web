@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seoOverride = getStationOverride(slug)?.seo;
   const title =
     seoOverride?.title ??
-    `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
+    `${station.name}駅 子連れランチおすすめ｜ベビーカー・キッズメニュー店ガイド【${wardName}】`;
   const description =
     seoOverride?.description ??
     `${station.name}駅周辺で子連れOKのファミレス・カフェ・チェーン店に加え、${isHotpepperStation(slug) ? 'ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : '雑誌やSNSで話題の個人店・人気店も厳選'}。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものだけを店ごとに掲載。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
@@ -173,7 +173,7 @@ export default async function StationPage({ params }: Props) {
     slug,
     chains,
     indies,
-    `${station.name}駅 子連れランチ・ベビーカーOK店`,
+    `${station.name}駅 子連れランチの店`,
     `${station.name}駅周辺の子連れ歓迎チェーン店・個人店リスト`,
   );
   const breadcrumbLd = {
@@ -229,7 +229,7 @@ export default async function StationPage({ params }: Props) {
             <h1 className="stv3-h1">
               {override?.hero?.h1 ?? `${station.name}駅 子連れランチおすすめ`}
               <small className="stv3-h1-sub">
-                {override?.hero?.sub ?? 'ベビーカーOK・キッズメニュー・個室あり店ガイド'}
+                {override?.hero?.sub ?? 'ベビーカー・キッズメニュー・個室の店ガイド'}
               </small>
             </h1>
             <p className="stv3-lead">
