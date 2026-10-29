@@ -43,7 +43,7 @@ import { getCatalogItems } from '@/lib/items-catalog';
 import { getRestaurantBridgeOffer } from '@/lib/article-product-hints';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
 import { buildRestaurantFaq, buildConditionStoresFaq, faqToJsonLd } from '@/lib/station-faq';
-import { getConditionStores } from '@/lib/station-cond-stores';
+import { getConditionStores, getOtherVerifiedStores } from '@/lib/station-cond-stores';
 import { ConditionStoreList } from '@/components/station/ConditionStoreList';
 import { conditionEvidenceCount } from '@/lib/station-evidence';
 import { buildStoreItemListLd, buildConditionStoresLd } from '@/lib/station-ld';
@@ -233,6 +233,8 @@ export default async function StationConditionPage({ params }: Props) {
   // 該当店舗数（noindex 判定と同じロジック）。3件未満なら薄いコンテンツの旨を案内バナーで表示。
   const matchedCount = cs ? cs.within1000 : chains.length + indies.length;
   const isThinResult = matchedCount < 3;
+  // 条件に合う店が少ない面（0〜2店）は、駅の近くのほかの実在店も案内する（「何も無い」と読めないように・2026-10-29）
+  const others = cs && isThinResult ? getOtherVerifiedStores(slug, conditionSlug) : null;
 
   // 外食系も二段ゲート（需要実績 or 主要駅×3件以上）を通らない noindex 対象は 404。
   // index 対象 1,482 ページ＋需要 allowlist は従来どおり配信され、SEO には影響しない。
@@ -268,7 +270,7 @@ export default async function StationConditionPage({ params }: Props) {
   // 該当店の実データのみから組むページ固有FAQ（捏造ゼロ・該当0件の設問は出さない）。
   // 境界ページ（該当3件前後）に固有の実質コンテンツと AEO 用の明示的 Q&A を与える。
   const faqItems = cs
-    ? buildConditionStoresFaq(station.name, cond.label, cs)
+    ? buildConditionStoresFaq(station.name, cond.label, cs, others ?? undefined)
     : buildRestaurantFaq(slug, station.name, cond.label, chains, indies);
   const faqLd = faqToJsonLd(faqItems);
 
@@ -469,7 +471,14 @@ export default async function StationConditionPage({ params }: Props) {
                 ) : (
                   <>{station.name}駅から直線1km以内で、{cond.label}に当てはまると確かめられた店は<strong>{cs.within1000}店</strong>です。</>
                 )}
-                近くの駅や、同じ駅のほかの条件のページ（下）もご覧ください。
+                {others && others.total > 0 && (
+                  <>
+                    {cond.label}以外なら、
+                    {others.stores.slice(0, 3).map((o) => o.name).join('・')}
+                    など<strong>{others.total}店</strong>を駅の近くで確認しています（下の一覧）。
+                  </>
+                )}
+                近くの駅や、同じ駅のほかの条件のページもご覧ください。
                 <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)', fontWeight: 600, margin: '0 2px' }}>
                   {station.name}駅のページ
                 </Link>
@@ -521,7 +530,15 @@ export default async function StationConditionPage({ params }: Props) {
           </header>
 
           {/* 店単位で作り直した面: 店の一覧（根拠つき・距離の段ごと） */}
-          {cs && <ConditionStoreList cs={cs} conditionLabel={cond.label} stationName={station.name} />}
+          {cs && (
+            <ConditionStoreList
+              cs={cs}
+              conditionLabel={cond.label}
+              stationName={station.name}
+              stationSlug={slug}
+              others={others ?? undefined}
+            />
+          )}
 
           {/* チェーン店リスト（条件 'indie' 以外・作り直しの対象外の面） */}
           {!cs && chains.length > 0 && (
