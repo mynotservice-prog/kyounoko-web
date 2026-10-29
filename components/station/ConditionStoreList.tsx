@@ -116,7 +116,7 @@ export function ConditionStoreList({
           </h2>
           <p style={{ fontSize: 12.5, color: 'var(--ink-mute)', margin: '0 0 12px', lineHeight: 1.7 }}>
             各チェーンの公式店舗検索で、駅から直線800m以内に実在を確認した店です（{others.total}店のうち、席で食べるお店を先に{others.stores.length}店）。
-            設備は店によって違うので、行く前に各店の公式ページでご確認ください。
+            設備のタグは、その店の公式店舗検索に表示がある項目（店）と、チェーン公式が全店向けに記載している項目（全店）だけです。タグが無い設備は「無い」という意味ではありません。行く前に各店の公式ページでご確認ください。
           </p>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
             {others.stores.map((o) => (
@@ -133,6 +133,19 @@ export function ConditionStoreList({
                     <strong>{o.name}</strong>
                   )}
                   <span style={{ fontSize: 12, color: 'var(--ink-mute)', marginLeft: 6 }}>{o.category}</span>
+                  {o.facilities.length > 0 && (
+                    <span style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 4 }}>
+                      {o.facilities.map((f) => (
+                        <span
+                          key={f.label}
+                          title={f.source === 'store' ? 'この店の公式店舗検索に表示がある項目' : 'チェーン公式が全店向けに記載している項目'}
+                          style={{ fontSize: 11, background: '#E3F2FD', color: '#1565C0', padding: '1px 7px', borderRadius: 999 }}
+                        >
+                          {f.label}（{f.source === 'store' ? '店' : '全店'}）
+                        </span>
+                      ))}
+                    </span>
+                  )}
                 </span>
                 <span style={{ fontSize: 12, color: 'var(--ink-mute)', whiteSpace: 'nowrap' }}>
                   {o.m !== undefined ? `直線約${o.m}m` : o.band}

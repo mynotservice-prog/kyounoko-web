@@ -201,7 +201,18 @@ const SIT_DOWN_FIRST: Record<string, number> = {
   'mall-food': 1, cafe: 2, 'fast-food': 2, bakery: 3,
 };
 
-export type OtherStore = { key: string; name: string; category: string; m?: number; band: CondStore['band']; url?: string };
+export type OtherStore = {
+  key: string;
+  name: string;
+  category: string;
+  m?: number;
+  band: CondStore['band'];
+  url?: string;
+  /** 根拠のある設備（店の公式店舗検索の表示＝店／チェーン公式の全店向けの記載＝全店）。lib/station-evidence.ts */
+  facilities: { label: string; source: 'store' | 'brand' }[];
+};
+
+const OTHER_FAC_ORDER: EvidenceNeed[] = ['kidsMenu', 'babyChair', 'diaper', 'nursing', 'babyFood', 'privateRoom', 'kidsSpace'];
 
 /**
  * 条件に合う店が少ない面（0〜2店）で出す「この駅の近くで公式に実在を確認した、ほかのお店」（2026-10-29）。
@@ -226,6 +237,10 @@ export function getOtherVerifiedStores(stationSlug: string, condition: string, l
       m: st.m,
       band: bandOf(st.m, st.distance),
       url: st.url,
+      facilities: (() => {
+        const ev = evidenceForStore(st);
+        return OTHER_FAC_ORDER.filter((n) => ev.has(n)).map((n) => ({ label: NEED_LABEL[n], source: ev.get(n)! }));
+      })(),
       rank: SIT_DOWN_FIRST[chain.category] ?? 2,
     });
   }

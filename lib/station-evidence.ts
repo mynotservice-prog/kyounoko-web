@@ -8,7 +8,7 @@
  * ここで数えてよいのは次の2段だけ:
  *   - 店の公式: その店について、チェーン公式の店舗検索が「あり」と表示している設備（VerifiedStore.fac）
  *   - ブランドの公式: lib/chain-facilities.ts で ok:true かつ scope:'brand'（全店向けの公式の記載）の項目
- * 'partial'・'some-stores'・'unknown' は数えない。Chain 型の手入力の値は使わない。
+ * 'partial'・'some-stores'・'unknown' は数えない（範囲の印が無い古い書き方は、公式の出典があれば全店向けとして数える）。Chain 型の手入力の値は使わない。
  *
  * 駅×条件ページの配信の判定（isStationConditionIndexable）はここを使わない（Phase 2 で切り替える）。
  */
@@ -106,7 +106,15 @@ function brandTable(): Map<string, Map<EvidenceNeed, BrandEvidence>> {
     const m = new Map<EvidenceNeed, BrandEvidence>();
     for (const [need, key] of Object.entries(NEED_TO_BRAND_KEY) as [EvidenceNeed, FacilityKey][]) {
       const v = c.items[key];
-      if (v && v.ok === true && v.scope === 'brand') m.set(need, { sourceUrl: v.sourceUrl, verifiedAt: v.verifiedAt ?? c.verifiedAt });
+      // 全店向けの公式の記載: scope:'brand'。10/24 の照合より前の書き方（scope なし）でも、公式の出典（sourceUrl）があれば同じ扱い
+      // （ガスト・ジョナサン・スシロー・大戸屋のキッズメニューなど。2026-10-29）。店舗検索の集計で全店にあるものも数える。
+      // 「一部店舗のみ」（some-stores）と、全店に満たない集計は数えない
+      const brandWide =
+        v?.ok === true &&
+        (v.scope === 'brand' ||
+          (!v.scope && !!v.sourceUrl) ||
+          (v.scope === 'store-count' && v.stores !== undefined && v.stores === v.storesTotal));
+      if (v && brandWide) m.set(need, { sourceUrl: v.sourceUrl, verifiedAt: v.verifiedAt ?? c.verifiedAt });
     }
     brandCache.set(c.key, m);
   }
