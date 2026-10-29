@@ -115,7 +115,7 @@ export function ConditionStoreList({
             {conditionLabel}以外なら、{stationName}駅の近くにこんなお店があります
           </h2>
           <p style={{ fontSize: 12.5, color: 'var(--ink-mute)', margin: '0 0 12px', lineHeight: 1.7 }}>
-            各チェーンの公式店舗検索で、駅から直線800m以内に実在を確認した店です（{others.total}店のうち、席で食べるお店を先に{others.stores.length}店）。
+            各チェーンの公式店舗検索で、駅から直線1km以内に実在を確認した店です（{others.total}店のうち、駅に近い店・席で食べるお店を先に{others.stores.length}店。800mを超える店は子連れだと15〜20分ほど）。
             設備のタグは、その店の公式店舗検索に表示がある項目（店）と、チェーン公式が全店向けに記載している項目（全店）だけです。タグが無い設備は「無い」という意味ではありません。行く前に各店の公式ページでご確認ください。
           </p>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>

@@ -194,7 +194,7 @@ export function buildConditionStoresFaq(
       cs.within1000 === 0
         ? `駅から直線1km以内で、${conditionLabel}に当てはまると公式の店舗検索・チェーン公式・ホットペッパーの店の掲載で確かめられた店はありませんでした。` +
           (others && others.total > 0
-            ? `${conditionLabel}以外では、${listNames(others.stores.slice(0, 4).map((o) => o.name), 4)}など${others.total}店を駅から直線800m以内で公式に確認しています。`
+            ? `${conditionLabel}以外では、${listNames(others.stores.slice(0, 4).map((o) => o.name), 4)}など${others.total}店を駅から直線1km以内で公式に確認しています。`
             : '近くの駅や、同じ駅のほかの条件のページもご覧ください。')
         : `駅から直線1km以内に${cs.within1000}店あります（うち800m以内が${cs.within800}店）。チェーン店は公式の店舗検索で実在を確認した店、個人店はホットペッパーグルメでお子様連れ歓迎と掲載されている店です。`,
   });

@@ -214,36 +214,55 @@ export type OtherStore = {
 
 const OTHER_FAC_ORDER: EvidenceNeed[] = ['kidsMenu', 'babyChair', 'diaper', 'nursing', 'babyFood', 'privateRoom', 'kidsSpace'];
 
+/** 公式で実在を確認した店1つを「ほかのお店」の行に（席で食べる業態を先に並べるための rank つき） */
+function toOtherStore(st: VerifiedStore): (OtherStore & { rank: number }) | null {
+  const chain = CHAIN_BY_SLUG.get(st.chain);
+  if (!chain) return null;
+  const ev = evidenceForStore(st);
+  return {
+    key: `c:${st.chain}:${st.name}:${st.address}`,
+    name: storeDisplayName(chain.name, st.name),
+    category: CATEGORY_LABEL[chain.category] ?? '',
+    m: st.m,
+    band: bandOf(st.m, st.distance),
+    url: st.url,
+    facilities: OTHER_FAC_ORDER.filter((n) => ev.has(n)).map((n) => ({ label: NEED_LABEL[n], source: ev.get(n)! })),
+    rank: SIT_DOWN_FIRST[chain.category] ?? 2,
+  };
+}
+const byRankThenDistance = (a: { rank: number; m?: number }, b: { rank: number; m?: number }) =>
+  a.rank - b.rank || (a.m ?? 9999) - (b.m ?? 9999);
+const stripRank = ({ rank: _rank, ...x }: OtherStore & { rank: number }): OtherStore => x;
+
 /**
  * 条件に合う店が少ない面（0〜2店）で出す「この駅の近くで公式に実在を確認した、ほかのお店」（2026-10-29）。
  * 経堂のファミレスのように条件に合う店は無くても、駅の近くには大戸屋・スシローなどの実在店がある。
- * 「何も無い」と読めないよう、条件以外の実在店（800m以内）を、席で食べる業態を先に、駅に近い順で返す。
+ * 「何も無い」と読めないよう、条件以外の実在店を、800m以内→800m〜1km（少し歩く）の順に、
+ * それぞれ席で食べる業態を先に・駅に近い順で返す。
  */
 export function getOtherVerifiedStores(stationSlug: string, condition: string, limit = 10): { stores: OtherStore[]; total: number } {
   const verified = getVerifiedStores(stationSlug);
   const cs = getConditionStores(stationSlug, condition);
   if (!verified || !cs) return { stores: [], total: 0 };
   const inCond = new Set(cs.stores.filter((s) => s.kind === 'chain').map((s) => s.key));
-  const all: (OtherStore & { rank: number })[] = [];
-  for (const st of verified.stores) {
-    const chain = CHAIN_BY_SLUG.get(st.chain);
-    if (!chain) continue;
-    const key = `c:${st.chain}:${st.name}:${st.address}`;
-    if (inCond.has(key)) continue;
-    all.push({
-      key,
-      name: storeDisplayName(chain.name, st.name),
-      category: CATEGORY_LABEL[chain.category] ?? '',
-      m: st.m,
-      band: bandOf(st.m, st.distance),
-      url: st.url,
-      facilities: (() => {
-        const ev = evidenceForStore(st);
-        return OTHER_FAC_ORDER.filter((n) => ev.has(n)).map((n) => ({ label: NEED_LABEL[n], source: ev.get(n)! }));
-      })(),
-      rank: SIT_DOWN_FIRST[chain.category] ?? 2,
-    });
-  }
-  all.sort((a, b) => a.rank - b.rank || (a.m ?? 9999) - (b.m ?? 9999));
-  return { stores: all.slice(0, limit).map(({ rank: _rank, ...x }) => x), total: all.length };
+  const pick = (list: VerifiedStore[]) =>
+    list
+      .map(toOtherStore)
+      .filter((x): x is OtherStore & { rank: number } => !!x && !inCond.has(x.key))
+      .sort(byRankThenDistance);
+  const near = pick(verified.stores);
+  const far = pick(verified.far ?? []);
+  return { stores: [...near, ...far].slice(0, limit).map(stripRank), total: near.length + far.length };
+}
+
+/** 駅トップの「少し歩く（800m〜1km）」枠（2026-10-29）: 800m以内の店が少ない駅で、800m〜1kmの実在店を出す */
+export function getFarVerifiedStores(stationSlug: string): { stores: OtherStore[]; more: number } {
+  const verified = getVerifiedStores(stationSlug);
+  if (!verified?.far?.length) return { stores: [], more: 0 };
+  const stores = verified.far
+    .map(toOtherStore)
+    .filter((x): x is OtherStore & { rank: number } => !!x)
+    .sort((a, b) => (a.m ?? 9999) - (b.m ?? 9999))
+    .map(stripRank);
+  return { stores, more: Object.values(verified.farMore ?? {}).reduce((n, k) => n + k, 0) };
 }
