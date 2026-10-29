@@ -10,7 +10,7 @@
  *
  * 距離は駅中心からの直線。800m以内は駅前・徒歩圏、800m超〜1kmは「少し歩く」（子連れで15〜20分）。
  */
-import { CHAINS, type Chain } from './station-restaurants';
+import { CHAINS, CHAIN_CATEGORY_LABEL as CATEGORY_LABEL, type Chain } from './station-restaurants';
 import { getVerifiedStores, type VerifiedStore } from './station-verified-stores';
 import { getIndieRestaurantsByStation, INDIE_GENRE_LABEL } from './indie-restaurants';
 import { evidenceForStore, storeDisplayName, type EvidenceNeed } from './station-evidence';
@@ -195,3 +195,40 @@ export const COND_SOURCE_LABEL: Record<CondStoreSource, string> = {
   category: '業態（公式で実在を確認）',
   listing: 'ホットペッパーの店の掲載',
 };
+
+const SIT_DOWN_FIRST: Record<string, number> = {
+  'family-restaurant': 0, sushi: 0, washoku: 0, italian: 0, chinese: 0, yakiniku: 0, noodles: 1, curry: 1, gyudon: 1,
+  'mall-food': 1, cafe: 2, 'fast-food': 2, bakery: 3,
+};
+
+export type OtherStore = { key: string; name: string; category: string; m?: number; band: CondStore['band']; url?: string };
+
+/**
+ * 条件に合う店が少ない面（0〜2店）で出す「この駅の近くで公式に実在を確認した、ほかのお店」（2026-10-29）。
+ * 経堂のファミレスのように条件に合う店は無くても、駅の近くには大戸屋・スシローなどの実在店がある。
+ * 「何も無い」と読めないよう、条件以外の実在店（800m以内）を、席で食べる業態を先に、駅に近い順で返す。
+ */
+export function getOtherVerifiedStores(stationSlug: string, condition: string, limit = 10): { stores: OtherStore[]; total: number } {
+  const verified = getVerifiedStores(stationSlug);
+  const cs = getConditionStores(stationSlug, condition);
+  if (!verified || !cs) return { stores: [], total: 0 };
+  const inCond = new Set(cs.stores.filter((s) => s.kind === 'chain').map((s) => s.key));
+  const all: (OtherStore & { rank: number })[] = [];
+  for (const st of verified.stores) {
+    const chain = CHAIN_BY_SLUG.get(st.chain);
+    if (!chain) continue;
+    const key = `c:${st.chain}:${st.name}:${st.address}`;
+    if (inCond.has(key)) continue;
+    all.push({
+      key,
+      name: storeDisplayName(chain.name, st.name),
+      category: CATEGORY_LABEL[chain.category] ?? '',
+      m: st.m,
+      band: bandOf(st.m, st.distance),
+      url: st.url,
+      rank: SIT_DOWN_FIRST[chain.category] ?? 2,
+    });
+  }
+  all.sort((a, b) => a.rank - b.rank || (a.m ?? 9999) - (b.m ?? 9999));
+  return { stores: all.slice(0, limit).map(({ rank: _rank, ...x }) => x), total: all.length };
+}

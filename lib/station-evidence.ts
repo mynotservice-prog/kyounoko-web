@@ -191,7 +191,16 @@ export function evidenceStoresAt(
 /** 公式の店名にチェーン名が入っていない店（「品川駅前店」など）は、チェーン名を前に付ける */
 export function storeDisplayName(chainName: string, storeName: string): string {
   const n = (v: string) => v.normalize('NFKC').replace(/\s+/g, '');
-  return n(storeName).includes(n(chainName)) ? storeName : `${chainName} ${storeName}`;
+  const store = n(storeName);
+  const chain = n(chainName);
+  if (store.includes(chain)) return storeName;
+  // 「とんかつ和幸」の「和幸経堂コルティ店」のように、店名がチェーン名の一部（2字以上）で始まるときも付けない
+  for (let len = chain.length - 1; len >= 2; len--) {
+    for (let i = 0; i + len <= chain.length; i++) {
+      if (store.startsWith(chain.slice(i, i + len))) return storeName;
+    }
+  }
+  return `${chainName} ${storeName}`;
 }
 
 /** チェーンのカード用: その駅のこのチェーンで、根拠のある項目と根拠の段 */
