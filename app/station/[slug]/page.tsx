@@ -41,7 +41,7 @@ import {
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
-import { getConditionStores } from '@/lib/station-cond-stores';
+import { getConditionStores, getFarVerifiedStores } from '@/lib/station-cond-stores';
 import { getAreaArticleLinks } from '@/lib/area-articles';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 import { conditionEvidenceCount, evidenceStoresAt, type EvidenceNeed, type EvidenceStore } from '@/lib/station-evidence';
@@ -660,6 +660,49 @@ export default async function StationPage({ params }: Props) {
               </div>
             </section>
           ))}
+
+          {/* ===== 少し歩けば（800m〜1km）: 800m以内のチェーン店が少ない駅だけ（2026-10-29） =====
+              800m以内に実在店が0〜4店の駅（63駅）で、「店が無い」と読めないよう、公式で実在を確認した
+              800m〜1kmの店を出す。直線距離なので、子連れだと15〜20分ほどかかることがある。 */}
+          {(() => {
+            if (!verifiedStores || verifiedStores.stores.length >= 5) return null;
+            const far = getFarVerifiedStores(slug);
+            if (far.stores.length === 0) return null;
+            return (
+              <section id="section-far" className="stv3-sec ruled">
+                <header className="stv3-sechead">
+                  <span className="stv3-eyebrow">少し歩けば</span>
+                  <h2 className="stv3-h2">
+                    {station.name}駅から少し歩く（直線800m〜1km）お店 <span className="stv3-count">{far.stores.length + far.more}店</span>
+                  </h2>
+                  <p className="stv3-sublead">
+                    各チェーンの公式店舗検索で、駅から直線800m〜1kmに実在を確認した店です。子連れだと15〜20分ほどかかることがあり、線路や大きな道路の向こう側は道のりが長くなります。設備のタグは公式に表示・記載がある項目だけです。
+                  </p>
+                </header>
+                <ul className="stv3-group-list">
+                  {far.stores.map((o) => (
+                    <li key={o.key}>
+                      <strong>
+                        {o.url ? (
+                          <a href={o.url} target="_blank" rel="noopener noreferrer">{o.name}</a>
+                        ) : (
+                          o.name
+                        )}
+                      </strong>
+                      <span className="meta">
+                        {o.category}
+                        {o.m !== undefined ? `・直線約${o.m}m` : ''}
+                        {o.facilities.length > 0
+                          ? `・${o.facilities.map((f) => `${f.label}（${f.source === 'store' ? '店' : '全店'}）`).join('・')}`
+                          : ''}
+                      </span>
+                    </li>
+                  ))}
+                  {far.more > 0 && <li className="more">…ほか同じチェーンの{far.more}店</li>}
+                </ul>
+              </section>
+            );
+          })()}
 
           {/* 個人店・話題店セクション — anchor target */}
           {indies.length > 0 && (
