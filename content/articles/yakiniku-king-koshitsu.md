@@ -133,7 +133,7 @@ A. 半個室の有無は公式に記載がありません（店舗へ確認）�
 - [焼肉キング 子連れ攻略（メイン記事）](/article/yakiniku-king-kodzure-koryaku)
 - [焼肉キング ベビーチェア・キッズチェア](/article/yakiniku-king-kodzure-koryaku)
 - [焼肉キング ベビーカー入店](/article/yakiniku-king-kodzure-koryaku)
-- [焼肉キング キッズメニュー・小学生以下無料](/article/yakiniku-king-kids-menu)
+- [焼肉きんぐのキッズメニュー・幼児無料・小学生半額](/article/yakiniku-king-kids-menu)
 - [焼肉きんぐの子ども料金｜幼児は無料？小学生は？](/article/yakiniku-king-kodomo-ryokin)
 - [焼肉キング 食べ放題100分制・子連れ時間配分](/article/yakiniku-king-time-system)
 - [個室で子連れランチ完全ガイド](/article/koshitsu-kodzure-lunch)
