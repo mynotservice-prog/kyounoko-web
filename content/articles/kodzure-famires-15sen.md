@@ -35,7 +35,7 @@ hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kodzure-
 
 ## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース
 
-この記事は、**4歳娘＋2歳息子の父であり、きょうのこ編集長のながみー**が、首都圏の主要ファミレスチェーン10ブランド・複数店舗を子連れで利用してきた記録をもとに整理した保存版です。価格・キッズメニュー価格帯・ベビーチェア台数・電子レンジ対応店舗の傾向は、各社公式サイト（[ガスト公式メニュー](https://www.skylark.co.jp/gusto/menu/)／[サイゼリヤ公式メニュー](https://www.saizeriya.co.jp/menu/)／[ジョナサン公式](https://www.skylark.co.jp/jonathan/)／[ロイヤルホスト公式](https://www.royalhost.jp/)／[ココス公式](https://www.cocos-jpn.co.jp/)）の2026年5月時点の最新情報と、編集部の実訪問データを突き合わせています。離乳食の取り分け量と安全配慮は、厚生労働省「[授乳・離乳の支援ガイド](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html)」と消費者庁「[食物アレルギー表示について](https://www.caa.go.jp/policies/policy/food_labeling/food_sanitation/allergy/)」「[食品による子供の窒息事故](https://www.caa.go.jp/policies/policy/consumer_safety/release/pdf/consumer_safety_cms204_210128_01.pdf)」の公式情報をベースにしました。最終更新日は2026年5月20日、店舗判断で運用が変わる項目（電子レンジ加熱・離乳食持込・誕生日サービス）は**店舗で要確認**の姿勢でご利用ください。
+この記事は、**4歳娘＋2歳息子の父であり、きょうのこ編集長のながみー**が、首都圏の主要ファミレスチェーン10ブランド・複数店舗を子連れで利用してきた記録をもとに整理した保存版です。価格・キッズメニュー価格帯・ベビーチェア台数・電子レンジ対応店舗の傾向は、各社公式サイト（[ガスト公式メニュー](https://www.skylark.co.jp/gusto/menu/)／[サイゼリヤ公式メニュー](https://www.saizeriya.co.jp/menu/)／[ジョナサン公式](https://www.skylark.co.jp/jonathan/)／[ロイヤルホスト公式](https://www.royalhost.jp/)／[ココス公式](https://www.cocos-jpn.co.jp/)）の2026年5月時点の最新情報と、編集部の実訪問データを突き合わせています。離乳食の取り分け量と安全配慮は、「[授乳・離乳の支援ガイド](https://www.cfa.go.jp/policies/boshihoken/junyuu/)」（2019年改定版・こども家庭庁掲載）と消費者庁「[食物アレルギー表示について](https://www.caa.go.jp/policies/policy/food_labeling/food_sanitation/allergy/)」「[食品による子供の窒息事故](https://www.caa.go.jp/policies/policy/consumer_safety/release/pdf/consumer_safety_cms204_210128_01.pdf)」の公式情報をベースにしました。最終更新日は2026年5月20日、店舗判断で運用が変わる項目（電子レンジ加熱・離乳食持込・誕生日サービス）は**店舗で要確認**の姿勢でご利用ください。
 
 ## 30秒でわかる答え｜子連れファミレス選び
 
@@ -277,7 +277,7 @@ A. 平日ランチは予約なしOK、休日11時30分以降は混雑するた�
 
 ファミレス取り分けで気をつけたい4点と、迷ったときの相談先を整理しました。
 
-**1. 塩分・脂質**：大人向け味付けは0-2歳には濃すぎることが多いです。ハンバーグ・パスタ・ラーメンのスープ・ピラフは**お湯で1.5〜2倍に薄めて与える**運用が安全。厚生労働省「[授乳・離乳の支援ガイド](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html)」では1〜2歳の食塩相当量目標が1日3.0g未満（女児）・3.0g未満（男児）と示されており、外食の取り分け1食でこの量に到達してしまうリスクがあります。
+**1. 塩分・脂質**：大人向け味付けは0-2歳には濃すぎることが多いです。ハンバーグ・パスタ・ラーメンのスープ・ピラフは**お湯で1.5〜2倍に薄めて与える**運用が安全。「[授乳・離乳の支援ガイド](https://www.cfa.go.jp/policies/boshihoken/junyuu/)」（2019年改定版・こども家庭庁掲載）では1〜2歳の食塩相当量目標が1日3.0g未満（女児）・3.0g未満（男児）と示されており、外食の取り分け1食でこの量に到達してしまうリスクがあります。
 
 **2. アレルゲン初摂取**：卵・乳・小麦・落花生・えび・かに・くるみ・そばの特定原材料8品目は、消費者庁の[食物アレルギー表示](https://www.caa.go.jp/policies/policy/food_labeling/food_sanitation/allergy/)制度で表示が義務化されています。各社公式サイトのアレルゲン情報を**初摂取の場合は必ず家庭で試した後**に外食で与えるのが鉄則。家庭で初めて与える場合は、平日の午前中など医療機関の受診がしやすい時間帯を選んでください。
 
@@ -516,7 +516,7 @@ A. 平日ランチは予約なしOK、休日11時30分以降は混雑するた�
 | **4位** | **デニーズ** | ○（店舗判断） | ○ | ○ | 24時間営業店舗で早朝・深夜利用も柔軟 |
 | **5位** | **サイゼリヤ** | △（店舗判断） | ○（黙認レベル） | ○ | コスパ最強・ミネストローネ取り分け離乳食代わりに |
 
-公式に持ち込みOKを明記しているのはガストのみで（一部店舗を除く）、他は店舗判断です。詳しくは[ガストの離乳食持ち込み（公式明記）](/article/gusto-rinyushoku-mochikomi)・[デニーズの離乳食持ち込み](/article/dennys-rinyushoku-mochikomi)・[サイゼリヤの離乳食持ち込み](/article/saizeriya-rinyushoku-mochikomi)へ。
+公式に持ち込みOKを明記しているのはガスト（一部店舗を除く）としゃぶ葉（[公式「こどもしゃぶ葉術」](https://www.skylark.co.jp/syabuyo/child/)に「離乳食のお持ち込みOK」・2026年10月29日確認）で、他は店舗判断です。詳しくは[ガストの離乳食持ち込み（公式明記）](/article/gusto-rinyushoku-mochikomi)・[デニーズの離乳食持ち込み](/article/dennys-rinyushoku-mochikomi)・[サイゼリヤの離乳食持ち込み](/article/saizeriya-rinyushoku-mochikomi)へ。
 
 ### 離乳食期ファミレス利用の鉄則3つ
 

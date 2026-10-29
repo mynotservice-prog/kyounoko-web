@@ -242,7 +242,7 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - しゃぶ葉：[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)・[ベビーチェア](/article/shabuyo-baby-chair)
 
 **焼き鳥・居酒屋系**
-- 鳥貴族：[キッズメニュー（2026年8月1日〜お子様プレート390円）](/article/torikizoku-kids-menu)
+- 鳥貴族：[キッズメニュー（2026年8月1日〜お子様プレート410円）](/article/torikizoku-kids-menu)
 
 **和定食系**
 - やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-kodzure-koryaku)
