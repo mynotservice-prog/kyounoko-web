@@ -418,5 +418,15 @@
   "gate": "unknown",
   "evidence": "公式ページは住所のみ。西武の店舗一覧は「エミオ武蔵境」のみで内外の記載なし",
   "source": "http://www.seibu-shop.jp/floorguide/station/?station=st85"
+ },
+ "yoshinoya|吉野家 ＪＲ京橋駅ホーム店": {
+  "gate": "inside",
+  "evidence": "大阪府大阪市城東区新喜多１丁目２－３１ＪＲ大阪環状線京橋駅外廻りホーム",
+  "source": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_062375"
+ },
+ "doutor|ドトールコーヒーショップ 東武北千住駅下りホーム店": {
+  "gate": "inside",
+  "evidence": "ドトールコーヒーショップ 東武北千住駅下りホーム店（公式の店名。駅のホーム上の店）",
+  "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=1012401"
  }
 }
