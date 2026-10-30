@@ -3046,7 +3046,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "OBPクリスタルタワー店", address: "大阪府大阪市中央区 城見1-2-27 クリスタルタワー1F", distance: "徒歩圏", m: 630, url: "https://shop.tullys.co.jp/detail/5443108" },
       { chain: "veloce", name: "大阪ビジネスパーク駅前店", address: "大阪府大阪市中央区城見1-3-7 松下IMPビル1F", distance: "徒歩圏", m: 560, url: "https://c-united.co.jp/store/detail/000425/" },
       { chain: "yayoiken", name: "やよい軒 京橋店", address: "大阪府大阪市都島区東野田町4丁目6-9", distance: "徒歩圏", m: 360, url: "https://store.yayoiken.com/b/yayoiken/info/1431/", fac: [] },
-      { chain: "yoshinoya", name: "吉野家 JR京橋駅ホーム店", address: "大阪府大阪市城東区新喜多1丁目2-31JR大阪環状線京橋駅外廻りホーム", distance: "駅前", m: 140, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_062375", fac: [] },
       { chain: "yoshinoya", name: "吉野家 大阪京橋店", address: "大阪府大阪市都島区東野田町5丁目2-28", distance: "駅前", m: 290, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_042332", fac: ["お子様メニュー"] },
     ],
     more: {"starbucks": 1},
@@ -21808,7 +21807,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     stores: [
       { chain: "bikkuri-donkey", name: "北千住店", address: "東京都足立区千住中居町17-20 マルアイビル2F", distance: "徒歩圏", m: 510, url: "https://www.bikkuri-donkey.com/shop/shop_1614/", fac: ["ベビーシート", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 北千住駅前店", address: "東京都足立区千住2-61 ビックリヤ北千住駅西口ビル1F", distance: "駅前", m: 70, url: "https://shop.dennys.jp/map/21878", fac: ["オムツ替えシート"] },
-      { chain: "doutor", name: "ドトールコーヒーショップ 東武北千住駅下りホーム店", address: "東京都足立区 千住旭町 42-1", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012401" },
       { chain: "doutor", name: "ドトールコーヒーショップ 北千住西口店", address: "東京都足立区 千住 3-92", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011306" },
       { chain: "goemon", name: "北千住ルミネ店", address: "東京都足立区千住旭町42-2 北千住ルミネ8F", distance: "徒歩圏", m: 390, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: ["お子様メニュー"] },
       { chain: "gusto", name: "ガスト 北千住駅東口店(から好し取扱店)", address: "東京都足立区千住旭町4-13 コートダジュール2F", distance: "駅前", m: 190, url: "https://store-info.skylark.co.jp/map/018922/", fac: ["おむつ替え台"] },
@@ -22182,7 +22180,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
     far: [
       { chain: "denny-s", name: "デニーズ 北千住駅前店", address: "東京都足立区千住2-61 ビックリヤ北千住駅西口ビル1F", distance: "少し歩く", m: 920, url: "https://shop.dennys.jp/map/21878", fac: ["オムツ替えシート"] },
-      { chain: "doutor", name: "ドトールコーヒーショップ 東武北千住駅下りホーム店", address: "東京都足立区 千住旭町 42-1", distance: "少し歩く", m: 860, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012401" },
       { chain: "doutor", name: "ドトールコーヒーショップ 北千住西口店", address: "東京都足立区 千住 3-92", distance: "少し歩く", m: 960, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011306" },
       { chain: "gyukaku", name: "牛角 北千住駅前店", address: "東京都足立区 千住2-61 ビックリヤ北千住西口ビル2F", distance: "少し歩く", m: 910, url: "https://map.reins.co.jp/gyukaku/detail/352849129", fac: ["お子様用備品"] },
       { chain: "hanamaru-udon", name: "はなまるうどん 千住ミルディス店", address: "東京都足立区千住3-92 1F", distance: "少し歩く", m: 970, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=161", fac: ["お子様メニュー", "駐車場"] },
@@ -22217,7 +22214,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
     far: [
       { chain: "denny-s", name: "デニーズ 北千住駅前店", address: "東京都足立区千住2-61 ビックリヤ北千住駅西口ビル1F", distance: "少し歩く", m: 920, url: "https://shop.dennys.jp/map/21878", fac: ["オムツ替えシート"] },
-      { chain: "doutor", name: "ドトールコーヒーショップ 東武北千住駅下りホーム店", address: "東京都足立区 千住旭町 42-1", distance: "少し歩く", m: 860, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012401" },
       { chain: "doutor", name: "ドトールコーヒーショップ 北千住西口店", address: "東京都足立区 千住 3-92", distance: "少し歩く", m: 960, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011306" },
       { chain: "gyukaku", name: "牛角 北千住駅前店", address: "東京都足立区 千住2-61 ビックリヤ北千住西口ビル2F", distance: "少し歩く", m: 910, url: "https://map.reins.co.jp/gyukaku/detail/352849129", fac: ["お子様用備品"] },
       { chain: "hanamaru-udon", name: "はなまるうどん 千住ミルディス店", address: "東京都足立区千住3-92 1F", distance: "少し歩く", m: 970, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=161", fac: ["お子様メニュー", "駐車場"] },
@@ -24207,6 +24203,177 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
     far: [
       { chain: "gyukaku", name: "牛角 高砂店", address: "東京都葛飾区 高砂5-42-1 さくらビル1F", distance: "少し歩く", m: 1000, url: "https://map.reins.co.jp/gyukaku/detail/338265129", fac: ["お子様用備品", "座敷"] },
+    ],
+  },
+
+  "osaka-ko": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "cocos", name: "ココス 天保山マーケットプレース店", address: "大阪府大阪市港区海岸通1-1-10 天保山マーケットプレース内", distance: "徒歩圏", m: 440, url: "https://maps.cocos-jpn.co.jp/jp/detail/2854.html", fac: ["お子様メニュー", "スロープ／エレベーター", "駐車場"] },
+      { chain: "kfc", name: "天保山マーケットプレース店", address: "大阪府大阪市港区海岸通り1- 1-10", distance: "徒歩圏", m: 440, url: "https://search.kfc.co.jp/map/1070", fac: ["駐車場"] },
+      { chain: "mister-donut", name: "天保山マーケットプレース ショップ", address: "大阪府大阪市港区海岸通1丁目1-10", distance: "徒歩圏", m: 460, url: "https://md.mapion.co.jp/b/misterdonut/info/2090/", fac: ["駐車場"] },
+      { chain: "starbucks", name: "海遊館店", address: "大阪府大阪市港区海岸通1-1-10 海遊館", distance: "徒歩圏", m: 530, url: "https://store.starbucks.co.jp/detail-1511/" },
+      { chain: "subway", name: "サブウェイ 天保山マーケットプレース店", address: "大阪府大阪市中央区海岸通1-1-10天保山マーケットプレース2F", distance: "徒歩圏", m: 440, url: "https://subway.co.jp/shop/5696/", fac: ["キッズセット"] },
+      { chain: "sukiya", name: "すき家 大阪港駅前店", address: "大阪府大阪市港区築港3-6-13", distance: "駅前", m: 90, url: "https://maps.sukiya.jp/jp/detail/1955.html", fac: ["お子様メニュー"] },
+    ],
+  },
+  "banpaku-kinen-koen": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "kfc", name: "ららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1", distance: "徒歩圏", m: 440, url: "https://search.kfc.co.jp/map/4304", fac: ["駐車場"] },
+      { chain: "mcdonalds", name: "ららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1", distance: "駅前", m: 180, url: "https://map.mcdonalds.co.jp/map/27814", fac: ["駐車場"] },
+      { chain: "mister-donut", name: "ららぽーとEXPOCITY ショップ", address: "大阪府吹田市千里万博公園2-1", distance: "徒歩圏", m: 520, url: "https://md.mapion.co.jp/b/misterdonut/info/1915/", fac: ["駐車場"] },
+      { chain: "mos-burger", name: "モスバーガーららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1 ららぽーとEXPOCITY2階20790Qゾーン", distance: "徒歩圏", m: 500, url: "https://www.mos.jp/shop/detail/?shop_cd=05118", fac: ["駐車場"] },
+      { chain: "starbucks", name: "スターバックス ティー&カフェ ららぽーとEXPOCITY1階店", address: "大阪府吹田市千里万博公園2-1 ららぽーとEXPOCITY 1階 10350(店舗番号)", distance: "徒歩圏", m: 500, url: "https://store.starbucks.co.jp/detail-4246/" },
+      { chain: "starbucks", name: "ららぽーとEXPOCITY 2階店", address: "大阪府吹田市千里万博公園2-1 ららぽーとEXPOCITY 2階 20340(店舗番号)", distance: "徒歩圏", m: 520, url: "https://store.starbucks.co.jp/detail-1323/" },
+      { chain: "tonkatsu-wako", name: "和幸ららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1 ららぽーとEXPOCITY2F「エキスポキッチン」", distance: "徒歩圏", m: 320, url: "https://wako-group.co.jp/shop/detai/shop_1161/", fac: ["子供椅子", "駐車場"] },
+      { chain: "tully-coffee", name: "ららぽーとEXPOCITY店", address: "大阪府吹田市 千里万博公園2-1 3階 30620", distance: "徒歩圏", m: 460, url: "https://shop.tullys.co.jp/detail/1680864" },
+    ],
+    far: [
+      { chain: "starbucks", name: "吹田山田店", address: "大阪府吹田市山田東2-17-5", distance: "少し歩く", m: 990, url: "https://store.starbucks.co.jp/detail-1094/" },
+    ],
+  },
+  "trade-center-mae": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "gusto", name: "ガスト 大阪ATC店(から好し取扱店)", address: "大阪府大阪市住之江区南港北2丁目1番10号 ITM棟2階", distance: "駅前", m: 160, url: "https://store-info.skylark.co.jp/map/018946/", fac: [] },
+      { chain: "mos-burger", name: "モスバーガー南港ATC店", address: "大阪府大阪市住之江区南港北2丁目1-10 ATC O’s北2階", distance: "駅前", m: 170, url: "https://www.mos.jp/shop/detail/?shop_cd=04804", fac: ["駐車場"] },
+      { chain: "sukiya", name: "すき家 南港ATC店", address: "大阪府大阪市住之江区南港北2-1-10 O's 215区画", distance: "駅前", m: 220, url: "https://maps.sukiya.jp/jp/detail/5106.html", fac: ["お子様メニュー"] },
+    ],
+  },
+  "hirakata-koen": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "mcdonalds", name: "枚方パーク店", address: "大阪府枚方市枚方公園町1-1ひらかたパーク内", distance: "徒歩圏", m: 490, url: "https://map.mcdonalds.co.jp/map/27526", fac: ["駐車場"] },
+      { chain: "mister-donut", name: "エル枚方 ショップ", address: "大阪府枚方市岡東町19-20", distance: "徒歩圏", m: 780, url: "https://md.mapion.co.jp/b/misterdonut/info/0895/", fac: [] },
+    ],
+    far: [
+      { chain: "gusto", name: "ガスト ビオルネ枚方店(から好し取扱店)", address: "大阪府枚方市岡本町7番1号 枚方ビオルネ北館2階", distance: "少し歩く", m: 830, url: "https://store-info.skylark.co.jp/map/018944/", fac: ["おむつ替え台"] },
+      { chain: "kfc", name: "エル・枚方店", address: "大阪府枚方市岡東町19-20", distance: "少し歩く", m: 870, url: "https://search.kfc.co.jp/map/3247", fac: [] },
+      { chain: "lotteria", name: "京阪枚方市駅北口店", address: "大阪府枚方市岡本町2-22 枚方デパートメントビル", distance: "少し歩く", m: 940, url: "https://maps.zetteria.jp/shop/shop3716.html" },
+      { chain: "matsunoya", name: "松のや エル枚方店(松屋併設)", address: "大阪府枚方市岡東町19-20 エル枚方食遊館1F", distance: "少し歩く", m: 840, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012158", fac: [] },
+      { chain: "matsuya", name: "松屋 エル枚方店(松のや併設)", address: "大阪府枚方市岡東町19-20 エル枚方食遊館1F", distance: "少し歩く", m: 840, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002158", fac: [] },
+      { chain: "matsuya", name: "松屋 枚方市役所前店", address: "大阪府枚方市岡東町5-24", distance: "少し歩く", m: 980, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000856", fac: [] },
+      { chain: "starbucks", name: "京阪枚方市駅店", address: "大阪府枚方市岡東町19-19 京阪百貨店ひらかた店1階", distance: "少し歩く", m: 980, url: "https://store.starbucks.co.jp/detail-1623/" },
+      { chain: "sukiya", name: "すき家 京阪枚方市駅前店", address: "大阪府枚方市岡本町3-4 N ́s Square 1F", distance: "少し歩く", m: 860, url: "https://maps.sukiya.jp/jp/detail/1428.html", fac: ["お子様メニュー"] },
+      { chain: "yayoiken", name: "やよい軒 枚方店", address: "大阪府枚方市新町1-2-10 枚方テイクスリー1F", distance: "少し歩く", m: 960, url: "https://store.yayoiken.com/b/yayoiken/info/2140/", fac: ["お子様メニュー"] },
+    ],
+  },
+  "umekoji-kyotonishi": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "kushikatsu-tanaka", name: "串カツ田中 梅小路店", address: "京都府京都市下京区朱雀内畑町7-3", distance: "駅前", m: 90, url: "https://restaurant.kushi-tanaka.com/detail/0232/", fac: ["子供用イス", "座敷"] },
+      { chain: "starbucks", name: "ビバスクエア京都 梅小路公園店", address: "京都府京都市下京区観喜寺町 梅小路公園内 JR梅小路京都西駅前", distance: "駅前", m: 120, url: "https://store.starbucks.co.jp/detail-1827/" },
+    ],
+    far: [
+      { chain: "kfc", name: "京都リサーチパーク店", address: "京都府京都市下京区中堂寺粟田町91", distance: "少し歩く", m: 920, url: "https://search.kfc.co.jp/map/3412", fac: ["駐車場"] },
+      { chain: "komeda", name: "西大路八条店", address: "京都府京都市下京区梅小路高畑町17番地", distance: "少し歩く", m: 930, url: "https://www.komeda.co.jp/shop/detail.html?id=643", fac: ["トイレおむつ台", "駐車場"] },
+      { chain: "kura-sushi", name: "西大路七条店", address: "京都府京都市下京区西七条南衣田町96", distance: "少し歩く", m: 950, url: "https://shop.kurasushi.co.jp/detail/38", fac: ["多機能トイレ対応"] },
+      { chain: "mos-burger", name: "モスバーガー五条七本松店", address: "京都府京都市下京区中堂寺南町105 ゴールドハイツ五条105", distance: "少し歩く", m: 830, url: "https://www.mos.jp/shop/detail/?shop_cd=08076", fac: [] },
+      { chain: "starbucks", name: "TSUTAYA 京都リサーチパーク店", address: "京都府京都市下京区中堂寺粟田町91 京都リサーチパーク 9号館", distance: "少し歩く", m: 930, url: "https://store.starbucks.co.jp/detail-993/" },
+      { chain: "sushiro", name: "五条七本松店", address: "京都府京都市下京区中堂寺南町102", distance: "少し歩く", m: 820, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=403", fac: ["おむつ替えシート", "駐車場"] },
+    ],
+  },
+  "keage": {
+    verifiedAt: "2026-10-30",
+    stores: [
+    ],
+    far: [
+      { chain: "starbucks", name: "京都円山公園 菊の渓店", address: "京都府京都市東山区八坂鳥居前東入円山町620-1", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-4569/" },
+    ],
+  },
+  "takaragaike": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "gusto", name: "ガスト 京都宝ヶ池店(から好し取扱店)", address: "京都府京都市左京区岩倉南三宅町65", distance: "徒歩圏", m: 750, url: "https://store-info.skylark.co.jp/map/012675/", fac: ["おむつ替え台", "駐車場"] },
+      { chain: "mcdonalds", name: "宝ヶ池店", address: "京都府京都市左京区岩倉南三宅町66", distance: "徒歩圏", m: 780, url: "https://map.mcdonalds.co.jp/map/26033", fac: ["駐車場"] },
+    ],
+  },
+  "sonobe": {
+    verifiedAt: "2026-10-30",
+    stores: [
+    ],
+  },
+  "keisan-kagaku-center": {
+    verifiedAt: "2026-10-30",
+    stores: [
+    ],
+  },
+  "suma-kaihin-koen": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "mcdonalds", name: "2号線須磨店", address: "兵庫県神戸市須磨区鷹取町1-1-6", distance: "徒歩圏", m: 790, url: "https://map.mcdonalds.co.jp/map/28660", fac: ["駐車場"] },
+      { chain: "starbucks", name: "須磨海浜公園店", address: "兵庫県神戸市須磨区須磨浦通1-1-3 須磨海浜公園 松の社ヴィレッジA棟1階", distance: "徒歩圏", m: 440, url: "https://store.starbucks.co.jp/detail-4256/" },
+      { chain: "yoshinoya", name: "吉野家 2号線鷹取店", address: "兵庫県神戸市須磨区鷹取町2丁目1-8", distance: "徒歩圏", m: 730, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_042570", fac: ["お子様メニュー", "駐車場"] },
+    ],
+  },
+  "osakajo-koen": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "cocoichi", name: "OBPツイン21店", address: "大阪府大阪市中央区城見二丁目1番61号 OBPツイン21 3階", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/2631", fac: ["お子さまメニュー"] },
+      { chain: "doutor", name: "ドトールコーヒーショップ 松下IMPビル店", address: "大阪府大阪市中央区 城見 1-3-7 松下IMPビル 1F", distance: "徒歩圏", m: 440, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=2012269" },
+      { chain: "komeda", name: "OBPツイン21店", address: "大阪府大阪市中央区城見2-1-61ツイン21 MIDタワー1階", distance: "徒歩圏", m: 550, url: "https://www.komeda.co.jp/shop/detail.html?id=1138", fac: [] },
+      { chain: "mcdonalds", name: "アイ・エム・ピービル店", address: "大阪府大阪市中央区城見1-3-7松下IMPビル1F", distance: "徒歩圏", m: 530, url: "https://map.mcdonalds.co.jp/map/27545", fac: ["駐車場"] },
+      { chain: "mister-donut", name: "大阪ビジネスパーク ショップ", address: "大阪府大阪市中央区城見1丁目3-7松下IMPビル1F", distance: "徒歩圏", m: 500, url: "https://md.mapion.co.jp/b/misterdonut/info/1567/", fac: ["駐車場"] },
+      { chain: "pronto", name: "PRONTO OBP店", address: "大阪府大阪市中央区城見2丁目1-61 ツイン21 1F", distance: "徒歩圏", m: 510, url: "https://shop.pronto.co.jp/detail/14/" },
+      { chain: "saizeriya", name: "サイゼリヤ OBPツイン21店", address: "大阪府大阪市中央区城見2-1-61ツイン21MIDタワー3F", distance: "徒歩圏", m: 520, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1317", fac: [] },
+      { chain: "starbucks", name: "大阪城公園店", address: "大阪府大阪市中央区大阪城3-1 JO-TERRACE OSAKA", distance: "駅前", m: 250, url: "https://store.starbucks.co.jp/detail-1513/" },
+      { chain: "starbucks", name: "OBP松下IMPビル店", address: "大阪府大阪市中央区城見1-3-7 松下IMPビル", distance: "徒歩圏", m: 520, url: "https://store.starbucks.co.jp/detail-467/" },
+      { chain: "starbucks", name: "大阪城公園森ノ宮店", address: "大阪府大阪市中央区大阪城3-9", distance: "徒歩圏", m: 660, url: "https://store.starbucks.co.jp/detail-1592/" },
+      { chain: "subway", name: "サブウェイ OBPツイン21店", address: "大阪府大阪市中央区城見2-1-61ツイン21 1F", distance: "徒歩圏", m: 520, url: "https://subway.co.jp/shop/5747/", fac: ["キッズセット"] },
+      { chain: "tully-coffee", name: "大阪城公園駅前店", address: "大阪府大阪市中央区 大阪城3-1", distance: "駅前", m: 120, url: "https://shop.tullys.co.jp/detail/1530964" },
+      { chain: "tully-coffee", name: "OBPクリスタルタワー店", address: "大阪府大阪市中央区 城見1-2-27 クリスタルタワー1F", distance: "徒歩圏", m: 670, url: "https://shop.tullys.co.jp/detail/5443108" },
+      { chain: "tully-coffee", name: "大阪城天守閣前店", address: "大阪府大阪市中央区 大阪城1-1 ミライザ大阪城 1F", distance: "徒歩圏", m: 790, url: "https://shop.tullys.co.jp/detail/1530983" },
+      { chain: "veloce", name: "大阪ビジネスパーク駅前店", address: "大阪府大阪市中央区城見1-3-7 松下IMPビル1F", distance: "徒歩圏", m: 500, url: "https://c-united.co.jp/store/detail/000425/" },
+    ],
+    far: [
+      { chain: "freshness-burger", name: "フレッシュネスバーガーもりのみやキューズモール店", address: "大阪府大阪市 中央区森ノ宮中央2-1-70 もりのみやキューズモールBASE2階", distance: "少し歩く", m: 980, url: "https://search.freshnessburger.co.jp/detail/3052444/", fac: ["キッズセット"] },
+      { chain: "kfc", name: "京橋店", address: "大阪府大阪市都島区東野田町2-1-38京阪モール西館", distance: "少し歩く", m: 980, url: "https://search.kfc.co.jp/map/1433", fac: [] },
+      { chain: "komeda", name: "もりのみやキューズモールBASE店", address: "大阪府大阪市中央区森ノ宮中央二丁目1番70号", distance: "少し歩く", m: 880, url: "https://www.komeda.co.jp/shop/detail.html?id=959", fac: ["駐車場"] },
+      { chain: "kura-sushi", name: "京橋店", address: "大阪府大阪市都島区東野田町1-6-22 KiKi京橋4F", distance: "少し歩く", m: 950, url: "https://shop.kurasushi.co.jp/detail/578", fac: ["多機能トイレ対応"] },
+      { chain: "matsuya", name: "松屋 森ノ宮店", address: "大阪府大阪市中央区森ノ宮中央1-2-24", distance: "少し歩く", m: 920, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001862", fac: ["バリアフリー"] },
+      { chain: "matsuya", name: "松屋 京橋片町店", address: "大阪府大阪市都島区片町2-4-8 上室ビル", distance: "少し歩く", m: 920, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000895", fac: [] },
+      { chain: "mcdonalds", name: "京橋店", address: "大阪府大阪市都島区片町2-4-14", distance: "少し歩く", m: 920, url: "https://map.mcdonalds.co.jp/map/27053", fac: [] },
+      { chain: "mos-burger", name: "モスバーガー森ノ宮店", address: "大阪府大阪市中央区森ノ宮中央1丁目16-23", distance: "少し歩く", m: 840, url: "https://www.mos.jp/shop/detail/?shop_cd=01617", fac: [] },
+      { chain: "ohsho", name: "餃子の王将 森ノ宮店", address: "大阪府大阪市東成区中道1-1-37", distance: "少し歩く", m: 870, url: "https://map.ohsho.co.jp/b/ohsho/info/1384/", fac: [] },
+      { chain: "ringer-hut", name: "リンガーハット もりのみやキューズモールBASE店", address: "大阪府大阪市中央区森ノ宮中央2丁目1-70 もりのみやキューズモールBASE2Fフードコート", distance: "少し歩く", m: 970, url: "https://shop.ringerhut.jp/detail/r0825/", fac: ["駐車場"] },
+      { chain: "royal-host", name: "ロイヤルホスト森ノ宮店", address: "大阪府大阪市 東成区 中道1-4-2", distance: "少し歩く", m: 860, url: "https://locations.royalhost.jp/detail/197381/", fac: ["ベビーシート", "駐車場"] },
+      { chain: "saizeriya", name: "サイゼリヤ KiKi京橋", address: "大阪府大阪市都島区東野田町1-6-22 KiKi京橋4F", distance: "少し歩く", m: 950, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1598", fac: [] },
+      { chain: "starbucks", name: "京阪京橋駅片町口店", address: "大阪府大阪市都島区東野田町1-6-1 Kぶらっと", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-1703/" },
+      { chain: "starbucks", name: "京橋 京阪モール店", address: "大阪府大阪市都島区東野田町2-1-38", distance: "少し歩く", m: 990, url: "https://store.starbucks.co.jp/detail-1491/" },
+      { chain: "tully-coffee", name: "京阪京橋駅片町口店", address: "大阪府大阪市都島区 東野田町2丁目1番38号", distance: "少し歩く", m: 920, url: "https://shop.tullys.co.jp/detail/1003273" },
+      { chain: "yayoiken", name: "やよい軒 JR森ノ宮店", address: "大阪府大阪市中央区森ノ宮中央1丁目1-30", distance: "少し歩く", m: 940, url: "https://store.yayoiken.com/b/yayoiken/info/2150/", fac: [] },
+    ],
+  },
+  "kodomonokuni": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "doutor", name: "ドトールコーヒーショップ 三和子供の国店", address: "神奈川県横浜市青葉区 奈良 1-2-1", distance: "駅前", m: 170, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010629" },
+      { chain: "komeda", name: "こどもの国店", address: "神奈川県横浜市青葉区奈良町832", distance: "徒歩圏", m: 540, url: "https://www.komeda.co.jp/shop/detail.html?id=374", fac: ["お子様メニュー", "駐車場"] },
+      { chain: "lotteria", name: "三和こどもの国FS店", address: "神奈川県横浜市青葉区奈良1--2-1", distance: "駅前", m: 250, url: "https://maps.zetteria.jp/shop/shop2407.html" },
+      { chain: "mos-burger", name: "モスバーガー横浜こどもの国店", address: "神奈川県横浜市青葉区奈良5丁目12-13", distance: "徒歩圏", m: 300, url: "https://www.mos.jp/shop/detail/?shop_cd=01730", fac: ["駐車場"] },
+      { chain: "sukiya", name: "すき家 こどもの国店", address: "神奈川県横浜市青葉区奈良5-4-13", distance: "駅前", m: 270, url: "https://maps.sukiya.jp/jp/detail/1124.html", fac: ["お子様メニュー", "駐車場"] },
+    ],
+  },
+  "hakkeijima": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "lotteria", name: "八景島シーサイドオアシスFS店", address: "神奈川県横浜市金沢区八景島E-1-1", distance: "徒歩圏", m: 600, url: "https://maps.zetteria.jp/shop/shop2412.html" },
+      { chain: "yakiniku-king", name: "焼肉きんぐ 金沢八景店", address: "神奈川県横浜市金沢区柴町47-13", distance: "徒歩圏", m: 460, url: "https://www.yakiniku-king.jp/shop/2208/", fac: ["おむつ替えシート", "入り口スロープ"] },
+    ],
+    far: [
+      { chain: "starbucks", name: "横浜海の公園店", address: "神奈川県横浜市金沢区海の公園10", distance: "少し歩く", m: 880, url: "https://store.starbucks.co.jp/detail-4647/" },
+    ],
+  },
+  "katase-enoshima": {
+    verifiedAt: "2026-10-30",
+    stores: [
+      { chain: "denny-s", name: "デニーズ 江ノ島店", address: "神奈川県藤沢市片瀬海岸2-18-14", distance: "駅前", m: 200, url: "https://shop.dennys.jp/map/21836", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
+      { chain: "tully-coffee", name: "江ノ電江ノ島駅店", address: "神奈川県藤沢市 片瀬海岸1丁目8番41号", distance: "徒歩圏", m: 430, url: "https://shop.tullys.co.jp/detail/1000971" },
+    ],
+    far: [
+      { chain: "mos-burger", name: "モスバーガー江ノ島店", address: "神奈川県藤沢市鵠沼海岸1丁目6-18", distance: "少し歩く", m: 960, url: "https://www.mos.jp/shop/detail/?shop_cd=02294", fac: ["駐車場"] },
+      { chain: "yoshinoya", name: "吉野家 134号線江ノ島店", address: "神奈川県鎌倉市腰越3丁目4-3", distance: "少し歩く", m: 810, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_047399", fac: ["お子様メニュー", "駐車場"] },
     ],
   },
 };
