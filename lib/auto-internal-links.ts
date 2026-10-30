@@ -107,6 +107,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'yokozuna-ramen-kodzure-koryaku',
   // 実験22（1歳の献立1週間・2026-10-23）: 処置1本＋ガードレール（勝ち記事・不変）1本
   'youjishoku-1sai-kondate-1week', 'youjishoku-kanryouki-1week-rota',
+  // 実験27（廻転鮨 銀座おのでら・子連れ・2026-10-30登録）
+  'ginza-onodera-kaitensushi-kodzure',
   // 実験24（年齢別お出かけ 東京5本・2026-10-23登録）: 処置5本＋ガードレール2本
   '1sai-odekake-tokyo', '1sai-han-odekake-tokyo', '2sai-odekake-tokyo', '3sai-odekake-tokyo', '4sai-odekake-tokyo',
   'akachan-odekake-3months-1year', 'kosodate-muryou-spots-tokyo',
