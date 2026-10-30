@@ -26,6 +26,11 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 - `list-suburb.txt`: 一律付与を受けていた郊外の主要駅＋四ツ谷。`list-tokyo23.txt`: 東京23区。
 - `cache/` `stores/` `matched.json` は生成物でコミットしない。
 - 800m超〜1kmの店は `far`（1チェーン5店まで・残りは `farMore`）に入る。駅トップの一覧には出さず、駅×条件ページの判定と「少し歩く」枠で使う（2026-10-28・docs/station-cond-rebuild-2026-10.md）。住所の位置が粗い店（`uncertain`）は入れない。各店に直線距離 `m`（10m単位）を持つ。
+- `building-access.json`: 雨の日の建物台帳（2026-10-30 新設・docs/station-cond-rebuild-2026-10.md §5-4）。雨の日候補62駅の実在店が入っている建物100棟について、
+  営業状態・駅直結・授乳室・おむつ替え・キッズスペース・ベビーカー貸出を、運営元の公式の原文（`evidence`）・出典（`source`）・確認日（`checkedAt`）つきで持つ。
+  各項目の `verdict` は「確認済み」「公式で確認できず」「閉館・休館」「休止中」のどれか。**「公式で確認できず」は「ない」ではない**（`value` は null）。
+  `value: "no"` は公式が明示的に「ありません」と書いているものだけ。「直結」と書いてよいのは `directAccess.verdict` が「確認済み」かつ `value` が `yes` の建物だけ。
+  作り方と各棟の判定は `reports/rainy-buildings-2026-10-30/`。まだ画面と判定には使っていない（Phase 3 で使う）。
 - 駅×条件ページの個人店は `node scripts/hotpepper-cond-import.mjs --list=scripts/station-verify/list-tokyo23.txt,scripts/station-verify/list-suburb.txt` で条件ごとに取る（`lib/indie-restaurants/hotpepper-cond.json`・駅から1km以内）。店舗台帳と同じ日に取り直す。
 
 ## 判定の決まり

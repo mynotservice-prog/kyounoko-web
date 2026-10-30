@@ -1,0 +1,2395 @@
+[
+ {
+  "id": "yaechika",
+  "name": "八重洲地下街（ヤエチカ）",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "ヤエチカ店",
+    "address": "東京都中央区八重洲2-1 八重洲地下街南1号",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "hoshino-coffee",
+    "name": "ヤエチカ店",
+    "address": "東京都中央区八重洲2丁目1番 八重洲地下街中1号",
+    "url": "https://www.hoshinocoffee.com/shop.html#yaesuchikagai"
+   },
+   {
+    "chain": "pronto",
+    "name": "PRONTO ヤエチカ東京駅店",
+    "address": "東京都中央区八重洲2丁目1地下街南1号外堀地下2番通り",
+    "url": "https://shop.pronto.co.jp/detail/81/"
+   },
+   {
+    "chain": "sushiro",
+    "name": "ヤエチカ店",
+    "address": "東京都中央区八重洲2-1 八重洲地下街南1号",
+    "url": "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2415"
+   },
+   {
+    "chain": "tenya",
+    "name": "八重洲店",
+    "address": "東京都中央区八重洲2-1 八重洲地下街南1号",
+    "url": "https://www.tenya.co.jp/shop/tokyo/chuo/yaesu.html"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸ヤエチカ店",
+    "address": "東京都中央区八重洲2-1 八重洲地下街B1",
+    "url": "https://wako-group.co.jp/shop/detai/shop_3064/"
+   },
+   {
+    "chain": "yoshinoya",
+    "name": "吉野家 ヤエチカ店",
+    "address": "東京都中央区八重洲2丁目-1八重洲地下街 八重洲地下1番通り",
+    "url": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061467"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ヤエチカ店",
+    "address": "東京都中央区八重洲2-1 八重洲地下街 中3号",
+    "url": "https://store.starbucks.co.jp/detail-3/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ヤエチカ店",
+    "address": "東京都中央区 八重洲2丁目1番八重洲地下街中4号",
+    "url": "https://shop.tullys.co.jp/detail/1000641"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hatchobori",
+   "hibiya",
+   "kayabacho",
+   "mitsukoshimae",
+   "nihombashi",
+   "otemachi",
+   "tokyo",
+   "yurakucho"
+  ]
+ },
+ {
+  "id": "kitte-marunouchi",
+  "name": "KITTE丸の内（JPタワー）",
+  "stores": [
+   {
+    "chain": "pronto",
+    "name": "Tokyo City i CAFE by PRONTO",
+    "address": "東京都千代田区丸の内2丁目7-2 KITTE 地下1階",
+    "url": "https://shop.pronto.co.jp/detail/59/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "&TEA KITTE丸の内店",
+    "address": "東京都千代田区 丸の内2丁目7番2号 JPタワー(KITTE館)1F",
+    "url": "https://shop.tullys.co.jp/detail/1003220"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "nihombashi",
+   "otemachi",
+   "tokyo",
+   "yurakucho"
+  ]
+ },
+ {
+  "id": "gransta-tokyo",
+  "name": "グランスタ東京（JR東京駅構内・改札外）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "グランスタ丸の内店",
+    "address": "東京都千代田区丸の内1-9-1 JR東日本東京駅構内地下1階改札外",
+    "url": "https://store.starbucks.co.jp/detail-1486/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "グランスタ八重洲店",
+    "address": "東京都千代田区丸の内1-9-1 東京駅八重洲中央口B1F グランスタ八重洲",
+    "url": "https://store.starbucks.co.jp/detail-1538/"
+   }
+  ],
+  "stations": [
+   "mitsukoshimae",
+   "tokyo"
+  ]
+ },
+ {
+  "id": "daimaru-tokyo",
+  "name": "大丸東京店",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "大丸東京店",
+    "address": "東京都千代田区 丸の内1-9-1大丸東京店4F",
+    "url": "https://shop.tullys.co.jp/detail/1000688"
+   }
+  ],
+  "stations": [
+   "tokyo"
+  ]
+ },
+ {
+  "id": "biccamera-yurakucho",
+  "name": "ビックカメラ有楽町店",
+  "stores": [
+   {
+    "chain": "sushiro",
+    "name": "有楽町店",
+    "address": "東京都千代田区有楽町一丁目11番1号 ビックカメラ有楽町店内6階",
+    "url": "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2228"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hibiya",
+   "tokyo",
+   "yurakucho"
+  ]
+ },
+ {
+  "id": "lumine-yurakucho",
+  "name": "ルミネ有楽町",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "&TEA ルミネ有楽町店",
+    "address": "東京都千代田区 有楽町2-5-1 ルミネ有楽町8F",
+    "url": "https://shop.tullys.co.jp/detail/1003078"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hibiya",
+   "tokyo",
+   "yurakucho"
+  ]
+ },
+ {
+  "id": "coredo-muromachi-terrace",
+  "name": "コレド室町テラス",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "コレド室町テラス店",
+    "address": "東京都中央区日本橋室町3-2-1 コレド室町テラス 地下1階",
+    "url": "https://store.starbucks.co.jp/detail-1638/"
+   }
+  ],
+  "stations": [
+   "mitsukoshimae",
+   "tokyo"
+  ]
+ },
+ {
+  "id": "coredo-muromachi-2",
+  "name": "コレド室町2",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "コレド室町2店",
+    "address": "東京都中央区日本橋室町2-3-1 コレド室町2 地下1階",
+    "url": "https://store.starbucks.co.jp/detail-4107/"
+   }
+  ],
+  "stations": [
+   "kayabacho",
+   "mitsukoshimae"
+  ]
+ },
+ {
+  "id": "tokyo-midtown-yaesu",
+  "name": "東京ミッドタウン八重洲",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "東京ミッドタウン八重洲店",
+    "address": "東京都中央区八重洲2-2-1 東京ミッドタウン八重洲",
+    "url": "https://store.starbucks.co.jp/detail-4086/"
+   }
+  ],
+  "stations": [
+   "hatchobori",
+   "mitsukoshimae",
+   "otemachi"
+  ]
+ },
+ {
+  "id": "nihombashi-takashimaya-sc",
+  "name": "日本橋高島屋S.C.",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "日本橋高島屋S.C.5階店",
+    "address": "東京都中央区日本橋2-5-1 日本橋高島屋S.C. 新館5階",
+    "url": "https://store.starbucks.co.jp/detail-1544/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "日本橋高島屋S.C.1階店",
+    "address": "東京都中央区日本橋2-5-1 日本橋高島屋S.C. 新館1階",
+    "url": "https://store.starbucks.co.jp/detail-4098/"
+   }
+  ],
+  "stations": [
+   "hatchobori",
+   "kayabacho",
+   "nihombashi",
+   "otemachi"
+  ]
+ },
+ {
+  "id": "tokyo-midtown-hibiya",
+  "name": "東京ミッドタウン日比谷",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "東京ミッドタウン日比谷店",
+    "address": "東京都千代田区有楽町1-1-4 東京ミッドタウン日比谷",
+    "url": "https://store.starbucks.co.jp/detail-1503/"
+   }
+  ],
+  "stations": [
+   "hibiya",
+   "toranomon"
+  ]
+ },
+ {
+  "id": "ginza-mitsukoshi",
+  "name": "銀座三越",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "銀座三越コミュ店",
+    "address": "東京都中央区 銀座4-6-16銀座三越ル・プレイス内3F",
+    "url": "https://shop.tullys.co.jp/detail/5660589"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hibiya"
+  ]
+ },
+ {
+  "id": "echika-fit-ginza",
+  "name": "エチカフィット銀座（東京メトロ銀座駅構内）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "エチカフィット銀座店",
+    "address": "東京都中央区銀座4-1-2 東京メトロ銀座駅構内",
+    "url": "https://store.starbucks.co.jp/detail-1840/"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hibiya",
+   "yurakucho"
+  ]
+ },
+ {
+  "id": "wing-shimbashi",
+  "name": "ウィング新橋（新橋駅東口地下街）",
+  "stores": [
+   {
+    "chain": "excelsior",
+    "name": "エクセルシオール カフェ ウィング新橋店",
+    "address": "東京都港区 新橋 2丁目 ウィング新橋 東口地下街1号",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=5000223"
+   },
+   {
+    "chain": "goemon",
+    "name": "ウイング新橋店",
+    "address": "東京都港区新橋2丁目 東口地下街1号",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   }
+  ],
+  "stations": [
+   "ginza",
+   "hibiya",
+   "kasumigaseki",
+   "toranomon"
+  ]
+ },
+ {
+  "id": "toranomon-hills-business-tower",
+  "name": "虎ノ門ヒルズ ビジネスタワー",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "虎ノ門ヒルズ ビジネスタワー店",
+    "address": "東京都港区虎ノ門1-17-1 虎ノ門ヒルズ ビジネスタワー",
+    "url": "https://store.starbucks.co.jp/detail-1661/"
+   }
+  ],
+  "stations": [
+   "kasumigaseki",
+   "toranomon"
+  ]
+ },
+ {
+  "id": "toranomon-hills-station-tower",
+  "name": "虎ノ門ヒルズ ステーションタワー",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "虎ノ門ヒルズ ステーションタワー店",
+    "address": "東京都港区虎ノ門2-6-3 虎ノ門ヒルズステーションタワー7階",
+    "url": "https://store.starbucks.co.jp/detail-4128/"
+   }
+  ],
+  "stations": [
+   "kamiyacho",
+   "toranomon"
+  ]
+ },
+ {
+  "id": "azabudai-hills",
+  "name": "麻布台ヒルズ",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "麻布台ヒルズ店",
+    "address": "東京都港区麻布台1-3-1 麻布台ヒルズ タワープラザ 地下1階",
+    "url": "https://store.starbucks.co.jp/detail-4201/"
+   }
+  ],
+  "stations": [
+   "kamiyacho"
+  ]
+ },
+ {
+  "id": "ark-hills-south-tower",
+  "name": "アークヒルズ サウスタワー",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "アークヒルズサウスタワー店",
+    "address": "東京都港区六本木1-4-5 アークヒルズサウスタワー",
+    "url": "https://store.starbucks.co.jp/detail-1197/"
+   }
+  ],
+  "stations": [
+   "kamiyacho"
+  ]
+ },
+ {
+  "id": "atago-green-hills",
+  "name": "愛宕グリーンヒルズ MORIタワー",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "愛宕グリーンヒルズ店",
+    "address": "東京都港区愛宕2-5-1 MORI タワー(愛宕グリーンヒルズ)",
+    "url": "https://store.starbucks.co.jp/detail-249/"
+   }
+  ],
+  "stations": [
+   "daimon",
+   "kamiyacho",
+   "toranomon"
+  ]
+ },
+ {
+  "id": "atre-akihabara-1",
+  "name": "アトレ秋葉原1",
+  "stores": [
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺アトレ秋葉原1",
+    "address": "東京都千代田区外神田1-17-6 アトレ秋葉原1-1F",
+    "url": "https://stores.marugame.com/111129"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ秋葉原1店",
+    "address": "東京都千代田区外神田1-17-6 アトレ秋葉原1",
+    "url": "https://store.starbucks.co.jp/detail-956/"
+   }
+  ],
+  "stations": [
+   "akihabara"
+  ]
+ },
+ {
+  "id": "atre-akihabara-2",
+  "name": "アトレ秋葉原2",
+  "stores": [
+   {
+    "chain": "bamiyan",
+    "name": "バーミヤン アトレ秋葉原2店",
+    "address": "東京都千代田区神田花岡町1-9 アトレ秋葉原2店 5階",
+    "url": "https://store-info.skylark.co.jp/map/171626/"
+   },
+   {
+    "chain": "komeda",
+    "name": "アトレ秋葉原店",
+    "address": "東京都千代田区神田花岡町1-9アトレ秋葉原2店2階",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=1086"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ アトレ秋葉原2店",
+    "address": "東京都千代田区神田花岡町1-9アトレ秋葉原2 6F",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=0898"
+   },
+   {
+    "chain": "shabu-yo",
+    "name": "しゃぶ葉 アトレ秋葉原2店",
+    "address": "東京都千代田区神田花岡町1-9 アトレ秋葉原2 4F",
+    "url": "https://store-info.skylark.co.jp/map/198399/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "アトレ秋葉原店",
+    "address": "東京都千代田区 神田花岡町1-9 アトレ秋葉原2F",
+    "url": "https://shop.tullys.co.jp/detail/1000298"
+   }
+  ],
+  "stations": [
+   "akihabara"
+  ]
+ },
+ {
+  "id": "yodobashi-akiba",
+  "name": "ヨドバシAkiba",
+  "stores": [
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸ヨドバシAkiba店",
+    "address": "東京都千代田区神田花岡町1-1 ヨドバシAkiba8F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_1176/"
+   }
+  ],
+  "stations": [
+   "akihabara",
+   "okachimachi",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ]
+ },
+ {
+  "id": "parcoya-ueno",
+  "name": "パルコヤ上野",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "パルコヤ上野店",
+    "address": "東京都台東区上野3-24-6 パルコヤ 5階",
+    "url": "https://store.starbucks.co.jp/detail-1504/"
+   }
+  ],
+  "stations": [
+   "akihabara",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ]
+ },
+ {
+  "id": "atre-ueno",
+  "name": "アトレ上野",
+  "stores": [
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ アトレ上野店",
+    "address": "東京都台東区 上野 7-1-1 アトレ上野",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011047"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ上野店",
+    "address": "東京都台東区上野7-1-1 アトレ上野 1F",
+    "url": "https://store.starbucks.co.jp/detail-338/"
+   }
+  ],
+  "stations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ]
+ },
+ {
+  "id": "ecute-ueno",
+  "name": "エキュート上野（JR上野駅構内・改札外を含む）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "JR上野駅 入谷改札前店",
+    "address": "東京都台東区上野7-1-1 上野駅構内3階入谷口改札外",
+    "url": "https://store.starbucks.co.jp/detail-2221/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "エキュート上野 公園口店",
+    "address": "東京都台東区上野7-1-1 エキュート上野",
+    "url": "https://store.starbucks.co.jp/detail-2209/"
+   }
+  ],
+  "stations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ]
+ },
+ {
+  "id": "ueno-marui",
+  "name": "上野マルイ",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "上野マルイ店",
+    "address": "東京都台東区上野6-15-1 上野マルイ店 B1F",
+    "url": "https://store.starbucks.co.jp/detail-232/"
+   }
+  ],
+  "stations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ]
+ },
+ {
+  "id": "shinagawa-east-one-tower",
+  "name": "品川イーストワンタワー",
+  "stores": [
+   {
+    "chain": "excelsior",
+    "name": "エクセルシオール カフェ 品川イーストワンタワー店",
+    "address": "東京都港区 港南 2-16-1 品川イーストワンタワー 2F",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=5000112"
+   }
+  ],
+  "stations": [
+   "shinagawa"
+  ]
+ },
+ {
+  "id": "newoman-takanawa",
+  "name": "ニュウマン高輪",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "ニュウマン高輪店",
+    "address": "東京都港区高輪2-21-1 ニュウマン高輪 North 5階",
+    "url": "https://store.starbucks.co.jp/detail-4463/"
+   }
+  ],
+  "stations": [
+   "shinagawa"
+  ]
+ },
+ {
+  "id": "tamachi-sunshine-bldg",
+  "name": "サンシャインビル（港区芝5-31-10）",
+  "stores": [
+   {
+    "chain": "ootoya",
+    "name": "大戸屋ごはん処 田町店",
+    "address": "東京都港区 芝5-31-10サンシャインビルB1F",
+    "url": "https://store.ootoya.com/detail/27227/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "SHARE LOUNGE 田町駅前店",
+    "address": "東京都港区芝5-31-10 サンシャインビル 1F",
+    "url": "https://store.starbucks.co.jp/detail-2364/"
+   }
+  ],
+  "stations": [
+   "mita",
+   "tamachi"
+  ]
+ },
+ {
+  "id": "tamachi-tower",
+  "name": "田町タワー（田町タワーモール）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "田町タワー店",
+    "address": "東京都港区芝5-33-11 田町タワーモール1階",
+    "url": "https://store.starbucks.co.jp/detail-4184/"
+   }
+  ],
+  "stations": [
+   "mita",
+   "tamachi"
+  ]
+ },
+ {
+  "id": "seavans",
+  "name": "シーバンス ア・モール",
+  "stores": [
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ シーバンス ア・モール店",
+    "address": "東京都港区 芝浦 1-2-2 シーバンス ア・モール 1F",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1012081"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺芝浦シーバンス",
+    "address": "東京都港区芝浦1-2-2 シーバンス ア・モール2F",
+    "url": "https://stores.marugame.com/110907"
+   }
+  ],
+  "stations": [
+   "daimon",
+   "mita",
+   "tamachi"
+  ]
+ },
+ {
+  "id": "keio-mall",
+  "name": "京王モール（新宿駅西口地下）",
+  "stores": [
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ 新宿京王モール店",
+    "address": "東京都新宿区 西新宿 1-1 京王モール B1F 第D‐4号区画",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1012430"
+   },
+   {
+    "chain": "yoshinoya",
+    "name": "吉野家 新宿京王モール店",
+    "address": "東京都新宿区西新宿1丁目1南口地下街",
+    "url": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061476"
+   }
+  ],
+  "stations": [
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "odakyu-ace",
+  "name": "小田急エース（新宿駅西口地下街）",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "新宿小田急エース店",
+    "address": "東京都新宿区西新宿1丁目西口地下街1号小田急エース南館",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "starbucks",
+    "name": "小田急百貨店SHINJUKU DELISH PARK店",
+    "address": "東京都新宿区西新宿1丁目西口地下街1号 小田急エース北館",
+    "url": "https://store.starbucks.co.jp/detail-4331/"
+   }
+  ],
+  "stations": [
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "lumine-est-shinjuku",
+  "name": "ルミネエスト新宿",
+  "stores": [
+   {
+    "chain": "kamakura-pasta",
+    "name": "Kamakurapasta Fresca ルミネエスト店",
+    "address": "東京都新宿区新宿3-38-1 ルミネエスト新宿7F",
+    "url": "https://www.saint-marc-hd.com/kamakura/shop/905/"
+   },
+   {
+    "chain": "saint-marc-cafe",
+    "name": "サンマルクカフェ ルミネエスト新宿店",
+    "address": "東京都新宿区新宿3-38-1 ルミネエスト新宿7F",
+    "url": "https://www.saint-marc-hd.com/saintmarccafe/shop/844/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ルミネエスト新宿店",
+    "address": "東京都新宿区新宿3-38-1 ルミネエスト 2F",
+    "url": "https://store.starbucks.co.jp/detail-787/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ルミネエスト新宿5F店",
+    "address": "東京都新宿区 新宿3丁目38番1号 ルミネエスト新宿5F",
+    "url": "https://shop.tullys.co.jp/detail/5483050"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ルミネエスト新宿B1店",
+    "address": "東京都新宿区 新宿3丁目38番1号 ルミネエスト新宿B1",
+    "url": "https://shop.tullys.co.jp/detail/5483154"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "lumine-shinjuku",
+  "name": "ルミネ新宿",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "ルミネ新宿店",
+    "address": "東京都新宿区西新宿1-1-5 ルミネ新宿1",
+    "url": "https://store.starbucks.co.jp/detail-1308/"
+   }
+  ],
+  "stations": [
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinsen-shinjuku"
+  ]
+ },
+ {
+  "id": "seibu-shinjuku-ekimae-bldg",
+  "name": "西武新宿駅前ビル",
+  "stores": [
+   {
+    "chain": "onyasai",
+    "name": "しゃぶしゃぶ温野菜 西武新宿駅前店",
+    "address": "東京都新宿区 歌舞伎町1-25-3 西武新宿駅前ビル 2F",
+    "url": "https://map.reins.co.jp/onyasai/detail/5017257356"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "subnade",
+  "name": "新宿サブナード",
+  "stores": [
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸サブナード新宿店",
+    "address": "東京都新宿区歌舞伎町1丁目靖国通り下 新宿サブナード地下街内 B1 201区画",
+    "url": "https://wako-group.co.jp/shop/detai/shop_2076/"
+   },
+   {
+    "chain": "veloce",
+    "name": "新宿サブナード店",
+    "address": "東京都新宿区歌舞伎町一丁目靖国通り下 新宿サブナード地下街内 119区画",
+    "url": "https://c-united.co.jp/store/detail/000229/"
+   },
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ 新宿サブナード店",
+    "address": "東京都新宿区 歌舞伎町 1丁目 サブナード地下街 1丁目",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1010122"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "isetan-kaikan",
+  "name": "伊勢丹会館",
+  "stores": [
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸伊勢丹会館新宿店",
+    "address": "東京都新宿区新宿3-15-17 伊勢丹会館B1",
+    "url": "https://wako-group.co.jp/shop/detai/shop_2171/"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "cocoon-tower",
+  "name": "モード学園コクーンタワー",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "新宿コクーンタワー店",
+    "address": "東京都新宿区 西新宿1-7-3 コクーンタワー1F",
+    "url": "https://shop.tullys.co.jp/detail/1000608"
+   }
+  ],
+  "stations": [
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinsen-shinjuku"
+  ]
+ },
+ {
+  "id": "shinjuku-marui-honkan",
+  "name": "新宿マルイ本館",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "スターバックス リザーブ(R) カフェ 新宿マルイ本館2階店",
+    "address": "東京都新宿区新宿3-30-13 新宿マルイ本館",
+    "url": "https://store.starbucks.co.jp/detail-891/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "新宿マルイ本館8階店",
+    "address": "東京都新宿区新宿3-30-13 新宿マルイ本館",
+    "url": "https://store.starbucks.co.jp/detail-945/"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "shinjuku-sanchome"
+  ]
+ },
+ {
+  "id": "seibu-shinjuku-pepe",
+  "name": "西武新宿ペペ",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "西武新宿PePe店",
+    "address": "東京都新宿区歌舞伎町1-30-1 西武新宿ペペ",
+    "url": "https://store.starbucks.co.jp/detail-478/"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku-nishiguchi",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "tokyu-kabukicho-tower",
+  "name": "東急歌舞伎町タワー",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "東急歌舞伎町タワー店",
+    "address": "東京都新宿区歌舞伎町1-29-1 東急歌舞伎町タワー",
+    "url": "https://store.starbucks.co.jp/detail-1894/"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "tochomae"
+  ]
+ },
+ {
+  "id": "lions-shinjuku-gyoenmae",
+  "name": "ライオンズマンション新宿御苑前（住宅の1階）",
+  "stores": [
+   {
+    "chain": "cocoichi",
+    "name": "東京メトロ新宿御苑前駅店",
+    "address": "東京都新宿区新宿二丁目9番20号ライオンズマンション新宿御苑前1F",
+    "url": "https://tenpo.ichibanya.co.jp/map/1682"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "shinjuku",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku"
+  ]
+ },
+ {
+  "id": "lions-kabukicho",
+  "name": "ライオンズマンション歌舞伎町（住宅）",
+  "stores": [
+   {
+    "chain": "matsuya",
+    "name": "松屋 東新宿店",
+    "address": "東京都新宿区歌舞伎町2-2-21 ライオンズマンション歌舞伎町B102号室",
+    "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000972"
+   }
+  ],
+  "stations": [
+   "higashi-shinjuku",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku"
+  ]
+ },
+ {
+  "id": "kinshicho-termina",
+  "name": "錦糸町テルミナ（錦糸町ステーションビル）",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "錦糸町テルミナ店",
+    "address": "東京都墨田区江東橋3-14-5 錦糸町ステーションビル5F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   }
+  ],
+  "stations": [
+   "kinshicho",
+   "sumiyoshi"
+  ]
+ },
+ {
+  "id": "kinshicho-parco",
+  "name": "錦糸町パルコ",
+  "stores": [
+   {
+    "chain": "kamakura-pasta",
+    "name": "鎌倉パスタ 錦糸町パルコ店",
+    "address": "東京都墨田区江東橋4-27-14 錦糸町パルコ店6F",
+    "url": "https://www.saint-marc-hd.com/kamakura/shop/457/"
+   }
+  ],
+  "stations": [
+   "kameido",
+   "kinshicho",
+   "sumiyoshi"
+  ]
+ },
+ {
+  "id": "marui-kinshicho",
+  "name": "丸井錦糸町店",
+  "stores": [
+   {
+    "chain": "komeda",
+    "name": "錦糸町マルイ店",
+    "address": "東京都墨田区江東橋3-9-10丸井錦糸町店 2階",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=537"
+   },
+   {
+    "chain": "ootoya",
+    "name": "大戸屋ごはん処 丸井錦糸町店",
+    "address": "東京都墨田区 江東橋3-9-10 丸井錦糸町店7F",
+    "url": "https://store.ootoya.com/detail/27257/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "錦糸町 丸井店",
+    "address": "東京都墨田区江東橋3-9-10 丸井 錦糸町店",
+    "url": "https://store.starbucks.co.jp/detail-347/"
+   }
+  ],
+  "stations": [
+   "kinshicho",
+   "sumiyoshi"
+  ]
+ },
+ {
+  "id": "olinas",
+  "name": "オリナスモール",
+  "stores": [
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺オリナスモール",
+    "address": "東京都墨田区太平4-1-2 オリナスモール3F",
+    "url": "https://stores.marugame.com/110089"
+   }
+  ],
+  "stations": [
+   "kinshicho"
+  ]
+ },
+ {
+  "id": "kinshicho-metropia",
+  "name": "錦糸町メトロピア（東京メトロ錦糸町駅構内）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "錦糸町メトロピア店",
+    "address": "東京都墨田区江東橋3-14-6 東京メトロ錦糸町駅構内 錦糸町メトロピア",
+    "url": "https://store.starbucks.co.jp/detail-4389/"
+   }
+  ],
+  "stations": [
+   "kinshicho",
+   "sumiyoshi"
+  ]
+ },
+ {
+  "id": "lions-kinshicho-3",
+  "name": "ライオンズマンション錦糸町第3（住宅の1階）",
+  "stores": [
+   {
+    "chain": "yoshinoya",
+    "name": "吉野家 錦糸町北口店",
+    "address": "東京都墨田区錦糸2丁目4-10ライオンズマンション錦糸町第3",
+    "url": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041466"
+   }
+  ],
+  "stations": [
+   "kinshicho"
+  ]
+ },
+ {
+  "id": "tokyo-solamachi",
+  "name": "東京スカイツリータウン・ソラマチ",
+  "stores": [
+   {
+    "chain": "excelsior",
+    "name": "エクセルシオール カフェ 東京ソラマチ店",
+    "address": "東京都墨田区 押上 1-1-2 東京スカイツリータウン・ソラマチ 1F",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=5000275"
+   },
+   {
+    "chain": "hoshino-coffee",
+    "name": "東京スカイツリータウン・ソラマチ店",
+    "address": "東京都墨田区押上1-1-2 東京スカイツリータウン・ソラマチ4F W402区画",
+    "url": "https://www.hoshinocoffee.com/shop.html#skytree"
+   },
+   {
+    "chain": "mcdonalds",
+    "name": "東京スカイツリータウン・ソラマチ店",
+    "address": "東京都墨田区押上1-1-2東京スカイツリータウン・ソラマチ4F",
+    "url": "https://map.mcdonalds.co.jp/map/13927"
+   },
+   {
+    "chain": "starbucks",
+    "name": "スターバックス リザーブ(R) カフェ 東京スカイツリータウン30F店",
+    "address": "東京都墨田区押上1-1-2 東京スカイツリータウン・ソラマチ30階",
+    "url": "https://store.starbucks.co.jp/detail-4597/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "東京スカイツリータウン・ソラマチ店",
+    "address": "東京都墨田区 押上1-1-2 東京スカイツリータウン・ソラマチ3F",
+    "url": "https://shop.tullys.co.jp/detail/1000672"
+   }
+  ],
+  "stations": [
+   "oshiage",
+   "tokyo-skytree"
+  ]
+ },
+ {
+  "id": "lions-azumabashi",
+  "name": "ライオンズマンション吾妻橋（住宅の1階）",
+  "stores": [
+   {
+    "chain": "matsuya",
+    "name": "松屋 本所吾妻橋店",
+    "address": "東京都墨田区吾妻橋3-7-4 ライオンズマンション吾妻橋",
+    "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000969"
+   }
+  ],
+  "stations": [
+   "oshiage",
+   "tokyo-skytree"
+  ]
+ },
+ {
+  "id": "iy-hikifune",
+  "name": "イトーヨーカドー曳舟店",
+  "stores": [
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ イトーヨーカドー曳舟店",
+    "address": "東京都墨田区 京島 1-2-1 イトーヨーカドー曳舟店 1F",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011770"
+   },
+   {
+    "chain": "hanamaru-udon",
+    "name": "はなまるうどん イトーヨーカドー曳舟店",
+    "address": "東京都墨田区京島1-2-1 イトーヨーカドー曳舟 1Fフードコート",
+    "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2107"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット イトーヨーカドー曳舟店",
+    "address": "東京都墨田区京島1丁目2-1 イトーヨーカドー曳舟1Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0733/"
+   },
+   {
+    "chain": "subway",
+    "name": "サブウェイ イトーヨーカドー曳舟店",
+    "address": "東京都墨田区京島1-2-1イトーヨーカドー曳舟1Fフードコート",
+    "url": "https://subway.co.jp/shop/5862/"
+   }
+  ],
+  "stations": [
+   "oshiage"
+  ]
+ },
+ {
+  "id": "ekia-hikifune",
+  "name": "エキア曳舟（東武曳舟駅）",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "エキア曳舟店",
+    "address": "東京都墨田区東向島2-26-6 エキア曳舟1F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "tenya",
+    "name": "東武曳舟駅店",
+    "address": "東京都墨田区東向島2-26-6 東武曳舟駅構内",
+    "url": "https://www.tenya.co.jp/shop/tokyo/sumida/tobuhifune.html"
+   }
+  ],
+  "stations": [
+   "oshiage"
+  ]
+ },
+ {
+  "id": "east21",
+  "name": "イースト21モール（東陽町）",
+  "stores": [
+   {
+    "chain": "mcdonalds",
+    "name": "イースト21店",
+    "address": "東京都江東区東陽6-3-2イースト21モール1F区画110",
+    "url": "https://map.mcdonalds.co.jp/map/70521"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ 東陽町イースト21店",
+    "address": "東京都江東区東陽6-3-2イースト21モール103",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1137"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "東陽町イースト21店",
+    "address": "東京都江東区 東陽町6-3-2 イースト21モール1F",
+    "url": "https://shop.tullys.co.jp/detail/1000469"
+   }
+  ],
+  "stations": [
+   "toyocho"
+  ]
+ },
+ {
+  "id": "sunamo",
+  "name": "南砂町ショッピングセンターSUNAMO",
+  "stores": [
+   {
+    "chain": "freshness-burger",
+    "name": "フレッシュネスバーガーSUNAMO店",
+    "address": "東京都江東区 新砂3-4-31 南砂町ショッピングセンターSUNAMO4階",
+    "url": "https://search.freshnessburger.co.jp/detail/3032416/"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺SUNAMO",
+    "address": "東京都江東区新砂3-4-31 南砂町ショッピングセンターSUNAMO4F",
+    "url": "https://stores.marugame.com/110238"
+   },
+   {
+    "chain": "ootoya",
+    "name": "大戸屋ごはん処 南砂町SCスナモ店",
+    "address": "東京都江東区 新砂3-4-31南砂町ショッピングセンターSUNAMO 4F",
+    "url": "https://store.ootoya.com/detail/27211/"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット 南砂町ショッピングセンターSUNAMO店",
+    "address": "東京都江東区新砂3丁目4-31 南砂町ショッピングセンターSUNAMO4Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0891/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "南砂町 SUNAMO店",
+    "address": "東京都江東区新砂3-4-31 南砂町ショッピングセンター SUNAMO1階",
+    "url": "https://store.starbucks.co.jp/detail-4315/"
+   },
+   {
+    "chain": "tenya",
+    "name": "南砂町ショッピングセンターSUNAMO店",
+    "address": "東京都江東区新砂3-4-31 南砂町ショッピングセンター内4階",
+    "url": "https://www.tenya.co.jp/shop/tokyo/koutou/kameidohigashi.html"
+   }
+  ],
+  "stations": [
+   "minami-sunamachi"
+  ]
+ },
+ {
+  "id": "aeon-style-minamisuna",
+  "name": "イオンスタイル南砂",
+  "stores": [
+   {
+    "chain": "hanamaru-udon",
+    "name": "はなまるうどん イオンスタイル南砂店",
+    "address": "東京都江東区南砂6-7-15 イオン南砂店 3Fフードコート",
+    "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2136"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ イオンスタイル南砂店",
+    "address": "東京都江東区南砂6-7-15イオンスタイル南砂3F",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1413"
+   },
+   {
+    "chain": "starbucks",
+    "name": "イオン南砂店",
+    "address": "東京都江東区南砂6-7-15 イオン南砂店 1F",
+    "url": "https://store.starbucks.co.jp/detail-185/"
+   }
+  ],
+  "stations": [
+   "minami-sunamachi"
+  ]
+ },
+ {
+  "id": "atre-kameido",
+  "name": "アトレ亀戸",
+  "stores": [
+   {
+    "chain": "kappa-sushi",
+    "name": "アトレ亀戸店",
+    "address": "東京都江東区亀戸5-1-1 アトレ亀戸6階",
+    "url": "https://www.kappasushi.jp/shop/0626"
+   },
+   {
+    "chain": "komeda",
+    "name": "アトレ亀戸店",
+    "address": "東京都江東区亀戸5-1-1アトレ亀戸2F",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=778"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺アトレ亀戸",
+    "address": "東京都江東区亀戸5丁目1-1 アトレ亀戸1F",
+    "url": "https://stores.marugame.com/111446"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ亀戸店",
+    "address": "東京都江東区亀戸5-1-1 アトレ亀戸 1F",
+    "url": "https://store.starbucks.co.jp/detail-175/"
+   }
+  ],
+  "stations": [
+   "kameido"
+  ]
+ },
+ {
+  "id": "lalaport-toyosu",
+  "name": "アーバンドック ららぽーと豊洲",
+  "stores": [
+   {
+    "chain": "freshness-burger",
+    "name": "フレッシュネスバーガーららぽーと豊洲店",
+    "address": "東京都江東区 豊洲2-4-9 アーバンドックららぽーと豊洲1階",
+    "url": "https://search.freshnessburger.co.jp/detail/3031415/"
+   },
+   {
+    "chain": "saint-marc-cafe",
+    "name": "サンマルクカフェ ららぽーと豊洲店",
+    "address": "東京都江東区豊洲2-4-9 アーバンドッグららぽーと豊洲2F",
+    "url": "https://www.saint-marc-hd.com/saintmarccafe/shop/549/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アーバンドック ららぽーと豊洲3 地下1階店",
+    "address": "東京都江東区豊洲2-2-1 ららぽーと豊洲3 地下1階",
+    "url": "https://store.starbucks.co.jp/detail-1743/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ららぽーと豊洲 サウスポート2階店",
+    "address": "東京都江東区豊洲2-4-9 ららぽーと豊洲",
+    "url": "https://store.starbucks.co.jp/detail-699/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ららぽーと豊洲 シーサイドデッキ店",
+    "address": "東京都江東区豊洲2-4-9 アーバンドック ららぽーと豊洲",
+    "url": "https://store.starbucks.co.jp/detail-1317/"
+   }
+  ],
+  "stations": [
+   "toyosu"
+  ]
+ },
+ {
+  "id": "aeon-shinonome",
+  "name": "イオン東雲",
+  "stores": [
+   {
+    "chain": "hanamaru-udon",
+    "name": "はなまるうどん イオン東雲店",
+    "address": "東京都江東区東雲1-9-10 イオン東雲 2Fフードコート",
+    "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2165"
+   },
+   {
+    "chain": "komeda",
+    "name": "イオン東雲店",
+    "address": "東京都江東区東雲1-9-10イオン東雲店内",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=499"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット イオン東雲店",
+    "address": "東京都江東区東雲1丁目9-10 イオン東雲2Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0567/"
+   },
+   {
+    "chain": "sukiya",
+    "name": "すき家 イオン東雲店",
+    "address": "東京都江東区東雲1-9-10 イオン東雲店2Fフードコート内",
+    "url": "https://maps.sukiya.jp/jp/detail/1928.html"
+   }
+  ],
+  "stations": [
+   "toyosu"
+  ]
+ },
+ {
+  "id": "diver-city-tokyo",
+  "name": "ダイバーシティ東京 プラザ",
+  "stores": [
+   {
+    "chain": "excelsior",
+    "name": "エクセルシオール カフェ ダイバーシティ東京プラザ店",
+    "address": "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285"
+   },
+   {
+    "chain": "hanamaru-udon",
+    "name": "はなまるうどん ダイバーシティ東京店",
+    "address": "東京都江東区青海1-1-10 ダイバーシティー東京 フードコート",
+    "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1147"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ダイバーシティ東京 プラザ店",
+    "address": "東京都江東区青海1-1-10 ダイバーシティ東京 プラザ 2階",
+    "url": "https://store.starbucks.co.jp/detail-1070/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ダイバーシティ東京プラザ店",
+    "address": "東京都江東区 青海1丁目1番地10号 ダイバーシティ東京プラザ3F",
+    "url": "https://shop.tullys.co.jp/detail/1000665"
+   }
+  ],
+  "stations": [
+   "tokyo-teleport"
+  ]
+ },
+ {
+  "id": "decks-tokyo-beach",
+  "name": "デックス東京ビーチ",
+  "stores": [
+   {
+    "chain": "jonathan",
+    "name": "ジョナサン 台場デックス東京ビーチ店",
+    "address": "東京都港区台場1丁目6-1 デックス東京ビーチ シーサイドモール 1-08a",
+    "url": "https://store-info.skylark.co.jp/map/020496/"
+   }
+  ],
+  "stations": [
+   "tokyo-teleport"
+  ]
+ },
+ {
+  "id": "atre-meguro",
+  "name": "アトレ目黒（目黒1・目黒2）",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "アトレ目黒1店",
+    "address": "東京都品川区上大崎2-16-9 アトレ目黒1 1F",
+    "url": "https://store.starbucks.co.jp/detail-4309/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "アトレ目黒店",
+    "address": "東京都品川区 上大崎3-1-1 アトレ目黒2F",
+    "url": "https://shop.tullys.co.jp/detail/1000051"
+   }
+  ],
+  "stations": [
+   "meguro"
+  ]
+ },
+ {
+  "id": "shin-meguro-tokyu-bldg",
+  "name": "新目黒東急ビル",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "目黒店",
+    "address": "東京都品川区上大崎2-25-2 新目黒東急ビル",
+    "url": "https://store.starbucks.co.jp/detail-1130/"
+   }
+  ],
+  "stations": [
+   "meguro"
+  ]
+ },
+ {
+  "id": "iy-oimachi",
+  "name": "イトーヨーカドー大井町店",
+  "stores": [
+   {
+    "chain": "kfc",
+    "name": "イトーヨーカドー大井町店",
+    "address": "東京都品川区大井1-3-6 イトーヨーカドー大井町",
+    "url": "https://search.kfc.co.jp/map/3401"
+   },
+   {
+    "chain": "kura-sushi",
+    "name": "イトーヨーカドー大井町店",
+    "address": "東京都品川区大井1-3-6 イトーヨーカドー大井町店7F",
+    "url": "https://shop.kurasushi.co.jp/detail/514"
+   }
+  ],
+  "stations": [
+   "oimachi"
+  ]
+ },
+ {
+  "id": "atre-oimachi",
+  "name": "アトレ大井町",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "アトレ大井町店",
+    "address": "東京都品川区 大井1丁目2-1 アトレ大井町6F",
+    "url": "https://shop.tullys.co.jp/detail/1003294"
+   }
+  ],
+  "stations": [
+   "oimachi"
+  ]
+ },
+ {
+  "id": "oimachi-tracks",
+  "name": "OIMACHI TRACKS",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "&TEA 大井町トラックス店",
+    "address": "東京都品川区 広町2-1-17 OIMACHI TRACKS「21701TULLYSCOFFEE&TEA」",
+    "url": "https://shop.tullys.co.jp/detail/1003334"
+   }
+  ],
+  "stations": [
+   "oimachi"
+  ]
+ },
+ {
+  "id": "nishikoyama-ekibiru",
+  "name": "西小山駅ビル",
+  "stores": [
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ 西小山駅ビル店",
+    "address": "東京都品川区小山6-3-11西小山駅ビル3F",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=0848"
+   }
+  ],
+  "stations": [
+   "musashi-koyama"
+  ]
+ },
+ {
+  "id": "park-city-musashikoyama-the-mall",
+  "name": "パークシティ武蔵小山 ザ モール",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "武蔵小山店",
+    "address": "東京都品川区小山3-15-1 パークシティ武蔵小山ザ モール",
+    "url": "https://store.starbucks.co.jp/detail-4239/"
+   }
+  ],
+  "stations": [
+   "musashi-koyama"
+  ]
+ },
+ {
+  "id": "musashikoyama-ekibiru",
+  "name": "武蔵小山駅ビル（品川区小山3-4-8）",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "武蔵小山駅店",
+    "address": "東京都品川区 小山3丁目4-8 駅ビル1F",
+    "url": "https://shop.tullys.co.jp/detail/1000585"
+   }
+  ],
+  "stations": [
+   "musashi-koyama"
+  ]
+ },
+ {
+  "id": "iy-omori",
+  "name": "イトーヨーカドー大森店",
+  "stores": [
+   {
+    "chain": "komeda",
+    "name": "大森イトーヨーカドー店",
+    "address": "東京都大田区大森北2-13-1イトーヨーカドー1F",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=851"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット イトーヨーカドー大森店",
+    "address": "東京都大田区大森北2丁目13-1 イトーヨーカドー大森3Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0958/"
+   }
+  ],
+  "stations": [
+   "omori"
+  ]
+ },
+ {
+  "id": "atre-omori",
+  "name": "アトレ大森",
+  "stores": [
+   {
+    "chain": "kura-sushi",
+    "name": "プラス型店舗 アトレ大森",
+    "address": "東京都大田区大森北1-6-16 アトレ大森5F",
+    "url": "https://shop.kurasushi.co.jp/detail/604"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ大森店(5F)",
+    "address": "東京都大田区大森北1-6-16 アトレ大森 5F",
+    "url": "https://store.starbucks.co.jp/detail-4141/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ大森店(2F)",
+    "address": "東京都大田区大森北1-6-16 アトレ大森 2F",
+    "url": "https://store.starbucks.co.jp/detail-901/"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸アトレ大森店",
+    "address": "東京都大田区大森北1-6-16 アトレ大森5F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_3060/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "アトレ大森店",
+    "address": "東京都大田区 大森北1-6-16 アトレ大森1F",
+    "url": "https://shop.tullys.co.jp/detail/1000679"
+   },
+   {
+    "chain": "yakiniku-king",
+    "name": "焼肉きんぐ アトレ大森店",
+    "address": "東京都大田区大森北1-6-16 アトレ大森2 4F",
+    "url": "https://www.yakiniku-king.jp/shop/2367/"
+   }
+  ],
+  "stations": [
+   "omori"
+  ]
+ },
+ {
+  "id": "granduo-kamata",
+  "name": "グランデュオ蒲田",
+  "stores": [
+   {
+    "chain": "kamakura-pasta",
+    "name": "鎌倉パスタ グランデュオ蒲田店",
+    "address": "東京都大田区西蒲田7-68-1 グランデュオ蒲田西館7F",
+    "url": "https://www.saint-marc-hd.com/kamakura/shop/466/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "グランデュオ蒲田店",
+    "address": "東京都大田区西蒲田7-68-1 グランデュオ蒲田 西館",
+    "url": "https://store.starbucks.co.jp/detail-618/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "グランデュオ蒲田店",
+    "address": "東京都大田区 西蒲田7-68-1 グランデュオ蒲田西館M2階",
+    "url": "https://shop.tullys.co.jp/detail/1003135"
+   }
+  ],
+  "stations": [
+   "kamata",
+   "keikyu-kamata"
+  ]
+ },
+ {
+  "id": "tokyu-plaza-kamata",
+  "name": "東急プラザ蒲田",
+  "stores": [
+   {
+    "chain": "tully-coffee",
+    "name": "東急プラザ蒲田店",
+    "address": "東京都大田区 西蒲田7-69-1 東急プラザ蒲田3F",
+    "url": "https://shop.tullys.co.jp/detail/1710809"
+   }
+  ],
+  "stations": [
+   "kamata",
+   "keikyu-kamata"
+  ]
+ },
+ {
+  "id": "futako-tamagawa-rise",
+  "name": "二子玉川ライズ・ショッピングセンター",
+  "stores": [
+   {
+    "chain": "mcdonalds",
+    "name": "二子玉川ライズ店",
+    "address": "東京都世田谷区玉川2-21-1ライズショッピングセンター内",
+    "url": "https://map.mcdonalds.co.jp/map/13920"
+   },
+   {
+    "chain": "mister-donut",
+    "name": "二子玉川ライズオークモール ショップ",
+    "address": "東京都世田谷区玉川2丁目21-1 オークモール102",
+    "url": "https://md.mapion.co.jp/b/misterdonut/info/2075/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "二子玉川ライズ ドッグウッドプラザ店",
+    "address": "東京都世田谷区玉川2-23-1 二子玉川ライズショッピングセンター ドッグウッドプラザ",
+    "url": "https://store.starbucks.co.jp/detail-965/"
+   }
+  ],
+  "stations": [
+   "futako-tamagawa"
+  ]
+ },
+ {
+  "id": "tamagawa-takashimaya-sc",
+  "name": "玉川髙島屋S・C",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "玉川高島屋S・C店",
+    "address": "東京都世田谷区玉川3-17-1 玉川高島屋S・C (南館7階)",
+    "url": "https://store.starbucks.co.jp/detail-461/"
+   }
+  ],
+  "stations": [
+   "futako-tamagawa"
+  ]
+ },
+ {
+  "id": "atre-ebisu",
+  "name": "アトレ恵比寿",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "アトレ恵比寿店(2F)",
+    "address": "東京都渋谷区恵比寿南1-5-5 アトレ恵比寿",
+    "url": "https://store.starbucks.co.jp/detail-552/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アトレ恵比寿店(5F)",
+    "address": "東京都渋谷区恵比寿南1-5-5 アトレ恵比寿店 5階",
+    "url": "https://store.starbucks.co.jp/detail-1274/"
+   }
+  ],
+  "stations": [
+   "ebisu"
+  ]
+ },
+ {
+  "id": "beans-asagaya",
+  "name": "ビーンズ阿佐ヶ谷（てくて・ぷらす）",
+  "stores": [
+   {
+    "chain": "hidakaya",
+    "name": "日高屋 ビーンズ阿佐ヶ谷てくて店",
+    "address": "東京都杉並区阿佐谷南3丁目58-1 阿佐谷ショッピングセンターてくて",
+    "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/580.html"
+   },
+   {
+    "chain": "komeda",
+    "name": "ビーンズ阿佐ヶ谷店",
+    "address": "東京都杉並区阿佐谷南3-36-1ビーンズぷらす2階",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=1025"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ビーンズ阿佐ヶ谷駅前店",
+    "address": "東京都杉並区阿佐谷南3-58-1 ビーンズ阿佐ヶ谷ぷらす",
+    "url": "https://store.starbucks.co.jp/detail-443/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ビーンズ阿佐ヶ谷てくて店",
+    "address": "東京都杉並区阿佐谷南2-42 ビーンズ阿佐ヶ谷てくて",
+    "url": "https://store.starbucks.co.jp/detail-1526/"
+   }
+  ],
+  "stations": [
+   "asagaya"
+  ]
+ },
+ {
+  "id": "ikebukuro-parco",
+  "name": "池袋パルコ",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "池袋パルコ店",
+    "address": "東京都豊島区南池袋1-28-2池袋パルコ 7F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸パルコ池袋店",
+    "address": "東京都豊島区南池袋1-28-2 池袋パルコ8F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_1122/"
+   }
+  ],
+  "stations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "echika-ikebukuro",
+  "name": "Echika池袋（東京メトロ池袋駅構内）",
+  "stores": [
+   {
+    "chain": "hanamaru-udon",
+    "name": "はなまるうどん Echika池袋店",
+    "address": "東京都豊島区西池袋3-28-14 東京メトロ池袋駅構内",
+    "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1181"
+   }
+  ],
+  "stations": [
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "sunshine-city",
+  "name": "サンシャインシティ（アルパ・アルタ・ワールドインポートマートビル）",
+  "stores": [
+   {
+    "chain": "komeda",
+    "name": "サンシャインシティアルパ店",
+    "address": "東京都豊島区東池袋3-1-1サンシャインシティ専門店街アルパ地下1階",
+    "url": "https://www.komeda.co.jp/shop/detail.html?id=1192"
+   },
+   {
+    "chain": "subway",
+    "name": "サブウェイ 池袋サンシャインシティアルパ店",
+    "address": "東京都豊島区東池袋三丁目1番1号サンシャインシティ ALPA1階",
+    "url": "https://subway.co.jp/shop/5921/"
+   },
+   {
+    "chain": "tenya",
+    "name": "サンシャイン店",
+    "address": "東京都豊島区東池袋3-1-1 サンシャインアルパB1",
+    "url": "https://www.tenya.co.jp/shop/tokyo/toshima/sunshine.html"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸サンシャインシティ池袋店",
+    "address": "東京都豊島区東池袋3-1-1 池袋サンシャインシティアルパ3F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_1006/"
+   },
+   {
+    "chain": "goemon",
+    "name": "池袋サンシャインシティ店",
+    "address": "東京都豊島区東池袋3-1-3 サンシャイン三越 B1",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺サンシャインシティアルタ",
+    "address": "東京都豊島区東池袋3-1-3 サンシャインシティアルタB1F",
+    "url": "https://stores.marugame.com/110070"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "サンシャイン水族館店",
+    "address": "東京都豊島区東池袋3丁目1-1 サンシャインシティ ワールドインポートマートビル 屋上",
+    "url": "https://shop.tullys.co.jp/detail/1003061"
+   },
+   {
+    "chain": "starbucks",
+    "name": "池袋サンシャインシティ アルパ 1階店",
+    "address": "東京都豊島区東池袋3-1-2 サンシャインシティ アルパ 1階",
+    "url": "https://store.starbucks.co.jp/detail-4517/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "スターバックス ティー&カフェ 池袋サンシャインシティ アルパ2階店",
+    "address": "東京都豊島区東池袋3-1-1 サンシャインシティ アルパ 2階",
+    "url": "https://store.starbucks.co.jp/detail-327/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "池袋サンシャインシティアルパ店",
+    "address": "東京都豊島区 東池袋3-1-2サンシャインシティアルパ内1F",
+    "url": "https://shop.tullys.co.jp/detail/1000597"
+   }
+  ],
+  "stations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "tobu-ikebukuro",
+  "name": "東武百貨店 池袋店",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "東武池袋店",
+    "address": "東京都豊島区西池袋1-1-25 東武百貨店 池袋店",
+    "url": "https://store.starbucks.co.jp/detail-1079/"
+   }
+  ],
+  "stations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "lumine-ikebukuro",
+  "name": "ルミネ池袋",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "ルミネ池袋2階店",
+    "address": "東京都豊島区西池袋1-11-1 ルミネ池袋",
+    "url": "https://store.starbucks.co.jp/detail-1065/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "with U ルミネ池袋店",
+    "address": "東京都豊島区 西池袋1-11-1 ルミネ池袋6F",
+    "url": "https://shop.tullys.co.jp/detail/1000852"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ルミネ池袋店",
+    "address": "東京都豊島区 西池袋1-11-1 ルミネ池袋1F",
+    "url": "https://shop.tullys.co.jp/detail/1000955"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ルミネ池袋9階店",
+    "address": "東京都豊島区西池袋1-11-1 ルミネ池袋",
+    "url": "https://store.starbucks.co.jp/detail-1727/"
+   }
+  ],
+  "stations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "humax-ikebukuro-sunshine60",
+  "name": "ヒューマックスパビリオン池袋サンシャイン60通り",
+  "stores": [
+   {
+    "chain": "sushiro",
+    "name": "池袋サンシャイン60通り店",
+    "address": "東京都豊島区東池袋1-22-10 ヒューマックスパビリオン 池袋サンシャイン60通り B2階",
+    "url": "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2777"
+   }
+  ],
+  "stations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ]
+ },
+ {
+  "id": "beans-akabane",
+  "name": "ビーンズ赤羽",
+  "stores": [
+   {
+    "chain": "doutor",
+    "name": "ドトールコーヒーショップ ビーンズ赤羽店",
+    "address": "東京都北区 赤羽 1-1-1 ビーンズ赤羽",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011001"
+   },
+   {
+    "chain": "kfc",
+    "name": "ビーンズ赤羽店",
+    "address": "東京都北区赤羽1-1-1 ビーンズ2内",
+    "url": "https://search.kfc.co.jp/map/4067"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ビーンズ赤羽店",
+    "address": "東京都北区赤羽1-1-1 ビーンズ赤羽",
+    "url": "https://store.starbucks.co.jp/detail-118/"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸ビーンズ赤羽店",
+    "address": "東京都北区赤羽1-1-1 ビーンズ赤羽1F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_2090/"
+   }
+  ],
+  "stations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ]
+ },
+ {
+  "id": "iy-akabane",
+  "name": "イトーヨーカドー赤羽店",
+  "stores": [
+   {
+    "chain": "gusto",
+    "name": "ガスト イトーヨーカドー赤羽店(から好し取扱店)",
+    "address": "東京都北区赤羽西1丁目7-1 イトーヨーカドー赤羽店6F",
+    "url": "https://store-info.skylark.co.jp/map/017731/"
+   }
+  ],
+  "stations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ]
+ },
+ {
+  "id": "akabane-vivio",
+  "name": "赤羽ビビオ（パルロード2）",
+  "stores": [
+   {
+    "chain": "hoshino-coffee",
+    "name": "赤羽ビビオ店",
+    "address": "東京都北区赤羽西1-6-1 パルロード2 ショッピングセンタービビオ",
+    "url": "https://www.hoshinocoffee.com/shop.html#akabanebibio"
+   }
+  ],
+  "stations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ]
+ },
+ {
+  "id": "aeon-itabashi",
+  "name": "イオン板橋ショッピングセンター",
+  "stores": [
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺イオン板橋",
+    "address": "東京都板橋区徳丸2-6-1 イオン板橋3F",
+    "url": "https://stores.marugame.com/110807"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット イオン板橋ショッピングセンター店",
+    "address": "東京都板橋区徳丸2丁目6-1 イオン板橋ショッピングセンター3Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0988/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "イオン板橋店",
+    "address": "東京都板橋区徳丸2-6-1 イオン板橋",
+    "url": "https://store.starbucks.co.jp/detail-135/"
+   },
+   {
+    "chain": "subway",
+    "name": "サブウェイ イオン板橋店",
+    "address": "東京都板橋区徳丸2-6-1イオン板橋ショッピングセンター5F",
+    "url": "https://subway.co.jp/shop/5740/"
+   },
+   {
+    "chain": "yakiniku-king",
+    "name": "焼肉きんぐ イオン板橋店",
+    "address": "東京都板橋区徳丸2-6-1 イオン板橋ショッピングセンター 5F",
+    "url": "https://www.yakiniku-king.jp/shop/2389/"
+   }
+  ],
+  "stations": [
+   "tobu-nerima"
+  ]
+ },
+ {
+  "id": "lions-sakuradai",
+  "name": "ライオンズマンション桜台駅前（住宅の1階）",
+  "stores": [
+   {
+    "chain": "mos-burger",
+    "name": "モスバーガー桜台千川通り店",
+    "address": "東京都練馬区桜台1丁目4-11 ライオンズマンション桜台駅前A棟101区画",
+    "url": "https://www.mos.jp/shop/detail/?shop_cd=08223"
+   }
+  ],
+  "stations": [
+   "nerima"
+  ]
+ },
+ {
+  "id": "emio-nerima",
+  "name": "エミオ練馬",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "エミオ練馬店",
+    "address": "東京都練馬区練馬1-3-5 エミオ練馬",
+    "url": "https://store.starbucks.co.jp/detail-1688/"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸エミオ練馬店",
+    "address": "東京都練馬区練馬1-3-5 エミオ練馬2F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_3113/"
+   }
+  ],
+  "stations": [
+   "nerima"
+  ]
+ },
+ {
+  "id": "gran-emio-oizumigakuen",
+  "name": "グランエミオ大泉学園",
+  "stores": [
+   {
+    "chain": "freshness-burger",
+    "name": "フレッシュネスバーガーグランエミオ大泉学園店",
+    "address": "東京都練馬区 東大泉1-28-1 グランエミオ大泉学園1階",
+    "url": "https://search.freshnessburger.co.jp/detail/3031440/"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット グランエミオ大泉学園店",
+    "address": "東京都練馬区東大泉1丁目28-1 グランエミオ大泉学園3F",
+    "url": "https://shop.ringerhut.jp/detail/r0824/"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ グランエミオ大泉学園",
+    "address": "東京都練馬区東大泉1-28-1 グランエミオ大泉学園3F",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1631"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "グランエミオ大泉学園店",
+    "address": "東京都練馬区 東大泉一丁目28-1 グランエミオ大泉学園2F",
+    "url": "https://shop.tullys.co.jp/detail/1000835"
+   }
+  ],
+  "stations": [
+   "oizumi-gakuen"
+  ]
+ },
+ {
+  "id": "lumine-kitasenju",
+  "name": "ルミネ北千住",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "北千住ルミネ店",
+    "address": "東京都足立区千住旭町42-2 北千住ルミネ8F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "starbucks",
+    "name": "ルミネ北千住店",
+    "address": "東京都足立区千住旭町42-2 ルミネ北千住",
+    "url": "https://store.starbucks.co.jp/detail-850/"
+   },
+   {
+    "chain": "tully-coffee",
+    "name": "ルミネ北千住店",
+    "address": "東京都足立区 千住旭町42-2 ルミネ北千住6F",
+    "url": "https://shop.tullys.co.jp/detail/1000952"
+   }
+  ],
+  "stations": [
+   "kita-senju"
+  ]
+ },
+ {
+  "id": "kitasenju-marui",
+  "name": "北千住マルイ",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "北千住マルイ店",
+    "address": "東京都足立区千住3-92 北千住マルイ",
+    "url": "https://store.starbucks.co.jp/detail-1221/"
+   }
+  ],
+  "stations": [
+   "kita-senju"
+  ]
+ },
+ {
+  "id": "umejima-near-station-bldg",
+  "name": "梅島ニアステーションビル",
+  "stores": [
+   {
+    "chain": "cocoichi",
+    "name": "東武梅島駅前店",
+    "address": "東京都足立区梅島三丁目1-6梅島ニアステーションビル1階",
+    "url": "https://tenpo.ichibanya.co.jp/map/2216"
+   }
+  ],
+  "stations": [
+   "nishiarai"
+  ]
+ },
+ {
+  "id": "ario-nishiarai",
+  "name": "アリオ西新井",
+  "stores": [
+   {
+    "chain": "kamakura-pasta",
+    "name": "鎌倉パスタ アリオ西新井店",
+    "address": "東京都足立区西新井栄町1-20-1 アリオ西新井店3F",
+    "url": "https://www.saint-marc-hd.com/kamakura/shop/375/"
+   },
+   {
+    "chain": "katsuya",
+    "name": "かつや アリオ西新井店",
+    "address": "東京都足立区西新井栄町20-1 アリオ西新井1F",
+    "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=895"
+   },
+   {
+    "chain": "kfc",
+    "name": "アリオ西新井店",
+    "address": "東京都足立区西新井栄町1-20-1 アリオモール内1F",
+    "url": "https://search.kfc.co.jp/map/7220"
+   },
+   {
+    "chain": "mos-burger",
+    "name": "モスバーガーアリオ西新井店",
+    "address": "東京都足立区西新井栄町1丁目20-1 アリオ西新井1階",
+    "url": "https://www.mos.jp/shop/detail/?shop_cd=08178"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット アリオ西新井店",
+    "address": "東京都足立区西新井栄町1丁目20-1 アリオ西新井1Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0742/"
+   },
+   {
+    "chain": "saint-marc-cafe",
+    "name": "サンマルクカフェ アリオ西新井SC店",
+    "address": "東京都足立区西新井栄町1-20-1 アリオ西新井SC2F",
+    "url": "https://www.saint-marc-hd.com/saintmarccafe/shop/577/"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アリオ西新井店",
+    "address": "東京都足立区西新井栄町1-20-1 アリオ西新井",
+    "url": "https://store.starbucks.co.jp/detail-1851/"
+   },
+   {
+    "chain": "subway",
+    "name": "サブウェイ アリオ西新井店",
+    "address": "東京都足立区西新井栄町1丁目20番1号アリオ西新井 1階",
+    "url": "https://subway.co.jp/shop/5871/"
+   },
+   {
+    "chain": "goemon",
+    "name": "亀有店",
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有アリオモール1F アリオモール内店舗番号1330",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   }
+  ],
+  "stations": [
+   "kameari",
+   "nishiarai"
+  ]
+ },
+ {
+  "id": "ario-kameari",
+  "name": "アリオ亀有",
+  "stores": [
+   {
+    "chain": "hoshino-coffee",
+    "name": "アリオ亀有店",
+    "address": "東京都葛飾区亀有3-49-3アリオ亀有2階",
+    "url": "https://www.hoshinocoffee.com/shop.html#ariokameari"
+   },
+   {
+    "chain": "katsuya",
+    "name": "かつや アリオ亀有店",
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有1階フードコート",
+    "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1006"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺アリオ亀有",
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有1F",
+    "url": "https://stores.marugame.com/110084"
+   },
+   {
+    "chain": "ringer-hut",
+    "name": "リンガーハット アリオ亀有店",
+    "address": "東京都葛飾区亀有3丁目49-3 アリオ亀有1Fフードコート",
+    "url": "https://shop.ringerhut.jp/detail/r0611/"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ アリオ亀有",
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有1F",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1534"
+   },
+   {
+    "chain": "starbucks",
+    "name": "アリオ亀有店",
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有",
+    "url": "https://store.starbucks.co.jp/detail-656/"
+   },
+   {
+    "chain": "subway",
+    "name": "サブウェイ アリオ亀有店",
+    "address": "東京都葛飾区亀有3-49-3アリオ亀有1Fフードコート",
+    "url": "https://subway.co.jp/shop/5826/"
+   }
+  ],
+  "stations": [
+   "kameari"
+  ]
+ },
+ {
+  "id": "beans-kameari",
+  "name": "ビーンズ亀有",
+  "stores": [
+   {
+    "chain": "starbucks",
+    "name": "ビーンズ亀有店",
+    "address": "東京都葛飾区亀有3-25-1 ビーンズ亀有 1階",
+    "url": "https://store.starbucks.co.jp/detail-4465/"
+   },
+   {
+    "chain": "tenya",
+    "name": "ビーンズ亀有店",
+    "address": "東京都葛飾区亀有3-25-1 ビーンズ亀有",
+    "url": "https://www.tenya.co.jp/shop/tokyo/katsushika/kameari.html"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸ビーンズ亀有店",
+    "address": "東京都葛飾区亀有3-25-1 ビーンズ亀有1F",
+    "url": "https://wako-group.co.jp/shop/detai/shop_1074/"
+   }
+  ],
+  "stations": [
+   "kameari"
+  ]
+ },
+ {
+  "id": "tokyu-store-kanamachi",
+  "name": "東急ストア金町店",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "金町店",
+    "address": "東京都葛飾区東金町1-36-1 東急ストア金町店1F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   }
+  ],
+  "stations": [
+   "kanamachi"
+  ]
+ },
+ {
+  "id": "city-terrace-mall-kanamachi",
+  "name": "シティテラスモール金町",
+  "stores": [
+   {
+    "chain": "kura-sushi",
+    "name": "葛飾金町店",
+    "address": "東京都葛飾区新宿6-2-15 シティテラスモール金町 1F",
+    "url": "https://shop.kurasushi.co.jp/detail/545"
+   },
+   {
+    "chain": "saizeriya",
+    "name": "サイゼリヤ シティテラスモール金町店",
+    "address": "東京都葛飾区新宿6-2-15 シティテラスモール金町1階",
+    "url": "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1476"
+   }
+  ],
+  "stations": [
+   "kanamachi"
+  ]
+ },
+ {
+  "id": "shapo-koiwa",
+  "name": "シャポー小岩",
+  "stores": [
+   {
+    "chain": "goemon",
+    "name": "シャポー小岩店",
+    "address": "東京都江戸川区南小岩7-24-15 シャポー小岩1F",
+    "url": "https://www.yomenya-goemon.com/store/kanto/#tokyo"
+   },
+   {
+    "chain": "marugame",
+    "name": "丸亀製麺シャポー小岩",
+    "address": "東京都江戸川区南小岩7-24-15 シャポー小岩1F",
+    "url": "https://stores.marugame.com/111422"
+   },
+   {
+    "chain": "mos-burger",
+    "name": "モスバーガーシャポー小岩店",
+    "address": "東京都江戸川区南小岩7丁目24-15 シャポー小岩 1階",
+    "url": "https://www.mos.jp/shop/detail/?shop_cd=08206"
+   },
+   {
+    "chain": "tonkatsu-wako",
+    "name": "和幸シャポー小岩店",
+    "address": "東京都江戸川区南小岩7-24-15 シャポー小岩B1",
+    "url": "https://wako-group.co.jp/shop/detai/shop_1135/"
+   }
+  ],
+  "stations": [
+   "koiwa"
+  ]
+ }
+]
