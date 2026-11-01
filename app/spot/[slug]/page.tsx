@@ -1057,7 +1057,10 @@ export default async function SpotPage({ params }: Props) {
               plan={dayPlan}
               cityLabel={spot.ward ?? spot.city ?? getAreaName(entry.area)}
               heading={`${spot.name}を軸にした1日の流れ`}
-              intro={`編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`}
+              intro={
+                spot.dayPlanOverride?.intro ??
+                `編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`
+              }
               footer={
                 stationSlug ? (
                   <p style={{ fontSize: 13.5, margin: '12px 2px 0' }}>
