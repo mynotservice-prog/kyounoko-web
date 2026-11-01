@@ -682,6 +682,15 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **関連記事欄**: 公開後に本番で凍結面・137本の関連欄の入れ替わりを取得して「汚染の記録」に残す。
 - **公開の前日**: 7店の店舗ページを取り直し、差分があれば表を直す。
 
+### 実験28 スキー場名×子連れの新規3本（2026-11-01 社長決定）
+冬の受け皿を、頭の語ではなく施設名の語で作れるかを見る。Yahoo の実SERP（2026-11-01）で、頭の語（スキー場 子連れ 関東など）は不通過、施設名の語だけ AI 回答なしで通過した。根拠は `reports/winter-prep-2026-11-01.md`。
+
+- 処置（凍結・公開後は事実修正のみ）: `ski-karuizawa-prince-kodzure` `ski-naeba-kodzure` `ski-gala-yuzawa-kodzure`
+- **判定日: 検索に初めて出た日の56日後から28日間（第1表示が11月中なら 2027-02 上旬）**
+- **合格線（事前固定）**: 3本中2本が施設名の語で表示され、3本の合計が30クリック以上。届かなければ翌シーズンに横展開しない。通れば上越・信州へ広げる案を出す。
+- 対照なし。季節の需要と分離できないので、因果は主張しない。
+- 同じ便の `christmas-present-kodomo-nenrei-betsu` `christmas-cake-kodzure-erabikata` の更新は実験にしない（前年の基準値がなく判定できない）。D-3 の noindex 4本は対象外で、解放しない。
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -840,7 +849,10 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "mcdonalds-kodzure-koryaku",
     "disney-kids-menu",
     "anrakutei-kids-menu",
-    "hanamarudon-kids-menu"
+    "hanamarudon-kids-menu",
+    "ski-karuizawa-prince-kodzure",
+    "ski-naeba-kodzure",
+    "ski-gala-yuzawa-kodzure"
   ],
   "releasedUrls": [
     "/spot/-m64q",
