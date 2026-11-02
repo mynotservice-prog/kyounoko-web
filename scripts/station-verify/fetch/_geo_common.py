@@ -18,7 +18,7 @@ def http(url, data=None, headers=None, key=None, delay=0.6, retries=3, ns='misc'
     d = os.path.join(CACHE, ns)
     os.makedirs(d, exist_ok=True)
     p = os.path.join(d, hashlib.sha1(k.encode()).hexdigest() + '.txt')
-    if cache and os.path.exists(p) and not want_headers:
+    if cache and os.path.exists(p) and not want_headers and not os.environ.get('SV_REFRESH'):
         with open(p, encoding='utf-8') as f:
             return f.read()
     host = urllib.parse.urlsplit(url).netloc

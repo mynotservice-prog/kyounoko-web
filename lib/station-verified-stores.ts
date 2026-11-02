@@ -54,7 +54,7 @@ export type StationVerifiedStores = {
 export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
 
   "yokohama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "横浜鶴屋町店", address: "神奈川県横浜市神奈川区鶴屋町三丁目33番18号 SKビル1F", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/1935", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "横浜駅西口店", address: "神奈川県横浜市西区岡野一丁目12番14号 横浜NYビル1階", distance: "徒歩圏", m: 690, url: "https://tenpo.ichibanya.co.jp/map/2544", fac: ["お子さまメニュー"] },
@@ -148,7 +148,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minato-mirai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン みなとみらい店", address: "神奈川県横浜市西区みなとみらい4-4-5", distance: "徒歩圏", m: 390, url: "https://store-info.skylark.co.jp/map/171560/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ パシフィコ横浜店", address: "神奈川県横浜市西区 みなとみらい 1-1-1 パシフィコ横浜展示ホール 2F", distance: "徒歩圏", m: 310, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012189" },
@@ -213,7 +213,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "sakuragicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR桜木町駅前店", address: "神奈川県横浜市中区花咲町一丁目48番4号 ロゼ桜木町1階", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2180", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "中区伊勢佐木町店", address: "神奈川県横浜市中区伊勢佐木町二丁目79平山ビル1F", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/1593", fac: [] },
@@ -242,7 +242,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsuya", name: "松屋 桜木町店", address: "神奈川県横浜市中区花咲町2-59 白鳥ビル1F", distance: "駅前", m: 160, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000350", fac: [] },
       { chain: "matsuya", name: "松屋 伊勢佐木町2丁目店", address: "神奈川県横浜市中区伊勢佐木町2-76-2 キヨビル1F", distance: "徒歩圏", m: 780, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001889", fac: ["バリアフリー"] },
       { chain: "mcdonalds", name: "ランドマークプラザ店", address: "神奈川県横浜市西区みなとみらい2-2ランドマークプラザ2階", distance: "徒歩圏", m: 610, url: "https://map.mcdonalds.co.jp/map/14730", fac: ["駐車場"] },
-      { chain: "mcdonalds", name: "関内北口店", address: "神奈川県横浜市中区真砂町3-32ヨシタケビル", distance: "徒歩圏", m: 710, url: "https://map.mcdonalds.co.jp/map/14561", fac: [] },
       { chain: "mcdonalds", name: "横浜クイーンズスクエア店", address: "神奈川県横浜市西区みなとみらい2-3-8クイーンズスクエア横浜みなとみらい東急ス", distance: "徒歩圏", m: 770, url: "https://map.mcdonalds.co.jp/map/14713", fac: ["駐車場"] },
       { chain: "mos-burger", name: "モスバーガー横浜桜木町店", address: "神奈川県横浜市中区花咲町2丁目61", distance: "駅前", m: 140, url: "https://www.mos.jp/shop/detail/?shop_cd=05149", fac: [] },
       { chain: "mos-burger", name: "モスプレミアム桜木町クロスゲート店", address: "神奈川県横浜市中区桜木町1丁目101-1 クロスゲート1F", distance: "駅前", m: 180, url: "https://www.mos.jp/shop/detail/?shop_cd=02657", fac: ["駐車場"] },
@@ -311,7 +310,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kannai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中区伊勢佐木町店", address: "神奈川県横浜市中区伊勢佐木町二丁目79平山ビル1F", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1593", fac: [] },
       { chain: "cocoichi", name: "中区本町店", address: "神奈川県横浜市中区本町二丁目18番地横浜HIビル1F", distance: "徒歩圏", m: 530, url: "https://tenpo.ichibanya.co.jp/map/1633", fac: ["お子さまメニュー"] },
@@ -340,7 +339,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsunoya", name: "松のや 伊勢佐木町店(マイカリー食堂併設)", address: "神奈川県横浜市中区伊勢佐木町2-76-3", distance: "徒歩圏", m: 500, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002562", fac: [] },
       { chain: "matsuya", name: "松屋 関内ベイスターズ通り店", address: "神奈川県横浜市中区常盤町2-10 常盤不動産ビル1F", distance: "駅前", m: 170, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000287", fac: [] },
       { chain: "matsuya", name: "松屋 伊勢佐木町2丁目店", address: "神奈川県横浜市中区伊勢佐木町2-76-2 キヨビル1F", distance: "徒歩圏", m: 490, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001889", fac: ["バリアフリー"] },
-      { chain: "mcdonalds", name: "関内北口店", address: "神奈川県横浜市中区真砂町3-32ヨシタケビル", distance: "駅前", m: 110, url: "https://map.mcdonalds.co.jp/map/14561", fac: [] },
       { chain: "mcdonalds", name: "関内南口店", address: "神奈川県横浜市中区不老町1-1-11", distance: "駅前", m: 280, url: "https://map.mcdonalds.co.jp/map/14121", fac: [] },
       { chain: "mcdonalds", name: "伊勢佐木町店", address: "神奈川県横浜市中区伊勢佐木町3-104", distance: "徒歩圏", m: 650, url: "https://map.mcdonalds.co.jp/map/14012", fac: [] },
       { chain: "mos-burger", name: "モスバーガー関内店", address: "神奈川県横浜市中区不老町1丁目2-1", distance: "駅前", m: 240, url: "https://www.mos.jp/shop/detail/?shop_cd=02325", fac: [] },
@@ -402,7 +400,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "motomachi-chukagai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR石川町駅南口店", address: "神奈川県横浜市中区石川町一丁目10-2 小菅第二ビル1階", distance: "徒歩圏", m: 700, url: "https://tenpo.ichibanya.co.jp/map/2890", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 山下町店", address: "神奈川県横浜市中区 山下町 60-1", distance: "駅前", m: 270, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011125" },
@@ -438,7 +436,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-yokohama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新横浜駅店", address: "神奈川県横浜市港北区篠原町2937番地キュービックプラザ新横浜 ぐるめストリート1階", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2227", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 新横浜駅前店", address: "神奈川県横浜市港北区 新横浜 3-6", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010918" },
@@ -473,7 +471,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hiyoshi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港北区日吉中央通り店", address: "神奈川県横浜市港北区日吉本町1丁目16番17号 マイキャッスル日吉1階", distance: "駅前", m: 280, url: "https://tenpo.ichibanya.co.jp/map/2896", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 日吉店", address: "神奈川県横浜市港北区 日吉本町 1-21-9", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010719" },
@@ -497,7 +495,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tsunashima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港北区綱島駅前店", address: "神奈川県横浜市港北区綱島西一丁目9-9 ダイヤモンドビル1階", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/2807", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 横浜樽町店", address: "神奈川県横浜市港北区樽町2-8-41", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/2382", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -509,6 +507,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "gyukaku", name: "牛角 綱島店", address: "神奈川県横浜市 港北区綱島西1丁目14-5 ジョイビル1F", distance: "駅前", m: 200, url: "https://map.reins.co.jp/gyukaku/detail/455403029", fac: ["おむつ交換台", "お子様用備品"] },
       { chain: "hama-sushi", name: "はま寿司 港北綱島店", address: "神奈川県横浜市港北区綱島東2-6-43", distance: "徒歩圏", m: 610, url: "https://maps.hama-sushi.co.jp/jp/detail/6612.html", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
       { chain: "hidakaya", name: "日高屋 綱島西口店", address: "神奈川県横浜市港北区綱島西1-11-2", distance: "駅前", m: 110, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/333.html", fac: [] },
+      { chain: "hidakaya", name: "日高屋 新綱島北口店", address: "神奈川県横浜市港北区綱島東1-8-7 MICCA1階", distance: "駅前", m: 180, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/676.html" },
       { chain: "kfc", name: "綱島店", address: "神奈川県横浜市港北区綱島西1-8-1", distance: "駅前", m: 100, url: "https://search.kfc.co.jp/map/3368", fac: [] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 綱島店", address: "神奈川県横浜市港北区綱島西2丁目2-9", distance: "駅前", m: 200, url: "https://restaurant.kushi-tanaka.com/detail/1017/", fac: ["子供用イス"] },
       { chain: "matsunoya", name: "松のや 新綱島店", address: "神奈川県横浜市港北区綱島東一丁目8番7号HANARE北", distance: "駅前", m: 190, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002590" },
@@ -540,7 +539,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kikuna": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急菊名駅東口店", address: "神奈川県横浜市港北区菊名六丁目1番7号 S&Sビル1階", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/3318", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 菊名駅前店", address: "神奈川県横浜市港北区 菊名 4-1-6 クレセント菊名 2F", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012026" },
@@ -557,7 +556,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ofuna": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR大船駅笠間口店", address: "神奈川県横浜市栄区笠間一丁目1番1号ルリエ大船110", distance: "駅前", m: 230, url: "https://tenpo.ichibanya.co.jp/map/1781", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大船ルミネウィング店", address: "神奈川県鎌倉市 大船 1-4-1", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010316" },
@@ -595,7 +594,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "center-kita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bronco-billy", name: "港北みなも店", address: "神奈川県横浜市都筑区中川中央2-7-1 ショッピングモール港北みなも内1F", distance: "徒歩圏", m: 420, url: "https://www.bronco.co.jp/shop/kanagawa/kouhokuminamo-ten/" },
       { chain: "doutor", name: "ドトールコーヒーショップ センター北店", address: "神奈川県横浜市都筑区 中川中央 1-1-3", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012399" },
@@ -635,7 +634,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "center-minami": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 港北センター南店", address: "神奈川県横浜市都筑区茅ケ崎中央3-25 地下1階", distance: "駅前", m: 130, url: "https://store-info.skylark.co.jp/map/171636/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "bronco-billy", name: "港北みなも店", address: "神奈川県横浜市都筑区中川中央2-7-1 ショッピングモール港北みなも内1F", distance: "徒歩圏", m: 550, url: "https://www.bronco.co.jp/shop/kanagawa/kouhokuminamo-ten/" },
@@ -684,7 +683,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "azamino": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ あざみ野西口店", address: "神奈川県横浜市青葉区 あざみ野 1-11-1", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011540" },
       { chain: "gusto", name: "ガスト あざみ野店(から好し取扱店)", address: "神奈川県横浜市青葉区あざみ野2丁目12-2", distance: "徒歩圏", m: 340, url: "https://store-info.skylark.co.jp/map/018779/", fac: ["おむつ替え台", "駐車場"] },
@@ -707,7 +706,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tama-plaza": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ たまプラーザ店", address: "神奈川県横浜市青葉区 美しが丘 2-15-8", distance: "駅前", m: 170, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011529" },
       { chain: "freshness-burger", name: "フレッシュネスバーガーたまプラーザテラス店", address: "神奈川県横浜市 青葉区美しが丘1-1-2", distance: "駅前", m: 70, url: "https://search.freshnessburger.co.jp/detail/3032513/", fac: ["キッズセット"] },
@@ -726,7 +725,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "saginuma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "鷺沼店", address: "神奈川県川崎市宮前区有馬4丁目4番地6号", distance: "徒歩圏", m: 760, url: "https://www.bikkuri-donkey.com/shop/shop_1036/", fac: ["ベビーシート", "駐車場"] },
       { chain: "cocoichi", name: "東急鷺沼駅前通店", address: "神奈川県川崎市宮前区鷺沼一丁目2番地1 安藤マンション1階", distance: "駅前", m: 200, url: "https://tenpo.ichibanya.co.jp/map/2437", fac: ["お子さまメニュー"] },
@@ -748,7 +747,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mizonokuchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 溝の口店", address: "神奈川県川崎市高津区溝口2丁目3-13", distance: "駅前", m: 120, url: "https://store-info.skylark.co.jp/map/171489/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "denny-s", name: "デニーズ 溝ノ口駅前店", address: "神奈川県川崎市高津区溝口1-1-5 JR東日本ホテルメッツ溝ノ口2階", distance: "駅前", m: 30, url: "https://shop.dennys.jp/map/21962", fac: ["オムツ替えシート"] },
@@ -801,7 +800,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "futako-shinchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 高津駅前店", address: "神奈川県川崎市高津区 溝口 4-1-17 S.K.D高津駅前ビル1", distance: "徒歩圏", m: 640, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010827" },
       { chain: "kfc", name: "二子玉川店", address: "東京都世田谷区玉川2-22-13", distance: "徒歩圏", m: 740, url: "https://search.kfc.co.jp/map/1299", fac: [] },
@@ -823,7 +822,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kawasaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "川崎たちばなモール参番街店", address: "神奈川県川崎市川崎区砂子二丁目11-22 信明ビル", distance: "徒歩圏", m: 420, url: "https://tenpo.ichibanya.co.jp/map/2505", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR川崎駅西口通店", address: "神奈川県川崎市幸区南幸町二丁目20マインステージ1階", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/2195", fac: ["お子さまメニュー"] },
@@ -921,7 +920,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "musashi-kosugi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR武蔵小杉駅北口店", address: "神奈川県川崎市中原区新丸子東二丁目907番地", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2438", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 武蔵小杉店", address: "神奈川県川崎市中原区新丸子東2-885", distance: "徒歩圏", m: 400, url: "https://shop.dennys.jp/map/21979", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -968,7 +967,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "noborito": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 向ヶ丘遊園駅前店", address: "神奈川県川崎市多摩区登戸2735 中和ビル2階", distance: "徒歩圏", m: 710, url: "https://store-info.skylark.co.jp/map/171487/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "小田急向ヶ丘遊園駅北口店", address: "神奈川県川崎市多摩区登戸2129-7パークタワー向ヶ丘遊園", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/3260", fac: ["お子さまメニュー"] },
@@ -1000,7 +999,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-yurigaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gyukaku", name: "牛角 新百合ヶ丘店", address: "神奈川県川崎市 麻生区万福寺1-17-1 小田急アコルデ新百合ヶ丘北館2F", distance: "駅前", m: 90, url: "https://map.reins.co.jp/gyukaku/detail/449692229", fac: [] },
       { chain: "hama-sushi", name: "はま寿司 新百合ヶ丘駅前店", address: "神奈川県川崎市麻生区万福寺1-1-2 シティーモール2F", distance: "駅前", m: 120, url: "https://maps.hama-sushi.co.jp/jp/detail/4738.html", fac: ["ベビーシート", "多目的トイレ"] },
@@ -1034,7 +1033,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "fujisawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 藤沢駅南店", address: "神奈川県藤沢市鵠沼石上1丁目7-7", distance: "徒歩圏", m: 330, url: "https://store-info.skylark.co.jp/map/171008/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "藤沢駅北口店", address: "神奈川県藤沢市藤沢967番地石井ビル", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/2155", fac: ["お子さまメニュー"] },
@@ -1075,7 +1074,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kamakura": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "excelsior", name: "エクセルシオール カフェ 鎌倉東口店", address: "神奈川県鎌倉市 小町 1-4-12", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000289" },
       { chain: "freshness-burger", name: "フレッシュネスバーガー鎌倉由比ガ浜店", address: "神奈川県鎌倉市 由比ガ浜2-3-2 1階", distance: "徒歩圏", m: 450, url: "https://search.freshnessburger.co.jp/detail/3033436/", fac: ["キッズセット"] },
@@ -1088,7 +1087,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chigasaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 茅ヶ崎駅前店", address: "神奈川県茅ヶ崎市元町2番4号 湘南山鉄ビル2F", distance: "駅前", m: 100, url: "https://store-info.skylark.co.jp/map/171410/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "茅ヶ崎店", address: "神奈川県茅ヶ崎市茅ヶ崎1-3-30", distance: "徒歩圏", m: 490, url: "https://www.bikkuri-donkey.com/shop/shop_1030/", fac: ["ベビーシート", "駐車場"] },
@@ -1123,7 +1122,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hiratsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR平塚駅北口店", address: "神奈川県平塚市紅谷町2-12Mビル1階", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2197", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 平塚ユーユー駅前館店", address: "神奈川県平塚市 紅谷町 5-20 ユーユー駅前館", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011129" },
@@ -1159,7 +1158,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shonan-daira": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 湘南台店", address: "神奈川県藤沢市湘南台2-15", distance: "駅前", m: 30, url: "https://shop.dennys.jp/map/2613", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 湘南台西口駅前店", address: "神奈川県藤沢市 湘南台 2-2-5", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010693" },
@@ -1186,7 +1185,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "odawara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 小田原駅前店", address: "神奈川県小田原市栄町1丁目4-9", distance: "駅前", m: 210, url: "https://store-info.skylark.co.jp/map/172998/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ ラスカ小田原店", address: "神奈川県小田原市 栄町 1-1-9 ラスカ小田原 3F", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012112" },
@@ -1214,7 +1213,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ebina": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "小田急海老名駅前店", address: "神奈川県海老名市中央三丁目1-32", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2484", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 海老名店", address: "神奈川県海老名市中央1-12-15", distance: "徒歩圏", m: 420, url: "https://shop.dennys.jp/map/21898", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
@@ -1264,7 +1263,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hon-atsugi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "本厚木駅前通店", address: "神奈川県厚木市中町三丁目13番2号石黒ビル1F", distance: "徒歩圏", m: 340, url: "https://tenpo.ichibanya.co.jp/map/1507", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 厚木店", address: "神奈川県厚木市田村町3-22", distance: "徒歩圏", m: 610, url: "https://shop.dennys.jp/map/2602", fac: ["オムツ替えシート", "駐車場"] },
@@ -1310,7 +1309,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sagami-ono": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "小田急相模大野駅前店", address: "神奈川県相模原市南区相模大野三丁目11番3号 ルミエール相模大野101", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/1777", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 相模大野ステーションスクエア店", address: "神奈川県相模原市南区 相模大野 3-8-1 相模大野ステーションスクエア 3F", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011966" },
@@ -1350,7 +1349,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yokohama-nakayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "緑区中山店", address: "神奈川県横浜市緑区台村町322番地1", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2036", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "gusto", name: "ガスト 中山駅北口店(から好し取扱店)", address: "神奈川県横浜市緑区中山1丁目26-3 中山北口ビル2F", distance: "駅前", m: 30, url: "https://store-info.skylark.co.jp/map/018901/", fac: ["多目的トイレ"] },
@@ -1377,7 +1376,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yokodai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 洋光台店", address: "神奈川県横浜市磯子区 洋光台 4-1-1 中央団地", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010220" },
       { chain: "kfc", name: "洋光台店", address: "神奈川県横浜市磯子区洋光台5-1-35", distance: "駅前", m: 150, url: "https://search.kfc.co.jp/map/197", fac: [] },
@@ -1385,7 +1384,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tsujido": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 辻堂南口店", address: "神奈川県藤沢市辻堂2-7-1 湘南パールビル2F", distance: "駅前", m: 80, url: "https://shop.dennys.jp/map/2694", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "gusto", name: "ガスト 辻堂店(から好し取扱店)", address: "神奈川県藤沢市辻堂神台2丁目4-46", distance: "徒歩圏", m: 590, url: "https://store-info.skylark.co.jp/map/011563/", fac: ["おむつ替え台", "駐車場"] },
@@ -1414,7 +1413,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mukogaoka-yuen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 向ヶ丘遊園駅前店", address: "神奈川県川崎市多摩区登戸2735 中和ビル2階", distance: "駅前", m: 110, url: "https://store-info.skylark.co.jp/map/171487/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "小田急向ヶ丘遊園駅北口店", address: "神奈川県川崎市多摩区登戸2129-7パークタワー向ヶ丘遊園", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/3260", fac: ["お子さまメニュー"] },
@@ -1442,7 +1441,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "大宮南銀座通り店", address: "埼玉県さいたま市大宮区仲町一丁目87-1", distance: "駅前", m: 290, url: "https://tenpo.ichibanya.co.jp/map/1801", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR大宮駅西口店", address: "埼玉県さいたま市大宮区桜木町二丁目154番地 川村第一ビル1階", distance: "徒歩圏", m: 300, url: "https://tenpo.ichibanya.co.jp/map/2144", fac: ["お子さまメニュー"] },
@@ -1509,7 +1508,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "urawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR浦和駅西口店", address: "埼玉県さいたま市浦和区高砂二丁目6-6 秩父屋ビル1階", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/2527", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浦和駅前店", address: "埼玉県さいたま市浦和区高砂1-16-7 JR東日本ホテルメッツ浦和1F", distance: "駅前", m: 50, url: "https://shop.dennys.jp/map/21828", fac: ["オムツ替えシート"] },
@@ -1532,6 +1531,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "浦和仲町店", address: "埼玉県さいたま市浦和区仲町1-2-14", distance: "駅前", m: 170, url: "https://map.mcdonalds.co.jp/map/11033", fac: [] },
       { chain: "mister-donut", name: "浦和東口 ショップ", address: "埼玉県さいたま市浦和区東高砂町2-3", distance: "駅前", m: 90, url: "https://md.mapion.co.jp/b/misterdonut/info/0399/", fac: [] },
       { chain: "mister-donut", name: "浦和西口 ショップ", address: "埼玉県さいたま市浦和区仲町1丁目1-10", distance: "駅前", m: 200, url: "https://md.mapion.co.jp/b/misterdonut/info/0522/", fac: [] },
+      { chain: "onyasai", name: "しゃぶしゃぶ温野菜 浦和店", address: "埼玉県さいたま市 浦和区仲町1-1-1 吉野ビル2F", distance: "駅前", m: 150, url: "https://map.reins.co.jp/onyasai/detail/487115555" },
       { chain: "ootoya", name: "大戸屋ごはん処 浦和店", address: "埼玉県さいたま市 浦和区仲町1-1-10浦和ウイングビル2F", distance: "駅前", m: 210, url: "https://store.ootoya.com/detail/27207/", fac: [] },
       { chain: "pronto", name: "PRONTO アトレ浦和店", address: "埼玉県さいたま市浦和区高砂1丁目16-12 アトレ浦和", distance: "駅前", m: 30, url: "https://shop.pronto.co.jp/detail/63/" },
       { chain: "saizeriya", name: "サイゼリヤ 浦和東口店", address: "埼玉県さいたま市浦和区東高砂町9-5スミダワン別館1F", distance: "駅前", m: 200, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=0884", fac: [] },
@@ -1555,7 +1555,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kawaguchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR川口駅東口店", address: "埼玉県川口市栄町三丁目9番18号 THE KINDAI 17 KAWAGUCHI 1F", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2152", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 川口東口店", address: "埼玉県川口市 栄町 3-5-17", distance: "駅前", m: 240, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010139" },
@@ -1607,7 +1607,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-kawaguchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR西川口駅東口店", address: "埼玉県川口市並木三丁目2番4号ミニヨンビル1F", distance: "駅前", m: 160, url: "https://tenpo.ichibanya.co.jp/map/2394", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR西川口駅西口店", address: "埼玉県川口市西川口一丁目19-16サンケイビル1F", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/2020", fac: ["お子さまメニュー"] },
@@ -1636,7 +1636,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "soka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 草加駅西口店", address: "埼玉県草加市 氷川町 2121-3", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011988" },
       { chain: "goemon", name: "草加駅前店", address: "埼玉県草加市氷川町2121-3 フレアコート1階 B室", distance: "駅前", m: 80, url: "https://www.yomenya-goemon.com/store/kanto/#saitama", fac: ["お子様メニュー"] },
@@ -1671,7 +1671,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kawagoe": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 川越駅東口店", address: "埼玉県川越市脇田町103 川越マインビル3F", distance: "駅前", m: 110, url: "https://store-info.skylark.co.jp/map/171539/", fac: [] },
       { chain: "denny-s", name: "デニーズ 川越東田町店", address: "埼玉県川越市東田町6-1", distance: "徒歩圏", m: 600, url: "https://shop.dennys.jp/map/21812", fac: ["オムツ替えシート", "駐車場"] },
@@ -1721,7 +1721,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokorozawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "所沢駅東口店", address: "埼玉県所沢市くすのき台一丁目9-8エシール所沢2号館106号", distance: "駅前", m: 280, url: "https://tenpo.ichibanya.co.jp/map/1613", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "cocos", name: "ココス 所沢中央店", address: "埼玉県所沢市くすのき台3-17-4", distance: "徒歩圏", m: 410, url: "https://maps.cocos-jpn.co.jp/jp/detail/2819.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
@@ -1759,7 +1759,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kasukabe": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 春日部東口駅前店", address: "埼玉県春日部市粕壁1-8-10", distance: "駅前", m: 80, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/420.html", fac: [] },
       { chain: "hidakaya", name: "日高屋 春日部店", address: "埼玉県春日部市中央1-9-1", distance: "駅前", m: 120, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/071.html", fac: [] },
@@ -1781,7 +1781,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "koshigaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 越谷駅東口店(から好し取扱店)", address: "埼玉県越谷市弥生町17番地1号 越谷ツインシティAシティ2階", distance: "駅前", m: 200, url: "https://store-info.skylark.co.jp/map/018931/", fac: ["おむつ替え台"] },
       { chain: "gusto", name: "ガスト 越谷赤山町店(から好し取扱店)", address: "埼玉県越谷市赤山町5丁目7-52", distance: "徒歩圏", m: 660, url: "https://store-info.skylark.co.jp/map/011538/", fac: ["駐車場"] },
@@ -1800,7 +1800,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "koshigaya-laketown": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ レイクタウンアウトレット店", address: "埼玉県越谷市 レイクタウン 4-1-1", distance: "徒歩圏", m: 690, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012433" },
       { chain: "hidakaya", name: "日高屋 越谷レイクタウン店", address: "埼玉県越谷市レイクタウン8-16", distance: "駅前", m: 260, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/306.html", fac: ["お子様メニュー"] },
@@ -1835,7 +1835,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "musashi-urawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR武蔵浦和駅東口店", address: "埼玉県さいたま市南区別所七丁目6-8ライブタワー104号室", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2138", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ マーレ武蔵浦和店", address: "埼玉県さいたま市南区 白幡 5-19-19", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011114" },
@@ -1861,7 +1861,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-urawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR北浦和駅西口店", address: "埼玉県さいたま市浦和区北浦和四丁目3-7", distance: "駅前", m: 150, url: "https://tenpo.ichibanya.co.jp/map/2756", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 北浦和東口店", address: "埼玉県さいたま市浦和区 北浦和 3-8-15", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010628" },
@@ -1881,7 +1881,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "asaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 朝霞本町店", address: "埼玉県朝霞市青葉台1丁目1-6", distance: "徒歩圏", m: 460, url: "https://store-info.skylark.co.jp/map/171293/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 朝霞駅前店", address: "埼玉県朝霞市本町2-4-18 バモスビル2F", distance: "駅前", m: 90, url: "https://shop.dennys.jp/map/21755", fac: ["オムツ替えシート"] },
@@ -1899,7 +1899,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "wako-shi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武和光市駅前店", address: "埼玉県和光市本町6-10 鈴木ビル1F", distance: "駅前", m: 170, url: "https://tenpo.ichibanya.co.jp/map/2462", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 和光市駅前店", address: "埼玉県和光市 丸山台 1-10-4", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010755" },
@@ -1921,7 +1921,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shiki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "志木駅東口店", address: "埼玉県新座市東北二丁目39番8号永代ビル1F", distance: "駅前", m: 120, url: "https://tenpo.ichibanya.co.jp/map/1174", fac: ["お子さまメニュー"] },
       { chain: "goemon", name: "EQUiA志木店", address: "埼玉県新座市東北2-38-1 EQUiA志木店 207区画", distance: "駅前", m: 40, url: "https://www.yomenya-goemon.com/store/kanto/#saitama", fac: ["お子様メニュー"] },
@@ -1955,7 +1955,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chiba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 千葉駅東口店", address: "千葉県千葉市中央区富士見2丁目1-1 マインズ千葉A館 地下B102-1", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/171624/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "cocoichi", name: "千葉中央駅東口店", address: "千葉県千葉市中央区富士見二丁目23番10号 松岡ビル1階", distance: "徒歩圏", m: 690, url: "https://tenpo.ichibanya.co.jp/map/2260", fac: ["お子さまメニュー"] },
@@ -2016,7 +2016,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "funabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 船橋本町店", address: "千葉県船橋市本町4丁目40-21", distance: "徒歩圏", m: 410, url: "https://store-info.skylark.co.jp/map/171015/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "船橋湊町店", address: "千葉県船橋市湊町二丁目1番22号", distance: "徒歩圏", m: 640, url: "https://tenpo.ichibanya.co.jp/map/1568", fac: ["お子さまメニュー"] },
@@ -2073,7 +2073,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kashiwa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR柏駅西口店", address: "千葉県柏市旭町一丁目1番8号第1関口ビル1階", distance: "駅前", m: 230, url: "https://tenpo.ichibanya.co.jp/map/2346", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ スカイプラザ柏店", address: "千葉県柏市 柏 1-1-20 スカイプラザ 1F", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011418" },
@@ -2119,7 +2119,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "matsudo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 松戸駅西口店", address: "千葉県松戸市松戸1287-1 サントロペ松戸ビル2F", distance: "駅前", m: 160, url: "https://store-info.skylark.co.jp/map/171608/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR松戸駅西口店", address: "千葉県松戸市根本5-1根本グリーンコーポ1階", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/1554", fac: ["お子さまメニュー"] },
@@ -2159,7 +2159,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tsudanuma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 津田沼駅前店", address: "千葉県習志野市津田沼1-1-1 JR東日本ホテルメッツ津田沼3階", distance: "駅前", m: 30, url: "https://shop.dennys.jp/map/21884", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 津田沼南口店", address: "千葉県習志野市 谷津 7-7-1", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012168" },
@@ -2210,11 +2210,10 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     far: [
       { chain: "hidakaya", name: "日高屋 京成津田沼店", address: "千葉県習志野市津田沼4-10-33", distance: "少し歩く", m: 940, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/171.html", fac: [] },
       { chain: "komeda", name: "津田沼店", address: "千葉県習志野市津田沼4丁目5番5号", distance: "少し歩く", m: 860, url: "https://www.komeda.co.jp/shop/detail.html?id=597", fac: ["トイレおむつ台", "お子様メニュー", "駐車場"] },
-      { chain: "mcdonalds", name: "京成津田沼店", address: "千葉県習志野市津田沼4-9-12", distance: "少し歩く", m: 980, url: "https://map.mcdonalds.co.jp/map/12573", fac: ["駐車場"] },
     ],
   },
   "ichikawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 市川真間店", address: "千葉県市川市真間1丁目12-4", distance: "徒歩圏", m: 440, url: "https://store-info.skylark.co.jp/map/171597/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "JR市川駅南口店", address: "千葉県市川市市川南一丁目8-30市川セレストビル1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2282", fac: ["お子さまメニュー"] },
@@ -2243,7 +2242,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "urayasu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 浦安南口店", address: "千葉県浦安市 北栄 1-13-25 西友浦安店パート2館 1F", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010346" },
       { chain: "goemon", name: "マーヴ浦安", address: "千葉県浦安市当代島1丁目1番4号 M'av浦安WEST1", distance: "駅前", m: 130, url: "https://www.yomenya-goemon.com/store/kanto/#chiba", fac: ["お子様メニュー"] },
@@ -2271,7 +2270,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "maihama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "舞浜イクスピアリ店", address: "千葉県浦安市舞浜1-4", distance: "駅前", m: 120, url: "https://map.mcdonalds.co.jp/map/12707", fac: ["駐車場"] },
       { chain: "saizeriya", name: "サイゼリヤ 舞浜駅前店", address: "千葉県浦安市舞浜26-5ホテルドリームゲート舞浜1F", distance: "駅前", m: 110, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1174", fac: [] },
@@ -2285,7 +2284,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minami-funabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ ららぽーとTOKYO‐BAY店", address: "千葉県船橋市 浜町 2-2-7", distance: "徒歩圏", m: 650, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012178" },
       { chain: "freshness-burger", name: "フレッシュネスバーガーららぽーとTOKYO-BAY店", address: "千葉県船橋市 浜町2-1-1 ららぽーとTOKYO-BAY西館1階", distance: "徒歩圏", m: 700, url: "https://search.freshnessburger.co.jp/detail/3031426/", fac: ["キッズセット"] },
@@ -2312,7 +2311,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kaihimmakuhari": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 海浜幕張店", address: "千葉県千葉市美浜区打瀬1丁目2", distance: "徒歩圏", m: 520, url: "https://store-info.skylark.co.jp/map/171071/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocos", name: "ココス 海浜幕張駅前店", address: "千葉県千葉市美浜区ひび野1-8 メッセアミューズモール1F", distance: "駅前", m: 170, url: "https://maps.cocos-jpn.co.jp/jp/detail/2850.html", fac: ["お子様メニュー", "スロープ／エレベーター", "駐車場"] },
@@ -2354,7 +2353,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-funabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR西船橋駅北口店", address: "千葉県船橋市西船四丁目21番16号 オオツカビル1階", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/2980", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "西船橋店", address: "千葉県船橋市本郷町648番地1", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/2029", fac: ["お子さまメニュー", "駐車場"] },
@@ -2383,7 +2382,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nagareyama-otakanomori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー流山おおたかの森S.C.店", address: "千葉県流山市 おおたかの森南1-5-1 流山おおたかの森SC1階", distance: "駅前", m: 160, url: "https://search.freshnessburger.co.jp/detail/3032477/", fac: ["キッズセット"] },
       { chain: "gusto", name: "ガスト 流山おおたかの森駅前店(から好し取扱店)", address: "千葉県流山市おおたかの森西1丁目1-1 こかげテラス1階", distance: "駅前", m: 70, url: "https://store-info.skylark.co.jp/map/017727/", fac: ["おむつ替え台"] },
@@ -2413,7 +2412,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kashiwa-no-ha-campus": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kamakura-pasta", name: "鎌倉パスタ ららぽーと柏の葉店", address: "千葉県柏市若柴175 ららぽーと柏の葉3F", distance: "駅前", m: 190, url: "https://www.saint-marc-hd.com/kamakura/shop/311/" },
       { chain: "marugame", name: "丸亀製麺ららぽーと柏の葉", address: "千葉県柏市若柴175 ららぽーと柏の葉3F", distance: "駅前", m: 60, url: "https://stores.marugame.com/110834" },
@@ -2435,7 +2434,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "inage": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR稲毛駅前店", address: "千葉県千葉市稲毛区小仲台二丁目7番11号 朝日ビル稲毛1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2011", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 千葉稲毛店", address: "千葉県千葉市稲毛区小仲台2-2-9", distance: "駅前", m: 80, url: "https://maps.cocos-jpn.co.jp/jp/detail/2908.html", fac: ["ベビーシート", "お子様メニュー", "スロープ／エレベーター", "多目的トイレ"] },
@@ -2457,7 +2456,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "abiko": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bronco-billy", name: "我孫子店", address: "千葉県我孫子市緑1-11-27", distance: "徒歩圏", m: 780, url: "https://www.bronco.co.jp/shop/chiba/abiko/", fac: ["ベビーシート", "ベビーチェア", "段差なし", "駐車場"] },
       { chain: "cocoichi", name: "JR我孫子駅南口店", address: "千葉県我孫子市本町二丁目3番23号田中ビル1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2154", fac: ["お子さまメニュー"] },
@@ -2484,7 +2483,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-umeda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "梅田東店", address: "大阪府大阪市北区堂山町1-5 三共梅田ビル2F", distance: "徒歩圏", m: 680, url: "https://www.bikkuri-donkey.com/shop/shop_1720/", fac: ["ベビーシート", "多目的トイレ"] },
       { chain: "cocoichi", name: "KITTE大阪店", address: "大阪府大阪市北区梅田三丁目2-2 KITTE大阪4階420区画", distance: "徒歩圏", m: 330, url: "https://tenpo.ichibanya.co.jp/map/3247", fac: [] },
@@ -2569,6 +2568,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "subway", name: "サブウェイ 野菜ラボグランフロント大阪店", address: "大阪府大阪市北区大深町3-1グランフロント大阪 ナレッジキャピタル2F", distance: "徒歩圏", m: 460, url: "https://subway.co.jp/shop/5755/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 梅田太融寺店", address: "大阪府大阪市北区太融寺町5-8 ダイヤモンドレジャ-ビル本館1F", distance: "徒歩圏", m: 560, url: "https://maps.sukiya.jp/jp/detail/1261.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 梅田堂山店", address: "大阪府大阪市北区堂山町15-15", distance: "徒歩圏", m: 590, url: "https://maps.sukiya.jp/jp/detail/300.html", fac: ["お子様メニュー"] },
+      { chain: "sushiro", name: "リンクス梅田店", address: "大阪府大阪市北区大深町1-1 LINKS UMEDA 8階", distance: "駅前", m: 230, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2866" },
       { chain: "sushiro", name: "お初天神通り店", address: "大阪府大阪市北区曽根崎2丁目15-20 SWINGうめだ5階", distance: "徒歩圏", m: 370, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2442", fac: ["おむつ替えシート"] },
       { chain: "sushiro", name: "梅田茶屋町店", address: "大阪府大阪市北区茶屋町2-16 イースクエア茶屋町6階", distance: "徒歩圏", m: 430, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2369", fac: ["おむつ替えシート"] },
       { chain: "tonkatsu-wako", name: "和幸LINKS UMEDA店", address: "大阪府大阪市北区大深町1-1 ヨドバシ梅田タワー8F", distance: "徒歩圏", m: 320, url: "https://wako-group.co.jp/shop/detai/shop_1180/", fac: ["子供椅子", "駐車場"] },
@@ -2597,7 +2597,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-namba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "千日前アムザ店", address: "大阪府大阪市中央区千日前2丁目9-17 アムザ1000 2F", distance: "徒歩圏", m: 380, url: "https://www.bikkuri-donkey.com/shop/shop_1210/", fac: [] },
       { chain: "bikkuri-donkey", name: "道頓堀店", address: "大阪府大阪市中央区道頓堀1-6-15コムラードドートン内", distance: "徒歩圏", m: 580, url: "https://www.bikkuri-donkey.com/shop/shop_1205/", fac: [] },
@@ -2709,7 +2709,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-tennoji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "天王寺店", address: "大阪府大阪市天王寺区茶臼山町4-6", distance: "駅前", m: 240, url: "https://www.bikkuri-donkey.com/shop/shop_1826/", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "JR天王寺駅北口店", address: "大阪府大阪市天王寺区悲田院町8番26号", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/1628", fac: ["お子さまメニュー"] },
@@ -2775,7 +2775,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-shinsaibashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "北心斎橋店", address: "大阪府大阪市中央区南船場3丁目10-5 NORD+S南船場2F", distance: "駅前", m: 250, url: "https://www.bikkuri-donkey.com/shop/shop_1646/", fac: ["多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "アメリカ村店", address: "大阪府大阪市中央区西心斎橋2丁目11-30 ブルータスビルB1F", distance: "徒歩圏", m: 410, url: "https://www.bikkuri-donkey.com/shop/shop_1643/", fac: [] },
@@ -2905,7 +2905,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-honmachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "北心斎橋店", address: "大阪府大阪市中央区南船場3丁目10-5 NORD+S南船場2F", distance: "徒歩圏", m: 570, url: "https://www.bikkuri-donkey.com/shop/shop_1646/", fac: ["多目的トイレ"] },
       { chain: "cocoichi", name: "中央区本町4丁目店", address: "大阪府大阪市中央区本町四丁目8-1", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/2061", fac: [] },
@@ -3009,7 +3009,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-kyobashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "京橋コムズガーデン店", address: "大阪府大阪市都島区東野田町2丁目6番1号 コムズガーデン B1", distance: "駅前", m: 210, url: "https://www.bikkuri-donkey.com/shop/shop_1833/", fac: [] },
       { chain: "cocoichi", name: "京橋駅北口店", address: "大阪府大阪市都島区東野田町四丁目9-19", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/2789", fac: ["お子さまメニュー"] },
@@ -3054,7 +3054,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-fukushima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR福島駅前店", address: "大阪府大阪市福島区福島七丁目14番17号", distance: "徒歩圏", m: 370, url: "https://tenpo.ichibanya.co.jp/map/1861", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ ドーチカ店", address: "大阪府大阪市北区 堂島 1丁目 堂島地下街 7号", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=2011151" },
@@ -3112,7 +3112,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "osaka-nakazakicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "梅田東店", address: "大阪府大阪市北区堂山町1-5 三共梅田ビル2F", distance: "徒歩圏", m: 480, url: "https://www.bikkuri-donkey.com/shop/shop_1720/", fac: ["ベビーシート", "多目的トイレ"] },
       { chain: "cocoichi", name: "北区角田町店", address: "大阪府大阪市北区角田町1-20", distance: "徒歩圏", m: 460, url: "https://tenpo.ichibanya.co.jp/map/2511", fac: ["お子さまメニュー"] },
@@ -3214,6 +3214,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "LUCUA 9階店", address: "大阪府大阪市北区梅田3-1-3 LUCUA 9階", distance: "少し歩く", m: 910, url: "https://store.starbucks.co.jp/detail-977/" },
       { chain: "subway", name: "サブウェイ LINKS UMEDA店", address: "大阪府大阪市北区大深町1-1 LINKS UMEDA 地下1階", distance: "少し歩く", m: 820, url: "https://subway.co.jp/shop/5878/", fac: [] },
       { chain: "subway", name: "サブウェイ 野菜ラボグランフロント大阪店", address: "大阪府大阪市北区大深町3-1グランフロント大阪 ナレッジキャピタル2F", distance: "少し歩く", m: 990, url: "https://subway.co.jp/shop/5755/", fac: ["キッズセット"] },
+      { chain: "sushiro", name: "リンクス梅田店", address: "大阪府大阪市北区大深町1-1 LINKS UMEDA 8階", distance: "少し歩く", m: 810, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2866" },
       { chain: "tully-coffee", name: "大阪梅田ツインタワーズ・サウス店", address: "大阪府大阪市 北区梅田1丁目13番1号 大阪梅田ツインタワーズ・サウス​11階", distance: "少し歩く", m: 880, url: "https://shop.tullys.co.jp/detail/1003171" },
       { chain: "tully-coffee", name: "グランフロント大阪北館1F店", address: "大阪府大阪市北区 大深町3番1号 グランフロント大阪北館1F", distance: "少し歩く", m: 970, url: "https://shop.tullys.co.jp/detail/1000727" },
       { chain: "tully-coffee", name: "グランフロント大阪北館9F店", address: "大阪府大阪市北区 大深町3番1号 グランフロント大阪北館9F", distance: "少し歩く", m: 970, url: "https://shop.tullys.co.jp/detail/1000728" },
@@ -3225,7 +3226,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 6},
   },
   "kyoto-station": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "南区八条口店", address: "京都府京都市南区東九条上殿田町1", distance: "徒歩圏", m: 420, url: "https://tenpo.ichibanya.co.jp/map/1450", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "gusto", name: "ガスト 京都アバンティ店(から好し取扱店)", address: "京都府京都市南区東九条西山王町31 地下1階", distance: "徒歩圏", m: 330, url: "https://store-info.skylark.co.jp/map/017761/", fac: ["駐車場"] },
@@ -3271,7 +3272,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kyoto-kawaramachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "河原町三条店", address: "京都府京都市中京区河原町三条東入ル南側三条裕豊ビル1、2階", distance: "徒歩圏", m: 560, url: "https://www.bikkuri-donkey.com/shop/shop_1639/", fac: [] },
       { chain: "cocoichi", name: "中京区河原町三条店", address: "京都府京都市中京区河原町通三条下る大黒町51番地 林ビルヂング", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/2490", fac: [] },
@@ -3343,7 +3344,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kyoto-shijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "烏丸五条店", address: "京都府京都市下京区五条通烏丸東入松屋町411", distance: "徒歩圏", m: 710, url: "https://tenpo.ichibanya.co.jp/map/1603", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 四条烏丸店", address: "京都府京都市中京区 烏丸通錦小路上ル手洗水町 659", distance: "徒歩圏", m: 300, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=2011368" },
@@ -3419,13 +3420,13 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kyoto-arashiyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "tully-coffee", name: "嵐電嵐山駅店", address: "京都府京都市右京区 嵯峨天龍寺造路町20-2", distance: "徒歩圏", m: 620, url: "https://shop.tullys.co.jp/detail/1000772" },
     ],
   },
   "kyoto-kitaoji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "北大路駅前店", address: "京都府京都市北区小山東大野町82番地", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/1341", fac: ["お子さまメニュー"] },
       { chain: "freshness-burger", name: "フレッシュネスバーガーイオンモール北大路店", address: "京都府京都市 北区小山北上総町49-1 イオンモール北大路1階", distance: "駅前", m: 30, url: "https://search.freshnessburger.co.jp/detail/3053138/", fac: ["キッズセット"] },
@@ -3446,7 +3447,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kobe-sannomiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "三宮店", address: "兵庫県神戸市中央区北長狭通2-5-1 タイシンサンセットビルB1", distance: "徒歩圏", m: 410, url: "https://www.bikkuri-donkey.com/shop/shop_1767/", fac: ["ベビーシート"] },
       { chain: "bikkuri-donkey", name: "生田川インター店", address: "兵庫県神戸市中央区磯上通2丁目1-8", distance: "徒歩圏", m: 750, url: "https://www.bikkuri-donkey.com/shop/shop_1208/", fac: ["ベビーシート", "車イス入店", "多目的トイレ", "駐車場"] },
@@ -3537,7 +3538,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kobe-motomachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "三宮店", address: "兵庫県神戸市中央区北長狭通2-5-1 タイシンサンセットビルB1", distance: "徒歩圏", m: 360, url: "https://www.bikkuri-donkey.com/shop/shop_1767/", fac: ["ベビーシート"] },
       { chain: "cocoichi", name: "JR元町駅前店", address: "兵庫県神戸市中央区元町通一丁目13-13", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/2381", fac: ["お子さまメニュー", "駐車場"] },
@@ -3616,7 +3617,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kobe-harborland": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "神戸ハーバーランド店", address: "兵庫県神戸市中央区東川崎町1丁目6-1 神戸ハーバーランドモザイク2F", distance: "徒歩圏", m: 550, url: "https://www.bikkuri-donkey.com/shop/shop_1717/", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "中央区西元町店", address: "兵庫県神戸市中央区相生町一丁目1-14 TFS神戸ビル", distance: "徒歩圏", m: 390, url: "https://tenpo.ichibanya.co.jp/map/1789", fac: ["お子さまメニュー"] },
@@ -3657,7 +3658,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kobe-rokko": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR六甲道駅前店", address: "兵庫県神戸市灘区深田町三丁目3-7第一サン六甲道ハイツ1F", distance: "徒歩圏", m: 710, url: "https://tenpo.ichibanya.co.jp/map/1608", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ JR六甲道店", address: "兵庫県神戸市灘区 永手町 4-1-1 プリコ六甲道内", distance: "徒歩圏", m: 670, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=2010577" },
@@ -3677,7 +3678,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kobe-okamoto": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kushikatsu-tanaka", name: "串カツ田中 岡本店", address: "兵庫県神戸市東灘区岡本1丁目3-4", distance: "駅前", m: 290, url: "https://restaurant.kushi-tanaka.com/detail/1167/", fac: ["子供用イス", "座敷"] },
       { chain: "mcdonalds", name: "摂津本山店", address: "兵庫県神戸市東灘区岡本1-2-17", distance: "駅前", m: 250, url: "https://map.mcdonalds.co.jp/map/28589", fac: [] },
@@ -3692,7 +3693,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "bentencho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区弁天町店", address: "大阪府大阪市港区磯路二丁目20-21", distance: "徒歩圏", m: 370, url: "https://tenpo.ichibanya.co.jp/map/2715", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "gusto", name: "ガスト 港弁天町店(から好し取扱店)", address: "大阪府大阪市港区磯路2丁目20番地17", distance: "徒歩圏", m: 410, url: "https://store-info.skylark.co.jp/map/018711/", fac: ["おむつ替え台", "駐車場"] },
@@ -3713,7 +3714,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaka-ogimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "梅田東店", address: "大阪府大阪市北区堂山町1-5 三共梅田ビル2F", distance: "徒歩圏", m: 690, url: "https://www.bikkuri-donkey.com/shop/shop_1720/", fac: ["ベビーシート", "多目的トイレ"] },
       { chain: "cocoichi", name: "北区西天満五丁目店", address: "大阪府大阪市北区西天満五丁目8番5号", distance: "徒歩圏", m: 780, url: "https://tenpo.ichibanya.co.jp/map/3023", fac: ["お子さまメニュー"] },
@@ -3786,7 +3787,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-kanaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "komeda", name: "堺なかもず店", address: "大阪府堺市北区長曽根町3073-7", distance: "徒歩圏", m: 670, url: "https://www.komeda.co.jp/shop/detail.html?id=722", fac: ["お子様メニュー", "駐車場"] },
       { chain: "mcdonalds", name: "イオンそよら新金岡店", address: "大阪府堺市北区新金岡町4-1-11", distance: "駅前", m: 130, url: "https://map.mcdonalds.co.jp/map/27804", fac: [] },
@@ -3801,7 +3802,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kyoto-kitayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kura-sushi", name: "京都北山店", address: "京都府京都市左京区松ケ崎今海道町5-11", distance: "徒歩圏", m: 730, url: "https://shop.kurasushi.co.jp/detail/637", fac: ["多機能トイレ対応"] },
       { chain: "mos-burger", name: "モスバーガー京都北山駅前店", address: "京都府京都市左京区下鴨前萩町5-7 GATO DM北山", distance: "駅前", m: 120, url: "https://www.mos.jp/shop/detail/?shop_cd=08201", fac: [] },
@@ -3816,7 +3817,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "rokujizo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bronco-billy", name: "伏見桃山店", address: "京都府京都市伏見区桃山町因幡102", distance: "徒歩圏", m: 710, url: "https://www.bronco.co.jp/shop/kyoto/fusimimomoyama-ten/" },
       { chain: "kfc", name: "MOMOテラス店", address: "京都府京都市伏見区桃山町山ノ下32 MOMO2F", distance: "徒歩圏", m: 450, url: "https://search.kfc.co.jp/map/3229", fac: ["駐車場"] },
@@ -3836,14 +3837,14 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "suma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mister-donut", name: "JR須磨駅前 ショップ", address: "兵庫県神戸市須磨区須磨浦通5丁目1番18号", distance: "駅前", m: 40, url: "https://md.mapion.co.jp/b/misterdonut/info/1446/", fac: [] },
       { chain: "ohsho", name: "餃子の王将 須磨店", address: "兵庫県神戸市須磨区須磨浦通4-6-20", distance: "駅前", m: 140, url: "https://map.ohsho.co.jp/b/ohsho/info/1371/", fac: [] },
     ],
   },
   "kobe": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "神戸ハーバーランド店", address: "兵庫県神戸市中央区東川崎町1丁目6-1 神戸ハーバーランドモザイク2F", distance: "徒歩圏", m: 550, url: "https://www.bikkuri-donkey.com/shop/shop_1717/", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "中央区西元町店", address: "兵庫県神戸市中央区相生町一丁目1-14 TFS神戸ビル", distance: "徒歩圏", m: 390, url: "https://tenpo.ichibanya.co.jp/map/1789", fac: ["お子さまメニュー"] },
@@ -3884,7 +3885,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higobashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西区土佐堀店", address: "大阪府大阪市西区土佐堀二丁目2-4", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2407", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "大阪駅前第3ビル店", address: "大阪府大阪市北区梅田一丁目1番3号 地下2階", distance: "徒歩圏", m: 750, url: "https://tenpo.ichibanya.co.jp/map/2632", fac: ["お子さまメニュー"] },
@@ -3968,7 +3969,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2, "tully-coffee": 1},
   },
   "ebisucho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "浪速区日本橋五丁目店", address: "大阪府大阪市浪速区日本橋五丁目7-20 たけやビル1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2492", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "浪速区大国町店", address: "大阪府大阪市浪速区敷津東一丁目9-3パチンコアロー浪速店1F", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/2086", fac: [] },
@@ -4022,7 +4023,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yotsuya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 四谷店", address: "東京都新宿区四谷2丁目1-3 四谷213ビル2F", distance: "徒歩圏", m: 340, url: "https://store-info.skylark.co.jp/map/171587/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "千代田区麹町店", address: "東京都千代田区麹町三丁目3 麹町センタープレイス", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/2680", fac: [] },
@@ -4077,7 +4078,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokyo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 東京駅八重洲中央口店", address: "東京都千代田区 丸の内 1-9-1", distance: "駅前", m: 210, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012508" },
@@ -4182,7 +4183,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "akihabara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン アトレ秋葉原2店", address: "東京都千代田区神田花岡町1-9 アトレ秋葉原2店 5階", distance: "駅前", m: 80, url: "https://store-info.skylark.co.jp/map/171626/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR秋葉原駅昭和通り口店", address: "東京都千代田区神田平河町4番地渡辺ビル1階", distance: "駅前", m: 170, url: "https://tenpo.ichibanya.co.jp/map/1560", fac: [] },
@@ -4254,6 +4255,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "神田駅前店", address: "東京都千代田区神田鍛冶町3-2 神田サンミビル", distance: "徒歩圏", m: 630, url: "https://store.starbucks.co.jp/detail-227/" },
       { chain: "starbucks", name: "淡路町駅前店", address: "東京都千代田区神田淡路町1-2", distance: "徒歩圏", m: 650, url: "https://store.starbucks.co.jp/detail-1629/" },
       { chain: "subway", name: "サブウェイ 秋葉原タイムズタワー店", address: "東京都千代田区外神田4-14-2東京タイムズタワー1F", distance: "徒歩圏", m: 350, url: "https://subway.co.jp/shop/5704/", fac: ["キッズセット"] },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 430, url: "https://subway.co.jp/shop/5924/" },
       { chain: "sukiya", name: "すき家 アキバ田代通り店", address: "東京都千代田区外神田4-5-8", distance: "徒歩圏", m: 360, url: "https://maps.sukiya.jp/jp/detail/1482.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 秋葉原駅岩本町店", address: "東京都千代田区岩本町3-3-5", distance: "徒歩圏", m: 430, url: "https://maps.sukiya.jp/jp/detail/1714.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 末広町店", address: "東京都千代田区外神田6-15-14", distance: "徒歩圏", m: 610, url: "https://maps.sukiya.jp/jp/detail/793.html", fac: ["お子様メニュー"] },
@@ -4327,7 +4329,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"veloce": 1},
   },
   "kanda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "神田駅北口店", address: "東京都千代田区神田鍛冶町三丁目3番地", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/1707", fac: [] },
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 720, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
@@ -4441,6 +4443,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "東京ステーションシティ サピアタワー店", address: "東京都千代田区丸の内1-7-12", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-757/" },
       { chain: "starbucks", name: "JR東京駅日本橋口店", address: "東京都千代田区丸の内1-9-1 丸の内中央ビル", distance: "少し歩く", m: 950, url: "https://store.starbucks.co.jp/detail-460/" },
       { chain: "starbucks", name: "お茶の水サンクレール店", address: "東京都千代田区神田駿河台4-3", distance: "少し歩く", m: 970, url: "https://store.starbucks.co.jp/detail-1487/" },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "少し歩く", m: 800, url: "https://subway.co.jp/shop/5924/" },
       { chain: "sukiya", name: "すき家 日本橋小伝馬町店", address: "東京都中央区日本橋小伝馬町15-18", distance: "少し歩く", m: 830, url: "https://maps.sukiya.jp/jp/detail/1533.html", fac: ["お子様メニュー"] },
       { chain: "tonkatsu-wako", name: "和幸ヨドバシAkiba店", address: "東京都千代田区神田花岡町1-1 ヨドバシAkiba8F", distance: "少し歩く", m: 840, url: "https://wako-group.co.jp/shop/detai/shop_1176/", fac: ["子供椅子", "駐車場"] },
       { chain: "tonkatsu-wako", name: "和幸カンファレンスセンター大手町店", address: "東京都千代田区大手町1-3-2 大手町カンファレンスセンターB1", distance: "少し歩く", m: 910, url: "https://wako-group.co.jp/shop/detai/shop_1140/", fac: [] },
@@ -4463,7 +4466,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"pronto": 1, "tully-coffee": 4},
   },
   "yurakucho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 有楽町駅前店", address: "東京都千代田区 丸の内 3-6-11", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012237" },
@@ -4572,7 +4575,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "iidabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 飯田橋東口店", address: "東京都新宿区 下宮比町 1-4", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012405" },
       { chain: "doutor", name: "ドトールコーヒーショップ 飯田橋ラムラ店", address: "東京都新宿区 神楽河岸 1-1 飯田橋セントラルプラザ 2F", distance: "駅前", m: 150, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011984" },
@@ -4644,7 +4647,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ichigaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 二番町店", address: "東京都千代田区二番町8-8 セブン&アイHLDGS. ビル内", distance: "徒歩圏", m: 700, url: "https://shop.dennys.jp/map/21942", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 市ヶ谷駅前店", address: "東京都千代田区 九段南 4-8-27 重盛ビル", distance: "駅前", m: 170, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010412" },
@@ -4667,6 +4670,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "osaka-ohsho", name: "市ヶ谷店", address: "東京都千代田区九段南4-6-7 YSビル 1F", distance: "駅前", url: "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=533", fac: [] },
       { chain: "pronto", name: "PRONTO 市ヶ谷店", address: "東京都千代田区九段北4-2-13", distance: "駅前", m: 90, url: "https://shop.pronto.co.jp/detail/133/" },
       { chain: "starbucks", name: "市ヶ谷駅前店", address: "東京都千代田区五番町2 市ヶ谷ストア 2F", distance: "駅前", m: 70, url: "https://store.starbucks.co.jp/detail-2252/" },
+      { chain: "subway", name: "サブウェイ 市ヶ谷東店", address: "東京都千代田区九段南4-6-11九段渋木ビル 1階", distance: "徒歩圏", m: 320, url: "https://subway.co.jp/shop/5934/" },
       { chain: "veloce", name: "一番町店", address: "東京都千代田区一番町7-5 ユーキメゾン一番町1F", distance: "徒歩圏", m: 760, url: "https://c-united.co.jp/store/detail/000331/" },
       { chain: "yoshinoya", name: "吉野家 市ヶ谷駅前店", address: "東京都千代田区五番町3-3", distance: "駅前", m: 170, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061321", fac: [] },
     ],
@@ -4692,7 +4696,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ochanomizu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 秋葉原店", address: "東京都千代田区外神田2-4-4", distance: "徒歩圏", m: 350, url: "https://maps.cocos-jpn.co.jp/jp/detail/2875.html", fac: ["ベビーシート", "お子様メニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ お茶の水駿河台店", address: "東京都千代田区 神田駿河台 1-6", distance: "徒歩圏", m: 300, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011130" },
@@ -4748,6 +4752,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "淡路町駅前店", address: "東京都千代田区神田淡路町1-2", distance: "徒歩圏", m: 480, url: "https://store.starbucks.co.jp/detail-1629/" },
       { chain: "starbucks", name: "神田小川町2丁目店", address: "東京都千代田区神田小川町2-5-5 紀陽東京ビル 1F", distance: "徒歩圏", m: 610, url: "https://store.starbucks.co.jp/detail-100/" },
       { chain: "subway", name: "サブウェイ 御茶ノ水駅前ファミリーマート店", address: "東京都千代田区神田駿河台2-1", distance: "駅前", m: 180, url: "https://subway.co.jp/shop/5677/", fac: ["キッズセット"] },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 380, url: "https://subway.co.jp/shop/5924/" },
       { chain: "subway", name: "サブウェイ 秋葉原タイムズタワー店", address: "東京都千代田区外神田4-14-2東京タイムズタワー1F", distance: "徒歩圏", m: 710, url: "https://subway.co.jp/shop/5704/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 アキバ田代通り店", address: "東京都千代田区外神田4-5-8", distance: "徒歩圏", m: 680, url: "https://maps.sukiya.jp/jp/detail/1482.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 神保町駅前店", address: "東京都千代田区神田神保町1-14 KDX神保町ビル1F", distance: "徒歩圏", m: 680, url: "https://maps.sukiya.jp/jp/detail/1622.html", fac: ["お子様メニュー"] },
@@ -4836,7 +4841,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "shin-ochanomizu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 秋葉原店", address: "東京都千代田区外神田2-4-4", distance: "徒歩圏", m: 350, url: "https://maps.cocos-jpn.co.jp/jp/detail/2875.html", fac: ["ベビーシート", "お子様メニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ お茶の水駿河台店", address: "東京都千代田区 神田駿河台 1-6", distance: "徒歩圏", m: 300, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011130" },
@@ -4892,6 +4897,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "淡路町駅前店", address: "東京都千代田区神田淡路町1-2", distance: "徒歩圏", m: 480, url: "https://store.starbucks.co.jp/detail-1629/" },
       { chain: "starbucks", name: "神田小川町2丁目店", address: "東京都千代田区神田小川町2-5-5 紀陽東京ビル 1F", distance: "徒歩圏", m: 610, url: "https://store.starbucks.co.jp/detail-100/" },
       { chain: "subway", name: "サブウェイ 御茶ノ水駅前ファミリーマート店", address: "東京都千代田区神田駿河台2-1", distance: "駅前", m: 180, url: "https://subway.co.jp/shop/5677/", fac: ["キッズセット"] },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 380, url: "https://subway.co.jp/shop/5924/" },
       { chain: "subway", name: "サブウェイ 秋葉原タイムズタワー店", address: "東京都千代田区外神田4-14-2東京タイムズタワー1F", distance: "徒歩圏", m: 710, url: "https://subway.co.jp/shop/5704/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 アキバ田代通り店", address: "東京都千代田区外神田4-5-8", distance: "徒歩圏", m: 680, url: "https://maps.sukiya.jp/jp/detail/1482.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 神保町駅前店", address: "東京都千代田区神田神保町1-14 KDX神保町ビル1F", distance: "徒歩圏", m: 680, url: "https://maps.sukiya.jp/jp/detail/1622.html", fac: ["お子様メニュー"] },
@@ -4980,7 +4986,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "awajicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン アトレ秋葉原2店", address: "東京都千代田区神田花岡町1-9 アトレ秋葉原2店 5階", distance: "徒歩圏", m: 730, url: "https://store-info.skylark.co.jp/map/171626/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "神田駅北口店", address: "東京都千代田区神田鍛冶町三丁目3番地", distance: "徒歩圏", m: 370, url: "https://tenpo.ichibanya.co.jp/map/1707", fac: [] },
@@ -5061,6 +5067,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "神田駅前店", address: "東京都千代田区神田鍛冶町3-2 神田サンミビル", distance: "徒歩圏", m: 410, url: "https://store.starbucks.co.jp/detail-227/" },
       { chain: "starbucks", name: "神田小川町2丁目店", address: "東京都千代田区神田小川町2-5-5 紀陽東京ビル 1F", distance: "徒歩圏", m: 440, url: "https://store.starbucks.co.jp/detail-100/" },
       { chain: "starbucks", name: "お茶の水サンクレール店", address: "東京都千代田区神田駿河台4-3", distance: "徒歩圏", m: 470, url: "https://store.starbucks.co.jp/detail-1487/" },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 400, url: "https://subway.co.jp/shop/5924/" },
       { chain: "subway", name: "サブウェイ 御茶ノ水駅前ファミリーマート店", address: "東京都千代田区神田駿河台2-1", distance: "徒歩圏", m: 600, url: "https://subway.co.jp/shop/5677/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 秋葉原駅岩本町店", address: "東京都千代田区岩本町3-3-5", distance: "徒歩圏", m: 780, url: "https://maps.sukiya.jp/jp/detail/1714.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 アキバ田代通り店", address: "東京都千代田区外神田4-5-8", distance: "徒歩圏", m: 790, url: "https://maps.sukiya.jp/jp/detail/1482.html", fac: ["お子様メニュー"] },
@@ -5125,7 +5132,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "ogawamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン アトレ秋葉原2店", address: "東京都千代田区神田花岡町1-9 アトレ秋葉原2店 5階", distance: "徒歩圏", m: 730, url: "https://store-info.skylark.co.jp/map/171626/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "神田駅北口店", address: "東京都千代田区神田鍛冶町三丁目3番地", distance: "徒歩圏", m: 370, url: "https://tenpo.ichibanya.co.jp/map/1707", fac: [] },
@@ -5206,6 +5213,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "神田駅前店", address: "東京都千代田区神田鍛冶町3-2 神田サンミビル", distance: "徒歩圏", m: 410, url: "https://store.starbucks.co.jp/detail-227/" },
       { chain: "starbucks", name: "神田小川町2丁目店", address: "東京都千代田区神田小川町2-5-5 紀陽東京ビル 1F", distance: "徒歩圏", m: 440, url: "https://store.starbucks.co.jp/detail-100/" },
       { chain: "starbucks", name: "お茶の水サンクレール店", address: "東京都千代田区神田駿河台4-3", distance: "徒歩圏", m: 470, url: "https://store.starbucks.co.jp/detail-1487/" },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 400, url: "https://subway.co.jp/shop/5924/" },
       { chain: "subway", name: "サブウェイ 御茶ノ水駅前ファミリーマート店", address: "東京都千代田区神田駿河台2-1", distance: "徒歩圏", m: 600, url: "https://subway.co.jp/shop/5677/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 秋葉原駅岩本町店", address: "東京都千代田区岩本町3-3-5", distance: "徒歩圏", m: 780, url: "https://maps.sukiya.jp/jp/detail/1714.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 アキバ田代通り店", address: "東京都千代田区外神田4-5-8", distance: "徒歩圏", m: 790, url: "https://maps.sukiya.jp/jp/detail/1482.html", fac: ["お子様メニュー"] },
@@ -5270,7 +5278,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "iwamotocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン アトレ秋葉原2店", address: "東京都千代田区神田花岡町1-9 アトレ秋葉原2店 5階", distance: "徒歩圏", m: 330, url: "https://store-info.skylark.co.jp/map/171626/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR秋葉原駅昭和通り口店", address: "東京都千代田区神田平河町4番地渡辺ビル1階", distance: "徒歩圏", m: 320, url: "https://tenpo.ichibanya.co.jp/map/1560", fac: [] },
@@ -5347,6 +5355,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "神田駅前店", address: "東京都千代田区神田鍛冶町3-2 神田サンミビル", distance: "徒歩圏", m: 480, url: "https://store.starbucks.co.jp/detail-227/" },
       { chain: "starbucks", name: "アトレ秋葉原1店", address: "東京都千代田区外神田1-17-6 アトレ秋葉原1", distance: "徒歩圏", m: 480, url: "https://store.starbucks.co.jp/detail-956/" },
       { chain: "starbucks", name: "神田駅南口店", address: "東京都千代田区鍛冶町2-13-1 JR神田駅南改札口外", distance: "徒歩圏", m: 650, url: "https://store.starbucks.co.jp/detail-2239/" },
+      { chain: "subway", name: "サブウェイ 住友不動産秋葉原ファーストビル店", address: "東京都千代田区外神田一丁目5番1号住友不動産秋葉原ファーストビル1階", distance: "徒歩圏", m: 710, url: "https://subway.co.jp/shop/5924/" },
       { chain: "subway", name: "サブウェイ 秋葉原タイムズタワー店", address: "東京都千代田区外神田4-14-2東京タイムズタワー1F", distance: "徒歩圏", m: 730, url: "https://subway.co.jp/shop/5704/", fac: ["キッズセット"] },
       { chain: "sukiya", name: "すき家 秋葉原駅岩本町店", address: "東京都千代田区岩本町3-3-5", distance: "駅前", m: 50, url: "https://maps.sukiya.jp/jp/detail/1714.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 日本橋小伝馬町店", address: "東京都中央区日本橋小伝馬町15-18", distance: "徒歩圏", m: 550, url: "https://maps.sukiya.jp/jp/detail/1533.html", fac: ["お子様メニュー"] },
@@ -5411,7 +5420,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "otemachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 大手町ファーストスクエア店", address: "東京都千代田区 大手町 1-5-1 大手町ファーストスクエアビル B1F", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010293" },
       { chain: "doutor", name: "ドトールコーヒーショップ 都営大手町店", address: "東京都千代田区 丸の内 1-3-1 都営地下鉄三田線大手町駅改札前 B1F", distance: "駅前", m: 160, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011194" },
@@ -5504,7 +5513,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 6, "tully-coffee": 3},
   },
   "nijubashimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 都営大手町店", address: "東京都千代田区 丸の内 1-3-1 都営地下鉄三田線大手町駅改札前 B1F", distance: "徒歩圏", m: 440, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011194" },
@@ -5601,7 +5610,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 3, "tully-coffee": 3},
   },
   "hibiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 有楽町電気ビル店", address: "東京都千代田区 有楽町 1-7-1", distance: "駅前", m: 180, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011807" },
       { chain: "doutor", name: "ドトールコーヒーショップ 有楽町日比谷口店", address: "東京都千代田区 有楽町 1-3-7", distance: "駅前", m: 200, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011851" },
@@ -5707,7 +5716,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 2, "starbucks": 3},
   },
   "kasumigaseki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 虎ノ門桜田通り店", address: "東京都港区 虎ノ門 2-5-4", distance: "徒歩圏", m: 620, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011549" },
       { chain: "hanamaru-udon", name: "はなまるうどん 虎ノ門店", address: "東京都港区虎ノ門1-1-21 虎ノ門実業会館 1F", distance: "徒歩圏", m: 390, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1129", fac: [] },
@@ -5768,7 +5777,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kokkai-gijidomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区赤坂店", address: "東京都港区赤坂三丁目14番7号ユニ赤坂ビル1階", distance: "徒歩圏", m: 740, url: "https://tenpo.ichibanya.co.jp/map/1836", fac: [] },
       { chain: "denny-s", name: "デニーズ 赤坂駅前店", address: "東京都港区赤坂3-14-9 赤坂清水ビル2階", distance: "徒歩圏", m: 740, url: "https://shop.dennys.jp/map/22017", fac: ["入口段差なしまたはエレベーター"] },
@@ -5837,7 +5846,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nagatacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区赤坂店", address: "東京都港区赤坂三丁目14番7号ユニ赤坂ビル1階", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1836", fac: [] },
       { chain: "cocoichi", name: "千代田区麹町店", address: "東京都千代田区麹町三丁目3 麹町センタープレイス", distance: "徒歩圏", m: 640, url: "https://tenpo.ichibanya.co.jp/map/2680", fac: [] },
@@ -5899,7 +5908,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akasaka-mitsuke": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区赤坂店", address: "東京都港区赤坂三丁目14番7号ユニ赤坂ビル1階", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1836", fac: [] },
       { chain: "cocoichi", name: "千代田区麹町店", address: "東京都千代田区麹町三丁目3 麹町センタープレイス", distance: "徒歩圏", m: 640, url: "https://tenpo.ichibanya.co.jp/map/2680", fac: [] },
@@ -5961,7 +5970,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hanzomon": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "千代田区麹町店", address: "東京都千代田区麹町三丁目3 麹町センタープレイス", distance: "徒歩圏", m: 360, url: "https://tenpo.ichibanya.co.jp/map/2680", fac: [] },
       { chain: "denny-s", name: "デニーズ 二番町店", address: "東京都千代田区二番町8-8 セブン&アイHLDGS. ビル内", distance: "徒歩圏", m: 680, url: "https://shop.dennys.jp/map/21942", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -5985,6 +5994,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "osaka-ohsho", name: "市ヶ谷店", address: "東京都千代田区九段南4-6-7 YSビル 1F", distance: "徒歩圏", url: "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=533", fac: [] },
       { chain: "pronto", name: "PRONTO 市ヶ谷店", address: "東京都千代田区九段北4-2-13", distance: "徒歩圏", m: 770, url: "https://shop.pronto.co.jp/detail/133/" },
       { chain: "starbucks", name: "麹町店", address: "東京都千代田区麹町3-2-5 垣見麹町ビル別館 1F", distance: "駅前", m: 280, url: "https://store.starbucks.co.jp/detail-33/" },
+      { chain: "subway", name: "サブウェイ 市ヶ谷東店", address: "東京都千代田区九段南4-6-11九段渋木ビル 1階", distance: "徒歩圏", m: 720, url: "https://subway.co.jp/shop/5934/" },
       { chain: "tully-coffee", name: "麹町店", address: "東京都千代田区 麹町3-3 麹町センタープレイス1F", distance: "徒歩圏", m: 380, url: "https://shop.tullys.co.jp/detail/1000035" },
       { chain: "tully-coffee", name: "住友不動産麹町ガーデンタワー店", address: "東京都千代田区麹町5丁目1-1 住友不動産麹町ガーデンタワー3F", distance: "徒歩圏", m: 680, url: "https://shop.tullys.co.jp/detail/5663303" },
       { chain: "tully-coffee", name: "四ツ谷東口店", address: "東京都千代田区 麹町5-3 第7秋山ビルディング1F", distance: "徒歩圏", m: 760, url: "https://shop.tullys.co.jp/detail/4570444" },
@@ -6003,7 +6013,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kojimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "千代田区麹町店", address: "東京都千代田区麹町三丁目3 麹町センタープレイス", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2680", fac: [] },
       { chain: "denny-s", name: "デニーズ 二番町店", address: "東京都千代田区二番町8-8 セブン&アイHLDGS. ビル内", distance: "徒歩圏", m: 370, url: "https://shop.dennys.jp/map/21942", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -6060,11 +6070,12 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "saint-marc-cafe", name: "サンマルクカフェ 四ツ谷駅前店", address: "東京都新宿区四谷1-2-4 クニヤビル", distance: "少し歩く", m: 800, url: "https://www.saint-marc-hd.com/saintmarccafe/shop/632/" },
       { chain: "starbucks", name: "市ヶ谷駅前店", address: "東京都千代田区五番町2 市ヶ谷ストア 2F", distance: "少し歩く", m: 810, url: "https://store.starbucks.co.jp/detail-2252/" },
       { chain: "starbucks", name: "赤坂プルデンシャルタワー店", address: "東京都千代田区永田町2-13-10 プルデンシャルタワー", distance: "少し歩く", m: 890, url: "https://store.starbucks.co.jp/detail-824/" },
+      { chain: "subway", name: "サブウェイ 市ヶ谷東店", address: "東京都千代田区九段南4-6-11九段渋木ビル 1階", distance: "少し歩く", m: 900, url: "https://subway.co.jp/shop/5934/" },
       { chain: "yoshinoya", name: "吉野家 四ッ谷駅前店", address: "東京都新宿区四谷1丁目8-14", distance: "少し歩く", m: 840, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061337", fac: ["お子様メニュー"] },
     ],
   },
   "kudanshita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "千代田区専大通店", address: "東京都千代田区西神田二丁目4番7号福島ビル1階", distance: "徒歩圏", m: 350, url: "https://tenpo.ichibanya.co.jp/map/1860", fac: [] },
       { chain: "cocoichi", name: "水道橋外堀通り店", address: "東京都文京区後楽一丁目1-15 梅澤ビル1F", distance: "徒歩圏", m: 790, url: "https://tenpo.ichibanya.co.jp/map/2938", fac: [] },
@@ -6138,7 +6149,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "jimbocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "千代田区専大通店", address: "東京都千代田区西神田二丁目4番7号福島ビル1階", distance: "徒歩圏", m: 390, url: "https://tenpo.ichibanya.co.jp/map/1860", fac: [] },
       { chain: "cocoichi", name: "水道橋外堀通り店", address: "東京都文京区後楽一丁目1-15 梅澤ビル1F", distance: "徒歩圏", m: 790, url: "https://tenpo.ichibanya.co.jp/map/2938", fac: [] },
@@ -6230,7 +6241,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takebashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 竹橋店", address: "東京都千代田区 一ツ橋 1-1-1 パレスサイドビル B1F", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012144" },
       { chain: "doutor", name: "ドトールコーヒーショップ 神保町すずらん通り店", address: "東京都千代田区 神田神保町 1-17", distance: "徒歩圏", m: 590, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011678" },
@@ -6294,7 +6305,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 2},
   },
   "suidobashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "水道橋外堀通り店", address: "東京都文京区後楽一丁目1-15 梅澤ビル1F", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2938", fac: [] },
       { chain: "cocoichi", name: "千代田区専大通店", address: "東京都千代田区西神田二丁目4番7号福島ビル1階", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1860", fac: [] },
@@ -6396,7 +6407,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ginza": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 780, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 有楽町日比谷口店", address: "東京都千代田区 有楽町 1-3-7", distance: "徒歩圏", m: 320, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011851" },
@@ -6520,7 +6531,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"pronto": 1, "starbucks": 3},
   },
   "ginza-itchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 400, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座柳通り店", address: "東京都中央区 銀座 1-9-12", distance: "駅前", m: 180, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010384" },
@@ -6625,7 +6636,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "新丸ビル店", address: "東京都千代田区丸の内1-5-1 新丸の内ビル", distance: "少し歩く", m: 940, url: "https://store.starbucks.co.jp/detail-743/" },
       { chain: "sukiya", name: "すき家 八丁堀四丁目店", address: "東京都中央区八丁堀4-8-2", distance: "少し歩く", m: 830, url: "https://maps.sukiya.jp/jp/detail/1353.html", fac: ["お子様メニュー"] },
       { chain: "tenya", name: "築地店", address: "東京都中央区築地2-15-15 セントラル東銀座1F", distance: "少し歩く", m: 820, url: "https://www.tenya.co.jp/shop/tokyo/chuo/tsukiji.html", fac: [] },
-      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "少し歩く", m: 980, url: "https://shop.tullys.co.jp/detail/1000878" },
+      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "少し歩く", m: 980, url: "https://shop.tullys.co.jp/detail/4300878" },
       { chain: "veloce", name: "築地店", address: "東京都中央区築地3-9-10 築地ビル1F", distance: "少し歩く", m: 860, url: "https://c-united.co.jp/store/detail/000256/" },
       { chain: "veloce", name: "日本橋店", address: "東京都中央区日本橋2-10-5 GRANBIZ東京日本橋1F", distance: "少し歩く", m: 1000, url: "https://c-united.co.jp/store/detail/000203/" },
       { chain: "yoshinoya", name: "吉野家 新富町店", address: "東京都中央区新富1丁目17-6", distance: "少し歩く", m: 820, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061465", fac: [] },
@@ -6633,7 +6644,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "higashi-ginza": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座4丁目店", address: "東京都中央区 銀座 4-11-6 銀座島倉ビル", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010171" },
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座6丁目店", address: "東京都中央区 銀座 6-13-6", distance: "駅前", m: 210, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010570" },
@@ -6685,10 +6696,10 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "saizeriya", name: "サイゼリヤ 銀座インズ店", address: "東京都中央区銀座西3-1銀座インズ2F", distance: "徒歩圏", m: 570, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1043", fac: [] },
       { chain: "shabu-yo", name: "しゃぶ葉 マロニエゲート銀座2店", address: "東京都中央区銀座3丁目2-1", distance: "徒歩圏", m: 500, url: "https://store-info.skylark.co.jp/map/198461/", fac: ["車椅子入店可", "多目的トイレ"] },
       { chain: "starbucks", name: "東銀座店", address: "東京都中央区銀座5-15-8 時事通信ビル", distance: "駅前", m: 190, url: "https://store.starbucks.co.jp/detail-520/" },
-      { chain: "starbucks", name: "GINZA SIX店", address: "東京都中央区銀座6-10-1", distance: "駅前", m: 220, url: "https://store.starbucks.co.jp/detail-1374/" },
       { chain: "starbucks", name: "銀座松屋通り店", address: "東京都中央区銀座3-7-14 ESKビル 1F", distance: "駅前", m: 250, url: "https://store.starbucks.co.jp/detail-1/" },
       { chain: "starbucks", name: "銀座 蔦屋書店", address: "東京都中央区銀座6-10-1 GINZA SIX 6階", distance: "駅前", m: 260, url: "https://store.starbucks.co.jp/detail-1622/" },
       { chain: "starbucks", name: "CIRCLES 銀座店", address: "東京都中央区銀座3-7-6 CIRCLES 銀座", distance: "駅前", m: 280, url: "https://store.starbucks.co.jp/detail-1879/" },
+      { chain: "starbucks", name: "スターバックス ティバーナストア 銀座マロニエ通り", address: "東京都中央区銀座3-7-3 銀座オーミビル B1F", distance: "徒歩圏", m: 300, url: "https://store.starbucks.co.jp/detail-4507/" },
       { chain: "sushiro", name: "aune有楽町店", address: "東京都千代田区有楽町2丁目3-5 aune有楽町2階", distance: "徒歩圏", m: 670, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2785", fac: [] },
       { chain: "sushiro", name: "有楽町店", address: "東京都千代田区有楽町一丁目11番1号 ビックカメラ有楽町店内6階", distance: "徒歩圏", m: 770, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2228", fac: [] },
       { chain: "tenya", name: "銀座店", address: "東京都中央区銀座3-9-4 草野ビル1F", distance: "駅前", m: 280, url: "https://www.tenya.co.jp/shop/tokyo/chuo/ginza.html", fac: [] },
@@ -6709,7 +6720,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "yoshinoya", name: "吉野家 新富町店", address: "東京都中央区新富1丁目17-6", distance: "徒歩圏", m: 770, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061465", fac: [] },
       { chain: "yoshinoya", name: "吉野家 新橋東店", address: "東京都港区新橋2丁目18-5", distance: "徒歩圏", m: 790, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061348", fac: [] },
     ],
-    more: {"doutor": 3, "starbucks": 12, "tully-coffee": 5},
+    more: {"doutor": 3, "starbucks": 11, "tully-coffee": 5},
     far: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "少し歩く", m: 900, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 京橋2丁目店", address: "東京都中央区 京橋 2-5-18", distance: "少し歩く", m: 800, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012436" },
@@ -6745,7 +6756,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "nihombashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区八丁堀店", address: "東京都中央区八丁堀一丁目7番8号若狭ビル1F", distance: "徒歩圏", m: 490, url: "https://tenpo.ichibanya.co.jp/map/1672", fac: [] },
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 670, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
@@ -6805,7 +6816,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "東京日本橋タワー7階店", address: "東京都中央区 日本橋二丁目7番1号 東京日本橋タワー7階", distance: "駅前", m: 10, url: "https://shop.tullys.co.jp/detail/1000961" },
       { chain: "tully-coffee", name: "OEDO日本橋店", address: "東京都中央区 日本橋二丁目7-1 東京日本橋タワーB1F", distance: "駅前", m: 10, url: "https://shop.tullys.co.jp/detail/1000847" },
       { chain: "tully-coffee", name: "ヤエチカ店", address: "東京都中央区 八重洲2丁目1番八重洲地下街中4号", distance: "徒歩圏", m: 370, url: "https://shop.tullys.co.jp/detail/1000641" },
-      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 390, url: "https://shop.tullys.co.jp/detail/1000878" },
+      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 390, url: "https://shop.tullys.co.jp/detail/4300878" },
       { chain: "tully-coffee", name: "常盤橋タワー店", address: "東京都千代田区 大手町二丁目6番4号 TOKYO TORCH 常盤橋タワー 地下1階", distance: "徒歩圏", m: 410, url: "https://shop.tullys.co.jp/detail/1003159" },
       { chain: "veloce", name: "日本橋店", address: "東京都中央区日本橋2-10-5 GRANBIZ東京日本橋1F", distance: "駅前", m: 140, url: "https://c-united.co.jp/store/detail/000203/" },
       { chain: "veloce", name: "室町一丁目店", address: "東京都中央区日本橋室町1-9-1 日本橋室町ビル1F", distance: "徒歩圏", m: 340, url: "https://c-united.co.jp/store/detail/000318/" },
@@ -6862,7 +6873,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 4, "tully-coffee": 1},
   },
   "mitsukoshimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
       { chain: "cocoichi", name: "神田駅北口店", address: "東京都千代田区神田鍛冶町三丁目3番地", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/1707", fac: [] },
@@ -6917,7 +6928,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "日本橋YUITOアネックス店", address: "東京都中央区 日本橋室町2丁目4番1号 浮世小路千疋屋ビルB1F", distance: "駅前", m: 50, url: "https://shop.tullys.co.jp/detail/1000741" },
       { chain: "tully-coffee", name: "常盤橋タワー店", address: "東京都千代田区 大手町二丁目6番4号 TOKYO TORCH 常盤橋タワー 地下1階", distance: "徒歩圏", m: 380, url: "https://shop.tullys.co.jp/detail/1003159" },
       { chain: "tully-coffee", name: "大手町プレイス 2階店", address: "東京都千代田区 大手町二丁目3番1号 大手町プレイス2階", distance: "徒歩圏", m: 530, url: "https://shop.tullys.co.jp/detail/1003030" },
-      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 540, url: "https://shop.tullys.co.jp/detail/1000878" },
+      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 540, url: "https://shop.tullys.co.jp/detail/4300878" },
       { chain: "tully-coffee", name: "OEDO日本橋店", address: "東京都中央区 日本橋二丁目7-1 東京日本橋タワーB1F", distance: "徒歩圏", m: 550, url: "https://shop.tullys.co.jp/detail/1000847" },
       { chain: "veloce", name: "室町一丁目店", address: "東京都中央区日本橋室町1-9-1 日本橋室町ビル1F", distance: "駅前", m: 290, url: "https://c-united.co.jp/store/detail/000318/" },
       { chain: "veloce", name: "鍛冶町店", address: "東京都千代田区鍛冶町1-8-3 神田91ビル1F", distance: "徒歩圏", m: 450, url: "https://c-united.co.jp/store/detail/000339/" },
@@ -6985,7 +6996,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "shintomicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 八丁堀店", address: "東京都中央区八丁堀2-25-10", distance: "徒歩圏", m: 750, url: "https://shop.dennys.jp/map/21752", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 築地聖路加通り店", address: "東京都中央区 築地 3-7-1 TSUKIJI GRANDE", distance: "駅前", m: 270, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010403" },
@@ -7060,20 +7071,19 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "saizeriya", name: "サイゼリヤ 八丁堀", address: "東京都中央区八丁堀1-12-8 MIMARU東京STATION EAST2F", distance: "少し歩く", m: 860, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1540", fac: [] },
       { chain: "saizeriya", name: "サイゼリヤ 銀座インズ店", address: "東京都中央区銀座西3-1銀座インズ2F", distance: "少し歩く", m: 910, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1043", fac: [] },
       { chain: "shabu-yo", name: "しゃぶ葉 マロニエゲート銀座2店", address: "東京都中央区銀座3丁目2-1", distance: "少し歩く", m: 840, url: "https://store-info.skylark.co.jp/map/198461/", fac: ["車椅子入店可", "多目的トイレ"] },
-      { chain: "starbucks", name: "GINZA SIX店", address: "東京都中央区銀座6-10-1", distance: "少し歩く", m: 800, url: "https://store.starbucks.co.jp/detail-1374/" },
       { chain: "starbucks", name: "京橋エドグラン店", address: "東京都中央区京橋2-2-1 京橋エドグラン", distance: "少し歩く", m: 840, url: "https://store.starbucks.co.jp/detail-1357/" },
       { chain: "starbucks", name: "銀座 蔦屋書店", address: "東京都中央区銀座6-10-1 GINZA SIX 6階", distance: "少し歩く", m: 840, url: "https://store.starbucks.co.jp/detail-1622/" },
       { chain: "starbucks", name: "マロニエゲート銀座1店", address: "東京都中央区銀座2-2-14 マロニエゲート銀座1", distance: "少し歩く", m: 860, url: "https://store.starbucks.co.jp/detail-1485/" },
       { chain: "starbucks", name: "銀座EXITMELSA店", address: "東京都中央区銀座5-7-10", distance: "少し歩く", m: 860, url: "https://store.starbucks.co.jp/detail-1539/" },
+      { chain: "starbucks", name: "エチカフィット銀座店", address: "東京都中央区銀座4-1-2 東京メトロ銀座駅構内", distance: "少し歩く", m: 970, url: "https://store.starbucks.co.jp/detail-1840/" },
       { chain: "sukiya", name: "すき家 東京駅京橋店", address: "東京都中央区京橋1-1-9 レオ八重洲ビル1F", distance: "少し歩く", m: 980, url: "https://maps.sukiya.jp/jp/detail/1610.html", fac: ["お子様メニュー"] },
       { chain: "tully-coffee", name: "朝日新聞東京本社ビル店", address: "東京都中央区 築地5-3-2 朝日新聞東京本社ビル2Fコンコース内", distance: "少し歩く", m: 900, url: "https://shop.tullys.co.jp/detail/4570443" },
       { chain: "yayoiken", name: "やよい軒 銀座インズ店", address: "東京都中央区銀座西2丁目2 銀座インズ2 2F", distance: "少し歩く", m: 930, url: "https://store.yayoiken.com/b/yayoiken/info/2148/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 京橋2丁目店", address: "東京都中央区京橋2丁目8-21", distance: "少し歩く", m: 830, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061502", fac: [] },
     ],
-    farMore: {"starbucks": 1},
   },
   "tsukiji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 築地聖路加通り店", address: "東京都中央区 築地 3-7-1 TSUKIJI GRANDE", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010403" },
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座4丁目店", address: "東京都中央区 銀座 4-11-6 銀座島倉ビル", distance: "徒歩圏", m: 400, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010171" },
@@ -7146,7 +7156,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tsukijishijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座6丁目店", address: "東京都中央区 銀座 6-13-6", distance: "徒歩圏", m: 480, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010570" },
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座4丁目店", address: "東京都中央区 銀座 4-11-6 銀座島倉ビル", distance: "徒歩圏", m: 580, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010171" },
@@ -7178,8 +7188,8 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "東銀座店", address: "東京都中央区銀座5-15-8 時事通信ビル", distance: "徒歩圏", m: 320, url: "https://store.starbucks.co.jp/detail-520/" },
       { chain: "starbucks", name: "カレッタ汐留店", address: "東京都港区東新橋1-8-2 カレッタ汐留", distance: "徒歩圏", m: 450, url: "https://store.starbucks.co.jp/detail-772/" },
       { chain: "starbucks", name: "汐留シティセンター店", address: "東京都港区東新橋1-5-2 汐留シティセンター", distance: "徒歩圏", m: 540, url: "https://store.starbucks.co.jp/detail-439/" },
-      { chain: "starbucks", name: "GINZA SIX店", address: "東京都中央区銀座6-10-1", distance: "徒歩圏", m: 560, url: "https://store.starbucks.co.jp/detail-1374/" },
       { chain: "starbucks", name: "築地駅前店", address: "東京都中央区築地2-12-8 大広ビル 1F", distance: "徒歩圏", m: 570, url: "https://store.starbucks.co.jp/detail-61/" },
+      { chain: "starbucks", name: "東京汐留ビルディング店", address: "東京都港区東新橋1-9-1 東京汐留ビルディング地下2階", distance: "徒歩圏", m: 580, url: "https://store.starbucks.co.jp/detail-593/" },
       { chain: "tenya", name: "築地店", address: "東京都中央区築地2-15-15 セントラル東銀座1F", distance: "徒歩圏", m: 410, url: "https://www.tenya.co.jp/shop/tokyo/chuo/tsukiji.html", fac: [] },
       { chain: "tenya", name: "銀座店", address: "東京都中央区銀座3-9-4 草野ビル1F", distance: "徒歩圏", m: 780, url: "https://www.tenya.co.jp/shop/tokyo/chuo/ginza.html", fac: [] },
       { chain: "tully-coffee", name: "朝日新聞東京本社ビル店", address: "東京都中央区 築地5-3-2 朝日新聞東京本社ビル2Fコンコース内", distance: "駅前", m: 40, url: "https://shop.tullys.co.jp/detail/4570443" },
@@ -7193,7 +7203,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "yoshinoya", name: "吉野家 東銀座店", address: "東京都中央区銀座3丁目11-11", distance: "徒歩圏", m: 630, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041458", fac: [] },
       { chain: "yoshinoya", name: "吉野家 新橋東店", address: "東京都港区新橋2丁目18-5", distance: "徒歩圏", m: 740, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061348", fac: [] },
     ],
-    more: {"starbucks": 8, "tully-coffee": 4},
+    more: {"starbucks": 7, "tully-coffee": 4},
     far: [
       { chain: "doutor", name: "ドトールコーヒーショップ 銀座柳通り店", address: "東京都中央区 銀座 1-9-12", distance: "少し歩く", m: 960, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010384" },
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋外堀通り店", address: "東京都港区 新橋 1-16-4", distance: "少し歩く", m: 970, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012376" },
@@ -7228,7 +7238,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tsukishima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "excelsior", name: "エクセルシオール カフェ 聖路加ガーデン店", address: "東京都中央区 明石町 8-1 聖路加ガーデン 2F", distance: "徒歩圏", m: 550, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000007" },
       { chain: "freshness-burger", name: "フレッシュネスバーガー聖路加タワー店", address: "東京都中央区 明石町8-1 聖路加タワー1階", distance: "徒歩圏", m: 570, url: "https://search.freshnessburger.co.jp/detail/3031460/", fac: ["キッズセット"] },
@@ -7260,7 +7270,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kachidoki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "晴海トリトン店", address: "東京都中央区晴海一丁目8番8号 W棟2階203", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/2675", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 勝どき店", address: "東京都中央区 勝どき 1-7-1", distance: "駅前", m: 180, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011603" },
@@ -7296,7 +7306,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kayabacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 水天宮前店", address: "東京都中央区日本橋人形町1丁目12-11 リガーレ日本橋人形町203(2階)", distance: "徒歩圏", m: 520, url: "https://store-info.skylark.co.jp/map/171499/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "cocoichi", name: "中央区八丁堀店", address: "東京都中央区八丁堀一丁目7番8号若狭ビル1F", distance: "徒歩圏", m: 370, url: "https://tenpo.ichibanya.co.jp/map/1672", fac: [] },
@@ -7392,7 +7402,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "コレド室町2店", address: "東京都中央区日本橋室町2-3-1 コレド室町2 地下1階", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-4107/" },
       { chain: "starbucks", name: "日本橋本町店", address: "東京都中央区日本橋本町2-4-5 扶桑日本橋ビル 1F", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-53/" },
       { chain: "starbucks", name: "京橋エドグラン店", address: "東京都中央区京橋2-2-1 京橋エドグラン", distance: "少し歩く", m: 970, url: "https://store.starbucks.co.jp/detail-1357/" },
-      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "少し歩く", m: 960, url: "https://shop.tullys.co.jp/detail/1000878" },
+      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "少し歩く", m: 960, url: "https://shop.tullys.co.jp/detail/4300878" },
       { chain: "tully-coffee", name: "常盤橋タワー店", address: "東京都千代田区 大手町二丁目6番4号 TOKYO TORCH 常盤橋タワー 地下1階", distance: "少し歩く", m: 980, url: "https://shop.tullys.co.jp/detail/1003159" },
       { chain: "tully-coffee", name: "日本橋YUITOアネックス店", address: "東京都中央区 日本橋室町2丁目4番1号 浮世小路千疋屋ビルB1F", distance: "少し歩く", m: 980, url: "https://shop.tullys.co.jp/detail/1000741" },
       { chain: "veloce", name: "人形町店", address: "東京都中央区日本橋人形町3-10-1 かしきち人形町ビル1F", distance: "少し歩く", m: 840, url: "https://c-united.co.jp/store/detail/000244/" },
@@ -7404,7 +7414,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "hatchobori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区八丁堀店", address: "東京都中央区八丁堀一丁目7番8号若狭ビル1F", distance: "徒歩圏", m: 360, url: "https://tenpo.ichibanya.co.jp/map/1672", fac: [] },
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "徒歩圏", m: 770, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
@@ -7495,7 +7505,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 3},
   },
   "suitengumae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 水天宮前店", address: "東京都中央区日本橋人形町1丁目12-11 リガーレ日本橋人形町203(2階)", distance: "駅前", m: 210, url: "https://store-info.skylark.co.jp/map/171499/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "cocoichi", name: "中央区人形町店", address: "東京都中央区日本橋人形町二丁目6番3号", distance: "徒歩圏", m: 460, url: "https://tenpo.ichibanya.co.jp/map/1879", fac: ["お子さまメニュー"] },
@@ -7563,7 +7573,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ningyocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 水天宮前店", address: "東京都中央区日本橋人形町1丁目12-11 リガーレ日本橋人形町203(2階)", distance: "徒歩圏", m: 320, url: "https://store-info.skylark.co.jp/map/171499/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "cocoichi", name: "中央区人形町店", address: "東京都中央区日本橋人形町二丁目6番3号", distance: "駅前", m: 30, url: "https://tenpo.ichibanya.co.jp/map/1879", fac: ["お子さまメニュー"] },
@@ -7647,7 +7657,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kodemmacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
       { chain: "cocoichi", name: "中央区馬喰町店", address: "東京都中央区日本橋馬喰町一丁目10番8号 CASA FELICE", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/2446", fac: [] },
@@ -7756,7 +7766,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "bakuroyokoyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区馬喰町店", address: "東京都中央区日本橋馬喰町一丁目10番8号 CASA FELICE", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2446", fac: [] },
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 500, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
@@ -7847,7 +7857,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "bakurocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区馬喰町店", address: "東京都中央区日本橋馬喰町一丁目10番8号 CASA FELICE", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2446", fac: [] },
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 500, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
@@ -7938,7 +7948,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-nihombashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区馬喰町店", address: "東京都中央区日本橋馬喰町一丁目10番8号 CASA FELICE", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2446", fac: [] },
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 500, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
@@ -8029,7 +8039,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hamacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 水天宮前店", address: "東京都中央区日本橋人形町1丁目12-11 リガーレ日本橋人形町203(2階)", distance: "徒歩圏", m: 700, url: "https://store-info.skylark.co.jp/map/171499/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "cocoichi", name: "中央区人形町店", address: "東京都中央区日本橋人形町二丁目6番3号", distance: "徒歩圏", m: 560, url: "https://tenpo.ichibanya.co.jp/map/1879", fac: ["お子さまメニュー"] },
@@ -8101,7 +8111,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinagawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 品川グランドコモンズ店", address: "東京都港区港南2丁目16-2 太陽生命品川ビル3F", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/171350/", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ アレア品川店", address: "東京都港区 港南 1-9-36 アレア品川 2F", distance: "駅前", m: 260, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011882" },
@@ -8136,7 +8146,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimbashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋銀座口店", address: "東京都港区 新橋 1-8-4 丸忠ビル 1F", distance: "駅前", m: 160, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010081" },
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋外堀通り店", address: "東京都港区 新橋 1-16-4", distance: "駅前", m: 270, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012376" },
@@ -8233,7 +8243,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"tully-coffee": 5},
   },
   "tamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区三田店", address: "東京都港区三田三丁目4番12号 三田MTビル", distance: "徒歩圏", m: 350, url: "https://tenpo.ichibanya.co.jp/map/2444", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 田町センタービル店", address: "東京都港区 芝 5-34-7 田町センタービル", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010368" },
@@ -8249,7 +8259,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "kushikatsu-tanaka", name: "串カツ田中 田町店", address: "東京都港区芝5丁目26-1", distance: "徒歩圏", m: 320, url: "https://restaurant.kushi-tanaka.com/detail/0035/", fac: ["子供用イス"] },
       { chain: "lotteria", name: "田町芝浦店", address: "東京都港区芝浦3-12-1 マキノビル1F", distance: "徒歩圏", m: 350, url: "https://maps.zetteria.jp/shop/shop1001.html" },
       { chain: "mcdonalds", name: "三田駅前店", address: "東京都港区芝5-31-24勝文館1F", distance: "駅前", m: 210, url: "https://map.mcdonalds.co.jp/map/13614", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb Tamachi 田町ステーションタワーN 1階N114室", distance: "駅前", m: 190, url: "https://store-info.skylark.co.jp/map/198271/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "nakau", name: "なか卯 三田店", address: "東京都港区三田3-9-7 三田JEBL", distance: "徒歩圏", m: 760, url: "https://maps.nakau.co.jp/jp/detail/2327.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 田町三田口店", address: "東京都港区 芝5-31-24 勝文館ビル7F", distance: "駅前", m: 200, url: "https://map.reins.co.jp/onyasai/detail/364351831", fac: [] },
       { chain: "ootoya", name: "大戸屋ごはん処 田町店", address: "東京都港区 芝5-31-10サンシャインビルB1F", distance: "駅前", m: 150, url: "https://store.ootoya.com/detail/27227/", fac: [] },
@@ -8284,7 +8293,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区三田店", address: "東京都港区三田三丁目4番12号 三田MTビル", distance: "徒歩圏", m: 440, url: "https://tenpo.ichibanya.co.jp/map/2444", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 田町センタービル店", address: "東京都港区 芝 5-34-7 田町センタービル", distance: "駅前", m: 260, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010368" },
@@ -8306,7 +8315,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsuya", name: "松屋 芝一丁目店(松のや併設)", address: "東京都港区芝1-4-9", distance: "徒歩圏", m: 690, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002110", fac: [] },
       { chain: "mcdonalds", name: "三田駅前店", address: "東京都港区芝5-31-24勝文館1F", distance: "徒歩圏", m: 320, url: "https://map.mcdonalds.co.jp/map/13614", fac: [] },
       { chain: "mcdonalds", name: "芝浦シーバンス店", address: "東京都港区芝浦1-2-2", distance: "徒歩圏", m: 720, url: "https://map.mcdonalds.co.jp/map/13787", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb Tamachi 田町ステーションタワーN 1階N114室", distance: "駅前", m: 280, url: "https://store-info.skylark.co.jp/map/198271/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "nakau", name: "なか卯 芝一丁目店", address: "東京都港区芝1-5-11 芝L’sビル", distance: "徒歩圏", m: 670, url: "https://maps.nakau.co.jp/jp/detail/2418.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 田町三田口店", address: "東京都港区 芝5-31-24 勝文館ビル7F", distance: "徒歩圏", m: 320, url: "https://map.reins.co.jp/onyasai/detail/364351831", fac: [] },
       { chain: "ootoya", name: "大戸屋ごはん処 田町店", address: "東京都港区 芝5-31-10サンシャインビルB1F", distance: "駅前", m: 220, url: "https://store.ootoya.com/detail/27227/", fac: [] },
@@ -8340,7 +8348,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hamamatsucho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR浜松町駅北口店", address: "東京都港区浜松町一丁目27番10号", distance: "駅前", m: 230, url: "https://tenpo.ichibanya.co.jp/map/1640", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浜松町店", address: "東京都港区浜松町1-31 文化放送メディアプラス2階", distance: "駅前", m: 150, url: "https://shop.dennys.jp/map/21923", fac: ["オムツ替えシート"] },
@@ -8391,7 +8399,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "daimon": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR浜松町駅北口店", address: "東京都港区浜松町一丁目27番10号", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/1640", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "港区御成門駅前店", address: "東京都港区西新橋三丁目24番5号御成門ビル1F・2F", distance: "徒歩圏", m: 600, url: "https://tenpo.ichibanya.co.jp/map/1950", fac: ["お子さまメニュー"] },
@@ -8448,7 +8456,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shibakoen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR浜松町駅北口店", address: "東京都港区浜松町一丁目27番10号", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/1640", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浜松町店", address: "東京都港区浜松町1-31 文化放送メディアプラス2階", distance: "徒歩圏", m: 720, url: "https://shop.dennys.jp/map/21923", fac: ["オムツ替えシート"] },
@@ -8504,7 +8512,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "marugame", name: "丸亀製麺ハマサイト", address: "東京都港区海岸1-2-20 汐留ビルディング1F", distance: "少し歩く", m: 900, url: "https://stores.marugame.com/111107" },
       { chain: "matsuya", name: "松屋 麻布台1丁目店", address: "東京都港区麻布台1-9-10 飯倉ITビル", distance: "少し歩く", m: 900, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001779", fac: [] },
       { chain: "mcdonalds", name: "三田駅前店", address: "東京都港区芝5-31-24勝文館1F", distance: "少し歩く", m: 900, url: "https://map.mcdonalds.co.jp/map/13614", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb Tamachi 田町ステーションタワーN 1階N114室", distance: "少し歩く", m: 920, url: "https://store-info.skylark.co.jp/map/198271/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 田町三田口店", address: "東京都港区 芝5-31-24 勝文館ビル7F", distance: "少し歩く", m: 900, url: "https://map.reins.co.jp/onyasai/detail/364351831", fac: [] },
       { chain: "ootoya", name: "大戸屋ごはん処 田町店", address: "東京都港区 芝5-31-10サンシャインビルB1F", distance: "少し歩く", m: 830, url: "https://store.ootoya.com/detail/27227/", fac: [] },
       { chain: "pronto", name: "PRONTO ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb田町ステーションタワーN 2階", distance: "少し歩く", m: 940, url: "https://shop.pronto.co.jp/detail/77/" },
@@ -8519,7 +8526,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "onarimon": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区御成門駅前店", address: "東京都港区西新橋三丁目24番5号御成門ビル1F・2F", distance: "駅前", m: 30, url: "https://tenpo.ichibanya.co.jp/map/1950", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR浜松町駅北口店", address: "東京都港区浜松町一丁目27番10号", distance: "徒歩圏", m: 580, url: "https://tenpo.ichibanya.co.jp/map/1640", fac: ["お子さまメニュー"] },
@@ -8604,7 +8611,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "akabanebashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー麻布十番店", address: "東京都港区 麻布十番1-2-10 AKSビル1階", distance: "徒歩圏", m: 680, url: "https://search.freshnessburger.co.jp/detail/3031011/", fac: ["キッズセット"] },
       { chain: "goemon", name: "麻布十番店", address: "東京都港区麻布十番2-1-8グランドメゾン麻布十番館2F", distance: "徒歩圏", m: 660, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -8659,7 +8666,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "roppongi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ六本木駅前店", address: "東京都港区六本木三丁目11-6 野沢ビル1階", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/2649", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 六本木店(から好し取扱店)", address: "東京都港区六本木5丁目2-1 ほうらいやビル 地下1階", distance: "駅前", m: 210, url: "https://store-info.skylark.co.jp/map/018957/", fac: ["おむつ替え台"] },
@@ -8704,7 +8711,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "roppongi-itchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ六本木駅前店", address: "東京都港区六本木三丁目11-6 野沢ビル1階", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/2649", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 赤坂1丁目店", address: "東京都港区 赤坂 1-11-28 JMFビル赤坂01", distance: "徒歩圏", m: 400, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011275" },
@@ -8776,7 +8783,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "azabu-juban": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー麻布十番店", address: "東京都港区 麻布十番1-2-10 AKSビル1階", distance: "駅前", m: 150, url: "https://search.freshnessburger.co.jp/detail/3031011/", fac: ["キッズセット"] },
       { chain: "goemon", name: "麻布十番店", address: "東京都港区麻布十番2-1-8グランドメゾン麻布十番館2F", distance: "駅前", m: 30, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -8810,7 +8817,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hiroo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ広尾駅前店", address: "東京都港区南麻布五丁目15-23 ピックプラン佐々木ビル1階", distance: "駅前", m: 70, url: "https://tenpo.ichibanya.co.jp/map/2643", fac: ["お子さまメニュー"] },
       { chain: "goemon", name: "広尾店", address: "東京都渋谷区広尾5-5-1 広尾いがらしビル 2階", distance: "駅前", m: 190, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -8826,7 +8833,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akasaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区赤坂店", address: "東京都港区赤坂三丁目14番7号ユニ赤坂ビル1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/1836", fac: [] },
       { chain: "denny-s", name: "デニーズ 赤坂駅前店", address: "東京都港区赤坂3-14-9 赤坂清水ビル2階", distance: "駅前", m: 140, url: "https://shop.dennys.jp/map/22017", fac: ["入口段差なしまたはエレベーター"] },
@@ -8888,7 +8895,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "aoyama-itchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区青山1丁目店", address: "東京都港区北青山一丁目4番3号青山フォーワンビル1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/1762", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 新青山ビル店", address: "東京都港区 南青山 1-1-1 新青山ビル", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011800" },
@@ -8916,7 +8923,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gaiemmae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区青山1丁目店", address: "東京都港区北青山一丁目4番3号青山フォーワンビル1階", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/1762", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 青山外苑前店", address: "東京都港区 北青山 2-7-18", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012137" },
@@ -8942,7 +8949,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omotesando": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 南青山店", address: "東京都港区 南青山 5-9-20", distance: "駅前", m: 230, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012493" },
       { chain: "doutor", name: "ドトールコーヒーショップ 青山店", address: "東京都港区 南青山 3-1-30 PASONASQUARE 1F", distance: "徒歩圏", m: 390, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012131" },
@@ -8970,7 +8977,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "doutor", name: "ドトールコーヒーショップ 原宿店", address: "東京都渋谷区 神宮前 1-13-18 第2大英ビル", distance: "少し歩く", m: 940, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010451" },
       { chain: "goemon", name: "原宿2号店", address: "東京都渋谷区神宮前1-13-21 シャンゼール原宿1号館 B1", distance: "少し歩く", m: 940, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "gyukaku", name: "牛角 原宿店", address: "東京都渋谷区 神宮前1-13-21 シャンゼール原宿1号館3F", distance: "少し歩く", m: 930, url: "https://map.reins.co.jp/gyukaku/detail/354145229", fac: [] },
-      { chain: "kushikatsu-tanaka", name: "串カツ田中 渋谷宮益坂店", address: "東京都渋谷区渋谷2丁目14-4", distance: "少し歩く", m: 840, url: "https://restaurant.kushi-tanaka.com/detail/0021/", fac: [] },
       { chain: "marugame", name: "丸亀製麺渋谷メトロプラザ", address: "東京都渋谷区渋谷1-16-14 渋谷地下鉄ビルディング1F", distance: "少し歩く", m: 980, url: "https://stores.marugame.com/110645" },
       { chain: "matsunoya", name: "松のや 渋谷宮益坂店(松屋併設)", address: "東京都渋谷区渋谷1丁目8-3 B1F", distance: "少し歩く", m: 820, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012250", fac: [] },
       { chain: "matsuya", name: "松屋 渋谷宮益坂店(松のや併設)", address: "東京都渋谷区渋谷1丁目8-3 B1F", distance: "少し歩く", m: 820, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002250", fac: [] },
@@ -8991,7 +8997,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nogizaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ六本木駅前店", address: "東京都港区六本木三丁目11-6 野沢ビル1階", distance: "徒歩圏", m: 720, url: "https://tenpo.ichibanya.co.jp/map/2649", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "港区青山1丁目店", address: "東京都港区北青山一丁目4番3号青山フォーワンビル1階", distance: "徒歩圏", m: 740, url: "https://tenpo.ichibanya.co.jp/map/1762", fac: ["お子さまメニュー"] },
@@ -9035,7 +9041,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shirokanedai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 白金台店", address: "東京都港区白金台4丁目7-8 KDXレジデンス白金I", distance: "駅前", m: 30, url: "https://store-info.skylark.co.jp/map/171349/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "jonathan", name: "ジョナサン 白金台店", address: "東京都港区白金台4丁目7-8 KDXレジデンス白金I 2F", distance: "駅前", m: 60, url: "https://store-info.skylark.co.jp/map/020460/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
@@ -9056,7 +9062,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shirokane-takanawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "nakau", name: "なか卯 三田店", address: "東京都港区三田3-9-7 三田JEBL", distance: "徒歩圏", m: 650, url: "https://maps.nakau.co.jp/jp/detail/2327.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 泉岳寺前店", address: "東京都港区高輪2-16-35 高輪チトセハイツ", distance: "徒歩圏", m: 700, url: "https://maps.nakau.co.jp/jp/detail/2343.html", fac: ["お子様メニュー"] },
@@ -9073,7 +9079,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takanawadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 五反田駅前店", address: "東京都品川区 東五反田 5-27-5", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012492" },
       { chain: "excelsior", name: "エクセルシオール カフェ 五反田東口店", address: "東京都品川区 東五反田 1-13-10 さくらビル 1F・2F", distance: "徒歩圏", m: 780, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000015" },
@@ -9111,7 +9117,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takanawa-gateway": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ アレア品川店", address: "東京都港区 港南 1-9-36 アレア品川 2F", distance: "徒歩圏", m: 620, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011882" },
       { chain: "gyukaku", name: "牛角 品川店", address: "東京都港区 港南2-2-1 ミナトビル5F", distance: "徒歩圏", m: 690, url: "https://map.reins.co.jp/gyukaku/detail/357834329", fac: ["お子様用備品"] },
@@ -9147,7 +9153,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sengakuji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "nakau", name: "なか卯 泉岳寺前店", address: "東京都港区高輪2-16-35 高輪チトセハイツ", distance: "駅前", m: 140, url: "https://maps.nakau.co.jp/jp/detail/2343.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 三田店", address: "東京都港区三田3-9-7 三田JEBL", distance: "徒歩圏", m: 310, url: "https://maps.nakau.co.jp/jp/detail/2327.html", fac: ["お子様メニュー"] },
@@ -9172,7 +9178,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shibaura-futo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 芝浦3丁目店", address: "東京都港区 芝浦 3-11-7 根本ビル 1F", distance: "徒歩圏", m: 730, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010090" },
       { chain: "lotteria", name: "田町芝浦店", address: "東京都港区芝浦3-12-1 マキノビル1F", distance: "徒歩圏", m: 780, url: "https://maps.zetteria.jp/shop/shop1001.html" },
@@ -9183,7 +9189,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "hidakaya", name: "日高屋 田町東口店", address: "東京都港区芝浦3-1", distance: "少し歩く", m: 900, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/515.html", fac: [] },
       { chain: "marugame", name: "丸亀製麺芝浦シーバンス", address: "東京都港区芝浦1-2-2 シーバンス ア・モール2F", distance: "少し歩く", m: 900, url: "https://stores.marugame.com/110907" },
       { chain: "mcdonalds", name: "芝浦シーバンス店", address: "東京都港区芝浦1-2-2", distance: "少し歩く", m: 880, url: "https://map.mcdonalds.co.jp/map/13787", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb Tamachi 田町ステーションタワーN 1階N114室", distance: "少し歩く", m: 860, url: "https://store-info.skylark.co.jp/map/198271/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "pronto", name: "PRONTO ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb田町ステーションタワーN 2階", distance: "少し歩く", m: 860, url: "https://shop.pronto.co.jp/detail/77/" },
       { chain: "saizeriya", name: "サイゼリヤ 田町駅東口八千代橋店", address: "東京都港区芝浦3-20-9観世芝浦レジデンス1F", distance: "少し歩く", m: 940, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1283", fac: [] },
       { chain: "starbucks", name: "ムスブ田町4階店", address: "東京都港区芝浦3-1-21 msb Tamachi 田町ステーションタワーS 4階402", distance: "少し歩く", m: 880, url: "https://store.starbucks.co.jp/detail-1654/" },
@@ -9194,7 +9199,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "odaiba-kaihinkoen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン お台場海浜公園駅前店", address: "東京都港区台場2丁目3番2号 台場フロンティアビル1階", distance: "駅前", m: 70, url: "https://store-info.skylark.co.jp/map/171643/", fac: [] },
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 560, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
@@ -9210,7 +9215,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "daiba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン お台場海浜公園駅前店", address: "東京都港区台場2丁目3番2号 台場フロンティアビル1階", distance: "徒歩圏", m: 750, url: "https://store-info.skylark.co.jp/map/171643/", fac: [] },
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 400, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
@@ -9226,7 +9231,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tameike-sanno": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区赤坂店", address: "東京都港区赤坂三丁目14番7号ユニ赤坂ビル1階", distance: "徒歩圏", m: 390, url: "https://tenpo.ichibanya.co.jp/map/1836", fac: [] },
       { chain: "denny-s", name: "デニーズ 赤坂駅前店", address: "東京都港区赤坂3-14-9 赤坂清水ビル2階", distance: "徒歩圏", m: 400, url: "https://shop.dennys.jp/map/22017", fac: ["入口段差なしまたはエレベーター"] },
@@ -9294,7 +9299,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"tully-coffee": 1},
   },
   "toranomon": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 虎ノ門桜田通り店", address: "東京都港区 虎ノ門 2-5-4", distance: "駅前", m: 230, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011549" },
       { chain: "doutor", name: "ドトールコーヒーショップ 溜池山王店", address: "東京都港区 赤坂 1-5-14", distance: "徒歩圏", m: 620, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011946" },
@@ -9376,7 +9381,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "toranomon-hills": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区御成門駅前店", address: "東京都港区西新橋三丁目24番5号御成門ビル1F・2F", distance: "徒歩圏", m: 740, url: "https://tenpo.ichibanya.co.jp/map/1950", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 虎ノ門桜田通り店", address: "東京都港区 虎ノ門 2-5-4", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011549" },
@@ -9451,7 +9456,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kamiyacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "港区御成門駅前店", address: "東京都港区西新橋三丁目24番5号御成門ビル1F・2F", distance: "徒歩圏", m: 600, url: "https://tenpo.ichibanya.co.jp/map/1950", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 虎ノ門3丁目店", address: "東京都港区 虎ノ門 3-18-12 ステュディオ虎ノ門", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010202" },
@@ -9502,7 +9507,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hinode": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ シーバンス ア・モール店", address: "東京都港区 芝浦 1-2-2 シーバンス ア・モール 1F", distance: "駅前", m: 250, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012081" },
       { chain: "doutor", name: "ドトールコーヒーショップ 浜松町2丁目店", address: "東京都港区 浜松町 2-6-2 浜松町262ビル 1F", distance: "徒歩圏", m: 680, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011352" },
@@ -9530,7 +9535,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "marugame", name: "丸亀製麺ハマサイト", address: "東京都港区海岸1-2-20 汐留ビルディング1F", distance: "少し歩く", m: 820, url: "https://stores.marugame.com/111107" },
       { chain: "mcdonalds", name: "大門店", address: "東京都港区芝大門2-3-1", distance: "少し歩く", m: 970, url: "https://map.mcdonalds.co.jp/map/13017", fac: [] },
       { chain: "mos-burger", name: "モスバーガー芝大門店", address: "東京都港区芝大門1丁目15-7", distance: "少し歩く", m: 990, url: "https://www.mos.jp/shop/detail/?shop_cd=02323", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb Tamachi 田町ステーションタワーN 1階N114室", distance: "少し歩く", m: 920, url: "https://store-info.skylark.co.jp/map/198271/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "pronto", name: "PRONTO 浜松町店", address: "東京都港区芝大門2丁目4-4 富士ビル", distance: "少し歩く", m: 920, url: "https://shop.pronto.co.jp/detail/116/" },
       { chain: "pronto", name: "PRONTO ムスブ田町店", address: "東京都港区芝浦3丁目1-1 msb田町ステーションタワーN 2階", distance: "少し歩く", m: 940, url: "https://shop.pronto.co.jp/detail/77/" },
       { chain: "starbucks", name: "田町タワー店", address: "東京都港区芝5-33-11 田町タワーモール1階", distance: "少し歩く", m: 960, url: "https://store.starbucks.co.jp/detail-4184/" },
@@ -9543,7 +9547,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takeshiba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR浜松町駅北口店", address: "東京都港区浜松町一丁目27番10号", distance: "徒歩圏", m: 700, url: "https://tenpo.ichibanya.co.jp/map/1640", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浜松町店", address: "東京都港区浜松町1-31 文化放送メディアプラス2階", distance: "徒歩圏", m: 540, url: "https://shop.dennys.jp/map/21923", fac: ["オムツ替えシート"] },
@@ -9587,7 +9591,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 450, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "徒歩圏", m: 570, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
@@ -9749,7 +9753,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "katsuya", name: "かつや 代々木駅前店", address: "東京都渋谷区代々木1-32-12パリスビル1階", distance: "少し歩く", m: 820, url: "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=740", fac: [] },
       { chain: "matsuya", name: "松屋 東新宿店", address: "東京都新宿区歌舞伎町2-2-21 ライオンズマンション歌舞伎町B102号室", distance: "少し歩く", m: 870, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000972", fac: [] },
       { chain: "matsuya", name: "松屋 西新宿8丁目店", address: "東京都新宿区西新宿8-12-1 ダイヤモンドビル1F", distance: "少し歩く", m: 890, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000665", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "少し歩く", m: 900, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "nakau", name: "なか卯 新宿職安通り店", address: "東京都新宿区歌舞伎町2-41-7 川井ビル", distance: "少し歩く", m: 920, url: "https://maps.nakau.co.jp/jp/detail/2483.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 西新宿店", address: "東京都新宿区西新宿6-10-2", distance: "少し歩く", m: 980, url: "https://maps.nakau.co.jp/jp/detail/2253.html", fac: ["お子様メニュー"] },
       { chain: "pronto", name: "PRONTO 新宿第一生命ビル店", address: "東京都新宿区西新宿2丁目7-1 新宿第一生命ビルディング 1F", distance: "少し歩く", m: 840, url: "https://shop.pronto.co.jp/detail/194/" },
@@ -9772,7 +9775,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinjuku-sanchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 640, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "駅前", m: 230, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
@@ -9950,7 +9953,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1},
   },
   "shinjuku-nishiguchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "駅前", m: 70, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "徒歩圏", m: 540, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
@@ -10116,7 +10119,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsuya", name: "松屋 大久保店", address: "東京都新宿区百人町1-18-11 百人町秋山ビル1F", distance: "少し歩く", m: 960, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000228", fac: [] },
       { chain: "mcdonalds", name: "新大久保西店", address: "東京都新宿区百人町1-15-20", distance: "少し歩く", m: 910, url: "https://map.mcdonalds.co.jp/map/70510", fac: [] },
       { chain: "mcdonalds", name: "東新宿駅前店", address: "東京都新宿区新宿6-29-10", distance: "少し歩く", m: 910, url: "https://map.mcdonalds.co.jp/map/13612", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "少し歩く", m: 840, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "ootoya", name: "大戸屋ごはん処 新宿フロントタワー店", address: "東京都新宿区 北新宿2-21-1新宿フロントタワー2F", distance: "少し歩く", m: 930, url: "https://store.ootoya.com/detail/23103/", fac: ["駐車場"] },
       { chain: "ootoya", name: "大戸屋ごはん処 新宿イーストサイドスクエア店", address: "東京都新宿区 新宿6-27-30 新宿イーストサイドスクエアB1F", distance: "少し歩く", m: 950, url: "https://store.ootoya.com/detail/27436/", fac: [] },
       { chain: "royal-host", name: "ロイヤルホスト東新宿駅前店", address: "東京都新宿区 新宿7-27-9 相鉄フレッサイン東新宿駅前1F", distance: "少し歩く", m: 980, url: "https://locations.royalhost.jp/detail/106704/", fac: ["駐車場"] },
@@ -10143,7 +10145,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "nishi-shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 600, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "cocoichi", name: "新宿エルタワー店", address: "東京都新宿区西新宿一丁目6番1号新宿エルタワーB2階", distance: "徒歩圏", m: 460, url: "https://tenpo.ichibanya.co.jp/map/3187", fac: ["お子さまメニュー"] },
@@ -10199,7 +10201,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "西武新宿駅前店", address: "東京都新宿区歌舞伎町1-24-1", distance: "徒歩圏", m: 710, url: "https://map.mcdonalds.co.jp/map/13941", fac: [] },
       { chain: "mcdonalds", name: "新宿西口店", address: "東京都新宿区西新宿1-17-1", distance: "徒歩圏", m: 740, url: "https://map.mcdonalds.co.jp/map/13263", fac: [] },
       { chain: "mos-burger", name: "モスバーガー新宿西口店", address: "東京都新宿区西新宿7丁目1-8", distance: "徒歩圏", m: 560, url: "https://www.mos.jp/shop/detail/?shop_cd=01394", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "徒歩圏", m: 400, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "nakau", name: "なか卯 西新宿店", address: "東京都新宿区西新宿6-10-2", distance: "駅前", m: 170, url: "https://maps.nakau.co.jp/jp/detail/2253.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 新宿西口店", address: "東京都新宿区 西新宿1-15-2 第5オムニクスビル2F", distance: "徒歩圏", m: 710, url: "https://map.reins.co.jp/onyasai/detail/5017263401", fac: [] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 西武新宿駅前店", address: "東京都新宿区 歌舞伎町1-25-3 西武新宿駅前ビル 2F", distance: "徒歩圏", m: 710, url: "https://map.reins.co.jp/onyasai/detail/5017257356", fac: [] },
@@ -10318,7 +10319,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "nishi-shinjuku-gochome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西新宿五丁目駅前通店", address: "東京都新宿区西新宿五丁目8-8 メゾン・ド・新宿", distance: "駅前", m: 280, url: "https://tenpo.ichibanya.co.jp/map/2679", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 新宿中央公園店", address: "東京都新宿区西新宿6-14-1 新宿グリーンタワービル2F", distance: "徒歩圏", m: 560, url: "https://shop.dennys.jp/map/2669", fac: ["オムツ替えシート"] },
@@ -10337,7 +10338,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsuya", name: "松屋 新宿住友ビル店(松のや併設)", address: "東京都新宿区西新宿2-6-1 新宿住友ビルB1F", distance: "徒歩圏", m: 770, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002286", fac: [] },
       { chain: "mcdonalds", name: "西新宿5丁目店", address: "東京都新宿区西新宿5-9-8", distance: "駅前", m: 260, url: "https://map.mcdonalds.co.jp/map/13917", fac: ["駐車場"] },
       { chain: "mcdonalds", name: "中野坂上店", address: "東京都中野区本町1-32-4ハーモニーウィング1F", distance: "徒歩圏", m: 770, url: "https://map.mcdonalds.co.jp/map/13562", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "徒歩圏", m: 560, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "ootoya", name: "大戸屋ごはん処 東京オペラシティ店", address: "東京都新宿区 西新宿3-20-2 東京オペラシティビルB1F", distance: "徒歩圏", m: 790, url: "https://store.ootoya.com/detail/27417/", fac: ["駐車場"] },
       { chain: "pronto", name: "PRONTO 新宿第一生命ビル店", address: "東京都新宿区西新宿2丁目7-1 新宿第一生命ビルディング 1F", distance: "徒歩圏", m: 640, url: "https://shop.pronto.co.jp/detail/194/" },
       { chain: "starbucks", name: "新宿グリーンタワービル店", address: "東京都新宿区西新宿6-14-1 新宿グリーンタワー", distance: "徒歩圏", m: 550, url: "https://store.starbucks.co.jp/detail-235/" },
@@ -10406,7 +10406,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tochomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "cocoichi", name: "新宿NSビル店", address: "東京都新宿区西新宿二丁目4-1 新宿NSビル1F", distance: "駅前", m: 290, url: "https://tenpo.ichibanya.co.jp/map/2459", fac: ["お子さまメニュー"] },
@@ -10461,7 +10461,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "西新宿5丁目店", address: "東京都新宿区西新宿5-9-8", distance: "徒歩圏", m: 530, url: "https://map.mcdonalds.co.jp/map/13917", fac: ["駐車場"] },
       { chain: "mcdonalds", name: "南新宿店", address: "東京都渋谷区代々木2-6-7", distance: "徒歩圏", m: 650, url: "https://map.mcdonalds.co.jp/map/13086", fac: [] },
       { chain: "mos-burger", name: "モスバーガー新宿西口店", address: "東京都新宿区西新宿7丁目1-8", distance: "徒歩圏", m: 740, url: "https://www.mos.jp/shop/detail/?shop_cd=01394", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "nakau", name: "なか卯 西新宿店", address: "東京都新宿区西新宿6-10-2", distance: "徒歩圏", m: 490, url: "https://maps.nakau.co.jp/jp/detail/2253.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 新宿西口店", address: "東京都新宿区 西新宿1-15-2 第5オムニクスビル2F", distance: "徒歩圏", m: 460, url: "https://map.reins.co.jp/onyasai/detail/5017263401", fac: [] },
       { chain: "ootoya", name: "大戸屋ごはん処 新宿センタービル店", address: "東京都新宿区 西新宿1-25-1新宿センタービルMB1F", distance: "駅前", m: 290, url: "https://store.ootoya.com/detail/27214/", fac: [] },
@@ -10573,7 +10572,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minami-shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "代々木駅西口店", address: "東京都渋谷区千駄ヶ谷4-29-10", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1851", fac: [] },
       { chain: "cocoichi", name: "新宿NSビル店", address: "東京都新宿区西新宿二丁目4-1 新宿NSビル1F", distance: "徒歩圏", m: 690, url: "https://tenpo.ichibanya.co.jp/map/2459", fac: ["お子さまメニュー"] },
@@ -10681,7 +10680,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 4},
   },
   "shinjuku-gyoemmae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "徒歩圏", m: 690, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
       { chain: "cocoichi", name: "東京メトロ新宿御苑前駅店", address: "東京都新宿区新宿二丁目9番20号ライオンズマンション新宿御苑前1F", distance: "駅前", m: 160, url: "https://tenpo.ichibanya.co.jp/map/1682", fac: [] },
@@ -10790,7 +10789,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yotsuya-sanchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 四谷店", address: "東京都新宿区四谷2丁目1-3 四谷213ビル2F", distance: "徒歩圏", m: 610, url: "https://store-info.skylark.co.jp/map/171587/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "新宿区曙橋駅前店", address: "東京都新宿区住吉町6番3号 ヤマギシコーポラス1F", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/2552", fac: ["お子さまメニュー"] },
@@ -10843,7 +10842,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akebonobashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 四谷店", address: "東京都新宿区四谷2丁目1-3 四谷213ビル2F", distance: "徒歩圏", m: 730, url: "https://store-info.skylark.co.jp/map/171587/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "新宿区曙橋駅前店", address: "東京都新宿区住吉町6番3号 ヤマギシコーポラス1F", distance: "駅前", m: 70, url: "https://tenpo.ichibanya.co.jp/map/2552", fac: ["お子さまメニュー"] },
@@ -10886,7 +10885,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "wakamatsu-kawada": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 若松河田店", address: "東京都新宿区 若松町 10-1 YSビル 1F", distance: "駅前", m: 30, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011962" },
       { chain: "doutor", name: "ドトールコーヒーショップ 早稲田店", address: "東京都新宿区 馬場下町 14-1", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011846" },
@@ -10925,7 +10924,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ushigome-yanagicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 若松河田店", address: "東京都新宿区 若松町 10-1 YSビル 1F", distance: "徒歩圏", m: 600, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011962" },
       { chain: "doutor", name: "ドトールコーヒーショップ 曙橋店", address: "東京都新宿区 住吉町 7-1 福松ビル 1F", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010319" },
@@ -10954,7 +10953,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ushigome-kagurazaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 飯田橋神楽坂店", address: "東京都新宿区 神楽坂 1-12", distance: "徒歩圏", m: 600, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010850" },
       { chain: "doutor", name: "ドトールコーヒーショップ 飯田橋ラムラ店", address: "東京都新宿区 神楽河岸 1-1 飯田橋セントラルプラザ 2F", distance: "徒歩圏", m: 730, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011984" },
@@ -10998,7 +10997,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kagurazaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ江戸川橋駅前店", address: "東京都文京区関口一丁目47番12号江戸川橋ビル1F", distance: "徒歩圏", m: 730, url: "https://tenpo.ichibanya.co.jp/map/2427", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 新宿山吹町店", address: "東京都新宿区山吹町346-3 アーバンステージ神楽坂2F", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/21864", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "駐車場"] },
@@ -11036,7 +11035,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東新宿駅前店", address: "東京都新宿区新宿7丁目27-9 B1F", distance: "駅前", m: 30, url: "https://store-info.skylark.co.jp/map/171503/", fac: ["おむつ替え台"] },
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "徒歩圏", m: 660, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
@@ -11171,7 +11170,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1, "tully-coffee": 1},
   },
   "shin-okubo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東新宿駅前店", address: "東京都新宿区新宿7丁目27-9 B1F", distance: "徒歩圏", m: 740, url: "https://store-info.skylark.co.jp/map/171503/", fac: ["おむつ替え台"] },
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 780, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
@@ -11288,7 +11287,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "okubo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 790, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "cocoichi", name: "JR大久保駅北口店", address: "東京都新宿区百人町一丁目19-13 浅川ビル1F", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/2587", fac: ["お子さまメニュー"] },
@@ -11398,7 +11397,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takadanobaba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新宿高田馬場店", address: "東京都新宿区高田馬場三丁目12番5号セブンビル1階", distance: "駅前", m: 280, url: "https://tenpo.ichibanya.co.jp/map/1844", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "新宿早稲田通店", address: "東京都新宿区西早稲田二丁目18-23スカイエスタ103号", distance: "徒歩圏", m: 730, url: "https://tenpo.ichibanya.co.jp/map/1243", fac: ["お子さまメニュー"] },
@@ -11451,7 +11450,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-ochiai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新宿高田馬場店", address: "東京都新宿区高田馬場三丁目12番5号セブンビル1階", distance: "徒歩圏", m: 580, url: "https://tenpo.ichibanya.co.jp/map/1844", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 高田馬場4丁目店", address: "東京都新宿区 高田馬場 4-8-4", distance: "徒歩圏", m: 760, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010556" },
@@ -11489,7 +11488,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東中野店", address: "東京都中野区東中野4丁目30-6-101", distance: "徒歩圏", m: 510, url: "https://store-info.skylark.co.jp/map/171604/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "hidakaya", name: "日高屋 中井駅前店", address: "東京都新宿区中落合1-19-2", distance: "駅前", m: 60, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/365.html", fac: [] },
@@ -11507,7 +11506,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ochiai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東中野店", address: "東京都中野区東中野4丁目30-6-101", distance: "駅前", m: 230, url: "https://store-info.skylark.co.jp/map/171604/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "cocoichi", name: "東中野駅前店", address: "東京都中野区東中野一丁目59-9アトリエビル1F", distance: "徒歩圏", m: 710, url: "https://tenpo.ichibanya.co.jp/map/1115", fac: ["お子さまメニュー"] },
@@ -11523,7 +11522,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ochiai-minami-nagasaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武東長崎駅前店", address: "東京都豊島区南長崎五丁目25番14号大野ビル1階", distance: "徒歩圏", m: 670, url: "https://tenpo.ichibanya.co.jp/map/2298", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ アイテラス落合南長崎店", address: "東京都豊島区 南長崎 4-5-20 アイテラス落合南長崎 1F", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012077" },
@@ -11537,7 +11536,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "waseda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 早稲田店", address: "東京都新宿区 馬場下町 14-1", distance: "駅前", m: 210, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011846" },
       { chain: "doutor", name: "ドトールコーヒーショップ 若松河田店", address: "東京都新宿区 若松町 10-1 YSビル 1F", distance: "徒歩圏", m: 740, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011962" },
@@ -11563,7 +11562,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-waseda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新宿早稲田通店", address: "東京都新宿区西早稲田二丁目18-23スカイエスタ103号", distance: "徒歩圏", m: 360, url: "https://tenpo.ichibanya.co.jp/map/1243", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 高田馬場店", address: "東京都新宿区 高田馬場 1-17-16", distance: "徒歩圏", m: 440, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012345" },
@@ -11624,7 +11623,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinanomachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 四谷三丁目店(から好し取扱店)", address: "東京都新宿区左門町2-6 ワコービル2F", distance: "徒歩圏", m: 790, url: "https://store-info.skylark.co.jp/map/018934/", fac: ["おむつ替え台"] },
       { chain: "hidakaya", name: "日高屋 信濃町駅前店", address: "東京都新宿区霞ヶ丘町14-1", distance: "駅前", m: 140, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/360.html", fac: [] },
@@ -11664,7 +11663,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sendagaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "代々木駅西口店", address: "東京都渋谷区千駄ヶ谷4-29-10", distance: "徒歩圏", m: 710, url: "https://tenpo.ichibanya.co.jp/map/1851", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 千駄ヶ谷1丁目店", address: "東京都渋谷区 千駄ヶ谷 1-21-14", distance: "徒歩圏", m: 320, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011375" },
@@ -11712,7 +11711,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kokuritsu-kyogijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 千駄ヶ谷1丁目店", address: "東京都渋谷区 千駄ヶ谷 1-21-14", distance: "徒歩圏", m: 460, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011375" },
       { chain: "excelsior", name: "エクセルシオール カフェ 千駄ヶ谷駅前店", address: "東京都渋谷区 千駄ヶ谷 1-35-14", distance: "徒歩圏", m: 370, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000188" },
@@ -11743,7 +11742,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "seibi-shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "駅前", m: 270, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bamiyan", name: "バーミヤン 東新宿駅前店", address: "東京都新宿区新宿7丁目27-9 B1F", distance: "徒歩圏", m: 760, url: "https://store-info.skylark.co.jp/map/171503/", fac: ["おむつ替え台"] },
@@ -11930,7 +11929,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kasuga": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "文京区春日駅前店", address: "東京都文京区本郷四丁目17番8号プレジール本郷ステーションプラザ1階", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2242", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "本郷三丁目駅前店", address: "東京都文京区本郷四丁目2番5号光山ビル1階", distance: "徒歩圏", m: 620, url: "https://tenpo.ichibanya.co.jp/map/1926", fac: ["お子さまメニュー"] },
@@ -11980,7 +11979,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "korakuen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "文京区春日駅前店", address: "東京都文京区本郷四丁目17番8号プレジール本郷ステーションプラザ1階", distance: "駅前", m: 250, url: "https://tenpo.ichibanya.co.jp/map/2242", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "水道橋外堀通り店", address: "東京都文京区後楽一丁目1-15 梅澤ビル1F", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2938", fac: [] },
@@ -12047,7 +12046,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hongo-sanchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "本郷三丁目駅前店", address: "東京都文京区本郷四丁目2番5号光山ビル1階", distance: "駅前", m: 70, url: "https://tenpo.ichibanya.co.jp/map/1926", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "文京区春日駅前店", address: "東京都文京区本郷四丁目17番8号プレジール本郷ステーションプラザ1階", distance: "徒歩圏", m: 640, url: "https://tenpo.ichibanya.co.jp/map/2242", fac: ["お子さまメニュー"] },
@@ -12113,7 +12112,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yushima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "徒歩圏", m: 630, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 湯島春日通り店", address: "東京都文京区 湯島 3-46-3", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011070" },
@@ -12202,6 +12201,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "本郷東大前店", address: "東京都文京区本郷4-1-4 Design Placeα 1F", distance: "少し歩く", m: 820, url: "https://store.starbucks.co.jp/detail-26/" },
       { chain: "starbucks", name: "JR上野駅 入谷改札前店", address: "東京都台東区上野7-1-1 上野駅構内3階入谷口改札外", distance: "少し歩く", m: 840, url: "https://store.starbucks.co.jp/detail-2221/" },
       { chain: "starbucks", name: "上野恩賜公園店", address: "東京都台東区上野公園8-22", distance: "少し歩く", m: 910, url: "https://store.starbucks.co.jp/detail-1087/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "少し歩く", m: 840, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 本郷店", address: "東京都文京区本郷5-1-13", distance: "少し歩く", m: 880, url: "https://store.yayoiken.com/b/yayoiken/info/2031/", fac: [] },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "少し歩く", m: 940, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 上野駅前店", address: "東京都台東区上野7丁目3-2ピナクルプロパティーズ上野駅前ビル1F", distance: "少し歩く", m: 850, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041399", fac: [] },
@@ -12209,7 +12209,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nezu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 上野谷中店", address: "東京都台東区谷中6-1-7", distance: "徒歩圏", m: 560, url: "https://shop.dennys.jp/map/2665", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "mos-burger", name: "モスバーガー千駄木店", address: "東京都文京区千駄木2丁目21-1", distance: "徒歩圏", m: 760, url: "https://www.mos.jp/shop/detail/?shop_cd=05289", fac: [] },
@@ -12226,7 +12226,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sendagi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 上野谷中店", address: "東京都台東区谷中6-1-7", distance: "徒歩圏", m: 780, url: "https://shop.dennys.jp/map/2665", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "matsuya", name: "松屋 千駄木店", address: "東京都文京区千駄木2-33-8", distance: "駅前", m: 120, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000301", fac: [] },
@@ -12265,7 +12265,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hakusan": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "文京区白山駅前店", address: "東京都文京区白山五丁目33番14号石川靴店ビル1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2306", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 駒込白山店", address: "東京都文京区本駒込1-4-2", distance: "駅前", m: 280, url: "https://maps.cocos-jpn.co.jp/jp/detail/2857.html", fac: ["ベビーシート", "お子様メニュー"] },
@@ -12286,7 +12286,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sengoku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR巣鴨駅南口店", address: "東京都豊島区巣鴨一丁目3番2号佐藤第二ビル1F", distance: "徒歩圏", m: 560, url: "https://tenpo.ichibanya.co.jp/map/2371", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 駒込白山店", address: "東京都文京区本駒込1-4-2", distance: "徒歩圏", m: 790, url: "https://maps.cocos-jpn.co.jp/jp/detail/2857.html", fac: ["ベビーシート", "お子様メニュー"] },
@@ -12334,7 +12334,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "myogadani": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "goemon", name: "茗荷谷店", address: "東京都文京区小石川5-5-6 茗荷谷光ビル2F", distance: "駅前", m: 100, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: ["お子様メニュー"] },
       { chain: "hidakaya", name: "日高屋 茗荷谷店", address: "東京都文京区小石川5-4-5", distance: "駅前", m: 70, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/311.html", fac: [] },
@@ -12361,7 +12361,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "edogawabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ江戸川橋駅前店", address: "東京都文京区関口一丁目47番12号江戸川橋ビル1F", distance: "駅前", m: 210, url: "https://tenpo.ichibanya.co.jp/map/2427", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 新宿山吹町店", address: "東京都新宿区山吹町346-3 アーバンステージ神楽坂2F", distance: "駅前", m: 270, url: "https://shop.dennys.jp/map/21864", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "駐車場"] },
@@ -12391,7 +12391,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gokokuji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 新大塚駅前店", address: "東京都豊島区 南大塚 2-11-7", distance: "徒歩圏", m: 760, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010996" },
       { chain: "jonathan", name: "ジョナサン 護国寺店", address: "東京都文京区音羽2丁目5-3", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/020223/", fac: ["おむつ替え台"] },
@@ -12415,7 +12415,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-otsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区大塚店", address: "東京都豊島区南大塚三丁目9-13新大塚ビル1F", distance: "駅前", m: 230, url: "https://tenpo.ichibanya.co.jp/map/1444", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大塚駅前店", address: "東京都豊島区北大塚1-16-5 パークアクシス大塚ステーションゲートタワー3階", distance: "徒歩圏", m: 660, url: "https://shop.dennys.jp/map/21990", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -12458,7 +12458,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "todaimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "文京区白山駅前店", address: "東京都文京区白山五丁目33番14号石川靴店ビル1階", distance: "徒歩圏", m: 750, url: "https://tenpo.ichibanya.co.jp/map/2306", fac: ["お子さまメニュー"] },
       { chain: "freshness-burger", name: "フレッシュネスバーガー白山駅前店", address: "東京都文京区 白山1-33-24 斉藤ビル1階", distance: "徒歩圏", m: 680, url: "https://search.freshnessburger.co.jp/detail/3033095/", fac: ["キッズセット"] },
@@ -12488,7 +12488,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hon-komagome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "文京区白山駅前店", address: "東京都文京区白山五丁目33番14号石川靴店ビル1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2306", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 駒込白山店", address: "東京都文京区本駒込1-4-2", distance: "駅前", m: 160, url: "https://maps.cocos-jpn.co.jp/jp/detail/2857.html", fac: ["ベビーシート", "お子様メニュー"] },
@@ -12514,7 +12514,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ueno": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 700, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ アトレ上野店", address: "東京都台東区 上野 7-1-1 アトレ上野", distance: "駅前", m: 220, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011047" },
@@ -12567,6 +12567,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "上野御徒町店", address: "東京都台東区 上野5-25-11", distance: "徒歩圏", m: 630, url: "https://shop.tullys.co.jp/detail/1000875" },
       { chain: "veloce", name: "稲荷町店", address: "東京都台東区元浅草2-11-6 稲荷町タワー1F", distance: "徒歩圏", m: 600, url: "https://c-united.co.jp/store/detail/000380/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "駅前", m: 280, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 700, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yoshinoya", name: "吉野家 上野駅前店", address: "東京都台東区上野7丁目3-2ピナクルプロパティーズ上野駅前ビル1F", distance: "駅前", m: 110, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041399", fac: [] },
       { chain: "yoshinoya", name: "吉野家 浅草通り稲荷町店", address: "東京都台東区東上野3丁目33-8", distance: "徒歩圏", m: 510, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041426", fac: ["お子様メニュー"] },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "徒歩圏", m: 640, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
@@ -12592,7 +12593,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "okachimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
@@ -12660,6 +12661,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "veloce", name: "上野三丁目店", address: "東京都台東区上野3-17-7 G-SQUARE上野1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000334/" },
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000242/" },
       { chain: "veloce", name: "末広町店", address: "東京都千代田区外神田6-15-11 日東ビル1F", distance: "徒歩圏", m: 430, url: "https://c-united.co.jp/store/detail/000222/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 410, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 650, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yayoiken", name: "やよい軒外神田3丁目店", address: "東京都千代田区外神田3-6-2", distance: "徒歩圏", m: 720, url: "https://store.yayoiken.com/b/yayoiken/info/2202/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "駅前", m: 90, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
@@ -12699,7 +12701,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ueno-hirokoji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
@@ -12767,6 +12769,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "veloce", name: "上野三丁目店", address: "東京都台東区上野3-17-7 G-SQUARE上野1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000334/" },
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000242/" },
       { chain: "veloce", name: "末広町店", address: "東京都千代田区外神田6-15-11 日東ビル1F", distance: "徒歩圏", m: 430, url: "https://c-united.co.jp/store/detail/000222/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 410, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 650, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yayoiken", name: "やよい軒外神田3丁目店", address: "東京都千代田区外神田3-6-2", distance: "徒歩圏", m: 720, url: "https://store.yayoiken.com/b/yayoiken/info/2202/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "駅前", m: 90, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
@@ -12806,7 +12809,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "naka-okachimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
@@ -12874,6 +12877,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "veloce", name: "上野三丁目店", address: "東京都台東区上野3-17-7 G-SQUARE上野1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000334/" },
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000242/" },
       { chain: "veloce", name: "末広町店", address: "東京都千代田区外神田6-15-11 日東ビル1F", distance: "徒歩圏", m: 430, url: "https://c-united.co.jp/store/detail/000222/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 410, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 650, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yayoiken", name: "やよい軒外神田3丁目店", address: "東京都千代田区外神田3-6-2", distance: "徒歩圏", m: 720, url: "https://store.yayoiken.com/b/yayoiken/info/2202/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "駅前", m: 90, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
@@ -12913,7 +12917,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ueno-okachimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 430, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
@@ -12981,6 +12985,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "veloce", name: "上野三丁目店", address: "東京都台東区上野3-17-7 G-SQUARE上野1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000334/" },
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "駅前", m: 220, url: "https://c-united.co.jp/store/detail/000242/" },
       { chain: "veloce", name: "末広町店", address: "東京都千代田区外神田6-15-11 日東ビル1F", distance: "徒歩圏", m: 430, url: "https://c-united.co.jp/store/detail/000222/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 410, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 650, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yayoiken", name: "やよい軒外神田3丁目店", address: "東京都千代田区外神田3-6-2", distance: "徒歩圏", m: 720, url: "https://store.yayoiken.com/b/yayoiken/info/2202/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "駅前", m: 90, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
@@ -13020,7 +13025,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-okachimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "徒歩圏", m: 600, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
@@ -13070,6 +13075,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "上野御徒町店", address: "東京都台東区 上野5-25-11", distance: "徒歩圏", m: 580, url: "https://shop.tullys.co.jp/detail/1000875" },
       { chain: "veloce", name: "稲荷町店", address: "東京都台東区元浅草2-11-6 稲荷町タワー1F", distance: "徒歩圏", m: 450, url: "https://c-united.co.jp/store/detail/000380/" },
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "徒歩圏", m: 510, url: "https://c-united.co.jp/store/detail/000242/" },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "駅前", m: 260, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 560, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 浅草通り稲荷町店", address: "東京都台東区東上野3丁目33-8", distance: "徒歩圏", m: 470, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041426", fac: ["お子様メニュー"] },
       { chain: "yoshinoya", name: "吉野家 上野駅前店", address: "東京都台東区上野7丁目3-2ピナクルプロパティーズ上野駅前ビル1F", distance: "徒歩圏", m: 710, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041399", fac: [] },
@@ -13110,7 +13116,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "inaricho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 上野浅草通り店", address: "東京都台東区 東上野 4-2-3", distance: "徒歩圏", m: 310, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011120" },
@@ -13149,6 +13155,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "上野御徒町店", address: "東京都台東区 上野5-25-11", distance: "徒歩圏", m: 750, url: "https://shop.tullys.co.jp/detail/1000875" },
       { chain: "veloce", name: "稲荷町店", address: "東京都台東区元浅草2-11-6 稲荷町タワー1F", distance: "駅前", m: 60, url: "https://c-united.co.jp/store/detail/000380/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "駅前", m: 280, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 560, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yoshinoya", name: "吉野家 浅草通り稲荷町店", address: "東京都台東区東上野3丁目33-8", distance: "駅前", m: 40, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041426", fac: ["お子様メニュー"] },
       { chain: "yoshinoya", name: "吉野家 上野駅前店", address: "東京都台東区上野7丁目3-2ピナクルプロパティーズ上野駅前ビル1F", distance: "徒歩圏", m: 450, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041399", fac: [] },
     ],
@@ -13203,7 +13210,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tawaramachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武浅草駅前店", address: "東京都台東区花川戸一丁目3番2号井門浅草ビル", distance: "徒歩圏", m: 730, url: "https://tenpo.ichibanya.co.jp/map/2261", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浅草国際通り店", address: "東京都台東区浅草1-43-5", distance: "徒歩圏", m: 420, url: "https://shop.dennys.jp/map/21763", fac: ["オムツ替えシート"] },
@@ -13267,7 +13274,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "asakusa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武浅草駅前店", address: "東京都台東区花川戸一丁目3番2号井門浅草ビル", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/2261", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浅草雷門店", address: "東京都台東区雷門2-18-7 井門雷門ビル2F", distance: "駅前", m: 100, url: "https://shop.dennys.jp/map/21798", fac: ["オムツ替えシート"] },
@@ -13325,7 +13332,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kuramae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 都営浅草橋駅店", address: "東京都台東区 浅草橋 1-18-11 地下1F改札外コンコース", distance: "徒歩圏", m: 770, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012566" },
       { chain: "doutor", name: "ドトールコーヒーショップ 浅草田原町店", address: "東京都台東区 西浅草 1-1-16 カーサ田原町", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010438" },
@@ -13380,7 +13387,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "asakusabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区馬喰町店", address: "東京都中央区日本橋馬喰町一丁目10番8号 CASA FELICE", distance: "徒歩圏", m: 410, url: "https://tenpo.ichibanya.co.jp/map/2446", fac: [] },
       { chain: "denny-s", name: "デニーズ 馬喰町店", address: "東京都中央区日本橋馬喰町1-4-16 メゾンカルム日本橋馬喰町1階", distance: "徒歩圏", m: 640, url: "https://shop.dennys.jp/map/22013", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -13463,7 +13470,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "iriya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 浅草かっぱ橋店", address: "東京都台東区西浅草3丁目25 台東区生涯学習センター2F", distance: "徒歩圏", m: 580, url: "https://store-info.skylark.co.jp/map/171197/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 入谷駅前店", address: "東京都台東区 下谷 2-1-10", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010534" },
@@ -13494,7 +13501,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minowa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 南千住駅前店", address: "東京都荒川区南千住7-2-6 南千住満天ビル1階", distance: "徒歩圏", m: 780, url: "https://shop.dennys.jp/map/21883", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 三ノ輪店", address: "東京都台東区 根岸 5-22-6", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010766" },
@@ -13516,7 +13523,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "uguisudani": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 上野谷中店", address: "東京都台東区谷中6-1-7", distance: "徒歩圏", m: 740, url: "https://shop.dennys.jp/map/2665", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 鴬谷北口店", address: "東京都台東区 根岸 1-9-9", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010286" },
@@ -13548,7 +13555,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-ueno": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "御徒町春日通り店", address: "東京都台東区台東四丁目28番7号濱松ビル1階", distance: "徒歩圏", m: 680, url: "https://tenpo.ichibanya.co.jp/map/1954", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "御徒町昭和通り店", address: "東京都台東区上野五丁目15番17号東和ビル1階", distance: "徒歩圏", m: 710, url: "https://tenpo.ichibanya.co.jp/map/2166", fac: [] },
@@ -13604,6 +13611,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "veloce", name: "仲御徒町店", address: "東京都台東区台東4-8-5 T&T御徒町ビル1F", distance: "徒歩圏", m: 630, url: "https://c-united.co.jp/store/detail/000242/" },
       { chain: "veloce", name: "末広町店", address: "東京都千代田区外神田6-15-11 日東ビル1F", distance: "徒歩圏", m: 800, url: "https://c-united.co.jp/store/detail/000222/" },
       { chain: "yayoiken", name: "やよい軒 東上野店", address: "東京都台東区東上野3-37-9 かみちビル1階", distance: "徒歩圏", m: 530, url: "https://store.yayoiken.com/b/yayoiken/info/2079/", fac: [] },
+      { chain: "yayoiken", name: "やよい軒 御徒町春日通り店", address: "東京都台東区台東4-29-15", distance: "徒歩圏", m: 680, url: "https://store.yayoiken.com/b/yayoiken/info/02304/" },
       { chain: "yoshinoya", name: "吉野家 御徒町駅前店", address: "東京都台東区上野4丁目2-1", distance: "徒歩圏", m: 360, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061358", fac: [] },
       { chain: "yoshinoya", name: "吉野家 上野駅前店", address: "東京都台東区上野7丁目3-2ピナクルプロパティーズ上野駅前ビル1F", distance: "徒歩圏", m: 400, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041399", fac: [] },
       { chain: "yoshinoya", name: "吉野家 浅草通り稲荷町店", address: "東京都台東区東上野3丁目33-8", distance: "徒歩圏", m: 770, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041426", fac: ["お子様メニュー"] },
@@ -13621,7 +13629,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kinshicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン オリナス錦糸町店", address: "東京都墨田区太平4丁目1番2号 4階", distance: "徒歩圏", m: 380, url: "https://store-info.skylark.co.jp/map/171634/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "JR錦糸町駅南口店", address: "東京都墨田区江東橋三丁目7番9号CDビル", distance: "徒歩圏", m: 330, url: "https://tenpo.ichibanya.co.jp/map/1873", fac: ["お子さまメニュー"] },
@@ -13668,7 +13676,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "錦糸町オリナス店", address: "東京都墨田区太平4-1-2 オリナス", distance: "徒歩圏", m: 370, url: "https://store.starbucks.co.jp/detail-1562/" },
       { chain: "subway", name: "サブウェイ 錦糸町店", address: "東京都墨田区江東橋4-27-14楽天地ビル1F", distance: "駅前", m: 170, url: "https://subway.co.jp/shop/5692/", fac: ["キッズセット"] },
       { chain: "subway", name: "サブウェイ 錦糸町オリナス店", address: "東京都墨田区太平4-1-5オリナスコアB1F(フードコート内)", distance: "徒歩圏", m: 460, url: "https://subway.co.jp/shop/5790/", fac: ["キッズセット"] },
-      { chain: "tenya", name: "錦糸町テルミナ2店", address: "東京都墨田区錦糸1-2-47 テルミナ2", distance: "駅前", m: 110, url: "https://www.tenya.co.jp/shop/tokyo/sumida/termina2.html", fac: ["お子様メニュー"] },
       { chain: "tenya", name: "錦糸町南店", address: "東京都墨田区江東橋3-8-7 錦糸町駅前プラザビル1F", distance: "駅前", m: 190, url: "https://www.tenya.co.jp/shop/tokyo/sumida/kinsichominami.html", fac: [] },
       { chain: "tully-coffee", name: "錦糸町テルミナ店", address: "東京都墨田区 江東橋3丁目14番5号 テルミナ4F", distance: "駅前", m: 80, url: "https://shop.tullys.co.jp/detail/1830869" },
       { chain: "tully-coffee", name: "錦糸町アルカウエスト店", address: "東京都墨田区 錦糸1-2-4 アルカウエスト2F", distance: "徒歩圏", m: 440, url: "https://shop.tullys.co.jp/detail/1960218" },
@@ -13688,7 +13695,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ryogoku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 両国東口店", address: "東京都墨田区 両国 3-26-5", distance: "駅前", m: 190, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010190" },
       { chain: "freshness-burger", name: "フレッシュネスバーガー浅草橋店", address: "東京都台東区 柳橋1-23-3 VORT浅草橋駅前ビル1階", distance: "徒歩圏", m: 780, url: "https://search.freshnessburger.co.jp/detail/3033401/", fac: [] },
@@ -13731,7 +13738,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oshiage": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武曳舟駅前店", address: "東京都墨田区京島一丁目1番1号-106号イーストコア曳舟一番館1階", distance: "徒歩圏", m: 740, url: "https://tenpo.ichibanya.co.jp/map/2360", fac: ["お子さまメニュー"] },
       { chain: "excelsior", name: "エクセルシオール カフェ 東京スカイツリーイーストタワー店", address: "東京都墨田区 押上 1-1-2 東京スカイツリーイーストタワー 12F", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000274" },
@@ -13775,7 +13782,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokyo-skytree": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 本所吾妻橋店", address: "東京都墨田区 吾妻橋 2-3-11", distance: "徒歩圏", m: 510, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012021" },
       { chain: "excelsior", name: "エクセルシオール カフェ 東京ソラマチ店", address: "東京都墨田区 押上 1-1-2 東京スカイツリータウン・ソラマチ 1F", distance: "駅前", m: 30, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000275" },
@@ -13810,7 +13817,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "honjo-azumabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武浅草駅前店", address: "東京都台東区花川戸一丁目3番2号井門浅草ビル", distance: "徒歩圏", m: 630, url: "https://tenpo.ichibanya.co.jp/map/2261", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 浅草雷門店", address: "東京都台東区雷門2-18-7 井門雷門ビル2F", distance: "徒歩圏", m: 760, url: "https://shop.dennys.jp/map/21798", fac: ["オムツ替えシート"] },
@@ -13854,7 +13861,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kikukawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 江東白河店", address: "東京都江東区白河3丁目3-12", distance: "徒歩圏", m: 750, url: "https://store-info.skylark.co.jp/map/172870/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "墨田区菊川駅前店", address: "東京都墨田区菊川三丁目7番5号中林ビル1階", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/1802", fac: ["お子さまメニュー"] },
@@ -13880,7 +13887,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-azuma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 墨田立花店", address: "東京都墨田区立花3-1-5", distance: "駅前", m: 60, url: "https://shop.dennys.jp/map/2321", fac: ["オムツ替えシート", "パーティールームまたは個室", "駐車場"] },
       { chain: "mcdonalds", name: "墨田文花オリンピック店", address: "東京都墨田区文花1-31-9", distance: "徒歩圏", m: 750, url: "https://map.mcdonalds.co.jp/map/13777", fac: ["駐車場"] },
@@ -13898,7 +13905,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hikifune": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武曳舟駅前店", address: "東京都墨田区京島一丁目1番1号-106号イーストコア曳舟一番館1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2360", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ イトーヨーカドー曳舟店", address: "東京都墨田区 京島 1-2-1 イトーヨーカドー曳舟店 1F", distance: "駅前", m: 160, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011770" },
@@ -13937,7 +13944,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-hikifune": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武曳舟駅前店", address: "東京都墨田区京島一丁目1番1号-106号イーストコア曳舟一番館1階", distance: "徒歩圏", m: 340, url: "https://tenpo.ichibanya.co.jp/map/2360", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ イトーヨーカドー曳舟店", address: "東京都墨田区 京島 1-2-1 イトーヨーカドー曳舟店 1F", distance: "駅前", m: 200, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011770" },
@@ -13970,7 +13977,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yahiro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -13980,7 +13987,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-mukojima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 墨田堤通り店", address: "東京都墨田区堤通1-19-11", distance: "徒歩圏", m: 710, url: "https://shop.dennys.jp/map/2477", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 東向島店", address: "東京都墨田区 東向島 4-29-6 ア・ラ・モード東向島 1F", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011677" },
@@ -14012,7 +14019,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kanegafuchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -14022,7 +14029,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omurai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 墨田立花店", address: "東京都墨田区立花3-1-5", distance: "徒歩圏", m: 590, url: "https://shop.dennys.jp/map/2321", fac: ["オムツ替えシート", "パーティールームまたは個室", "駐車場"] },
       { chain: "mcdonalds", name: "墨田文花オリンピック店", address: "東京都墨田区文花1-31-9", distance: "徒歩圏", m: 510, url: "https://map.mcdonalds.co.jp/map/13777", fac: ["駐車場"] },
@@ -14030,7 +14037,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "monzen-nakacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ門前仲町駅前店", address: "東京都江東区富岡一丁目6-5", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2391", fac: [] },
       { chain: "freshness-burger", name: "フレッシュネスバーガー門前仲町店", address: "東京都江東区 門前仲町2丁目9-2 梅川ビル1・2階", distance: "駅前", m: 170, url: "https://search.freshnessburger.co.jp/detail/3033099/", fac: ["キッズセット"] },
@@ -14065,7 +14072,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kiba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "江東区東陽町駅西口店", address: "東京都江東区東陽三丁目27-29ハイツ東陽パーク1階", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/2319", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 木場店", address: "東京都江東区 東陽 3-7", distance: "駅前", m: 250, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010862" },
@@ -14106,7 +14113,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toyocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "江東区東陽町駅西口店", address: "東京都江東区東陽三丁目27-29ハイツ東陽パーク1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2319", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 東陽町店", address: "東京都江東区 東陽 4-5-18 メトロハイツ東陽", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010064" },
@@ -14138,7 +14145,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minami-sunamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 江東南砂店", address: "東京都江東区南砂6丁目7-15", distance: "徒歩圏", m: 650, url: "https://store-info.skylark.co.jp/map/171121/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 南砂店", address: "東京都江東区南砂6-7-15", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/2623", fac: ["オムツ替えシート", "駐車場"] },
@@ -14170,7 +14177,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kameido": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR亀戸駅東口店", address: "東京都江東区亀戸六丁目58番13号古谷ビル1階", distance: "駅前", m: 120, url: "https://tenpo.ichibanya.co.jp/map/1817", fac: ["お子さまメニュー"] },
       { chain: "excelsior", name: "エクセルシオール カフェ 亀戸店", address: "東京都江東区 亀戸 5-1-2 LIV亀戸2ビル 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000109" },
@@ -14228,7 +14235,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kameido-suijin": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR亀戸駅東口店", address: "東京都江東区亀戸六丁目58番13号古谷ビル1階", distance: "徒歩圏", m: 630, url: "https://tenpo.ichibanya.co.jp/map/1817", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 墨田立花店", address: "東京都墨田区立花3-1-5", distance: "徒歩圏", m: 740, url: "https://shop.dennys.jp/map/2321", fac: ["オムツ替えシート", "パーティールームまたは個室", "駐車場"] },
@@ -14273,7 +14280,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "morishita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 清澄店", address: "東京都江東区清澄2-6-9", distance: "徒歩圏", m: 690, url: "https://shop.dennys.jp/map/2413", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 菊川店", address: "東京都墨田区 菊川 2-5-6", distance: "徒歩圏", m: 740, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010843" },
@@ -14309,7 +14316,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kiyosumi-shirakawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 江東白河店", address: "東京都江東区白河3丁目3-12", distance: "徒歩圏", m: 680, url: "https://store-info.skylark.co.jp/map/172870/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 清澄店", address: "東京都江東区清澄2-6-9", distance: "駅前", m: 180, url: "https://shop.dennys.jp/map/2413", fac: ["オムツ替えシート", "駐車場"] },
@@ -14332,7 +14339,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinonome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "starbucks", name: "TSUTAYA BOOKSTORE 東雲店", address: "東京都江東区東雲2-7-20", distance: "駅前", m: 140, url: "https://store.starbucks.co.jp/detail-2129/" },
       { chain: "sukiya", name: "すき家 東雲晴海通り店", address: "東京都江東区東雲1-6-17", distance: "徒歩圏", m: 610, url: "https://maps.sukiya.jp/jp/detail/392.html", fac: ["お子様メニュー"] },
@@ -14346,7 +14353,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sumiyoshi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR錦糸町駅南口店", address: "東京都墨田区江東橋三丁目7番9号CDビル", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/1873", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 錦糸町駅前店", address: "東京都墨田区江東橋3-8-7 錦糸町駅前プラザビル3階", distance: "徒歩圏", m: 700, url: "https://shop.dennys.jp/map/21993", fac: ["オムツ替えシート"] },
@@ -14395,7 +14402,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "ootoya", name: "大戸屋ごはん処 アルカキット錦糸町店", address: "東京都墨田区 錦糸2-2-1 アルカキット錦糸町10F", distance: "少し歩く", m: 960, url: "https://store.ootoya.com/detail/27438/", fac: [] },
       { chain: "starbucks", name: "錦糸町パルコ店", address: "東京都墨田区江東橋4-27-14 楽天地ビル", distance: "少し歩く", m: 830, url: "https://store.starbucks.co.jp/detail-1645/" },
       { chain: "starbucks", name: "錦糸町テルミナ2店", address: "東京都墨田区錦糸1-2-47 テルミナ2", distance: "少し歩く", m: 920, url: "https://store.starbucks.co.jp/detail-987/" },
-      { chain: "tenya", name: "錦糸町テルミナ2店", address: "東京都墨田区錦糸1-2-47 テルミナ2", distance: "少し歩く", m: 920, url: "https://www.tenya.co.jp/shop/tokyo/sumida/termina2.html", fac: ["お子様メニュー"] },
       { chain: "tully-coffee", name: "錦糸町テルミナ店", address: "東京都墨田区 江東橋3丁目14番5号 テルミナ4F", distance: "少し歩く", m: 830, url: "https://shop.tullys.co.jp/detail/1830869" },
       { chain: "yoshinoya", name: "吉野家 錦糸町南口店", address: "東京都墨田区江東橋3丁目14-13サンライズビル", distance: "少し歩く", m: 820, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041345", fac: [] },
       { chain: "yoshinoya", name: "吉野家 菊川駅前店", address: "東京都墨田区菊川2丁目6-13", distance: "少し歩く", m: 910, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061434", fac: ["お子様メニュー"] },
@@ -14403,7 +14409,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-ojima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "江東区西大島駅前店", address: "東京都江東区大島一丁目29番10号椎名マンション1階", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2139", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大島駅前店", address: "東京都江東区 大島 5-34-3", distance: "徒歩圏", m: 750, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011933" },
@@ -14458,7 +14464,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ojima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 大島駅前店", address: "東京都江東区 大島 5-34-3", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011933" },
       { chain: "jonathan", name: "ジョナサン 東大島駅前店", address: "東京都江東区大島8丁目41-13", distance: "徒歩圏", m: 790, url: "https://store-info.skylark.co.jp/map/020437/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
@@ -14487,7 +14493,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-ojima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 東大島駅前店", address: "東京都江東区大島9丁目3-12", distance: "駅前", m: 80, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/591.html", fac: [] },
       { chain: "jonathan", name: "ジョナサン 東大島駅前店", address: "東京都江東区大島8丁目41-13", distance: "駅前", m: 170, url: "https://store-info.skylark.co.jp/map/020437/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
@@ -14503,10 +14509,9 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shiomi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "nakau", name: "なか卯 潮見店", address: "東京都江東区潮見2-7-16", distance: "駅前", m: 50, url: "https://maps.nakau.co.jp/jp/detail/2234.html" },
-      { chain: "sukiya", name: "すき家 潮見店", address: "東京都江東区潮見2-10-22", distance: "駅前", m: 210, url: "https://maps.sukiya.jp/jp/detail/286.html", fac: ["お子様メニュー"] },
     ],
     far: [
       { chain: "denny-s", name: "デニーズ 江東枝川店", address: "東京都江東区枝川 2-2-8", distance: "少し歩く", m: 910, url: "https://shop.dennys.jp/map/2681", fac: ["オムツ替えシート", "駐車場"] },
@@ -14514,7 +14519,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-kiba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 新木場メトロピア店", address: "東京都江東区 新木場 1-6 有楽町線 新木場駅構内", distance: "駅前", m: 20, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012485" },
       { chain: "komeda", name: "新木場駅前店", address: "東京都江東区新木場1-6-1-2F", distance: "駅前", m: 90, url: "https://www.komeda.co.jp/shop/detail.html?id=856", fac: [] },
@@ -14525,7 +14530,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toyosu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 豊洲店", address: "東京都江東区豊洲5丁目6番52号 NBF豊洲キャナルフロントビル1F", distance: "徒歩圏", m: 510, url: "https://store-info.skylark.co.jp/map/171470/", fac: ["駐車場"] },
       { chain: "cocoichi", name: "豊洲センタービル店", address: "東京都江東区豊洲三丁目3番3号豊洲センタービル1F", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2097", fac: ["お子さまメニュー"] },
@@ -14566,7 +14571,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tatsumi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "starbucks", name: "TSUTAYA BOOKSTORE 東雲店", address: "東京都江東区東雲2-7-20", distance: "徒歩圏", m: 740, url: "https://store.starbucks.co.jp/detail-2129/" },
     ],
@@ -14580,13 +14585,13 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shijomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "yoshinoya", name: "吉野家 豊洲市場店", address: "東京都江東区豊洲6丁目5-1水産仲卸市場棟 6街区3階11号", distance: "徒歩圏", m: 330, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061452", fac: [] },
     ],
   },
   "shin-toyosu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kfc", name: "アーバンドックららぽーと豊洲店", address: "東京都江東区豊洲2-4-9 マリーナキッチン内", distance: "徒歩圏", m: 650, url: "https://search.kfc.co.jp/map/4279", fac: ["駐車場"] },
       { chain: "komeda", name: "ららぽーと豊洲店", address: "東京都江東区豊洲2-4-9 2階", distance: "徒歩圏", m: 800, url: "https://www.komeda.co.jp/shop/detail.html?id=973", fac: ["お子様メニュー", "駐車場"] },
@@ -14613,7 +14618,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ariake": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "ワンザ有明店", address: "東京都江東区有明3-6-11 TFTビル2階", distance: "徒歩圏", m: 490, url: "https://tenpo.ichibanya.co.jp/map/3168", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "cocos", name: "ココス 有明パークビル店", address: "東京都江東区有明3-7-11 有明パークビル2F", distance: "駅前", m: 200, url: "https://maps.cocos-jpn.co.jp/jp/detail/3056.html", fac: ["お子様メニュー", "スロープ／エレベーター"] },
@@ -14636,7 +14641,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ariake-tennis-no-mori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 国際展示場駅店", address: "東京都江東区 有明 3-7-3", distance: "徒歩圏", m: 670, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011684" },
       { chain: "hama-sushi", name: "はま寿司 有明ガーデン店", address: "東京都江東区有明2-1-8 住友不動産ショッピングシティ 有明ガーデン モール棟 2階 240区画", distance: "徒歩圏", m: 390, url: "https://maps.hama-sushi.co.jp/jp/detail/6269.html", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
@@ -14653,7 +14658,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kokusai-tenjijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "ワンザ有明店", address: "東京都江東区有明3-6-11 TFTビル2階", distance: "徒歩圏", m: 410, url: "https://tenpo.ichibanya.co.jp/map/3168", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "cocos", name: "ココス 有明パークビル店", address: "東京都江東区有明3-7-11 有明パークビル2F", distance: "駅前", m: 220, url: "https://maps.cocos-jpn.co.jp/jp/detail/3056.html", fac: ["お子様メニュー", "スロープ／エレベーター"] },
@@ -14676,7 +14681,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokyo-big-sight": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "ワンザ有明店", address: "東京都江東区有明3-6-11 TFTビル2階", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/3168", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "cocos", name: "ココス 有明パークビル店", address: "東京都江東区有明3-7-11 有明パークビル2F", distance: "徒歩圏", m: 340, url: "https://maps.cocos-jpn.co.jp/jp/detail/3056.html", fac: ["お子様メニュー", "スロープ／エレベーター"] },
@@ -14701,7 +14706,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "aomi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン お台場海浜公園駅前店", address: "東京都港区台場2丁目3番2号 台場フロンティアビル1階", distance: "徒歩圏", m: 540, url: "https://store-info.skylark.co.jp/map/171643/", fac: [] },
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 480, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
@@ -14719,7 +14724,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "telecom-center": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -14732,7 +14737,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokyo-teleport": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン お台場海浜公園駅前店", address: "東京都港区台場2丁目3番2号 台場フロンティアビル1階", distance: "駅前", m: 180, url: "https://store-info.skylark.co.jp/map/171643/", fac: [] },
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 370, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
@@ -14748,7 +14753,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "fune-no-kagakukan": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 490, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
       { chain: "hanamaru-udon", name: "はなまるうどん ダイバーシティ東京店", address: "東京都江東区青海1-1-10 ダイバーシティー東京 フードコート", distance: "徒歩圏", m: 430, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1147", fac: ["お子様メニュー", "駐車場"] },
@@ -14766,7 +14771,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokyo-international-cruise": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "excelsior", name: "エクセルシオール カフェ ダイバーシティ東京プラザ店", address: "東京都江東区 青海 1-1-10 ダイバーシティ東京プラザ 5F", distance: "徒歩圏", m: 490, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000285" },
       { chain: "hanamaru-udon", name: "はなまるうどん ダイバーシティ東京店", address: "東京都江東区青海1-1-10 ダイバーシティー東京 フードコート", distance: "徒歩圏", m: 430, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1147", fac: ["お子様メニュー", "駐車場"] },
@@ -14784,7 +14789,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "etchujima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ門前仲町駅前店", address: "東京都江東区富岡一丁目6-5", distance: "徒歩圏", m: 530, url: "https://tenpo.ichibanya.co.jp/map/2391", fac: [] },
       { chain: "freshness-burger", name: "フレッシュネスバーガー門前仲町店", address: "東京都江東区 門前仲町2丁目9-2 梅川ビル1・2階", distance: "徒歩圏", m: 650, url: "https://search.freshnessburger.co.jp/detail/3033099/", fac: ["キッズセット"] },
@@ -14815,7 +14820,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ ThinkPark店", address: "東京都品川区大崎2-1-1 Think Park Tower1F", distance: "駅前", m: 170, url: "https://shop.dennys.jp/map/21863", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ ゲートシティ大崎店", address: "東京都品川区 大崎 1-11-1 ゲートシティ大崎 ウエストタワー 3F", distance: "駅前", m: 250, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010765" },
@@ -14880,7 +14885,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gotanda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR五反田駅東口店", address: "東京都品川区東五反田五丁目27番6号第一五反田ビル1階", distance: "駅前", m: 120, url: "https://tenpo.ichibanya.co.jp/map/2184", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "五反田山手通店", address: "東京都品川区西五反田二丁目30番10号セブンスターマンション1階", distance: "徒歩圏", m: 410, url: "https://tenpo.ichibanya.co.jp/map/1919", fac: ["お子さまメニュー"] },
@@ -14946,7 +14951,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "meguro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "目黒駅西口店", address: "東京都目黒区目黒一丁目4番9号", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/1863", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 目黒東口店", address: "東京都品川区 上大崎 2-14-5", distance: "駅前", m: 150, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010335" },
@@ -14984,7 +14989,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinagawa-seaside": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 青物横丁店", address: "東京都品川区 南品川 2-5-9", distance: "徒歩圏", m: 620, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012191" },
       { chain: "excelsior", name: "エクセルシオール カフェ 品川シーサイドフォレスト店", address: "東京都品川区 東品川 4-12-6 品川シーサイドフォレスト B1F", distance: "駅前", m: 190, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000093" },
@@ -15011,7 +15016,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tennozu-isle": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 東品川店(から好し取扱店)", address: "東京都品川区東品川3丁目9-10", distance: "徒歩圏", m: 550, url: "https://store-info.skylark.co.jp/map/018886/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "gyukaku", name: "牛角 天王洲アイル店", address: "東京都品川区 東品川2-2-20 天王洲オーシャンスクエア1F", distance: "駅前", m: 80, url: "https://map.reins.co.jp/gyukaku/detail/357819129", fac: ["お子様用備品"] },
@@ -15032,7 +15037,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 大井町店", address: "東京都品川区東大井5丁目1-12 かんべ土地K-13ビル", distance: "駅前", m: 160, url: "https://store-info.skylark.co.jp/map/171471/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "denny-s", name: "デニーズ 大井町駅前店", address: "東京都品川区大井1-50-5 阪急大井町ガーデン3階", distance: "駅前", m: 180, url: "https://shop.dennys.jp/map/21940", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター"] },
@@ -15078,7 +15083,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-shimmei": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "goemon", name: "大井町店", address: "東京都品川区大井1-50-5 阪急大井町ガーデン1F", distance: "徒歩圏", m: 760, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "kamakura-pasta", name: "鎌倉パスタ 阪急大井町ガーデン", address: "東京都品川区大井1-50-5 阪急大井町ガーデン1F", distance: "徒歩圏", m: 730, url: "https://www.saint-marc-hd.com/kamakura/shop/380/" },
@@ -15120,7 +15125,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "togoshi-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急荏原中延駅前店", address: "東京都品川区中延二丁目15番7号第二成安ビル1F", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/1813", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "東急戸越銀座駅前店", address: "東京都品川区平塚一丁目8番3号富士ビル1F", distance: "徒歩圏", m: 780, url: "https://tenpo.ichibanya.co.jp/map/2040", fac: ["お子さまメニュー"] },
@@ -15147,7 +15152,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "togoshi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 荏原店", address: "東京都品川区荏原4丁目6-3", distance: "徒歩圏", m: 740, url: "https://store-info.skylark.co.jp/map/172815/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東急戸越銀座駅前店", address: "東京都品川区平塚一丁目8番3号富士ビル1F", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2040", fac: ["お子さまメニュー"] },
@@ -15182,7 +15187,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "togoshi-ginza": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 荏原店", address: "東京都品川区荏原4丁目6-3", distance: "徒歩圏", m: 740, url: "https://store-info.skylark.co.jp/map/172815/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東急戸越銀座駅前店", address: "東京都品川区平塚一丁目8番3号富士ビル1F", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2040", fac: ["お子さまメニュー"] },
@@ -15217,7 +15222,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakanobu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急荏原中延駅前店", address: "東京都品川区中延二丁目15番7号第二成安ビル1F", distance: "徒歩圏", m: 510, url: "https://tenpo.ichibanya.co.jp/map/1813", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 中延駅前店", address: "東京都品川区 中延 4-5-3", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011514" },
@@ -15244,7 +15249,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ebara-machi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急荏原中延駅前店", address: "東京都品川区中延二丁目15番7号第二成安ビル1F", distance: "徒歩圏", m: 790, url: "https://tenpo.ichibanya.co.jp/map/1813", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 旗の台店", address: "東京都品川区 旗の台 1-4-13", distance: "徒歩圏", m: 520, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010767" },
@@ -15271,7 +15276,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hatanodai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 旗の台店", address: "東京都品川区 旗の台 1-4-13", distance: "徒歩圏", m: 310, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010767" },
       { chain: "doutor", name: "ドトールコーヒーショップ 長原店", address: "東京都大田区 上池台 1-32-3", distance: "徒歩圏", m: 550, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011365" },
@@ -15295,7 +15300,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-shinagawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 品川グランドコモンズ店", address: "東京都港区港南2丁目16-2 太陽生命品川ビル3F", distance: "徒歩圏", m: 520, url: "https://store-info.skylark.co.jp/map/171350/", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 京急新馬場店", address: "東京都品川区 北品川 2-17-9", distance: "徒歩圏", m: 510, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011448" },
@@ -15343,7 +15348,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimbamba": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 京急新馬場店", address: "東京都品川区 北品川 2-17-9", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011448" },
       { chain: "tully-coffee", name: "御殿山トラストタワー店", address: "東京都品川区 北品川4丁目7-35", distance: "徒歩圏", m: 610, url: "https://shop.tullys.co.jp/detail/5663332" },
@@ -15376,7 +15381,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "aomono-yokocho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 大井町店", address: "東京都品川区東大井5丁目1-12 かんべ土地K-13ビル", distance: "徒歩圏", m: 620, url: "https://store-info.skylark.co.jp/map/171471/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 青物横丁店", address: "東京都品川区 南品川 2-5-9", distance: "駅前", m: 100, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012191" },
@@ -15428,7 +15433,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "samezu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 大井町店", address: "東京都品川区東大井5丁目1-12 かんべ土地K-13ビル", distance: "徒歩圏", m: 630, url: "https://store-info.skylark.co.jp/map/171471/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "denny-s", name: "デニーズ 大井町駅前店", address: "東京都品川区大井1-50-5 阪急大井町ガーデン3階", distance: "徒歩圏", m: 720, url: "https://shop.dennys.jp/map/21940", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター"] },
@@ -15485,7 +15490,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tachiaigawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hama-sushi", name: "はま寿司 ウィラ大井店", address: "東京都品川区勝島1-6-16", distance: "徒歩圏", m: 550, url: "https://maps.hama-sushi.co.jp/jp/detail/4109.html", fac: ["駐車場"] },
       { chain: "lotteria", name: "ウィラ大井店", address: "東京都品川区勝島1-6-16", distance: "徒歩圏", m: 550, url: "https://maps.zetteria.jp/shop/shop2324.html" },
@@ -15515,7 +15520,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omori-kaigan": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 大森駅前店", address: "東京都大田区山王2丁目8-26 東辰ビル2F", distance: "徒歩圏", m: 740, url: "https://store-info.skylark.co.jp/map/171601/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR大森駅東口店", address: "東京都大田区大森北一丁目8番地15ラ・トゥール・ヴェルディビル1階", distance: "徒歩圏", m: 750, url: "https://tenpo.ichibanya.co.jp/map/2308", fac: ["お子さまメニュー"] },
@@ -15539,6 +15544,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "大森北店", address: "東京都大田区大森北3-2-16", distance: "徒歩圏", m: 580, url: "https://map.mcdonalds.co.jp/map/13963", fac: ["プレイプレイス", "駐車場"] },
       { chain: "mcdonalds", name: "大森駅北口店", address: "東京都大田区山王2-1-5", distance: "徒歩圏", m: 690, url: "https://map.mcdonalds.co.jp/map/13745", fac: [] },
       { chain: "mcdonalds", name: "アトレ大森店", address: "東京都大田区大森北1-6-16", distance: "徒歩圏", m: 710, url: "https://map.mcdonalds.co.jp/map/70505", fac: ["駐車場"] },
+      { chain: "mister-donut", name: "大森山王 ショップ", address: "東京都大田区山王2丁目3-5", distance: "徒歩圏", m: 770, url: "https://md.mapion.co.jp/b/misterdonut/info/1557/", fac: [] },
       { chain: "nakau", name: "なか卯 南大井三丁目店", address: "東京都品川区南大井3-35-10 大森Gスクエア内", distance: "駅前", m: 250, url: "https://maps.nakau.co.jp/jp/detail/2553.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 大森北一丁目店", address: "東京都大田区大森北1-30-1 三喜屋ビル", distance: "徒歩圏", m: 720, url: "https://maps.nakau.co.jp/jp/detail/2525.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 大森店", address: "東京都品川区 南大井6-17-12 WARM LIGHT BLD. B1F", distance: "徒歩圏", m: 580, url: "https://map.reins.co.jp/onyasai/detail/357671129", fac: ["駐車場"] },
@@ -15576,7 +15582,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ebara-nakanobu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 荏原店", address: "東京都品川区荏原4丁目6-3", distance: "徒歩圏", m: 610, url: "https://store-info.skylark.co.jp/map/172815/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東急荏原中延駅前店", address: "東京都品川区中延二丁目15番7号第二成安ビル1F", distance: "駅前", m: 60, url: "https://tenpo.ichibanya.co.jp/map/1813", fac: ["お子さまメニュー"] },
@@ -15613,7 +15619,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "fudomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "五反田山手通店", address: "東京都品川区西五反田二丁目30番10号セブンスターマンション1階", distance: "徒歩圏", m: 510, url: "https://tenpo.ichibanya.co.jp/map/1919", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR五反田駅東口店", address: "東京都品川区東五反田五丁目27番6号第一五反田ビル1階", distance: "徒歩圏", m: 780, url: "https://tenpo.ichibanya.co.jp/map/2184", fac: ["お子さまメニュー"] },
@@ -15683,7 +15689,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "musashi-koyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 荏原店", address: "東京都品川区荏原4丁目6-3", distance: "徒歩圏", m: 770, url: "https://store-info.skylark.co.jp/map/172815/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 武蔵小山店", address: "東京都品川区 小山 3-22-17", distance: "駅前", m: 220, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010362" },
@@ -15718,7 +15724,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oi-keibajo-mae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hama-sushi", name: "はま寿司 ウィラ大井店", address: "東京都品川区勝島1-6-16", distance: "徒歩圏", m: 300, url: "https://maps.hama-sushi.co.jp/jp/detail/4109.html", fac: ["駐車場"] },
       { chain: "lotteria", name: "ウィラ大井店", address: "東京都品川区勝島1-6-16", distance: "徒歩圏", m: 330, url: "https://maps.zetteria.jp/shop/shop2324.html" },
@@ -15729,7 +15735,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "naka-meguro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中目黒山手通店", address: "東京都目黒区上目黒三丁目14番5号 シャンブル上目黒", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2985", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 中目黒店", address: "東京都目黒区 上目黒 3-3-2", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010242" },
@@ -15772,7 +15778,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yutenji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急祐天寺駅前店", address: "東京都目黒区祐天寺二丁目14番1号", distance: "駅前", m: 60, url: "https://tenpo.ichibanya.co.jp/map/1736", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 祐天寺店", address: "東京都目黒区中町2-48-7", distance: "徒歩圏", m: 320, url: "https://shop.dennys.jp/map/2297", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
@@ -15790,7 +15796,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gakugei-daigaku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 碑文谷店", address: "東京都目黒区碑文谷2丁目1-17", distance: "徒歩圏", m: 510, url: "https://store-info.skylark.co.jp/map/172907/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東急学芸大学駅東口店", address: "東京都目黒区鷹番二丁目19番20号第二ベルウッドビル1階", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/1862", fac: ["お子さまメニュー"] },
@@ -15814,7 +15820,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toritsu-daigaku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急都立大学駅前店", address: "東京都目黒区平町一丁目27番4号カムラビル1F", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/1794", fac: ["お子さまメニュー"] },
       { chain: "excelsior", name: "エクセルシオール カフェ 都立大学駅前店", address: "東京都目黒区 平町 1-27-1 パル都立大ビル 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000071" },
@@ -15831,7 +15837,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "jiyugaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 自由が丘駅前店", address: "東京都目黒区自由が丘1丁目13-10 山田ビル2F", distance: "駅前", m: 150, url: "https://store-info.skylark.co.jp/map/171495/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 自由が丘店", address: "東京都目黒区 自由が丘 2-11-6", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010274" },
@@ -15860,7 +15866,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "midorigaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急大岡山駅前店", address: "東京都大田区北千束一丁目40番1号梅林堂ビル1階", distance: "徒歩圏", m: 640, url: "https://tenpo.ichibanya.co.jp/map/2044", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大岡山店", address: "東京都大田区 北千束 1-51-6", distance: "徒歩圏", m: 570, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011181" },
@@ -15890,7 +15896,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ookayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急大岡山駅前店", address: "東京都大田区北千束一丁目40番1号梅林堂ビル1階", distance: "駅前", m: 200, url: "https://tenpo.ichibanya.co.jp/map/2044", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大岡山店", address: "東京都大田区 北千束 1-51-6", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011181" },
@@ -15909,7 +15915,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "senzoku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 洗足駅前店", address: "東京都目黒区 洗足 2-24-15 洗足ヒルズ", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012544" },
       { chain: "doutor", name: "ドトールコーヒーショップ 西小山駅前店", address: "東京都品川区 小山 6-3-9 ウエストヴィレッジビルディング 1F", distance: "徒歩圏", m: 690, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012089" },
@@ -15938,7 +15944,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-koyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 西小山駅前店", address: "東京都品川区 小山 6-3-9 ウエストヴィレッジビルディング 1F", distance: "駅前", m: 10, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012089" },
       { chain: "doutor", name: "ドトールコーヒーショップ 洗足駅前店", address: "東京都目黒区 洗足 2-24-15 洗足ヒルズ", distance: "徒歩圏", m: 650, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012544" },
@@ -15971,7 +15977,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "komaba-todaimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー富ヶ谷店", address: "東京都渋谷区 富ケ谷2-23", distance: "徒歩圏", m: 520, url: "https://search.freshnessburger.co.jp/detail/3031001/", fac: ["キッズセット"] },
       { chain: "mcdonalds", name: "池尻大橋店", address: "東京都目黒区大橋2-22-8", distance: "徒歩圏", m: 790, url: "https://map.mcdonalds.co.jp/map/13638", fac: [] },
@@ -15987,7 +15993,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 大森駅前店", address: "東京都大田区山王2丁目8-26 東辰ビル2F", distance: "駅前", m: 60, url: "https://store-info.skylark.co.jp/map/171601/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR大森駅東口店", address: "東京都大田区大森北一丁目8番地15ラ・トゥール・ヴェルディビル1階", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2308", fac: ["お子さまメニュー"] },
@@ -16010,6 +16016,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "大森ベルポート店", address: "東京都品川区南大井6-26-2大森ベルポートC館2F", distance: "徒歩圏", m: 310, url: "https://map.mcdonalds.co.jp/map/13823", fac: [] },
       { chain: "mcdonalds", name: "大森イトーヨーカドー店", address: "東京都大田区大森北2-13-1", distance: "徒歩圏", m: 520, url: "https://map.mcdonalds.co.jp/map/13876", fac: ["駐車場"] },
       { chain: "mcdonalds", name: "大森北店", address: "東京都大田区大森北3-2-16", distance: "徒歩圏", m: 590, url: "https://map.mcdonalds.co.jp/map/13963", fac: ["プレイプレイス", "駐車場"] },
+      { chain: "mister-donut", name: "大森山王 ショップ", address: "東京都大田区山王2丁目3-5", distance: "駅前", m: 160, url: "https://md.mapion.co.jp/b/misterdonut/info/1557/", fac: [] },
       { chain: "nakau", name: "なか卯 大森北一丁目店", address: "東京都大田区大森北1-30-1 三喜屋ビル", distance: "駅前", m: 300, url: "https://maps.nakau.co.jp/jp/detail/2525.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 南大井三丁目店", address: "東京都品川区南大井3-35-10 大森Gスクエア内", distance: "徒歩圏", m: 440, url: "https://maps.nakau.co.jp/jp/detail/2553.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 大森店", address: "東京都品川区 南大井6-17-12 WARM LIGHT BLD. B1F", distance: "駅前", m: 160, url: "https://map.reins.co.jp/onyasai/detail/357671129", fac: ["駐車場"] },
@@ -16044,7 +16051,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kamata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 蒲田駅東口店", address: "東京都大田区蒲田5丁目24-2 損保ジャパン蒲田ビル 2F", distance: "徒歩圏", m: 400, url: "https://store-info.skylark.co.jp/map/171599/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR蒲田駅東口店", address: "東京都大田区蒲田五丁目16番9号中村ビル1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2194", fac: [] },
@@ -16105,7 +16112,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keikyu-kamata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 蒲田駅東口店", address: "東京都大田区蒲田5丁目24-2 損保ジャパン蒲田ビル 2F", distance: "徒歩圏", m: 440, url: "https://store-info.skylark.co.jp/map/171599/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "JR蒲田駅東口店", address: "東京都大田区蒲田五丁目16番9号中村ビル1階", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/2194", fac: [] },
@@ -16171,7 +16178,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "umeyashiki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 梅屋敷店", address: "東京都大田区 大森西 6-14-13", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010484" },
       { chain: "gusto", name: "ガスト 大森中店(から好し取扱店)", address: "東京都大田区大森中1丁目17-19", distance: "徒歩圏", m: 370, url: "https://store-info.skylark.co.jp/map/012985/", fac: ["おむつ替え台", "多目的トイレ", "駐車場"] },
@@ -16209,7 +16216,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omori-machi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京急平和島駅前店", address: "東京都大田区大森北六丁目27番10号 平和島大西ビル1階", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2473", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大森中店", address: "東京都大田区大森中1-1-3", distance: "駅前", m: 180, url: "https://shop.dennys.jp/map/21867", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
@@ -16236,7 +16243,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "heiwajima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京急平和島駅前店", address: "東京都大田区大森北六丁目27番10号 平和島大西ビル1階", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/2473", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大森中店", address: "東京都大田区大森中1-1-3", distance: "徒歩圏", m: 660, url: "https://shop.dennys.jp/map/21867", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
@@ -16269,7 +16276,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "rokugo-dote": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 西六郷店", address: "東京都大田区西六郷4丁目36-6", distance: "徒歩圏", m: 530, url: "https://store-info.skylark.co.jp/map/172953/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "gusto", name: "ガスト 西六郷店(から好し取扱店)", address: "東京都大田区西六郷3丁目4-8", distance: "徒歩圏", m: 770, url: "https://store-info.skylark.co.jp/map/011172/", fac: ["おむつ替え台", "駐車場"] },
@@ -16283,7 +16290,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "zoshiki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "東六郷店", address: "東京都大田区東六郷2-19-8セントラルコート2F", distance: "駅前", m: 240, url: "https://www.bikkuri-donkey.com/shop/shop_1612/", fac: ["ベビーシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 雑色店", address: "東京都大田区 仲六郷 2-28-4", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010895" },
@@ -16302,7 +16309,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kojiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "大田区南蒲田店", address: "東京都大田区南蒲田三丁目3番6号オーパスオピフェクス1階", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2100", fac: ["お子さまメニュー"] },
       { chain: "hama-sushi", name: "はま寿司 環八大鳥居店", address: "東京都大田区萩中3-4-5", distance: "徒歩圏", m: 740, url: "https://maps.hama-sushi.co.jp/jp/detail/5390.html", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
@@ -16328,7 +16335,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "otorii": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 大鳥居店(から好し取扱店)", address: "東京都大田区東糀谷3丁目3-22", distance: "駅前", m: 110, url: "https://store-info.skylark.co.jp/map/017947/", fac: [] },
       { chain: "gusto", name: "ガスト 本羽田店(から好し取扱店)", address: "東京都大田区本羽田3丁目6-1", distance: "徒歩圏", m: 410, url: "https://store-info.skylark.co.jp/map/018750/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
@@ -16351,7 +16358,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "anamori-inari": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 本羽田店(から好し取扱店)", address: "東京都大田区本羽田3丁目6-1", distance: "徒歩圏", m: 570, url: "https://store-info.skylark.co.jp/map/018750/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
       { chain: "gusto", name: "ガスト 大鳥居店(から好し取扱店)", address: "東京都大田区東糀谷3丁目3-22", distance: "徒歩圏", m: 600, url: "https://store-info.skylark.co.jp/map/017947/", fac: [] },
@@ -16368,7 +16375,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tenkubashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "matsunoya", name: "松のや 羽田イノベーションシティ店(松屋併設)", address: "東京都大田区羽田空港1丁目1番4号イノベーションシティ2F区画(B2-3)", distance: "駅前", m: 200, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012280", fac: [] },
       { chain: "matsuya", name: "松屋 羽田イノベーションシティ店(松のや併設)", address: "東京都大田区羽田空港1丁目1番4号イノベーションシティ2F区画(B2-3)", distance: "駅前", m: 200, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002280", fac: [] },
@@ -16377,7 +16384,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "haneda-airport-t1": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "marugame", name: "丸亀製麺羽田空港第1ターミナル", address: "東京都大田区羽田空港3-3-2 羽田空港第一ターミナル", distance: "駅前", m: 20, url: "https://stores.marugame.com/111468" },
       { chain: "marugame", name: "丸亀製麺羽田空港第2ビル", address: "東京都大田区羽田空港3-4-2 第2旅客ターミナルB1F", distance: "徒歩圏", m: 390, url: "https://stores.marugame.com/110806" },
@@ -16404,7 +16411,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "haneda-airport-t2": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "marugame", name: "丸亀製麺羽田空港第2ビル", address: "東京都大田区羽田空港3-4-2 第2旅客ターミナルB1F", distance: "駅前", m: 90, url: "https://stores.marugame.com/110806" },
       { chain: "marugame", name: "丸亀製麺羽田空港第1ターミナル", address: "東京都大田区羽田空港3-3-2 羽田空港第一ターミナル", distance: "徒歩圏", m: 350, url: "https://stores.marugame.com/111468" },
@@ -16431,7 +16438,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "haneda-airport-t3": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mos-burger", name: "モスバーガー羽田空港第3ターミナル店", address: "東京都大田区羽田空港2丁目6-5", distance: "駅前", m: 70, url: "https://www.mos.jp/shop/detail/?shop_cd=02390", fac: ["駐車場"] },
       { chain: "pronto", name: "PRONTO 羽田空港第3ターミナル店", address: "東京都大田区羽田空港2丁目6-5 国際線旅客ターミナルビル5F COOL ZONE", distance: "駅前", m: 40, url: "https://shop.pronto.co.jp/detail/47/" },
@@ -16440,7 +16447,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-seibijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "marugame", name: "丸亀製麺羽田空港第1ターミナル", address: "東京都大田区羽田空港3-3-2 羽田空港第一ターミナル", distance: "徒歩圏", m: 760, url: "https://stores.marugame.com/111468" },
       { chain: "mcdonalds", name: "羽田空港第1ターミナル駅店", address: "東京都大田区羽田空港3-3-2BF1", distance: "徒歩圏", m: 740, url: "https://map.mcdonalds.co.jp/map/70501", fac: [] },
@@ -16468,7 +16475,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "seibijo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "matsunoya", name: "松のや 羽田イノベーションシティ店(松屋併設)", address: "東京都大田区羽田空港1丁目1番4号イノベーションシティ2F区画(B2-3)", distance: "徒歩圏", m: 800, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012280", fac: [] },
       { chain: "matsuya", name: "松屋 羽田イノベーションシティ店(松のや併設)", address: "東京都大田区羽田空港1丁目1番4号イノベーションシティ2F区画(B2-3)", distance: "徒歩圏", m: 800, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002280", fac: [] },
@@ -16477,12 +16484,12 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "showajima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
   },
   "ryutsu-center": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "tully-coffee", name: "平和島東京流通センター店", address: "東京都大田区 平和島6-1-1 東京流通センター センタービル1F", distance: "駅前", m: 60, url: "https://shop.tullys.co.jp/detail/1460128" },
     ],
@@ -16492,7 +16499,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ikegami": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 久が原店", address: "東京都大田区久が原5丁目14-14", distance: "徒歩圏", m: 760, url: "https://store-info.skylark.co.jp/map/171641/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "ARROW池上店", address: "東京都大田区池上三丁目3-1", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2569", fac: ["お子さまメニュー", "駐車場"] },
@@ -16516,7 +16523,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hasunuma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR蒲田駅西口店", address: "東京都大田区西蒲田七丁目4番5号小山第一ビル1階", distance: "徒歩圏", m: 680, url: "https://tenpo.ichibanya.co.jp/map/2003", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ サンライズ蒲田店", address: "東京都大田区 西蒲田 7-62-4", distance: "徒歩圏", m: 460, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010436" },
@@ -16563,7 +16570,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chidoricho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 下丸子店", address: "東京都大田区下丸子3-1-15", distance: "徒歩圏", m: 400, url: "https://shop.dennys.jp/map/21861", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
       { chain: "komeda", name: "下丸子店", address: "東京都大田区下丸子3-2-3", distance: "徒歩圏", m: 640, url: "https://www.komeda.co.jp/shop/detail.html?id=322", fac: ["お子様メニュー", "駐車場"] },
@@ -16585,7 +16592,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ontakesan": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 雪ケ谷大塚駅前店", address: "東京都大田区南雪谷2丁目2-13 WIZフジマサビル 2階", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/171016/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 御嶽山店", address: "東京都大田区 北嶺町 32-13", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010589" },
@@ -16603,7 +16610,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kugahara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 御嶽山店", address: "東京都大田区 北嶺町 32-13", distance: "徒歩圏", m: 770, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010589" },
       { chain: "gusto", name: "ガスト 鵜の木駅前店(から好し取扱店)", address: "東京都大田区鵜の木2丁目15-5 鵜の木ガーデン21 2階", distance: "徒歩圏", m: 670, url: "https://store-info.skylark.co.jp/map/018774/", fac: ["おむつ替え台"] },
@@ -16622,7 +16629,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ishikawadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 雪ケ谷大塚駅前店", address: "東京都大田区南雪谷2丁目2-13 WIZフジマサビル 2階", distance: "徒歩圏", m: 670, url: "https://store-info.skylark.co.jp/map/171016/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 雪が谷店", address: "東京都大田区 南雪谷 2-2-16", distance: "徒歩圏", m: 690, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011124" },
@@ -16633,7 +16640,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yukigaya-otsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 雪ケ谷大塚駅前店", address: "東京都大田区南雪谷2丁目2-13 WIZフジマサビル 2階", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/171016/", fac: ["おむつ替え台", "車椅子入店可"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 雪が谷店", address: "東京都大田区 南雪谷 2-2-16", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011124" },
@@ -16649,7 +16656,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "denenchofu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kfc", name: "田園調布店", address: "東京都大田区田園調布3-25-17", distance: "駅前", m: 40, url: "https://search.kfc.co.jp/map/3421", fac: [] },
       { chain: "starbucks", name: "田園調布 東急スクエアガーデンサイト店", address: "東京都大田区田園調布2-62-3 東急スクエアガーデンサイト アネックス", distance: "駅前", m: 60, url: "https://store.starbucks.co.jp/detail-1139/" },
@@ -16659,7 +16666,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tamagawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 田園調布店(から好し取扱店)", address: "東京都大田区田園調布1丁目9-3", distance: "徒歩圏", m: 470, url: "https://store-info.skylark.co.jp/map/018562/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "hama-sushi", name: "はま寿司 田園調布店", address: "東京都大田区田園調布本町40-7", distance: "徒歩圏", m: 470, url: "https://maps.hama-sushi.co.jp/jp/detail/4282.html", fac: ["多目的トイレ", "駐車場"] },
@@ -16671,7 +16678,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "numabe": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 田園調布店(から好し取扱店)", address: "東京都大田区田園調布1丁目9-3", distance: "徒歩圏", m: 490, url: "https://store-info.skylark.co.jp/map/018562/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "hama-sushi", name: "はま寿司 田園調布店", address: "東京都大田区田園調布本町40-7", distance: "徒歩圏", m: 420, url: "https://maps.hama-sushi.co.jp/jp/detail/4282.html", fac: ["多目的トイレ", "駐車場"] },
@@ -16688,7 +16695,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "unoki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 下丸子店", address: "東京都大田区下丸子3-1-15", distance: "徒歩圏", m: 790, url: "https://shop.dennys.jp/map/21861", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
       { chain: "gusto", name: "ガスト 鵜の木駅前店(から好し取扱店)", address: "東京都大田区鵜の木2丁目15-5 鵜の木ガーデン21 2階", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/018774/", fac: ["おむつ替え台"] },
@@ -16702,7 +16709,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-maruko": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 下丸子店", address: "東京都大田区下丸子3-1-15", distance: "駅前", m: 180, url: "https://shop.dennys.jp/map/21861", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
       { chain: "gusto", name: "ガスト 鵜の木駅前店(から好し取扱店)", address: "東京都大田区鵜の木2丁目15-5 鵜の木ガーデン21 2階", distance: "徒歩圏", m: 620, url: "https://store-info.skylark.co.jp/map/018774/", fac: ["おむつ替え台"] },
@@ -16719,7 +16726,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "musashi-nitta": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 下丸子店", address: "東京都大田区下丸子3-1-15", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/21861", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 下丸子店", address: "東京都大田区下丸子3丁目10-13", distance: "徒歩圏", m: 690, url: "https://restaurant.kushi-tanaka.com/detail/0204/", fac: [] },
@@ -16735,7 +16742,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yaguchi-no-watashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -16746,7 +16753,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-magome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "jonathan", name: "ジョナサン 西馬込店", address: "東京都大田区南馬込5丁目43-3 ヴィラ森1F", distance: "駅前", m: 190, url: "https://store-info.skylark.co.jp/map/020166/", fac: ["おむつ替え台", "駐車場"] },
     ],
@@ -16757,7 +16764,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "magome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 東京イン店", address: "東京都大田区北馬込2-31 ホテル東京イン1F", distance: "駅前", m: 90, url: "https://maps.cocos-jpn.co.jp/jp/detail/2994.html", fac: ["ベビーシート", "お子様メニュー", "スロープ／エレベーター", "駐車場"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 馬込店", address: "東京都大田区 中馬込2-8-1 日経エスプラナード2F", distance: "駅前", m: 300, url: "https://map.reins.co.jp/onyasai/detail/357181929", fac: ["駐車場"] },
@@ -16767,7 +16774,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oimachi-line-okusawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 自由が丘駅前店", address: "東京都目黒区自由が丘1丁目13-10 山田ビル2F", distance: "徒歩圏", m: 510, url: "https://store-info.skylark.co.jp/map/171495/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 自由が丘マリクレール通り店", address: "東京都目黒区 自由が丘 1-8-23", distance: "徒歩圏", m: 440, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012325" },
@@ -16800,7 +16807,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimokitazawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 下北沢南店", address: "東京都世田谷区代沢5丁目7-10", distance: "徒歩圏", m: 640, url: "https://store-info.skylark.co.jp/map/171486/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "下北沢店", address: "東京都世田谷区北沢二丁目1-9 KIE下北沢1階A号室", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/3174", fac: ["お子さまメニュー"] },
@@ -16824,7 +16831,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-kitazawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー下北沢店", address: "東京都世田谷区 北沢2-26-23 プティフルール1階", distance: "徒歩圏", m: 660, url: "https://search.freshnessburger.co.jp/detail/3031092/", fac: ["キッズセット"] },
       { chain: "goemon", name: "下北沢店", address: "東京都世田谷区北沢2-12-12 桑田ビル 2F", distance: "徒歩圏", m: 650, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -16858,7 +16865,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "setagaya-daita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 下北沢南店", address: "東京都世田谷区代沢5丁目7-10", distance: "徒歩圏", m: 610, url: "https://store-info.skylark.co.jp/map/171486/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "下北沢店", address: "東京都世田谷区北沢二丁目1-9 KIE下北沢1階A号室", distance: "徒歩圏", m: 570, url: "https://tenpo.ichibanya.co.jp/map/3174", fac: ["お子さまメニュー"] },
@@ -16892,7 +16899,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "umegaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 豪徳寺店", address: "東京都世田谷区豪徳寺1-44-11 小田急マルシェ豪徳寺", distance: "徒歩圏", m: 660, url: "https://shop.dennys.jp/map/21825", fac: ["オムツ替えシート"] },
       { chain: "gyukaku", name: "牛角 梅ヶ丘店", address: "東京都世田谷区 梅丘1-21-4 采田ビル1F", distance: "駅前", m: 80, url: "https://map.reins.co.jp/gyukaku/detail/354263129", fac: [] },
@@ -16912,7 +16919,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gotokuji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 豪徳寺店", address: "東京都世田谷区豪徳寺1-44-11 小田急マルシェ豪徳寺", distance: "駅前", m: 20, url: "https://shop.dennys.jp/map/21825", fac: ["オムツ替えシート"] },
       { chain: "gyukaku", name: "牛角 梅ヶ丘店", address: "東京都世田谷区 梅丘1-21-4 采田ビル1F", distance: "徒歩圏", m: 620, url: "https://map.reins.co.jp/gyukaku/detail/354263129", fac: [] },
@@ -16932,12 +16939,13 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "katsuya", name: "かつや 経堂店", address: "東京都世田谷区経堂2丁目2-4 美登利ビル1F", distance: "少し歩く", m: 960, url: "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=885", fac: [] },
       { chain: "kfc", name: "経堂店", address: "東京都世田谷区経堂2-3-1 木津ビル", distance: "少し歩く", m: 980, url: "https://search.kfc.co.jp/map/393", fac: [] },
       { chain: "matsuya", name: "松屋 経堂店", address: "東京都世田谷区経堂1-12-11", distance: "少し歩く", m: 960, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000051", fac: [] },
+      { chain: "mcdonalds", name: "経堂駅前店", address: "東京都世田谷区経堂1-20-1", distance: "少し歩く", m: 960, url: "https://map.mcdonalds.co.jp/map/13923", fac: [] },
       { chain: "saint-marc-cafe", name: "サンマルクカフェ ピーコックストア 経堂店", address: "東京都世田谷区宮坂2-19-5 ピーコックストア 経堂1F", distance: "少し歩く", m: 880, url: "https://www.saint-marc-hd.com/saintmarccafe/shop/585/" },
       { chain: "starbucks", name: "経堂駅店", address: "東京都世田谷区経堂2-1-3", distance: "少し歩く", m: 940, url: "https://store.starbucks.co.jp/detail-2172/" },
     ],
   },
   "kyodo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 経堂農大通り店", address: "東京都世田谷区 経堂 1-21-18 河村ビル", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010259" },
       { chain: "goemon", name: "経堂店", address: "東京都世田谷区宮坂3-1-31", distance: "駅前", m: 240, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: ["お子様メニュー"] },
@@ -16946,6 +16954,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "kfc", name: "経堂店", address: "東京都世田谷区経堂2-3-1 木津ビル", distance: "駅前", m: 110, url: "https://search.kfc.co.jp/map/393", fac: [] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 経堂店", address: "東京都世田谷区経堂1丁目21-21", distance: "駅前", m: 120, url: "https://restaurant.kushi-tanaka.com/detail/1118/", fac: ["子供用イス"] },
       { chain: "matsuya", name: "松屋 経堂店", address: "東京都世田谷区経堂1-12-11", distance: "駅前", m: 130, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000051", fac: [] },
+      { chain: "mcdonalds", name: "経堂駅前店", address: "東京都世田谷区経堂1-20-1", distance: "駅前", m: 80, url: "https://map.mcdonalds.co.jp/map/13923", fac: [] },
       { chain: "mister-donut", name: "小田急OX経堂 ショップ", address: "東京都世田谷区経堂2-1-33", distance: "駅前", m: 70, url: "https://md.mapion.co.jp/b/misterdonut/info/1827/", fac: ["駐車場"] },
       { chain: "ohsho", name: "餃子の王将 経堂店", address: "東京都世田谷区経堂1-4-9", distance: "徒歩圏", m: 330, url: "https://map.ohsho.co.jp/b/ohsho/info/5526/", fac: [] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 経堂店", address: "東京都世田谷区 経堂1-22-21 和田ビル1F", distance: "駅前", m: 30, url: "https://map.reins.co.jp/onyasai/detail/354515129", fac: [] },
@@ -16961,7 +16970,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chitose-funabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "小田急千歳船橋駅前店", address: "東京都世田谷区船橋一丁目9番45号", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/2343", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 千歳船橋店", address: "東京都世田谷区 船橋 1-1-5", distance: "駅前", m: 30, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011396" },
@@ -16983,7 +16992,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "soshigaya-okura": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "小田急祖師ヶ谷大蔵駅前店", address: "東京都世田谷区砧六丁目37番5号祖師谷南商店街振興会館ビル1階", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2887", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 祖師ヶ谷大蔵駅店", address: "東京都世田谷区 祖師谷 1-7-1", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011862" },
@@ -17005,7 +17014,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "seijogakuen-mae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 成城学園北口店", address: "東京都世田谷区 成城 6-9-1 五和ビル 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010387" },
       { chain: "freshness-burger", name: "フレッシュネスバーガー成城学園前店", address: "東京都世田谷区 成城6-4-15 モアイ成城1階", distance: "駅前", m: 90, url: "https://search.freshnessburger.co.jp/detail/3031404/", fac: ["キッズセット"] },
@@ -17031,7 +17040,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kitami": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "狛江店", address: "東京都狛江市岩戸南2丁目5-5", distance: "徒歩圏", m: 450, url: "https://www.bikkuri-donkey.com/shop/shop_1012/", fac: ["ベビーシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 喜多見店", address: "東京都世田谷区 喜多見 8-18-11", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010599" },
@@ -17053,7 +17062,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sangenjaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "世田谷区三軒茶屋店", address: "東京都世田谷区太子堂四丁目27番10号 瑞樹ビル1F", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2528", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 三軒茶屋店", address: "東京都世田谷区太子堂4-22-6", distance: "駅前", m: 50, url: "https://shop.dennys.jp/map/21783", fac: ["オムツ替えシート"] },
@@ -17079,6 +17088,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "sukiya", name: "すき家 三軒茶屋二丁目店", address: "東京都世田谷区三軒茶屋2-11-24 サンタワーズA101", distance: "駅前", m: 280, url: "https://maps.sukiya.jp/jp/detail/1242.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 三軒茶屋北店", address: "東京都世田谷区太子堂2-24-6 ドミー三軒茶屋1F", distance: "駅前", m: 290, url: "https://maps.sukiya.jp/jp/detail/1098.html", fac: ["お子様メニュー"] },
       { chain: "sushiro", name: "三軒茶屋店", address: "東京都世田谷区太子堂2丁目15-4 Gビル三軒茶屋01 B1F", distance: "駅前", m: 90, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2817", fac: [] },
+      { chain: "tenya", name: "三軒茶屋店", address: "東京都世田谷区三軒茶屋1-38-7 ワコーレ三軒茶屋", distance: "駅前", m: 110, url: "https://www.tenya.co.jp/shop/tokyo/setagaya/sanngen.html", fac: [] },
       { chain: "yayoiken", name: "やよい軒 三軒茶屋店", address: "東京都世田谷区太子堂4丁目22-14 香田ビル1F", distance: "駅前", m: 20, url: "https://store.yayoiken.com/b/yayoiken/info/1212/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 三軒茶屋店", address: "東京都世田谷区太子堂2丁目16-8", distance: "駅前", m: 110, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061354", fac: [] },
     ],
@@ -17089,7 +17099,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "komazawa-daigaku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "世田谷区駒沢店", address: "東京都世田谷区駒沢二丁目11-3第二集花園ビル 1階", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/2426", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 駒沢大学駅前店", address: "東京都世田谷区 上馬 3-18-12", distance: "駅前", m: 30, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012346" },
@@ -17108,7 +17118,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sakura-shimmachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急桜新町駅前店", address: "東京都世田谷区桜新町二丁目10番2号BLD Cerezo 1階", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2420", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 世田谷弦巻店", address: "東京都世田谷区弦巻4-19-5", distance: "徒歩圏", m: 480, url: "https://maps.cocos-jpn.co.jp/jp/detail/2929.html", fac: ["ベビーシート", "お子様メニュー", "多目的トイレ", "駐車場"] },
@@ -17130,7 +17140,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yoga": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 用賀駅前店", address: "東京都世田谷区用賀4丁目11-5 リエルナ用賀2F", distance: "駅前", m: 60, url: "https://store-info.skylark.co.jp/map/171571/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "東急用賀駅前店", address: "東京都世田谷区用賀二丁目38番12号パルフェメゾン用賀1階", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2270", fac: ["お子さまメニュー"] },
@@ -17154,7 +17164,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "futako-tamagawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kfc", name: "二子玉川店", address: "東京都世田谷区玉川2-22-13", distance: "駅前", m: 80, url: "https://search.kfc.co.jp/map/1299", fac: [] },
       { chain: "mcdonalds", name: "二子玉川ライズ店", address: "東京都世田谷区玉川2-21-1ライズショッピングセンター内", distance: "駅前", m: 110, url: "https://map.mcdonalds.co.jp/map/13920", fac: [] },
@@ -17168,7 +17178,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kaminoge": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急上野毛駅前店", address: "東京都世田谷区上野毛一丁目13-7", distance: "駅前", m: 40, url: "https://tenpo.ichibanya.co.jp/map/2846", fac: ["お子さまメニュー"] },
       { chain: "kfc", name: "上野毛店", address: "東京都世田谷区上野毛1-25-3", distance: "駅前", m: 100, url: "https://search.kfc.co.jp/map/5066", fac: ["駐車場"] },
@@ -17182,7 +17192,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "todoroki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 等々力店", address: "東京都世田谷区 等々力 3-6-16", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011804" },
       { chain: "doutor", name: "ドトールコーヒーショップ 尾山台店", address: "東京都世田谷区 尾山台 3-34-8", distance: "徒歩圏", m: 510, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010392" },
@@ -17197,7 +17207,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oyamadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 尾山台店", address: "東京都世田谷区 尾山台 3-34-8", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010392" },
       { chain: "doutor", name: "ドトールコーヒーショップ 等々力店", address: "東京都世田谷区 等々力 3-6-16", distance: "徒歩圏", m: 630, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011804" },
@@ -17209,7 +17219,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kuhonbutsu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 自由が丘店", address: "東京都目黒区 自由が丘 2-11-6", distance: "徒歩圏", m: 680, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010274" },
       { chain: "doutor", name: "ドトールコーヒーショップ 尾山台店", address: "東京都世田谷区 尾山台 3-34-8", distance: "徒歩圏", m: 710, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010392" },
@@ -17244,7 +17254,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-taishido": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "世田谷区三軒茶屋店", address: "東京都世田谷区太子堂四丁目27番10号 瑞樹ビル1F", distance: "徒歩圏", m: 360, url: "https://tenpo.ichibanya.co.jp/map/2528", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 三軒茶屋店", address: "東京都世田谷区太子堂4-22-6", distance: "徒歩圏", m: 330, url: "https://shop.dennys.jp/map/21783", fac: ["オムツ替えシート"] },
@@ -17271,6 +17281,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "sukiya", name: "すき家 三軒茶屋北店", address: "東京都世田谷区太子堂2-24-6 ドミー三軒茶屋1F", distance: "徒歩圏", m: 380, url: "https://maps.sukiya.jp/jp/detail/1098.html", fac: ["お子様メニュー"] },
       { chain: "sukiya", name: "すき家 三軒茶屋二丁目店", address: "東京都世田谷区三軒茶屋2-11-24 サンタワーズA101", distance: "徒歩圏", m: 420, url: "https://maps.sukiya.jp/jp/detail/1242.html", fac: ["お子様メニュー"] },
       { chain: "sushiro", name: "三軒茶屋店", address: "東京都世田谷区太子堂2丁目15-4 Gビル三軒茶屋01 B1F", distance: "徒歩圏", m: 440, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2817", fac: [] },
+      { chain: "tenya", name: "三軒茶屋店", address: "東京都世田谷区三軒茶屋1-38-7 ワコーレ三軒茶屋", distance: "徒歩圏", m: 460, url: "https://www.tenya.co.jp/shop/tokyo/setagaya/sanngen.html", fac: [] },
       { chain: "yayoiken", name: "やよい軒 三軒茶屋店", address: "東京都世田谷区太子堂4丁目22-14 香田ビル1F", distance: "徒歩圏", m: 360, url: "https://store.yayoiken.com/b/yayoiken/info/1212/", fac: [] },
       { chain: "yoshinoya", name: "吉野家 三軒茶屋店", address: "東京都世田谷区太子堂2丁目16-8", distance: "徒歩圏", m: 410, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061354", fac: [] },
     ],
@@ -17280,7 +17291,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "wakabayashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 世田谷上馬店(から好し取扱店)", address: "東京都世田谷区上馬5丁目26-14", distance: "徒歩圏", m: 530, url: "https://store-info.skylark.co.jp/map/011111/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "gusto", name: "ガスト 世田谷代田店(から好し取扱店)", address: "東京都世田谷区代田1丁目8-7", distance: "徒歩圏", m: 600, url: "https://store-info.skylark.co.jp/map/011272/", fac: ["おむつ替え台", "駐車場"] },
@@ -17306,7 +17317,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shoin-jinjamae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 世田谷上馬店(から好し取扱店)", address: "東京都世田谷区上馬5丁目26-14", distance: "駅前", m: 280, url: "https://store-info.skylark.co.jp/map/011111/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 世田谷店", address: "東京都世田谷区世田谷1丁目16-16", distance: "徒歩圏", m: 430, url: "https://restaurant.kushi-tanaka.com/detail/0001/", fac: ["子供用イス"] },
@@ -17318,7 +17329,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "setagaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 世田谷上馬店(から好し取扱店)", address: "東京都世田谷区上馬5丁目26-14", distance: "徒歩圏", m: 580, url: "https://store-info.skylark.co.jp/map/011111/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 世田谷店", address: "東京都世田谷区世田谷1丁目16-16", distance: "駅前", m: 120, url: "https://restaurant.kushi-tanaka.com/detail/0001/", fac: ["子供用イス"] },
@@ -17326,7 +17337,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kamimachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kushikatsu-tanaka", name: "串カツ田中 世田谷店", address: "東京都世田谷区世田谷1丁目16-16", distance: "徒歩圏", m: 430, url: "https://restaurant.kushi-tanaka.com/detail/0001/", fac: ["子供用イス"] },
       { chain: "musashino-mori-coffee", name: "むさしの森珈琲 世田谷オークラランド店", address: "東京都世田谷区桜3丁目24-1", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/198275/", fac: ["おむつ替え台", "駐車場"] },
@@ -17338,7 +17349,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "miyanosaka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 豪徳寺店", address: "東京都世田谷区豪徳寺1-44-11 小田急マルシェ豪徳寺", distance: "徒歩圏", m: 700, url: "https://shop.dennys.jp/map/21825", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 経堂農大通り店", address: "東京都世田谷区 経堂 1-21-18 河村ビル", distance: "徒歩圏", m: 780, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010259" },
@@ -17358,6 +17369,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "hama-sushi", name: "はま寿司 経堂店", address: "東京都世田谷区経堂5-29-17", distance: "少し歩く", m: 900, url: "https://maps.hama-sushi.co.jp/jp/detail/4209.html", fac: ["駐車場"] },
       { chain: "katsuya", name: "かつや 経堂店", address: "東京都世田谷区経堂2丁目2-4 美登利ビル1F", distance: "少し歩く", m: 900, url: "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=885", fac: [] },
       { chain: "kfc", name: "経堂店", address: "東京都世田谷区経堂2-3-1 木津ビル", distance: "少し歩く", m: 920, url: "https://search.kfc.co.jp/map/393", fac: [] },
+      { chain: "mcdonalds", name: "経堂駅前店", address: "東京都世田谷区経堂1-20-1", distance: "少し歩く", m: 820, url: "https://map.mcdonalds.co.jp/map/13923", fac: [] },
       { chain: "mister-donut", name: "小田急OX経堂 ショップ", address: "東京都世田谷区経堂2-1-33", distance: "少し歩く", m: 950, url: "https://md.mapion.co.jp/b/misterdonut/info/1827/", fac: ["駐車場"] },
       { chain: "musashino-mori-coffee", name: "むさしの森珈琲 世田谷オークラランド店", address: "東京都世田谷区桜3丁目24-1", distance: "少し歩く", m: 930, url: "https://store-info.skylark.co.jp/map/198275/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "ohsho", name: "餃子の王将 経堂店", address: "東京都世田谷区経堂1-4-9", distance: "少し歩く", m: 800, url: "https://map.ohsho.co.jp/b/ohsho/info/5526/", fac: [] },
@@ -17368,7 +17380,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yamashita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 豪徳寺店", address: "東京都世田谷区豪徳寺1-44-11 小田急マルシェ豪徳寺", distance: "駅前", m: 20, url: "https://shop.dennys.jp/map/21825", fac: ["オムツ替えシート"] },
       { chain: "gyukaku", name: "牛角 梅ヶ丘店", address: "東京都世田谷区 梅丘1-21-4 采田ビル1F", distance: "徒歩圏", m: 620, url: "https://map.reins.co.jp/gyukaku/detail/354263129", fac: [] },
@@ -17388,12 +17400,13 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "katsuya", name: "かつや 経堂店", address: "東京都世田谷区経堂2丁目2-4 美登利ビル1F", distance: "少し歩く", m: 960, url: "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=885", fac: [] },
       { chain: "kfc", name: "経堂店", address: "東京都世田谷区経堂2-3-1 木津ビル", distance: "少し歩く", m: 980, url: "https://search.kfc.co.jp/map/393", fac: [] },
       { chain: "matsuya", name: "松屋 経堂店", address: "東京都世田谷区経堂1-12-11", distance: "少し歩く", m: 960, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000051", fac: [] },
+      { chain: "mcdonalds", name: "経堂駅前店", address: "東京都世田谷区経堂1-20-1", distance: "少し歩く", m: 960, url: "https://map.mcdonalds.co.jp/map/13923", fac: [] },
       { chain: "saint-marc-cafe", name: "サンマルクカフェ ピーコックストア 経堂店", address: "東京都世田谷区宮坂2-19-5 ピーコックストア 経堂1F", distance: "少し歩く", m: 880, url: "https://www.saint-marc-hd.com/saintmarccafe/shop/585/" },
       { chain: "starbucks", name: "経堂駅店", address: "東京都世田谷区経堂2-1-3", distance: "少し歩く", m: 940, url: "https://store.starbucks.co.jp/detail-2172/" },
     ],
   },
   "matsubara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "下高井戸駅前店", address: "東京都世田谷区赤堤四丁目48-4野島ビル1F", distance: "徒歩圏", m: 690, url: "https://tenpo.ichibanya.co.jp/map/1177", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 下高井戸駅前店(から好し取扱店)", address: "東京都杉並区下高井戸1丁目7-7", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/018782/", fac: ["おむつ替え台"] },
@@ -17412,7 +17425,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-takaido": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "下高井戸駅前店", address: "東京都世田谷区赤堤四丁目48-4野島ビル1F", distance: "駅前", m: 120, url: "https://tenpo.ichibanya.co.jp/map/1177", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 下高井戸駅前店(から好し取扱店)", address: "東京都杉並区下高井戸1丁目7-7", distance: "駅前", m: 190, url: "https://store-info.skylark.co.jp/map/018782/", fac: ["おむつ替え台"] },
@@ -17443,7 +17456,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sakurajosui": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "杉並桜上水店", address: "東京都杉並区下高井戸三丁目1番4号", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/1546", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 桜上水店", address: "東京都世田谷区 桜上水 4-17-4", distance: "駅前", m: 140, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011370" },
@@ -17462,7 +17475,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kami-kitazawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 八幡山駅前店", address: "東京都世田谷区上北沢4丁目35-4", distance: "徒歩圏", m: 610, url: "https://store-info.skylark.co.jp/map/171522/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "京王八幡山駅前店", address: "東京都杉並区上高井戸一丁目8番25号 オータニビル1階", distance: "徒歩圏", m: 670, url: "https://tenpo.ichibanya.co.jp/map/2229", fac: ["お子さまメニュー"] },
@@ -17482,7 +17495,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hachimanyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 八幡山駅前店", address: "東京都世田谷区上北沢4丁目35-4", distance: "駅前", m: 150, url: "https://store-info.skylark.co.jp/map/171522/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "京王八幡山駅前店", address: "東京都杉並区上高井戸一丁目8番25号 オータニビル1階", distance: "駅前", m: 150, url: "https://tenpo.ichibanya.co.jp/map/2229", fac: ["お子さまメニュー"] },
@@ -17500,7 +17513,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "roka-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 千歳烏山店", address: "東京都世田谷区南烏山4丁目20-15 フィオ-レ1F", distance: "徒歩圏", m: 520, url: "https://store-info.skylark.co.jp/map/172908/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "bamiyan", name: "バーミヤン 八幡山駅前店", address: "東京都世田谷区上北沢4丁目35-4", distance: "徒歩圏", m: 760, url: "https://store-info.skylark.co.jp/map/171522/", fac: ["おむつ替え台"] },
@@ -17532,7 +17545,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chitose-karasuyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 千歳烏山店", address: "東京都世田谷区南烏山4丁目20-15 フィオ-レ1F", distance: "徒歩圏", m: 300, url: "https://store-info.skylark.co.jp/map/172908/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "京王千歳烏山駅6番街店", address: "東京都世田谷区南烏山六丁目7-15 山盛ビル1階", distance: "駅前", m: 200, url: "https://tenpo.ichibanya.co.jp/map/2525", fac: ["お子さまメニュー"] },
@@ -17556,7 +17569,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shindaita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "下北沢店", address: "東京都世田谷区北沢二丁目1-9 KIE下北沢1階A号室", distance: "徒歩圏", m: 750, url: "https://tenpo.ichibanya.co.jp/map/3174", fac: ["お子さまメニュー"] },
       { chain: "freshness-burger", name: "フレッシュネスバーガー下北沢店", address: "東京都世田谷区 北沢2-26-23 プティフルール1階", distance: "徒歩圏", m: 560, url: "https://search.freshnessburger.co.jp/detail/3031092/", fac: ["キッズセット"] },
@@ -17585,7 +17598,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-matsubara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gyukaku", name: "牛角 明大前店", address: "東京都世田谷区 松原1-36-9 第二MKビルB1F", distance: "徒歩圏", m: 780, url: "https://map.reins.co.jp/gyukaku/detail/333244129", fac: [] },
       { chain: "matsunoya", name: "松のや 明大前店(松屋・マイカリー食堂併設)", address: "東京都世田谷区松原1-36-7 TRN明大前 1F", distance: "徒歩圏", m: 790, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012069", fac: [] },
@@ -17611,7 +17624,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "meidaimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京王明大前店", address: "東京都世田谷区松原一丁目37-20 川久保ビル1階", distance: "駅前", m: 30, url: "https://tenpo.ichibanya.co.jp/map/3244", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 明大前店", address: "東京都世田谷区 松原 2-46-2 プリマベーラ春山 1F", distance: "駅前", m: 20, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010775" },
@@ -17636,7 +17649,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ikenoue": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 下北沢南店", address: "東京都世田谷区代沢5丁目7-10", distance: "徒歩圏", m: 730, url: "https://store-info.skylark.co.jp/map/171486/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "下北沢店", address: "東京都世田谷区北沢二丁目1-9 KIE下北沢1階A号室", distance: "徒歩圏", m: 530, url: "https://tenpo.ichibanya.co.jp/map/3174", fac: ["お子さまメニュー"] },
@@ -17663,7 +17676,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shibuya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 神宮前店", address: "東京都渋谷区神宮前6丁目17-10 原宿アール2F", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/171557/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "渋谷並木橋店", address: "東京都渋谷区渋谷三丁目15番5号パールビル1F", distance: "徒歩圏", m: 560, url: "https://tenpo.ichibanya.co.jp/map/1902", fac: ["お子さまメニュー"] },
@@ -17700,7 +17713,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "komeda", name: "渋谷宮益坂上店", address: "東京都渋谷区渋谷1-6-5SK青山ビル1・2階", distance: "徒歩圏", m: 410, url: "https://www.komeda.co.jp/shop/detail.html?id=760", fac: [] },
       { chain: "komeda", name: "渋谷道玄坂上店", address: "東京都渋谷区円山町20番1号", distance: "徒歩圏", m: 650, url: "https://www.komeda.co.jp/shop/detail.html?id=861", fac: [] },
       { chain: "kura-sushi", name: "渋谷駅前店", address: "東京都渋谷区宇田川町23-3 渋谷第一勧銀共同ビル7F", distance: "駅前", m: 190, url: "https://shop.kurasushi.co.jp/detail/557", fac: ["多機能トイレ対応"] },
-      { chain: "kushikatsu-tanaka", name: "串カツ田中 渋谷宮益坂店", address: "東京都渋谷区渋谷2丁目14-4", distance: "徒歩圏", m: 430, url: "https://restaurant.kushi-tanaka.com/detail/0021/", fac: [] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 渋谷百軒店店", address: "東京都渋谷区道玄坂2丁目18-7", distance: "徒歩圏", m: 510, url: "https://restaurant.kushi-tanaka.com/detail/0032/", fac: [] },
       { chain: "lotteria", name: "渋谷道玄坂店", address: "東京都渋谷区道玄坂2-6-14 ホマレヤビル", distance: "駅前", m: 280, url: "https://maps.zetteria.jp/shop/shop1006.html" },
       { chain: "marugame", name: "丸亀製麺渋谷メトロプラザ", address: "東京都渋谷区渋谷1-16-14 渋谷地下鉄ビルディング1F", distance: "駅前", m: 290, url: "https://stores.marugame.com/110645" },
@@ -17770,7 +17782,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "harajuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 神宮前店", address: "東京都渋谷区神宮前6丁目17-10 原宿アール2F", distance: "徒歩圏", m: 460, url: "https://store-info.skylark.co.jp/map/171557/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 原宿店", address: "東京都渋谷区 神宮前 1-13-18 第2大英ビル", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010451" },
@@ -17825,7 +17837,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "meiji-jingumae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 神宮前店", address: "東京都渋谷区神宮前6丁目17-10 原宿アール2F", distance: "徒歩圏", m: 460, url: "https://store-info.skylark.co.jp/map/171557/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 原宿店", address: "東京都渋谷区 神宮前 1-13-18 第2大英ビル", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010451" },
@@ -17880,7 +17892,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 1},
   },
   "yoyogi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "代々木駅西口店", address: "東京都渋谷区千駄ヶ谷4-29-10", distance: "駅前", m: 270, url: "https://tenpo.ichibanya.co.jp/map/1851", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 代々木店", address: "東京都渋谷区 代々木 1-36-7 代々木駅前ビル 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010016" },
@@ -17987,7 +17999,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 3},
   },
   "yoyogi-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "アコルデ代々木上原店", address: "東京都渋谷区西原三丁目8-5 アコルデ代々木上原内", distance: "徒歩圏", m: 730, url: "https://tenpo.ichibanya.co.jp/map/2506", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 代々木八幡店", address: "東京都渋谷区 富ヶ谷 1-52-1", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010740" },
@@ -18005,7 +18017,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yoyogi-uehara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "アコルデ代々木上原店", address: "東京都渋谷区西原三丁目8-5 アコルデ代々木上原内", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/2506", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 代々木八幡店", address: "東京都渋谷区 富ヶ谷 1-52-1", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010740" },
@@ -18031,7 +18043,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yoyogi-hachiman": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "アコルデ代々木上原店", address: "東京都渋谷区西原三丁目8-5 アコルデ代々木上原内", distance: "徒歩圏", m: 730, url: "https://tenpo.ichibanya.co.jp/map/2506", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 代々木八幡店", address: "東京都渋谷区 富ヶ谷 1-52-1", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010740" },
@@ -18049,7 +18061,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sangubashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "渋谷区初台店", address: "東京都渋谷区本町一丁目3番7号松井ビル1階", distance: "徒歩圏", m: 780, url: "https://tenpo.ichibanya.co.jp/map/1823", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 初台南口店", address: "東京都渋谷区 初台 1-53-1 京王初台駅ビル 1F", distance: "徒歩圏", m: 670, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011013" },
@@ -18095,7 +18107,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hatsudai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "渋谷区初台店", address: "東京都渋谷区本町一丁目3番7号松井ビル1階", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/1823", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 西新宿店", address: "東京都渋谷区本町1-55-1", distance: "徒歩圏", m: 300, url: "https://shop.dennys.jp/map/2233", fac: ["オムツ替えシート", "駐車場"] },
@@ -18138,7 +18150,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hatagaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 幡ヶ谷店", address: "東京都渋谷区 幡ヶ谷 1-34-14", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011300" },
       { chain: "gusto", name: "ガスト 幡ヶ谷店(から好し取扱店)", address: "東京都渋谷区幡ケ谷2丁目17-1 ドゥーエ幡ヶ谷2F", distance: "駅前", m: 70, url: "https://store-info.skylark.co.jp/map/018812/", fac: ["おむつ替え台"] },
@@ -18184,7 +18196,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sasazuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "渋谷区笹塚店", address: "東京都渋谷区笹塚一丁目59番地10号ACT SOHO京王笹塚ビル", distance: "駅前", m: 150, url: "https://tenpo.ichibanya.co.jp/map/2439", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ フレンテ笹塚店", address: "東京都渋谷区 笹塚 1-47-1 メルクマール京王笹塚 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011980" },
@@ -18215,7 +18227,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinsen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 南平台店", address: "東京都渋谷区南平台町16-11 MFPR渋谷南平台ビル", distance: "徒歩圏", m: 420, url: "https://shop.dennys.jp/map/2475", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 渋谷道玄坂店", address: "東京都渋谷区 道玄坂 2-16-6", distance: "徒歩圏", m: 320, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012427" },
@@ -18318,7 +18330,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "ebisu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR恵比寿駅東口店", address: "東京都渋谷区恵比寿一丁目13番6号 第2伊藤ビル", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2545", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 恵比寿駅前店", address: "東京都渋谷区 恵比寿南 1-4-1", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012013" },
@@ -18359,7 +18371,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "daikanyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中目黒山手通店", address: "東京都目黒区上目黒三丁目14番5号 シャンブル上目黒", distance: "徒歩圏", m: 630, url: "https://tenpo.ichibanya.co.jp/map/2985", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR恵比寿駅東口店", address: "東京都渋谷区恵比寿一丁目13番6号 第2伊藤ビル", distance: "徒歩圏", m: 790, url: "https://tenpo.ichibanya.co.jp/map/2545", fac: ["お子さまメニュー"] },
@@ -18420,7 +18432,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-sando": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "代々木駅西口店", address: "東京都渋谷区千駄ヶ谷4-29-10", distance: "徒歩圏", m: 340, url: "https://tenpo.ichibanya.co.jp/map/1851", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 千駄ヶ谷1丁目店", address: "東京都渋谷区 千駄ヶ谷 1-21-14", distance: "徒歩圏", m: 410, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011375" },
@@ -18467,7 +18479,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakano": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中野駅南口店", address: "東京都中野区中野2-24-9 ナカノサウステラ レジデンス棟1階", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/3201", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 中野サンモール店", address: "東京都中野区 中野 5-61-7", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012363" },
@@ -18517,7 +18529,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-nakano": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東中野店", address: "東京都中野区東中野4丁目30-6-101", distance: "徒歩圏", m: 410, url: "https://store-info.skylark.co.jp/map/171604/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "cocoichi", name: "東中野駅前店", address: "東京都中野区東中野一丁目59-9アトリエビル1F", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/1115", fac: ["お子さまメニュー"] },
@@ -18535,7 +18547,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakano-fujimicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gyukaku", name: "牛角 中野新橋店", address: "東京都中野区 弥生町2-26-9 カーサラネージュ2F", distance: "徒歩圏", m: 690, url: "https://map.reins.co.jp/gyukaku/detail/353424129", fac: ["お子様用備品"] },
       { chain: "hama-sushi", name: "はま寿司 杉並和田店", address: "東京都杉並区和田1-3-14", distance: "駅前", m: 240, url: "https://maps.hama-sushi.co.jp/jp/detail/6077.html", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
@@ -18557,7 +18569,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakano-shimbashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中野区新中野駅前店", address: "東京都中野区中央三丁目34番3号メイヒル新中野ビル1階", distance: "徒歩圏", m: 680, url: "https://tenpo.ichibanya.co.jp/map/1930", fac: [] },
       { chain: "cocoichi", name: "東京メトロ中野坂上駅前店", address: "東京都中野区本町二丁目49-12 フレール中野坂上101号", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/2624", fac: ["お子さまメニュー"] },
@@ -18590,7 +18602,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakano-sakaue": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 中野坂上店", address: "東京都中野区本町2丁目46-4", distance: "駅前", m: 130, url: "https://store-info.skylark.co.jp/map/171627/", fac: ["車椅子入店可", "多目的トイレ"] },
       { chain: "cocoichi", name: "東京メトロ中野坂上駅前店", address: "東京都中野区本町二丁目49-12 フレール中野坂上101号", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2624", fac: ["お子さまメニュー"] },
@@ -18626,7 +18638,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsuya", name: "松屋 渋谷清水橋店", address: "東京都渋谷区本町3-39-3", distance: "少し歩く", m: 990, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000837", fac: [] },
       { chain: "mcdonalds", name: "西新宿5丁目店", address: "東京都新宿区西新宿5-9-8", distance: "少し歩く", m: 820, url: "https://map.mcdonalds.co.jp/map/13917", fac: ["駐車場"] },
       { chain: "mister-donut", name: "東中野 ショップ", address: "東京都中野区東中野4-4-5", distance: "少し歩く", m: 1000, url: "https://md.mapion.co.jp/b/misterdonut/info/0369/", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "少し歩く", m: 960, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "nakau", name: "なか卯 西新宿店", address: "東京都新宿区西新宿6-10-2", distance: "少し歩く", m: 810, url: "https://maps.nakau.co.jp/jp/detail/2253.html", fac: ["お子様メニュー"] },
       { chain: "pronto", name: "PRONTO 新宿第一生命ビル店", address: "東京都新宿区西新宿2丁目7-1 新宿第一生命ビルディング 1F", distance: "少し歩く", m: 990, url: "https://shop.pronto.co.jp/detail/194/" },
       { chain: "starbucks", name: "新宿グリーンタワービル店", address: "東京都新宿区西新宿6-14-1 新宿グリーンタワー", distance: "少し歩く", m: 860, url: "https://store.starbucks.co.jp/detail-235/" },
@@ -18636,7 +18647,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-nakano": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中野区新中野駅前店", address: "東京都中野区中央三丁目34番3号メイヒル新中野ビル1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/1930", fac: [] },
       { chain: "doutor", name: "ドトールコーヒーショップ 新中野店", address: "東京都中野区 中央 4-1-1", distance: "駅前", m: 160, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010958" },
@@ -18675,7 +18686,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "honancho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 方南町店", address: "東京都杉並区 方南 2-13-9", distance: "駅前", m: 190, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010790" },
       { chain: "hidakaya", name: "日高屋 方南町駅前店", address: "東京都杉並区方南2丁目21-4", distance: "駅前", m: 80, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/610.html", fac: [] },
@@ -18690,7 +18701,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "numabukuro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 沼袋店", address: "東京都中野区 沼袋 3-27-10", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011534" },
       { chain: "gusto", name: "ガスト 中野江古田店(から好し取扱店)", address: "東京都中野区江古田2丁目10-9", distance: "徒歩圏", m: 560, url: "https://store-info.skylark.co.jp/map/011385/", fac: ["おむつ替え台", "駐車場"] },
@@ -18705,7 +18716,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arai-yakushimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kfc", name: "新井薬師前店", address: "東京都中野区上高田3-38-7", distance: "駅前", m: 150, url: "https://search.kfc.co.jp/map/4426", fac: [] },
       { chain: "matsuya", name: "松屋 新井薬師前店(マイカリー食堂併設)", address: "東京都中野区上高田3-40-10ファーストギアビル101", distance: "駅前", m: 90, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001940", fac: [] },
@@ -18720,7 +18731,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "saginomiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 鷺ノ宮店", address: "東京都中野区 鷺宮 3-19-5", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010416" },
       { chain: "kfc", name: "都立家政店", address: "東京都中野区鷺宮1-17-6", distance: "徒歩圏", m: 500, url: "https://search.kfc.co.jp/map/4385", fac: [] },
@@ -18734,7 +18745,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nogata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武野方駅前店", address: "東京都中野区野方五丁目29番4号", distance: "駅前", m: 70, url: "https://tenpo.ichibanya.co.jp/map/1737", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 野方店", address: "東京都中野区鷺宮1-9-11", distance: "徒歩圏", m: 570, url: "https://shop.dennys.jp/map/2408", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -18756,7 +18767,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toritsu-kasei": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武野方駅前店", address: "東京都中野区野方五丁目29番4号", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/1737", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 野方店", address: "東京都中野区鷺宮1-9-11", distance: "徒歩圏", m: 400, url: "https://shop.dennys.jp/map/2408", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -18777,7 +18788,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-egota": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武江古田駅南口店", address: "東京都練馬区栄町4-3グレーシーマンション43 101号", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/2033", fac: ["お子さまメニュー"] },
       { chain: "hidakaya", name: "日高屋 江古田南口店", address: "東京都練馬区旭丘1丁目71-9", distance: "徒歩圏", m: 580, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/535.html", fac: [] },
@@ -18801,7 +18812,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "koenji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "高円寺駅南口店", address: "東京都杉並区高円寺南二丁目50-2YSビル", distance: "徒歩圏", m: 320, url: "https://tenpo.ichibanya.co.jp/map/1154", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 高円寺駅前店", address: "東京都杉並区高円寺北2-5-1 JR東日本ホテルメッツ高円寺2階", distance: "駅前", m: 40, url: "https://shop.dennys.jp/map/21950", fac: ["オムツ替えシート"] },
@@ -18834,7 +18845,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "asagaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "南阿佐ヶ谷店", address: "東京都杉並区阿佐谷南一丁目16-10巳善第二ビル1F", distance: "徒歩圏", m: 440, url: "https://tenpo.ichibanya.co.jp/map/1222", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 南阿佐谷店", address: "東京都杉並区阿佐谷南3-1-33", distance: "徒歩圏", m: 530, url: "https://shop.dennys.jp/map/2248", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -18868,7 +18879,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ogikubo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 荻窪タウンセブン店", address: "東京都杉並区上荻1丁目9-1 7階", distance: "駅前", m: 80, url: "https://store-info.skylark.co.jp/map/171625/", fac: ["駐車場"] },
       { chain: "cocoichi", name: "荻窪駅南口店", address: "東京都杉並区荻窪五丁目29番5号", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/1858", fac: ["お子さまメニュー"] },
@@ -18908,7 +18919,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-ogikubo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西荻窪駅北口店", address: "東京都杉並区西荻北三丁目21-13ブックスブンショードー1階", distance: "駅前", m: 180, url: "https://tenpo.ichibanya.co.jp/map/2167", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 西荻北店", address: "東京都杉並区西荻北5-7-18", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/21846", fac: ["オムツ替えシート", "パーティールームまたは個室", "駐車場"] },
@@ -18928,7 +18939,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minami-asagaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "南阿佐ヶ谷店", address: "東京都杉並区阿佐谷南一丁目16-10巳善第二ビル1F", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/1222", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 南阿佐谷店", address: "東京都杉並区阿佐谷南3-1-33", distance: "駅前", m: 60, url: "https://shop.dennys.jp/map/2248", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -18965,7 +18976,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-koenji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "高円寺駅南口店", address: "東京都杉並区高円寺南二丁目50-2YSビル", distance: "徒歩圏", m: 510, url: "https://tenpo.ichibanya.co.jp/map/1154", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 新高円寺店", address: "東京都杉並区 梅里 2-1-17", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010455" },
@@ -19003,7 +19014,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-koenji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 東高円寺店", address: "東京都杉並区 高円寺南 1-7-1 陽輪台高円寺 B1F", distance: "駅前", m: 50, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010669" },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 東高円寺店", address: "東京都杉並区高円寺南1丁目6-5", distance: "駅前", m: 80, url: "https://restaurant.kushi-tanaka.com/detail/1019/", fac: [] },
@@ -19030,7 +19041,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "iogi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "ヨークフーズ石神井店", address: "東京都練馬区下石神井一丁目2番8号", distance: "徒歩圏", m: 600, url: "https://tenpo.ichibanya.co.jp/map/1876", fac: ["お子さまメニュー", "駐車場"] },
       { chain: "hama-sushi", name: "はま寿司 杉並井草店", address: "東京都杉並区井草3-31-5", distance: "徒歩圏", m: 540, url: "https://maps.hama-sushi.co.jp/jp/detail/4341.html", fac: ["多目的トイレ", "駐車場"] },
@@ -19049,7 +19060,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kami-igusa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 上石神井店", address: "東京都練馬区上石神井2丁目7-11", distance: "徒歩圏", m: 630, url: "https://store-info.skylark.co.jp/map/171035/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "jonathan", name: "ジョナサン 上石神井店", address: "東京都練馬区上石神井2丁目7-11", distance: "徒歩圏", m: 650, url: "https://store-info.skylark.co.jp/map/020305/", fac: ["おむつ替え台", "駐車場"] },
@@ -19065,7 +19076,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-igusa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 下井草店", address: "東京都杉並区 下井草 2-40-17", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010618" },
       { chain: "gusto", name: "ガスト 下井草店(から好し取扱店)", address: "東京都杉並区下井草2丁目40-15", distance: "駅前", m: 50, url: "https://store-info.skylark.co.jp/map/017971/", fac: ["おむつ替え台"] },
@@ -19079,7 +19090,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "eifukucho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 永福町店", address: "東京都杉並区 和泉 3-4-2", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011266" },
       { chain: "fujiya-restaurant", name: "西永福店", address: "東京都杉並区永福4-19-15", distance: "徒歩圏", m: 640, url: "https://shop.fujiya-peko.co.jp/b/fujiya/info/83072/" },
@@ -19091,7 +19102,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-eifuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 浜田山店", address: "東京都杉並区 浜田山 3-30-11", distance: "徒歩圏", m: 800, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010841" },
       { chain: "fujiya-restaurant", name: "西永福店", address: "東京都杉並区永福4-19-15", distance: "駅前", m: 260, url: "https://shop.fujiya-peko.co.jp/b/fujiya/info/83072/" },
@@ -19111,7 +19122,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hamadayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京王浜田山駅前店", address: "東京都杉並区浜田山三丁目34-3 YFビル1階", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/3188", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 浜田山店", address: "東京都杉並区 浜田山 3-30-11", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010841" },
@@ -19129,7 +19140,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takaido": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京王高井戸駅前店", address: "東京都杉並区高井戸西二丁目1番26号京王リトナード高井戸102", distance: "駅前", m: 10, url: "https://tenpo.ichibanya.co.jp/map/2356", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 高井戸店", address: "東京都杉並区高井戸東 4-7-2", distance: "徒歩圏", m: 620, url: "https://shop.dennys.jp/map/297", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -19146,7 +19157,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "fujimigaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京王高井戸駅前店", address: "東京都杉並区高井戸西二丁目1番26号京王リトナード高井戸102", distance: "徒歩圏", m: 750, url: "https://tenpo.ichibanya.co.jp/map/2356", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 久我山店", address: "東京都杉並区 久我山 5-7-18", distance: "徒歩圏", m: 730, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010828" },
@@ -19165,7 +19176,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kugayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 久我山店", address: "東京都杉並区 久我山 5-7-18", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010828" },
       { chain: "gusto", name: "ガスト 久我山駅前店(から好し取扱店)", address: "東京都杉並区久我山4丁目1-11", distance: "駅前", m: 60, url: "https://store-info.skylark.co.jp/map/018892/", fac: ["おむつ替え台"] },
@@ -19177,7 +19188,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ikebukuro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "南池袋店", address: "東京都豊島区南池袋2丁目26-1 0 アクティオーレ南池袋2F", distance: "徒歩圏", m: 370, url: "https://www.bikkuri-donkey.com/shop/shop_1058/", fac: [] },
       { chain: "bikkuri-donkey", name: "池袋サンシャイン通り店", address: "東京都豊島区東池袋1-21-11 オーク池袋ビルB1F", distance: "徒歩圏", m: 450, url: "https://www.bikkuri-donkey.com/shop/shop_1057/", fac: ["ベビーシート"] },
@@ -19198,6 +19209,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "goemon", name: "池袋東武店", address: "東京都豊島区西池袋1-1-25 スパイス池袋東武12F", distance: "駅前", m: 40, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "goemon", name: "池袋東口店", address: "東京都豊島区南池袋2-27-5 カテイビル 1F", distance: "徒歩圏", m: 330, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "goemon", name: "池袋パルコ店", address: "東京都豊島区南池袋1-28-2池袋パルコ 7F", distance: "徒歩圏", m: 350, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "徒歩圏", m: 530, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "gusto", name: "ガスト 池袋芸術劇場前店(から好し取扱店)", address: "東京都豊島区西池袋1丁目10-10", distance: "駅前", m: 170, url: "https://store-info.skylark.co.jp/map/017789/", fac: [] },
       { chain: "gusto", name: "ガスト 池袋駅東口店(から好し取扱店)", address: "東京都豊島区東池袋1丁目1-2 高村ビル7F", distance: "駅前", m: 260, url: "https://store-info.skylark.co.jp/map/018994/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "gusto", name: "ガスト 池袋西口店(から好し取扱店)", address: "東京都豊島区池袋2丁目7-3 オアシス1階", distance: "徒歩圏", m: 300, url: "https://store-info.skylark.co.jp/map/017885/", fac: ["おむつ替え台"] },
@@ -19314,7 +19326,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mejiro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR目白駅前通店", address: "東京都新宿区下落合三丁目18-2 福田ビル1F", distance: "徒歩圏", m: 310, url: "https://tenpo.ichibanya.co.jp/map/2458", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 高田馬場店", address: "東京都豊島区高田3-26-3", distance: "徒歩圏", m: 590, url: "https://shop.dennys.jp/map/2606", fac: ["オムツ替えシート", "パーティールームまたは個室", "入口段差なしまたはエレベーター", "駐車場"] },
@@ -19383,7 +19395,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "otsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区大塚店", address: "東京都豊島区南大塚三丁目9-13新大塚ビル1F", distance: "徒歩圏", m: 450, url: "https://tenpo.ichibanya.co.jp/map/1444", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大塚駅前店", address: "東京都豊島区北大塚1-16-5 パークアクシス大塚ステーションゲートタワー3階", distance: "駅前", m: 70, url: "https://shop.dennys.jp/map/21990", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -19447,7 +19459,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sugamo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 巣鴨店", address: "東京都豊島区巣鴨2丁目5-4", distance: "駅前", m: 80, url: "https://store-info.skylark.co.jp/map/171639/", fac: [] },
       { chain: "cocoichi", name: "JR巣鴨駅南口店", address: "東京都豊島区巣鴨一丁目3番2号佐藤第二ビル1F", distance: "駅前", m: 250, url: "https://tenpo.ichibanya.co.jp/map/2371", fac: ["お子さまメニュー"] },
@@ -19506,7 +19518,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "komagome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 巣鴨店", address: "東京都豊島区巣鴨2丁目5-4", distance: "徒歩圏", m: 770, url: "https://store-info.skylark.co.jp/map/171639/", fac: [] },
       { chain: "cocoichi", name: "豊島区駒込店", address: "東京都豊島区駒込二丁目6番4号ムツミビル1階", distance: "駅前", m: 200, url: "https://tenpo.ichibanya.co.jp/map/2145", fac: ["お子さまメニュー"] },
@@ -19546,7 +19558,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-ikebukuro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "南池袋店", address: "東京都豊島区南池袋2丁目26-1 0 アクティオーレ南池袋2F", distance: "徒歩圏", m: 620, url: "https://www.bikkuri-donkey.com/shop/shop_1058/", fac: [] },
       { chain: "bikkuri-donkey", name: "池袋サンシャイン通り店", address: "東京都豊島区東池袋1-21-11 オーク池袋ビルB1F", distance: "徒歩圏", m: 670, url: "https://www.bikkuri-donkey.com/shop/shop_1057/", fac: ["ベビーシート"] },
@@ -19634,6 +19646,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "denny-s", name: "デニーズ 池袋明治通り店", address: "東京都豊島区東池袋1-8-9 CENTURION HOTEL IKEBUKURO 2階", distance: "少し歩く", m: 860, url: "https://shop.dennys.jp/map/21937", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大塚南口店", address: "東京都豊島区 南大塚 3-53-5", distance: "少し歩く", m: 960, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010215" },
       { chain: "fujiya-restaurant", name: "池袋東武店", address: "東京都豊島区西池袋1-1(東武スパイス13F)", distance: "少し歩く", m: 990, url: "https://shop.fujiya-peko.co.jp/b/fujiya/info/84096/" },
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "少し歩く", m: 840, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "goemon", name: "池袋パルコ店", address: "東京都豊島区南池袋1-28-2池袋パルコ 7F", distance: "少し歩く", m: 870, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "goemon", name: "池袋東武店", address: "東京都豊島区西池袋1-1-25 スパイス池袋東武12F", distance: "少し歩く", m: 1000, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "jonathan", name: "ジョナサン 護国寺店", address: "東京都文京区音羽2丁目5-3", distance: "少し歩く", m: 980, url: "https://store-info.skylark.co.jp/map/020223/", fac: ["おむつ替え台"] },
@@ -19660,7 +19673,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kanamecho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区西池袋店", address: "東京都豊島区西池袋五丁目8番7号深野ビル1F", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/1605", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 要町店", address: "東京都豊島区 要町 1-9-3", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010588" },
@@ -19699,7 +19712,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "senkawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 千川駅前店", address: "東京都豊島区要町3丁目39-5 アジリア千川駅前B1階", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/171569/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "cocos", name: "ココス 千川店", address: "東京都豊島区要町3-23-7大野千川ビル", distance: "駅前", m: 200, url: "https://maps.cocos-jpn.co.jp/jp/detail/3058.html", fac: ["お子様メニュー"] },
@@ -19717,7 +19730,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-ikebukuro": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR板橋駅東口店", address: "東京都北区滝野川七丁目8番6号ベルコート1階", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/2160", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 北池袋店", address: "東京都豊島区池袋本町2-1-5", distance: "徒歩圏", m: 600, url: "https://shop.dennys.jp/map/2513", fac: ["オムツ替えシート", "駐車場"] },
@@ -19731,6 +19744,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "sukiya", name: "すき家 上池袋二丁目店", address: "東京都豊島区上池袋2-40-10", distance: "徒歩圏", m: 590, url: "https://maps.sukiya.jp/jp/detail/1904.html", fac: ["お子様メニュー"] },
     ],
     far: [
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "少し歩く", m: 990, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "gusto", name: "ガスト 板橋仲宿店(から好し取扱店)", address: "東京都板橋区板橋3丁目27-1", distance: "少し歩く", m: 950, url: "https://store-info.skylark.co.jp/map/018805/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mos-burger", name: "モスバーガー池袋東店", address: "東京都豊島区東池袋1丁目32-5", distance: "少し歩く", m: 940, url: "https://www.mos.jp/shop/detail/?shop_cd=01431", fac: [] },
       { chain: "nakau", name: "なか卯 池袋二丁目店", address: "東京都豊島区池袋2-67-6 エリゼー池袋", distance: "少し歩く", m: 860, url: "https://maps.nakau.co.jp/jp/detail/2385.html", fac: ["お子様メニュー"] },
@@ -19740,7 +19754,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-itabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR板橋駅東口店", address: "東京都北区滝野川七丁目8番6号ベルコート1階", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/2160", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 板橋仲宿店(から好し取扱店)", address: "東京都板橋区板橋3丁目27-1", distance: "徒歩圏", m: 440, url: "https://store-info.skylark.co.jp/map/018805/", fac: ["おむつ替え台", "駐車場"] },
@@ -19766,7 +19780,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shiinamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "freshness-burger", name: "フレッシュネスバーガー要町店", address: "東京都豊島区 要町1-2-12 モナーク西池袋ビル1階", distance: "徒歩圏", m: 790, url: "https://search.freshnessburger.co.jp/detail/3033029/", fac: ["キッズセット"] },
       { chain: "lotteria", name: "椎名町店", address: "東京都豊島区長崎1-2-2", distance: "駅前", m: 60, url: "https://maps.zetteria.jp/shop/shop2311.html" },
@@ -19783,7 +19797,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-nagasaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武東長崎駅前店", address: "東京都豊島区南長崎五丁目25番14号大野ビル1階", distance: "駅前", m: 50, url: "https://tenpo.ichibanya.co.jp/map/2298", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ アイテラス落合南長崎店", address: "東京都豊島区 南長崎 4-5-20 アイテラス落合南長崎 1F", distance: "徒歩圏", m: 660, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012077" },
@@ -19800,7 +19814,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "zoshigaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区南池袋店", address: "東京都豊島区南池袋二丁目13-10南池袋山本ビル1階", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2378", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "東京メトロ東池袋駅前店", address: "東京都豊島区南池袋二丁目41-16 3号棟3号", distance: "徒歩圏", m: 720, url: "https://tenpo.ichibanya.co.jp/map/2607", fac: ["お子さまメニュー"] },
@@ -19863,7 +19877,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mukohara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区大塚店", address: "東京都豊島区南大塚三丁目9-13新大塚ビル1F", distance: "徒歩圏", m: 420, url: "https://tenpo.ichibanya.co.jp/map/1444", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "サンシャインシティアルパ店", address: "東京都豊島区東池袋三丁目1-1 B1F 38区画", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/2606", fac: ["お子さまメニュー", "駐車場"] },
@@ -19922,6 +19936,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "denny-s", name: "デニーズ 池袋明治通り店", address: "東京都豊島区東池袋1-8-9 CENTURION HOTEL IKEBUKURO 2階", distance: "少し歩く", m: 1000, url: "https://shop.dennys.jp/map/21937", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 池袋グリーン大通り店", address: "東京都豊島区 南池袋 2-29-12 HF池袋ビルディング 1F", distance: "少し歩く", m: 830, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010714" },
       { chain: "doutor", name: "ドトールコーヒーショップ 池袋60階通り店", address: "東京都豊島区 東池袋 1-12-11 OGSビル2F", distance: "少し歩く", m: 930, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012438" },
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "少し歩く", m: 900, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "gusto", name: "ガスト 池袋サンシャイン通店(から好し取扱店)", address: "東京都豊島区東池袋1丁目20-6 プラザイン池袋ビル1F", distance: "少し歩く", m: 870, url: "https://store-info.skylark.co.jp/map/018923/", fac: [] },
       { chain: "gyukaku", name: "牛角 池袋サンシャイン通り店", address: "東京都豊島区 東池袋1-21-13 ORE池袋6F", distance: "少し歩く", m: 820, url: "https://map.reins.co.jp/gyukaku/detail/359570910", fac: ["お子様用備品"] },
       { chain: "hanamaru-udon", name: "はなまるうどん 南池袋公園前店", address: "東京都豊島区南池袋2-22-1 第3高村ビル B1F", distance: "少し歩く", m: 990, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2184", fac: [] },
@@ -19944,7 +19959,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kishibojinmae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区南池袋店", address: "東京都豊島区南池袋二丁目13-10南池袋山本ビル1階", distance: "徒歩圏", m: 650, url: "https://tenpo.ichibanya.co.jp/map/2378", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "東京メトロ東池袋駅前店", address: "東京都豊島区南池袋二丁目41-16 3号棟3号", distance: "徒歩圏", m: 720, url: "https://tenpo.ichibanya.co.jp/map/2607", fac: ["お子さまメニュー"] },
@@ -20007,7 +20022,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gakushuin-shita": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新宿早稲田通店", address: "東京都新宿区西早稲田二丁目18-23スカイエスタ103号", distance: "徒歩圏", m: 620, url: "https://tenpo.ichibanya.co.jp/map/1243", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 高田馬場店", address: "東京都豊島区高田3-26-3", distance: "徒歩圏", m: 380, url: "https://shop.dennys.jp/map/2606", fac: ["オムツ替えシート", "パーティールームまたは個室", "入口段差なしまたはエレベーター", "駐車場"] },
@@ -20062,7 +20077,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "omokagebashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "新宿早稲田通店", address: "東京都新宿区西早稲田二丁目18-23スカイエスタ103号", distance: "徒歩圏", m: 360, url: "https://tenpo.ichibanya.co.jp/map/1243", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 高田馬場店", address: "東京都豊島区高田3-26-3", distance: "徒歩圏", m: 610, url: "https://shop.dennys.jp/map/2606", fac: ["オムツ替えシート", "パーティールームまたは個室", "入口段差なしまたはエレベーター", "駐車場"] },
@@ -20113,7 +20128,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "waseda-toden": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 早稲田店", address: "東京都新宿区 馬場下町 14-1", distance: "駅前", m: 210, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011846" },
       { chain: "doutor", name: "ドトールコーヒーショップ 若松河田店", address: "東京都新宿区 若松町 10-1 YSビル 1F", distance: "徒歩圏", m: 740, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011962" },
@@ -20139,7 +20154,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-ikebukuro-yonchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "南池袋店", address: "東京都豊島区南池袋2丁目26-1 0 アクティオーレ南池袋2F", distance: "徒歩圏", m: 620, url: "https://www.bikkuri-donkey.com/shop/shop_1058/", fac: [] },
       { chain: "bikkuri-donkey", name: "池袋サンシャイン通り店", address: "東京都豊島区東池袋1-21-11 オーク池袋ビルB1F", distance: "徒歩圏", m: 670, url: "https://www.bikkuri-donkey.com/shop/shop_1057/", fac: ["ベビーシート"] },
@@ -20227,6 +20242,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "denny-s", name: "デニーズ 池袋明治通り店", address: "東京都豊島区東池袋1-8-9 CENTURION HOTEL IKEBUKURO 2階", distance: "少し歩く", m: 860, url: "https://shop.dennys.jp/map/21937", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大塚南口店", address: "東京都豊島区 南大塚 3-53-5", distance: "少し歩く", m: 960, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010215" },
       { chain: "fujiya-restaurant", name: "池袋東武店", address: "東京都豊島区西池袋1-1(東武スパイス13F)", distance: "少し歩く", m: 990, url: "https://shop.fujiya-peko.co.jp/b/fujiya/info/84096/" },
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "少し歩く", m: 840, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "goemon", name: "池袋パルコ店", address: "東京都豊島区南池袋1-28-2池袋パルコ 7F", distance: "少し歩く", m: 870, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "goemon", name: "池袋東武店", address: "東京都豊島区西池袋1-1-25 スパイス池袋東武12F", distance: "少し歩く", m: 1000, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "jonathan", name: "ジョナサン 護国寺店", address: "東京都文京区音羽2丁目5-3", distance: "少し歩く", m: 980, url: "https://store-info.skylark.co.jp/map/020223/", fac: ["おむつ替え台"] },
@@ -20253,7 +20269,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "koshinzuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 巣鴨地蔵通店", address: "東京都豊島区巣鴨3丁目20-17", distance: "徒歩圏", m: 790, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/555.html", fac: [] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 西巣鴨店", address: "東京都豊島区西巣鴨3丁目25-11", distance: "徒歩圏", m: 460, url: "https://restaurant.kushi-tanaka.com/detail/1163/", fac: ["子供用イス"] },
@@ -20284,7 +20300,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-koshinzuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kushikatsu-tanaka", name: "串カツ田中 西巣鴨店", address: "東京都豊島区西巣鴨3丁目25-11", distance: "徒歩圏", m: 300, url: "https://restaurant.kushi-tanaka.com/detail/1163/", fac: ["子供用イス"] },
       { chain: "matsunoya", name: "松のや 西巣鴨店", address: "東京都豊島区西巣鴨3-25-11 メトロエステート201号", distance: "徒歩圏", m: 350, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001398", fac: [] },
@@ -20302,7 +20318,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sakaecho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "徒歩圏", m: 770, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "北区王子明治通店", address: "東京都北区王子一丁目6番6号栗生ハイツ1階", distance: "徒歩圏", m: 460, url: "https://tenpo.ichibanya.co.jp/map/1853", fac: ["お子さまメニュー"] },
@@ -20327,7 +20343,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akabane": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "赤羽LaLaガーデン店", address: "東京都北区赤羽二丁目16-1 高和赤羽ビル1F", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2464", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 赤羽駅前店", address: "東京都北区赤羽1-1-76 JR東日本ホテルメッツ赤羽2階", distance: "駅前", m: 90, url: "https://shop.dennys.jp/map/21932", fac: ["オムツ替えシート"] },
@@ -20370,7 +20386,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-jujo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 十条店", address: "東京都北区上十条2-13-1 ガーデニア102", distance: "徒歩圏", m: 740, url: "https://maps.cocos-jpn.co.jp/jp/detail/3006.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 東十条店", address: "東京都北区 東十条 4-5-23", distance: "駅前", m: 270, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010935" },
@@ -20404,7 +20420,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "北区王子明治通店", address: "東京都北区王子一丁目6番6号栗生ハイツ1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/1853", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 王子駅前店(から好し取扱店)", address: "東京都北区王子1丁目13-16 エイムビル2F", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/018929/", fac: ["おむつ替え台"] },
@@ -20428,7 +20444,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kami-nakazato": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "徒歩圏", m: 500, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
     ],
@@ -20445,7 +20461,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "jujo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 十条店", address: "東京都北区上十条2-13-1 ガーデニア102", distance: "駅前", m: 180, url: "https://maps.cocos-jpn.co.jp/jp/detail/3006.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 十条銀座店", address: "東京都北区 十条仲原 1-4-7", distance: "駅前", m: 260, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010474" },
@@ -20474,7 +20490,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-akabane": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR北赤羽駅前店", address: "東京都北区赤羽北二丁目31番16号アクトピア北赤羽壱番館118-B号", distance: "駅前", m: 240, url: "https://tenpo.ichibanya.co.jp/map/2176", fac: ["お子さまメニュー"] },
       { chain: "cocos", name: "ココス 浮間店", address: "東京都北区浮間2-9-31", distance: "徒歩圏", m: 630, url: "https://maps.cocos-jpn.co.jp/jp/detail/2652.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
@@ -20486,7 +20502,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akabane-iwabuchi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "赤羽LaLaガーデン店", address: "東京都北区赤羽二丁目16-1 高和赤羽ビル1F", distance: "徒歩圏", m: 450, url: "https://tenpo.ichibanya.co.jp/map/2464", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 赤羽駅前店", address: "東京都北区赤羽1-1-76 JR東日本ホテルメッツ赤羽2階", distance: "徒歩圏", m: 520, url: "https://shop.dennys.jp/map/21932", fac: ["オムツ替えシート"] },
@@ -20531,7 +20547,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 赤羽スズラン通店", address: "東京都北区赤羽2-4-4", distance: "徒歩圏", m: 760, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/033.html", fac: ["お子様メニュー"] },
       { chain: "jonathan", name: "ジョナサン 志茂駅前店", address: "東京都北区志茂3丁目21-5-201", distance: "駅前", m: 20, url: "https://store-info.skylark.co.jp/map/020156/", fac: ["おむつ替え台", "駐車場"] },
@@ -20554,7 +20570,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oji-kamiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 東十条店", address: "東京都北区 東十条 4-5-23", distance: "徒歩圏", m: 710, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010935" },
       { chain: "gyukaku", name: "牛角 東十条店", address: "東京都北区 東十条4-5-5 コスモプラザHINO1F", distance: "徒歩圏", m: 770, url: "https://map.reins.co.jp/gyukaku/detail/359594929", fac: ["お子様用備品", "個室"] },
@@ -20577,7 +20593,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishigahara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -20593,7 +20609,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tabata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 田端店(から好し取扱店)", address: "東京都北区田端1丁目21-8 NSKビル2F", distance: "駅前", m: 80, url: "https://store-info.skylark.co.jp/map/017903/", fac: [] },
       { chain: "komeda", name: "田端駅前店", address: "東京都北区田端6-1-1田端ASUKAタワー2階", distance: "駅前", m: 160, url: "https://www.komeda.co.jp/shop/detail.html?id=805", fac: [] },
@@ -20615,7 +20631,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kajiwara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "徒歩圏", m: 330, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "北区王子明治通店", address: "東京都北区王子一丁目6番6号栗生ハイツ1階", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/1853", fac: ["お子さまメニュー"] },
@@ -20638,7 +20654,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nippori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ西日暮里駅前店", address: "東京都荒川区西日暮里五丁目11-7 西日暮里ワイエムビル 1階", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/2571", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 上野谷中店", address: "東京都台東区谷中6-1-7", distance: "徒歩圏", m: 770, url: "https://shop.dennys.jp/map/2665", fac: ["オムツ替えシート", "駐車場"] },
@@ -20680,7 +20696,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-nippori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ西日暮里駅前店", address: "東京都荒川区西日暮里五丁目11-7 西日暮里ワイエムビル 1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2571", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 西日暮里店", address: "東京都荒川区 西日暮里 5-14-1 太陽ビル", distance: "駅前", m: 130, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010858" },
@@ -20720,7 +20736,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mikawashima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ西日暮里駅前店", address: "東京都荒川区西日暮里五丁目11-7 西日暮里ワイエムビル 1階", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/2571", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 日暮里駅前店", address: "東京都荒川区 西日暮里 2-19-7 日暮里トーセイビル 1F", distance: "徒歩圏", m: 770, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010447" },
@@ -20756,7 +20772,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minami-senju": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "荒川区南千住駅前店", address: "東京都荒川区南千住四丁目2番2号", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/2088", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 南千住駅前店", address: "東京都荒川区南千住7-2-6 南千住満天ビル1階", distance: "駅前", m: 60, url: "https://shop.dennys.jp/map/21883", fac: ["オムツ替えシート"] },
@@ -20781,7 +20797,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minowabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "荒川区南千住駅前店", address: "東京都荒川区南千住四丁目2番2号", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/2088", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 南千住駅前店", address: "東京都荒川区南千住7-2-6 南千住満天ビル1階", distance: "徒歩圏", m: 660, url: "https://shop.dennys.jp/map/21883", fac: ["オムツ替えシート"] },
@@ -20805,7 +20821,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "machiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 町屋店", address: "東京都荒川区町屋3丁目8-18 JKハイム2F", distance: "徒歩圏", m: 480, url: "https://store-info.skylark.co.jp/map/171600/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
@@ -20832,7 +20848,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "machiya-ekimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 町屋店", address: "東京都荒川区町屋3丁目8-18 JKハイム2F", distance: "徒歩圏", m: 480, url: "https://store-info.skylark.co.jp/map/171600/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
@@ -20859,7 +20875,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-kuyakushomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 三ノ輪店", address: "東京都台東区 根岸 5-22-6", distance: "徒歩圏", m: 700, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010766" },
       { chain: "hidakaya", name: "日高屋 三河島駅前店", address: "東京都荒川区東日暮里3丁目40-16", distance: "徒歩圏", m: 730, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/557.html", fac: [] },
@@ -20891,7 +20907,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-nichome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "徒歩圏", m: 700, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 町屋駅前店", address: "東京都荒川区荒川7-49-1", distance: "徒歩圏", m: 520, url: "https://shop.dennys.jp/map/2618", fac: ["オムツ替えシート"] },
@@ -20922,7 +20938,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-shakomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mcdonalds", name: "明治通り尾久店", address: "東京都北区昭和町1-1-15", distance: "徒歩圏", m: 650, url: "https://map.mcdonalds.co.jp/map/13830", fac: ["駐車場"] },
@@ -20930,7 +20946,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-yuenchi-mae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "徒歩圏", m: 660, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mcdonalds", name: "明治通り尾久店", address: "東京都北区昭和町1-1-15", distance: "徒歩圏", m: 540, url: "https://map.mcdonalds.co.jp/map/13830", fac: ["駐車場"] },
@@ -20938,7 +20954,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-itchumae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 三ノ輪店", address: "東京都台東区 根岸 5-22-6", distance: "徒歩圏", m: 460, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010766" },
       { chain: "jonathan", name: "ジョナサン 大関横丁店", address: "東京都荒川区東日暮里1丁目8-1", distance: "駅前", m: 290, url: "https://store-info.skylark.co.jp/map/020331/", fac: ["おむつ替え台", "駐車場"] },
@@ -20963,7 +20979,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "higashi-ogu-sanchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 町屋店", address: "東京都荒川区町屋3丁目8-18 JKハイム2F", distance: "徒歩圏", m: 780, url: "https://store-info.skylark.co.jp/map/171600/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "徒歩圏", m: 680, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
@@ -20992,7 +21008,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kumano-mae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "熊野前駅前店", address: "東京都荒川区東尾久8-14-5", distance: "駅前", m: 60, url: "https://map.mcdonalds.co.jp/map/70518", fac: [] },
       { chain: "mos-burger", name: "モスバーガー島忠足立小台店", address: "東京都足立区小台1丁目17-1", distance: "徒歩圏", m: 670, url: "https://www.mos.jp/shop/detail/?shop_cd=05116", fac: ["駐車場"] },
@@ -21000,7 +21016,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "akado-shogakko-mae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "熊野前駅前店", address: "東京都荒川区東尾久8-14-5", distance: "徒歩圏", m: 770, url: "https://map.mcdonalds.co.jp/map/70518", fac: [] },
       { chain: "pronto", name: "PRONTOホテルB4T田端店", address: "東京都北区東田端1丁目17-20 ホテルB4T田端 3階", distance: "徒歩圏", m: 760, url: "https://shop.pronto.co.jp/detail/58/" },
@@ -21018,7 +21034,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "odai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "熊野前駅前店", address: "東京都荒川区東尾久8-14-5", distance: "徒歩圏", m: 660, url: "https://map.mcdonalds.co.jp/map/70518", fac: [] },
       { chain: "mcdonalds", name: "明治通り尾久店", address: "東京都北区昭和町1-1-15", distance: "徒歩圏", m: 700, url: "https://map.mcdonalds.co.jp/map/13830", fac: ["駐車場"] },
@@ -21028,7 +21044,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "itabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR板橋駅東口店", address: "東京都北区滝野川七丁目8番6号ベルコート1階", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2160", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 板橋駅前店(から好し取扱店)", address: "東京都板橋区板橋1丁目55-16 板橋ビュー・クロッシング2階", distance: "駅前", m: 180, url: "https://store-info.skylark.co.jp/map/017912/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
@@ -21049,7 +21065,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "itabashi-kuyakushomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 板橋仲宿店", address: "東京都板橋区仲宿41-8 ヒラヰ仲宿ビル2F", distance: "駅前", m: 200, url: "https://store-info.skylark.co.jp/map/171612/", fac: ["おむつ替え台"] },
       { chain: "cocoichi", name: "板橋区役所前店", address: "東京都板橋区仲宿65番1号仲宿マンション10B室", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/1829", fac: ["お子さまメニュー"] },
@@ -21090,7 +21106,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "itabashi-honcho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 板橋本町店(から好し取扱店)", address: "東京都板橋区清水町4-1", distance: "徒歩圏", m: 550, url: "https://store-info.skylark.co.jp/map/018678/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "komeda", name: "板橋仲宿店", address: "東京都板橋区仲宿56-16日神パレステージ板橋仲宿 1階", distance: "徒歩圏", m: 770, url: "https://www.komeda.co.jp/shop/detail.html?id=1212" },
@@ -21103,7 +21119,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "motohasunuma": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "matsunoya", name: "松のや 本蓮沼店", address: "東京都板橋区蓮沼町22-5 橋本コーポラス", distance: "駅前", m: 30, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001249", fac: [] },
     ],
@@ -21116,7 +21132,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimura-sakaue": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 志村坂上店", address: "東京都板橋区 小豆沢 2-18-7", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010510" },
       { chain: "kfc", name: "Comrie小豆沢店", address: "東京都板橋区小豆沢3-9-5", distance: "徒歩圏", m: 510, url: "https://search.kfc.co.jp/map/3429" },
@@ -21137,7 +21153,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimura-sanchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 板橋相生店", address: "東京都板橋区相生町7-1", distance: "徒歩圏", m: 440, url: "https://store-info.skylark.co.jp/map/170755/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "gusto", name: "ガスト 板橋坂下店(から好し取扱店)", address: "東京都板橋区坂下1丁目13-1", distance: "徒歩圏", m: 340, url: "https://store-info.skylark.co.jp/map/012970/", fac: ["おむつ替え台", "多目的トイレ", "駐車場"] },
@@ -21162,7 +21178,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hasune": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 西台駅前店", address: "東京都板橋区蓮根3丁目9-8", distance: "徒歩圏", m: 550, url: "https://store-info.skylark.co.jp/map/171508/", fac: ["おむつ替え台"] },
       { chain: "denny-s", name: "デニーズ 高島平店", address: "東京都板橋区高島平1-27-13", distance: "徒歩圏", m: 540, url: "https://shop.dennys.jp/map/21946", fac: ["オムツ替えシート", "駐車場"] },
@@ -21185,7 +21201,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishidai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 西台駅前店", address: "東京都板橋区蓮根3丁目9-8", distance: "駅前", m: 100, url: "https://store-info.skylark.co.jp/map/171508/", fac: ["おむつ替え台"] },
       { chain: "denny-s", name: "デニーズ 高島平店", address: "東京都板橋区高島平1-27-13", distance: "徒歩圏", m: 500, url: "https://shop.dennys.jp/map/21946", fac: ["オムツ替えシート", "駐車場"] },
@@ -21208,7 +21224,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takashimadaira": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 高島平駅前店", address: "東京都板橋区 高島平 8-4-3", distance: "駅前", m: 20, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012552" },
       { chain: "hidakaya", name: "日高屋 高島平東口北店", address: "東京都板橋区高島平8丁目5-6 所在地", distance: "駅前", m: 70, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/581.html", fac: [] },
@@ -21230,7 +21246,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-takashimadaira": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 高島平駅前店", address: "東京都板橋区 高島平 8-4-3", distance: "徒歩圏", m: 640, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012552" },
       { chain: "hidakaya", name: "日高屋 高島平東口北店", address: "東京都板橋区高島平8丁目5-6 所在地", distance: "徒歩圏", m: 710, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/581.html", fac: [] },
@@ -21248,7 +21264,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-takashimadaira": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "笹目通り和光店", address: "埼玉県和光市白子4-1-1", distance: "徒歩圏", m: 670, url: "https://map.mcdonalds.co.jp/map/11604", fac: ["駐車場"] },
       { chain: "sukiya", name: "すき家 新高島平駅南店", address: "東京都板橋区高島平4-23-17", distance: "徒歩圏", m: 650, url: "https://maps.sukiya.jp/jp/detail/874.html", fac: ["お子様メニュー"] },
@@ -21258,7 +21274,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "naka-itabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武中板橋駅前店", address: "東京都板橋区中板橋14-12天野屋ビル1F", distance: "駅前", m: 300, url: "https://tenpo.ichibanya.co.jp/map/1985", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 中板橋北口店", address: "東京都板橋区 中板橋 23-2", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010515" },
@@ -21277,7 +21293,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tokiwadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 中板橋北口店", address: "東京都板橋区 中板橋 23-2", distance: "徒歩圏", m: 700, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010515" },
       { chain: "hidakaya", name: "日高屋 ときわ台北口店", address: "東京都板橋区常盤台2-6-3", distance: "駅前", m: 100, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/669.html", fac: [] },
@@ -21296,7 +21312,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kami-itabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 上板橋店", address: "東京都板橋区常盤台4-25-6 2階", distance: "駅前", m: 130, url: "https://shop.dennys.jp/map/21992", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 上板橋南口店", address: "東京都板橋区 上板橋 2-36-8", distance: "駅前", m: 40, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011345" },
@@ -21317,7 +21333,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "tobu-nerima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武練馬駅前店", address: "東京都板橋区徳丸二丁目3番2号ブックス塩野ビル1階", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/1825", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 東武練馬駅前店(から好し取扱店)", address: "東京都板橋区徳丸2丁目3-1", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/017881/", fac: ["おむつ替え台", "車椅子入店可"] },
@@ -21339,7 +21355,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shimo-akatsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 赤塚新町店", address: "東京都板橋区赤塚新町3丁目4-13", distance: "徒歩圏", m: 320, url: "https://store-info.skylark.co.jp/map/171053/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東武下赤塚駅前店", address: "東京都板橋区赤塚新町一丁目21番12号塩野ビル1階", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/2352", fac: ["お子さまメニュー"] },
@@ -21355,7 +21371,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "narimasu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武成増駅前店", address: "東京都板橋区成増二丁目19番3号", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2436", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 成増2丁目店", address: "東京都板橋区 成増 2-21-3", distance: "駅前", m: 180, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010492" },
@@ -21388,7 +21404,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chikatetsu-narimasu": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武成増駅前店", address: "東京都板橋区成増二丁目19番3号", distance: "駅前", m: 100, url: "https://tenpo.ichibanya.co.jp/map/2436", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 成増2丁目店", address: "東京都板橋区 成増 2-21-3", distance: "駅前", m: 180, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010492" },
@@ -21421,7 +21437,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "chikatetsu-akatsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 赤塚新町店", address: "東京都板橋区赤塚新町3丁目4-13", distance: "徒歩圏", m: 320, url: "https://store-info.skylark.co.jp/map/171053/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東武下赤塚駅前店", address: "東京都板橋区赤塚新町一丁目21番12号塩野ビル1階", distance: "駅前", m: 110, url: "https://tenpo.ichibanya.co.jp/map/2352", fac: ["お子さまメニュー"] },
@@ -21437,7 +21453,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-itabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR板橋駅東口店", address: "東京都北区滝野川七丁目8番6号ベルコート1階", distance: "徒歩圏", m: 420, url: "https://tenpo.ichibanya.co.jp/map/2160", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 板橋駅前店(から好し取扱店)", address: "東京都板橋区板橋1丁目55-16 板橋ビュー・クロッシング2階", distance: "駅前", m: 200, url: "https://store-info.skylark.co.jp/map/017912/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
@@ -21461,7 +21477,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nerima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 練馬豊玉店", address: "東京都練馬区豊玉北4丁目4-3", distance: "徒歩圏", m: 580, url: "https://store-info.skylark.co.jp/map/170759/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "練馬区目白通店", address: "東京都練馬区豊玉北五丁目7番10号練馬リカビル1階", distance: "徒歩圏", m: 310, url: "https://tenpo.ichibanya.co.jp/map/1770", fac: ["お子さまメニュー"] },
@@ -21498,7 +21514,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toshimaen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 中村橋店", address: "東京都練馬区中村北1-22-1", distance: "徒歩圏", m: 550, url: "https://shop.dennys.jp/map/21967", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 豊島園駅前店", address: "東京都練馬区 練馬 4-15-11", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012025" },
@@ -21531,7 +21547,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nerima-kasugacho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 練馬春日町店(から好し取扱店)", address: "東京都練馬区春日町6丁目8-48", distance: "徒歩圏", m: 460, url: "https://store-info.skylark.co.jp/map/017871/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ", "駐車場"] },
       { chain: "hama-sushi", name: "はま寿司 練馬春日町店", address: "東京都練馬区春日町2-7-18", distance: "徒歩圏", m: 670, url: "https://maps.hama-sushi.co.jp/jp/detail/5215.html", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
@@ -21546,7 +21562,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hikarigaoka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 光が丘店", address: "東京都練馬区 光が丘 2-10-1", distance: "駅前", m: 210, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010978" },
       { chain: "goemon", name: "光が丘店", address: "東京都練馬区光が丘5-1-1 IMA", distance: "駅前", m: 100, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: ["お子様メニュー"] },
@@ -21574,7 +21590,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shakujii-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 石神井公園駅前店", address: "東京都練馬区 石神井町 3-20-15 アジュールビル 1F・2F", distance: "駅前", m: 110, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011961" },
       { chain: "hidakaya", name: "日高屋 石神井公園店", address: "東京都練馬区石神井町3-19-14", distance: "駅前", m: 140, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/160.html", fac: [] },
@@ -21602,7 +21618,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oizumi-gakuen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 大泉学園駅前店", address: "東京都練馬区東大泉1-30-4 三幸産業第7ビル2階", distance: "駅前", m: 60, url: "https://shop.dennys.jp/map/21951", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大泉学園北口店", address: "東京都練馬区 東大泉 1-30-4 三幸産業第7ビル 1F", distance: "駅前", m: 70, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011903" },
@@ -21630,7 +21646,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sakuradai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 練馬豊玉店", address: "東京都練馬区豊玉北4丁目4-3", distance: "徒歩圏", m: 460, url: "https://store-info.skylark.co.jp/map/170759/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "練馬区目白通店", address: "東京都練馬区豊玉北五丁目7番10号練馬リカビル1階", distance: "徒歩圏", m: 740, url: "https://tenpo.ichibanya.co.jp/map/1770", fac: ["お子さまメニュー"] },
@@ -21671,7 +21687,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ekoda": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武江古田駅南口店", address: "東京都練馬区栄町4-3グレーシーマンション43 101号", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/2033", fac: ["お子さまメニュー"] },
       { chain: "hidakaya", name: "日高屋 江古田南口店", address: "東京都練馬区旭丘1丁目71-9", distance: "駅前", m: 100, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/535.html", fac: [] },
@@ -21696,7 +21712,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "fujimidai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 富士見台店", address: "東京都練馬区 貫井 3-7-4 エミオ富士見台 1F", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012108" },
       { chain: "doutor", name: "ドトールコーヒーショップ エミオ中村橋店", address: "東京都練馬区 中村北 4-2-14 エミオ中村橋", distance: "徒歩圏", m: 680, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012128" },
@@ -21716,7 +21732,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nerima-takanodai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 練馬高野台駅前店", address: "東京都練馬区高野台1丁目3-7", distance: "駅前", m: 40, url: "https://store-info.skylark.co.jp/map/171004/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 練馬高野台店", address: "東京都練馬区 高野台 1-7-32", distance: "駅前", m: 80, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011564" },
@@ -21742,7 +21758,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kami-shakujii": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 上石神井店", address: "東京都練馬区上石神井2丁目7-11", distance: "徒歩圏", m: 620, url: "https://store-info.skylark.co.jp/map/171035/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "西武上石神井駅南口店", address: "東京都練馬区上石神井一丁目14-5 高橋ビル1F", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2563", fac: ["お子さまメニュー"] },
@@ -21764,7 +21780,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "musashi-seki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "関町店", address: "東京都練馬区関町東1丁目18-12", distance: "徒歩圏", m: 680, url: "https://www.bikkuri-donkey.com/shop/shop_1008/", fac: ["ベビーシート", "駐車場"] },
       { chain: "gusto", name: "ガスト 関町店(から好し取扱店)", address: "東京都練馬区関町南3丁目32-17", distance: "徒歩圏", m: 530, url: "https://store-info.skylark.co.jp/map/011229/", fac: ["おむつ替え台", "駐車場"] },
@@ -21781,7 +21797,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nakamurabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武中村橋駅前通店", address: "東京都練馬区中村北三丁目22番10号 友伸ビル1階", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/2721", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ エミオ中村橋店", address: "東京都練馬区 中村北 4-2-14 エミオ中村橋", distance: "駅前", m: 30, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012128" },
@@ -21803,7 +21819,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-senju": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "北千住店", address: "東京都足立区千住中居町17-20 マルアイビル2F", distance: "徒歩圏", m: 510, url: "https://www.bikkuri-donkey.com/shop/shop_1614/", fac: ["ベビーシート", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 北千住駅前店", address: "東京都足立区千住2-61 ビックリヤ北千住駅西口ビル1F", distance: "駅前", m: 70, url: "https://shop.dennys.jp/map/21878", fac: ["オムツ替えシート"] },
@@ -21846,7 +21862,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ayase": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 足立綾瀬店", address: "東京都足立区綾瀬5丁目22-11", distance: "徒歩圏", m: 660, url: "https://store-info.skylark.co.jp/map/171596/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "JR綾瀬駅西口店", address: "東京都足立区綾瀬一丁目39番4号桂昇綾瀬西口ビル1階", distance: "駅前", m: 130, url: "https://tenpo.ichibanya.co.jp/map/2231", fac: ["お子さまメニュー"] },
@@ -21860,7 +21876,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "matsunoya", name: "松のや 綾瀬店", address: "東京都足立区綾瀬4-7-1", distance: "駅前", m: 110, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001224", fac: [] },
       { chain: "matsuya", name: "松屋 綾瀬店(マイカリー食堂併設)", address: "東京都足立区綾瀬3-2-8 シティプレイスアヤセ1F", distance: "駅前", m: 60, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000628", fac: [] },
       { chain: "mcdonalds", name: "綾瀬駅前店", address: "東京都足立区綾瀬3-4-4", distance: "駅前", m: 130, url: "https://map.mcdonalds.co.jp/map/70523", fac: [] },
-      { chain: "mos-burger", name: "モスバーガー綾瀬店", address: "東京都足立区綾瀬3丁目1-16", distance: "駅前", m: 170, url: "https://www.mos.jp/shop/detail/?shop_cd=08172", fac: [] },
+      { chain: "mos-burger", name: "モスバーガー綾瀬店", address: "東京都足立区綾瀬3丁目1-16", distance: "駅前", m: 170, url: "https://www.mos.jp/shop/detail/?shop_cd=05496", fac: [] },
       { chain: "ohsho", name: "餃子の王将 綾瀬駅前店", address: "東京都足立区綾瀬3-1-25", distance: "駅前", m: 280, url: "https://map.ohsho.co.jp/b/ohsho/info/2081/", fac: [] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 綾瀬店", address: "東京都足立区 綾瀬3-2-8 シティープレイス1F", distance: "駅前", m: 70, url: "https://map.reins.co.jp/onyasai/detail/356979729", fac: [] },
       { chain: "saint-marc-cafe", name: "サンマルクカフェ 綾瀬リエッタ店", address: "東京都足立区綾瀬3-1-16 綾瀬リエッタ", distance: "駅前", m: 180, url: "https://www.saint-marc-hd.com/saintmarccafe/shop/833/" },
@@ -21878,7 +21894,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-ayase": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "足立東和店", address: "東京都足立区東和5丁目15-12", distance: "徒歩圏", m: 540, url: "https://www.bikkuri-donkey.com/shop/shop_1050/", fac: ["ベビーシート", "小上がり席", "多目的トイレ", "駐車場"] },
       { chain: "bronco-billy", name: "北綾瀬店", address: "東京都足立区谷中2-5-4", distance: "駅前", m: 110, url: "https://www.bronco.co.jp/shop/tokyo/kita_ayase_grand/", fac: ["ベビーシート", "ベビーチェア", "段差なし", "多目的トイレ", "駐車場"] },
@@ -21903,7 +21919,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "gotanno": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 五反野駅前店", address: "東京都足立区 足立 3-33-3", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011715" },
       { chain: "gusto", name: "ガスト 五反野店(から好し取扱店)", address: "東京都足立区中央本町2丁目26-12 サミットストア五反野店2F", distance: "駅前", m: 180, url: "https://store-info.skylark.co.jp/map/017743/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
@@ -21921,7 +21937,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "umejima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武梅島駅前店", address: "東京都足立区梅島三丁目1-6梅島ニアステーションビル1階", distance: "駅前", m: 80, url: "https://tenpo.ichibanya.co.jp/map/2216", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 梅島店", address: "東京都足立区中央本町1丁目12-7", distance: "徒歩圏", m: 520, url: "https://shop.dennys.jp/map/21930", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -21945,7 +21961,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishiarai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東武梅島駅前店", address: "東京都足立区梅島三丁目1-6梅島ニアステーションビル1階", distance: "徒歩圏", m: 800, url: "https://tenpo.ichibanya.co.jp/map/2216", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 西新井西口店", address: "東京都足立区 西新井栄町 2-3-1", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012288" },
@@ -21981,7 +21997,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "daishimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 足立栗原店", address: "東京都足立区栗原4丁目11-7", distance: "徒歩圏", m: 790, url: "https://store-info.skylark.co.jp/map/170795/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "gusto", name: "ガスト 西新井店(から好し取扱店)", address: "東京都足立区栗原3丁目28-11", distance: "徒歩圏", m: 480, url: "https://store-info.skylark.co.jp/map/011572/", fac: ["おむつ替え台", "駐車場"] },
@@ -22015,7 +22031,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takenotsuka": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "足立区竹の塚店", address: "東京都足立区竹の塚一丁目37-12小林・岡田ビル", distance: "徒歩圏", m: 350, url: "https://tenpo.ichibanya.co.jp/map/2187", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 竹の塚店", address: "東京都足立区竹の塚 5-3-4", distance: "徒歩圏", m: 450, url: "https://shop.dennys.jp/map/2195", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -22042,7 +22058,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kosuge": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 西綾瀬店(から好し取扱店)", address: "東京都足立区西綾瀬2丁目7-1", distance: "徒歩圏", m: 470, url: "https://store-info.skylark.co.jp/map/011428/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "matsuya", name: "松屋 五反野店(マイカリー食堂併設)", address: "東京都足立区足立4-29-8 重沢ビル1F", distance: "徒歩圏", m: 790, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000667", fac: [] },
@@ -22060,7 +22076,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "horikiri": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 千住堀切橋店", address: "東京都足立区千住曙町41-5 アコール北千住205", distance: "徒歩圏", m: 400, url: "https://maps.cocos-jpn.co.jp/jp/detail/2998.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
       { chain: "matsuya", name: "松屋 牛田店", address: "東京都足立区千住曙町3-1", distance: "徒歩圏", m: 590, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000984", fac: [] },
@@ -22071,7 +22087,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toneri": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -22079,7 +22095,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toneri-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "sukiya", name: "すき家 足立入谷店", address: "東京都足立区入谷7-1-7", distance: "徒歩圏", m: 740, url: "https://maps.sukiya.jp/jp/detail/1513.html", fac: ["お子様メニュー", "駐車場"] },
       { chain: "yoshinoya", name: "吉野家 尾久橋通り皿沼店", address: "東京都足立区皿沼3丁目32-1", distance: "徒歩圏", m: 350, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061320", fac: ["お子様メニュー", "駐車場"] },
@@ -22089,7 +22105,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "minumadai-shinsuikoen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 川口新郷店(から好し取扱店)", address: "埼玉県川口市榛松238-1", distance: "徒歩圏", m: 610, url: "https://store-info.skylark.co.jp/map/018853/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "kfc", name: "島忠ホームズ草加舎人店", address: "埼玉県草加市遊馬町2-1", distance: "徒歩圏", m: 500, url: "https://search.kfc.co.jp/map/3197", fac: ["駐車場"] },
@@ -22101,7 +22117,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yazaike": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 谷在家店", address: "東京都足立区谷在家1-10-2", distance: "徒歩圏", m: 380, url: "https://shop.dennys.jp/map/2340", fac: ["オムツ替えシート", "駐車場"] },
       { chain: "kappa-sushi", name: "足立谷在家店", address: "東京都足立区谷在家2-1-1", distance: "徒歩圏", m: 620, url: "https://www.kappasushi.jp/shop/0311", fac: ["多目的トイレ", "駐車場"] },
@@ -22114,7 +22130,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kohoku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 扇店", address: "東京都足立区扇3-18-16", distance: "駅前", m: 210, url: "https://maps.cocos-jpn.co.jp/jp/detail/3064.html", fac: ["ベビーシート", "お子様メニュー", "スロープ／エレベーター", "駐車場"] },
       { chain: "gusto", name: "ガスト 足立江北店(から好し取扱店)", address: "東京都足立区江北6丁目1-18", distance: "徒歩圏", m: 590, url: "https://store-info.skylark.co.jp/map/011510/", fac: ["駐車場"] },
@@ -22130,7 +22146,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishiarai-daishi-nishi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "足立江北店", address: "東京都足立区江北7丁目24-14", distance: "徒歩圏", m: 680, url: "https://www.bikkuri-donkey.com/shop/shop_1081/", fac: ["ベビーシート", "多目的トイレ", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 谷在家店", address: "東京都足立区谷在家1-10-2", distance: "徒歩圏", m: 430, url: "https://shop.dennys.jp/map/2340", fac: ["オムツ替えシート", "駐車場"] },
@@ -22150,7 +22166,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "adachi-odai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "熊野前駅前店", address: "東京都荒川区東尾久8-14-5", distance: "徒歩圏", m: 600, url: "https://map.mcdonalds.co.jp/map/70518", fac: [] },
       { chain: "mos-burger", name: "モスバーガー島忠足立小台店", address: "東京都足立区小台1丁目17-1", distance: "駅前", m: 180, url: "https://www.mos.jp/shop/detail/?shop_cd=05116", fac: ["駐車場"] },
@@ -22158,7 +22174,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oji-shinden": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "尾久橋通り江北店", address: "東京都足立区江北1-21-12", distance: "徒歩圏", m: 640, url: "https://map.mcdonalds.co.jp/map/13671", fac: ["駐車場"] },
       { chain: "sukiya", name: "すき家 足立扇店", address: "東京都足立区扇2-26-42", distance: "駅前", m: 90, url: "https://maps.sukiya.jp/jp/detail/1368.html", fac: ["お子様メニュー", "駐車場"] },
@@ -22168,7 +22184,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ushida": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 千住堀切橋店", address: "東京都足立区千住曙町41-5 アコール北千住205", distance: "駅前", m: 250, url: "https://maps.cocos-jpn.co.jp/jp/detail/2998.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
       { chain: "gusto", name: "ガスト 北千住駅東口店(から好し取扱店)", address: "東京都足立区千住旭町4-13 コートダジュール2F", distance: "徒歩圏", m: 710, url: "https://store-info.skylark.co.jp/map/018922/", fac: ["おむつ替え台"] },
@@ -22202,7 +22218,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-sekiya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 千住堀切橋店", address: "東京都足立区千住曙町41-5 アコール北千住205", distance: "駅前", m: 250, url: "https://maps.cocos-jpn.co.jp/jp/detail/2998.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
       { chain: "gusto", name: "ガスト 北千住駅東口店(から好し取扱店)", address: "東京都足立区千住旭町4-13 コートダジュール2F", distance: "徒歩圏", m: 710, url: "https://store-info.skylark.co.jp/map/018922/", fac: ["おむつ替え台"] },
@@ -22236,7 +22252,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "horikiri-keisei": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 小菅店(から好し取扱店)", address: "東京都葛飾区堀切7丁目1-2", distance: "徒歩圏", m: 720, url: "https://store-info.skylark.co.jp/map/018879/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "jonathan", name: "ジョナサン 堀切店", address: "東京都葛飾区堀切3丁目32-6", distance: "徒歩圏", m: 670, url: "https://store-info.skylark.co.jp/map/020524/", fac: ["おむつ替え台", "駐車場"] },
@@ -22246,7 +22262,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kameari": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "亀有駅南口店", address: "東京都葛飾区亀有三丁目31番4号 本宮ビル", distance: "駅前", m: 160, url: "https://tenpo.ichibanya.co.jp/map/3220", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 亀有駅前店", address: "東京都葛飾区亀有3-7-11サンセリテ鞠子2F", distance: "駅前", m: 90, url: "https://shop.dennys.jp/map/21827", fac: ["オムツ替えシート"] },
@@ -22287,7 +22303,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kanamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 金町北口店", address: "東京都葛飾区 東金町 1-24-7", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011828" },
       { chain: "goemon", name: "金町店", address: "東京都葛飾区東金町1-36-1 東急ストア金町店1F", distance: "駅前", m: 130, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -22320,7 +22336,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-kanamachi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 金町北口店", address: "東京都葛飾区 東金町 1-24-7", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011828" },
       { chain: "goemon", name: "金町店", address: "東京都葛飾区東金町1-36-1 東急ストア金町店1F", distance: "駅前", m: 130, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
@@ -22353,7 +22369,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shibamata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "jonathan", name: "ジョナサン 柴又店", address: "東京都葛飾区柴又4丁目31-8", distance: "徒歩圏", m: 480, url: "https://store-info.skylark.co.jp/map/020029/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
       { chain: "sukiya", name: "すき家 葛飾柴又店", address: "東京都葛飾区柴又5-9-1", distance: "徒歩圏", m: 540, url: "https://maps.sukiya.jp/jp/detail/1125.html", fac: ["お子様メニュー", "駐車場"] },
@@ -22367,7 +22383,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-takasago": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gyukaku", name: "牛角 高砂店", address: "東京都葛飾区 高砂5-42-1 さくらビル1F", distance: "駅前", m: 140, url: "https://map.reins.co.jp/gyukaku/detail/338265129", fac: ["お子様用備品", "座敷"] },
       { chain: "matsuya", name: "松屋 京成高砂店", address: "東京都葛飾区高砂2-38-5", distance: "駅前", m: 60, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000757", fac: [] },
@@ -22376,7 +22392,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "aoto": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 青砥駅前店", address: "東京都葛飾区青戸3丁目37-15", distance: "駅前", m: 30, url: "https://store-info.skylark.co.jp/map/171550/", fac: ["おむつ替え台"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 青戸3丁目店", address: "東京都葛飾区 青戸 3-39-11", distance: "駅前", m: 90, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011145" },
@@ -22399,7 +22415,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-tateishi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gyukaku", name: "牛角 青砥店", address: "東京都葛飾区 立石6-30-8 サンリブ青砥2F", distance: "徒歩圏", m: 770, url: "https://map.reins.co.jp/gyukaku/detail/356718929", fac: ["お子様用備品", "座敷"] },
       { chain: "kappa-sushi", name: "葛飾立石店", address: "東京都葛飾区立石5-2-3", distance: "徒歩圏", m: 720, url: "https://www.kappasushi.jp/shop/0545", fac: ["多目的トイレ", "駐車場"] },
@@ -22414,14 +22430,14 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "yotsugi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "四つ木イトーヨーカドー店", address: "東京都葛飾区四つ木2-21-1イトーヨカドー四つ木店1F", distance: "徒歩圏", m: 700, url: "https://map.mcdonalds.co.jp/map/13780", fac: ["駐車場"] },
       { chain: "saizeriya", name: "サイゼリヤ イトーヨーカドー四つ木店", address: "東京都葛飾区四つ木2-21-1イトーヨーカドー四つ木3F", distance: "徒歩圏", m: 700, url: "https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1313", fac: ["駐車場"] },
     ],
   },
   "ohanajaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 お花茶屋南口店", address: "東京都葛飾区宝町2丁目36-14", distance: "駅前", m: 40, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/624.html", fac: [] },
       { chain: "jonathan", name: "ジョナサン 堀切店", address: "東京都葛飾区堀切3丁目32-6", distance: "徒歩圏", m: 750, url: "https://store-info.skylark.co.jp/map/020524/", fac: ["おむつ替え台", "駐車場"] },
@@ -22439,7 +22455,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-koiwa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 東新小岩店", address: "東京都葛飾区東新小岩3丁目9-3", distance: "徒歩圏", m: 760, url: "https://store-info.skylark.co.jp/map/171240/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "bronco-billy", name: "新小岩店", address: "東京都葛飾区東新小岩1丁目12-6", distance: "徒歩圏", m: 380, url: "https://www.bronco.co.jp/shop/tokyo/shinkoiwa_ten/", fac: ["ベビーシート", "ベビーチェア", "駐車場"] },
@@ -22477,7 +22493,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "koiwa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 小岩西店", address: "東京都江戸川区南小岩6丁目4-9", distance: "徒歩圏", m: 580, url: "https://store-info.skylark.co.jp/map/171067/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "JR小岩駅南口店", address: "東京都江戸川区南小岩六丁目30番11号", distance: "駅前", m: 260, url: "https://tenpo.ichibanya.co.jp/map/2198", fac: ["お子さまメニュー"] },
@@ -22509,7 +22525,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keisei-koiwa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 北小岩店(から好し取扱店)", address: "東京都江戸川区北小岩1丁目11-9", distance: "徒歩圏", m: 790, url: "https://store-info.skylark.co.jp/map/012702/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "matsuya", name: "松屋 京成小岩店(マイカリー食堂併設)", address: "東京都江戸川区北小岩6-12-1 白坂ビル", distance: "駅前", m: 30, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000883", fac: [] },
@@ -22525,14 +22541,14 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "edogawa": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 北小岩店(から好し取扱店)", address: "東京都江戸川区北小岩1丁目11-9", distance: "徒歩圏", m: 580, url: "https://store-info.skylark.co.jp/map/012702/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mcdonalds", name: "蔵前橋通り北小岩店", address: "東京都江戸川区北小岩3-1-21", distance: "徒歩圏", m: 600, url: "https://map.mcdonalds.co.jp/map/13816", fac: ["駐車場"] },
     ],
   },
   "shinozaki": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 篠崎駅前店", address: "東京都江戸川区篠崎町7丁目28-2", distance: "駅前", m: 50, url: "https://store-info.skylark.co.jp/map/172955/", fac: [] },
       { chain: "cocoichi", name: "江戸川区篠崎駅前店", address: "東京都江戸川区篠崎町二丁目3-19KYパティオス1階", distance: "駅前", m: 140, url: "https://tenpo.ichibanya.co.jp/map/2309", fac: ["お子さまメニュー"] },
@@ -22549,7 +22565,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "mizue": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 瑞江店", address: "東京都江戸川区東瑞江1-24-1", distance: "駅前", m: 280, url: "https://maps.cocos-jpn.co.jp/jp/detail/2714.html", fac: ["ベビーシート", "お子様メニュー", "スロープ／エレベーター", "駐車場"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 瑞江店", address: "東京都江戸川区 東瑞江 1-26-14", distance: "駅前", m: 120, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011426" },
@@ -22576,7 +22592,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ichinoe": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 一之江駅前店", address: "東京都江戸川区一之江7丁目35-22 一富ビル2F", distance: "駅前", m: 100, url: "https://store-info.skylark.co.jp/map/171326/", fac: ["おむつ替え台", "車椅子入店可", "多目的トイレ"] },
       { chain: "cocoichi", name: "江戸川区一之江駅前店", address: "東京都江戸川区一之江七丁目38番18LANAI TOWN RENAISSANCE PLAZA HOUSE1階", distance: "駅前", m: 160, url: "https://tenpo.ichibanya.co.jp/map/2146", fac: ["お子さまメニュー"] },
@@ -22592,7 +22608,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "funabori": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 船堀駅前店", address: "東京都江戸川区船堀3丁目7", distance: "駅前", m: 120, url: "https://store-info.skylark.co.jp/map/171009/", fac: ["おむつ替え台"] },
       { chain: "denny-s", name: "デニーズ 船堀店", address: "東京都江戸川区船堀1-6-11", distance: "駅前", m: 120, url: "https://shop.dennys.jp/map/2529", fac: ["オムツ替えシート", "駐車場"] },
@@ -22612,7 +22628,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kasai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "中葛西店", address: "東京都江戸川区中葛西4丁目4番6号", distance: "徒歩圏", m: 720, url: "https://www.bikkuri-donkey.com/shop/shop_1981/", fac: ["ベビーシート", "車イス入店", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "江戸川区葛西店", address: "東京都江戸川区中葛西三丁目32番17号パルファン大塚ビル1階", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/2301", fac: ["お子さまメニュー"] },
@@ -22645,7 +22661,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-kasai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "中葛西店", address: "東京都江戸川区中葛西4丁目4番6号", distance: "徒歩圏", m: 620, url: "https://www.bikkuri-donkey.com/shop/shop_1981/", fac: ["ベビーシート", "車イス入店", "多目的トイレ", "駐車場"] },
       { chain: "cocoichi", name: "江戸川区西葛西駅北口店", address: "東京都江戸川区西葛西五丁目6番11号第2ツボイビル1階", distance: "駅前", m: 150, url: "https://tenpo.ichibanya.co.jp/map/2196", fac: ["お子さまメニュー"] },
@@ -22665,7 +22681,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "mcdonalds", name: "西葛西店", address: "東京都江戸川区西葛西3-16-13", distance: "駅前", m: 100, url: "https://map.mcdonalds.co.jp/map/13588", fac: [] },
       { chain: "mister-donut", name: "西葛西駅前 ショップ", address: "東京都江戸川区西葛西6丁目16-6", distance: "駅前", m: 100, url: "https://md.mapion.co.jp/b/misterdonut/info/0886/", fac: [] },
       { chain: "mos-burger", name: "モスバーガー西葛西北口店", address: "東京都江戸川区西葛西3丁目22-16", distance: "駅前", m: 230, url: "https://www.mos.jp/shop/detail/?shop_cd=04489", fac: [] },
-      { chain: "nakau", name: "なか卯 西葛西駅前店", address: "東京都江戸川区西葛西6-7 メトロセンター西葛西B棟2号", distance: "駅前", m: 80, url: "https://maps.nakau.co.jp/jp/detail/2139.html", fac: ["お子様メニュー"] },
       { chain: "onyasai", name: "しゃぶしゃぶ温野菜 西葛西店", address: "東京都江戸川区 西葛西5-1-1 第20山秀ビル2F", distance: "駅前", m: 80, url: "https://map.reins.co.jp/onyasai/detail/358783929", fac: [] },
       { chain: "ootoya", name: "大戸屋ごはん処 西葛西北口店", address: "東京都江戸川区 西葛西3-15-8 RECS125ビル 2F", distance: "駅前", m: 100, url: "https://store.ootoya.com/detail/27261/", fac: [] },
       { chain: "osaka-ohsho", name: "西葛西店", address: "東京都江戸川区西葛西5-2-1", distance: "駅前", url: "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=61", fac: [] },
@@ -22689,13 +22704,13 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kasai-rinkai-koen": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "starbucks", name: "葛西臨海公園駅店", address: "東京都江戸川区臨海町6-3-4 葛西臨海公園駅高架下ビル", distance: "駅前", m: 80, url: "https://store.starbucks.co.jp/detail-1774/" },
     ],
   },
   "oji-ekimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "北区王子明治通店", address: "東京都北区王子一丁目6番6号栗生ハイツ1階", distance: "駅前", m: 220, url: "https://tenpo.ichibanya.co.jp/map/1853", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 王子駅前店(から好し取扱店)", address: "東京都北区王子1丁目13-16 エイムビル2F", distance: "駅前", m: 240, url: "https://store-info.skylark.co.jp/map/018929/", fac: ["おむつ替え台"] },
@@ -22719,7 +22734,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "asukayama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "北区王子明治通店", address: "東京都北区王子一丁目6番6号栗生ハイツ1階", distance: "徒歩圏", m: 520, url: "https://tenpo.ichibanya.co.jp/map/1853", fac: ["お子さまメニュー"] },
       { chain: "gusto", name: "ガスト 王子駅前店(から好し取扱店)", address: "東京都北区王子1丁目13-16 エイムビル2F", distance: "徒歩圏", m: 560, url: "https://store-info.skylark.co.jp/map/018929/", fac: ["おむつ替え台"] },
@@ -22743,7 +22758,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takinogawa-itchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hidakaya", name: "日高屋 王子駅前明治通店", address: "東京都北区王子1-5-3", distance: "徒歩圏", m: 790, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/336.html", fac: [] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 西巣鴨店", address: "東京都豊島区西巣鴨3丁目25-11", distance: "徒歩圏", m: 760, url: "https://restaurant.kushi-tanaka.com/detail/1163/", fac: ["子供用イス"] },
@@ -22773,7 +22788,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishigahara-yonchome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kushikatsu-tanaka", name: "串カツ田中 西巣鴨店", address: "東京都豊島区西巣鴨3丁目25-11", distance: "徒歩圏", m: 410, url: "https://restaurant.kushi-tanaka.com/detail/1163/", fac: ["子供用イス"] },
       { chain: "matsunoya", name: "松のや 西巣鴨店", address: "東京都豊島区西巣鴨3-25-11 メトロエステート201号", distance: "徒歩圏", m: 440, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001398", fac: [] },
@@ -22782,7 +22797,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sugamo-shinden": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 大塚駅前店", address: "東京都豊島区北大塚1-16-5 パークアクシス大塚ステーションゲートタワー3階", distance: "徒歩圏", m: 470, url: "https://shop.dennys.jp/map/21990", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 大塚南口店", address: "東京都豊島区 南大塚 3-53-5", distance: "徒歩圏", m: 570, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010215" },
@@ -22825,7 +22840,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "otsuka-ekimae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "豊島区大塚店", address: "東京都豊島区南大塚三丁目9-13新大塚ビル1F", distance: "徒歩圏", m: 450, url: "https://tenpo.ichibanya.co.jp/map/1444", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大塚駅前店", address: "東京都豊島区北大塚1-16-5 パークアクシス大塚ステーションゲートタワー3階", distance: "駅前", m: 70, url: "https://shop.dennys.jp/map/21990", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ"] },
@@ -22889,7 +22904,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nishi-sugamo": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "JR板橋駅東口店", address: "東京都北区滝野川七丁目8番6号ベルコート1階", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/2160", fac: ["お子さまメニュー"] },
       { chain: "kushikatsu-tanaka", name: "串カツ田中 西巣鴨店", address: "東京都豊島区西巣鴨3丁目25-11", distance: "駅前", m: 30, url: "https://restaurant.kushi-tanaka.com/detail/1163/", fac: ["子供用イス"] },
@@ -22907,7 +22922,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kotake-mukaihara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "板橋こもね店", address: "東京都板橋区小茂根3丁目16-1", distance: "徒歩圏", m: 610, url: "https://www.bikkuri-donkey.com/shop/shop_1049/", fac: ["ベビーシート", "車イス入店", "多目的トイレ", "駐車場"] },
       { chain: "denny-s", name: "デニーズ 小茂根店", address: "東京都板橋区小茂根2-24-15", distance: "徒歩圏", m: 640, url: "https://shop.dennys.jp/map/21974", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -22927,7 +22942,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-sakuradai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "西武江古田駅南口店", address: "東京都練馬区栄町4-3グレーシーマンション43 101号", distance: "徒歩圏", m: 500, url: "https://tenpo.ichibanya.co.jp/map/2033", fac: ["お子さまメニュー"] },
       { chain: "hidakaya", name: "日高屋 江古田南口店", address: "東京都練馬区旭丘1丁目71-9", distance: "徒歩圏", m: 640, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/535.html", fac: [] },
@@ -22953,7 +22968,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osaki-hirokoji": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "五反田山手通店", address: "東京都品川区西五反田二丁目30番10号セブンスターマンション1階", distance: "徒歩圏", m: 350, url: "https://tenpo.ichibanya.co.jp/map/1919", fac: ["お子さまメニュー"] },
       { chain: "cocoichi", name: "JR五反田駅東口店", address: "東京都品川区東五反田五丁目27番6号第一五反田ビル1階", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/2184", fac: ["お子さまメニュー"] },
@@ -23031,7 +23046,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "aoi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kura-sushi", name: "足立青井店", address: "東京都足立区青井5-8-10", distance: "徒歩圏", m: 700, url: "https://shop.kurasushi.co.jp/detail/229", fac: [] },
       { chain: "marugame", name: "丸亀製麺足立加平", address: "東京都足立区西加平1-2-29", distance: "徒歩圏", m: 760, url: "https://stores.marugame.com/110817" },
@@ -23045,7 +23060,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "rokucho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "TX六町駅前店", address: "東京都足立区六町四丁目4", distance: "駅前", m: 90, url: "https://tenpo.ichibanya.co.jp/map/2845", fac: ["お子さまメニュー"] },
       { chain: "marugame", name: "丸亀製麺足立加平", address: "東京都足立区西加平1-2-29", distance: "徒歩圏", m: 720, url: "https://stores.marugame.com/110817" },
@@ -23061,7 +23076,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "senju-ohashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hama-sushi", name: "はま寿司 ポンテポルタ千住店", address: "東京都足立区千住橋戸町1-13", distance: "駅前", m: 120, url: "https://maps.hama-sushi.co.jp/jp/detail/4364.html", fac: ["駐車場"] },
       { chain: "hidakaya", name: "日高屋 千住大橋店", address: "東京都足立区千住橋戸町11-1", distance: "駅前", m: 20, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/511.html", fac: [] },
@@ -23088,7 +23103,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-mikawashima": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東京メトロ西日暮里駅前店", address: "東京都荒川区西日暮里五丁目11-7 西日暮里ワイエムビル 1階", distance: "徒歩圏", m: 690, url: "https://tenpo.ichibanya.co.jp/map/2571", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 西日暮里店", address: "東京都荒川区 西日暮里 5-14-1 太陽ビル", distance: "徒歩圏", m: 720, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010858" },
@@ -23132,7 +23147,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "daitabashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "渋谷区笹塚店", address: "東京都渋谷区笹塚一丁目59番地10号ACT SOHO京王笹塚ビル", distance: "徒歩圏", m: 630, url: "https://tenpo.ichibanya.co.jp/map/2439", fac: ["お子さまメニュー"] },
       { chain: "excelsior", name: "エクセルシオール カフェ 笹塚南口店", address: "東京都渋谷区 笹塚 1-29-10 プレジール笹塚 1F", distance: "徒歩圏", m: 740, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=5000282" },
@@ -23168,7 +23183,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shinsen-shinjuku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 新宿西口大ガード店", address: "東京都新宿区西新宿7丁目1-1 新宿カレイドビル3F", distance: "徒歩圏", m: 450, url: "https://store-info.skylark.co.jp/map/171563/", fac: ["おむつ替え台", "多目的トイレ"] },
       { chain: "bikkuri-donkey", name: "新宿靖国通り店", address: "東京都新宿区新宿5丁目17-13 オリエンタルウェーブビル", distance: "徒歩圏", m: 570, url: "https://www.bikkuri-donkey.com/shop/shop_1062/", fac: ["ベビーシート", "多目的トイレ"] },
@@ -23330,7 +23345,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "katsuya", name: "かつや 代々木駅前店", address: "東京都渋谷区代々木1-32-12パリスビル1階", distance: "少し歩く", m: 820, url: "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=740", fac: [] },
       { chain: "matsuya", name: "松屋 東新宿店", address: "東京都新宿区歌舞伎町2-2-21 ライオンズマンション歌舞伎町B102号室", distance: "少し歩く", m: 870, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000972", fac: [] },
       { chain: "matsuya", name: "松屋 西新宿8丁目店", address: "東京都新宿区西新宿8-12-1 ダイヤモンドビル1F", distance: "少し歩く", m: 890, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000665", fac: [] },
-      { chain: "musashino-mori-coffee", name: "むさしの森Diner 新宿中央公園店", address: "東京都新宿区西新宿2丁目11-5", distance: "少し歩く", m: 900, url: "https://store-info.skylark.co.jp/map/198279/", fac: ["おむつ替え台", "個室・個室風席", "車椅子入店可", "多目的トイレ"] },
       { chain: "nakau", name: "なか卯 新宿職安通り店", address: "東京都新宿区歌舞伎町2-41-7 川井ビル", distance: "少し歩く", m: 920, url: "https://maps.nakau.co.jp/jp/detail/2483.html", fac: ["お子様メニュー"] },
       { chain: "nakau", name: "なか卯 西新宿店", address: "東京都新宿区西新宿6-10-2", distance: "少し歩く", m: 980, url: "https://maps.nakau.co.jp/jp/detail/2253.html", fac: ["お子様メニュー"] },
       { chain: "pronto", name: "PRONTO 新宿第一生命ビル店", address: "東京都新宿区西新宿2丁目7-1 新宿第一生命ビルディング 1F", distance: "少し歩く", m: 840, url: "https://shop.pronto.co.jp/detail/194/" },
@@ -23353,7 +23367,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "oyama": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "板橋区役所前店", address: "東京都板橋区仲宿65番1号仲宿マンション10B室", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/1829", fac: ["お子さまメニュー"] },
       { chain: "denny-s", name: "デニーズ 大山東町店", address: "東京都板橋区大山東町33-5 ザ・パークハビオ板橋区役所前2F", distance: "徒歩圏", m: 580, url: "https://shop.dennys.jp/map/22014", fac: ["オムツ替えシート", "入口段差なしまたはエレベーター", "だれでもトイレ", "駐車場"] },
@@ -23395,7 +23409,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hikawadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "jonathan", name: "ジョナサン 氷川台店", address: "東京都練馬区氷川台4丁目8-4", distance: "徒歩圏", m: 360, url: "https://store-info.skylark.co.jp/map/020121/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "matsuya", name: "松屋 氷川台店", address: "東京都練馬区氷川台3-39-9", distance: "駅前", m: 90, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000432", fac: [] },
@@ -23405,7 +23419,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "heiwadai": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 平和台駅前店", address: "東京都練馬区早宮2丁目17-43", distance: "駅前", m: 20, url: "https://store-info.skylark.co.jp/map/171603/", fac: ["おむつ替え台"] },
       { chain: "cocos", name: "ココス 平和台店", address: "東京都練馬区早宮2-17-47 平和台STビル", distance: "駅前", m: 70, url: "https://maps.cocos-jpn.co.jp/jp/detail/3062.html", fac: ["ベビーシート", "お子様メニュー", "駐車場"] },
@@ -23418,7 +23432,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "sakuradamon": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "hanamaru-udon", name: "はなまるうどん 虎ノ門店", address: "東京都港区虎ノ門1-1-21 虎ノ門実業会館 1F", distance: "徒歩圏", m: 790, url: "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1129", fac: [] },
       { chain: "marugame", name: "丸亀製麺霞が関ビルディング", address: "東京都千代田区霞が関3-2-5 霞が関ビルディング1Fカスミダイニング", distance: "徒歩圏", m: 790, url: "https://stores.marugame.com/111236" },
@@ -23454,7 +23468,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kita-senzoku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "東急大岡山駅前店", address: "東京都大田区北千束一丁目40番1号梅林堂ビル1階", distance: "徒歩圏", m: 770, url: "https://tenpo.ichibanya.co.jp/map/2044", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 洗足駅前店", address: "東京都目黒区 洗足 2-24-15 洗足ヒルズ", distance: "徒歩圏", m: 490, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012544" },
@@ -23483,7 +23497,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "ikejiri-ohashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "matsuya", name: "松屋 池尻大橋店", address: "東京都目黒区東山3-1-15 SD池尻大橋ビル", distance: "駅前", m: 80, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000456", fac: [] },
       { chain: "matsuya", name: "松屋 三宿店", address: "東京都世田谷区池尻3-30-10", distance: "徒歩圏", m: 660, url: "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000142", fac: [] },
@@ -23504,7 +23518,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "nagahara": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 長原店", address: "東京都大田区 上池台 1-32-3", distance: "駅前", m: 60, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011365" },
       { chain: "doutor", name: "ドトールコーヒーショップ 旗の台店", address: "東京都品川区 旗の台 1-4-13", distance: "徒歩圏", m: 790, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010767" },
@@ -23527,7 +23541,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "senzoku-ike": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 長原店", address: "東京都大田区 上池台 1-32-3", distance: "徒歩圏", m: 660, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1011365" },
       { chain: "lotteria", name: "東急長原駅店", address: "東京都大田区上池台1-10-10", distance: "徒歩圏", m: 690, url: "https://maps.zetteria.jp/shop/shop2314.html" },
@@ -23542,7 +23556,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takaracho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "京橋エドグラン店", address: "東京都中央区京橋二丁目2番1号 京橋エドグラン地下1階B05", distance: "駅前", m: 190, url: "https://tenpo.ichibanya.co.jp/map/3106", fac: [] },
       { chain: "cocoichi", name: "中央区八丁堀店", address: "東京都中央区八丁堀一丁目7番8号若狭ビル1F", distance: "徒歩圏", m: 550, url: "https://tenpo.ichibanya.co.jp/map/1672", fac: [] },
@@ -23679,7 +23693,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"doutor": 1, "starbucks": 8},
   },
   "uchi-saiwaicho": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋外堀通り店", address: "東京都港区 新橋 1-16-4", distance: "駅前", m: 220, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1012376" },
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋銀座口店", address: "東京都港区 新橋 1-8-4 丸忠ビル 1F", distance: "徒歩圏", m: 530, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010081" },
@@ -23771,7 +23785,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "starbucks", name: "虎ノ門ヒルズ ステーションタワー店", address: "東京都港区虎ノ門2-6-3 虎ノ門ヒルズステーションタワー7階", distance: "少し歩く", m: 810, url: "https://store.starbucks.co.jp/detail-4128/" },
       { chain: "starbucks", name: "カレッタ汐留店", address: "東京都港区東新橋1-8-2 カレッタ汐留", distance: "少し歩く", m: 830, url: "https://store.starbucks.co.jp/detail-772/" },
       { chain: "starbucks", name: "虎ノ門アルセアタワー店", address: "東京都港区虎ノ門2-2-3 虎ノ門アルセアタワー 1階", distance: "少し歩く", m: 830, url: "https://store.starbucks.co.jp/detail-4498/" },
-      { chain: "starbucks", name: "GINZA SIX店", address: "東京都中央区銀座6-10-1", distance: "少し歩く", m: 840, url: "https://store.starbucks.co.jp/detail-1374/" },
+      { chain: "starbucks", name: "東京汐留ビルディング店", address: "東京都港区東新橋1-9-1 東京汐留ビルディング地下2階", distance: "少し歩く", m: 880, url: "https://store.starbucks.co.jp/detail-593/" },
       { chain: "sushiro", name: "有楽町店", address: "東京都千代田区有楽町一丁目11番1号 ビックカメラ有楽町店内6階", distance: "少し歩く", m: 910, url: "https://www.akindo-sushiro.co.jp/shop/detail.php?id=2228", fac: [] },
       { chain: "tully-coffee", name: "住友不動産虎ノ門タワー店", address: "東京都港区 虎ノ門2-2-1 住友不動産虎ノ門タワー1F", distance: "少し歩く", m: 900, url: "https://shop.tullys.co.jp/detail/1000031" },
       { chain: "tully-coffee", name: "汐留住友ビル店", address: "東京都港区 東新橋一丁目9番2号 汐留住友ビル2F", distance: "少し歩く", m: 910, url: "https://shop.tullys.co.jp/detail/1000799" },
@@ -23781,10 +23795,10 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "yoshinoya", name: "吉野家 霞ヶ関3号館店", address: "東京都千代田区霞が関2丁目1-3", distance: "少し歩く", m: 860, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061430", fac: [] },
       { chain: "yoshinoya", name: "吉野家 有楽町店", address: "東京都千代田区有楽町2丁目9-18", distance: "少し歩く", m: 890, url: "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041322", fac: [] },
     ],
-    farMore: {"starbucks": 2},
+    farMore: {"starbucks": 1},
   },
   "shiodome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 浜松町店", address: "東京都港区浜松町1-31 文化放送メディアプラス2階", distance: "徒歩圏", m: 780, url: "https://shop.dennys.jp/map/21923", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 新橋銀座口店", address: "東京都港区 新橋 1-8-4 丸忠ビル 1F", distance: "徒歩圏", m: 410, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010081" },
@@ -23858,7 +23872,6 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "pronto", name: "PRONTO 銀座コリドー店", address: "東京都中央区銀座6-2 コリドー街", distance: "少し歩く", m: 940, url: "https://shop.pronto.co.jp/detail/9/" },
       { chain: "saint-marc-cafe", name: "サンマルクカフェ 銀座みゆき通り店", address: "東京都中央区銀座6-12-1 第二寿ビル", distance: "少し歩く", m: 810, url: "https://www.saint-marc-hd.com/saintmarccafe/shop/655/" },
       { chain: "starbucks", name: "東銀座店", address: "東京都中央区銀座5-15-8 時事通信ビル", distance: "少し歩く", m: 800, url: "https://store.starbucks.co.jp/detail-520/" },
-      { chain: "starbucks", name: "GINZA SIX店", address: "東京都中央区銀座6-10-1", distance: "少し歩く", m: 820, url: "https://store.starbucks.co.jp/detail-1374/" },
       { chain: "starbucks", name: "銀座 蔦屋書店", address: "東京都中央区銀座6-10-1 GINZA SIX 6階", distance: "少し歩く", m: 830, url: "https://store.starbucks.co.jp/detail-1622/" },
       { chain: "starbucks", name: "銀座EXITMELSA店", address: "東京都中央区銀座5-7-10", distance: "少し歩く", m: 900, url: "https://store.starbucks.co.jp/detail-1539/" },
       { chain: "starbucks", name: "日比谷シティ店", address: "東京都千代田区内幸町2-2-3 日比谷国際ビルヂング B1F(B132)", distance: "少し歩く", m: 940, url: "https://store.starbucks.co.jp/detail-5/" },
@@ -23875,7 +23888,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takanosuke": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 扇店", address: "東京都足立区扇3-18-16", distance: "徒歩圏", m: 420, url: "https://maps.cocos-jpn.co.jp/jp/detail/3064.html", fac: ["ベビーシート", "お子様メニュー", "スロープ／エレベーター", "駐車場"] },
       { chain: "kura-sushi", name: "足立江北店", address: "東京都足立区江北4-31-30", distance: "徒歩圏", m: 700, url: "https://shop.kurasushi.co.jp/detail/228", fac: ["多機能トイレ対応"] },
@@ -23884,7 +23897,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "arakawa-nanachome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 町屋店", address: "東京都荒川区町屋3丁目8-18 JKハイム2F", distance: "徒歩圏", m: 540, url: "https://store-info.skylark.co.jp/map/171600/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "徒歩圏", m: 350, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
@@ -23911,7 +23924,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "machiya-nichome": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 町屋店", address: "東京都荒川区町屋3丁目8-18 JKハイム2F", distance: "徒歩圏", m: 650, url: "https://store-info.skylark.co.jp/map/171600/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "cocoichi", name: "東京メトロ町屋駅前通店", address: "東京都荒川区町屋一丁目4-5 ホリイビル1階", distance: "徒歩圏", m: 480, url: "https://tenpo.ichibanya.co.jp/map/2650", fac: ["お子さまメニュー"] },
@@ -23940,7 +23953,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "miyanomae": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "熊野前駅前店", address: "東京都荒川区東尾久8-14-5", distance: "徒歩圏", m: 370, url: "https://map.mcdonalds.co.jp/map/70518", fac: [] },
       { chain: "mos-burger", name: "モスバーガー島忠足立小台店", address: "東京都足立区小台1丁目17-1", distance: "徒歩圏", m: 630, url: "https://www.mos.jp/shop/detail/?shop_cd=05116", fac: ["駐車場"] },
@@ -23952,7 +23965,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "toden-zoshigaya": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bikkuri-donkey", name: "南池袋店", address: "東京都豊島区南池袋2丁目26-1 0 アクティオーレ南池袋2F", distance: "徒歩圏", m: 570, url: "https://www.bikkuri-donkey.com/shop/shop_1058/", fac: [] },
       { chain: "bikkuri-donkey", name: "池袋サンシャイン通り店", address: "東京都豊島区東池袋1-21-11 オーク池袋ビルB1F", distance: "徒歩圏", m: 720, url: "https://www.bikkuri-donkey.com/shop/shop_1057/", fac: ["ベビーシート"] },
@@ -24036,6 +24049,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "denny-s", name: "デニーズ 池袋明治通り店", address: "東京都豊島区東池袋1-8-9 CENTURION HOTEL IKEBUKURO 2階", distance: "少し歩く", m: 910, url: "https://shop.dennys.jp/map/21937", fac: ["オムツ替えシート"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 西池袋1丁目メトロポリタン通り店", address: "東京都豊島区 西池袋 1-9-11 カーサ池袋 1F", distance: "少し歩く", m: 980, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010422" },
       { chain: "fujiya-restaurant", name: "池袋東武店", address: "東京都豊島区西池袋1-1(東武スパイス13F)", distance: "少し歩く", m: 950, url: "https://shop.fujiya-peko.co.jp/b/fujiya/info/84096/" },
+      { chain: "goemon", name: "ハレザ池袋店", address: "東京都豊島区東池袋1-18-1 ハレザタワー1F", distance: "少し歩く", m: 920, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo" },
       { chain: "goemon", name: "池袋東武店", address: "東京都豊島区西池袋1-1-25 スパイス池袋東武12F", distance: "少し歩く", m: 950, url: "https://www.yomenya-goemon.com/store/kanto/#tokyo", fac: [] },
       { chain: "hidakaya", name: "日高屋 池袋西口店", address: "東京都豊島区西池袋1-13-5", distance: "少し歩く", m: 1000, url: "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/094.html", fac: [] },
       { chain: "jonathan", name: "ジョナサン 東池袋店", address: "東京都豊島区東池袋1丁目30-6 セイコービル2階", distance: "少し歩く", m: 820, url: "https://store-info.skylark.co.jp/map/020317/", fac: ["おむつ替え台"] },
@@ -24064,7 +24078,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-nihombashi": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "中央区小伝馬町店", address: "東京都中央区日本橋小伝馬町2-8 新小伝馬町ビル1階", distance: "徒歩圏", m: 610, url: "https://tenpo.ichibanya.co.jp/map/2677", fac: [] },
       { chain: "cocoichi", name: "神田駅北口店", address: "東京都千代田区神田鍛冶町三丁目3番地", distance: "徒歩圏", m: 760, url: "https://tenpo.ichibanya.co.jp/map/1707", fac: [] },
@@ -24119,7 +24133,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
       { chain: "tully-coffee", name: "日本橋YUITOアネックス店", address: "東京都中央区 日本橋室町2丁目4番1号 浮世小路千疋屋ビルB1F", distance: "駅前", m: 50, url: "https://shop.tullys.co.jp/detail/1000741" },
       { chain: "tully-coffee", name: "常盤橋タワー店", address: "東京都千代田区 大手町二丁目6番4号 TOKYO TORCH 常盤橋タワー 地下1階", distance: "徒歩圏", m: 380, url: "https://shop.tullys.co.jp/detail/1003159" },
       { chain: "tully-coffee", name: "大手町プレイス 2階店", address: "東京都千代田区 大手町二丁目3番1号 大手町プレイス2階", distance: "徒歩圏", m: 530, url: "https://shop.tullys.co.jp/detail/1003030" },
-      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 540, url: "https://shop.tullys.co.jp/detail/1000878" },
+      { chain: "tully-coffee", name: "鉃鋼ビル店", address: "東京都千代田区 丸の内1丁目8番2号鉄鋼ビルB1F-1F", distance: "徒歩圏", m: 540, url: "https://shop.tullys.co.jp/detail/4300878" },
       { chain: "tully-coffee", name: "OEDO日本橋店", address: "東京都中央区 日本橋二丁目7-1 東京日本橋タワーB1F", distance: "徒歩圏", m: 550, url: "https://shop.tullys.co.jp/detail/1000847" },
       { chain: "veloce", name: "室町一丁目店", address: "東京都中央区日本橋室町1-9-1 日本橋室町ビル1F", distance: "駅前", m: 290, url: "https://c-united.co.jp/store/detail/000318/" },
       { chain: "veloce", name: "鍛冶町店", address: "東京都千代田区鍛冶町1-8-3 神田91ビル1F", distance: "徒歩圏", m: 450, url: "https://c-united.co.jp/store/detail/000339/" },
@@ -24187,7 +24201,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     farMore: {"starbucks": 2},
   },
   "oku": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "bamiyan", name: "バーミヤン 尾久店", address: "東京都北区昭和町3丁目8-3", distance: "徒歩圏", m: 430, url: "https://store-info.skylark.co.jp/map/172890/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mcdonalds", name: "明治通り尾久店", address: "東京都北区昭和町1-1-15", distance: "駅前", m: 260, url: "https://map.mcdonalds.co.jp/map/13830", fac: ["駐車場"] },
@@ -24195,7 +24209,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "shin-shibamata": {
-    verifiedAt: "2026-10-27",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "jonathan", name: "ジョナサン 柴又店", address: "東京都葛飾区柴又4丁目31-8", distance: "駅前", m: 220, url: "https://store-info.skylark.co.jp/map/020029/", fac: ["おむつ替え台", "車椅子入店可", "駐車場"] },
       { chain: "sukiya", name: "すき家 葛飾柴又店", address: "東京都葛飾区柴又5-9-1", distance: "駅前", m: 160, url: "https://maps.sukiya.jp/jp/detail/1125.html", fac: ["お子様メニュー", "駐車場"] },
@@ -24207,7 +24221,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
   },
 
   "osaka-ko": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocos", name: "ココス 天保山マーケットプレース店", address: "大阪府大阪市港区海岸通1-1-10 天保山マーケットプレース内", distance: "徒歩圏", m: 440, url: "https://maps.cocos-jpn.co.jp/jp/detail/2854.html", fac: ["お子様メニュー", "スロープ／エレベーター", "駐車場"] },
       { chain: "kfc", name: "天保山マーケットプレース店", address: "大阪府大阪市港区海岸通り1- 1-10", distance: "徒歩圏", m: 440, url: "https://search.kfc.co.jp/map/1070", fac: ["駐車場"] },
@@ -24218,7 +24232,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "banpaku-kinen-koen": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kfc", name: "ららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1", distance: "徒歩圏", m: 440, url: "https://search.kfc.co.jp/map/4304", fac: ["駐車場"] },
       { chain: "mcdonalds", name: "ららぽーとEXPOCITY店", address: "大阪府吹田市千里万博公園2-1", distance: "駅前", m: 180, url: "https://map.mcdonalds.co.jp/map/27814", fac: ["駐車場"] },
@@ -24234,7 +24248,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "trade-center-mae": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 大阪ATC店(から好し取扱店)", address: "大阪府大阪市住之江区南港北2丁目1番10号 ITM棟2階", distance: "駅前", m: 160, url: "https://store-info.skylark.co.jp/map/018946/", fac: [] },
       { chain: "mos-burger", name: "モスバーガー南港ATC店", address: "大阪府大阪市住之江区南港北2丁目1-10 ATC O’s北2階", distance: "駅前", m: 170, url: "https://www.mos.jp/shop/detail/?shop_cd=04804", fac: ["駐車場"] },
@@ -24242,7 +24256,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hirakata-koen": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "枚方パーク店", address: "大阪府枚方市枚方公園町1-1ひらかたパーク内", distance: "徒歩圏", m: 490, url: "https://map.mcdonalds.co.jp/map/27526", fac: ["駐車場"] },
       { chain: "mister-donut", name: "エル枚方 ショップ", address: "大阪府枚方市岡東町19-20", distance: "徒歩圏", m: 780, url: "https://md.mapion.co.jp/b/misterdonut/info/0895/", fac: [] },
@@ -24260,7 +24274,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "umekoji-kyotonishi": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "kushikatsu-tanaka", name: "串カツ田中 梅小路店", address: "京都府京都市下京区朱雀内畑町7-3", distance: "駅前", m: 90, url: "https://restaurant.kushi-tanaka.com/detail/0232/", fac: ["子供用イス", "座敷"] },
       { chain: "starbucks", name: "ビバスクエア京都 梅小路公園店", address: "京都府京都市下京区観喜寺町 梅小路公園内 JR梅小路京都西駅前", distance: "駅前", m: 120, url: "https://store.starbucks.co.jp/detail-1827/" },
@@ -24275,7 +24289,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "keage": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
     far: [
@@ -24283,24 +24297,24 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "takaragaike": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "gusto", name: "ガスト 京都宝ヶ池店(から好し取扱店)", address: "京都府京都市左京区岩倉南三宅町65", distance: "徒歩圏", m: 750, url: "https://store-info.skylark.co.jp/map/012675/", fac: ["おむつ替え台", "駐車場"] },
       { chain: "mcdonalds", name: "宝ヶ池店", address: "京都府京都市左京区岩倉南三宅町66", distance: "徒歩圏", m: 780, url: "https://map.mcdonalds.co.jp/map/26033", fac: ["駐車場"] },
     ],
   },
   "sonobe": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
   },
   "keisan-kagaku-center": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
     ],
   },
   "suma-kaihin-koen": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "mcdonalds", name: "2号線須磨店", address: "兵庫県神戸市須磨区鷹取町1-1-6", distance: "徒歩圏", m: 790, url: "https://map.mcdonalds.co.jp/map/28660", fac: ["駐車場"] },
       { chain: "starbucks", name: "須磨海浜公園店", address: "兵庫県神戸市須磨区須磨浦通1-1-3 須磨海浜公園 松の社ヴィレッジA棟1階", distance: "徒歩圏", m: 440, url: "https://store.starbucks.co.jp/detail-4256/" },
@@ -24308,7 +24322,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "osakajo-koen": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "cocoichi", name: "OBPツイン21店", address: "大阪府大阪市中央区城見二丁目1番61号 OBPツイン21 3階", distance: "徒歩圏", m: 540, url: "https://tenpo.ichibanya.co.jp/map/2631", fac: ["お子さまメニュー"] },
       { chain: "doutor", name: "ドトールコーヒーショップ 松下IMPビル店", address: "大阪府大阪市中央区 城見 1-3-7 松下IMPビル 1F", distance: "徒歩圏", m: 440, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=2012269" },
@@ -24346,7 +24360,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "kodomonokuni": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "doutor", name: "ドトールコーヒーショップ 三和子供の国店", address: "神奈川県横浜市青葉区 奈良 1-2-1", distance: "駅前", m: 170, url: "https://shop.doutor.co.jp/doutor/spot/detail?code=1010629" },
       { chain: "komeda", name: "こどもの国店", address: "神奈川県横浜市青葉区奈良町832", distance: "徒歩圏", m: 540, url: "https://www.komeda.co.jp/shop/detail.html?id=374", fac: ["お子様メニュー", "駐車場"] },
@@ -24356,7 +24370,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "hakkeijima": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "lotteria", name: "八景島シーサイドオアシスFS店", address: "神奈川県横浜市金沢区八景島E-1-1", distance: "徒歩圏", m: 600, url: "https://maps.zetteria.jp/shop/shop2412.html" },
       { chain: "yakiniku-king", name: "焼肉きんぐ 金沢八景店", address: "神奈川県横浜市金沢区柴町47-13", distance: "徒歩圏", m: 460, url: "https://www.yakiniku-king.jp/shop/2208/", fac: ["おむつ替えシート", "入り口スロープ"] },
@@ -24366,7 +24380,7 @@ export const STATION_VERIFIED_STORES: Record<string, StationVerifiedStores> = {
     ],
   },
   "katase-enoshima": {
-    verifiedAt: "2026-10-30",
+    verifiedAt: "2026-11-02",
     stores: [
       { chain: "denny-s", name: "デニーズ 江ノ島店", address: "神奈川県藤沢市片瀬海岸2-18-14", distance: "駅前", m: 200, url: "https://shop.dennys.jp/map/21836", fac: ["オムツ替えシート", "だれでもトイレ", "駐車場"] },
       { chain: "tully-coffee", name: "江ノ電江ノ島駅店", address: "神奈川県藤沢市 片瀬海岸1丁目8番41号", distance: "徒歩圏", m: 430, url: "https://shop.tullys.co.jp/detail/1000971" },

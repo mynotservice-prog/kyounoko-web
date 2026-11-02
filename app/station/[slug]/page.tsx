@@ -18,7 +18,6 @@ import {
 import {
   getStationWithChains,
   CHAIN_CATEGORY_LABEL,
-  STATION_CHAIN_DATA_UPDATED,
   type Chain,
   type ChainCategory,
 } from '@/lib/station-restaurants';
@@ -88,7 +87,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `${station.name}駅 子連れランチおすすめ｜ベビーカー・キッズメニュー店ガイド【${wardName}】`;
   const description =
     seoOverride?.description ??
-    `${station.name}駅周辺で子連れOKのファミレス・カフェ・チェーン店に加え、${isHotpepperStation(slug) ? 'ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : '雑誌やSNSで話題の個人店・人気店も厳選'}。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものだけを店ごとに掲載。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+    `${station.name}駅周辺で子連れOKのファミレス・カフェ・チェーン店${isHotpepperStation(slug) ? 'に加え、ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : 'を掲載'}。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものだけを店ごとに掲載。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
   // 2026-08-31: 全ページ監査で og:image 欠落 2,061本のうち 2,049本が /station/ だと判明した。
   // /station/ は3週で唯一プラス成長している面（+6.8%／週1,945クリック）なのに、
   // SNS・LINE共有とDiscoverで画像が出ない状態だった。spot/[slug] と同じ /api/og を配線する。
@@ -236,11 +235,9 @@ export default async function StationPage({ params }: Props) {
             <p className="stv3-lead">
               {override?.hero?.lead ?? (
                 <>
-                  {station.name}駅から徒歩5〜10分圏内にある、子連れOKのファミレス・カフェ・チェーン店に加え、
-                  {isHotpepperStation(slug) ? (
+                  {station.name}駅からおよそ800m以内で、公式の店舗検索で実在を確認したファミレス・カフェ・チェーン店をまとめています。
+                  {isHotpepperStation(slug) && (
                     <>ホットペッパーグルメで「お子様連れOK」と掲載されている<strong>駅近のお店</strong>もご紹介。</>
-                  ) : (
-                    <>雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。</>
                   )}
                   キッズメニュー・子ども用の椅子・個室などの設備は、各チェーンの公式店舗検索・公式サイトで確認できたものだけを店ごとに示しています。
                   {wardName}で子連れランチ場所に迷ったらまずココから。
@@ -254,7 +251,6 @@ export default async function StationPage({ params }: Props) {
               {indies.length > 0 && <span className="kk-chip">{isHotpepperStation(slug) ? '駅近の子連れOK店' : '個人店'}{indies.length}店</span>}
               {station.scale === 'terminal' && <span className="kk-chip">ターミナル駅</span>}
               {station.scale === 'major' && <span className="kk-chip">主要駅</span>}
-              {station.familyFriendly && <span className="kk-chip">ファミリー多め</span>}
             </div>
 
             <div className="stv3-lines">
@@ -304,12 +300,6 @@ export default async function StationPage({ params }: Props) {
                   </a>
                 </li>
               ))}
-              <li>
-                <a href="#section-budget">
-                  <span><strong>ランチ800円以内（チェーンの価格帯の目安）</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}チェーン</span>
-                  <KkIcon name="chevron-right" size={15} />
-                </a>
-              </li>
               {override?.tldrExtraItems?.map((extra) => (
                 <li key={extra.href}>
                   <a href={extra.href}>
@@ -392,10 +382,6 @@ export default async function StationPage({ params }: Props) {
               ...top(all.filter((p) => has(p, 'privateRoom')), 4),
               ...indiePrivate.map((r) => ({ key: r.name, name: r.name, meta: '個室あり（店の掲載）', needs: new Set<EvidenceNeed>(['privateRoom']) })),
             ].slice(0, 4);
-            const cheap: Pick[] = chains
-              .filter((c) => c.lunchPrice === '〜800')
-              .slice(0, 4)
-              .map((c) => ({ key: c.slug, name: c.name, meta: `${c.lunchPrice}円（目安）`, needs: new Set<EvidenceNeed>() }));
             const needText = (p: Pick) =>
               (['kidsMenu', 'babyChair', 'diaper', 'babyFood', 'nursing', 'privateRoom'] as EvidenceNeed[])
                 .filter((n) => p.needs.has(n))
@@ -409,7 +395,6 @@ export default async function StationPage({ params }: Props) {
             const scenes = [
               { id: 'first-baby', label: '赤ちゃん初めての外食', icon: 'baby' as const, desc: '公式に子ども用の椅子と、おむつ替え台か離乳食持ち込みの記載がある店', list: firstBaby },
               { id: 'treat', label: '誕生日・ご褒美ランチ', icon: 'popular' as const, desc: '個室・座敷がある店（公式の表示・個人店は店の掲載）', list: treat },
-              { id: 'cheap', label: 'サクッと800円以内', icon: 'yen' as const, desc: 'チェーンのランチ価格帯の目安（店舗・メニューで変わります）', list: cheap },
             ].filter((sc) => sc.list.length > 0);
             if (ages.length === 0 && scenes.length === 0) return null;
             return (
@@ -508,16 +493,11 @@ export default async function StationPage({ params }: Props) {
               {station.name}駅 子連れランチの使い方Tips
             </h2>
             <ul className="stv3-bullets">
-              <li><strong>{station.scale === 'terminal' ? 'ターミナル駅は' : station.scale === 'major' ? '主要駅は' : 'この駅は'}</strong>
-                {station.scale === 'terminal' ? '休日12時前後・平日18時以降が混雑のピーク。子連れなら開店直後（11時台）or 14時台が狙い目。' : station.scale === 'major' ? '平日昼下がり（14-16時）が空いていてベビーカーで動きやすい時間帯。' : '比較的空いていて、平日も週末もベビーカーで余裕を持って入れる店が多め。'}
-              </li>
               {station.lines.length >= 4 && (
                 <li><strong>路線が{station.lines.length}本</strong>通っているので、別エリアからの合流に便利。途中下車ランチのハブにも◎。</li>
               )}
-              <li><strong>事前予約</strong>: 個室・座敷ありの店は週末は2-3日前までに電話予約が無難。「子連れ」「ベビーカー」「ベビーチェア」を伝えると席を配慮してもらえます。</li>
-              <li><strong>離乳食持込</strong>: 上記でOKの店は事前一声かけがマナー。「持込OK」表記でも、混雑時間は遠慮するのが角が立たない使い方。</li>
-              {station.familyFriendly && <li><strong>{wardName}は</strong>もともとファミリー比率が高いエリア。日曜午前は特に子連れが多く、お互いさま感があって過ごしやすい。</li>}
-              <li><strong>ベビーカー動線</strong>: 駅から徒歩5分以内のチェーン店なら、駅構内のエレベーター→改札→歩道のエレベーター動線が確保されているケースが多い。事前にGoogle Mapsストリートビューで確認すると安心。</li>
+              <li><strong>事前の確認</strong>: 個室・座敷を使いたい日や離乳食を持ち込みたい日は、決まりが店ごとに違うので、行く前に店へ確かめると確実です。</li>
+              <li><strong>ベビーカー動線</strong>: エレベーターの位置は、鉄道会社の公式の駅構内図で確かめられます。店のベビーカー入店は公式に載っていないことが多いので、店へ確かめてください。</li>
             </ul>
           </section>
 
@@ -562,13 +542,6 @@ export default async function StationPage({ params }: Props) {
                 icon: 'babyfood' as const,
                 desc: 'チェーン公式に離乳食の持ち込みについての記載がある店（条件は各チェーンの公式案内をご確認ください）',
                 items: fromEvidence('babyFood'),
-              },
-              {
-                id: 'section-budget',
-                label: 'ランチ800円以内（目安）',
-                icon: 'yen' as const,
-                desc: 'チェーンのランチ価格帯の目安（店舗・メニューで変わります）',
-                items: chains.filter(c => c.lunchPrice === '〜800').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
               },
             ].filter(f => f.items.length > 0);
 
@@ -627,7 +600,6 @@ export default async function StationPage({ params }: Props) {
                   <article key={c.slug} className="station-chain-card stv3-shop">
                     <header className="stv3-shop-head">
                       <h3 className="stv3-h3">{c.name}</h3>
-                      <span className="stv3-shop-price">ランチ {c.lunchPrice}円</span>
                     </header>
                     <p className="stv3-shop-desc">
                       {c.description}
@@ -729,7 +701,7 @@ export default async function StationPage({ params }: Props) {
                   <small className="stv3-lead-note">
                     {isHotpepperStation(slug)
                       ? `※ ホットペッパーグルメの店舗掲載情報（${HOTPEPPER_GENERATED_AT}取得）。ベビーカーでの入店可否やキッズメニューは掲載がないため、店舗へ事前確認をおすすめします。`
-                      : '※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。'}
+                      : '※ 設備情報は公式情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。'}
                   </small>
                 </p>
               </header>
@@ -968,7 +940,7 @@ export default async function StationPage({ params }: Props) {
           <section className="stv3-about">
             <p className="stv3-about-lab">この情報について</p>
             <p>
-              掲載しているチェーン店の子連れ設備（ベビーカー・キッズメニュー・離乳食持ち込みなど）は、各チェーンの公式サイト・公式発表をもとに編集部がまとめたデータベースに基づいています（データ最終更新: {STATION_CHAIN_DATA_UPDATED}）。設備・メニューは店舗により異なる場合があります。駅周辺の店舗の有無・営業時間は変わることがあるため、来店前に各チェーンの公式店舗検索でご確認ください。
+              掲載しているチェーン店の店名・住所は、各チェーンの公式店舗検索で確認したものです{verifiedStores ? `（確認日 ${verifiedStores.verifiedAt}）` : ''}。キッズメニューなどの設備は、公式の店舗検索の表示と公式サイトの全店向けの記載があるものだけを示しています。ベビーカーでの入店可否は公式の根拠を持っていません。店舗の有無・営業時間は変わることがあるため、来店前に各チェーンの公式店舗検索でご確認ください。
             </p>
           </section>
 

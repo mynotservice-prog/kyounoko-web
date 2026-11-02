@@ -81,6 +81,31 @@ function bandOf(m: number | undefined, fallback?: VerifiedStore['distance']): Co
 type HpCondShop = { name: string; hpId: string; url?: string; address?: string; genre?: string; distanceM: number; evidence?: string };
 const HP_COND = (HOTPEPPER_COND as { stations: Record<string, Record<string, HpCondShop[]>> }).stations;
 
+const BABY_NOTE_WORDS = /椅子|イス|チェア|ベビーカー|おむつ|オムツ|離乳食|授乳|ベビーベッド|ベビーシート/;
+const KIDS_MENU_NOTE_WORDS = /お子様メニュー|お子さまメニュー|キッズメニュー|お子様ランチ|お子さまランチ|キッズプレート|お子様セット|キッズセット|子供メニュー/;
+const NOTE_NEGATIVE = /ござい?ません|御座いません|ありません|有りません|無(?!料)|なし|ない|不可|遠慮|お断り|できません|出来ません|NG|置き場所|座っ|すわれ|着席|折り?畳|折りたた|たたん|お預か|完了後/;
+const NOTE_POSITIVE = /可|OK|あり|有|ございます|用意|完備|歓迎|持ち?込/;
+
+/**
+ * 店のコメントが、その条件を肯定しているか。コメントは語の有無で拾っているので
+ * 「お子様メニューはございません」「ベビーカー入店不可」も入ってくる（2026-11-02 に baby/kids-menu で実測）。
+ * 文ごとに見て、条件の語を含み否定の語が無い文があれば肯定とする。否定の語がある文は
+ * 「ございませんが、離乳食の持ち込みOKです」のように読点で区切って、肯定の語がある部分を探す。
+ */
+function childNoteSupports(condition: string, note: string | undefined): boolean {
+  if (condition !== 'baby' && condition !== 'kids-menu') return true;
+  if (!note) return true;
+  const words = condition === 'baby' ? BABY_NOTE_WORDS : KIDS_MENU_NOTE_WORDS;
+  const body = note.replace(/^お子様連れ(?:OK|歓迎)\s*:/, '');
+  return body.split(/[。!！/／\n]/).some((sentence) => {
+    if (!words.test(sentence)) return false;
+    if (!NOTE_NEGATIVE.test(sentence)) return true;
+    return sentence
+      .split(/[、,，]|\s+/)
+      .some((c) => words.test(c) && NOTE_POSITIVE.test(c) && !NOTE_NEGATIVE.test(c));
+  });
+}
+
 const cache = new Map<string, ConditionStores | null>();
 
 /** 作り直しの対象（照合済みの駅×6条件）なら店の一覧。対象外は null（従来の判定・画面のまま） */
@@ -167,6 +192,7 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
     if (condition === 'private-room' && r.privateRoom) pushIndie({ ...r, genre: g }, '個室あり（店の掲載）');
   }
   for (const s of HP_COND[stationSlug]?.[condition] ?? []) {
+    if (!childNoteSupports(condition, s.evidence)) continue;
     pushIndie(s, s.evidence ? `店のコメント: ${s.evidence}` : condition === 'private-room' ? '個室あり（店の掲載）' : undefined);
   }
 

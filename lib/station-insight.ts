@@ -44,16 +44,8 @@ export function buildStationIntro(args: {
         ? `${lines.join('・')}が乗り入れ、`
         : `${lines.slice(0, 2).join('・')}など${lines.length}路線が乗り入れ、`;
 
-  let context: string;
-  if (familyFriendly === true) {
-    context = '公園やスーパー帰りにも立ち寄りやすい、子育て世帯になじみのあるエリアです';
-  } else if (familyFriendly === false) {
-    context = '繁華街・オフィス街が中心のため、子連れは入りやすい店をあらかじめ決めておくと安心です';
-  } else if (scale === 'minor') {
-    context = '落ち着いた雰囲気で、ベビーカーでもゆっくり過ごしやすいエリアです';
-  } else {
-    context = '人の行き来が多いので、ベビーカーなら混雑を避けた時間帯がおすすめです';
-  }
+  // エリアの雰囲気や混み具合の断定は手入力の属性で出典が無いので書かない（2026-11-02）
+  const context = '子連れで使える店を駅からの距離つきでまとめています';
 
   return `${stationName}駅は${wardPart}${scaleLabel}。${lineText}${context}。`;
 }
