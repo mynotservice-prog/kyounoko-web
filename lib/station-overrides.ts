@@ -194,7 +194,7 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       {
         href: '/article/nagoya-kodzure-lunch',
         label: '名古屋駅 子連れランチ完全ガイド',
-        value: 'タワーズ・ゲートタワー12〜13Fが本命、調乳用の熱湯はミッドランド4F',
+        value: 'タワーズ・ゲートタワー12〜13Fが本命、お湯はミッドランド4Fと大名古屋ビル',
       },
     ],
   },

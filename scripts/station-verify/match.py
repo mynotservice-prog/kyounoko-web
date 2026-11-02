@@ -187,11 +187,16 @@ def main():
     json.dump(review,open(os.path.join(B,'review_coord_mismatch.json'),'w'),ensure_ascii=False,indent=0)
     # 公式座標では800m以内でも、住所の位置で測ると圏外になる店（公式座標と住所が300m以上ずれる店を住所で裏取りした・2026-11-02）
     ADDR_OUT={('higashi-kanagawa','すき家 東白楽駅前店'),('kanayama','和幸イオンモール熱田店'),
-              ('yakuin','サンマルクカフェ 福岡天神地下街店'),('yakuin','天神地下街店')}
+              ('yakuin','サンマルクカフェ 福岡天神地下街店'),('yakuin','天神地下街店'),('yakuin','築地銀だこ キャナルシティ博多店')}
+    # 公式の店舗ページに、この駅から徒歩11分以上と書かれている店は「少し歩く」枠へ（直線800m以内でも）
+    WALK_FAR={('konandai','sushiro','港南台店')}
+    # 地域チェーン（55チェーンの外）は 2026-11 に足した駅にだけ載せる。既存の駅の掲載は動かさない
+    REGIONAL=set(l.strip() for l in open(os.path.join(B,'chains-regional.txt')) if l.strip())
+    CITY=set(l.strip() for l in open(os.path.join(B,'list-city-2026-11.txt')) if l.strip())
     for st in stations:
         la,lo=st['lat'],st['lng'];res=[]
         for s in stores:
-            if not s['_pos']: continue
+            if not s['_pos'] or (s['chain'] in REGIONAL and st['slug'] not in CITY): continue
             pa,po=s['_pos']
             if abs(la-pa)>0.012 or abs(lo-po)>0.015: continue
             d=dist(la,lo,pa,po)
@@ -199,7 +204,7 @@ def main():
             a=s['_addr']; src=s['_src']
             txt=(s.get('name') or '')+' '+(s.get('note') or '')+' '+(s.get('address') or '')
             res.append({'chain':s['chain'],'name':clean_store_name(s['name']) or s['name'],'rawname':s['name'],'address':a,'show':s['_show'],'precise':s['_precise'],'m':int(d),'src':src,'url':s.get('url'),'note':s.get('note') or '',
-                        'excluded':bool(excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY)),'why':excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY),'border':d>800,'uncertain':(not s['_precise']) and 500<d<=1000,'mis':s.get('_mis')})
+                        'excluded':bool(excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY)),'why':excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY),'border':d>800 or (st['slug'],s['chain'],clean_store_name(s['name'])) in WALK_FAR,'uncertain':(not s['_precise']) and 500<d<=1000,'mis':s.get('_mis')})
         out[st['slug']]=sorted(res,key=lambda x:(x['chain'],x['m']))
     save_geo()
     json.dump(out,open(os.path.join(B,'matched.json'),'w'),ensure_ascii=False,indent=0)

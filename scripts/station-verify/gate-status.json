@@ -455,24 +455,24 @@
   "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-makuharihongo.php"
  },
  "doutor|ドトールコーヒーショップ 名古屋太閤通り店": {
-  "gate": "unknown",
-  "evidence": "ドトール公式は「ＪＲ名古屋駅構内」のみ",
-  "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=2011367"
+  "gate": "outside",
+  "evidence": "NSK公式のフロアガイドで太閤通南口改札の外側の通路に面する。店の紹介に「改札口すぐ」",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000346"
  },
  "doutor|ドトールコーヒーショップ 名古屋タワーズ通り店": {
   "gate": "unknown",
-  "evidence": "ドトール公式は「ＪＲ名古屋駅構内」のみ",
-  "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=2011518"
+  "evidence": "NSK公式の図で桜通口改札の西の通路に接するが、入口の向きが読めない",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000349"
  },
  "mcdonalds|ＪＲ名古屋駅店": {
-  "gate": "unknown",
-  "evidence": "マクドナルド公式は「名古屋駅構内名古屋うまいもん通り」のみ",
-  "source": "https://map.mcdonalds.co.jp/map/23773"
+  "gate": "outside",
+  "evidence": "NSK公式のフロアガイドで太閤通南口改札の外側のロビーに面する",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000183"
  },
  "starbucks|スターバックス ティー＆カフェ JR名古屋駅 中央コンコース店": {
-  "gate": "unknown",
-  "evidence": "スターバックス公式は「JR名古屋駅 中央コンコース内」のみ",
-  "source": "https://store.starbucks.co.jp/detail-2333/"
+  "gate": "outside",
+  "evidence": "公式の住所は中央コンコース内。JR東海の構内図で中央コンコースは改札の外",
+  "source": "https://railway.jr-central.co.jp/station-guide/shinkansen/nagoya/map.html"
  },
  "starbucks|JR名古屋駅 広小路口店": {
   "gate": "unknown",
@@ -495,8 +495,8 @@
   "source": "https://store.starbucks.co.jp/detail-2288/"
  },
  "doutor|ドトールコーヒーショップ 天神駅店": {
-  "gate": "unknown",
-  "evidence": "ドトール公式は「天神駅構内 Ｂ１Ｆ」のみ。福岡市交通局の令和6年2月22日の発表に「天神駅東口改札から出て」とあるが同じ店かを確定できない",
+  "gate": "outside",
+  "evidence": "福岡市交通局の令和6年2月22日の発表「天神駅東口改札から出て、天神地下街側にあるカフェ」。公式の住所は天神駅構内B1F",
   "source": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2023/documents/subwayshopopen0222.pdf"
  }
 }

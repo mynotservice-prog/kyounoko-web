@@ -93,6 +93,8 @@ export type Chain = {
    * キッズメニューは lib/chain-facilities.ts に公式の根拠があるときだけ書き、一部店舗なら「店舗による」と書く（2026-10-28）。
    */
   description: string;
+  /** 地域チェーン（2026-11 に足した駅の台帳にだけ載る）。/data の集計には数えない */
+  regional?: boolean;
 };
 
 /**
@@ -103,7 +105,7 @@ export type Chain = {
  */
 export const STATION_CHAIN_DATA_UPDATED = '2026-09-01';
 
-export const CHAINS: Chain[] = [
+const BASE_CHAINS: Chain[] = [
   // ===== ファミレス系 =====
   {
     slug: 'saizeriya',
@@ -988,6 +990,68 @@ export const CHAINS: Chain[] = [
     description: 'とんかつ専門店。御飯・味噌汁・キャベツはお替り自由（実施しない店舗あり）。',
   },
 ];
+
+/**
+ * 地域チェーン。2026-11 に足した駅（実験31）の台帳にだけ載る。既存の駅には載らない。
+ * 設備の項目は false のまま。店ごとの設備は台帳の fac、ブランドの設備は lib/chain-facilities.ts が正で、
+ * ここの値は画面に出ない。説明文は各社の公式の文面の範囲で書く。
+ */
+function regionalChain(slug: string, name: string, category: ChainCategory, description: string): Chain {
+  return {
+    slug, name, category, description,
+    stroller: 'limited', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: false,
+    lunchPrice: '〜1,500', ubiquity: 'specific', regional: true,
+  };
+}
+
+export const REGIONAL_CHAINS: Chain[] = [
+  regionalChain('rikyu', '牛たん炭焼 利久', 'washoku', '炭火で焼く牛たんの店。'),
+  regionalChain('west-udon', 'ウエスト', 'noodles', 'うどんと生そばの店。福岡を中心に展開する。'),
+  regionalChain('coffeekan', '珈琲館', 'cafe', '喫茶店。'),
+  regionalChain('ichiran', '一蘭', 'noodles', '天然とんこつラーメンの店。'),
+  regionalChain('ippudo', '一風堂', 'noodles', 'ラーメン店。'),
+  regionalChain('kisuke', '味の牛たん喜助', 'washoku', '1975年創業。炭火焼きの牛たん定食の店。'),
+  regionalChain('yabaton', '矢場とん', 'washoku', '名古屋名物みそかつの店。'),
+  regionalChain('yamamotoya-honten', '山本屋本店', 'noodles', '名古屋の煮込うどんの店。'),
+  regionalChain('wendys-first-kitchen', 'ウェンディーズ・ファーストキッチン', 'fast-food', 'ハンバーガーの店。'),
+  regionalChain('konparu', 'コンパル', 'cafe', '名古屋の喫茶店。'),
+  regionalChain('ikkousha', '博多一幸舎', 'noodles', '豚骨ラーメンの店。'),
+  regionalChain('gindaco', '築地銀だこ', 'fast-food', 'たこ焼の店。'),
+  regionalChain('capricciosa', 'カプリチョーザ', 'italian', 'イタリアンのレストラン。「トマトとニンニクのスパゲティ」がある。'),
+  regionalChain('ikinari-steak', 'いきなり！ステーキ', 'yakiniku', 'ステーキの店。'),
+  regionalChain('kourakuen', '幸楽苑', 'noodles', 'ラーメンと餃子の店。'),
+  regionalChain('ueshimacoffee', '上島珈琲店', 'cafe', 'ネルドリップコーヒーと、デザートや食事のあるカフェ。'),
+  regionalChain('sugakiya', 'スガキヤ', 'noodles', 'ラーメンとソフトクリームの店。'),
+  regionalChain('tenkaippin', '天下一品', 'noodles', 'ラーメン店。'),
+  regionalChain('pietro', 'ピエトロ', 'italian', 'パスタの店。'),
+  regionalChain('date-gyutan', '伊達の牛たん本舗', 'washoku', '仙台の牛たん専門店。'),
+  regionalChain('jolly-pasta', 'ジョリーパスタ', 'italian', 'スパゲッティとピザが自慢のパスタ専門店。'),
+  regionalChain('choushimaru', 'すし銚子丸', 'sushi', 'グルメ回転寿司の店。デザートや一品料理、お持ち帰りもある。'),
+  regionalChain('gyoza-no-mansyu', 'ぎょうざの満洲', 'chinese', '餃子の店。'),
+  regionalChain('maruha-shokudo', 'まるは食堂', 'washoku', 'ジャンボえびフライの南知多発の店。'),
+  regionalChain('yamamotoya-sohonke', '山本屋総本家', 'noodles', '名古屋名物の味噌煮込みうどんの店。'),
+  regionalChain('katsuan', 'かつ庵', 'washoku', 'とんかつ専門店。とんかつ、かつ丼、季節限定商品がある。'),
+  regionalChain('steak-no-don', 'ステーキのどん', 'yakiniku', 'ステーキの店。'),
+  regionalChain('steakmiya', 'ステーキ宮', 'yakiniku', '「宮のたれ」のステーキと、和牛入り手作りハンバーグの店。'),
+  regionalChain('kisoji', '木曽路', 'washoku', 'しゃぶしゃぶと日本料理の店。'),
+  regionalChain('misen', '味仙', 'chinese', '元祖名古屋名物の台湾ラーメンの店。'),
+  regionalChain('joyfull', 'ジョイフル', 'family-restaurant', '九州発のファミリーレストラン。'),
+  regionalChain('heiroku-sushi', '平禄寿司', 'sushi', '回転寿司の店。'),
+  regionalChain('ajinomingei', '味の民芸', 'washoku', '手延べうどんと黄金だしのうどん、蕎麦、お膳の店。'),
+  regionalChain('yumean', '夢庵', 'washoku', '和膳、天ぷら、そば・うどんのある和食レストラン。'),
+  regionalChain('washokusato', '和食さと', 'washoku', '和食レストラン。'),
+  regionalChain('karayama', 'からやま', 'fast-food', 'からあげ専門店。店内飲食とお持ち帰りのメニューがある。'),
+  regionalChain('kairikiya', 'ラーメン魁力屋', 'noodles', 'ラーメン店。'),
+  regionalChain('steak-gusto', 'ステーキガスト', 'yakiniku', 'ステーキとハンバーグの店。'),
+  regionalChain('yuzuan', 'ゆず庵', 'washoku', '寿司・しゃぶしゃぶの食べ放題の店。'),
+  regionalChain('popolamama', 'ポポラマーマ', 'italian', 'ゆであげ生パスタの店。'),
+  regionalChain('aiya', '藍屋', 'washoku', 'そば・うどん、定食、丼のある和食レストラン。'),
+  regionalChain('makino-udon', '牧のうどん', 'noodles', '福岡・佐賀・長崎中心の釜揚げうどんの店。'),
+];
+
+export const CHAINS: Chain[] = [...BASE_CHAINS, ...REGIONAL_CHAINS];
+
+
 
 /**
  * チェーンslug→Chainオブジェクト の高速検索Map。

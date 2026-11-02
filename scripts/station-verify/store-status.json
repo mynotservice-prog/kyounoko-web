@@ -31,5 +31,126 @@
     "evidence": "改装工事のため、2026年11月12日（木）から11月26日（木）は、一時閉店いたします。",
     "source": "https://locations.royalhost.jp/detail/114006/",
     "reopen": "2026-11-27"
+  },
+  "royal-host|ロイヤルホスト音羽店": {
+    "why": "改装で一時閉店 10/26〜12/23",
+    "evidence": "改装工事のため、2026年10月26日（月）から12月23日（水）は、一時閉店いたします。",
+    "source": "https://locations.royalhost.jp/detail/107603/",
+    "reopen": "2026-12-24"
+  },
+  "marugame|丸亀製麺ThinkPark": {
+    "why": "改装で臨時休業 9/1〜11/11",
+    "evidence": "※9月1日から11月11日まで店舗改装のため臨時休業いたします。",
+    "source": "https://stores.marugame.com/110212",
+    "reopen": "2026-11-12"
+  },
+  "marugame|丸亀製麺柏駅南口": {
+    "why": "改装で臨時休業 10/13〜12/10",
+    "evidence": "※10月13日から12月10日まで店舗改装のため臨時休業いたします。",
+    "source": "https://stores.marugame.com/110497",
+    "reopen": "2026-12-11"
+  },
+  "ootoya|大戸屋ごはん処 小田急町田東口店": {
+    "why": "改装で休業 11/1〜11/27",
+    "evidence": "※店舗改装のため、11月1日(日)から11月27日(金)まで休業いたします。",
+    "source": "https://store.ootoya.com/detail/27264/",
+    "reopen": "2026-11-28"
+  },
+  "yoshinoya|吉野家 関内店": {
+    "why": "改装で休業 12/9まで",
+    "evidence": "改装のため、12月9日まで休業いたします。12月10日(木)10:00にリニュアルオープンします",
+    "source": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_047489",
+    "reopen": "2026-12-10"
+  },
+  "yoshinoya|吉野家 吉祥寺北店": {
+    "why": "改装で休業 10/29〜12/18",
+    "evidence": "改装のため、10月29日(木)20:00～12月18日(金)10:00は休業いたします。",
+    "source": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_041442",
+    "reopen": "2026-12-18"
+  },
+  "yoshinoya|吉野家 三鷹駅南口店": {
+    "why": "改装で休業 10/21〜12/9",
+    "evidence": "改装のため、10月21日(水)15:00～12月9日(水)10:00は休業いたします。",
+    "source": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_061376",
+    "reopen": "2026-12-09"
+  },
+  "kfc|成増店": {
+    "why": "改装で休業 10/26〜11/10",
+    "evidence": "2026年10月26日(月)から11月10日(火)まで店舗改装のため休業致します。",
+    "source": "https://search.kfc.co.jp/map/3444",
+    "reopen": "2026-11-11"
+  },
+  "tully-coffee|ルクア イーレ 5F店": {
+    "why": "改装休業 11/1〜11/18",
+    "evidence": "※11月1日～11月18日の期間中、改装休業致します。",
+    "source": "https://shop.tullys.co.jp/detail/1533052",
+    "reopen": "2026-11-19"
+  },
+  "tonkatsu-wako|和幸イクスピアリ舞浜店": {
+    "why": "改装工事で休業",
+    "evidence": "2026年9月1日から改装工事のため休業しております。",
+    "source": "https://wako-group.co.jp/shop/detai/shop_2109/"
+  },
+  "tenya|錦糸町テルミナ2店": {
+    "why": "改装で休業 11/2〜11/28",
+    "evidence": "店舗改装の為2026年11月2日（月）～11月28日（土）は休業とさせていただきます。",
+    "source": "https://www.tenya.co.jp/shop/tokyo/sumida/termina2.html",
+    "reopen": "2026-11-29"
+  },
+  "matsuya|松屋 神楽坂店": {
+    "why": "一時閉店 11/27まで",
+    "evidence": "11月27日15時オープン",
+    "source": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000128",
+    "reopen": "2026-11-27"
+  },
+  "matsuya|松屋 下北沢店": {
+    "why": "一時閉店 11/16まで",
+    "evidence": "11月16日15時オープン",
+    "source": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000000035",
+    "reopen": "2026-11-16"
+  },
+  "nakau|なか卯 池袋サンシャイン前店": {
+    "why": "改装で一時閉店 10/28〜11/13",
+    "evidence": "※2026年10月28日(水)9:00～11月13日(金)10:00まで、改装工事のため一時閉店いたします。",
+    "source": "https://maps.nakau.co.jp/jp/detail/2522.html",
+    "reopen": "2026-11-13"
+  },
+  "nakau|なか卯 河原町三条店": {
+    "why": "改装で一時閉店 10/20〜11/9",
+    "evidence": "※2026年10月20日(火)9:00～11月9日(月)10:00まで、改装工事のため一時閉店いたします。",
+    "source": "https://maps.nakau.co.jp/jp/detail/2307.html",
+    "reopen": "2026-11-09"
+  },
+  "doutor|ドトールコーヒーショップ 光が丘店": {
+    "why": "休業 9/27〜11/28",
+    "evidence": "2026年09月27日から2026年11月28日まで休業しております。",
+    "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=1010978",
+    "reopen": "2026-11-29"
+  },
+  "doutor|ドトールコーヒーショップ 川崎アゼリア店": {
+    "why": "休業 10/13〜12/10",
+    "evidence": "2026年10月13日から2026年12月10日まで休業しております。",
+    "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011793",
+    "reopen": "2026-12-11"
+  },
+  "kushikatsu-tanaka|串カツ田中 渋谷宮益坂店": {
+    "why": "公式の店舗ページがHTTP 404",
+    "evidence": "2026-11-02 に2回取得して404。全国一覧には載っているので閉店か移転かは未確定",
+    "source": "https://restaurant.kushi-tanaka.com/detail/0021/"
+  },
+  "royal-host|ロイヤルホスト善福寺店": {
+    "why": "公式の店舗ページがHTTP 404",
+    "evidence": "2026-11-02 に2回取得して404。全国一覧には載っているので閉店か移転かは未確定",
+    "source": "https://locations.royalhost.jp/detail/106101/"
+  },
+  "starbucks|GINZA SIX店": {
+    "why": "公式の店舗ページがHTTP 404",
+    "evidence": "2026-11-02 に2回取得して404。全国一覧には載っているので閉店か移転かは未確定",
+    "source": "https://store.starbucks.co.jp/detail-1374/"
+  },
+  "kairikiya|京都北白川ラーメン魁力屋 川崎新城店": {
+    "why": "公式の店舗ページがHTTP 404",
+    "evidence": "2026-11-02 に取得して404",
+    "source": "https://shop.kairikiya.co.jp/25"
   }
 }

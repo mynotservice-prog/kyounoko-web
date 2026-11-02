@@ -287,7 +287,7 @@ export function getDataSummary(): DataSummary {
   return {
     stationCount: TOKYO_STATIONS.length,
     wardCount: Object.keys(WARD_NAMES).length,
-    chainBrandCount: CHAINS.length,
+    chainBrandCount: CHAINS.filter((c) => !c.regional).length,
     chainRecordCount,
     indieCount,
     lineCount: TOKYO_LINES.length,
