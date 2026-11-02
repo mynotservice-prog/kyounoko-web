@@ -121,8 +121,6 @@ lede: >-
 | ロイヤルホスト 銀座インズ店 | 中央区銀座西2-2 銀座インズ2 | 9:30〜23:00（11/12は臨時休業） | ベビーシート、キッズメニュー、スロープ |
 | サイゼリヤ 銀座インズ店 | 中央区銀座西3-1 銀座インズ2F | 10:00〜23:00 | 座席とキッズメニューの欄なし |
 
-有楽町側の施設は[有楽町 子連れランチ](/article/yurakucho-kodzure-lunch)にまとめています。
-
 > 出典：[大戸屋 フレッサイン新橋店](https://store.ootoya.com/detail/27371/)／[ロイヤルホスト 銀座インズ店](https://locations.royalhost.jp/detail/199598/)／[サイゼリヤ 銀座インズ店](https://shop.saizeriya.co.jp/sz_restaurant/spot/detail?code=1043)
 
 ## カレッタ汐留は公式の復旧後に確認
@@ -153,7 +151,6 @@ lede: >-
 
 ## 関連記事
 
-- [有楽町 子連れランチ](/article/yurakucho-kodzure-lunch)
 - [銀座の子連れランチ](/article/tokyo-ginza-kodzure-lunch)
 - [個室で子連れランチ](/article/koshitsu-kodzure-lunch)
 
