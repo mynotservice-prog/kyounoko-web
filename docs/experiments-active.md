@@ -891,7 +891,7 @@ PR #412 とその追加修正（全589駅の台帳更新、対応表の廃止、
 - 処置A 首都圏20駅: 横浜市 `tsurumi` `kamiooka` `totsuka` `higashi-totsuka` `aobadai` `futamatagawa` `higashi-kanagawa` `konandai` `kamoi`／川崎市 `musashi-nakahara` `motosumiyoshi` `musashi-shinjo`／さいたま市 `saitama-shintoshin` `minami-urawa` `higashi-omiya` `yono`／千葉市 `soga` `inagekaigan` `nishi-chiba` `makuhari-hongo`
 - 処置B 地方11駅: 名古屋市 `nagoya` `sakae` `kanayama` `chikusa`／福岡市 `hakata` `tenjin` `yakuin` `nishijin`／仙台市 `sendai` `nagamachi` `izumi-chuo`
 - 処置C 記事3本: `nagoya-kodzure-lunch` `hakata-kodzure-lunch` `sendai-kodzure-lunch`（駅ページの `tldrExtraItems` から導線。11/02 に Yahoo の「<駅>駅 子連れ ランチ」で3語ともAI回答なしを確認）
-- 選定: 登録済みの駅と同じ場所を指す駅は外す（京急川崎・千葉中央など）。残りを、乗降人員（JR東日本・東急・京急・相鉄の2024年度）、公式で確認できた店舗数、周辺の建物数で見た。地方は店舗数と自社で扱える商業施設の多い順に都市の中心と郊外の両方を入れた
+- 選定: 登録済みの駅と同じ場所を指す駅は外す（京急川崎・千葉中央など）。残りを、乗降人員（JR東日本・東急・京急・相鉄の2024年度）、公式で確認できた店舗数、周辺の建物数で見た。地方は公式で確認できた店舗数を見て、都市の中心と郊外の両方を入れた
 - **起点: 各駅の駅トップが検索に初めて出た週（GSC final）。公開日からではない**
 - **判定日: 各駅の起点から5〜8週目の4週間。最後の駅の窓が閉じた翌週にまとめて判定**
 - **合格線（事前固定・駅ページ）**: 処置A・Bそれぞれで、駅ごとの5〜8週目のクリック合計（トップのみ）の中央値が、同じ暦週の神奈川の既存37駅の中央値の**0.5倍以上**。0.5倍は、公開から日の浅い駅と数か月経った駅を比べるための割り引きで、実測で出した値ではない。条件ページはないので、物差しの神奈川もトップのみで数える
