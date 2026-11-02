@@ -1041,7 +1041,6 @@ export const REGIONAL_CHAINS: Chain[] = [
   regionalChain('yumean', '夢庵', 'washoku', '和膳、天ぷら、そば・うどんのある和食レストラン。'),
   regionalChain('washokusato', '和食さと', 'washoku', '和食レストラン。'),
   regionalChain('karayama', 'からやま', 'fast-food', 'からあげ専門店。店内飲食とお持ち帰りのメニューがある。'),
-  regionalChain('kairikiya', 'ラーメン魁力屋', 'noodles', 'ラーメン店。'),
   regionalChain('steak-gusto', 'ステーキガスト', 'yakiniku', 'ステーキとハンバーグの店。'),
   regionalChain('yuzuan', 'ゆず庵', 'washoku', '寿司・しゃぶしゃぶの食べ放題の店。'),
   regionalChain('popolamama', 'ポポラマーマ', 'italian', 'ゆであげ生パスタの店。'),
