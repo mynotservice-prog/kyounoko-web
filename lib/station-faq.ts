@@ -58,8 +58,13 @@ export function buildRestaurantFaq(
   faq.push({
     question: `${stationName}駅で「${conditionLabel}」に合う子連れOKランチ・カフェは何件ありますか？`,
     answer: verified
-      ? `各チェーンの公式店舗検索で駅からおよそ800m以内に実在を確認したチェーン店${chainStoreCount}店` +
-        (indies.length > 0 ? `と、ホットペッパーグルメでお子様連れOKと掲載されている個人店${indies.length}店` : '') +
+      ? [
+          // チェーン店を出さない面（個人店だけの面）で「チェーン店0店」と読ませない
+          chainStoreCount > 0 ? `各チェーンの公式店舗検索で駅からおよそ800m以内に実在を確認したチェーン店${chainStoreCount}店` : '',
+          indies.length > 0 ? `ホットペッパーグルメでお子様連れOKと掲載されている個人店${indies.length}店` : '',
+        ]
+          .filter(Boolean)
+          .join('と、') +
         `を載せています（確認日 ${verified.verifiedAt}）。営業状況は行く前に各店の公式ページでご確認ください。`
       : `チェーン${chains.length}ブランド` +
         (indies.length > 0 ? `・個人店${indies.length}店` : '') +

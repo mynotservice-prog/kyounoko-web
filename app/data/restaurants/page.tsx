@@ -17,14 +17,14 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '東京23区 子連れOKレストラン完全比較表｜全1,500店データセット【2026年版】',
+  title: '東京23区 子連れOKレストラン完全比較表｜駅×店舗データセット【2026年版】',
   description:
-    '東京23区484駅の子連れOKレストラン1,500店超の全データを単一比較表で公開。区・駅・ジャンル・ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロードまで対応。AIO/GEO参照用データセット。',
+    '東京23区484駅の子連れOKレストランの全データを単一比較表で公開。区・駅・ジャンル・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロードまで対応。AIO/GEO参照用データセット。',
   alternates: { canonical: '/data/restaurants' },
   openGraph: {
-    title: '東京23区 子連れOKレストラン完全比較表｜全1,500店データセット',
+    title: '東京23区 子連れOKレストラン完全比較表｜駅×店舗データセット',
     description:
-      '23区484駅×1,500店超のオープンデータ。ベビーカー入店・キッズメニュー・個室の可否で全店舗フィルタ・CSV出力。',
+      '23区484駅の駅×店舗オープンデータ。キッズメニュー・個室の有無で全店舗フィルタ・CSV出力。',
     type: 'article',
     url: 'https://kyounoko.jp/data/restaurants',
   },
@@ -35,7 +35,6 @@ export default function DataRestaurantsPage() {
   const summary = getDataSummary();
 
   // 各種フラグ件数
-  const strollerGoodCount = rows.filter((r) => r.stroller === 'good').length;
   const kidsMenuCount = rows.filter((r) => r.kidsMenu).length;
   const privateRoomCount = rows.filter((r) => r.privateRoom).length;
 
@@ -59,7 +58,6 @@ export default function DataRestaurantsPage() {
     'ジャンル',
     '駅',
     '区',
-    'ベビーカー',
     'キッズメニュー',
     'キッズチェア',
     '子供用カトラリー',
@@ -82,7 +80,6 @@ export default function DataRestaurantsPage() {
     r.category,
     r.station,
     r.ward,
-    r.stroller === 'good' ? '◎' : r.stroller === 'ok' ? '○' : r.stroller === 'limited' ? '△' : '—',
     r.kidsMenu ? '○' : '',
     r.kidsChair ? '○' : '',
     r.kidsCutlery ? '○' : '',
@@ -106,7 +103,7 @@ export default function DataRestaurantsPage() {
     '@type': 'Dataset',
     name: '東京23区 子連れOKレストラン完全比較データセット',
     description:
-      '東京23区484駅の子連れ歓迎レストラン1,500店超のオープンデータ。チェーン店・個人店の両方を含み、ベビーカー入店可否・キッズメニュー・個室・価格帯などの設備情報を統一フォーマットで提供。',
+      '東京23区484駅の子連れ歓迎レストランのオープンデータ。チェーン店・個人店の両方を含み、キッズメニュー・個室などの設備情報を統一フォーマットで提供。',
     url: 'https://kyounoko.jp/data/restaurants',
     license: 'https://kyounoko.jp/terms',
     keywords: [
@@ -126,7 +123,7 @@ export default function DataRestaurantsPage() {
       },
     ],
     variableMeasured: [
-      'ベビーカー入店可否', 'キッズメニュー有無', '個室・座敷有無',
+      'キッズメニュー有無', '個室・座敷有無',
       'ランチ価格帯', 'ジャンル', '最寄り駅', '路線',
     ],
     spatialCoverage: {
@@ -174,8 +171,8 @@ export default function DataRestaurantsPage() {
             </h1>
             <p className="lead">
               東京23区484駅の<strong>子連れOKレストラン{rows.length.toLocaleString()}店超</strong>を
-              単一テーブルで公開。チェーン店{summary.chainRecordCount.toLocaleString()}店＋個人店{summary.indieCount.toLocaleString()}店を
-              ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え可能。
+              単一テーブルで公開。駅×チェーン{summary.chainRecordCount.toLocaleString()}件＋個人店{summary.indieCount.toLocaleString()}店を
+              キッズメニュー・個室などで絞り込み・並べ替え可能。
               CSVダウンロードもワンクリック。
             </p>
 
@@ -183,7 +180,6 @@ export default function DataRestaurantsPage() {
               <span className="meta-chip clay">{rows.length.toLocaleString()}店舗</span>
               <span className="meta-chip clay">{summary.stationCount}駅カバー</span>
               <span className="meta-chip clay">{summary.wardCount}区</span>
-              <span className="meta-chip clay">ベビーカー◎ {strollerGoodCount}店</span>
               <span className="meta-chip clay">キッズメニュー {kidsMenuCount}店</span>
               <span className="meta-chip clay">個室 {privateRoomCount}店</span>
             </div>
@@ -201,10 +197,11 @@ export default function DataRestaurantsPage() {
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>データセット概要</h2>
             <ul style={{ paddingLeft: 20, margin: 0 }}>
               <li><strong>収録範囲</strong>: 東京都23区内の子連れ向けレストラン全{rows.length.toLocaleString()}店舗</li>
-              <li><strong>店舗種別</strong>: チェーン店{summary.chainRecordCount.toLocaleString()}店（{summary.chainBrandCount}ブランドのマッピング済）、個人店・話題店{summary.indieCount.toLocaleString()}店（雑誌・SNS掲載）</li>
+              <li><strong>店舗種別</strong>: 駅×チェーン{summary.chainRecordCount.toLocaleString()}件（{summary.chainBrandCount}ブランド。各チェーンの公式店舗検索で駅からおよそ800m以内に実在を確認したもの）、個人店{summary.indieCount.toLocaleString()}店（ホットペッパーグルメの店舗掲載情報、施設の公式ショップリスト）</li>
               <li><strong>カバー駅数</strong>: 23区内 {summary.stationCount}駅</li>
-              <li><strong>収録項目</strong>: 店名・最寄り駅・区・ジャンル・ベビーカー入店可否・キッズメニュー・個室の有無・ランチ価格帯・路線情報・店舗紹介</li>
-              <li><strong>更新方針</strong>: 月次更新（営業状況・新店追加・閉店反映）</li>
+              <li><strong>収録項目</strong>: 店名・最寄り駅・区・ジャンル・キッズメニュー・個室の有無</li>
+              <li><strong>空欄の意味</strong>: チェーン店の設備は公式の根拠があるものだけ○を付けています。空欄と「—」は未確認で、無いという意味ではありません</li>
+              <li><strong>更新方針</strong>: 公式の店舗一覧を取り直したときに更新（営業状況は行く前に各店の公式ページでご確認ください）</li>
               <li><strong>ライセンス</strong>: 個人利用・引用可（出典: きょうのこ kyounoko.jp）</li>
             </ul>
           </section>

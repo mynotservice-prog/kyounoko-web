@@ -169,7 +169,7 @@ ${categoryLines}
 ## Open Datasets (AI Citation Friendly)
 
 - [東京23区 子連れOKレストラン完全比較表](https://kyounoko.jp/data/restaurants): ${n(ds.stationCount)}駅×${n(tokyoRows.length)}レコード（チェーン${n(tokyoChainRows)}件＋駅近の子連れOK店${n(tokyoIndieRows)}店）をフィルタ・並び替え・CSV対応の単一テーブル。Schema.org Dataset
-- [東京23区 子連れ環境分布データ](https://kyounoko.jp/data/wards): ${n(ds.wardCount)}区を駅数・店舗数・ベビーカー◎率・個室率・キッズメニュー率等の指標で比較。CSV出力可
+- [東京23区 子連れ環境分布データ](https://kyounoko.jp/data/wards): ${n(ds.wardCount)}区を駅数・店舗数・個室率・キッズメニュー率等の指標で比較。CSV出力可
 
 ## Interactive Tools (引用OK)
 

@@ -77,10 +77,20 @@ def long_closed(txt,today):
         except ValueError: continue
         if da<=today+datetime.timedelta(days=3) and db>=today+datetime.timedelta(days=7): return True
     return False
+def strip_opened(txt,today):
+    """開店日が基準日以前（半年以内）の「11/2(月)グランドオープン!」「10月9日オープン」を消す。先の日付は残す。"""
+    import datetime
+    def rep(m):
+        y=int(m.group('y') or today.year); mo=int(m.group('mo')); d=int(m.group('d'))
+        try: dt=datetime.date(y,mo,d)
+        except ValueError: return m.group(0)
+        return '' if 0<=(today-dt).days<=183 else m.group(0)
+    return re.sub(r'(?:(?P<y>\d{4})[/年])?(?P<mo>\d{1,2})[/月](?P<d>\d{1,2})日?(?:\(.\))?\s*(?:グランド)?(?:オープン|OPEN|開店)[!]?',rep,txt)
 def excluded_reason(chain,name,note,addr,today):
     txt=(name or '')+' '+(note or '')+' '+(addr or '')
     # ミスタードーナツの「10月28日は休店中」は取得した日だけの表示（短い休業）なので外す理由にしない（2026-10-28）
-    if EXCL.search(re.sub(r'\d{1,2}月\d{1,2}日は休店中','',txt)): return '業態・営業状態'
+    # デニーズの「11月12日は15:00から17:00の間閉店」も同じ。開店日が基準日までに来た「2026/10/9オープン」は営業中（2026-11-02）
+    if EXCL.search(strip_opened(re.sub(r'\d{1,2}月\d{1,2}日(?:\(.\))?は(?:休店中|\d{1,2}:\d{2}から\d{1,2}:\d{2}の間閉店)','',unicodedata.normalize('NFKC',txt)),today)): return '業態・営業状態'
     if long_closed((name or '')+' '+(note or ''),today): return '長期休業中'
     g=GATE_STATUS.get(chain+'|'+(name or ''))
     if g:
@@ -91,6 +101,7 @@ def clean_store_name(n):
     n=unicodedata.normalize('NFKC',n or '')
     n=re.sub(r'\s*[※*].*$','',n)                                  # 「※10月19日より一時閉店…」などの告知
     n=re.sub(r'\s*[（(](?=[^）)]*(\d+/\d+|\d+月\d+日)).*$','',n)   # 「(10/15(木)のみ 営業時間変更)」など日付つきの告知
+    n=re.sub(r'\s*\d{1,2}/\d{1,2}(?:\(.\))?\s*グランドオープン!?','',n)        # 「11/2(月)グランドオープン!」
     n=re.sub(r'【[^】]*】','',n)
     return re.sub(r'\s+',' ',n).strip()
 def load():

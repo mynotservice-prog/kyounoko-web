@@ -559,7 +559,6 @@ export default async function StationConditionPage({ params }: Props) {
                   }}>
                     <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
                       <h3 style={{ fontSize: 17, fontWeight: 600, margin: 0 }}>{c.name}</h3>
-                      <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {c.lunchPrice}円</span>
                     </header>
                     <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
                       {c.description}
