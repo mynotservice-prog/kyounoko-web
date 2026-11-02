@@ -498,5 +498,40 @@
   "gate": "outside",
   "evidence": "福岡市交通局の令和6年2月22日の発表「天神駅東口改札から出て、天神地下街側にあるカフェ」。公式の住所は天神駅構内B1F",
   "source": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2023/documents/subwayshopopen0222.pdf"
+ },
+ "kisuke|味の牛たん喜助 JR仙台駅店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "date-gyutan|伊達の牛たん本舗 仙台駅3階牛たん通り店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "rikyu|牛たん炭焼 利久 仙台駅店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "yamamotoya-honten|山本屋本店 JR名古屋駅店": {
+  "gate": "outside",
+  "evidence": "公式に「名古屋駅コンコース直結。JR在来線・広小路口改札の近く」",
+  "source": "https://yamamotoyahonten.co.jp/shop/"
+ },
+ "date-gyutan|伊達の牛たん本舗 仙台駅1階tekuteせんだい店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR仙台駅1階」のみ",
+  "source": "https://www.dategyu.jp/restaurant/"
+ },
+ "ippudo|一風堂 名古屋驛麺通り店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR名古屋駅 名古屋うまいもん通り内」のみ",
+  "source": "https://stores.ippudo.com/1503"
+ },
+ "maruha-shokudo|まるは食堂 JR名古屋駅店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR名古屋駅構内 名古屋うまいもん通り 広小路口」のみ",
+  "source": "https://www.maruha-net.co.jp/shop/"
  }
 }
