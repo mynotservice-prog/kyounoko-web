@@ -749,6 +749,8 @@ export const CHUNK_40A: StationIndieMap = {
   // ===========================================================
   // 越谷レイクタウン駅（越谷市・イオンレイクタウン最寄り）
   //
+  // 【2026-11-02 に取り直し】公式サイトが laketown.aeonmall.jp に統合されたので、全店の館・階・区画・席数・キッズメニュー欄と
+  // mori のキッズメニュー一覧の価格を現行の公式で確認した。炭焼ステーキくには公式の掲載が無いので外した。
   // 【一次情報の取得日と出典 — 2026-08-10】
   //  - イオンレイクタウンkaze 公式ショップリスト（全214件）および各店舗詳細ページ
   //      https://laketownkaze-aeonmall.com/shop/lists/ （page:1〜5）
@@ -777,63 +779,54 @@ export const CHUNK_40A: StationIndieMap = {
     {
       name: 'クア・アイナ イオンレイクタウンkaze店',
       genre: 'yoshoku',
-      area: 'イオンレイクタウン（kaze 3F [351] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [351]）',
       description:
-        'ハワイ発のグルメハンバーガー店。kaze公式の店舗情報に「キッズメニューあり」と明記。席数103席。平日11:00〜22:00、土日祝は10:30開店。',
+        'ハワイ発のグルメハンバーガー店。公式の店舗情報にキッズメニューの表示あり。席数103席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: '洋麺屋五右衛門 イオンレイクタウンkaze店',
       genre: 'italian',
-      area: 'イオンレイクタウン（kaze 3F [362] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [362]）',
       description:
-        '箸で食べるスパゲッティーの専門店。kaze公式の店舗情報に「キッズメニューあり」と明記。席数45席、11:00〜22:00（L.O.21:00）。',
+        '箸で食べるスパゲッティーの専門店。公式の店舗情報にキッズメニューの表示あり。席数45席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: 'エッグエッグキッチン イオンレイクタウンkaze店',
       genre: 'yoshoku',
-      area: 'イオンレイクタウン（kaze 3F [356] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [356]）',
       description:
-        'オムライスとパスタの洋食店。kaze公式の店舗情報に「キッズメニューあり」と明記。88席と広く、土日祝は10:30から開いている。',
+        'オムライスとパスタの洋食店。公式の店舗情報にキッズメニューの表示あり。席数88席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: '和食飛賀屋 イオンレイクタウンkaze店',
       genre: 'washoku',
-      area: 'イオンレイクタウン（kaze 3F [367] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [367]）',
       description:
-        '定食・御膳が中心の和食店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数86席。',
+        '定食・御膳が中心の和食店。公式の店舗情報にキッズメニューの表示あり。席数86席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: 'ビューティーチャイニーズ 中国料理 謝朋殿 イオンレイクタウンkaze店',
       genre: 'chinese',
-      area: 'イオンレイクタウン（kaze 3F [363] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [363]）',
       description:
-        '点心と一品料理をそろえる中国料理店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数70席。',
-      kidsMenu: true,
-      seatingType: ['table'],
-    },
-    {
-      name: '炭焼ステーキくに イオンレイクタウンkaze店',
-      genre: 'yoshoku',
-      area: 'イオンレイクタウン（kaze 3F [350] DINING TERRACE）',
-      description:
-        '炭焼きステーキの専門店。kaze公式の店舗情報に「キッズメニューあり」「ランチメニューあり」と明記。席数115席とフロア最大級。',
+        '点心と一品料理をそろえる中国料理店。公式の店舗情報にキッズメニューの表示あり。席数70席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: 'ザ・ブッフェ ニューマーケット イオンレイクタウンkaze店',
       genre: 'others',
-      area: 'イオンレイクタウン（kaze 3F [353] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [353]）',
       description:
-        '好きな料理を取り分けて食べられるブッフェレストラン。kaze公式の店舗情報に「キッズメニューあり」「予約可能」と明記。席数130席。',
+        '好きな料理を取り分けて食べられるブッフェレストラン。公式の店舗情報にキッズメニューの表示あり。席数130席。',
       kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
@@ -841,54 +834,54 @@ export const CHUNK_40A: StationIndieMap = {
     {
       name: '利久食堂 イオンレイクタウンkaze店',
       genre: 'washoku',
-      area: 'イオンレイクタウン（kaze 3F [352] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [352]）',
       description:
-        '牛たんを中心にした定食の店。kaze公式の店舗情報に「キッズメニューあり」「テイクアウト可能」、全席禁煙と明記。席数90席。',
+        '牛たんを中心にした定食の店。公式の店舗情報にキッズメニューの表示あり。席数90席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: '鶏五味 イオンレイクタウンkaze店',
       genre: 'washoku',
-      area: 'イオンレイクタウン（kaze 3F [357] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [357]）',
       description:
-        '鶏料理の専門店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数36席とフロア内では小ぶりなので、混む時間帯を外すと入りやすい。',
+        '鶏料理の専門店。公式の店舗情報にキッズメニューの表示あり。席数36席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: '日暮里食肉問屋 焼肉おもに亭 イオンレイクタウンkaze店',
       genre: 'yakiniku',
-      area: 'イオンレイクタウン（kaze 3F [366] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [366]）',
       description:
-        '問屋直営の焼肉店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数98席。',
+        '問屋直営の焼肉店。公式の店舗情報にキッズメニューの表示あり。席数98席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
     {
       name: 'しゃぶしゃぶ宮崎霧峰 イオンレイクタウンkaze店',
       genre: 'shabu',
-      area: 'イオンレイクタウン（kaze 3F [365] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [365]）',
       description:
-        'しゃぶしゃぶ・すき焼き・鍋の店。kaze公式の店舗情報に「予約可能」「ランチメニューあり」と明記。席数64席。',
+        'しゃぶしゃぶ・すき焼き・鍋の店。席数64席。',
       shareDish: true,
       seatingType: ['table'],
     },
     {
       name: 'パントリエ イオンレイクタウンkaze店',
       genre: 'yoshoku',
-      area: 'イオンレイクタウン（kaze 3F [354] DINING TERRACE）',
+      area: 'イオンレイクタウン（kaze 3F [354]）',
       description:
-        '焼き立てパン食べ放題が付く洋食レストラン。席数94席。埼玉県パパ・ママ応援ショップ優待カードの提示で、料理を注文するとお土産パン1袋のサービスがある。',
+        '焼き立てパン食べ放題が付く洋食レストラン。席数94席。',
       seatingType: ['table'],
     },
     // ---- イオンレイクタウン kaze / 2F CAFE PLAZA ほか ----
     {
       name: 'アフタヌーンティー・ティールーム イオンレイクタウンkaze店',
       genre: 'cafe',
-      area: 'イオンレイクタウン（kaze 2F [277] CAFE PLAZA）',
+      area: 'イオンレイクタウン（kaze 2F [277]）',
       description:
-        '紅茶と軽食のティールーム。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数66席、10:00〜21:00と開店が早い。',
+        '紅茶と軽食のティールーム。公式の店舗情報にキッズメニューの表示あり。席数66席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -897,7 +890,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'cafe',
       area: 'イオンレイクタウン（kaze 2F [201]）',
       description:
-        '焼き菓子とドリンクのカフェ。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数72席。',
+        '焼き菓子とドリンクのカフェ。公式の店舗情報にキッズメニューの表示あり。席数72席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -906,7 +899,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'bakery',
       area: 'イオンレイクタウン（kaze 2F [290]）',
       description:
-        'ベーカリー併設のカフェ。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数65席。',
+        'ベーカリー併設のカフェ。公式の店舗情報にキッズメニューの表示あり。席数65席。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -914,25 +907,25 @@ export const CHUNK_40A: StationIndieMap = {
     {
       name: 'つじ田 イオンレイクタウンkaze店',
       genre: 'noodles',
-      area: 'イオンレイクタウン（kaze 1F [157] GOURMET SQUARE）',
+      area: 'イオンレイクタウン（kaze 1F [157]）',
       description:
-        'つけ麺・ラーメンの店。kaze公式の店舗情報に「キッズメニューあり」と明記。フードコート内なので席の移動がしやすい。',
+        'つけ麺・ラーメンの店。公式の店舗情報にキッズメニューの表示あり。',
       kidsMenu: true,
     },
     {
       name: '羽釜ごはん 穂のか イオンレイクタウンkaze店',
       genre: 'washoku',
-      area: 'イオンレイクタウン（kaze 1F [164] GOURMET SQUARE）',
+      area: 'イオンレイクタウン（kaze 1F [164]）',
       description:
-        '羽釜で炊いたごはんが売りの和食店。kaze公式の店舗情報に「キッズメニューあり」、禁煙と明記。10:00〜21:00（L.O.20:30）。',
+        '羽釜で炊いたごはんが売りの和食店。公式の店舗情報にキッズメニューの表示あり。',
       kidsMenu: true,
     },
     {
       name: 'どうとんぼり神座 イオンレイクタウンkaze店',
       genre: 'noodles',
-      area: 'イオンレイクタウン（kaze 1F [163] GOURMET SQUARE）',
+      area: 'イオンレイクタウン（kaze 1F [163]）',
       description:
-        '2026年7月30日オープン。kaze公式は看板の「おいしいラーメン」を、子どもから年配の人まで食べられるやさしいスープと説明している。10:00〜21:00（L.O.20:30）。',
+        'ラーメン店。',
     },
     // ---- イオンレイクタウン mori ----
     // mori は公式に「キッズメニュー取り扱いショップ」の一覧ページを持っており、
@@ -945,8 +938,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'yoshoku',
       area: 'イオンレイクタウン（mori 1F [1061]）',
       description:
-        '30種類以上のドリア・グラタンの専門店。2026年5月18日オープン。mori公式の子育て応援ぺーじに「お子さまメニューやドリンクバーもある」と記載（開店が新しく、公式のキッズメニュー価格一覧にはまだ載っていない）。',
-      kidsMenu: true,
+        'ドリア・グラタンの専門店。',
       seatingType: ['table'],
     },
     {
@@ -954,7 +946,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'italian',
       area: 'イオンレイクタウン（mori 1F [1102]）',
       description:
-        '30種類以上のパンが食べ放題のベーカリーレストラン。公式のキッズメニュー一覧に「Kidsグラタン 税込858円」。店舗ページにも「お子さまメニューもございますので、お子さま連れでもどうぞご利用下さい」とある。',
+        '30種類以上のパンが食べ放題のベーカリーレストラン。公式のキッズメニュー一覧に「Kidsグラタン 税込858円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -963,7 +955,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'others',
       area: 'イオンレイクタウン（mori 1F [1069]）',
       description:
-        '洋食・和食・中華・デザートを取り分けて食べるビュッフェレストラン。公式のキッズメニュー一覧では、お子さま料金がドリンクバー付き税込548円と最安の部類。',
+        '洋食・和食・中華・デザートを取り分けて食べるビュッフェレストラン。公式のキッズメニュー一覧では、お子さま料金がドリンクバー付き税込548円。',
       kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
@@ -973,7 +965,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'chinese',
       area: 'イオンレイクタウン（mori 1F [1076]）',
       description:
-        '台湾粥と点心の店。公式のキッズメニュー一覧に「おこさまワンタン麺セット 税込858円」。営業時間は平日10:00〜22:00、土日祝11:00〜22:00（L.O.21:00）。',
+        '台湾粥と点心の店。公式のキッズメニュー一覧に「おこさまワンタン麺セット 税込858円」。',
       kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
@@ -981,9 +973,9 @@ export const CHUNK_40A: StationIndieMap = {
     {
       name: 'びっくりドンキーポケットキッチン イオンレイクタウンmori店',
       genre: 'yoshoku',
-      area: 'イオンレイクタウン（mori 3F [3079] フードコート）',
+      area: 'イオンレイクタウン（mori 3F [3079]）',
       description:
-        'びっくりドンキーのフードコート業態。公式のキッズメニュー一覧に「ミニマムレギュラーバーグディッシュ 税込670円」。店舗ページの平均予算はランチ850円。',
+        'びっくりドンキーのフードコート業態。公式のキッズメニュー一覧に「ミニマムレギュラーバーグディッシュ 税込670円」。',
       kidsMenu: true,
       priceLunch: '〜1,000円',
     },
@@ -1001,7 +993,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'washoku',
       area: 'イオンレイクタウン（mori 1F [1074]）',
       description:
-        'かまど炊きの五穀米と味噌汁の定食店。公式のキッズメニュー一覧に「お子さま和風ランチ 税込869円」。魚と肉が両方入る構成と説明されている。',
+        'かまど炊きの五穀米と味噌汁の定食店。公式のキッズメニュー一覧に「お子さま和風ランチ 税込869円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1010,7 +1002,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'yoshoku',
       area: 'イオンレイクタウン（mori 1F [1073]）',
       description:
-        'オムライス専門の洋食店。公式のキッズメニュー一覧では「お子さまオムライス 税込300円」で、mori のレストラン街では最安クラス。',
+        'オムライス専門の洋食店。公式のキッズメニュー一覧では「お子さまオムライス 税込300円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1019,7 +1011,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'tonkatsu',
       area: 'イオンレイクタウン（mori 1F [1066]）',
       description:
-        '東京・青山発のとんかつ専門店。公式のキッズメニュー一覧に「お子さまランチ 税込1,000円」。お膳と丼の両方から選べる。',
+        '東京・青山発のとんかつ専門店。公式のキッズメニュー一覧に「お子さまランチ 税込1,020円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1046,7 +1038,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'italian',
       area: 'イオンレイクタウン（mori 1F [1101]）',
       description:
-        '生パスタの専門店。公式のキッズメニュー一覧に「ベーコンのカルボナーラ 税込429円」。焼きたてのバジルロールも名物。',
+        '生パスタの専門店。公式のキッズメニュー一覧に「ベーコンのカルボナーラ 税込429円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1055,7 +1047,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'italian',
       area: 'イオンレイクタウン（mori 1F [1082]）',
       description:
-        'パスタと手作りプリンの店。公式のキッズメニュー一覧に「お子さまスパゲティとフライドチキン 税込583円」。',
+        'パスタと手作りプリンの店。公式のキッズメニュー一覧に「お子さまスパゲティとフライドチキン 税込693円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1064,7 +1056,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'noodles',
       area: 'イオンレイクタウン（mori 1F [1063]）',
       description:
-        'うどんとそばの店。公式のキッズメニュー一覧では「キッズセット 税込350円」と、mori のレストラン街でもっとも安い部類。',
+        'うどんとそばの店。公式のキッズメニュー一覧では「キッズセット 税込350円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1073,7 +1065,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'noodles',
       area: 'イオンレイクタウン（mori 1F [1104]）',
       description:
-        '店内製麺の讃岐うどん店。公式のキッズメニュー一覧に「お子さまセット 税込590円」。土日祝は10:30から開いている。',
+        '店内製麺の讃岐うどん店。公式のキッズメニュー一覧に「お子さまセット 税込590円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1082,7 +1074,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'yakiniku',
       area: 'イオンレイクタウン（mori 1F [1100]）',
       description:
-        '焼肉店。公式のキッズメニュー一覧に「お子さまクッパ」「お子さまうどん」がいずれも税込385円で載っており、焼肉が食べられない年齢の子でも一品頼める。',
+        '焼肉店。公式のキッズメニュー一覧に「お子さまクッパ」「お子さまうどん」がいずれも税込385円で載っている。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1109,7 +1101,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'noodles',
       area: 'イオンレイクタウン（mori 3F [3067]）',
       description:
-        '自社製粉のそば店。公式のキッズメニュー一覧に「お子さまカレー 税込490円」。目の前でそばを茹でて出す形式。',
+        '自社製粉のそば店。公式のキッズメニュー一覧に「お子さまカレー 税込490円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1118,7 +1110,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'noodles',
       area: 'イオンレイクタウン（mori 3F [3080]）',
       description:
-        'セルフ形式の讃岐うどん店。公式のキッズメニュー一覧では「お子さまもちもちセット 税込290円」で、61品の中でも最安クラス。',
+        'セルフ形式の讃岐うどん店。公式のキッズメニュー一覧では「お子さままんぷくセット 税込290円」。',
       kidsMenu: true,
     },
     {
@@ -1142,7 +1134,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'cafe',
       area: 'イオンレイクタウン（mori 2F [2047B]）',
       description:
-        '焼きたてパンと1杯だてコーヒーのカフェ。公式のキッズメニュー一覧に「キッズセット 税込470円」。買い物の途中で休憩を挟みたいときに使える。',
+        '焼きたてパンと1杯だてコーヒーのカフェ。公式のキッズメニュー一覧に「キッズセット 税込470円」。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1152,18 +1144,17 @@ export const CHUNK_40A: StationIndieMap = {
     {
       name: 'シルバニア 森のキッチン レイクタウンアウトレット店',
       genre: 'cafe',
-      area: '越谷レイクタウン駅前（レイクタウンアウトレット 1st Ave. 2F [1217]）',
+      area: 'レイクタウンアウトレット',
       description:
-        'アウトレット公式の「キッズお取り扱いショップ」に、メニューとして「ショコラウサギの女の子 フレアのぱくぱくカレー」ほかを掲載し、デザート・離乳食を含むと明記。アレルギー対応メニューありとも公式に記載されている。',
-      kidsMenu: true,
+        'レストラン。席数70席。',
       seatingType: ['table'],
     },
     {
       name: 'バーガーキング レイクタウンアウトレット店',
       genre: 'yoshoku',
-      area: '越谷レイクタウン駅前（レイクタウンアウトレット 3rd Ave. 2F [3229]）',
+      area: 'レイクタウンアウトレット',
       description:
-        'アウトレット公式の「キッズお取り扱いショップ」に「キッズメニュー3種類」と掲載されている。アウトレットは屋外通り型で、mori・kazeのカートは持ち込めないため自前のベビーカーで回ることになる。',
+        'ハンバーガーチェーン。公式の店舗情報にキッズメニューの表示あり。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -1173,7 +1164,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'cafe',
       area: '越谷レイクタウン駅ロータリー内',
       description:
-        '運営元のポラス公式サイトが「ママがゆっくり過ごせるカフェ」として案内する駅前のカフェ。モールに入る前後に立ち寄れる位置にある。',
+        '運営元のポラス公式サイトに「カフェバナーノ レイクタウン駅前店」として掲載されているカフェ。',
       seatingType: ['table'],
     },
   ],

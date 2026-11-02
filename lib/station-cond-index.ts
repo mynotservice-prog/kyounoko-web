@@ -19,6 +19,7 @@ import { STATION_COND_DEMAND } from './station-cond-demand';
 import { STATION_COND_LIVE_2026_10 } from './station-cond-live-2026-10';
 import { STATION_COND_ZERO_TRIAL } from './station-cond-zero-trial';
 import { STATION_COND_LOST_2026_10 } from './station-cond-lost-2026-10';
+import { STATION_COND_LIVE_RAINY } from './station-cond-live-rainy-2026-11';
 import { getConditionStores } from './station-cond-stores';
 import type { ConditionKind, StationConditionSlug } from './station-conditions';
 
@@ -42,6 +43,11 @@ export function stationConditionServeMode(
 ): 'full' | 'few' | null | undefined {
   const cs = getConditionStores(slug, condition);
   if (!cs) return undefined;
+  // 雨の日は配信する面を固定する（lib/station-cond-live-rainy-2026-11.ts）
+  if (condition === 'rainy') {
+    if (!STATION_COND_LIVE_RAINY.has(slug)) return null;
+    return cs.within1000 >= STATION_CONDITION_MIN_MATCHES ? 'full' : 'few';
+  }
   const key = `${slug}/${condition}`;
   const significant = scale === 'terminal' || scale === 'major' || STATION_COND_INDEX_ALLOWLIST.has(key);
   if (significant && cs.within1000 >= STATION_CONDITION_MIN_MATCHES) return 'full';

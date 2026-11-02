@@ -6,7 +6,9 @@
  *   famiresu / kaitenzushi / yakiniku … チェーンの業態（実在店）＋ホットペッパーの個人店（ジャンル）
  *   kids-menu / baby / private-room   … 根拠のある店だけ（lib/station-evidence.ts の店の公式・ブランドの公式、
  *                                        個人店はホットペッパーの店の掲載情報）
- * 雨の日（建物の公式台帳待ち）と個人店（indie）は、ここでは扱わない（従来の判定のまま）。
+ * rainy … 公式に駅直結と書かれた建物の店だけ（lib/station-rainy-buildings.json。元は scripts/station-verify/building-access.json）。
+ *          直結先がその駅の建物に限る。雨に濡れないことまでは言わない。
+ * 個人店（indie）は、ここでは扱わない（従来の判定のまま）。
  *
  * 距離は駅中心からの直線。800m以内は駅前・徒歩圏、800m超〜1kmは「少し歩く」（子連れで15〜20分）。
  */
@@ -15,10 +17,11 @@ import { getVerifiedStores, type VerifiedStore } from './station-verified-stores
 import { getIndieRestaurantsByStation, INDIE_GENRE_LABEL } from './indie-restaurants';
 import { evidenceForStore, storeDisplayName, type EvidenceNeed } from './station-evidence';
 import HOTPEPPER_COND from './indie-restaurants/hotpepper-cond.json';
+import RAINY_BUILDINGS from './station-rainy-buildings.json';
 
-export const REBUILT_CONDITIONS = new Set(['famiresu', 'kaitenzushi', 'yakiniku', 'kids-menu', 'baby', 'private-room']);
+export const REBUILT_CONDITIONS = new Set(['famiresu', 'kaitenzushi', 'yakiniku', 'kids-menu', 'baby', 'private-room', 'rainy']);
 
-export type CondStoreSource = 'store' | 'brand' | 'category' | 'listing';
+export type CondStoreSource = 'store' | 'brand' | 'category' | 'listing' | 'building';
 
 export type CondStore = {
   key: string;
@@ -81,6 +84,26 @@ function bandOf(m: number | undefined, fallback?: VerifiedStore['distance']): Co
 type HpCondShop = { name: string; hpId: string; url?: string; address?: string; genre?: string; distanceM: number; evidence?: string };
 const HP_COND = (HOTPEPPER_COND as { stations: Record<string, Record<string, HpCondShop[]>> }).stations;
 
+type RainyBuilding = { name: string; stations: string[]; evidence: string; source: string; checkedAt: string; addressKeywords: string[] };
+const BUILDINGS = RAINY_BUILDINGS.buildings as Record<string, RainyBuilding>;
+const BUILDING_OF_STORE = RAINY_BUILDINGS.stores as Record<string, string>;
+
+function buildingOfStore(stationSlug: string, chain: string, name: string): RainyBuilding | undefined {
+  const b = BUILDINGS[BUILDING_OF_STORE[`${chain}|${name}`]];
+  return b?.stations.includes(stationSlug) ? b : undefined;
+}
+
+function buildingOfAddress(stationSlug: string, address: string | undefined): RainyBuilding | undefined {
+  if (!address) return undefined;
+  return Object.values(BUILDINGS).find(
+    (b) => b.stations.includes(stationSlug) && b.addressKeywords.some((k) => address.includes(k)),
+  );
+}
+
+function buildingEvidence(b: RainyBuilding): string {
+  return `${b.name}: 公式「${b.evidence.slice(0, 40)}」（確認 ${b.checkedAt}）`;
+}
+
 const BABY_NOTE_WORDS = /椅子|イス|チェア|ベビーカー|おむつ|オムツ|離乳食|授乳|ベビーベッド|ベビーシート/;
 const KIDS_MENU_NOTE_WORDS = /お子様メニュー|お子さまメニュー|キッズメニュー|お子様ランチ|お子さまランチ|キッズプレート|お子様セット|キッズセット|子供メニュー/;
 const NOTE_NEGATIVE = /ござい?ません|御座いません|ありません|有りません|無(?!料)|なし|ない|不可|遠慮|お断り|できません|出来ません|NG|置き場所|座っ|すわれ|着席|折り?畳|折りたた|たたん|お預か|完了後/;
@@ -128,7 +151,13 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
     if (!chain) continue;
     let source: CondStoreSource | null = null;
     let evidence: string | undefined;
-    if (isCategory) {
+    if (condition === 'rainy') {
+      const b = buildingOfStore(stationSlug, st.chain, st.name);
+      if (b) {
+        source = 'building';
+        evidence = buildingEvidence(b);
+      }
+    } else if (isCategory) {
       if (categoryMatch(st.chain, condition)) source = 'category';
     } else {
       const ev = evidenceForStore(st);
@@ -157,6 +186,7 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
   const countMore = (more: Record<string, number> | undefined) => {
     let n = 0;
     for (const [chain, k] of Object.entries(more ?? {})) {
+      if (condition === 'rainy') continue;
       if (isCategory ? categoryMatch(chain, condition) : brandHas(chain, NEEDS[condition])) n += k;
     }
     return n;
@@ -166,7 +196,7 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
 
   // 個人店（ホットペッパーの掲載情報）
   const seen = new Set<string>();
-  const pushIndie = (s: { name: string; hpId?: string; url?: string; address?: string; distanceM?: number; genre?: string }, evidence?: string) => {
+  const pushIndie = (s: { name: string; hpId?: string; url?: string; address?: string; distanceM?: number; genre?: string }, evidence?: string, source: CondStoreSource = 'listing') => {
     const id = s.hpId ?? s.name;
     if (seen.has(id)) return;
     if (s.distanceM !== undefined && s.distanceM > 1000) return;
@@ -179,7 +209,7 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
       url: s.url,
       m: s.distanceM,
       band: bandOf(s.distanceM),
-      source: 'listing',
+      source,
       evidence,
       genre: s.genre,
     });
@@ -190,6 +220,10 @@ export function getConditionStores(stationSlug: string, condition: string): Cond
     if (condition === 'kaitenzushi' && r.genre === 'sushi') pushIndie({ ...r, genre: g });
     if (condition === 'yakiniku' && (r.genre === 'yakiniku' || r.genre === 'korean')) pushIndie({ ...r, genre: g });
     if (condition === 'private-room' && r.privateRoom) pushIndie({ ...r, genre: g }, '個室あり（店の掲載）');
+    if (condition === 'rainy') {
+      const b = buildingOfAddress(stationSlug, r.address);
+      if (b) pushIndie({ ...r, genre: g }, buildingEvidence(b), 'building');
+    }
   }
   for (const s of HP_COND[stationSlug]?.[condition] ?? []) {
     if (!childNoteSupports(condition, s.evidence)) continue;
@@ -219,6 +253,7 @@ export const COND_SOURCE_LABEL: Record<CondStoreSource, string> = {
   store: 'この店の公式ページの表示',
   brand: 'チェーン公式（全店）',
   category: '業態（公式で実在を確認）',
+  building: '建物の公式（駅直結）',
   listing: 'ホットペッパーの店の掲載',
 };
 
