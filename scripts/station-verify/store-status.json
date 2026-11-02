@@ -1,0 +1,35 @@
+{
+  "yayoiken|やよい軒 武蔵中原店": {
+    "why": "改装で休業",
+    "evidence": "【休業のお知らせ】改装の為、9/22(火)14時より休業いたします。※2027年2月中旬リニューアルオープン予定",
+    "source": "https://store.yayoiken.com/b/yayoiken/info/1273/",
+    "reopen": "2027-02"
+  },
+  "yoshinoya|吉野家 尾頭橋店": {
+    "why": "一時休業・再開日の記載なし",
+    "evidence": "吉野家 尾頭橋店（休業中）【一時休業のおしらせ】",
+    "source": "https://stores.yoshinoya.com/yoshinoya/spot/detail?code=ysn_043838"
+  },
+  "hanamaru-udon|はなまるうどん 仙台イービーンズ店": {
+    "why": "11/5〜12/18 休業",
+    "evidence": "11月5日（木）～12月18日（金）は休業させていただきます。",
+    "source": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=851",
+    "reopen": "2026-12-19"
+  },
+  "mister-donut|東神奈川駅前 ショップ": {
+    "why": "改装休店中",
+    "evidence": "東神奈川駅前 ショップ 改装休店中",
+    "source": "https://md.mapion.co.jp/b/misterdonut/info/0166/"
+  },
+  "starbucks|天神ソラリアステージ店": {
+    "why": "休業・再開時期未定",
+    "evidence": "店内空調機器の故障に伴い、7月23日14:30以降休業とさせていただきます。営業再開時期は未定です。",
+    "source": "https://store.starbucks.co.jp/detail-1247/"
+  },
+  "royal-host|ロイヤルホスト上大岡店": {
+    "why": "11/12〜11/26 改装で一時閉店",
+    "evidence": "改装工事のため、2026年11月12日（木）から11月26日（木）は、一時閉店いたします。",
+    "source": "https://locations.royalhost.jp/detail/114006/",
+    "reopen": "2026-11-27"
+  }
+}

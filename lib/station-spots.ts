@@ -18,6 +18,7 @@ import { WARD_NAMES, type TokyoWard } from './tokyo-stations';
 import { KANAGAWA_CITY_NAMES, type KanagawaCity } from './kanagawa-stations';
 import { PREFECTURE_NAMES, type KansaiPrefecture } from './kansai-stations';
 import { SAICHI_PREFECTURE_NAMES, type SaiChiPrefecture } from './saitama-chiba-stations';
+import { REGIONAL_CITY_NAMES, type RegionalCity } from './regional-stations';
 import { STATION_CONDITIONS, getConditionKind, type StationConditionSlug } from './station-conditions';
 
 /**
@@ -73,6 +74,8 @@ function getSpotsByRegion(stationSlug: string): Spot[] {
       targetLabels.add('千葉県');
       targetLabels.add('浦安市');
     }
+  } else if (station.region === 'regional') {
+    targetLabels.add(REGIONAL_CITY_NAMES[station.city as RegionalCity]);
   }
   if (targetLabels.size === 0) return [];
   const result: Spot[] = [];

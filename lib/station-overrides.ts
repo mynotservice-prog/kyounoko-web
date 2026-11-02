@@ -189,6 +189,33 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       },
     ],
   },
+  'nagoya': {
+    tldrExtraItems: [
+      {
+        href: '/article/nagoya-kodzure-lunch',
+        label: '名古屋駅 子連れランチ完全ガイド',
+        value: 'タワーズ・ゲートタワー12〜13Fが本命、調乳用の熱湯はミッドランド4F',
+      },
+    ],
+  },
+  'hakata': {
+    tldrExtraItems: [
+      {
+        href: '/article/hakata-kodzure-lunch',
+        label: '博多駅 子連れランチ完全ガイド',
+        value: 'くうてん9〜10Fが本命、調乳と電子レンジは博多阪急7F',
+      },
+    ],
+  },
+  'sendai': {
+    tldrExtraItems: [
+      {
+        href: '/article/sendai-kodzure-lunch',
+        label: '仙台駅 子連れランチ完全ガイド',
+        value: 'エスパル東館3Fが本命（授乳室と調乳機が同じ階）',
+      },
+    ],
+  },
   'kamata': {
     tldrExtraItems: [
       {

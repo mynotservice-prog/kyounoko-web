@@ -21,6 +21,7 @@ import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
 import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
+import { REGIONAL_STATIONS } from '@/lib/regional-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains, STATION_CHAIN_DATA_UPDATED } from '@/lib/station-restaurants';
 import { getCoverageGeneratedAt } from '@/lib/chain-coverage';
@@ -293,14 +294,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     stationHasContent(s.slug),
   ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: STATION_LASTMOD,
+    lastModified: s.addedAt ? new Date(s.addedAt) : STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
   // 埼玉・千葉駅ページ（東京通勤圏）
   const saichiStationPages: MetadataRoute.Sitemap = SAICHI_STATIONS.map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: STATION_LASTMOD,
+    lastModified: s.addedAt ? new Date(s.addedAt) : STATION_LASTMOD,
+    changeFrequency: 'monthly' as const,
+    priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
+  }));
+  // 地方都市の駅ページ（名古屋・福岡・仙台）
+  const regionalStationPages: MetadataRoute.Sitemap = REGIONAL_STATIONS.filter((s) =>
+    stationHasContent(s.slug),
+  ).map((s) => ({
+    url: `${BASE}/station/${s.slug}`,
+    lastModified: new Date(s.addedAt),
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
@@ -439,5 +449,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...eventPages, ...featurePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...regionalStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...eventPages, ...featurePages];
 }

@@ -18,6 +18,7 @@ import { TOKYO_STATIONS, type TokyoStation } from './tokyo-stations';
 import { KANSAI_STATIONS } from './kansai-stations';
 import { KANAGAWA_STATIONS } from './kanagawa-stations';
 import { SAICHI_STATIONS } from './saitama-chiba-stations';
+import { REGIONAL_STATIONS } from './regional-stations';
 import { STATION_VERIFIED_STORES } from './station-verified-stores';
 
 export type ChainCategory =
@@ -1019,13 +1020,14 @@ export type StationForChains = {
   scale: 'terminal' | 'major' | 'minor';
 };
 
-/** 駅slug → 駅。23区外（関西・神奈川・埼玉千葉）も含めた全駅を引ける。 */
+/** 駅slug → 駅。23区外（関西・神奈川・埼玉千葉・地方都市）も含めた全駅を引ける。 */
 const STATION_BY_SLUG: ReadonlyMap<string, StationForChains> = new Map(
   [
     ...TOKYO_STATIONS,
     ...KANSAI_STATIONS,
     ...KANAGAWA_STATIONS,
     ...SAICHI_STATIONS,
+    ...REGIONAL_STATIONS,
   ].map((s) => [s.slug, s] as const),
 );
 

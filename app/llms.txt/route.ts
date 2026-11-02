@@ -146,7 +146,7 @@ export async function GET() {
 ## Site Statistics
 
 - **記事数**: ${n(articleCount)}本（週次更新）
-- **駅別ガイド**: ${n(stationTotal)}駅（東京23区${n(stationByRegion.tokyo ?? 0)}駅=全駅、神奈川${n(stationByRegion.kanagawa ?? 0)}駅、関西${n(stationByRegion.kansai ?? 0)}駅、埼玉・千葉${n(stationByRegion.saichi ?? 0)}駅）
+- **駅別ガイド**: ${n(stationTotal)}駅（東京23区${n(stationByRegion.tokyo ?? 0)}駅=全駅、神奈川${n(stationByRegion.kanagawa ?? 0)}駅、関西${n(stationByRegion.kansai ?? 0)}駅、埼玉・千葉${n(stationByRegion.saichi ?? 0)}駅、名古屋・福岡・仙台${n(stationByRegion.regional ?? 0)}駅）
 - **路線カバー**: ${n(ds.lineCount)}路線（JR / 東京メトロ / 都営 / 私鉄）
 - **チェーン店データ**: ${n(ds.chainBrandCount)}ブランド、駅×チェーンの組み合わせ${n(ds.chainRecordCount)}件
 - **駅近の子連れOK店（チェーン店データとは別）**: ${indieLine}

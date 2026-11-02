@@ -18,13 +18,15 @@ python3 fetch/_enrich_coords.py   # スシロー・サブウェイ・コメダ�
 python3 fetch/_enrich_notes.py    # マクドナルドの一時休業を補う
 # 2) 駅から800m以内の店を拾う（matched.json）。--date は休業の判定に使う基準日（公開日）
 python3 match.py --date="$(date +%F)"
+# 2.5) 全店の公式ページを開いて休業を拾う（store-pages.json）。見つけた店は store-status.json に足して 2) をやり直す
+python3 check-store-pages.py
 # 3) 対象駅のリストを渡して lib/station-verified-stores.ts を作る
 python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +%F)"
 ```
 
 - `stations.json`: 駅の座標（`lib/station-coords.json` と、新設駅は HeartRails Express API）。
 - `list-suburb.txt`: 一律付与を受けていた郊外の主要駅＋四ツ谷。`list-tokyo23.txt`: 東京23区。
-  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。3つで `lib/all-stations.ts` の589駅すべて。
+  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。`list-city-2026-11.txt`: 横浜・川崎・さいたま・千葉の20駅と名古屋・福岡・仙台の11駅（2026-11-02・実験31）。4つで `lib/all-stations.ts` の620駅すべて。
   大阪王将は10/08版を差し込んだまま（公式の店舗検索がメンテナンス中）なので、`gen_ts.py` で全体を作り直すと大阪王将の行が消える。
   一部の駅だけ足すときは、その駅のリストで生成した駅ブロックだけを既存ファイルに差し込む。
 - `cache/` `stores/` `matched.json` は生成物でコミットしない。
@@ -39,6 +41,7 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 ## 判定の決まり
 
 - 判定に使うのは各チェーンの公式サイト・公式APIだけ。
+- 対象都府県は `match.py` の `PREFS`（`fetch/_enrich_coords.py`・`_enrich_notes.py` と同じ）。新しい県の駅を足すときは3つとも足す。足さないと、スシロー・サブウェイ・コメダが住所の位置だけで判定され、マクドナルドの一時休業も拾えない。
 - 店の位置は公式座標を使う（全体の約98%）。NAVITIME系（吉野家・松屋・松のや・かつや・はなまるうどん・
   ドトール・エクセルシオール）とサイゼリヤの公式座標は日本測地系なので、世界測地系に直してから使う
   （直した後は、住所から出した位置との差が中央値10〜20m）。
@@ -48,6 +51,7 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 - **公式座標と住所の突き合わせ**: 対象都府県の全店で、公式座標と住所の位置を比べる。住所が「号」まで当たっているのに
   1km以上離れていたら公式座標の誤りとみなし、住所の位置を使う（`review_coord_mismatch.json` に出る）。
   2026-10-08 時点で4店（かっぱ寿司 秋葉原万世橋店は、公式データの座標がアトレ亀戸店と同じ値だった）。
+- 公式座標と住所の位置が300m以上ずれる店は、駅を足すときに住所で測り直す。圏外になる店は `match.py` の `ADDR_OUT` に足す（2026-11-02 に4件）。
 - 住所の変換結果が別の市区町村になった場合は採用しない（住所表記の崩れで県庁の位置に飛んだ例がある）。
 - 駅中心から直線で300m以内を「駅前」、800m以内を「徒歩圏」。800mを超える店は載せない。
   直線距離なので、線路や幹線道路の向こう側の店は実際には10分を超えることがある。
@@ -56,7 +60,8 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
     球場内・高速道路のPA/SA・官庁の庁舎内・病院内・店名に大学名が入る店（学芸大学などの駅名は除く）・
     派生業態（MOSH Burger&Bar、むさしの森Diner、ポケットキッチン、餃子の王将Express）。
   - 開店日が基準日までに来た「11/2(月)グランドオープン!」「2026/10/9オープン」は営業中として載せる。短時間の閉店の告知（「11月12日は15:00から17:00の間閉店」）も外す理由にしない（2026-11-02）。
-  - 長期休業: 公式の告知にある日付の範囲を読み、基準日（`--date=`）に休業中で再開まで7日以上ある店。
+  - 一覧のAPIに出ない休業: 店ごとの公式ページにだけ出る告知がある（2026-11-02 の31駅931ページで6店。うち5店はこの方法でしか拾えなかった）。`check-store-pages.py` で拾い、`store-status.json` に原文・出典つきで持つ。
+- 長期休業: 公式の告知にある日付の範囲を読み、基準日（`--date=`）に休業中で再開まで7日以上ある店。
     短い休業は載せる。マクドナルドの休業は一覧APIに出ないので `fetch/_enrich_notes.py` で店ごとのAPIから補う。
   - 改札の内外: 店名・住所の語だけでは両方向に外す（エキュート上野には改札外の店もあり、「構内」と書かれた改札外の店も多い）。
     駅の構内・駅ナカ施設の店は `gate-status.json` に、チェーン公式と施設運営元・鉄道会社の公式で確かめた結果

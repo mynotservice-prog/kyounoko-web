@@ -6,7 +6,7 @@ import json,glob,os,re,math,sys,time,urllib.request,urllib.parse,unicodedata
 B=os.path.dirname(os.path.abspath(__file__))
 GEO=os.path.join(B,'cache','geo.json')
 geo=json.load(open(GEO)) if os.path.exists(GEO) else {}
-PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県')
+PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県','愛知県','福岡県','宮城県')
 def dist(a,b,c,d):
     R=6371000;p1,p2=math.radians(a),math.radians(c)
     x=math.sin((p2-p1)/2)**2+math.cos(p1)*math.cos(p2)*math.sin(math.radians(d-b)/2)**2
@@ -59,6 +59,9 @@ GATE=re.compile(r'改札内|ラチ内|エキュート|ecute|グランスタ|エ�
 GATE_OK=re.compile(r'改札外|ヤエチカ|八重洲地下街')
 try: GATE_STATUS=json.load(open(os.path.join(B,'gate-status.json')))
 except Exception: GATE_STATUS={}
+# 一覧のAPIに出ず、店ごとの公式ページにだけ出る休業（check-store-pages.py で見つけて手で足す）
+try: STORE_STATUS=json.load(open(os.path.join(B,'store-status.json')))
+except Exception: STORE_STATUS={}
 def _dates(txt,year):
     out=[]
     for m in re.finditer(r'(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日',txt): out.append((m.start(),int(m.group(1) or 0),int(m.group(2)),int(m.group(3))))
@@ -92,6 +95,7 @@ def excluded_reason(chain,name,note,addr,today):
     # デニーズの「11月12日は15:00から17:00の間閉店」も同じ。開店日が基準日までに来た「2026/10/9オープン」は営業中（2026-11-02）
     if EXCL.search(strip_opened(re.sub(r'\d{1,2}月\d{1,2}日(?:\(.\))?は(?:休店中|\d{1,2}:\d{2}から\d{1,2}:\d{2}の間閉店)','',unicodedata.normalize('NFKC',txt)),today)): return '業態・営業状態'
     if long_closed((name or '')+' '+(note or ''),today): return '長期休業中'
+    if chain+'|'+clean_store_name(name) in STORE_STATUS or chain+'|'+(name or '') in STORE_STATUS: return '店舗ページの休業'
     g=GATE_STATUS.get(chain+'|'+(name or ''))
     if g:
         return None if g.get('gate')=='outside' else ('改札内' if g.get('gate')=='inside' else '改札の内外が不明')
@@ -181,6 +185,9 @@ def main():
             if t: s['_pos']=t; s['_src']='twin'; s['_precise']=True; stat['twin']=stat.get('twin',0)+1
     print('position',stat,flush=True)
     json.dump(review,open(os.path.join(B,'review_coord_mismatch.json'),'w'),ensure_ascii=False,indent=0)
+    # 公式座標では800m以内でも、住所の位置で測ると圏外になる店（公式座標と住所が300m以上ずれる店を住所で裏取りした・2026-11-02）
+    ADDR_OUT={('higashi-kanagawa','すき家 東白楽駅前店'),('kanayama','和幸イオンモール熱田店'),
+              ('yakuin','サンマルクカフェ 福岡天神地下街店'),('yakuin','天神地下街店')}
     for st in stations:
         la,lo=st['lat'],st['lng'];res=[]
         for s in stores:
@@ -188,7 +195,7 @@ def main():
             pa,po=s['_pos']
             if abs(la-pa)>0.012 or abs(lo-po)>0.015: continue
             d=dist(la,lo,pa,po)
-            if d>1000: continue
+            if d>1000 or (st['slug'],clean_store_name(s['name'])) in ADDR_OUT: continue
             a=s['_addr']; src=s['_src']
             txt=(s.get('name') or '')+' '+(s.get('note') or '')+' '+(s.get('address') or '')
             res.append({'chain':s['chain'],'name':clean_store_name(s['name']) or s['name'],'rawname':s['name'],'address':a,'show':s['_show'],'precise':s['_precise'],'m':int(d),'src':src,'url':s.get('url'),'note':s.get('note') or '',
