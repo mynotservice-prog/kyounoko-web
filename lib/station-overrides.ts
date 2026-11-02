@@ -180,6 +180,33 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       },
     ],
   },
+  'shimbashi': {
+    tldrExtraItems: [
+      {
+        href: '/article/shimbashi-kodzure-lunch',
+        label: '新橋 子連れランチ完全ガイド',
+        value: '席は汐留シティセンター、授乳室とお湯は博品館4F',
+      },
+    ],
+  },
+  'kamata': {
+    tldrExtraItems: [
+      {
+        href: '/article/kamata-kodzure-lunch',
+        label: '蒲田 子連れランチ完全ガイド',
+        value: 'グランデュオが本命（授乳室とお湯は東館5F・貸出は西館2F）',
+      },
+    ],
+  },
+  'omiya': {
+    tldrExtraItems: [
+      {
+        href: '/article/omiya-station-kodzure-lunch',
+        label: '大宮駅 子連れランチ完全ガイド',
+        value: '西口はルミネ2の4F、東口は大宮門街',
+      },
+    ],
+  },
   // =========================================================================
   // 越谷レイクタウン
   //
@@ -363,6 +390,13 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
   // reports/next-faces-2026-10/station-verify-*.md
   // =========================================================================
   'sagami-ono': {
+    tldrExtraItems: [
+      {
+        href: '/article/sagami-ono-kodzure-lunch',
+        label: '相模大野 子連れランチ完全ガイド',
+        value: '直結の駅ビルA館7〜8Fが本命・無料の遊び場はボーノ4F',
+      },
+    ],
     hallFacilities: {
       heading: '授乳室とベビーカーの貸出は館ごと（ステーションスクエア・bono相模大野）',
       lead: '相模大野駅の授乳室・ベビーカーの貸出は、駅直結の相模大野ステーションスクエアと、北口のbono相模大野にあります。場所と時間は館ごとに違います。',
