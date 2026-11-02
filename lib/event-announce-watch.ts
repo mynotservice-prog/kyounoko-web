@@ -169,10 +169,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: 冬・クリスマスは未発表。ニュース最新は2026.10.09（登録博物館に登録）のまま。トップ・/news/・/event/ の3ページでHTMLコメント除去後も「クリスマス」「イルミ」「冬」「11月」「12月」0件。/event/ の会期つき告知はオットセイ展示休止（10/18〜10/29）のみ。前年の初報は会期開始当日（2025.11.18）＝11月第3週が本命。',
-    status: 'waiting',
+      '2026-11-02確認: 発表済み。/news/ 最新の2026.10.30「チンアナゴクリスマスツリー」（/news/20261030/）に設置期間2026年11月7日〜12月28日と明記。10.28のビッグシャーレ秋ライティング（〜11/30）とあわせて sumida-chinanago-xmas-tree-2026 / sumida-big-petri-autumn-light-2026 として投入。',
+    status: 'added',
+    addedSlug: 'sumida-chinanago-xmas-tree-2026',
   },
   {
     venue: '東京ドイツ村',
@@ -266,10 +267,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌3月上旬の土日祝＋年末年始',
     checkFromMonth: 9,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: マザーイルミ2026-2027は未発表。/information/illumination2026/ と /illumination2025/ はともにトップへ302。お知らせ1ページ目20件の最新は2026/10/25（来場案内）で「イルミ」「クリスマス」「冬」0件。トップの「クリスマス」はクリスマストレイルラン（小4以上の大会）のバナーでイルミではない。台風25号の影響で JR内房線（姉ケ崎〜長浦）は11/9始発から再開見込み、佐貫町駅からの路線バス全便運休・君津IC側に通行止めとの告知あり（既投入 motherfarm-kokia-houki-2026 の来場に影響しうる）。次回も /information/illumination2026/ を直接叩く。',
-    status: 'waiting',
+      '2026-11-02確認: 発表済み・開催中。/information/illumination2026/ が302せず200で、題「マザーイルミ 2026-2027」、2026/10/31▶2027/2/28の土日祝と明記。年末年始の表記は「2026/12/24～2026/1/4」と公式の年に誤りがあるため、本文には書かず公式確認を案内。お知らせ一覧には載らず、前週まで追っていた /information/news/ では検知できない。',
+    status: 'added',
+    addedSlug: 'motherfarm-mother-illumi-2026',
   },
   {
     venue: '国営ひたち海浜公園',
@@ -321,10 +323,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: クリスマス・冬は未発表。お知らせ最新は2026/10/23「須磨イル防災2026」で「クリスマス」「イルミ」「冬」0件。冬以外の新規として須磨イル防災2026（「2026年11月3日（火・祝）10:30～12:30」）を kobesuma-seaworld-suma-iru-bousai-2026 として投入。初報は例年11月下旬〜12月上旬＝11月第4週が本命。',
-    status: 'waiting',
+      '2026-11-02確認: 発表済み。/guide/event/10753/（2026/10/16掲載）に「スマシークリスマス2026」2026年12月19日〜25日と明記。/news/ には未掲載で、最新は2026/10/29「神戸市民DAY」。来年は /news/ だけでなく /guide/event/ も見る。ペンギンの散歩（〜2027/3/31）も kobesuma-penguin-walk-2026 として投入。',
+    status: 'added',
+    addedSlug: 'kobesuma-sumasea-christmas-2026',
   },
   // ── 2026-09-07 追加: 9月上旬時点で秋企画が未発表だった関東の主要施設 ──
   // 過去の告知タイミングを見ると、東武動物公園は前年10/15、八景島は9月下旬にリリースが出ている。
@@ -351,9 +354,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月、イルミは11月中旬〜翌3月',
     checkFromMonth: 9,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: 冬イルミ・クリスマスは未発表。LIGHTIAページの生HTMLは「クリスマス」23件・「イルミ」4件だが <!-- --> 除去後は0件（前シーズン2025の会期がコメント内に残存したまま）。お知らせAPI（infoList.jsp?site=ha）38件の最新は2026年10月23日（すいすいパス・わんこ島）で冬の会期なし。花火シンフォニアの公式日程表に「11月：21(土)、22(日)」「10月以降：20:00～(約10分間)」があり hakkeijima-hanabi-symphonia-november-2026 として投入。グソグソパニック（10/22〜10/31）は年表記がないため見送り。',
+      '2026-11-02確認: 冬イルミ・クリスマスは未発表。お知らせAPI infoList.jsp?site=ha の最新は2026年10月27日「こども半額ワンデーパスパック」で、全件・トップに「クリスマス」「イルミ」「冬」なし。LIGHTIAページはコメント除去後0件。12月の星空観測クルージング（2026年12月13日）を seaparadise-hoshizora-cruise-dec-2026 として投入。',
     status: 'waiting',
   },
   {
@@ -378,9 +381,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '冬企画は12月開催（発表は11月下旬〜12月中旬）',
     checkFromMonth: 11,
-    lastChecked: '2026-10-12',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-12確認: 冬・クリスマスは未発表。※前週の記録を2点訂正する。(1)「/events は描画しても一覧が空」は誤り。kawa-sui.com は STUDIO製の完全クライアントレンダリングSPAで、curl・WebFetchは本文ゼロ、内蔵ブラウザもレンダラが落ちるため、描画結果が空なのはこちら側の失敗で「掲載なし」の証拠にならない。実際CMSにはイベント14件が入っている。(2)「秋企画の発表なし」も誤りで、秋季企画「ハリモグラ フェス」（2026年9月11日〜10月31日）は2026-09-01に発表済みで kawasui-harimogura-fes-2026 として既に投入されていた。今回は公式CMSを直接読んでニュース108件・イベント14件を全件取得し、「ハロウィ／クリスマス／イルミネーション／冬季／冬限定／ウィンター／サンタ／Xmas」で全文検索＝クリスマス・イルミネーションは0件。ニュース最新は2026-10-09の4件。イベントCMSの14件はすべて常設プログラムで、季節企画は /events ではなく /news に出る運用。新規のREALITYコラボ（2026年10月12日〜10月25日）はVTuberアプリのコラボで子連れ向けでないため見送り。※運用の変更3点: (a) ハロウィンは監視対象から外した — ニュース108件とPR TIMES 94件（2023-12まで遡及）に「ハロウィン」が0件で、この施設はハロウィン企画をやっていない。(b) 冬企画の発表は11月下旬〜12月中旬（前年は2025-11-21にラグジュアリークリスマス、2025-12-12に開運カメ展）なので checkFromMonth を9→11にした。(c) 終了分は公式ニュースから消される運用なので、冬企画の検知はMOFFのPR TIMES RSSを主にする（確認先URLをそちらに変更）。公式サイトを見る必要があるときはCMS APIを直接叩く: HTML内のNuxtペイロードから publishedUid と resources.cmsProjectId（7A3Snn20ATQLG77bFkoW）を取り、schema_key（ニュース hY_6bHAU / イベント PZo2Zwv3）とあわせてbase64化したクエリを api.cms.studiodesignapp.com/v2/search?q= に渡す。',
+      '2026-11-02確認: 冬・クリスマスは未発表。MOFFのPR TIMES RSS 最新は2026-10-19（MOFF Halloween2026）、カワスイ名の最新は2026-10-16（ビオトープ再生）で、今冬のクリスマス企画の配信なし（RSS内の「クリスマス」は2025年分のみ）。ハリモグラ フェスは10/31で終了したので events.ts から削除。冬企画の発表は11月下旬〜12月中旬。',
     status: 'waiting',
   },
   {
@@ -391,9 +394,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '9月下旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: クリスマス・冬は未発表。aquarium/js/event.js は4件（タチウオの日〜11/15・夜の性いっぱい展〜11/03・ざんねんないきもの展３〜11/23・エサカプセル）で「クリスマス」「イルミ」「冬」0件。全館 js/event.js 41件のうち venue に水族館を含む5件も同0件（「冬」1件は展望台のビーバームーン観賞会）。',
+      '2026-11-02確認: クリスマス・冬は未発表。aquarium/js/event.js 4件と全館 js/event.js 37件の全項目に「クリスマス」「イルミ」なし。開催中はタチウオの日（〜11/15）とざんねんないきもの展３（〜11/23）。',
     status: 'waiting',
   },
 
@@ -475,9 +478,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月中旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.10.16（ウルトラマンウィーク/ゴジラウィーク）・10.14（夜のイマーシブショー等）。一覧のクリスマス関連リンクは nostalgic-christmas2025 と illumination_2024 の過去分だけで、推測URL /event/nostalgic-christmas2026/ は404のまま。初報の実績は10/24（前々年）・11/11（前年）＝11月第1〜2週が本命。',
+      '2026-11-02確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.10.31「【ご案内】休止情報」、その前は10.16（ウルトラマンウィーク/ゴジラウィーク）。推測URL /event/nostalgic-christmas2026/ は404のまま。初報の実績は10/24（前々年）・11/11（前年）＝来週も本命。',
     status: 'waiting',
   },
   {
@@ -558,9 +561,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（10月・12月）',
     checkFromMonth: 10,
-    lastChecked: '2026-10-26',
+    lastChecked: '2026-11-02',
     lastCheckedState:
-      '2026-10-26確認: ハロウィン・クリスマスの来園者向け告知はなし。press.bindcloud.jp の一次データで、お知らせ（3U4nEb-MqAqO）最新は2026/10/24（落ち葉ベッドづくり中止）、直近40件で「ハロウィン」「クリスマス」0件。当日申込（U2TUCFli7Mic）の最新は2026/11/14「落ち葉で巨大絵づくり」で12月の告知なし。生きものアートキャンペーンは依然として出店者募集ページのみ。手法: BiND製でHTMLは本文ゼロ、https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。',
+      '2026-11-02確認: クリスマスの来園者向け告知はなし。press.bindcloud.jp の一次データで、お知らせ（3U4nEb-MqAqO）40件・当日申込（U2TUCFli7Mic）16件とも「クリスマス」「ハロウィン」0件。お知らせ最新は2026/10/24（落ち葉ベッドづくり中止）。手法: BiND製でHTMLは本文ゼロ、https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。',
     status: 'waiting',
   },
 ];
