@@ -26,7 +26,7 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 
 - `stations.json`: 駅の座標（`lib/station-coords.json` と、新設駅は HeartRails Express API）。
 - `list-suburb.txt`: 一律付与を受けていた郊外の主要駅＋四ツ谷。`list-tokyo23.txt`: 東京23区。
-  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。`list-city-2026-11.txt`: 横浜・川崎・さいたま・千葉の20駅と名古屋・福岡・仙台の11駅（2026-11-02・実験31）。4つで `lib/all-stations.ts` の620駅すべて。
+  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。`list-city-2026-11.txt`: 横浜・川崎・さいたま・千葉の20駅と名古屋・福岡・仙台の11駅（2026-11-02・実験31）。4つで `lib/all-stations.ts` の620駅すべて。`stations.json` にはサイトに無い駅（吉祥寺など）も入っている。
   大阪王将は10/08版を差し込んだまま（公式の店舗検索がメンテナンス中）なので、`gen_ts.py` で全体を作り直すと大阪王将の行が消える。
   一部の駅だけ足すときは、その駅のリストで生成した駅ブロックだけを既存ファイルに差し込む。
 - `cache/` `stores/` `matched.json` は生成物でコミットしない。
@@ -41,6 +41,8 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 ## 判定の決まり
 
 - 判定に使うのは各チェーンの公式サイト・公式APIだけ。
+- 地域チェーン: `chains-regional.txt` のチェーンは `list-city-2026-11.txt` の駅にだけ載せる（既存の駅の掲載は動かさない）。取得は各 `fetch/<slug>.py`。
+- 公式の店舗ページに、その駅から徒歩11分以上と書かれた店は「少し歩く」枠へ移す（`match.py` の `WALK_FAR`）。徒歩の分数は `check-store-pages.py` の walk に残る。2026-11-02 の31駅984店で、その駅からの徒歩分が公式に書かれていたのは122店、11分以上は1店。残りの862店は直線800m以内の判定のまま。
 - 対象都府県は `match.py` の `PREFS`（`fetch/_enrich_coords.py`・`_enrich_notes.py` と同じ）。新しい県の駅を足すときは3つとも足す。足さないと、スシロー・サブウェイ・コメダが住所の位置だけで判定され、マクドナルドの一時休業も拾えない。
 - 店の位置は公式座標を使う（全体の約98%）。NAVITIME系（吉野家・松屋・松のや・かつや・はなまるうどん・
   ドトール・エクセルシオール）とサイゼリヤの公式座標は日本測地系なので、世界測地系に直してから使う
