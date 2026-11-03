@@ -1,6 +1,6 @@
 ---
 slug: ichigogari-izu-kodzure
-title: 伊豆のいちご狩り 子連れガイド｜3歳未満無料・ベビーカーで入れる園と入れない園【2026-27】
+title: 伊豆のいちご狩り 子連れガイド｜予約不要・3歳未満無料の園と、ベビーカーで入れる園【2026-27】
 metaDescription: >-
   伊豆のいちご狩り（伊豆の国市・東伊豆町）を子連れ目線で3園比較。江間いちご狩りセンターは12月19日開園・ベビーカー不可、伊豆長岡いちご狩りセンターは1月2日開園予定・高い位置で栽培、いちごらんど中西は全ハウス高設栽培でベビーカー可。料金・3歳未満無料・予約の要否を公式で確認しました。
 category: today-doko
@@ -12,7 +12,6 @@ heroAlt: 屋外で子どもとおでかけを楽しむ親子の様子（イメ�
 area: shizuoka
 quickInfo:
   ageRanges:
-    - 0-1
     - 2-3
     - 4-6
   place:
@@ -169,7 +168,8 @@ lede: >-
 
 ## 関連記事
 
-- [伊豆の子連れおでかけスポット](/article/izu-kodzure-spot)
-- [伊豆の赤ちゃん連れの宿](/article/izu-akachan-yado)
+- [千葉の梨狩り 子連れガイド](/article/nashigari-chiba-kodzure)
+- [関東のぶどう狩り 子連れガイド](/article/budougari-kanto-kodzure)
+- [伊豆アニマルキングダムに泊まれる？](/article/stay-izu-animal-kingdom-kodzure)
 
 **確認日：2026年11月3日｜出典：江間いちご狩りセンター・伊豆長岡いちご狩りセンター・いちごらんど中西の各公式サイト**

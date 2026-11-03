@@ -1223,5 +1223,20 @@
 "/article/benitora-gyozabo-kodzure-koryaku",
 "/article/ichikakuya-kodzure-koryaku",
 "/article/yamaokaya-kodzure-koryaku"
+],
+"ski-gala-yuzawa-kodzure": [
+"/article/camp-arinomien-sammu-kodzure",
+"/article/ski-karuizawa-prince-kodzure",
+"/article/ski-naeba-kodzure"
+],
+"ski-karuizawa-prince-kodzure": [
+"/article/camp-rising-field-karuizawa-kodzure",
+"/article/ski-gala-yuzawa-kodzure",
+"/article/ski-naeba-kodzure"
+],
+"ski-naeba-kodzure": [
+"/article/adventure-world-kosodate",
+"/article/ski-gala-yuzawa-kodzure",
+"/article/ski-karuizawa-prince-kodzure"
 ]
 }
