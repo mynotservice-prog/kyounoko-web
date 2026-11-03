@@ -69,6 +69,15 @@ function normSub(raw) {
  */
 const UNCONFIRMED = { value: '未確認' };
 const CORRECTIONS = {
+  uobei: {
+    reason: '2026-10-24 再照合: 運営元の元気寿司グループ公式FAQ「飲食物の持ち込みは可能ですか？」に「なお、乳幼児のミルクや離乳食についてはお持ち込みいただけます。」と明記。9/25 は uobei.info だけを見て「記載なし」としていた（genkisushi 側に接続できなかった）。',
+    quote: '飲食物のお持ち込みはお断りさせていただいております。なお、乳幼児のミルクや離乳食についてはお持ち込みいただけます。',
+    sourceUrl: 'https://faq.genki-gdc.co.jp/%E9%A3%B2%E9%A3%9F%E7%89%A9%E3%81%AE%E6%8C%81%E3%81%A1%E8%BE%BC%E3%81%BF%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b2e',
+    checkedAt: '2026-10-24',
+    cells: {
+      mochikomi: { value: '明記OK', note: '元気寿司グループ公式FAQ（2026-10-24確認）' },
+    },
+  },
   yuzuan: {
     reason: '公式ページの持ち込みの一文は「食物アレルギーをお持ちのお子様用」が対象。一般の離乳食の持ち込み可否は書かれていないため、持ち込みは「記載なし」とする（温め・お湯は明記あり）。',
     cells: {

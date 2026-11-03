@@ -1,0 +1,618 @@
+{
+  "note": "根拠のない点数・順位／出所のない比率・回数・年数／記録のない調査の体裁の、既知の未処置分。scripts/check-fabricated-claims.mjs は、ここに無い「記事×型」だけを exit 1 にする。記事を直したら、その行を消す（消し忘れは検査が「もう当たっていない行」として表示する）。until は直す予定日で、過ぎると目立つ警告になる（--fail-on-expired で exit 1）。行を足すのは「見逃しの追認」なので、理由を note に書くこと。直す順番と根拠: ~/.claude/company/reports/2026-10-10/kyounoko-unfounded-scores-audit.md",
+  "updatedAt": "2026-10-10",
+  "rules": {
+    "score": "点数（◯軸×◯点・◯点満点・NN/50・採点）",
+    "rank": "順位（見出し・表の「N位」・本文の「総合N位」）",
+    "ratio": "出所のない比率・回数・年数",
+    "survey": "記録のない調査の体裁（ママ◯人に聞いた 等）"
+  },
+  "visitBacked": {},
+  "ignore": [
+    {
+      "slug": "imohori-kanto-kodzure",
+      "rule": "rank",
+      "note": "店選びの「優先度」の表（1位＝手を洗える場所）。施設や商品の順位ではない。目視で誤検知と判断（2026-10-10）。KY-E4 の比較基準で 12/01 まで凍結"
+    },
+    {
+      "slug": "veloce-kodzure-koryaku",
+      "rule": "rank",
+      "note": "席のタイプを「子連れに向いている順」に並べた見出し。施設や商品の順位ではない。目視で誤検知と判断（2026-10-10）"
+    },
+    {
+      "slug": "natsuyasumi-keikaku-2026-kodzure",
+      "rule": "ratio",
+      "note": "「家4：外3：体験2：休息1」は過ごし方の配分の目安で、利用実績の比率ではない。目視で誤検知と判断（2026-10-10）"
+    }
+  ],
+  "entries": [
+    {
+      "slug": "2sai-kanshaku-koekake-top10",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "2sai-kanshaku-koekake-top10",
+      "rule": "survey",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "baby-senzai-ranking",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "babycar-yarakashi-50-keikenshudan",
+      "rule": "survey",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "babysitter-toha",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "bento-takeout-chain-kodzure-4sha",
+      "rule": "rank",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "bento-takeout-chain-kodzure-4sha",
+      "rule": "ratio",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "bento-takeout-chain-kodzure-4sha",
+      "rule": "score",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "burger-chain-kodzure-ranking-2026-5sha",
+      "rule": "rank",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "burger-chain-kodzure-ranking-2026-5sha",
+      "rule": "score",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "cafe-3chain-kodzure-hikaku",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "cafe-3chain-kodzure-hikaku",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "cafe-chain-kodzure-ranking-2026-6sha",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "cafe-chain-kodzure-ranking-2026-6sha",
+      "rule": "ratio",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "cafe-chain-kodzure-ranking-2026-6sha",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "dakkohimo-ranking-2026",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "doutor-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用"
+    },
+    {
+      "slug": "doutor-kodzure-koryaku",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用"
+    },
+    {
+      "slug": "famires-kodzure-ranking-2026-10sen",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "famires-kodzure-ranking-2026-10sen",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "famisapo-toha",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "gyudon-4chain-kodzure-hayami",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・牛丼の採点の順位への言及"
+    },
+    {
+      "slug": "gyudon-chain-kodzure-ranking-2026-4sha",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "gyudon-chain-kodzure-ranking-2026-4sha",
+      "rule": "ratio",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "gyudon-chain-kodzure-ranking-2026-4sha",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "halloween-kasou-junbi",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "hottomotto-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-11-12",
+      "note": "便1・弁当の採点の順位を1文で引用"
+    },
+    {
+      "slug": "ichiji-hoiku-toha",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "jitanhaden-ranking-7sen",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "kagonoya-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・しゃぶしゃぶの採点の順位を1文で引用（noindex）"
+    },
+    {
+      "slug": "kaiten-sushi-4chain-comparison",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kakigori-softcream-chain-kodzure-hikaku",
+      "rule": "rank",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "kakigori-softcream-chain-kodzure-hikaku",
+      "rule": "ratio",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "kakigori-softcream-chain-kodzure-hikaku",
+      "rule": "score",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "kanto-doubutsuen-1sai-kara-ranking",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kodomo-gyuniku-itsukara",
+      "rule": "ratio",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "kodomo-no-hi-kyaraben",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kodomo-okiniiri-spot-mama-50-shounin",
+      "rule": "score",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kodomo-okiniiri-spot-mama-50-shounin",
+      "rule": "survey",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kodzure-famires-15sen",
+      "rule": "rank",
+      "until": "2027-01-14",
+      "note": "便5・28日1,265クリック。用途別の順位表と出所不明の根拠2か所"
+    },
+    {
+      "slug": "kodzure-famires-15sen",
+      "rule": "score",
+      "until": "2027-01-14",
+      "note": "便5・28日1,265クリック。用途別の順位表と出所不明の根拠2か所"
+    },
+    {
+      "slug": "kodzure-famires-zenkoku-kanzen-2026",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "kodzure-famires-zenkoku-kanzen-2026",
+      "rule": "ratio",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "koromogae-kodomofuku-shuunou-shobun",
+      "rule": "survey",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "kourakuen-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・ラーメンの採点の順位を1文で引用"
+    },
+    {
+      "slug": "maido-ookini-shokudo-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-11-26",
+      "note": "便2・定食の採点の順位を1文で引用（noindex）"
+    },
+    {
+      "slug": "maido-ookini-shokudo-kodzure-koryaku",
+      "rule": "score",
+      "until": "2026-11-26",
+      "note": "便2・定食の採点の順位を1文で引用（noindex）"
+    },
+    {
+      "slug": "mochikaeri-sushi-chain-kodzure-4sha",
+      "rule": "rank",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "mochikaeri-sushi-chain-kodzure-4sha",
+      "rule": "ratio",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "mochikaeri-sushi-chain-kodzure-4sha",
+      "rule": "score",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "natsu-drink-chain-kodzure-ranking-2026-5sha",
+      "rule": "rank",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "natsu-drink-chain-kodzure-ranking-2026-5sha",
+      "rule": "score",
+      "until": "2026-11-12",
+      "note": "便1・採点12本の1つ"
+    },
+    {
+      "slug": "online-eikaiwa-vs-taimen",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "onyasai-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・しゃぶしゃぶの採点の順位を1文で引用"
+    },
+    {
+      "slug": "origin-bento-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-11-12",
+      "note": "便1・弁当の採点の順位を1文で引用（noindex）"
+    },
+    {
+      "slug": "ramen-chain-kodzure-ranking-2026-5sha",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "ramen-chain-kodzure-ranking-2026-5sha",
+      "rule": "ratio",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "ramen-chain-kodzure-ranking-2026-5sha",
+      "rule": "score",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "reitou-shokuhin-ranking",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "ringer-hut-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・ラーメンの採点の順位を1文で引用"
+    },
+    {
+      "slug": "sanmarc-cafe-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用"
+    },
+    {
+      "slug": "sanmarc-cafe-kodzure-koryaku",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用"
+    },
+    {
+      "slug": "seal-book-ranking",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "shabushabu-chain-kodzure-ranking-2026-5sha",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "shabushabu-chain-kodzure-ranking-2026-5sha",
+      "rule": "ratio",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "shabushabu-chain-kodzure-ranking-2026-5sha",
+      "rule": "score",
+      "until": "2026-12-10",
+      "note": "便4・採点12本の1つ"
+    },
+    {
+      "slug": "shabushabu-yakiniku-buffet-3chain",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "shabuyo-kodomo-ryokin",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "shabuyou-kodzure-koryaku",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "「我が家は月1〜2回利用」。実験6の凍結slug（10/01判定済み・解除はCOO待ち）・休止リスト。凍結が解けるまで触らない"
+    },
+    {
+      "slug": "shitsunai-asobiba-4brand-tokyo",
+      "rule": "ratio",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "shokumotsu-allergy-toha-kanzen-guide",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "原因食品の順位と発症率の表に出典が無い（noindex）"
+    },
+    {
+      "slug": "starbucks-kodzure-koryaku",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "takeout-bento-kodzure-anzen-guide",
+      "rule": "score",
+      "until": "2026-11-12",
+      "note": "便1・弁当の採点への言及"
+    },
+    {
+      "slug": "teishoku-chain-kodzure-ranking-4sha",
+      "rule": "rank",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "teishoku-chain-kodzure-ranking-4sha",
+      "rule": "score",
+      "until": "2026-11-26",
+      "note": "便2・採点12本の1つ"
+    },
+    {
+      "slug": "tokyo-23ku-data-comparison-jiyugaoka-futako",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-23ku-family-friendly-area-rankings-3",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-23ku-family-score-ranking-2026",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-23ku-family-score-ranking-2026",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-cheap-lunch-800-station-top",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-line-family-friendly-ranking",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-line-family-friendly-ranking",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-park-ranking-mom50-vote",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-park-ranking-mom50-vote",
+      "rule": "survey",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-rainy-strong-station-data",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-station-kodzure-shop-density-top20-2026",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-station-kodzure-shop-density-top20-2026",
+      "rule": "score",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tokyo-station-private-room-ranking",
+      "rule": "rank",
+      "until": "2027-03-31",
+      "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "tullys-coffee-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・カフェと夏ドリンクの採点の順位を1文で引用"
+    },
+    {
+      "slug": "udon-chain-kodzure-4sha-hikaku",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "udon-chain-kodzure-4sha-hikaku",
+      "rule": "ratio",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "udon-chain-kodzure-4sha-hikaku",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "udon-soba-3chain-kodzure",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "udon-soba-3chain-kodzure",
+      "rule": "ratio",
+      "until": "2027-01-31",
+      "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "ueshima-coffee-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用（noindex）"
+    },
+    {
+      "slug": "ueshima-coffee-kodzure-koryaku",
+      "rule": "score",
+      "until": "2026-12-03",
+      "note": "便3・カフェの採点の順位と点数を1文で引用（noindex）"
+    },
+    {
+      "slug": "yakiniku-5chain-kodomo-2026",
+      "rule": "rank",
+      "until": "2027-01-31",
+      "note": "「総合1位」の理由（公式の案内の有無）は本文に書いてある。順位の表現を残すかは未判断。2026-10-02 に事実訂正済み"
+    },
+    {
+      "slug": "yuzuan-kodzure-koryaku",
+      "rule": "rank",
+      "until": "2026-12-10",
+      "note": "便4・しゃぶしゃぶの採点の順位を1文で引用"
+    }
+  ]
+}

@@ -9,9 +9,9 @@ import { sendLinePush, isLinePushConfigured } from '@/lib/line';
  * 運営者へ LINE push する。
  *
  * ## 認可
- * 環境変数 CRON_SECRET がセットされている場合、`Authorization: Bearer <secret>`
- * または `?token=<secret>` を必須にする（Vercel Cron は CRON_SECRET を
- * 自動で Authorization ヘッダに付与する）。未設定なら誰でも実行可（開発用）。
+ * 環境変数 CRON_SECRET の `Authorization: Bearer <secret>` または `?token=<secret>`
+ * を必須にする（Vercel Cron は CRON_SECRET を自動で Authorization ヘッダに付与する）。
+ * CRON_SECRET 未設定なら 503 で拒否する（fail-closed。2026-10-09 まで未設定だと誰でも実行可だった）。
  *
  * ## クエリ
  * - ?force=1 … 急落が無くても通知を送る（配線の動作確認用）。
@@ -26,7 +26,10 @@ export const maxDuration = 30;
 
 function isAuthorized(req: Request): boolean {
   const secret = process.env.CRON_SECRET;
-  if (!secret) return true;
+  // fail-closed: 未設定なら誰にも許可しない（以前は未設定だと誰でも実行できた）。
+  // 本番は CRON_SECRET 設定済み（2026-10-09 確認）。Vercel Cron はこの値を
+  // Authorization: Bearer に自動付与する。
+  if (!secret) return false;
   const url = new URL(req.url);
   const fromQuery = url.searchParams.get('token');
   const fromHeader = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
@@ -34,6 +37,10 @@ function isAuthorized(req: Request): boolean {
 }
 
 export async function GET(req: Request) {
+  if (!process.env.CRON_SECRET) {
+    // fail-closed: 未設定のままデプロイしても誰にも実行させない
+    return NextResponse.json({ ok: false, error: 'CRON_SECRET is not configured' }, { status: 503 });
+  }
   if (!isAuthorized(req)) {
     return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 });
   }

@@ -19,6 +19,7 @@ import {
   resolveOutingAnchor,
   type OutingPlan,
 } from '@/lib/outing-plan';
+import { getVerifiedStores } from '@/lib/station-verified-stores';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import { TodayConditionForm } from '@/components/today/TodayConditionForm';
@@ -559,9 +560,23 @@ export default async function TodayPage({ searchParams }: Props) {
 
   // ?slot=lunch: お昼スロット単体ビュー（子連れで入れる店一覧。最多需要）
   if (isTokyoAnchor && slotParam === 'lunch') {
-    const anchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
+    const baseAnchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
+    // 区起点（駅の指定なし）は、プランと同じ決め方でお昼を探す駅を1つ決め、その駅の実在店だけを並べる
+    const wardLunchStation =
+      baseAnchor && !baseAnchor.stationSlug
+        ? buildOutingPlan({
+            ward: wardParam,
+            age: query.age as AgeTag | undefined,
+            weather: query.weather as Weather | undefined,
+            morningVariant: num(sp.vm),
+          })?.lunchStation
+        : undefined;
+    const anchor =
+      baseAnchor && wardLunchStation
+        ? { ...baseAnchor, stationSlug: wardLunchStation.slug, stationName: wardLunchStation.name }
+        : baseAnchor;
     if (anchor) {
-      const { ward: wardRest, chain } = lunchCandidates(
+      const { ward: wardRestAll, chain } = lunchCandidates(
         anchor.areaKey,
         anchor.regionLabel,
         {
@@ -570,6 +585,8 @@ export default async function TodayPage({ searchParams }: Props) {
         },
         anchor.stationSlug,
       );
+      // 区起点では、実在を確かめていない区内の実店舗スポットは並べない
+      const wardRest = wardLunchStation ? [] : wardRestAll;
       // 駅近の個人店（チェーンより先に出す）。/spot ページは無いので駅ページの個人店一覧へ
       const indieRests = indieLunchCandidates(anchor.stationSlug).map(indieToLunchSpot);
       const indieHref = anchor.stationSlug
@@ -589,13 +606,21 @@ export default async function TodayPage({ searchParams }: Props) {
               </nav>
             </div>
             <LunchListView
-              anchorLabel={anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel}
+              anchorLabel={
+                wardLunchStation
+                  ? `${anchor.regionLabel}・${wardLunchStation.name}駅`
+                  : anchor.stationName
+                    ? `${anchor.stationName}駅`
+                    : anchor.regionLabel
+              }
               wardName={anchor.regionLabel}
               wardRest={wardRest}
               chain={chain}
               ageLabel={ageLabel}
               indies={indieRests}
               indieHref={indieHref}
+              chainVerifiedAt={anchor.stationSlug ? getVerifiedStores(anchor.stationSlug)?.verifiedAt : undefined}
+              chainHref={anchor.stationSlug ? `/station/${anchor.stationSlug}#section-chains` : undefined}
             />
             <KkFooter />
           </div>
@@ -873,8 +898,8 @@ export default async function TodayPage({ searchParams }: Props) {
                       : '今日は外で、子連れ歓迎のお店で食べる。'}
                   </h2>
                   <p className="td3-lg-p">
-                    ベビーカー入店OK・キッズメニュー・キッズチェアが揃った
-                    ファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
+                    子連れで入りやすいファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
+                    設備は店舗によって違うので、行く前に各店の公式ページでご確認ください。
                     {query.area === 'tokyo'
                       ? '駅単位でさらに細かく探したい場合は下の「駅から絞り込む」へ。'
                       : ''}
@@ -897,7 +922,7 @@ export default async function TodayPage({ searchParams }: Props) {
                     子連れ歓迎ファミレス・カフェ {restaurants.length}店
                   </h3>
                   <p className="today-section-lede">
-                    ベビーカー入店OK・キッズメニュー・キッズチェアありの実在店舗。
+                    子連れで入りやすいお店の候補です。設備は店舗によって違うので、行く前に各店の公式ページでご確認ください。
                     {query.area && query.area !== 'all'
                       ? `${getAreaName(query.area)}エリアから厳選。`
                       : '全国の人気店を popular順で。'}
@@ -937,7 +962,7 @@ export default async function TodayPage({ searchParams }: Props) {
                     <span className="td3-lg-cta-body">
                       <span className="td3-lg-lab">DEEPER · 駅から絞り込む</span>
                       <span className="td3-lg-cta-title">東京エリアの駅から子連れOK店を探す</span>
-                      <span className="td3-lg-note">23区484駅・40路線対応 / ベビーカーOK・個室・雨の日OK等で絞り込み可</span>
+                      <span className="td3-lg-note">23区484駅・40路線対応 / 個室・キッズメニュー・雨の日などの条件別ページあり</span>
                     </span>
                     <span className="td3-lg-cta-arrow" aria-hidden="true">
                       <KkIcon name="arrow-right" size={20} sw={2} />

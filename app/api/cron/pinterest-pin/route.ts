@@ -17,7 +17,7 @@ import {
  * Pinterest へ投稿する。これにより 700本超の公開記事を数か月かけて自動で
  * ピン化し、検索駆動の常緑流入を作る。
  *
- * 認証: CRON_SECRET の Bearer / ?token=（Vercel Cron は Authorization に自動付与）。
+ * 認証: CRON_SECRET の Bearer / ?token=（Vercel Cron は Authorization に自動付与）。未設定なら 503（fail-closed）。
  * 必要env: PINTEREST_APP_ID / PINTEREST_APP_SECRET / PINTEREST_REFRESH_TOKEN
  *          / KV_REST_API_URL / KV_REST_API_TOKEN（冪等性に必須）。
  * 冪等性: KV `pinterest:state` に投稿済み slug と初投稿日時を保存して二重投稿を防止。
@@ -37,7 +37,10 @@ type PinState = {
 
 function isAuthorized(req: Request): boolean {
   const secret = process.env.CRON_SECRET;
-  if (!secret) return true;
+  // fail-closed: 未設定なら誰にも許可しない（以前は未設定だと誰でも実行できた）。
+  // 本番は CRON_SECRET 設定済み（2026-10-09 確認）。Vercel Cron はこの値を
+  // Authorization: Bearer に自動付与する。
+  if (!secret) return false;
   const url = new URL(req.url);
   const fromQuery = url.searchParams.get('token');
   const fromHeader = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
@@ -77,6 +80,10 @@ function interleaveByCategory(articles: FileArticleMeta[]): FileArticleMeta[] {
 }
 
 export async function GET(request: NextRequest) {
+  if (!process.env.CRON_SECRET) {
+    // fail-closed: 未設定のままデプロイしても誰にも実行させない
+    return NextResponse.json({ ok: false, error: 'CRON_SECRET is not configured' }, { status: 503 });
+  }
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

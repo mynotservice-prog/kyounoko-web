@@ -1,0 +1,571 @@
+{
+ "note": "scripts/station-verify/building-access.json の駅直結が確認済みの建物。stations は公式の直結先を駅slugに直したもの",
+ "buildings": {
+  "yaechika": {
+   "name": "ヤエチカ（八重洲地下街）",
+   "stations": [
+    "tokyo"
+   ],
+   "evidence": "■JR各線「東京駅」八重洲地下中央口　直結",
+   "source": "https://www.yaechika.com/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "八重洲地下街"
+   ]
+  },
+  "kitte-marunouchi": {
+   "name": "ＫＩＴＴＥ丸の内",
+   "stations": [
+    "tokyo"
+   ],
+   "evidence": "丸ノ内線東京駅　地下道より直結",
+   "source": "https://marunouchi.jp-kitte.jp/guide/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "KITTE"
+   ]
+  },
+  "gransta-tokyo": {
+   "name": "グランスタ東京",
+   "stations": [
+    "tokyo"
+   ],
+   "evidence": "東京駅の1階から地下1階に広がり、今までのエキナカの概念を超える新体験をご提供いたします。",
+   "source": "https://www.gransta.jp/mall/gransta_tokyo/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "coredo-muromachi-terrace": {
+   "name": "コレド室町テラス",
+   "stations": [
+    "mitsukoshimae",
+    "shin-nihombashi"
+   ],
+   "evidence": "どの施設へも地下通路などを利用して、雨の日でも傘を差さずに巡ることができます。",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/special/23-085/cdm-accessguide.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "COREDO室町テラス",
+    "コレド室町テラス"
+   ]
+  },
+  "coredo-muromachi-2": {
+   "name": "コレド室町2",
+   "stations": [
+    "mitsukoshimae",
+    "shin-nihombashi"
+   ],
+   "evidence": "東京メトロ半蔵門線・銀座線「三越前」駅直結（A6番出口）",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/index.html#access",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "コレド室町2",
+    "COREDO室町2"
+   ]
+  },
+  "tokyo-midtown-yaesu": {
+   "name": "東京ミッドタウン八重洲",
+   "stations": [
+    "tokyo"
+   ],
+   "evidence": "JR「東京」駅　地下直結（八重洲地下街経由）、東京メトロ丸の内線「東京」駅　地下直結（八重洲地下街経由）",
+   "source": "https://www.yaesu.tokyo-midtown.com/access",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ミッドタウン八重洲"
+   ]
+  },
+  "nihombashi-takashimaya-sc": {
+   "name": "日本橋高島屋S.C.",
+   "stations": [
+    "nihombashi"
+   ],
+   "evidence": "東京メトロ 銀座線・東西線「日本橋駅」直結",
+   "source": "https://www.takashimaya.co.jp/nihombashi/sys_access.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "高島屋S.C",
+    "日本橋高島屋"
+   ]
+  },
+  "tokyo-midtown-hibiya": {
+   "name": "東京ミッドタウン日比谷",
+   "stations": [
+    "hibiya"
+   ],
+   "evidence": "東京メトロ千代田線・日比谷線 ・都営地下鉄三田線「日比谷」駅直結",
+   "source": "https://www.hibiya.tokyo-midtown.com/jp/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ミッドタウン日比谷"
+   ]
+  },
+  "toranomon-hills-business-tower": {
+   "name": "虎ノ門ヒルズ ビジネスタワー",
+   "stations": [
+    "toranomon",
+    "toranomon-hills"
+   ],
+   "evidence": "○東京メトロ日比谷線『虎ノ門ヒルズ駅』直結",
+   "source": "https://www.toranomonhills.com/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "toranomon-hills-station-tower": {
+   "name": "虎ノ門ヒルズ ステーションタワー",
+   "stations": [
+    "toranomon",
+    "toranomon-hills"
+   ],
+   "evidence": "東京メトロ日比谷線「虎ノ門ヒルズ駅」A2出口直結",
+   "source": "https://www.ehills.co.jp/rp/dfw/EHILLS/building/roadmap/toramon-statower/toramon-statower.php",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "azabudai-hills": {
+   "name": "麻布台ヒルズ",
+   "stations": [
+    "roppongi-itchome",
+    "kamiyacho"
+   ],
+   "evidence": "○東京メトロ日比谷線『神谷町駅』　5番出口　直結",
+   "source": "https://www.azabudai-hills.com/access/index.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "ark-hills-south-tower": {
+   "name": "アークヒルズ サウスタワー",
+   "stations": [
+    "roppongi-itchome"
+   ],
+   "evidence": "東京メトロ南北線『六本木一丁目駅』3番出口直結",
+   "source": "https://www.arkhills.com/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "atre-akihabara-1": {
+   "name": "アトレ秋葉原1（施設サイト名：アトレ秋葉原）",
+   "stations": [
+    "akihabara"
+   ],
+   "evidence": "※アトレ1の営業時間・3Fアトレ1改札口の営業時間により変更になる場合がございます。",
+   "source": "https://www.atre.co.jp/akihabara/service/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "アトレ秋葉原"
+   ]
+  },
+  "yodobashi-akiba": {
+   "name": "ヨドバシAkiba",
+   "stations": [
+    "akihabara"
+   ],
+   "evidence": "秋葉原駅の5路線に直結！",
+   "source": "https://www.yodobashi-akiba.com/information/access_map.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ヨドバシAKIBA"
+   ]
+  },
+  "ecute-ueno": {
+   "name": "エキュート上野",
+   "stations": [
+    "ueno"
+   ],
+   "evidence": "上野駅直結の商業施設「エキュート上野」。",
+   "source": "https://media.jreast.co.jp/articles/114",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "shinagawa-east-one-tower": {
+   "name": "品川イーストワンタワー",
+   "stations": [
+    "shinagawa"
+   ],
+   "evidence": "東京の南の玄関口・品川駅直結の品川イーストワンタワー。",
+   "source": "https://www.e-onetower.com/access.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "newoman-takanawa": {
+   "name": "ニュウマン高輪（NEWoMan TAKANAWA）",
+   "stations": [
+    "takanawa-gateway"
+   ],
+   "evidence": "JR高輪ゲートウェイ駅直結",
+   "source": "https://www.jebl.co.jp/building/thelinkpillar-1-north/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "tamachi-tower": {
+   "name": "田町タワーモール",
+   "stations": [
+    "mita"
+   ],
+   "evidence": "都営地下鉄三田線・浅草線「三田」駅 直結",
+   "source": "https://tamachi-towermall.com/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "keio-mall": {
+   "name": "京王モール",
+   "stations": [
+    "shinjuku"
+   ],
+   "evidence": "新宿駅から直結の「京王モール」の中央にある、京王モールサービスセンターでは、宝くじやtotoなどを販売しております。",
+   "source": "https://ekishop.keio-sc.jp/keiomall-keiomallannex/shop/detail/?scd=000769",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "京王モール"
+   ]
+  },
+  "lumine-est-shinjuku": {
+   "name": "ルミネエスト新宿",
+   "stations": [
+    "shinjuku"
+   ],
+   "evidence": "JR新宿駅「中央東口」改札または「東口」改札より徒歩1分（駅直結）",
+   "source": "https://media.jreast.co.jp/articles/3134",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ルミネエスト"
+   ]
+  },
+  "lumine-shinjuku": {
+   "name": "ルミネ新宿（ルミネ1・ルミネ2）",
+   "stations": [
+    "shinjuku"
+   ],
+   "evidence": "京王線 ルミネ口より直通",
+   "source": "https://www.lumine.ne.jp/shinjuku/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ルミネ新宿"
+   ]
+  },
+  "cocoon-tower": {
+   "name": "総合校舎モード学園コクーンタワー",
+   "stations": [
+    "shinjuku"
+   ],
+   "evidence": "最寄駅からのアクセス 新宿（西口）駅前、徒歩2分。  JR・小田急・京王・地下鉄から地下街が直結。",
+   "source": "https://www.mode.ac.jp/tokyo/access",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "seibu-shinjuku-pepe": {
+   "name": "西武新宿ペペ & Brick St.",
+   "stations": [
+    "seibi-shinjuku"
+   ],
+   "evidence": "西武新宿ペペ2階が西武新宿線 西武新宿駅と直結",
+   "source": "https://www.seibu-shop.jp/shinjuku/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "kinshicho-termina": {
+   "name": "錦糸町ステーションビル テルミナ",
+   "stations": [
+    "kinshicho"
+   ],
+   "evidence": "錦糸町駅直結の駅ビル「TERMINA」。100店舗以上のショップと施設。",
+   "source": "http://www.termina.info/service/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "テルミナ"
+   ]
+  },
+  "kinshicho-parco": {
+   "name": "錦糸町PARCO",
+   "stations": [
+    "kinshicho"
+   ],
+   "evidence": "東京メトロ半蔵門線錦糸町駅2番出口直結　JR錦糸町駅南口徒歩1分",
+   "source": "https://www.rakutenchi.co.jp/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "錦糸町PARCO",
+    "錦糸町パルコ"
+   ]
+  },
+  "kinshicho-metropia": {
+   "name": "錦糸町メトロピア",
+   "stations": [
+    "kinshicho"
+   ],
+   "evidence": "東京メトロ錦糸町駅構内の「錦糸町メトロピア」に、「スターバックス」が2025年3月4日（火）にオープンいたします。",
+   "source": "https://www.metro-pro.jp/news/2025/202502261840",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "iy-oimachi": {
+   "name": "イトーヨーカドー 大井町店",
+   "stations": [
+    "oimachi"
+   ],
+   "evidence": "JR京浜東北線 大井町駅 西口 徒歩約1分 東急大井町線 大井町駅 徒歩約1分 りんかい線 大井町駅 C口直結",
+   "source": "https://stores.itoyokado.co.jp/detail/538/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "oimachi-tracks": {
+   "name": "OIMACHI TRACKS",
+   "stations": [
+    "oimachi"
+   ],
+   "evidence": "JR京浜東北線、東急大井町線、東京臨海高速鉄道りんかい線の大井町駅から直結でお越しいただけます。",
+   "source": "http://www.oimachi-tracks.com/en/faq/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "トラックス",
+    "TRACKS"
+   ]
+  },
+  "nishikoyama-ekibiru": {
+   "name": "西小山駅ビル",
+   "stations": [
+    "nishi-koyama"
+   ],
+   "evidence": "西小山駅直結の西小山駅ビルと、西小山駅ビルの北側に位置する西小山第二駅ビル。",
+   "source": "https://www.tokyu-tmd.co.jp/property/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": []
+  },
+  "granduo-kamata": {
+   "name": "グランデュオ蒲田",
+   "stations": [
+    "kamata"
+   ],
+   "evidence": "◯JR京浜東北線 蒲田駅直結",
+   "source": "https://www.granduo.jp/kamata/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "グランデュオ蒲田"
+   ]
+  },
+  "tokyu-plaza-kamata": {
+   "name": "東急プラザ蒲田",
+   "stations": [
+    "kamata"
+   ],
+   "evidence": "JR 京浜東北線「蒲田」駅 直結",
+   "source": "https://tokyu-plaza.com/kamata/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "東急プラザ蒲田"
+   ]
+  },
+  "futako-tamagawa-rise": {
+   "name": "二子玉川ライズ・ショッピングセンター",
+   "stations": [
+    "futako-tamagawa"
+   ],
+   "evidence": "東急田園都市線・大井町線　「二子玉川駅」直結",
+   "source": "https://www.rise.sc/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "二子玉川ライズ"
+   ]
+  },
+  "beans-asagaya": {
+   "name": "ビーンズ阿佐ヶ谷",
+   "stations": [
+    "asagaya"
+   ],
+   "evidence": "JR中央線・総武線「阿佐ケ谷駅」直結",
+   "source": "https://beans.jrtk.jp/asagaya/shop/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ビーンズ阿佐ヶ谷"
+   ]
+  },
+  "echika-ikebukuro": {
+   "name": "エチカ池袋",
+   "stations": [
+    "ikebukuro"
+   ],
+   "evidence": "東京メトロ丸ノ内線/有楽町線/副都心線 「池袋」駅構内",
+   "source": "https://www.metropro-sc.jp/echika-ikebukuro/shop/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "エチカ池袋"
+   ]
+  },
+  "sunshine-city": {
+   "name": "サンシャインシティ",
+   "stations": [
+    "higashi-ikebukuro"
+   ],
+   "evidence": "東池袋駅直結サンシャインシティ地下通路開放時間7:00～23:00",
+   "source": "https://sunshinecity.jp/information/access_train.html",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "サンシャインシティ",
+    "アルパ"
+   ]
+  },
+  "beans-akabane": {
+   "name": "ビーンズ赤羽",
+   "stations": [
+    "akabane"
+   ],
+   "evidence": "JR埼京線・京浜東北線・高崎線・東北本線「赤羽駅」直結",
+   "source": "https://beans.jrtk.jp/akabane/shop/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ビーンズ赤羽"
+   ]
+  },
+  "gran-emio-oizumigakuen": {
+   "name": "グランエミオ大泉学園",
+   "stations": [
+    "oizumi-gakuen"
+   ],
+   "evidence": "「大泉学園」駅北口改札からペデストリアンデッキ直結",
+   "source": "https://www.seibu-shop.jp/oizumi/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "グランエミオ大泉"
+   ]
+  },
+  "lumine-kitasenju": {
+   "name": "ルミネ北千住",
+   "stations": [
+    "kita-senju"
+   ],
+   "evidence": "【改札連絡口】B1 JR常磐線、東京メトロ千代田線・日比谷線、東武線／3F JR常磐線、東京メトロ日比谷線、東武線、つくばエクスプレス",
+   "source": "https://www.lumine.ne.jp/kitasenju/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ルミネ北千住"
+   ]
+  },
+  "kitasenju-marui": {
+   "name": "北千住マルイ",
+   "stations": [
+    "kita-senju"
+   ],
+   "evidence": "千住ミルディス方面改札口から出て目の前が北千住マルイB1Fの入り口です。地下通路にはスロープもあり、直接マルイにつながっています。",
+   "source": "https://www.0101.co.jp/084/access/",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "北千住マルイ"
+   ]
+  },
+  "beans-kameari": {
+   "name": "ビーンズ亀有",
+   "stations": [
+    "kameari"
+   ],
+   "evidence": "施設情報・アクセス｜ビーンズ亀有 | JR常磐線「亀有駅」直結のショッピングセンター",
+   "source": "https://beans.jrtk.jp/kameari/shop/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "ビーンズ亀有"
+   ]
+  },
+  "shapo-koiwa": {
+   "name": "シャポー小岩",
+   "stations": [
+    "koiwa"
+   ],
+   "evidence": "電車でお越しの方\nJR総武線「小岩駅」 直結",
+   "source": "https://shapo.jrtk.jp/koiwa/shop/access.jsp",
+   "checkedAt": "2026-11-02",
+   "addressKeywords": [
+    "シャポー小岩"
+   ]
+  }
+ },
+ "stores": {
+  "goemon|ヤエチカ店": "yaechika",
+  "hoshino-coffee|ヤエチカ店": "yaechika",
+  "pronto|PRONTO ヤエチカ東京駅店": "yaechika",
+  "sushiro|ヤエチカ店": "yaechika",
+  "tenya|八重洲店": "yaechika",
+  "tonkatsu-wako|和幸ヤエチカ店": "yaechika",
+  "yoshinoya|吉野家 ヤエチカ店": "yaechika",
+  "starbucks|ヤエチカ店": "yaechika",
+  "tully-coffee|ヤエチカ店": "yaechika",
+  "pronto|Tokyo City i CAFE by PRONTO": "kitte-marunouchi",
+  "tully-coffee|&TEA KITTE丸の内店": "kitte-marunouchi",
+  "starbucks|グランスタ丸の内店": "gransta-tokyo",
+  "starbucks|グランスタ八重洲店": "gransta-tokyo",
+  "starbucks|コレド室町テラス店": "coredo-muromachi-terrace",
+  "starbucks|コレド室町2店": "coredo-muromachi-2",
+  "starbucks|東京ミッドタウン八重洲店": "tokyo-midtown-yaesu",
+  "starbucks|日本橋高島屋S.C.5階店": "nihombashi-takashimaya-sc",
+  "starbucks|日本橋高島屋S.C.1階店": "nihombashi-takashimaya-sc",
+  "starbucks|東京ミッドタウン日比谷店": "tokyo-midtown-hibiya",
+  "starbucks|虎ノ門ヒルズ ビジネスタワー店": "toranomon-hills-business-tower",
+  "starbucks|虎ノ門ヒルズ ステーションタワー店": "toranomon-hills-station-tower",
+  "starbucks|麻布台ヒルズ店": "azabudai-hills",
+  "starbucks|アークヒルズサウスタワー店": "ark-hills-south-tower",
+  "marugame|丸亀製麺アトレ秋葉原1": "atre-akihabara-1",
+  "starbucks|アトレ秋葉原1店": "atre-akihabara-1",
+  "tonkatsu-wako|和幸ヨドバシAkiba店": "yodobashi-akiba",
+  "starbucks|JR上野駅 入谷改札前店": "ecute-ueno",
+  "starbucks|エキュート上野 公園口店": "ecute-ueno",
+  "excelsior|エクセルシオール カフェ 品川イーストワンタワー店": "shinagawa-east-one-tower",
+  "starbucks|ニュウマン高輪店": "newoman-takanawa",
+  "starbucks|田町タワー店": "tamachi-tower",
+  "doutor|ドトールコーヒーショップ 新宿京王モール店": "keio-mall",
+  "yoshinoya|吉野家 新宿京王モール店": "keio-mall",
+  "kamakura-pasta|Kamakurapasta Fresca ルミネエスト店": "lumine-est-shinjuku",
+  "saint-marc-cafe|サンマルクカフェ ルミネエスト新宿店": "lumine-est-shinjuku",
+  "starbucks|ルミネエスト新宿店": "lumine-est-shinjuku",
+  "tully-coffee|ルミネエスト新宿5F店": "lumine-est-shinjuku",
+  "tully-coffee|ルミネエスト新宿B1店": "lumine-est-shinjuku",
+  "starbucks|ルミネ新宿店": "lumine-shinjuku",
+  "tully-coffee|新宿コクーンタワー店": "cocoon-tower",
+  "starbucks|西武新宿PePe店": "seibu-shinjuku-pepe",
+  "goemon|錦糸町テルミナ店": "kinshicho-termina",
+  "kamakura-pasta|鎌倉パスタ 錦糸町パルコ店": "kinshicho-parco",
+  "starbucks|錦糸町メトロピア店": "kinshicho-metropia",
+  "kfc|イトーヨーカドー大井町店": "iy-oimachi",
+  "kura-sushi|イトーヨーカドー大井町店": "iy-oimachi",
+  "tully-coffee|&TEA 大井町トラックス店": "oimachi-tracks",
+  "saizeriya|サイゼリヤ 西小山駅ビル店": "nishikoyama-ekibiru",
+  "kamakura-pasta|鎌倉パスタ グランデュオ蒲田店": "granduo-kamata",
+  "starbucks|グランデュオ蒲田店": "granduo-kamata",
+  "tully-coffee|グランデュオ蒲田店": "granduo-kamata",
+  "tully-coffee|東急プラザ蒲田店": "tokyu-plaza-kamata",
+  "mcdonalds|二子玉川ライズ店": "futako-tamagawa-rise",
+  "mister-donut|二子玉川ライズオークモール ショップ": "futako-tamagawa-rise",
+  "starbucks|二子玉川ライズ ドッグウッドプラザ店": "futako-tamagawa-rise",
+  "hidakaya|日高屋 ビーンズ阿佐ヶ谷てくて店": "beans-asagaya",
+  "komeda|ビーンズ阿佐ヶ谷店": "beans-asagaya",
+  "starbucks|ビーンズ阿佐ヶ谷駅前店": "beans-asagaya",
+  "starbucks|ビーンズ阿佐ヶ谷てくて店": "beans-asagaya",
+  "hanamaru-udon|はなまるうどん Echika池袋店": "echika-ikebukuro",
+  "komeda|サンシャインシティアルパ店": "sunshine-city",
+  "subway|サブウェイ 池袋サンシャインシティアルパ店": "sunshine-city",
+  "tenya|サンシャイン店": "sunshine-city",
+  "tonkatsu-wako|和幸サンシャインシティ池袋店": "sunshine-city",
+  "goemon|池袋サンシャインシティ店": "sunshine-city",
+  "marugame|丸亀製麺サンシャインシティアルタ": "sunshine-city",
+  "tully-coffee|サンシャイン水族館店": "sunshine-city",
+  "starbucks|池袋サンシャインシティ アルパ 1階店": "sunshine-city",
+  "starbucks|スターバックス ティー&カフェ 池袋サンシャインシティ アルパ2階店": "sunshine-city",
+  "tully-coffee|池袋サンシャインシティアルパ店": "sunshine-city",
+  "doutor|ドトールコーヒーショップ ビーンズ赤羽店": "beans-akabane",
+  "kfc|ビーンズ赤羽店": "beans-akabane",
+  "starbucks|ビーンズ赤羽店": "beans-akabane",
+  "tonkatsu-wako|和幸ビーンズ赤羽店": "beans-akabane",
+  "freshness-burger|フレッシュネスバーガーグランエミオ大泉学園店": "gran-emio-oizumigakuen",
+  "ringer-hut|リンガーハット グランエミオ大泉学園店": "gran-emio-oizumigakuen",
+  "saizeriya|サイゼリヤ グランエミオ大泉学園": "gran-emio-oizumigakuen",
+  "tully-coffee|グランエミオ大泉学園店": "gran-emio-oizumigakuen",
+  "goemon|北千住ルミネ店": "lumine-kitasenju",
+  "starbucks|ルミネ北千住店": "lumine-kitasenju",
+  "tully-coffee|ルミネ北千住店": "lumine-kitasenju",
+  "starbucks|北千住マルイ店": "kitasenju-marui",
+  "starbucks|ビーンズ亀有店": "beans-kameari",
+  "tenya|ビーンズ亀有店": "beans-kameari",
+  "tonkatsu-wako|和幸ビーンズ亀有店": "beans-kameari",
+  "goemon|シャポー小岩店": "shapo-koiwa",
+  "marugame|丸亀製麺シャポー小岩": "shapo-koiwa",
+  "mos-burger|モスバーガーシャポー小岩店": "shapo-koiwa",
+  "tonkatsu-wako|和幸シャポー小岩店": "shapo-koiwa"
+ }
+}

@@ -27,6 +27,7 @@ import { getSpotRanking } from '@/lib/spot-ranking';
 import { getTopFeaturePages } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 import { pickTopPlan } from '@/lib/plans';
+import { getTopPr } from '@/lib/pr-placements';
 import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
 
 export const revalidate = 3600;
@@ -105,6 +106,7 @@ export default async function HomePage() {
   // /ranking の順位がズレないようにする。上位5件を表示し、6〜10位は折りたたみ（目的別ランキングと同じ形）。
   // getSpotRanking は公式写真枠で limit まで埋まった後に GA4 枠が1件足すことがあるので、ここで10件に切る。
   const spotRanking = (await getSpotRanking({ limit: 10 })).slice(0, 10);
+  const topPr = getTopPr();
   const spotRows: KkRowItem[] = spotRanking.map((x, i) => {
     const v = spotToV2(x.spot, i);
     return {
@@ -207,7 +209,20 @@ export default async function HomePage() {
         {/* 5. いま人気のスポット（罫線の行リスト） */}
         <section className="kk-sec">
           <KkSectionTitle as="h2" title="いま人気のスポット" moreHref="/ranking" />
-          <KkRowList items={spotRows.slice(0, 5)} variant="rank" className="grid2" label="人気スポットランキング" />
+          {/* 有償PR枠（lib/pr-placements.ts）は順位の外の6枚目に1枠だけ。番号は付けず「PR」と提供元を出す */}
+          <KkRowList
+            items={
+              topPr
+                ? [
+                    ...spotRows.slice(0, 5),
+                    { href: topPr.href, title: topPr.title, sub: `${topPr.sub}（提供：${topPr.sponsor}）`, img: topPr.img, seed: topPr.id, badge: 'PR' },
+                  ]
+                : spotRows.slice(0, 5)
+            }
+            variant="rank"
+            className="grid2"
+            label="人気スポットランキング"
+          />
           {spotRows.length > 5 && (
             <details className="tv3-purpose-more">
               <summary>6位〜{spotRows.length}位も見る</summary>

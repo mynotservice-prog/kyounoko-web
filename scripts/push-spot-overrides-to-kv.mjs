@@ -23,7 +23,7 @@
  *   node scripts/push-spot-overrides-to-kv.mjs -irhu --fields=note,hiddenTip
  *   node scripts/push-spot-overrides-to-kv.mjs -irhu --with-images
  */
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const arg = (k, d) => {
   const m = process.argv.find((a) => a.startsWith(`--${k}=`));
@@ -34,6 +34,28 @@ const WITH_IMAGES = process.argv.includes('--with-images');
 const SITE = arg('site', 'https://kyounoko.jp');
 const ONLY = arg('fields', '') ? arg('fields', '').split(',').map((s) => s.trim()).filter(Boolean) : null;
 const slugs = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+
+/** .env.local を軽くパース（既存の env を上書きしない）。ADMIN_USER / ADMIN_PASSWORD 用。 */
+function loadEnvLocal() {
+  if (!existsSync('.env.local')) return;
+  for (const line of readFileSync('.env.local', 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+}
+loadEnvLocal();
+
+/**
+ * /api/admin/* は 2026-10-09 から middleware の Basic 認証の内側（Referer だけでは 401）。
+ * .env.local の ADMIN_USER / ADMIN_PASSWORD（本番と同じ値）から Authorization を組み立てる。
+ * 値はログに出さない。
+ */
+function adminBasicAuthHeader() {
+  const u = process.env.ADMIN_USER;
+  const p = process.env.ADMIN_PASSWORD;
+  if (!u || !p) return {};
+  return { Authorization: `Basic ${Buffer.from(`${u}:${p}`, 'utf8').toString('base64')}` };
+}
 
 if (slugs.length === 0) {
   console.error('slugを1つ以上指定してください。例: node scripts/push-spot-overrides-to-kv.mjs -irhu --dry');
@@ -66,7 +88,7 @@ for (const slug of slugs) {
 
   const res = await fetch(`${SITE}/api/admin/spot-overrides`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', Referer: `${SITE}/admin/spots/edit` },
+    headers: { 'Content-Type': 'application/json', Referer: `${SITE}/admin/spots/edit`, ...adminBasicAuthHeader() },
     body: JSON.stringify({ slug, patch }),
   });
   const body = await res.text();
