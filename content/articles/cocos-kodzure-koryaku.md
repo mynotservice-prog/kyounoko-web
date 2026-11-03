@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-10-11'
+updatedAt: '2026-11-03'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/cocos-kodzure-koryaku-mrn2q0d6.jpg"
 lede: >-
   「ココスで離乳食は頼める？持ち込みや温めは？」に、ココス公式の情報で答えます。離乳食向けメニュー・誕生日のサービス・おむつ替え台の店舗数・公式に記載のないこと（ベビーチェア・持ち込み・温め）と、空いている時間帯まで、0-6歳の家族目線でまとめました。（キッズメニューの中身は専用記事で詳解）

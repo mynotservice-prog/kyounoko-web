@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-10-11'
+updatedAt: '2026-11-03'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/gusto-kodzure-koryaku-mra3kj6u.jpg"
 lede: >-
   「ガストは離乳食を温めてくれる？持込はOK？」を1記事で即解決。すかいらーくグループ最大手の**ガスト**は、公式の家族向けページに**「離乳食の持ち込みOK」「キッズチェアがある」「オムツ交換台がある」（※一部の店舗を除く）**と明記＋**猫型配膳ロボBellaBotで2-6歳の食事退屈を撃退**という組み合わせで、0-6歳の家族にとって最も再現性の高いファミレスのひとつ。離乳食ルール・キッズメニュー・配膳ロボ詳細レビュー・安全な取り分けまで、保存版でまとめました。
