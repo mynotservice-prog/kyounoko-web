@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """一覧に座標が無いチェーン（スシロー・サブウェイ・コメダ）の座標を、各店の公式ページ／公式APIから補う。
-対象は首都圏・関西の都府県の店だけ。stores/<slug>.json を上書きし、meta の coord を wgs84 にする。"""
+対象は駅ページのある都府県の店だけ。stores/<slug>.json を上書きし、meta の coord を wgs84 にする。"""
 import json,os,re,sys,time,urllib.request
 from concurrent.futures import ThreadPoolExecutor
 B=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県')
+PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県','愛知県','福岡県','宮城県')
 UA={'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36'}
 def get(u,h=None):
     hh=dict(UA); hh.update(h or {})
@@ -37,6 +37,6 @@ for slug,fn in (('sushiro',sushiro),('subway',subway),('komeda',komeda)):
         if r and 20<r[0]<46 and 122<r[1]<154: s['lat'],s['lng']=r; ok+=1
     json.dump(st,open(p,'w'),ensure_ascii=False,indent=0)
     mp=os.path.join(B,'stores',slug+'.meta.json'); meta=json.load(open(mp)) if os.path.exists(mp) else {}
-    meta['coord']='wgs84'; meta['coord_note']='首都圏・関西の店だけ、各店の公式ページ／公式APIから座標を補った（_enrich_coords.py）。それ以外は座標なし'
+    meta['coord']='wgs84'; meta['coord_note']='駅ページのある都府県の店だけ、各店の公式ページ／公式APIから座標を補った（_enrich_coords.py）。それ以外は座標なし'
     json.dump(meta,open(mp,'w'),ensure_ascii=False,indent=1)
     print(slug,'target',len(todo),'filled',ok,flush=True)

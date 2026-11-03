@@ -428,5 +428,110 @@
   "gate": "inside",
   "evidence": "ドトールコーヒーショップ 東武北千住駅下りホーム店（公式の店名。駅のホーム上の店）",
   "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=1012401"
+ },
+ "doutor|ドトールコーヒーショップ サカエチカ店": {
+  "gate": "outside",
+  "evidence": "公式サイトの題名「サカエチカ｜名古屋 栄の地下街」。駅の改札の外の地下街",
+  "source": "https://sakaechika.com/shop/"
+ },
+ "hoshino-coffee|栄店": {
+  "gate": "outside",
+  "evidence": "公式サイトの題名「サカエチカ｜名古屋 栄の地下街」。駅の改札の外の地下街",
+  "source": "https://sakaechika.com/shop/"
+ },
+ "sukiya|すき家 サカエチカ店": {
+  "gate": "outside",
+  "evidence": "公式サイトの題名「サカエチカ｜名古屋 栄の地下街」。駅の改札の外の地下街",
+  "source": "https://sakaechika.com/shop/"
+ },
+ "tully-coffee|サカエチカ店": {
+  "gate": "outside",
+  "evidence": "公式サイトの題名「サカエチカ｜名古屋 栄の地下街」。駅の改札の外の地下街",
+  "source": "https://sakaechika.com/shop/"
+ },
+ "pronto|PRONTO 京成幕張本郷駅店": {
+  "gate": "outside",
+  "evidence": "京成電鉄の駅ページ「プロント京成幕張本郷店 … 場所 改札外」",
+  "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-makuharihongo.php"
+ },
+ "doutor|ドトールコーヒーショップ 名古屋太閤通り店": {
+  "gate": "outside",
+  "evidence": "NSK公式のフロアガイドで太閤通南口改札の外側の通路に面する。店の紹介に「改札口すぐ」",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000346"
+ },
+ "doutor|ドトールコーヒーショップ 名古屋タワーズ通り店": {
+  "gate": "unknown",
+  "evidence": "NSK公式の図で桜通口改札の西の通路に接するが、入口の向きが読めない",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000349"
+ },
+ "mcdonalds|ＪＲ名古屋駅店": {
+  "gate": "outside",
+  "evidence": "NSK公式のフロアガイドで太閤通南口改札の外側のロビーに面する",
+  "source": "https://www.nsk-eki.com/nagoya/map/detail/?cd=000183"
+ },
+ "starbucks|スターバックス ティー＆カフェ JR名古屋駅 中央コンコース店": {
+  "gate": "outside",
+  "evidence": "公式の住所は中央コンコース内。JR東海の構内図で中央コンコースは改札の外",
+  "source": "https://railway.jr-central.co.jp/station-guide/shinkansen/nagoya/map.html"
+ },
+ "starbucks|JR名古屋駅 広小路口店": {
+  "gate": "unknown",
+  "evidence": "スターバックス公式は「JR名古屋駅構内」のみ",
+  "source": "https://store.starbucks.co.jp/detail-2028/"
+ },
+ "starbucks|JR名古屋駅 新幹線南ラチ内店": {
+  "gate": "inside",
+  "evidence": "公式の店名「新幹線南ラチ内店」",
+  "source": "https://store.starbucks.co.jp/detail-2048/"
+ },
+ "doutor|ドトールコーヒーショップ ＪＲ博多駅新幹線店": {
+  "gate": "inside",
+  "evidence": "公式の住所「博多駅新幹線改札内 ２Ｆ」",
+  "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=2012327"
+ },
+ "starbucks|博多駅新幹線改札内店": {
+  "gate": "inside",
+  "evidence": "公式の店名「博多駅新幹線改札内店」",
+  "source": "https://store.starbucks.co.jp/detail-2288/"
+ },
+ "doutor|ドトールコーヒーショップ 天神駅店": {
+  "gate": "outside",
+  "evidence": "福岡市交通局の令和6年2月22日の発表「天神駅東口改札から出て、天神地下街側にあるカフェ」。公式の住所は天神駅構内B1F",
+  "source": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2023/documents/subwayshopopen0222.pdf"
+ },
+ "kisuke|味の牛たん喜助 JR仙台駅店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "date-gyutan|伊達の牛たん本舗 仙台駅3階牛たん通り店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "rikyu|牛たん炭焼 利久 仙台駅店": {
+  "gate": "outside",
+  "evidence": "JR仙台駅3階の牛たん通り。味の牛たん喜助の公式に「仙台駅新幹線改札降りてすぐ」",
+  "source": "https://www.kisuke.co.jp/jrsendaieki/"
+ },
+ "yamamotoya-honten|山本屋本店 JR名古屋駅店": {
+  "gate": "outside",
+  "evidence": "公式に「名古屋駅コンコース直結。JR在来線・広小路口改札の近く」",
+  "source": "https://yamamotoyahonten.co.jp/shop/"
+ },
+ "date-gyutan|伊達の牛たん本舗 仙台駅1階tekuteせんだい店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR仙台駅1階」のみ",
+  "source": "https://www.dategyu.jp/restaurant/"
+ },
+ "ippudo|一風堂 名古屋驛麺通り店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR名古屋駅 名古屋うまいもん通り内」のみ",
+  "source": "https://stores.ippudo.com/1503"
+ },
+ "maruha-shokudo|まるは食堂 JR名古屋駅店": {
+  "gate": "unknown",
+  "evidence": "公式は「JR名古屋駅構内 名古屋うまいもん通り 広小路口」のみ",
+  "source": "https://www.maruha-net.co.jp/shop/"
  }
 }

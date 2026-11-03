@@ -4,3 +4,5 @@ matched.json
 gen_stat.json
 __pycache__/
 *.log
+store-pages.json
+store-pages-*.json

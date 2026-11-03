@@ -28,6 +28,8 @@ export type SaiChiStation = {
   familyFriendly?: boolean;
   /** 駅周辺の特徴（80字程度） */
   description?: string;
+  /** 追加日。サイトマップの lastmod に使う（一括の更新日より新しい駅だけ持つ） */
+  addedAt?: string;
 };
 
 /**
@@ -366,6 +368,87 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     scale: 'major',
     familyFriendly: true,
     description: '我孫子市の中心駅。アビイクオーレ・イトーヨーカドー我孫子南口店にベビールーム完備。手賀沼観光も近い。',
+  },
+  // ===== 2026-11 追加（さいたま市・千葉市の主要駅。選定の根拠は docs/experiments-active.md 実験31） =====
+  {
+    slug: 'saitama-shintoshin',
+    name: 'さいたま新都心',
+    kana: 'さいたましんとしん',
+    prefecture: 'saitama',
+    area: 'さいたま市大宮区',
+    lines: ['JR京浜東北線', 'JR宇都宮線', 'JR高崎線', 'JR上野東京ライン'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'minami-urawa',
+    name: '南浦和',
+    kana: 'みなみうらわ',
+    prefecture: 'saitama',
+    area: 'さいたま市南区',
+    lines: ['JR京浜東北線', 'JR武蔵野線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'higashi-omiya',
+    name: '東大宮',
+    kana: 'ひがしおおみや',
+    prefecture: 'saitama',
+    area: 'さいたま市見沼区',
+    lines: ['JR宇都宮線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'yono',
+    name: '与野',
+    kana: 'よの',
+    prefecture: 'saitama',
+    area: 'さいたま市浦和区',
+    lines: ['JR京浜東北線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'soga',
+    name: '蘇我',
+    kana: 'そが',
+    prefecture: 'chiba',
+    area: '千葉市中央区',
+    lines: ['JR京葉線', 'JR内房線', 'JR外房線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'inagekaigan',
+    name: '稲毛海岸',
+    kana: 'いなげかいがん',
+    prefecture: 'chiba',
+    area: '千葉市美浜区',
+    lines: ['JR京葉線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'nishi-chiba',
+    name: '西千葉',
+    kana: 'にしちば',
+    prefecture: 'chiba',
+    area: '千葉市中央区',
+    lines: ['JR総武線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
+  },
+  {
+    slug: 'makuhari-hongo',
+    name: '幕張本郷',
+    kana: 'まくはりほんごう',
+    prefecture: 'chiba',
+    area: '千葉市花見川区',
+    lines: ['JR総武線', '京成千葉線'],
+    scale: 'major',
+    addedAt: '2026-11-02',
   },
 ];
 

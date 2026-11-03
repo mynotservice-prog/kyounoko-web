@@ -15,6 +15,7 @@ import {
 // /station/ は3週で唯一プラス成長している面なので、一覧に載せて導線を通す。
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
 import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
+import { REGIONAL_STATIONS, REGIONAL_CITY_NAMES, type RegionalCity } from '@/lib/regional-stations';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -74,7 +75,7 @@ export default function StationIndexPage() {
       <section className="section">
         <div className="container-narrow">
           <header className="page-head" style={{ marginBottom: 32 }}>
-            <span className="eyebrow">東京23区 全484駅 + 関西・神奈川・埼玉・千葉の主要駅</span>
+            <span className="eyebrow">東京23区 全484駅 + 関西・神奈川・埼玉・千葉・名古屋・福岡・仙台の主要駅</span>
             <h1>駅別 子連れランチ・ベビーカー・キッズメニュー店ガイド</h1>
             <p className="lead">
               東京23区の全駅と、関西エリア（大阪・京都・神戸）の主要駅で、公式の店舗検索で実在を確認した飲食チェーンと、ホットペッパーグルメでお子様連れOKと掲載された店を駅ごとにまとめました。
@@ -133,7 +134,7 @@ export default function StationIndexPage() {
             }}>
               関西エリアへジャンプ
             </p>
-            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 16 }}>
               {prefectureOrder.map((pref) => {
                 const stations = byPrefecture.get(pref);
                 if (!stations || stations.length === 0) return null;
@@ -151,6 +152,24 @@ export default function StationIndexPage() {
                   </a>
                 );
               })}
+            </div>
+
+            <p style={{
+              margin: 0,
+              marginBottom: 10,
+              fontSize: 12,
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+              color: 'var(--ink-sub)',
+            }}>
+              名古屋・福岡・仙台へジャンプ
+            </p>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {(['nagoya', 'fukuoka', 'sendai'] as RegionalCity[]).map((city) => (
+                <a key={city} href={`#pref-${city}`} className="chip" style={{ fontSize: 12.5 }}>
+                  {REGIONAL_CITY_NAMES[city]}
+                </a>
+              ))}
             </div>
           </nav>
 
@@ -333,6 +352,33 @@ export default function StationIndexPage() {
                 </h3>
                 <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                   {sorted.map((st) => (
+                    <Link key={st.slug} href={`/station/${st.slug}`} className="chip">
+                      {st.name}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+
+          <h2 style={{
+            fontFamily: 'var(--font-mincho)',
+            fontSize: 24,
+            marginBottom: 8,
+            paddingBottom: 8,
+            borderBottom: '2px solid rgba(201,96,62,0.18)',
+          }}>
+            名古屋・福岡・仙台 <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{REGIONAL_STATIONS.length}駅</span>
+          </h2>
+          {(['nagoya', 'fukuoka', 'sendai'] as RegionalCity[]).map((city) => {
+            const stations = REGIONAL_STATIONS.filter((s) => s.city === city);
+            return (
+              <section key={city} id={`pref-${city}`} style={{ marginBottom: 36, scrollMarginTop: 124 }}>
+                <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
+                  {REGIONAL_CITY_NAMES[city]} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                </h3>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {stations.map((st) => (
                     <Link key={st.slug} href={`/station/${st.slug}`} className="chip">
                       {st.name}
                     </Link>

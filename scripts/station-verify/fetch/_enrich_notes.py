@@ -5,7 +5,7 @@
 import json,os,re,time,urllib.request
 from concurrent.futures import ThreadPoolExecutor
 B=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県')
+PREFS=('東京都','神奈川県','埼玉県','千葉県','大阪府','京都府','兵庫県','奈良県','滋賀県','愛知県','福岡県','宮城県')
 UA={'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36'}
 def get(u):
     for i in range(3):

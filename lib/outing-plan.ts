@@ -125,7 +125,7 @@ export type OutingPlan = {
 
 /** AnyStation → SPOTSのエリアキー（都道府県/地域）。 */
 function areaKeyOf(st: AnyStation): string {
-  if (st.region === 'kansai' || st.region === 'saichi') return st.prefecture;
+  if (st.region === 'kansai' || st.region === 'saichi' || st.region === 'regional') return st.prefecture;
   return st.region; // 'tokyo' | 'kanagawa'
 }
 
