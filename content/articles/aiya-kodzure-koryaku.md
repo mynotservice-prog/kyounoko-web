@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
-updatedAt: '2026-10-07'
+updatedAt: '2026-11-03'
 hero: /img/scenes/meal-17.webp
 heroAlt: 木の丸テーブルで、ごはん・みそ汁・野菜のおかずを囲み、箸を持った男の子と両親が笑い合っている様子（イメージ）
 area: all

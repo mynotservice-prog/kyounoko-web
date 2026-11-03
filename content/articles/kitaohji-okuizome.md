@@ -6,8 +6,8 @@ metaDescription: >-
   個室会席 北大路のお食い初め膳の料金・品書き・サービス料と、東京の8店それぞれの個室の席タイプ、子ども椅子、離乳食の持ち込み、土日営業の有無を公式サイトだけで整理しました。店によって赤ちゃん連れの条件が違うので、予約前の店選びに使えます（2026年10月7日確認）。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: '2026-10-14T00:00:00.000Z'
-updatedAt: '2026-10-07'
+publishedAt: '2026-11-03T00:00:00.000Z'
+updatedAt: '2026-11-03'
 hero: /img/scenes/meal-24.webp
 heroAlt: 家族が子どもを囲んで手をたたき、食事の席でお祝いをしている様子（イメージ）
 area: tokyo

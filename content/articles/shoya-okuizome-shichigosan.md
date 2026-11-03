@@ -6,8 +6,8 @@ metaDescription: >-
   九州・山口のレストラン庄屋のお食い初め御膳と初誕生日の一升餅について、料金、付くもの、予約の期限、お祝い案内に店名が載っている店を公式サイトとリーフレットで確認しました。店によって料金が2通りあるので、行く店がどちらかを先に確かめられます（2026年10月7日確認）。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: '2026-10-14T00:00:00.000Z'
-updatedAt: '2026-10-07'
+publishedAt: '2026-11-03T00:00:00.000Z'
+updatedAt: '2026-11-03'
 hero: /img/scenes/meal-36.webp
 heroAlt: ベビーカーを押した家族が、和風の外観の飲食店に向かって歩いている様子（イメージ）
 area: all
