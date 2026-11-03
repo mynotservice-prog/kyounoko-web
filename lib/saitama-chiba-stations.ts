@@ -461,7 +461,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', 'JR青梅線', 'JR南武線'],
     scale: 'terminal',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'machida',
@@ -472,7 +472,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['小田急小田原線', 'JR横浜線'],
     scale: 'terminal',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'hachioji',
@@ -483,7 +483,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', 'JR横浜線', 'JR八高線'],
     scale: 'terminal',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'kichijoji',
@@ -494,7 +494,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', 'JR総武線', '京王井の頭線'],
     scale: 'terminal',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'chofu',
@@ -505,7 +505,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['京王線', '京王相模原線'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'fuchu',
@@ -516,7 +516,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['京王線'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'kokubunji',
@@ -527,7 +527,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', '西武国分寺線', '西武多摩湖線'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'tama-center',
@@ -538,7 +538,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['京王相模原線', '小田急多摩線', '多摩都市モノレール'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'mitaka',
@@ -549,7 +549,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', 'JR総武線'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
   {
     slug: 'musashi-sakai',
@@ -560,7 +560,7 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     lines: ['JR中央線', '西武多摩川線'],
     scale: 'major',
     familyFriendly: true,
-    addedAt: '2026-11-04',
+    addedAt: '2026-11-03',
   },
 ];
 
