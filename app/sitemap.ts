@@ -21,6 +21,7 @@ import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
 import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
+import { REGIONAL_STATIONS } from '@/lib/regional-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains, STATION_CHAIN_DATA_UPDATED } from '@/lib/station-restaurants';
 import { getCoverageGeneratedAt } from '@/lib/chain-coverage';
@@ -29,6 +30,7 @@ import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getConditionStores } from '@/lib/station-cond-stores';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 import { getAllEvents, isEventEnded } from '@/lib/events';
@@ -292,14 +294,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     stationHasContent(s.slug),
   ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: STATION_LASTMOD,
+    lastModified: s.addedAt ? new Date(s.addedAt) : STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
   // 埼玉・千葉駅ページ（東京通勤圏）
   const saichiStationPages: MetadataRoute.Sitemap = SAICHI_STATIONS.map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: STATION_LASTMOD,
+    lastModified: s.addedAt ? new Date(s.addedAt) : STATION_LASTMOD,
+    changeFrequency: 'monthly' as const,
+    priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
+  }));
+  // 地方都市の駅ページ（名古屋・福岡・仙台）
+  const regionalStationPages: MetadataRoute.Sitemap = REGIONAL_STATIONS.filter((s) =>
+    stationHasContent(s.slug),
+  ).map((s) => ({
+    url: `${BASE}/station/${s.slug}`,
+    lastModified: new Date(s.addedAt),
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
@@ -333,7 +344,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (k === 'spot') continue;
       let matchedCount = 0;
       if (k === 'restaurant') {
-        if (!hasMatchingItems(chains, indies, cond.slug)) continue;
+        // 店単位で作り直した面（2026-10-28 Phase 2）は、配信の判定（isStationConditionIndexable→
+        // stationConditionServeMode）だけで載せる。旧い数え方（チェーン単位）の件数では外さない
+        if (!getConditionStores(s.slug, cond.slug) && !hasMatchingItems(chains, indies, cond.slug)) continue;
         const cMatched = filterChainsByCondition(chains, cond.slug);
         const iMatched = filterIndiesByCondition(indies, cond.slug);
         matchedCount = cMatched.length + iMatched.length;
@@ -436,5 +449,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...eventPages, ...featurePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...regionalStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...eventPages, ...featurePages];
 }

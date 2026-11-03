@@ -37,7 +37,7 @@ hero: /img/scenes/meal-04.webp
 
 | チェーン | ベビーカー入店 | キッズチェア | キッズメニュー | 取り分け | 離乳食持込 | おむつ替え台 | 個室 | 価格帯（大人・食べ放題） |
 |---|---|---|---|---|---|---|---|---|
-| 牛角 | 公式に記載なし（「バリアフリー」の店は471店中94店） | 「お子様用備品あり」471店中249店 | ◎ キッズプレート等の公式お子様メニュー／食べ放題は小学生未満無料・小学生半額 | 公式に記載なし | 公式に記載なし | 471店中97店 | 471店中53店（座敷は195店） | 税込3,058円〜（50品コース） |
+| 牛角 | 公式に記載なし（「バリアフリー」の店は471店中94店） | 「お子様用備品あり」471店中249店 | ◎ キッズプレート等の公式お子様メニュー／食べ放題は小学生未満無料・小学生半額 | 公式に記載なし | 公式に記載なし | 471店中97店 | 471店中53店（座敷は195店） | 税込3,058円〜（お気軽コース） |
 | 焼肉キング | 公式に記載なし | お子様イスを公式に案内（取り扱いのない店舗あり） | 専用キッズメニューはなし（「お子様に人気のメニュー」あり）／食べ放題は幼児無料・小学生半額 | 公式に記載なし | 公式に記載なし | 「おむつ替えシート」372店中324店 | 店舗により異なる（公式店舗検索に席タイプの一括表示なし） | 税込3,278円〜（58品コース・店舗により異なる） |
 | カルビ大将 | 公式に記載なし | 店舗ページに項目なし | 食べ放題は幼児(0～6歳)無料・小学生半額 | 公式に記載なし | 店舗ページ・メニューページに記載なし | 店舗ページに項目なし | 店舗ページに項目なし | 税込3,278円〜（よくばりコース） |
 | 安楽亭 | 公式に記載なし（「入口スロープ」の店は129店中37店） | 公式店舗検索に項目なし | ◎ おこさまやきにくセット等のキッズメニュー／食べ放題は小学生未満無料・小学生半額 | 公式に記載なし | 公式に記載なし | 129店中45店 | 129店中8店 | 税込2,728円〜 |
@@ -81,7 +81,7 @@ hero: /img/scenes/meal-04.webp
 ## 内部リンク
 
 - 焼肉キング1社の詳しい子連れ攻略は[焼肉きんぐ（焼肉キング）子連れ攻略](/article/yakiniku-king-kodzure-koryaku)。テーブルオーダー食べ放題・幼児無料・生焼け対策まで深掘りしています。
-- 単独攻略は[牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)が詳しいです。子ども料金の公式確認値は[牛角の子供料金（幼児無料・小学生半額）](/article/gyukaku-kodomo-ryokin)・[焼肉きんぐの子ども料金](/article/yakiniku-king-kodomo-ryokin)・[安楽亭の子ども料金](/article/anrakutei-kodomo-ryokin-guide)、牛角のキッズメニュー・ベビーカー・個室は[牛角のキッズメニュー](/article/gyukaku-kids-menu)・[牛角のベビーカー入店](/article/gyukaku-stroller)・[牛角の個室](/article/gyukaku-koshitsu)へ。
+- 単独攻略は[牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)が詳しいです。子ども料金の公式確認値は[牛角の子供料金（幼児無料・小学生半額）](/article/gyukaku-kodomo-ryokin)・[焼肉きんぐの子ども料金](/article/yakiniku-king-kodomo-ryokin)・[安楽亭の子ども料金](/article/anrakutei-kodomo-ryokin-guide)、牛角のキッズメニュー・ベビーカー・個室は[牛角のキッズメニュー](/article/gyukaku-kodzure-koryaku)・[牛角のベビーカー入店](/article/gyukaku-stroller)・[牛角の個室](/article/gyukaku-koshitsu)へ。
 - コスパ・座敷でゆっくり派の単独攻略は[安楽亭 子連れ攻略（自然肉・無添加／座敷）](/article/anrakutei-kodzure-koryaku)。自然肉100％・無添加で「子に食べさせる肉」を選びやすい点や、座敷×焼き網の安全まで深掘りしています。
 - 七輪焼肉安安の幼児料金と、座敷・個室のある店の数は[七輪焼肉安安は子連れOK？](/article/yakiniku-anan-kodzure-koryaku)。
 - 焼肉×しゃぶの広い比較は[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)。
@@ -127,7 +127,7 @@ A. 焼肉キング・牛角・安楽亭・カルビ大将・七輪焼肉安安�
 - 焼肉きんぐ公式「メニュー情報」（https://www.yakiniku-king.jp/menu/ ）・「コース一覧」（https://www.yakiniku-king.jp/menu_all/ ）・「ランチ食べ放題コース」（https://www.yakiniku-king.jp/menu_all/lunch/ ）｜確認日 2026年10月2日 — 幼児無料・小学生半額、58品コース税込3,278円〜（店舗により価格が異なる）、ランチ食べ放題税込2,398円〜
 - 焼肉きんぐ公式「お子様連れのお客様へ」（https://www.yakiniku-king.jp/family/ ）｜確認日 2026年10月2日 — お子様イス・お子様用お皿・スプーン・フォーク・蓋つきコップ・おむつ交換台（いずれも「お取り扱いのない店舗もございます」）
 - 焼肉きんぐ公式「店舗検索」（https://www.yakiniku-king.jp/shop/ ）｜確認日 2026年10月2日 — 372店のうち店舗設備に「おむつ替えシート」のある店324店（きょうのこ調べ）
-- 牛角公式「食べ放題」各コース（https://www.gyukaku.ne.jp/menu/50item-course.php 、https://www.gyukaku.ne.jp/menu/gyukaku-course.php ）・「お子様向け」（https://www.gyukaku.ne.jp/menu/menu-kids.php ）・「産地・アレルギー情報」（https://www.gyukaku.ne.jp/menu/information.php ）｜確認日 2026年10月2日 — 小学生未満のお客様無料・小学生のお客様半額、50品コース税込3,058円・牛角コース税込4,158円
+- 牛角公式「食べ放題」各コース（https://www.gyukaku.ne.jp/menu/50item-course.php 、https://www.gyukaku.ne.jp/menu/gyukaku-course.php ）・「お子様向け」（https://www.gyukaku.ne.jp/menu/menu-kids.php ）・「産地・アレルギー情報」（https://www.gyukaku.ne.jp/menu/information.php ）｜確認日 2026年10月2日 — 小学生未満のお客様無料・小学生のお客様半額、お気軽コース税込3,058円（2026年10月29日にページ名を再確認）・牛角コース税込4,158円
 - 牛角公式店舗検索（https://map.reins.co.jp/gyukaku ）｜確認日 2026年10月2日 — 471店のうち座敷195店・個室53店・お子様用備品あり249店・おむつ交換台あり97店・バリアフリー94店（きょうのこ調べ）
 - 安楽亭公式「食べ放題に新コースと学割が登場」（https://anrakutei.jp/topic/tabehoudai/ ）・「キッズメニュー」（https://anrakutei.jp/menucate/kidsmenu/ ）・「アレルギー情報」（https://anrakutei.jp/allergy/ ）｜確認日 2026年10月2日 — 小学生未満：無料／小学生：半額／65歳以上：500円（税込550円引）、税込2,728円〜
 - 安楽亭公式店舗検索（https://anrakutei.jp/map/result/ ）｜確認日 2026年10月2日 — 129店のうち個室8店・おむつ交換台45店・キッズルーム8店・入口スロープ37店（きょうのこ調べ）

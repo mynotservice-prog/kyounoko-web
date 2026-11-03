@@ -172,7 +172,7 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 焼肉店デビューのコツ
 
-- 子連れ歓迎の店（[牛角のキッズメニュー](/article/gyukaku-kids-menu)・[焼肉キングのキッズメニュー](/article/yakiniku-king-kids-menu)等）
+- 子連れ歓迎の店（[牛角のキッズメニュー](/article/gyukaku-kodzure-koryaku)・[焼肉キングのキッズメニュー](/article/yakiniku-king-kids-menu)等）
 - 個室・座敷を予約
 - 平日のすいた時間
 - お子様メニュー活用

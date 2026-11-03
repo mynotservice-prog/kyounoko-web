@@ -5,6 +5,7 @@ import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_PUB_ID_CONFIGURED } from '@
 import { PWARegister } from '@/components/common/PWARegister';
 import { PWAInstallPrompt } from '@/components/common/PWAInstallPrompt';
 import { AnalyticsRouteTracker } from '@/components/common/AnalyticsRouteTracker';
+import { HardNavLinks } from '@/components/common/HardNavLinks';
 import { ScrollDepthTracker } from '@/components/common/ScrollDepthTracker';
 import { ScrollResetOnNavigate } from '@/components/common/ScrollResetOnNavigate';
 import { Suspense } from 'react';
@@ -201,7 +202,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alternateName: ['kyounoko', 'きょうのこ｜子育ての「今日どうする」'],
               url: 'https://kyounoko.jp',
               slogan: '子育て家庭の「今日どうする？」を3分で決める',
-              description: '0〜6歳の子を育てる家庭向けに、毎日の「今日どうする？」を3分で決められる意思決定支援サイト。条件に合う1つの答えを返すTodayFinder、首都圏・関西589駅の子連れOK店データベース、750本以上の実用記事、運営者が実際に子連れで訪問した一次情報レポートを提供。',
+              description: '0〜6歳の子を育てる家庭向けに、毎日の「今日どうする？」を3分で決められる意思決定支援サイト。条件に合う1つの答えを返すTodayFinder、首都圏・関西・名古屋・福岡・仙台の620駅の子連れOK店データベース、750本以上の実用記事、運営者が実際に子連れで訪問した一次情報レポートを提供。',
               // 公式SNS等 — Google のエンティティ認識（指名検索）を強化する sameAs。
               // note は高ドメイン権威 + プロフィール名「きょうのこ」+ 各記事から本サイトへ
               // バックリンクしており、新規ブランドのエンティティ確立に最も効く信号源。
@@ -252,10 +253,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             通常は画面外、フォーカス時のみ表示される。各ページの <main> もしくは
             主要 <article> に id="main" を付けることで効く。 */}
         <a href="#main" className="skip-link">本文へスキップ</a>
-        {/* SPA遷移時の page_view 手動送信。useSearchParams を使うので Suspense でラップ。 */}
+        {/* クリック計測とアフィリエイトのリファラ。page_view は送らない（gtag config と GA4 拡張計測が送る）。 */}
         <Suspense fallback={null}>
           <AnalyticsRouteTracker />
         </Suspense>
+        {/* サイト内リンクを画面ごと読み込む遷移にして、移動先にも自動広告を出す（2026-10-25）。 */}
+        <HardNavLinks />
         <ScrollDepthTracker />
         {/* 遷移時に先頭へ戻す。入れ子スクロール廃止(PR #150)で App Router 内蔵の
             スクロールリセットが効かなくなったため明示的に行う。詳細はコンポーネント内のコメント。 */}
@@ -270,7 +273,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             2. 本体スクリプト (googletagmanager) は afterInteractive のままに
                しておきLCP/TBTへの影響を最小化。dataLayer に積まれた event は
                スクリプト読み込み後に自動消化される。
-            3. SPA 遷移時の page_view は AnalyticsRouteTracker が手動送信する。 */}
+            3. 画面を読み直さない遷移の page_view は GA4 の拡張計測「ページの変更」が送る
+               （AnalyticsRouteTracker からは送らない。2026-10-25 に二重送信を撤去）。 */}
         {gaId && (
           <>
             <Script id="ga-init" strategy="beforeInteractive">

@@ -73,7 +73,6 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
   const [page, setPage] = useState(1);
   // 子連れ系条件フィルタ（複数同時ON可）
   const [onlyKidsMenu, setOnlyKidsMenu] = useState(false);
-  const [onlyStrollerOK, setOnlyStrollerOK] = useState(false);
   const [onlyPrivateRoom, setOnlyPrivateRoom] = useState(false);
   const [onlyKidsChair, setOnlyKidsChair] = useState(false);
   const [onlyKidsCutlery, setOnlyKidsCutlery] = useState(false);
@@ -94,7 +93,6 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       if (type !== 'all' && r.type !== type) return false;
       if (kw && !r.name.toLowerCase().includes(kw) && !r.station.toLowerCase().includes(kw)) return false;
       if (onlyKidsMenu && !r.kidsMenu) return false;
-      if (onlyStrollerOK && r.stroller !== 'ok' && r.stroller !== 'good') return false;
       if (onlyPrivateRoom && !r.privateRoom) return false;
       if (onlyKidsChair && !r.kidsChair) return false;
       if (onlyKidsCutlery && !r.kidsCutlery) return false;
@@ -108,7 +106,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       if (onlyShareDish && !r.shareDish) return false;
       return true;
     });
-  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom, onlyKidsChair, onlyKidsCutlery, onlyKidsSpace, onlyStepFree, onlyZashiki, onlyDiaper, onlyNursing, onlyBabyFood, onlyShareDish]);
+  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyPrivateRoom, onlyKidsChair, onlyKidsCutlery, onlyKidsSpace, onlyStepFree, onlyZashiki, onlyDiaper, onlyNursing, onlyBabyFood, onlyShareDish]);
 
   const sorted = useMemo(() => {
     const copy = [...filtered];
@@ -205,7 +203,6 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }} role="group" aria-label="子連れ条件フィルタ">
         {[
           { key: 'kidsMenu', label: '🍽 キッズメニューあり', state: onlyKidsMenu, set: setOnlyKidsMenu },
-          { key: 'stroller', label: '👶 ベビーカーOK', state: onlyStrollerOK, set: setOnlyStrollerOK },
           { key: 'kidsChair', label: '🪑 キッズチェアあり', state: onlyKidsChair, set: setOnlyKidsChair },
           { key: 'kidsCutlery', label: '🥄 子供用カトラリー', state: onlyKidsCutlery, set: setOnlyKidsCutlery },
           { key: 'kidsSpace', label: '🎈 キッズスペース', state: onlyKidsSpace, set: setOnlyKidsSpace },
@@ -238,12 +235,11 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
             {c.label}
           </button>
         ))}
-        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom || onlyKidsChair || onlyKidsCutlery || onlyKidsSpace || onlyStepFree || onlyZashiki || onlyDiaper || onlyNursing || onlyBabyFood || onlyShareDish) && (
+        {(onlyKidsMenu || onlyPrivateRoom || onlyKidsChair || onlyKidsCutlery || onlyKidsSpace || onlyStepFree || onlyZashiki || onlyDiaper || onlyNursing || onlyBabyFood || onlyShareDish) && (
           <button
             type="button"
             onClick={() => {
               setOnlyKidsMenu(false);
-              setOnlyStrollerOK(false);
               setOnlyPrivateRoom(false);
               setOnlyKidsChair(false);
               setOnlyKidsCutlery(false);
@@ -319,7 +315,6 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
               <th style={thStyle} onClick={() => handleSort('station')}>駅{sortIcon('station')}</th>
               <th style={thStyle} onClick={() => handleSort('ward')}>区{sortIcon('ward')}</th>
               <th style={thStyle} onClick={() => handleSort('category')}>カテゴリ{sortIcon('category')}</th>
-              <th style={thStyle} onClick={() => handleSort('stroller')}>ベビーカー{sortIcon('stroller')}</th>
               <th style={thStyle} onClick={() => handleSort('kidsMenu')}>キッズメニュー{sortIcon('kidsMenu')}</th>
               <th style={thStyle} onClick={() => handleSort('kidsChair')}>キッズチェア{sortIcon('kidsChair')}</th>
               <th style={thStyle} onClick={() => handleSort('kidsCutlery')}>子供用カトラリー{sortIcon('kidsCutlery')}</th>
@@ -350,7 +345,6 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
                   </td>
                   <td style={tdStyle}>{r.ward}</td>
                   <td style={tdStyle}>{r.category}</td>
-                  <td style={{ ...tdStyle, textAlign: 'center', fontWeight: 600 }}>{STROLLER_LABEL[r.stroller]}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsMenu ? '○' : '—'}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsChair ? '○' : '—'}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsCutlery ? '○' : '—'}</td>

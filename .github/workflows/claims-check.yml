@@ -1,0 +1,47 @@
+name: claims-check
+
+# 記事に「記録の確認が要る書き方」（点数・順位・比率・集計・調査の体裁・名前を伏せた他人の声・
+# 体験の節・書き手の家族を主語にした文）が新しく入る PR を止める。
+#
+# 判定は scripts/check-fabricated-claims.mjs（規則は lib/claim-rules.mjs）。
+# 失敗になるのは、既知の一覧（data/unfounded-claims-baseline.json・data/experience-claims-baseline.json）に
+# 無い記事×型と、既知の記事で件数が増えた場合だけ。既知の分と期限切れは警告で、この検査は落ちない。
+#
+# 【経緯】2026-10-11 まで、この検査が走るのは rgos/** ブランチの rgos-pr.yml だけだった。
+#   記事を変えるふつうの PR では 1 度も走っておらず、prebuild にも入っていなかった。
+# 【本番のビルドには入れない】prebuild に入れると、検査の不具合や一覧の書き損じで本番の反映が止まる。
+#   このワークフローはリポジトリの CI だけで動き、Vercel のビルド設定には一切触らない。
+# 【実行時間】依存パッケージを入れない（スクリプトは Node の標準モジュールだけで動く）。checkout と
+#   Node の準備を含めて 30 秒前後。paths で、記事・規則・一覧・記録を変える PR に絞っている。
+# 【注意】paths で絞っているので、この検査をブランチ保護の必須チェックにすると、対象外の PR が
+#   「待ち」のまま止まる。必須にするなら paths を外すこと。
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'content/articles/**'
+      - 'scripts/check-fabricated-claims.mjs'
+      - 'lib/claim-rules.mjs'
+      - 'lib/kid-reports.ts'
+      - 'lib/chain-reports.ts'
+      - 'data/unfounded-claims-baseline.json'
+      - 'data/experience-claims-baseline.json'
+      - '.github/workflows/claims-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  claims-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 記録の確認が要る書き方の検査（既知の一覧に無いものだけ失敗）
+        run: node scripts/check-fabricated-claims.mjs

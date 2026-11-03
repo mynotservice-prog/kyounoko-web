@@ -7,8 +7,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '東京 路線別 子連れランチ・ベビーカーOK店ガイド｜きょうのこ',
-  description: 'JR・東京メトロ・都営地下鉄・私鉄の主要路線で、各路線の全駅の子連れOK・ベビーカーOK飲食店を一覧で。山手線・丸ノ内線・東急東横線など23区を走る40路線対応。',
+  title: '東京 路線別 子連れランチ・ベビーカー・キッズメニュー店ガイド',
+  description: 'JR・東京メトロ・都営地下鉄・私鉄の主要路線で、各路線の全駅の子連れOKの飲食店を一覧で。山手線・丸ノ内線・東急東横線など23区を走る40路線対応。',
   alternates: { canonical: '/station/line' },
 };
 
@@ -41,7 +41,7 @@ export default function LineIndexPage() {
         <div className="container-narrow">
           <header className="page-head" style={{ marginBottom: 32 }}>
             <span className="eyebrow">23区を走る40路線対応</span>
-            <h1>路線別 子連れランチ・ベビーカーOK店ガイド</h1>
+            <h1>路線別 子連れランチ・ベビーカー・キッズメニュー店ガイド</h1>
             <p className="lead">
               JR・東京メトロ・都営地下鉄・主要私鉄から路線を選ぶと、その路線の全駅の子連れOK飲食店一覧へ。
               通勤通学・お出かけ・通り道のランチ場所探しに。
