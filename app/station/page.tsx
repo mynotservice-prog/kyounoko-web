@@ -20,8 +20,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '駅別 子連れランチ・ベビーカーOK店ガイド｜東京23区・神奈川・埼玉・千葉・関西',
-  description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店および個人店を駅別にチェック。キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部表示。',
+  title: '駅別 子連れランチ・ベビーカー・キッズメニュー店ガイド｜東京23区・神奈川・埼玉・千葉・関西',
+  description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOKのファミレス・カフェ・チェーン店および個人店を駅別に掲載。キッズメニュー・子ども用の椅子・個室などの設備は、公式で確認できたものを店ごとに表示。',
   alternates: { canonical: '/station' },
 };
 
@@ -74,10 +74,10 @@ export default function StationIndexPage() {
       <section className="section">
         <div className="container-narrow">
           <header className="page-head" style={{ marginBottom: 32 }}>
-            <span className="eyebrow">東京23区 全484駅 + 関西主要18駅</span>
-            <h1>駅別 子連れランチ・ベビーカーOK店ガイド</h1>
+            <span className="eyebrow">東京23区 全484駅 + 関西・神奈川・埼玉・千葉の主要駅</span>
+            <h1>駅別 子連れランチ・ベビーカー・キッズメニュー店ガイド</h1>
             <p className="lead">
-              東京23区の全駅と、関西エリア（大阪・京都・神戸）の主要駅で、子連れOK・ベビーカー入店可・キッズメニューありの飲食チェーンや話題の個人店を駅単位で網羅。
+              東京23区の全駅と、関西エリア（大阪・京都・神戸）の主要駅で、公式の店舗検索で実在を確認した飲食チェーンと、ホットペッパーグルメでお子様連れOKと掲載された店を駅ごとにまとめました。
               ターミナル駅から住宅地の小さな駅まで、行きたい駅をクリックすれば即わかる。
             </p>
           </header>
@@ -240,7 +240,7 @@ export default function StationIndexPage() {
               関西エリア <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{KANSAI_STATIONS.length}駅</span>
             </h2>
             <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
-              大阪・京都・神戸の主要駅で、雑誌・SNSで話題の個人店を中心にカバー。
+              大阪・京都・神戸の主要駅。チェーン店は公式の店舗検索で実在を確認した店です。
             </p>
 
             {prefectureOrder.map((pref) => {
@@ -317,7 +317,7 @@ export default function StationIndexPage() {
             首都圏（東京23区以外） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{KANAGAWA_STATIONS.length + SAICHI_STATIONS.length}駅</span>
           </h2>
           <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
-            神奈川・埼玉・千葉の主要駅。ベビーカー入店・キッズメニュー・離乳食持込の可否を駅ごとに整理しています。
+            神奈川・埼玉・千葉の主要駅。キッズメニューなどの設備は、公式で確認できたものを駅ごとに示しています。
           </p>
 
           {([

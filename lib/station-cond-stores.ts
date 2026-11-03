@@ -1,0 +1,329 @@
+/**
+ * 駅×条件ページに載せる店を、店単位・根拠つきで数える（2026-10-28・Phase 2）。
+ * 設計: docs/station-cond-rebuild-2026-10.md §3〜§5
+ *
+ * 対象は公式で実在を確認した駅（lib/station-verified-stores.ts に登録がある575駅）の、次の6条件。
+ *   famiresu / kaitenzushi / yakiniku … チェーンの業態（実在店）＋ホットペッパーの個人店（ジャンル）
+ *   kids-menu / baby / private-room   … 根拠のある店だけ（lib/station-evidence.ts の店の公式・ブランドの公式、
+ *                                        個人店はホットペッパーの店の掲載情報）
+ * rainy … 公式に駅直結と書かれた建物の店だけ（lib/station-rainy-buildings.json。元は scripts/station-verify/building-access.json）。
+ *          直結先がその駅の建物に限る。雨に濡れないことまでは言わない。
+ * 個人店（indie）は、ここでは扱わない（従来の判定のまま）。
+ *
+ * 距離は駅中心からの直線。800m以内は駅前・徒歩圏、800m超〜1kmは「少し歩く」（子連れで15〜20分）。
+ */
+import { CHAINS, CHAIN_CATEGORY_LABEL as CATEGORY_LABEL, type Chain } from './station-restaurants';
+import { getVerifiedStores, type VerifiedStore } from './station-verified-stores';
+import { getIndieRestaurantsByStation, INDIE_GENRE_LABEL } from './indie-restaurants';
+import { evidenceForStore, storeDisplayName, type EvidenceNeed } from './station-evidence';
+import HOTPEPPER_COND from './indie-restaurants/hotpepper-cond.json';
+import RAINY_BUILDINGS from './station-rainy-buildings.json';
+
+export const REBUILT_CONDITIONS = new Set(['famiresu', 'kaitenzushi', 'yakiniku', 'kids-menu', 'baby', 'private-room', 'rainy']);
+
+export type CondStoreSource = 'store' | 'brand' | 'category' | 'listing' | 'building';
+
+export type CondStore = {
+  key: string;
+  kind: 'chain' | 'indie';
+  name: string;
+  address?: string;
+  url?: string;
+  /** 駅中心からの直線距離（m）。分からない店は undefined */
+  m?: number;
+  band: '駅前' | '徒歩圏' | '少し歩く';
+  /** 根拠の段: 店の公式／チェーン公式（全店）／業態／店の掲載（ホットペッパー） */
+  source: CondStoreSource;
+  /** 根拠の中身（例「キッズメニュー」「店のコメント: お子様用の椅子あります」） */
+  evidence?: string;
+  chain?: string;
+  /** 業態・ジャンルの表示名 */
+  genre?: string;
+};
+
+export type ConditionStores = {
+  stores: CondStore[];
+  /** 800m以内の店数（一覧に載せていない「ほかN店」を含む） */
+  within800: number;
+  /** 1km以内の店数（同上） */
+  within1000: number;
+};
+
+const CHAIN_BY_SLUG = new Map<string, Chain>(CHAINS.map((c) => [c.slug, c]));
+const FAMIRESU_EXTRA = new Set(['saizeriya', 'gusto', 'jonathan', 'denny-s', 'royal-host', 'cocos', 'bamiyan']);
+const NEEDS: Record<string, EvidenceNeed[]> = {
+  'kids-menu': ['kidsMenu'],
+  baby: ['babyChair', 'diaper', 'nursing', 'babyFood'],
+  'private-room': ['privateRoom'],
+};
+const NEED_LABEL: Record<EvidenceNeed, string> = {
+  kidsMenu: 'キッズメニュー',
+  babyChair: '子ども用の椅子',
+  diaper: 'おむつ替え台',
+  nursing: '授乳スペース',
+  babyFood: '離乳食の持ち込み',
+  privateRoom: '個室・座敷',
+  stepFree: '入口の段差なし',
+  kidsSpace: 'キッズスペース',
+};
+
+function categoryMatch(chainSlug: string, condition: string): boolean {
+  const c = CHAIN_BY_SLUG.get(chainSlug);
+  if (!c) return false;
+  if (condition === 'famiresu') return c.category === 'family-restaurant' || FAMIRESU_EXTRA.has(c.slug);
+  if (condition === 'kaitenzushi') return c.category === 'sushi';
+  if (condition === 'yakiniku') return c.category === 'yakiniku';
+  return false;
+}
+
+function bandOf(m: number | undefined, fallback?: VerifiedStore['distance']): CondStore['band'] {
+  if (m === undefined) return fallback ?? '徒歩圏';
+  return m <= 300 ? '駅前' : m <= 800 ? '徒歩圏' : '少し歩く';
+}
+
+type HpCondShop = { name: string; hpId: string; url?: string; address?: string; genre?: string; distanceM: number; evidence?: string };
+const HP_COND = (HOTPEPPER_COND as { stations: Record<string, Record<string, HpCondShop[]>> }).stations;
+
+type RainyBuilding = { name: string; stations: string[]; evidence: string; source: string; checkedAt: string; addressKeywords: string[] };
+const BUILDINGS = RAINY_BUILDINGS.buildings as Record<string, RainyBuilding>;
+const BUILDING_OF_STORE = RAINY_BUILDINGS.stores as Record<string, string>;
+
+function buildingOfStore(stationSlug: string, chain: string, name: string): RainyBuilding | undefined {
+  const b = BUILDINGS[BUILDING_OF_STORE[`${chain}|${name}`]];
+  return b?.stations.includes(stationSlug) ? b : undefined;
+}
+
+function buildingOfAddress(stationSlug: string, address: string | undefined): RainyBuilding | undefined {
+  if (!address) return undefined;
+  return Object.values(BUILDINGS).find(
+    (b) => b.stations.includes(stationSlug) && b.addressKeywords.some((k) => address.includes(k)),
+  );
+}
+
+function buildingEvidence(b: RainyBuilding): string {
+  return `${b.name}: 公式「${b.evidence.slice(0, 40)}」（確認 ${b.checkedAt}）`;
+}
+
+const BABY_NOTE_WORDS = /椅子|イス|チェア|ベビーカー|おむつ|オムツ|離乳食|授乳|ベビーベッド|ベビーシート/;
+const KIDS_MENU_NOTE_WORDS = /お子様メニュー|お子さまメニュー|キッズメニュー|お子様ランチ|お子さまランチ|キッズプレート|お子様セット|キッズセット|子供メニュー/;
+const NOTE_NEGATIVE = /ござい?ません|御座いません|ありません|有りません|無(?!料)|なし|ない|不可|遠慮|お断り|できません|出来ません|NG|置き場所|座っ|すわれ|着席|折り?畳|折りたた|たたん|お預か|完了後/;
+const NOTE_POSITIVE = /可|OK|あり|有|ございます|用意|完備|歓迎|持ち?込/;
+
+/**
+ * 店のコメントが、その条件を肯定しているか。コメントは語の有無で拾っているので
+ * 「お子様メニューはございません」「ベビーカー入店不可」も入ってくる（2026-11-02 に baby/kids-menu で実測）。
+ * 文ごとに見て、条件の語を含み否定の語が無い文があれば肯定とする。否定の語がある文は
+ * 「ございませんが、離乳食の持ち込みOKです」のように読点で区切って、肯定の語がある部分を探す。
+ */
+function childNoteSupports(condition: string, note: string | undefined): boolean {
+  if (condition !== 'baby' && condition !== 'kids-menu') return true;
+  if (!note) return true;
+  const words = condition === 'baby' ? BABY_NOTE_WORDS : KIDS_MENU_NOTE_WORDS;
+  const body = note.replace(/^お子様連れ(?:OK|歓迎)\s*:/, '');
+  return body.split(/[。!！/／\n]/).some((sentence) => {
+    if (!words.test(sentence)) return false;
+    if (!NOTE_NEGATIVE.test(sentence)) return true;
+    return sentence
+      .split(/[、,，]|\s+/)
+      .some((c) => words.test(c) && NOTE_POSITIVE.test(c) && !NOTE_NEGATIVE.test(c));
+  });
+}
+
+const cache = new Map<string, ConditionStores | null>();
+
+/** 作り直しの対象（照合済みの駅×6条件）なら店の一覧。対象外は null（従来の判定・画面のまま） */
+export function getConditionStores(stationSlug: string, condition: string): ConditionStores | null {
+  const ck = `${stationSlug}/${condition}`;
+  if (cache.has(ck)) return cache.get(ck)!;
+  const verified = getVerifiedStores(stationSlug);
+  if (!verified || !REBUILT_CONDITIONS.has(condition)) {
+    cache.set(ck, null);
+    return null;
+  }
+  const stores: CondStore[] = [];
+  let moreNear = 0;
+  let moreFar = 0;
+  const isCategory = condition === 'famiresu' || condition === 'kaitenzushi' || condition === 'yakiniku';
+
+  // チェーン（公式で実在を確認した店）
+  for (const st of [...verified.stores, ...(verified.far ?? [])]) {
+    const chain = CHAIN_BY_SLUG.get(st.chain);
+    if (!chain) continue;
+    let source: CondStoreSource | null = null;
+    let evidence: string | undefined;
+    if (condition === 'rainy') {
+      const b = buildingOfStore(stationSlug, st.chain, st.name);
+      if (b) {
+        source = 'building';
+        evidence = buildingEvidence(b);
+      }
+    } else if (isCategory) {
+      if (categoryMatch(st.chain, condition)) source = 'category';
+    } else {
+      const ev = evidenceForStore(st);
+      const hits = NEEDS[condition].filter((n) => ev.has(n));
+      if (hits.length) {
+        source = hits.some((n) => ev.get(n) === 'store') ? 'store' : 'brand';
+        evidence = hits.map((n) => NEED_LABEL[n]).join('・');
+      }
+    }
+    if (!source) continue;
+    stores.push({
+      key: `c:${st.chain}:${st.name}:${st.address}`,
+      kind: 'chain',
+      name: storeDisplayName(chain.name, st.name),
+      address: st.address,
+      url: st.url,
+      m: st.m,
+      band: bandOf(st.m, st.distance),
+      source,
+      evidence,
+      chain: st.chain,
+      genre: undefined,
+    });
+  }
+  // 一覧に載せていない「ほかN店」: 業態の条件は数える。設備の条件はブランドの公式があるチェーンだけ数える
+  const countMore = (more: Record<string, number> | undefined) => {
+    let n = 0;
+    for (const [chain, k] of Object.entries(more ?? {})) {
+      if (condition === 'rainy') continue;
+      if (isCategory ? categoryMatch(chain, condition) : brandHas(chain, NEEDS[condition])) n += k;
+    }
+    return n;
+  };
+  moreNear = countMore(verified.more);
+  moreFar = countMore(verified.farMore);
+
+  // 個人店（ホットペッパーの掲載情報）
+  const seen = new Set<string>();
+  const pushIndie = (s: { name: string; hpId?: string; url?: string; address?: string; distanceM?: number; genre?: string }, evidence?: string, source: CondStoreSource = 'listing') => {
+    const id = s.hpId ?? s.name;
+    if (seen.has(id)) return;
+    if (s.distanceM !== undefined && s.distanceM > 1000) return;
+    seen.add(id);
+    stores.push({
+      key: `i:${id}`,
+      kind: 'indie',
+      name: s.name,
+      address: s.address,
+      url: s.url,
+      m: s.distanceM,
+      band: bandOf(s.distanceM),
+      source,
+      evidence,
+      genre: s.genre,
+    });
+  };
+  for (const r of getIndieRestaurantsByStation(stationSlug)) {
+    if (r.source !== 'hotpepper') continue;
+    const g = INDIE_GENRE_LABEL[r.genre];
+    if (condition === 'kaitenzushi' && r.genre === 'sushi') pushIndie({ ...r, genre: g });
+    if (condition === 'yakiniku' && (r.genre === 'yakiniku' || r.genre === 'korean')) pushIndie({ ...r, genre: g });
+    if (condition === 'private-room' && r.privateRoom) pushIndie({ ...r, genre: g }, '個室あり（店の掲載）');
+    if (condition === 'rainy') {
+      const b = buildingOfAddress(stationSlug, r.address);
+      if (b) pushIndie({ ...r, genre: g }, buildingEvidence(b), 'building');
+    }
+  }
+  for (const s of HP_COND[stationSlug]?.[condition] ?? []) {
+    if (!childNoteSupports(condition, s.evidence)) continue;
+    pushIndie(s, s.evidence ? `店のコメント: ${s.evidence}` : condition === 'private-room' ? '個室あり（店の掲載）' : undefined);
+  }
+
+  stores.sort((a, b) => (a.m ?? 9999) - (b.m ?? 9999) || a.name.localeCompare(b.name, 'ja'));
+  const near = stores.filter((s) => s.band !== '少し歩く').length;
+  const result: ConditionStores = {
+    stores,
+    within800: near + moreNear,
+    within1000: stores.length + moreNear + moreFar,
+  };
+  cache.set(ck, result);
+  return result;
+}
+
+function brandHas(chainSlug: string, needs: EvidenceNeed[]): boolean {
+  // チェーン公式（全店向けの記載）がある項目は、一覧に載らない店にも当てはまる
+  const fake = { chain: chainSlug, name: '', address: '', distance: '徒歩圏' as const, fac: [] };
+  const ev = evidenceForStore(fake);
+  return needs.some((n) => ev.get(n) === 'brand');
+}
+
+/** 根拠の段の表示名 */
+export const COND_SOURCE_LABEL: Record<CondStoreSource, string> = {
+  store: 'この店の公式ページの表示',
+  brand: 'チェーン公式（全店）',
+  category: '業態（公式で実在を確認）',
+  building: '建物の公式（駅直結）',
+  listing: 'ホットペッパーの店の掲載',
+};
+
+const SIT_DOWN_FIRST: Record<string, number> = {
+  'family-restaurant': 0, sushi: 0, washoku: 0, italian: 0, chinese: 0, yakiniku: 0, noodles: 1, curry: 1, gyudon: 1,
+  'mall-food': 1, cafe: 2, 'fast-food': 2, bakery: 3,
+};
+
+export type OtherStore = {
+  key: string;
+  name: string;
+  category: string;
+  m?: number;
+  band: CondStore['band'];
+  url?: string;
+  /** 根拠のある設備（店の公式店舗検索の表示＝店／チェーン公式の全店向けの記載＝全店）。lib/station-evidence.ts */
+  facilities: { label: string; source: 'store' | 'brand' }[];
+};
+
+const OTHER_FAC_ORDER: EvidenceNeed[] = ['kidsMenu', 'babyChair', 'diaper', 'nursing', 'babyFood', 'privateRoom', 'kidsSpace'];
+
+/** 公式で実在を確認した店1つを「ほかのお店」の行に（席で食べる業態を先に並べるための rank つき） */
+function toOtherStore(st: VerifiedStore): (OtherStore & { rank: number }) | null {
+  const chain = CHAIN_BY_SLUG.get(st.chain);
+  if (!chain) return null;
+  const ev = evidenceForStore(st);
+  return {
+    key: `c:${st.chain}:${st.name}:${st.address}`,
+    name: storeDisplayName(chain.name, st.name),
+    category: CATEGORY_LABEL[chain.category] ?? '',
+    m: st.m,
+    band: bandOf(st.m, st.distance),
+    url: st.url,
+    facilities: OTHER_FAC_ORDER.filter((n) => ev.has(n)).map((n) => ({ label: NEED_LABEL[n], source: ev.get(n)! })),
+    rank: SIT_DOWN_FIRST[chain.category] ?? 2,
+  };
+}
+const byRankThenDistance = (a: { rank: number; m?: number }, b: { rank: number; m?: number }) =>
+  a.rank - b.rank || (a.m ?? 9999) - (b.m ?? 9999);
+const stripRank = ({ rank: _rank, ...x }: OtherStore & { rank: number }): OtherStore => x;
+
+/**
+ * 条件に合う店が少ない面（0〜2店）で出す「この駅の近くで公式に実在を確認した、ほかのお店」（2026-10-29）。
+ * 経堂のファミレスのように条件に合う店は無くても、駅の近くには大戸屋・スシローなどの実在店がある。
+ * 「何も無い」と読めないよう、条件以外の実在店を、800m以内→800m〜1km（少し歩く）の順に、
+ * それぞれ席で食べる業態を先に・駅に近い順で返す。
+ */
+export function getOtherVerifiedStores(stationSlug: string, condition: string, limit = 10): { stores: OtherStore[]; total: number } {
+  const verified = getVerifiedStores(stationSlug);
+  const cs = getConditionStores(stationSlug, condition);
+  if (!verified || !cs) return { stores: [], total: 0 };
+  const inCond = new Set(cs.stores.filter((s) => s.kind === 'chain').map((s) => s.key));
+  const pick = (list: VerifiedStore[]) =>
+    list
+      .map(toOtherStore)
+      .filter((x): x is OtherStore & { rank: number } => !!x && !inCond.has(x.key))
+      .sort(byRankThenDistance);
+  const near = pick(verified.stores);
+  const far = pick(verified.far ?? []);
+  return { stores: [...near, ...far].slice(0, limit).map(stripRank), total: near.length + far.length };
+}
+
+/** 駅トップの「少し歩く（800m〜1km）」枠（2026-10-29）: 800m以内の店が少ない駅で、800m〜1kmの実在店を出す */
+export function getFarVerifiedStores(stationSlug: string): { stores: OtherStore[]; more: number } {
+  const verified = getVerifiedStores(stationSlug);
+  if (!verified?.far?.length) return { stores: [], more: 0 };
+  const stores = verified.far
+    .map(toOtherStore)
+    .filter((x): x is OtherStore & { rank: number } => !!x)
+    .sort((a, b) => (a.m ?? 9999) - (b.m ?? 9999))
+    .map(stripRank);
+  return { stores, more: Object.values(verified.farMore ?? {}).reduce((n, k) => n + k, 0) };
+}

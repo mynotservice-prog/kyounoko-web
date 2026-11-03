@@ -236,7 +236,7 @@ export const SPOT_ACCESS: Record<string, SpotAccess> = {
   "阿蘇 元気の森": { nearestStation: "赤水駅", accessNote: "所在は南阿蘇村。JR豊肥本線赤水駅から車約7分。徒歩圏外で車利用。" },
   "阿蘇カドリー・ドミニオン": { nearestStation: "阿蘇駅", walkMinutes: 20, accessNote: "JR豊肥本線阿蘇駅から徒歩約20分。都市間バス「カドリードミニオン前」下車も可。" },
   "阿蘇ファームランド": { nearestStation: "赤水駅", accessNote: "JR豊肥本線赤水駅から車で約7分（徒歩圏外）" },
-  "愛知こどもの国": { nearestStation: "こどもの国駅", walkMinutes: 15, accessNote: "名鉄蒲郡線こどもの国駅から徒歩約15分。" },
+  "愛知こどもの国": { nearestStation: "こどもの国駅（名鉄蒲郡線）", walkMinutes: 15, accessNote: "名鉄蒲郡線こどもの国駅から徒歩約15分。" },
   "愛知県児童総合センター": { nearestStation: "愛・地球博記念公園駅", walkMinutes: 6, accessNote: "リニモ・愛・地球博記念公園駅から徒歩約6分（愛・地球博記念公園内）" },
   "愛宕山こどもの国": { nearestStation: "甲府駅", accessNote: "JR甲府駅からタクシー約15分（土日祝・夏季はシャトルバスあり）" },
   "愛宕山ふくろう公園": { nearestStation: "南岩国駅", walkMinutes: 19, accessNote: "JR山陽本線南岩国駅が最寄り。地図上の徒歩ルートで約19分。" },

@@ -11,15 +11,16 @@
   "summary": {
     "chainCount": 57,
     "mochikomi": {
-      "stated": 3,
+      "stated": 4,
       "denominator": 54,
       "total": 57,
       "counts": {
-        "記載なし": 51,
-        "未確認": 3,
-        "明記OK": 3
+        "記載なし": 50,
+        "明記OK": 4,
+        "未確認": 3
       },
       "chains": [
+        "uobei",
         "shabuyou",
         "kourakuen",
         "gusto"
@@ -84,6 +85,7 @@
       "cocos",
       "royal-host",
       "kappa-sushi",
+      "uobei",
       "shabuyou",
       "yuzuan",
       "kourakuen",
@@ -344,14 +346,14 @@
       "name": "魚べい",
       "group": "main",
       "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
-      "quote": "（該当記載なし）uobei.infoにFAQ無し（/faq/ 404）。店舗API全199件のservice項目は回転しない寿司/駐車場/車いす対応等のみ。メニューAPIにも該当語なし。genkisushi.co.jpは当環境から接続不可",
-      "sourceUrl": "https://www.uobei.info/",
+      "quote": "飲食物のお持ち込みはお断りさせていただいております。なお、乳幼児のミルクや離乳食についてはお持ち込みいただけます。",
+      "sourceUrl": "https://faq.genki-gdc.co.jp/%E9%A3%B2%E9%A3%9F%E7%89%A9%E3%81%AE%E6%8C%81%E3%81%A1%E8%BE%BC%E3%81%BF%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b2e",
       "positiveControl": "FAQ無し（参考: https://www.uobei.info/store/ ）",
       "checkedAt": "2026-09-25",
       "cells": {
         "mochikomi": {
-          "value": "記載なし",
-          "note": "FAQ無し"
+          "value": "明記OK",
+          "note": "元気寿司グループ公式FAQ（2026-10-24確認）"
         },
         "atatame": {
           "value": "記載なし"
@@ -363,6 +365,7 @@
           "value": "記載なし"
         }
       },
+      "correction": "2026-10-24 再照合: 運営元の元気寿司グループ公式FAQ「飲食物の持ち込みは可能ですか？」に「なお、乳幼児のミルクや離乳食についてはお持ち込みいただけます。」と明記。9/25 は uobei.info だけを見て「記載なし」としていた（genkisushi 側に接続できなかった）。",
       "articleSlug": "uobei-kodzure-koryaku",
       "articleKind": "koryaku"
     },
