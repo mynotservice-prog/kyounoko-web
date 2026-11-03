@@ -21,6 +21,8 @@
  *  3. **Production が Ready になった**（Canceled / Error はその場で失敗）。
  *  4. **origin(Vercel) が新しい内容を返す状態にしてから** CF をパージした
  *     （逆順にすると CF が STALE を焼き付ける ＝ 事故②の再現）。
+ *  1.5 対象slugの md に、既知の一覧に無い「記録の確認が要る書き方」（点数・順位・比率・集計・
+ *     体験の節・一人称の文）が無い（あれば中断。scripts/check-fabricated-claims.mjs --only=…）。
  *  5. **キャッシュバスター無しの素のURL**に期待文字列が出ている。
  *     期待文字列は既定で md の title。**title が変わっていない記事では diff から作る**
  *     （追加された一文が出ているか／削除された一文が消えているか）。
@@ -73,6 +75,8 @@
  * 必要な env（すべて .env.local から自動読込。トークンは絶対に直書きしない）:
  *   KV_REST_API_URL / KV_REST_API_TOKEN     … KV上書きの厳密検査（無い場合は劣化モード）
  *   CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID … CFパージ（無い場合は警告して継続）
+ *   ADMIN_REVALIDATE_SECRET                 … 本番 /api/admin/purge-cf（secret 認証）
+ *   ADMIN_USER / ADMIN_PASSWORD             … 本番 /api/admin/edit-content の Basic 認証（KV上書き解除）
  */
 
 import { spawn, spawnSync } from 'node:child_process';
@@ -183,6 +187,18 @@ function loadEnvLocal() {
   return true;
 }
 const HAS_ENV_LOCAL = loadEnvLocal();
+
+/**
+ * /api/admin/* は 2026-10-09 から middleware の Basic 認証の内側（Referer だけでは 401）。
+ * .env.local の ADMIN_USER / ADMIN_PASSWORD（本番と同じ値）から Authorization を組み立てる。
+ * 値はログに出さない。
+ */
+function adminBasicAuthHeader() {
+  const u = process.env.ADMIN_USER;
+  const p = process.env.ADMIN_PASSWORD;
+  if (!u || !p) return {};
+  return { Authorization: `Basic ${Buffer.from(`${u}:${p}`, 'utf8').toString('base64')}` };
+}
 
 /**
  * frontmatter から1フィールドを取り出す。
@@ -544,8 +560,8 @@ async function flattenOverrides(slugs) {
     try {
       const res = await fetch(u, {
         method: 'DELETE',
-        // isAllowed() が referer に /admin/ を要求する（CSRF対策）
-        headers: { Referer: `${SITE}/admin/articles/${slug}/edit` },
+        // isAllowed() が referer に /admin/ を要求する（CSRF対策）＋ middleware の Basic 認証
+        headers: { Referer: `${SITE}/admin/articles/${slug}/edit`, ...adminBasicAuthHeader() },
         cache: 'no-store',
       });
       status = res.status;
@@ -1119,6 +1135,42 @@ async function main() {
   if (missing.length) {
     console.error(`${NG} md が見つからない slug: ${missing.join(', ')} → 中断します。`);
     process.exit(2);
+  }
+
+  // 2.5) 記録の確認が要る書き方の検査（2026-10-11 追加）
+  //   対象slugの md に、既知の一覧に無い「点数・順位・比率・集計・調査の体裁・体験の節・一人称の文」が
+  //   入っていたら、本番に出す前に止める。規則は lib/claim-rules.mjs（CI・管理画面の保存と同じ定義）。
+  //   既知の一覧（data/*-baseline.json）にある分では止まらない。--verify-only は本番を見るだけなので通す。
+  if (!VERIFY_ONLY) {
+    console.log('');
+    console.log('▶ プリフライト: 記録の確認が要る書き方（scripts/check-fabricated-claims.mjs）');
+    const claims = spawnSync(
+      process.execPath,
+      [join(ROOT, 'scripts/check-fabricated-claims.mjs'), `--only=${targets.map((t) => t.slug).join(',')}`, '--json'],
+      { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 },
+    );
+    let claimsJson = null;
+    try {
+      claimsJson = JSON.parse(claims.stdout);
+    } catch {
+      // 下で扱う
+    }
+    if (!claimsJson) {
+      console.error(`${NG} 検査を実行できませんでした（exit=${claims.status}）: ${(claims.stderr || claims.stdout || '').slice(0, 300)}`);
+      if (!DRY_RUN) process.exit(2);
+    } else {
+      const bad = [...claimsJson.fresh, ...claimsJson.grown, ...(claimsJson.registeredGrown ?? [])];
+      if (bad.length === 0) {
+        console.log(`   ${OK} 新しい混入なし（対象 ${claimsJson.scanned} 本・既知 ${claimsJson.counts.known} 件・警告 ${claimsJson.counts.warn} 件）`);
+      } else {
+        console.error(`${NG} 既知の一覧に無い「記録の確認が要る書き方」が ${bad.length} 件あります。`);
+        for (const h of bad) console.error(`   - ${h.slug}  [${h.rule}] ${h.label}（${h.count}か所）${h.excerpt}`);
+        console.error('   直すか、記録（店舗・年月）を本文と data/experience-claims-baseline.json の records に書いてから、もう一度実行してください。');
+        console.error('   詳細: node scripts/check-fabricated-claims.mjs --only=<slug> ／ docs/writing-rules.md §9');
+        if (!DRY_RUN) process.exit(2);
+        console.log('   （dry-run のため続行しますが、実行時はここで中断します）');
+      }
+    }
   }
 
   // 3) KVプリフライト

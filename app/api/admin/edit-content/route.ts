@@ -11,6 +11,10 @@ import {
   deleteArticleOverride,
 } from '@/lib/articles';
 import { purgeCfUrls } from '@/lib/cf-purge';
+import { newFindings, registeredScopeFor } from '@/lib/claim-rules.mjs';
+import { KID_REPORTS } from '@/lib/kid-reports';
+import { CHAIN_REPORTS } from '@/lib/chain-reports';
+import experienceBaseline from '@/data/experience-claims-baseline.json';
 
 /**
  * /admin/articles/[slug]/edit と /admin/plans/[id]/edit から呼ばれる
@@ -24,6 +28,18 @@ import { purgeCfUrls } from '@/lib/cf-purge';
  *  - **ローカル開発** (NODE_ENV=development): ローカル FS に直接書き込み（git push は手動）
  *  - **本番 Vercel + GitHub設定済み**: GitHub Contents API で content/*.md を直接 commit
  *    → Vercel が自動デプロイ。**スマホからも編集→保存だけで本番反映**。
+ *
+ * 保存前の検査（2026-10-11 追加・記事のみ）:
+ *  - 保存する本文に、**前の版に無かった**「記録の確認が要る書き方」（点数・順位・比率・集計・調査の体裁・
+ *    名前を伏せた他人の声・体験の節・書き手の家族を主語にした文）が入っていたら、保存せずに
+ *    409 { needsConfirm: true, claims: [...] } を返す。管理画面は一覧を出して確認を取り、
+ *    confirmClaims: true を付けて送り直す（記録のある事実だと分かっている人だけが通せる）。
+ *  - 規則は lib/claim-rules.mjs の 1 か所（scripts/check-fabricated-claims.mjs と同じ定義）。
+ *  - なぜここで見るか: 管理画面の保存は KV に入り、表示は KV が md より優先される。
+ *    content/articles/*.md だけを見る CI の検査は、この経路の本文を 1 文字も見ていなかった。
+ *  - 前の版からある書き方では止めない（誤字を直すだけの保存を止めないため）。
+ *    既にある分は data/experience-claims-baseline.json・data/unfounded-claims-baseline.json の便で直す。
+ *  - 検出は「記録の確認が要る」の意味で、事実でないと決めるものではない。
  *
  * セキュリティ:
  *  - 開発時 (NODE_ENV=development) は無条件で許可
@@ -134,6 +150,41 @@ async function ghPutFile(
   return { commit: data.commit?.sha, html_url: data.commit?.html_url };
 }
 
+/** 実訪問の記録（scripts/check-fabricated-claims.mjs が lib/*.ts から読むものと同じ中身）。 */
+const VISIT_RECORDS = {
+  // 短すぎる名前（2文字以下）は別の語に紛れるので使わない（スクリプト側と同じ条件）
+  spots: Object.keys(KID_REPORTS).filter((n) => n.length >= 3),
+  chainStores: CHAIN_REPORTS.map((r) => [r.chain, r.store]),
+};
+
+type ClaimNote = { rule: string; label: string; severity: string; excerpt: string };
+
+/**
+ * 保存しようとしている本文に、前の版に無かった「記録の確認が要る書き方」が入っていないかを見る。
+ * 検査そのものが失敗したときは、保存を止めない（空を返してログに残す）。
+ */
+function findNewClaims(slug: string, prevRaw: string, nextRaw: string): ClaimNote[] {
+  try {
+    // 前の版も同じ書き出し方（gray-matter）に通してから比べる。そのまま比べると、
+    // frontmatter の引用符や折り返しの違いだけで「新しい文」と数えてしまう。
+    let prev = '';
+    if (prevRaw) {
+      const p = matter(prevRaw);
+      prev = matter.stringify(p.content, p.data);
+    }
+    // 記録を登録した範囲（records）。その中に足した文も、newFindings は新しい文として返す
+    // （登録は「そのときあった文」の確認なので、足した文には改めて確認を求める）。
+    const { backedSections } = registeredScopeFor(experienceBaseline.records, slug);
+    const added = newFindings(prev, nextRaw, { records: VISIT_RECORDS, backedSections });
+    return added.flatMap((f) =>
+      f.sentences.map((s) => ({ rule: f.rule, label: f.label, severity: f.severity, excerpt: s.slice(0, 120) })),
+    );
+  } catch (e) {
+    console.error(`[claims] check failed for ${slug}: ${e instanceof Error ? e.message : String(e)}`);
+    return [];
+  }
+}
+
 const useGitHub = (): boolean =>
   process.env.NODE_ENV !== 'development' && !!process.env.GITHUB_TOKEN && !!process.env.GITHUB_REPO;
 
@@ -196,7 +247,7 @@ export async function POST(req: NextRequest) {
   const guard = isAllowed(req);
   if (!guard.ok) return NextResponse.json({ ok: false, error: guard.reason }, { status: 403 });
 
-  let body: { kind?: string; slug?: string; frontmatter?: unknown; body?: string };
+  let body: { kind?: string; slug?: string; frontmatter?: unknown; body?: string; confirmClaims?: boolean };
   try {
     body = await req.json();
   } catch {
@@ -213,11 +264,54 @@ export async function POST(req: NextRequest) {
   // gray-matter.stringify で YAML フロントマター + 本文を再構成
   const out = matter.stringify(body.body, body.frontmatter as Record<string, unknown>);
 
+  // ----- 記事: 保存前の検査（前の版に無かった「記録の確認が要る書き方」） -----
+  // KV 設定時は上書きの一覧をここで 1 回だけ読み、検査と保存の両方に使う（KV の読み取りを増やさない）。
+  let overridesMap: Record<string, string> | undefined;
+  let claimWarnings: ClaimNote[] = [];
+  if (kind === 'article') {
+    if (isKvConfigured()) {
+      try {
+        overridesMap = await readArticleOverridesMap();
+      } catch (e) {
+        return NextResponse.json({ ok: false, error: `保存を中止しました（${e instanceof Error ? e.message : String(e)}）` }, { status: 503 });
+      }
+    }
+    let prevRaw = overridesMap?.[body.slug!] ?? '';
+    if (!prevRaw) {
+      try {
+        prevRaw = await fs.readFile(fp, 'utf8');
+      } catch {
+        // 新しい記事（前の版なし）
+      }
+    }
+    const claims = findNewClaims(body.slug!, prevRaw, out);
+    const blocking = claims.filter((c) => c.severity !== 'warn');
+    claimWarnings = claims.filter((c) => c.severity === 'warn');
+    if (blocking.length && body.confirmClaims !== true) {
+      return NextResponse.json(
+        {
+          ok: false,
+          needsConfirm: true,
+          claims: blocking,
+          error:
+            `保存を止めました。この保存で、記録の確認が要る書き方が ${blocking.length} か所、新しく入っています。` +
+            '記録（いつ・どこで・だれが・どう数えたか）がある事実なら、確認して保存してください。',
+        },
+        { status: 409 },
+      );
+    }
+    if (blocking.length) {
+      // 確認して保存した記録を残す（Vercel のログで `[claims] confirmed` を引ける）
+      console.warn(`[claims] confirmed save: ${body.slug} ${blocking.map((c) => c.rule).join(',')} (${blocking.length})`);
+      claimWarnings = claims;
+    }
+  }
+
   // ----- 記事 + KV設定時: デプロイ不要で KV に保存し、該当ページだけ revalidate -----
   if (kind === 'article' && isKvConfigured()) {
     let ok: boolean;
     try {
-      ok = await writeArticleOverride(body.slug!, out);
+      ok = await writeArticleOverride(body.slug!, out, overridesMap);
     } catch (e) {
       return NextResponse.json({ ok: false, error: `保存を中止しました（${e instanceof Error ? e.message : String(e)}）` }, { status: 503 });
     }
@@ -231,6 +325,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       ok: true,
       source: 'kv',
+      claimWarnings,
       deployed: purge.purged
         ? 'KV保存＋CFキャッシュをパージしました（数秒で本番反映）'
         : 'KVに保存しました（デプロイ不要）',
@@ -274,6 +369,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         ok: true,
         source: 'github',
+        claimWarnings,
         path: repoRel,
         commit: result.commit,
         commitUrl: result.html_url,
@@ -315,7 +411,7 @@ export async function POST(req: NextRequest) {
       // 元ファイルがない（新規作成）ケースもあり得るので無視
     }
     await fs.writeFile(fp, out, 'utf8');
-    return NextResponse.json({ ok: true, source: 'fs', path: fp.replace(ROOT, '') });
+    return NextResponse.json({ ok: true, source: 'fs', claimWarnings, path: fp.replace(ROOT, '') });
   } catch (err) {
     return NextResponse.json(
       { ok: false, error: err instanceof Error ? err.message : String(err) },

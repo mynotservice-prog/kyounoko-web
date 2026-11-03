@@ -142,13 +142,13 @@ export const SPOT_SEASON: Record<string, SpotSeasonWindow[]> = {
     { activity: 'budougari', opensAt: '2026-07-17', closesAt: '2026-11-15', source: 'あすなろ園公式サイト', checkedAt: '2026-09-18' },
   ],
   'さんろく果樹園': [
-    { activity: 'budougari', opensAt: '2026-08-22', closesAt: '2026-09-21', source: 'さんろく果樹園公式サイト', checkedAt: '2026-09-18' },
+    { activity: 'budougari', opensAt: '2026-08-22', closesAt: '2026-09-23', source: 'さんろく果樹園公式サイトのお知らせ（2026-09-22付・2026-10-03付）', checkedAt: '2026-10-09', note: '9月23日まで開園したあと、10月3日・4日の2日間のみ巨峰のぶどう狩りを再開した。' },
   ],
   'らぽっぽ なめがたファーマーズヴィレッジ': [
     { activity: 'imohori', opensAt: '2026-10-10', closesAt: '2026-11-23', source: 'なめがたファーマーズヴィレッジ公式サイト', checkedAt: '2026-09-18' },
   ],
   'たいら栗園': [
-    { activity: 'kurihiroi', opensAt: '2026-09-10', closesAt: '2026-09-27', hours: '9:30〜15:00（受付14:00まで）', closedDays: ['火曜'], source: 'たいら栗園公式サイト', checkedAt: '2026-09-18', note: '2026年は延長後の会期。持ち帰りは150円/100g。' },
+    { activity: 'kurihiroi', opensAt: '2026-09-10', closesAt: '2026-10-11', hours: '9:30〜15:00（受付14:30まで）', closedDays: ['火曜'], source: 'たいら栗園公式サイト「“栗拾い”10月11日(日)まで延長します！」（2026-10-05付）', checkedAt: '2026-10-09', note: '2026年は再延長後の会期（9/27→10/11）。なくなり次第、予定より早く終了する場合がある。持ち帰りは140円/100g（1人1ネットまで）。' },
   ],
 };
 

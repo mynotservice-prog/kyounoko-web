@@ -70,7 +70,7 @@ for (const a of input.articles) {
     for (const it of nav?.items ?? []) edges.push({ via: 'cluster', from: a.slug, to: it.href, note: it.label });
   }
 
-  if (buildStation) {
+  if (buildStation && !a.noStationLink) {
     const st = buildStation({
       title: a.title,
       metaDescription: a.metaDescription,

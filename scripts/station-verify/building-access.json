@@ -1,0 +1,5921 @@
+{
+ "yaechika": {
+  "name": "八重洲地下街（ヤエチカ）",
+  "officialName": "ヤエチカ（八重洲地下街）",
+  "officialUrl": "https://www.yaechika.com/",
+  "operator": "八重洲地下街株式会社",
+  "nearStations": [
+   "ginza",
+   "hatchobori",
+   "hibiya",
+   "kayabacho",
+   "mitsukoshimae",
+   "nihombashi",
+   "otemachi",
+   "tokyo",
+   "yurakucho"
+  ],
+  "storesInLedger": 9,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10/30(金)～2027/3/31(水) 没入型体験ゲーム『ウワサアリ』",
+   "source": "https://www.yaechika.com/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "■JR各線「東京駅」八重洲地下中央口　直結",
+   "source": "https://www.yaechika.com/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR各線「東京駅」八重洲地下中央口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ替えのできるベビーシート、ベビーチェアを設置したトイレをご用意しています。",
+    "source": "https://www.yaechika.com/floormap/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.yaechika.com/",
+   "https://www.yaechika.com/floormap/",
+   "https://www.yaechika.com/access/",
+   "https://www.yaechika.com/opening-hours/",
+   "https://www.yaechika.com/corporateinformation/",
+   "https://www.yaechika.com/sitemap/",
+   "https://www.yaechika.com/wp-content/themes/yaechika_v1/_floormap/map.pdf"
+  ]
+ },
+ "kitte-marunouchi": {
+  "name": "KITTE丸の内（JPタワー）",
+  "officialName": "ＫＩＴＴＥ丸の内",
+  "officialUrl": "https://marunouchi.jp-kitte.jp/",
+  "operator": "日本郵便株式会社（事業主）／ＪＰビルマネジメント株式会社（運営委託）",
+  "nearStations": [
+   "ginza",
+   "nihombashi",
+   "otemachi",
+   "tokyo",
+   "yurakucho"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショップ：全日11:00～20:00",
+   "source": "https://marunouchi.jp-kitte.jp/guide/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "丸ノ内線東京駅　地下道より直結",
+   "source": "https://marunouchi.jp-kitte.jp/guide/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "丸ノ内線東京駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "5Fにご用意しております。",
+    "source": "https://marunouchi.jp-kitte.jp/shop/floor/floor.jsp",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "5F授乳室内にはおむつ替え台がございます。",
+    "source": "https://marunouchi.jp-kitte.jp/shop/floor/floor.jsp",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://marunouchi.jp-kitte.jp/",
+   "https://marunouchi.jp-kitte.jp/guide/",
+   "https://marunouchi.jp-kitte.jp/guide/access.jsp",
+   "https://marunouchi.jp-kitte.jp/shop/floor/floor.jsp",
+   "https://marunouchi.jp-kitte.jp/guide/facilities.jsp",
+   "https://marunouchi.jp-kitte.jp/shop/index.jsp?bf=4"
+  ]
+ },
+ "gransta-tokyo": {
+  "name": "グランスタ東京（JR東京駅構内・改札外）",
+  "officialName": "グランスタ東京",
+  "officialUrl": "https://www.gransta.jp/mall/gransta_tokyo/",
+  "operator": null,
+  "nearStations": [
+   "mitsukoshimae",
+   "tokyo"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "【グランスタ東京】パティスリーGIN NO MORI　季節限定商品のご紹介 2026.10.26",
+   "source": "https://www.gransta.jp/news/info/nursing_room/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京駅の1階から地下1階に広がり、今までのエキナカの概念を超える新体験をご提供いたします。",
+   "source": "https://www.gransta.jp/mall/gransta_tokyo/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "東京駅の改札内には小さなお子さまと一緒にご利用いただけるベビー休憩室（授乳室）が3か所あります。",
+    "source": "https://www.gransta.jp/news/info/okosama_gransta/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "東京駅改札内のベビー休憩室内には、オムツ替えベッド、手洗器、授乳用イスがございます。",
+    "source": "https://www.gransta.jp/news/info/nursing_room/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビ－カーで電車移動は大変だから持ち込みたくないけれど、東京駅でゆっくり過ごすのに使いたい…というパパ＆ママに嬉しい「ベビーカー貸出しサービス」もございます。",
+    "source": "https://www.gransta.jp/news/info/okosama_gransta/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.gransta.jp/service_facility/",
+   "https://www.gransta.jp/news/info/nursing_room/",
+   "https://www.gransta.jp/news/info/okosama_gransta/",
+   "https://www.gransta.jp/mall/gransta_tokyo/"
+  ],
+  "note": "駅の構内（エキナカ）の施設。改札の内外は店ごとに違う（gate-status.json）"
+ },
+ "daimaru-tokyo": {
+  "name": "大丸東京店",
+  "officialName": "大丸東京店",
+  "officialUrl": "https://www.daimaru.co.jp/tokyo/",
+  "operator": "株式会社大丸松坂屋百貨店",
+  "nearStations": [
+   "tokyo"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "■1月1日と1月2日を除き、休まず営業いたします。",
+   "source": "https://www.daimaru.co.jp/tokyo/hours.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式のフロアガイドに入口名「東京駅連絡口」がある。「直結」「雨に濡れずに」の語は確認できなかった",
+   "source": "https://www.daimaru.co.jp/tokyo/floor/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ替えや授乳にご利用ください。",
+    "source": "https://www.daimaru.co.jp/tokyo/service/okosama.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃんのおむつ替え用のベビーシートをトイレにつくりました。",
+    "source": "https://www.daimaru.co.jp/tokyo/service/okosama.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "AB型ベビーカー（対象年齢１ヶ月～４８ヶ月）のみご用意しております。",
+    "source": "https://www.daimaru.co.jp/tokyo/service/okosama.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.daimaru.co.jp/tokyo/",
+   "https://www.daimaru.co.jp/tokyo/access.html",
+   "https://www.daimaru.co.jp/tokyo/hours.html",
+   "https://www.daimaru.co.jp/tokyo/floor/",
+   "https://www.daimaru.co.jp/tokyo/floor/1f.html",
+   "https://www.daimaru.co.jp/tokyo/floor/b1f.html",
+   "https://www.daimaru.co.jp/tokyo/floor/9f.html",
+   "https://www.daimaru.co.jp/tokyo/service/okosama.html"
+  ]
+ },
+ "biccamera-yurakucho": {
+  "name": "ビックカメラ有楽町店",
+  "officialName": "ビックカメラ有楽町店",
+  "officialUrl": "https://www.biccamera.com/bc/i/shop/shoplist/shop014.jsp",
+  "operator": "株式会社ビックカメラ",
+  "nearStations": [
+   "ginza",
+   "hibiya",
+   "tokyo",
+   "yurakucho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "年中無休 10:00 ～ 22:00",
+   "source": "https://www.biccamera.com/bc/i/shop/shoplist/shop014.jsp",
+   "method": "内蔵ブラウザで本文を確認（JS描画）",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載は「日比谷駅 （Ｄ４出口）徒歩４～８分（地下通路）」「有楽町駅 （日比谷口・Ｄ４出口）徒歩１分」まで。「直結」の語は無い",
+   "source": "https://www.biccamera.com/bc/i/shop/shoplist/shop014.jsp",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.biccamera.com/bc/i/shop/shoplist/shop014.jsp",
+   "https://www.biccamera.co.jp/postas/store/yurakucho/"
+  ]
+ },
+ "lumine-yurakucho": {
+  "name": "ルミネ有楽町",
+  "officialName": "ルミネ有楽町",
+  "officialUrl": "https://www.lumine.ne.jp/yurakucho/",
+  "operator": "株式会社ルミネ（LUMINE Co., Ltd.）",
+  "nearStations": [
+   "ginza",
+   "hibiya",
+   "tokyo",
+   "yurakucho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "※一部営業時間が異なるショップがございます。",
+   "source": "https://www.lumine.ne.jp/yurakucho/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: JR有楽町駅銀座口より徒歩1分 地下鉄銀座駅C4出口より徒歩1分 地下鉄日比谷駅A0出口より徒歩0分 地下鉄有楽町線有楽町駅D7出口より徒歩3分",
+   "source": "https://www.lumine.ne.jp/yurakucho/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式の記載: ベビー休憩室 ＜ルミネ2＞4F 給湯設備有",
+    "source": "https://www.lumine.ne.jp/yurakucho/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド付トイレ ＜ルミネ1＞B1・3F ＜ルミネ2＞4F 6、8Fの「だれでもトイレ」内にもございます。",
+    "source": "https://www.lumine.ne.jp/yurakucho/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸出 ＜ルミネ1＞1F インフォメーション",
+    "source": "https://www.lumine.ne.jp/yurakucho/information/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.lumine.ne.jp/yurakucho/",
+   "https://www.lumine.ne.jp/yurakucho/access/",
+   "https://www.lumine.ne.jp/yurakucho/information/",
+   "https://www.lumine.ne.jp/yurakucho/information/hours/",
+   "https://www.lumine.ne.jp/yurakucho/floorguide/",
+   "https://www.lumine.ne.jp/yurakucho/floorguide/?area=area01store01&floor=8f"
+  ]
+ },
+ "coredo-muromachi-terrace": {
+  "name": "コレド室町テラス",
+  "officialName": "コレド室町テラス",
+  "officialUrl": "https://mitsui-shopping-park.com/urban/muromachi/",
+  "operator": "三井不動産グループ（三井ショッピングパークアーバン）",
+  "nearStations": [
+   "mitsukoshimae",
+   "tokyo"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10/1(木) コレド室町テラスの1Fに「おにぎりこんが」がオープン",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/information/index.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "どの施設へも地下通路などを利用して、雨の日でも傘を差さずに巡ることができます。",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/special/23-085/cdm-accessguide.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ半蔵門線・銀座線「三越前」駅",
+    "JR総武線快速「新日本橋」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "カーテンで仕切られた授乳個室が2つあります。",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "車椅子対応トイレ（おむつ替えスペース）／ 授乳室",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式の記載: ［貸出場所］コレド室町1 地下1階 日本橋案内所",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/index.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://mitsui-shopping-park.com/urban/muromachi/",
+   "https://mitsui-shopping-park.com/urban/muromachi/floorguide.html",
+   "https://mitsui-shopping-park.com/urban/muromachi/information/index.html",
+   "https://mitsui-shopping-park.com/urban/muromachi/special/23-085/cdm-accessguide.html",
+   "https://mitsui-shopping-park.com/urban/special/21-132/index.html",
+   "https://mitsui-shopping-park.com/urban/muromachi/whatsnew/index.html"
+  ]
+ },
+ "coredo-muromachi-2": {
+  "name": "コレド室町2",
+  "officialName": "コレド室町2",
+  "officialUrl": "https://mitsui-shopping-park.com/urban/muromachi/",
+  "operator": "三井不動産（三井ショッピングパーク アーバン）",
+  "nearStations": [
+   "kayabacho",
+   "mitsukoshimae"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "平日11：00～20：00、土日祝10：00～20：00",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ半蔵門線・銀座線「三越前」駅直結（A6番出口）",
+   "source": "https://mitsui-shopping-park.com/urban/muromachi/index.html#access",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ半蔵門線・銀座線「三越前」駅（A6番出口）",
+    "JR総武線快速「新日本橋」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "コレド室町2 B1",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "車椅子対応トイレ（おむつ替えスペース）",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式の記載: ［貸出場所］コレド室町1 地下1階 日本橋案内所",
+    "source": "https://mitsui-shopping-park.com/urban/special/21-132/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://mitsui-shopping-park.com/urban/muromachi/",
+   "https://mitsui-shopping-park.com/urban/muromachi/index.html#access",
+   "https://mitsui-shopping-park.com/urban/muromachi/floorguide.html#tab2",
+   "https://mitsui-shopping-park.com/urban/muromachi/parking.html",
+   "https://mitsui-shopping-park.com/urban/special/21-132/"
+  ]
+ },
+ "tokyo-midtown-yaesu": {
+  "name": "東京ミッドタウン八重洲",
+  "officialName": "東京ミッドタウン八重洲",
+  "officialUrl": "https://www.yaesu.tokyo-midtown.com/",
+  "operator": "三井不動産株式会社（公式サイトのフッターに東京ミッドタウンマネジメント株式会社の表記あり。施行者は八重洲二丁目北地区市街地再開発組合）",
+  "nearStations": [
+   "hatchobori",
+   "mitsukoshimae",
+   "otemachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "八重洲の歴史と運河の物語を光で表現 「MIDTOWN YAESU CHRISTMAS 2026」開催",
+   "source": "https://www.yaesu.tokyo-midtown.com/information/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR「東京」駅　地下直結（八重洲地下街経由）、東京メトロ丸の内線「東京」駅　地下直結（八重洲地下街経由）",
+   "source": "https://www.yaesu.tokyo-midtown.com/access",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR「東京」駅",
+    "東京メトロ丸の内線「東京」駅",
+    "東海道新幹線、東北新幹線、北陸新幹線「東京」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "室内にはシンク、授乳室、オムツ替えベッドをご用意しています。",
+    "source": "https://www.yaesu.tokyo-midtown.com/service/baby/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "室内にはシンク、授乳室、オムツ替えベッドをご用意しています。",
+    "source": "https://www.yaesu.tokyo-midtown.com/service/baby/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "お子様連れのお客様にインフォメーションにてベビーカーの貸出しを行っております。",
+    "source": "https://www.yaesu.tokyo-midtown.com/service/baby/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.yaesu.tokyo-midtown.com/access",
+   "https://www.yaesu.tokyo-midtown.com/about/facilities",
+   "https://www.yaesu.tokyo-midtown.com/service/",
+   "https://www.yaesu.tokyo-midtown.com/service/baby/",
+   "https://www.yaesu.tokyo-midtown.com/information/",
+   "https://www.yaesu.tokyo-midtown.com/facilities/",
+   "https://www.yaesu.tokyo-midtown.com/floor/"
+  ]
+ },
+ "nihombashi-takashimaya-sc": {
+  "name": "日本橋高島屋S.C.",
+  "officialName": "日本橋高島屋S.C.",
+  "officialUrl": "https://www.takashimaya.co.jp/nihombashi/",
+  "operator": null,
+  "nearStations": [
+   "hatchobori",
+   "kayabacho",
+   "nihombashi",
+   "otemachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "中央通りの車両通行が規制されている時間帯は、新館駐車場へは昭和通りの東館駐車場係員よりご案内させていただきます。",
+   "source": "https://www.takashimaya.co.jp/nihombashi/sys_access.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ 銀座線・東西線「日本橋駅」直結",
+   "source": "https://www.takashimaya.co.jp/nihombashi/sys_access.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ 銀座線・東西線「日本橋駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室・ベビー休憩室・オムツ替え",
+    "source": "https://www.takashimaya.co.jp/nihombashi/departmentstore/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室・ベビー休憩室・オムツ替え",
+    "source": "https://www.takashimaya.co.jp/nihombashi/departmentstore/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸出",
+    "source": "https://www.takashimaya.co.jp/nihombashi/departmentstore/service/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.takashimaya.co.jp/nihombashi/sys_access.html",
+   "https://www.takashimaya.co.jp/nihombashi/departmentstore/service/"
+  ]
+ },
+ "tokyo-midtown-hibiya": {
+  "name": "東京ミッドタウン日比谷",
+  "officialName": "東京ミッドタウン日比谷",
+  "officialUrl": "https://www.hibiya.tokyo-midtown.com/jp/",
+  "operator": "東京ミッドタウンマネジメント株式会社（サイト著作権表記。事業主体は三井不動産）",
+  "nearStations": [
+   "hibiya",
+   "toranomon"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "法定電気点検に伴い、2026年11月14日(土)・15日(日)の東京ミッドタウン日比谷の営業時間が変更となりますので、お知らせいたします。",
+   "source": "https://www.hibiya.tokyo-midtown.com/jp/news/7582/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ千代田線・日比谷線 ・都営地下鉄三田線「日比谷」駅直結",
+   "source": "https://www.hibiya.tokyo-midtown.com/jp/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ千代田線・日比谷線 ・都営地下鉄三田線「日比谷」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "室内にはシンク、授乳室、オムツ替えベッドをご用意しています。",
+    "source": "https://www.hibiya.tokyo-midtown.com/jp/service/baby/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "室内にはシンク、授乳室、オムツ替えベッドをご用意しています。",
+    "source": "https://www.hibiya.tokyo-midtown.com/jp/service/baby/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "お子様連れのお客様にインフォメーションにてベビーカーの貸出しを行っております。",
+    "source": "https://www.hibiya.tokyo-midtown.com/jp/service/baby/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.hibiya.tokyo-midtown.com/jp/",
+   "https://www.hibiya.tokyo-midtown.com/jp/access/",
+   "https://www.hibiya.tokyo-midtown.com/jp/service/baby/",
+   "https://www.hibiya.tokyo-midtown.com/jp/service/other/",
+   "https://www.hibiya.tokyo-midtown.com/jp/floor/",
+   "https://www.hibiya.tokyo-midtown.com/jp/news/",
+   "https://www.hibiya.tokyo-midtown.com/jp/news/7629/",
+   "https://www.hibiya.tokyo-midtown.com/jp/news/7582/",
+   "https://www.hibiya.tokyo-midtown.com/jp/discover/4718/"
+  ]
+ },
+ "ginza-mitsukoshi": {
+  "name": "銀座三越",
+  "officialName": "銀座三越",
+  "officialUrl": "https://www.mistore.jp/store/ginza.html",
+  "operator": "株式会社三越伊勢丹",
+  "nearStations": [
+   "ginza",
+   "hibiya"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "営業時間：午前10時～午後8時",
+   "source": "https://www.mistore.jp/ginza/access.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東京メトロ銀座線・丸の内線・日比谷線「銀座駅」銀座四丁目交差点改札より徒歩1分",
+   "source": "https://www.mistore.jp/ginza/access.html",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ゆったりと授乳できる個室が３室ございます。ミルク用の給湯器も設置しております。",
+    "source": "https://www.mistore.jp/store/ginza/service/barrier_free/babykids.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー用のオムツ交換台を４台設置しております。",
+    "source": "https://www.mistore.jp/store/ginza/service/barrier_free/babykids.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "プレイルーム・飲食スペースを備え、親子一緒に休憩ができる場です。",
+    "source": "https://www.mistore.jp/store/ginza/service/barrier_free/babykids.html",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "■ベビーカーのお貸出し：本館地下1階",
+    "source": "https://www.mistore.jp/store/ginza/service/barrier_free/babykids.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.mistore.jp/store/ginza.html",
+   "https://www.mistore.jp/ginza/access.html",
+   "https://www.mistore.jp/store/ginza/service.html",
+   "https://www.mistore.jp/store/ginza/service/barrier_free/babykids.html",
+   "https://www.mistore.jp/store/ginza/shops/other/terrace.html",
+   "https://www.mistore.jp/store/ginza/news/news_detail07.html",
+   "https://www.mistore.jp/ginza/service/barrier_free/ginzaline.html"
+  ]
+ },
+ "echika-fit-ginza": {
+  "name": "エチカフィット銀座（東京メトロ銀座駅構内）",
+  "officialName": "エチカフィット銀座",
+  "officialUrl": "https://www.metropro-sc.jp/echikafit-ginza/",
+  "operator": "株式会社メトロプロパティーズ",
+  "nearStations": [
+   "ginza",
+   "hibiya",
+   "yurakucho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "Echika・Echika fitは、一部店舗の営業時間を変更して営業しております。",
+   "source": "https://www.metropro-sc.jp/echikafit-ginza/event/item_eventnews.jsp?id=16",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載は「東京メトロ銀座線、丸ノ内線、日比谷線「銀座」駅C2、C4出口そば」まで。「直結」「雨に濡れずに」の語は無い",
+   "source": "https://www.metropro-sc.jp/echikafit-ginza/shop/access.jsp",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.metropro-sc.jp/echikafit-ginza/",
+   "https://www.metropro-sc.jp/echikafit-ginza/shop/access.jsp",
+   "https://www.metropro-sc.jp/echikafit-ginza/shop/floor.jsp",
+   "https://www.metropro-sc.jp/echikafit-ginza/shop/index.jsp?bf=4",
+   "https://www.metropro-sc.jp/echikafit-ginza/event/eventnews.jsp",
+   "https://www.metropro-sc.jp/echikafit-ginza/event/item_eventnews.jsp?id=16",
+   "https://www.metro-pro.jp/news/2020/202007171344",
+   "https://www.echika-echikafit.com/ginza/map-en"
+  ]
+ },
+ "wing-shimbashi": {
+  "name": "ウィング新橋（新橋駅東口地下街）",
+  "officialName": "ウィング新橋",
+  "officialUrl": "https://www.wing-net.ne.jp/shimbashi/",
+  "operator": null,
+  "nearStations": [
+   "ginza",
+   "hibiya",
+   "kasumigaseki",
+   "toranomon"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "toranomon-hills-business-tower": {
+  "name": "虎ノ門ヒルズ ビジネスタワー",
+  "officialName": "虎ノ門ヒルズ ビジネスタワー",
+  "officialUrl": "https://www.toranomonhills.com/",
+  "operator": "森ビル株式会社",
+  "nearStations": [
+   "kasumigaseki",
+   "toranomon"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "○東京メトロ日比谷線『虎ノ門ヒルズ駅』直結",
+   "source": "https://www.toranomonhills.com/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ日比谷線『虎ノ門ヒルズ駅』",
+    "東京メトロ銀座線『虎ノ門駅』"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "施設内にはベビールームがございます。授乳やオムツ交換などの際にご利用ください。",
+    "source": "https://www.toranomonhills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "オムツ交換台、オムツ用ごみ箱、椅子",
+    "source": "https://www.toranomonhills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.toranomonhills.com/access/",
+   "https://www.toranomonhills.com/information/index.html",
+   "https://www.toranomonhills.com/information/facilities_service.html",
+   "https://www.toranomonhills.com/about/index.html",
+   "https://www.toranomonhills.com/floor_map/bt_map_1f.html",
+   "https://www.ehills.co.jp/rp/dfw/EHILLS/building/roadmap/toramon-biztower/toramon-biztower.php"
+  ]
+ },
+ "toranomon-hills-station-tower": {
+  "name": "虎ノ門ヒルズ ステーションタワー",
+  "officialName": "虎ノ門ヒルズ ステーションタワー",
+  "officialUrl": "https://www.toranomonhills.com/",
+  "operator": "森ビル株式会社",
+  "nearStations": [
+   "kamiyacho",
+   "toranomon"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "虎ノ門ヒルズ ステーションタワー8F・45～49F：10:00〜20:00",
+   "source": "https://www.toranomonhills.com/information/index.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ日比谷線「虎ノ門ヒルズ駅」A2出口直結",
+   "source": "https://www.ehills.co.jp/rp/dfw/EHILLS/building/roadmap/toramon-statower/toramon-statower.php",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ日比谷線「虎ノ門ヒルズ駅」A2出口",
+    "東京メトロ銀座線「虎ノ門駅」B2出口（地下通路経由）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "施設内にはベビールームがございます。授乳やオムツ交換などの際にご利用ください。",
+    "source": "https://www.toranomonhills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "オムツ交換台、オムツ用ごみ箱、椅子",
+    "source": "https://www.toranomonhills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.toranomonhills.com/access/",
+   "https://www.toranomonhills.com/information/index.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_f1.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_f2.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_f3.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_f7.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_b1.html",
+   "https://www.toranomonhills.com/floor_map/floor_map_sta_b2.html",
+   "https://www.ehills.co.jp/rp/dfw/EHILLS/building/roadmap/toramon-statower/toramon-statower.php"
+  ]
+ },
+ "azabudai-hills": {
+  "name": "麻布台ヒルズ",
+  "officialName": "麻布台ヒルズ",
+  "officialUrl": "https://www.azabudai-hills.com/",
+  "operator": "森ビル株式会社",
+  "nearStations": [
+   "kamiyacho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "麻布台ヒルズの店舗・施設の営業時間をご確認いただけます。",
+   "source": "https://www.azabudai-hills.com/information/index.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "○東京メトロ日比谷線『神谷町駅』　5番出口　直結",
+   "source": "https://www.azabudai-hills.com/access/index.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ日比谷線『神谷町駅』　5番出口",
+    "東京メトロ南北線『六本木一丁目駅』　4番出口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "麻布台ヒルズ内には授乳室が3ヶ所ございます。授乳やオムツ交換などの際にご利用ください。",
+    "source": "https://www.azabudai-hills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳・搾乳室（個室３室）、おむつ替えスペース、ベビープレイスペース、離乳食スペース、調乳機、電子レンジなど",
+    "source": "https://www.azabudai-hills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳・搾乳室（個室３室）、おむつ替えスペース、ベビープレイスペース、離乳食スペース、調乳機、電子レンジなど",
+    "source": "https://www.azabudai-hills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "お子さま連れの方のために、麻布台ヒルズ内でベビーカーの貸出しを行っております。",
+    "source": "https://www.azabudai-hills.com/information/index.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.azabudai-hills.com/",
+   "https://www.azabudai-hills.com/access/index.html",
+   "https://www.azabudai-hills.com/information/index.html"
+  ]
+ },
+ "ark-hills-south-tower": {
+  "name": "アークヒルズ サウスタワー",
+  "officialName": "アークヒルズ サウスタワー",
+  "officialUrl": "https://www.arkhills.com/",
+  "operator": "森ビル株式会社",
+  "nearStations": [
+   "kamiyacho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショップ 11:00～21:00 / レストラン 11:00～23:00",
+   "source": "https://www.arkhills.com/information/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ南北線『六本木一丁目駅』3番出口直結",
+   "source": "https://www.arkhills.com/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ南北線『六本木一丁目駅』3番出口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "アークヒルズ サウスタワー B1F",
+    "source": "https://www.arkhills.com/about/kids.html",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "アークヒルズ サウスタワー B1F、1F、2F",
+    "source": "https://www.arkhills.com/about/kids.html",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.arkhills.com/access/",
+   "https://www.arkhills.com/about/kids.html",
+   "https://www.arkhills.com/information/",
+   "https://www.arkhills.com/floor_map/"
+  ]
+ },
+ "atago-green-hills": {
+  "name": "愛宕グリーンヒルズ MORIタワー",
+  "officialName": "愛宕グリーンヒルズ",
+  "officialUrl": "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/",
+  "operator": "森ビル株式会社",
+  "nearStations": [
+   "daimon",
+   "kamiyacho",
+   "toranomon"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026年9月更新",
+   "source": "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 都営地下鉄 三田線「御成門」駅A5番出口より徒歩3分 東京メトロ 日比谷線「神谷町」駅3番出口より徒歩4分",
+   "source": "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/map/map.php",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.mori.co.jp/projects/atagogreenhills/background.html",
+   "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/",
+   "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/map/map.php",
+   "https://www.ehills.co.jp/rp/dfw/EHILLS/morishop/atago/starbucks/index.php"
+  ]
+ },
+ "atre-akihabara-1": {
+  "name": "アトレ秋葉原1",
+  "officialName": "アトレ秋葉原1（施設サイト名：アトレ秋葉原）",
+  "officialUrl": "https://www.atre.co.jp/akihabara/",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "akihabara"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "アトレ秋葉原1 / AM10:00～PM9:00",
+   "source": "https://www.atre.co.jp/akihabara/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "※アトレ1の営業時間・3Fアトレ1改札口の営業時間により変更になる場合がございます。",
+   "source": "https://www.atre.co.jp/akihabara/service/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "3Fアトレ1改札口（JR秋葉原駅 アトレ１改札）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●個室　授乳用ブース（1室）※男性は入室いただけません。",
+    "source": "https://www.atre.co.jp/akihabara/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●設備　調乳用給湯設備、おむつ替えベット(2台)※調乳機・おむつ替えスペースは男性もご利用いただけます。",
+    "source": "https://www.atre.co.jp/akihabara/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/akihabara/service/",
+   "https://www.atre.co.jp/akihabara/access/",
+   "https://www.atre.co.jp/akihabara/",
+   "https://www.atre.co.jp/akihabara/news/6209",
+   "https://www.atre.co.jp/akihabara/news",
+   "https://www.atre.co.jp/akihabara/floorguide/27/112",
+   "https://www.atre.co.jp/akihabara/floorguide/27/114",
+   "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=41",
+   "https://www.atre.co.jp/"
+  ],
+  "note": "駅直結の根拠は、JR秋葉原駅の改札名「アトレ1改札口」（3F）。「直結」の語ではない"
+ },
+ "atre-akihabara-2": {
+  "name": "アトレ秋葉原2",
+  "officialName": "アトレ秋葉原2",
+  "officialUrl": "https://www.atre.co.jp/index.php/akihabara",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "akihabara"
+  ],
+  "storesInLedger": 5,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "アトレ秋葉原2 / AM7:00～PM11:30",
+   "source": "https://www.atre.co.jp/index.php/akihabara/access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: ⑤JR秋葉原駅昭和通り改札口へ向かう右側にアトレ秋葉原2店がございます",
+   "source": "https://www.atre.co.jp/index.php/akihabara/news/6209",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "※（秋葉原2）2Ｆの車椅子・お子様同伴対応化粧室内にございます。",
+    "source": "https://www.atre.co.jp/index.php/akihabara/service",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/index.php/akihabara",
+   "https://www.atre.co.jp/index.php/akihabara/service",
+   "https://www.atre.co.jp/index.php/akihabara/access",
+   "https://www.atre.co.jp/index.php/akihabara/news",
+   "https://www.atre.co.jp/index.php/akihabara/news/6209"
+  ]
+ },
+ "yodobashi-akiba": {
+  "name": "ヨドバシAkiba",
+  "officialName": "ヨドバシAkiba",
+  "officialUrl": "https://www.yodobashi-akiba.com/",
+  "operator": "株式会社ヨドバシカメラ",
+  "nearStations": [
+   "akihabara",
+   "okachimachi",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "営業時間 あさ9:30 - よる10:00",
+   "source": "https://www.yodobashi.com/ec/store/map/0018/index.html",
+   "method": "内蔵ブラウザで本文を確認（JS描画）",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "秋葉原駅の5路線に直結！",
+   "source": "https://www.yodobashi-akiba.com/information/access_map.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "秋葉原駅（つくばエクスプレス）",
+    "秋葉原駅（JR山手線・総武線・京浜東北線）",
+    "秋葉原駅（東京メトロ日比谷線）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸し出し",
+    "source": "https://www.yodobashi.com/ec/store/floor/0018/index.html",
+    "method": "内蔵ブラウザで本文を確認（JS描画）",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.yodobashi.com/ec/store/0018/",
+   "https://www.yodobashi.com/ec/store/floor/0018/index.html",
+   "https://www.yodobashi.com/ec/store/map/0018/index.html",
+   "https://www.yodobashi.com/ec/store/icon/index.html",
+   "http://www.yodobashi-akiba.com/index.html",
+   "https://www.yodobashi-akiba.com/information/index.html",
+   "https://www.yodobashi-akiba.com/information/information_floor.html",
+   "https://www.yodobashi-akiba.com/information/access_map.html",
+   "https://www.yodobashi-akiba.com/information/information_b1_f1.html",
+   "https://www.yodobashi-akiba.com/information/information_9.html"
+  ]
+ },
+ "parcoya-ueno": {
+  "name": "パルコヤ上野",
+  "officialName": "PARCO_ya上野",
+  "officialUrl": "https://parcoya-ueno.parco.jp/",
+  "operator": "株式会社パルコ",
+  "nearStations": [
+   "akihabara",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "B1F～5F：10:00〜20:00",
+   "source": "https://parcoya-ueno.parco.jp/info?gcd=access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東京メトロ銀座線 上野広小路駅 A1出口より 徒歩1分",
+   "source": "https://parcoya-ueno.parco.jp/info?gcd=access",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "【ベビー休憩室・授乳室】 3Fにございます。（浄水給湯器あり）",
+    "source": "https://parcoya-ueno.parco.jp/info?gcd=access",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "全フロアのお手洗いの奥の個室におむつ台・ベビーチェアのご用意がございます。",
+    "source": "https://parcoya-ueno.parco.jp/info?gcd=access",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://parcoya-ueno.parco.jp/info?gcd=access",
+   "https://parcoya-ueno.parco.jp/",
+   "https://parcoya-ueno.parco.jp/info/",
+   "https://parcoya-ueno.parco.jp/floor/",
+   "https://parcoya-ueno.parco.jp/floor/detail/?f=3f&type=type1",
+   "https://parcoya-ueno.parco.jp/floor/detail/?f=b1f&ft=type1",
+   "https://parcoya-ueno.parco.jp/floor/detail/?f=1f&ft=type1",
+   "https://parcoya-ueno.parco.jp/pnews/",
+   "https://parcoya-ueno.parco.jp/pnews/detail/?id=23658",
+   "https://parcoya-ueno.parco.jp/page/sale/?slcd=000457"
+  ]
+ },
+ "atre-ueno": {
+  "name": "アトレ上野",
+  "officialName": "アトレ上野",
+  "officialUrl": "https://www.atre.co.jp/index.php/ueno",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング 10:00～21:00",
+   "source": "https://www.atre.co.jp/index.php/ueno/access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "・「ハイボールバー上野駅1923横」車椅子対応化粧室内",
+    "source": "https://www.atre.co.jp/index.php/ueno/service",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/index.php/ueno",
+   "https://www.atre.co.jp/index.php/ueno/service",
+   "https://www.atre.co.jp/index.php/ueno/access",
+   "https://www.atre.co.jp/index.php/ueno/news",
+   "https://www.atre.co.jp/index.php/ueno/floorguide/8/33",
+   "https://www.atre.co.jp/index.php/ueno/floorguide/8/34",
+   "https://www.atre.co.jp/index.php/ueno/floorguide/8/35"
+  ]
+ },
+ "ecute-ueno": {
+  "name": "エキュート上野（JR上野駅構内・改札外を含む）",
+  "officialName": "エキュート上野",
+  "officialUrl": "https://www.ecute.jp/ueno",
+  "operator": "株式会社 JR東日本クロスステーション",
+  "nearStations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "エキナカ商業施設「エキュート」クリスマスフェア「ecute Christmas 2026」開催！",
+   "source": "https://www.ecute.jp/ueno",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "上野駅直結の商業施設「エキュート上野」。",
+   "source": "https://media.jreast.co.jp/articles/114",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR上野駅 改札内3F",
+    "JR上野駅 公園改札外"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー休憩室内には、おむつ交換台、シンク（浄水器・温水器）、ベビカル、授乳エリアがあります。",
+    "source": "https://media.jreast.co.jp/articles/2290",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー休憩室内には、おむつ交換台、シンク（浄水器・温水器）、ベビカル、授乳エリアがあります。",
+    "source": "https://media.jreast.co.jp/articles/2290",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "回答の出典URL（/ueno/campaign/3126）は2026-10-30時点で404",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.ecute.jp/ueno",
+   "https://www.ecute.jp/ueno/shop/floormap",
+   "https://www.ecute.jp/ueno/access",
+   "https://www.ecute.jp/company.html",
+   "https://www.ecute.jp/ueno/campaign/3126",
+   "https://media.jreast.co.jp/articles/114",
+   "https://media.jreast.co.jp/articles/2290"
+  ]
+ },
+ "ueno-marui": {
+  "name": "上野マルイ",
+  "officialName": "上野マルイ",
+  "officialUrl": "https://www.0101.co.jp/058/",
+  "operator": "株式会社丸井（MARUI CO.,LTD.）",
+  "nearStations": [
+   "keisei-ueno",
+   "okachimachi",
+   "ueno",
+   "ueno-hirokoji",
+   "ueno-okachimachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "上野マルイ店舗サイトへようこそ。各店の店舗情報やフロアガイド、ブランド＆ショップ検索など。",
+   "source": "https://www.0101.co.jp/058/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 約５０ｍ進み５ａ出口手前の中央通り側地上ゆきエレベーターで地上に出ると、上野マルイ正面入口がございます。",
+   "source": "https://www.0101.co.jp/058/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.0101.co.jp/058/",
+   "https://www.0101.co.jp/058/facility/",
+   "http://www.0101.co.jp/058/facility/",
+   "https://www.0101.co.jp/058/access/",
+   "https://www.0101.co.jp/058/info/",
+   "https://www.0101.co.jp/058/news/detail.html?article_seq=57117&article_type=sto"
+  ]
+ },
+ "shinagawa-east-one-tower": {
+  "name": "品川イーストワンタワー",
+  "officialName": "品川イーストワンタワー",
+  "officialUrl": "https://www.e-onetower.com/",
+  "operator": "大東建託パートナーズ株式会社",
+  "nearStations": [
+   "shinagawa"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "キッチンカー出店のお知らせ（2026年11月）",
+   "source": "https://www.e-onetower.com/news.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京の南の玄関口・品川駅直結の品川イーストワンタワー。",
+   "source": "https://www.e-onetower.com/access.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "品川駅",
+    "JR品川駅（港南口）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.e-onetower.com/",
+   "https://www.e-onetower.com/about/",
+   "https://www.e-onetower.com/access.html",
+   "https://www.e-onetower.com/shop_guide.html",
+   "https://www.e-onetower.com/news.html",
+   "https://www.e-onetower.com/sitemap.html",
+   "https://www.e-onetower.com/dcms_media/other/floorguide_260916j.pdf",
+   "https://www.e-onetower.com/dcms_media/other/floorguide_260916e.pdf"
+  ]
+ },
+ "newoman-takanawa": {
+  "name": "ニュウマン高輪",
+  "officialName": "ニュウマン高輪（NEWoMan TAKANAWA）",
+  "officialUrl": "https://www.newoman.jp/takanawa/",
+  "operator": "株式会社ルミネ（LUMINE Co., Ltd.）／街全体の開発：東日本旅客鉄道株式会社（JR東日本）",
+  "nearStations": [
+   "shinagawa"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "South・North　1F～5F 基準営業時間 11:00～20:00",
+   "source": "https://www.newoman.jp/takanawa/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR高輪ゲートウェイ駅直結",
+   "source": "https://www.jebl.co.jp/building/thelinkpillar-1-north/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR高輪ゲートウェイ駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー休憩室・授乳室 South 5F ／ North 5F ／ LUFTBAUM 29F ／ MIMURE 3F",
+    "source": "https://www.newoman.jp/takanawa/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "施設内にはベビールームが2ヶ所ございます。授乳やオムツ交換などの際にご利用ください。",
+    "source": "https://www.takanawagateway-city.com/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "大人も子どもも自由に過ごせる「こもれびら」や、ペットフレンドリーなエリア&ショップなど、多様な人々が行き交う空間で、新たな交流が生まれます。",
+    "source": "https://www.newoman.jp/takanawa/about/",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸出 South 2F ／ North 2F ／ South 4F　サービスカウンター",
+    "source": "https://www.newoman.jp/takanawa/information/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.newoman.jp/takanawa/",
+   "https://www.newoman.jp/takanawa/access/",
+   "https://www.newoman.jp/takanawa/information/",
+   "https://www.newoman.jp/takanawa/floorguide/",
+   "https://www.newoman.jp/takanawa/about/",
+   "https://www.newoman.jp/takanawa/topics/detail/?cd=004523",
+   "https://www.takanawagateway-city.com/information/",
+   "https://www.takanawagateway-city.com/access/",
+   "https://www.jreast.co.jp/press/2024/20250204_ho03.pdf",
+   "https://www.jebl.co.jp/building/thelinkpillar-1-north/"
+  ]
+ },
+ "tamachi-sunshine-bldg": {
+  "name": "サンシャインビル（港区芝5-31-10）",
+  "officialName": "サンシャインビル",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "mita",
+   "tamachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "tamachi-tower": {
+  "name": "田町タワー（田町タワーモール）",
+  "officialName": "田町タワーモール",
+  "officialUrl": "https://tamachi-towermall.com/",
+  "operator": "株式会社田町ビル・徳栄商事株式会社・三菱重工業株式会社",
+  "nearStations": [
+   "mita",
+   "tamachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "今年も田町タワーモールは地域のハロウィンイベント「たまちハロゥインスタンプラリー」のゴール地点です。",
+   "source": "https://tamachi-towermall.com/topics/p438/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "都営地下鉄三田線・浅草線「三田」駅 直結",
+   "source": "https://tamachi-towermall.com/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "都営地下鉄三田線・浅草線「三田」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://tamachi-towermall.com/",
+   "https://tamachi-towermall.com/about",
+   "https://tamachi-towermall.com/access/",
+   "https://tamachi-towermall.com/shop",
+   "https://tamachi-towermall.com/shop?caturl=2f",
+   "https://tamachi-towermall.com/shop?caturl=3f",
+   "https://tamachi-towermall.com/topics/p438/",
+   "https://www.mhi.com/jp/group/tmcbldg/business/shop",
+   "https://www.mhi.com/jp/group/tmcbldg/business/building/tower",
+   "https://tamachi-tower.com/"
+  ]
+ },
+ "seavans": {
+  "name": "シーバンス ア・モール",
+  "officialName": "シーバンス ア・モール",
+  "officialUrl": "https://seavans-amall.jp/",
+  "operator": "NTT都市開発",
+  "nearStations": [
+   "daimon",
+   "mita",
+   "tamachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "毎日 7:00〜23:00",
+   "source": "https://seavans-amall.jp/about/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 新交通ゆりかもめ線日の出駅徒歩 約5分",
+   "source": "https://seavans-amall.jp/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "no",
+    "evidence": "授乳室はございません。おむつ替えは１F多目的トイレにございます。",
+    "source": "https://seavans-amall.jp/faq/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室はございません。おむつ替えは１F多目的トイレにございます。",
+    "source": "https://seavans-amall.jp/faq/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://seavans-amall.jp/",
+   "https://seavans-amall.jp/topics/",
+   "https://seavans-amall.jp/9797/",
+   "https://seavans-amall.jp/access/",
+   "https://seavans-amall.jp/faq/",
+   "https://seavans-amall.jp/about/",
+   "https://www.nttud.co.jp/business/commercial_facilities/detail/id/27.html"
+  ]
+ },
+ "keio-mall": {
+  "name": "京王モール（新宿駅西口地下）",
+  "officialName": "京王モール",
+  "officialUrl": "https://ekishop.keio-sc.jp/keiomall-keiomallannex/",
+  "operator": "京王SCクリエイション株式会社",
+  "nearStations": [
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "【10月9日NEW OPEN】AMERICAN HOLIC",
+   "source": "https://ekishop.keio-sc.jp/keiomall-keiomallannex/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "新宿駅から直結の「京王モール」の中央にある、京王モールサービスセンターでは、宝くじやtotoなどを販売しております。",
+   "source": "https://ekishop.keio-sc.jp/keiomall-keiomallannex/shop/detail/?scd=000769",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "新宿駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://ekishop.keio-sc.jp/keiomall-keiomallannex/",
+   "https://ekishop.keio-sc.jp/sitemap/",
+   "https://ekishop.keio-sc.jp/keiomall-keiomallannex/shop/detail/?scd=000769"
+  ]
+ },
+ "odakyu-ace": {
+  "name": "小田急エース（新宿駅西口地下街）",
+  "officialName": "小田急エース",
+  "officialUrl": "https://www.odakyu-sc.com/odakyu-ace/",
+  "operator": "Odakyu SC Development Co., Ltd.（小田急SCディベロップメント）",
+  "nearStations": [
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "小田急エースはおかげさまで60周年！ 2026年8月12日(水)～11月30日(月)",
+   "source": "https://www.odakyu-sc.com/odakyu-ace/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 小田急線新宿駅西口・JR線新宿駅西口・京王線新宿駅京王西口すぐ",
+   "source": "https://www.odakyu-sc.com/odakyu-ace/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.odakyu-sc.com/odakyu-ace/",
+   "https://www.odakyu-sc.com/odakyu-ace/access/",
+   "https://www.odakyu-sc.com/odakyu-ace/shopsearch/floor/",
+   "https://www.odakyu-sc.com/odakyu-ace/shopsearch/floor/north"
+  ]
+ },
+ "lumine-est-shinjuku": {
+  "name": "ルミネエスト新宿",
+  "officialName": "ルミネエスト新宿",
+  "officialUrl": "https://www.lumine.ne.jp/est/",
+  "operator": "株式会社ルミネ",
+  "nearStations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 5,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ルミネエスト新宿　開業20周年「トキメキは無敵展」が開催！",
+   "source": "https://www.lumine.ne.jp/est/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR新宿駅「中央東口」改札または「東口」改札より徒歩1分（駅直結）",
+   "source": "https://media.jreast.co.jp/articles/3134",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR新宿駅中央東改札",
+    "JR新宿駅東改札"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "B2・B1・3F・4F・6F・7F・8F　詳しい場所はフロアマップをご確認ください。",
+    "source": "https://www.lumine.ne.jp/est/information/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー 1Fインフォメーション",
+    "source": "https://www.lumine.ne.jp/est/information/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.lumine.ne.jp/est/",
+   "https://www.lumine.ne.jp/est/information/",
+   "https://www.lumine.ne.jp/est/information/hours/",
+   "https://www.lumine.ne.jp/est/access/",
+   "https://www.lumine.ne.jp/est/floorguide/",
+   "https://www.lumine.ne.jp/est/floorguide/?area=area01store01&floor=4f",
+   "https://www.lumine.ne.jp/est/floorguide/?area=area01store01&floor=1f",
+   "https://www.lumine.ne.jp/est/topics/",
+   "https://media.jreast.co.jp/articles/3134"
+  ]
+ },
+ "lumine-shinjuku": {
+  "name": "ルミネ新宿",
+  "officialName": "ルミネ新宿（ルミネ1・ルミネ2）",
+  "officialUrl": "https://www.lumine.ne.jp/shinjuku/",
+  "operator": "株式会社ルミネ",
+  "nearStations": [
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinsen-shinjuku"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング 11:00 ～ 21:00",
+   "source": "https://www.lumine.ne.jp/shinjuku/information/hours/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "京王線 ルミネ口より直通",
+   "source": "https://www.lumine.ne.jp/shinjuku/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "京王線 ルミネ口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室 ＜ルミネ1＞7F ＜ルミネ2＞4F",
+    "source": "https://www.lumine.ne.jp/shinjuku/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド付トイレ ＜ルミネ1＞4F・5F・6F・7F ＜ルミネ2＞2F・3F・4F・5F",
+    "source": "https://www.lumine.ne.jp/shinjuku/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸出 ＜ルミネ1・2＞2F",
+    "source": "https://www.lumine.ne.jp/shinjuku/information/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.lumine.ne.jp/shinjuku/information/",
+   "https://www.lumine.ne.jp/shinjuku/access/",
+   "https://www.lumine.ne.jp/shinjuku/information/hours/",
+   "https://www.lumine.ne.jp/shinjuku/newshop/",
+   "https://www.lumine.ne.jp/shinjuku/topics/",
+   "https://www.lumine.ne.jp/shinjuku/floorguide/"
+  ]
+ },
+ "seibu-shinjuku-ekimae-bldg": {
+  "name": "西武新宿駅前ビル",
+  "officialName": "ワモール西武新宿駅前ビル",
+  "officialUrl": "https://www.temwas.co.jp/property/wamall/",
+  "operator": "テンワス株式会社",
+  "nearStations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ワモール西武新宿駅前ビル",
+   "source": "https://www.temwas.co.jp/property/wamall/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 西武新宿線「西武新宿」駅 徒歩1分",
+   "source": "https://www.temwas.co.jp/property/wamall/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.temwas.co.jp/property/wamall/",
+   "https://www.temwas.co.jp/property/",
+   "https://www.temwas.co.jp/information/"
+  ]
+ },
+ "subnade": {
+  "name": "新宿サブナード",
+  "officialName": "新宿サブナード",
+  "officialUrl": "https://www.subnade.co.jp/",
+  "operator": "新宿サブナード株式会社",
+  "nearStations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "2026-10-30 に公式サイト（www.subnade.co.jp）へ接続できなかった（接続拒否）。「全館の改装・リニューアル」の告知は2023年の開業50周年リニューアルのもので、いまの休館ではない",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.subnade.co.jp/blog/"
+  ]
+ },
+ "isetan-kaikan": {
+  "name": "伊勢丹会館",
+  "officialName": "伊勢丹会館",
+  "officialUrl": "https://www.mistore.jp/store/shinjuku/isetankaikan.html",
+  "operator": null,
+  "nearStations": [
+   "higashi-shinjuku",
+   "nishi-shinjuku",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku",
+   "tochomae"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026年『秋の味覚まつり』のお知らせ",
+   "source": "https://www.mistore.jp/store/shinjuku/isetankaikan.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "雨の日など悪天候時でも地下道から伊勢丹会館まで濡れずに来られるのをご存じでしょうか。",
+   "source": "https://www.mistore.jp/shinjuku/isetankaikan/shopnews_list/shopnews023111111.html",
+   "checkedAt": "2026-10-30",
+   "stations": []
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.mistore.jp/store/shinjuku/isetankaikan.html",
+   "https://www.mistore.jp/shinjuku/isetankaikan/shopnews_list/shopnews023111111.html",
+   "https://www.mistore.jp/store/shinjuku/isetankaikan/faq.html",
+   "https://www.mistore.jp/store/shinjuku/access.html",
+   "https://www.mistore.jp/store/shinjuku/shops_facilities.html",
+   "https://www.mistore.jp/shinjuku/isetankaikan/shop_wako.html",
+   "https://www.mistore.jp/store/shinjuku/news_list/news_detail025.html"
+  ],
+  "note": "公式の記載は「地下道から伊勢丹会館まで濡れずに来られる」で、どの駅からかは書かれていない"
+ },
+ "cocoon-tower": {
+  "name": "モード学園コクーンタワー",
+  "officialName": "総合校舎モード学園コクーンタワー",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "seibi-shinjuku",
+   "shinjuku",
+   "shinjuku-nishiguchi",
+   "shinsen-shinjuku"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "最寄駅からのアクセス 新宿（西口）駅前、徒歩2分。  JR・小田急・京王・地下鉄から地下街が直結。",
+   "source": "https://www.mode.ac.jp/tokyo/access",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "新宿（西口）駅",
+    "JR・小田急・京王・地下鉄"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.mode.ac.jp/english",
+   "https://www.mode.ac.jp/tokyo",
+   "https://www.mode.ac.jp/tokyo/facilities",
+   "https://www.mode.ac.jp/tokyo/access",
+   "https://www.mode.ac.jp/tokyo/for/schoolinfo"
+  ]
+ },
+ "shinjuku-marui-honkan": {
+  "name": "新宿マルイ本館",
+  "officialName": "新宿マルイ 本館",
+  "officialUrl": "https://www.0101.co.jp/003/",
+  "operator": "株式会社丸井",
+  "nearStations": [
+   "higashi-shinjuku",
+   "shinjuku-sanchome"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "新宿マルイ 本館店舗サイトへようこそ。各店の店舗情報やフロアガイド、ブランド＆ショップ検索など。",
+   "source": "https://www.0101.co.jp/003/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載は「三越方面改札を出てUターンし、都営新宿線方面に80mほど進むと、右手に新宿マルイ本館B1F入口がございます。」（地下の道順）。「直結」「雨に濡れずに」の語は無い",
+   "source": "https://www.0101.co.jp/003/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.0101.co.jp/003/",
+   "https://www.0101.co.jp/003/access/",
+   "https://www.0101.co.jp/smp/003/access/",
+   "https://www.0101.co.jp/003/facility/",
+   "https://www.0101.co.jp/003/info/"
+  ]
+ },
+ "seibu-shinjuku-pepe": {
+  "name": "西武新宿ペペ",
+  "officialName": "西武新宿ペペ & Brick St.",
+  "officialUrl": "https://www.seibu-shop.jp/shinjuku/",
+  "operator": "株式会社西武不動産プロパティマネジメント",
+  "nearStations": [
+   "higashi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku-nishiguchi",
+   "tochomae"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "【10月】LINEクーポン配布中！ 2026年10月1日(木)～10月31日(土)",
+   "source": "https://www.seibu-shop.jp/shinjuku/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "西武新宿ペペ2階が西武新宿線 西武新宿駅と直結",
+   "source": "https://www.seibu-shop.jp/shinjuku/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "西武新宿線 西武新宿駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド 女性用 3F、5F、7F 男性用 6F ※いずれも化粧室内にございます。",
+    "source": "https://www.seibu-shop.jp/shinjuku/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.seibu-shop.jp/shinjuku/",
+   "https://www.seibu-shop.jp/shinjuku/information/",
+   "https://www.seibu-shop.jp/shinjuku/access/",
+   "https://www.seibu-shop.jp/shinjuku/floorguide/",
+   "https://www.seibu-shop.jp/shinjuku/event/"
+  ]
+ },
+ "tokyu-kabukicho-tower": {
+  "name": "東急歌舞伎町タワー",
+  "officialName": "東急歌舞伎町タワー",
+  "officialUrl": "https://www.tokyu-kabukicho-tower.jp/",
+  "operator": "東急株式会社、株式会社東急レクリエーション",
+  "nearStations": [
+   "higashi-shinjuku",
+   "okubo",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "tochomae"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026.10.16 【ニュースリリース】平野耕太原作の大人気コミック「HELLSING」 東急歌舞伎町タワーとのコラボレーションイベントの開催が決定！",
+   "source": "https://www.tokyu-kabukicho-tower.jp/information/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 「西武新宿駅」から徒歩1分",
+   "source": "https://www.tokyu-kabukicho-tower.jp/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tokyu-kabukicho-tower.jp/",
+   "https://www.tokyu-kabukicho-tower.jp/access/",
+   "https://www.tokyu-kabukicho-tower.jp/floorguide/",
+   "https://www.tokyu-kabukicho-tower.jp/faq/",
+   "https://www.tokyu-kabukicho-tower.jp/about/",
+   "https://www.tokyu-kabukicho-tower.jp/information/",
+   "https://www.tokyu-kabukicho-tower.jp/information/detail/?cd=000028"
+  ]
+ },
+ "lions-shinjuku-gyoenmae": {
+  "name": "ライオンズマンション新宿御苑前（住宅の1階）",
+  "officialName": "ライオンズマンション新宿御苑前",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "higashi-shinjuku",
+   "shinjuku",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "lions-kabukicho": {
+  "name": "ライオンズマンション歌舞伎町（住宅）",
+  "officialName": "ライオンズマンション歌舞伎町",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "higashi-shinjuku",
+   "seibi-shinjuku",
+   "shin-okubo",
+   "shinjuku",
+   "shinjuku-sanchome",
+   "shinsen-shinjuku"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "kinshicho-termina": {
+  "name": "錦糸町テルミナ（錦糸町ステーションビル）",
+  "officialName": "錦糸町ステーションビル テルミナ",
+  "officialUrl": "https://www.termina.info/",
+  "operator": "株式会社錦糸町ステーションビル",
+  "nearStations": [
+   "kinshicho",
+   "sumiyoshi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "5Fレストラン・JTB 11:00～22:00",
+   "source": "http://www.termina.info/service/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "錦糸町駅直結の駅ビル「TERMINA」。100店舗以上のショップと施設。",
+   "source": "http://www.termina.info/service/",
+   "stations": [
+    "錦糸町駅"
+   ],
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室 テルミナ 4･5F ※テルミナ2ラガールの授乳室は、2026年3月をもって閉鎖しております。",
+    "source": "http://www.termina.info/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーシート付トイレ テルミナ 女性用トイレ：B1・3･4･5･6F 男性用トイレ：3･4F",
+    "source": "http://www.termina.info/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "http://www.termina.info/",
+   "http://www.termina.info/service/",
+   "http://www.termina.info/access/",
+   "http://www.termina.info/about/",
+   "http://www.termina.info/about/outline.php",
+   "http://www.termina.info/floorguide/detail.php?floor=1",
+   "http://www.termina.info/floorguide/detail.php?floor=2"
+  ],
+  "note": "公式のサービス案内に「テルミナ2ラガールの授乳室は、2026年3月をもって閉鎖」とある（テルミナ 4・5F の授乳室は掲載あり）"
+ },
+ "kinshicho-parco": {
+  "name": "錦糸町パルコ",
+  "officialName": "錦糸町PARCO",
+  "officialUrl": "https://kinshicho.parco.jp/",
+  "operator": "株式会社パルコ",
+  "nearStations": [
+   "kameido",
+   "kinshicho",
+   "sumiyoshi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "全館（1-6F）10:30-21:00",
+   "source": "https://kinshicho.parco.jp/info/?gcd=facilities",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ半蔵門線錦糸町駅2番出口直結　JR錦糸町駅南口徒歩1分",
+   "source": "https://www.rakutenchi.co.jp/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ半蔵門線錦糸町駅2番出口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "【ベビールーム】6F NORTHエレベーター脇",
+    "source": "https://kinshicho.parco.jp/info/?gcd=facilities",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "【オムツ替えシート】",
+    "source": "https://kinshicho.parco.jp/info/?gcd=facilities",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "【貸しベビーカー】3F 西松屋前",
+    "source": "https://kinshicho.parco.jp/info/?gcd=facilities",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://kinshicho.parco.jp/info/?gcd=",
+   "https://kinshicho.parco.jp/info/?gcd=facilities",
+   "https://kinshicho.parco.jp/",
+   "https://kinshicho.parco.jp/pnews/",
+   "https://kinshicho.parco.jp/floor/",
+   "https://kinshicho.parco.jp/floor/detail/?f=3f&ft=type1",
+   "https://kinshicho.parco.jp/floor/detail/?f=6f&ft=type1",
+   "https://www.rakutenchi.co.jp/access/"
+  ]
+ },
+ "marui-kinshicho": {
+  "name": "丸井錦糸町店",
+  "officialName": "錦糸町マルイ",
+  "officialUrl": "https://www.0101.co.jp/054/",
+  "operator": "株式会社丸井（サイト表記: © MARUI CO.,LTD.）",
+  "nearStations": [
+   "kinshicho",
+   "sumiyoshi"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "錦糸町マルイ店舗サイトへようこそ。",
+   "source": "https://www.0101.co.jp/054/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 南口改札を出て、左側にスロープがございます。信号を渡って頂くと、丸井にご入店頂けます。",
+   "source": "https://www.0101.co.jp/054/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.0101.co.jp/054/",
+   "https://www.0101.co.jp/054/access/",
+   "https://www.0101.co.jp/054/facility/",
+   "https://www.0101.co.jp/054/info/"
+  ]
+ },
+ "olinas": {
+  "name": "オリナスモール",
+  "officialName": "オリナス錦糸町",
+  "officialUrl": "https://www.olinas.jp/",
+  "operator": "双日商業開発株式会社",
+  "nearStations": [
+   "kinshicho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "【開業20周年】「Olinas 20th Anniversary Special Event」 2026.10.16 fri - 11.23 mon",
+   "source": "https://www.olinas.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: ●東京メトロ半蔵門線「錦糸町駅（4番出口）」より徒歩3分 ●JR総武線「錦糸町駅（北口）」より徒歩5分",
+   "source": "https://www.olinas.jp/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "モール 3F / コア B1F",
+    "source": "https://www.olinas.jp/service/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "そのほかエスカレーター、エレベーター、ATM、公衆電話、ロッカー、キャラカート、AED、駐輪場、ポスト、化粧室、おむつ交換台、バリアフリートイレ、インフォメーションがあります。",
+    "source": "https://www.olinas.jp/shop/floor/103",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "車椅子、ベビーカーのお貸し出しサービス",
+    "source": "https://www.olinas.jp/service/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.olinas.jp/",
+   "https://www.olinas.jp/access/",
+   "https://www.olinas.jp/service/",
+   "https://www.olinas.jp/shop/floor",
+   "https://www.olinas.jp/shop/floor/100",
+   "https://www.olinas.jp/shop/floor/101",
+   "https://www.olinas.jp/shop/floor/102",
+   "https://www.olinas.jp/shop/floor/103",
+   "https://www.olinas.jp/shop/floor/104"
+  ]
+ },
+ "kinshicho-metropia": {
+  "name": "錦糸町メトロピア（東京メトロ錦糸町駅構内）",
+  "officialName": "錦糸町メトロピア",
+  "officialUrl": "https://www.metro-pro.jp/enterprise/commerce/metropia/",
+  "operator": "株式会社メトロプロパティーズ",
+  "nearStations": [
+   "kinshicho",
+   "sumiyoshi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ錦糸町駅構内の「錦糸町メトロピア」に、「スターバックス」が2025年3月4日（火）にオープンいたします。",
+   "source": "https://www.metro-pro.jp/news/2025/202502261840",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ半蔵門線錦糸町駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tokyometro.jp/news/2025/220061.html",
+   "https://www.tokyometro.jp/news/images_h/metroNews250227_2.pdf",
+   "https://www.metro-pro.jp/news/2025/202502261840",
+   "https://www.metro-pro.jp/enterprise/commerce/metropia/",
+   "https://www.metro-pro.jp/news/",
+   "https://www.tokyometro.jp/shop/station/kinshicho/index.html",
+   "https://www.tokyometro.jp/station/kinshicho/index.html",
+   "https://www.tokyometro.jp/station/kinshicho/accessibility/index.html",
+   "https://www.tokyometro.jp/library/station/include/equipment_wc.html",
+   "https://www.metropro-sc.jp/metroan/shop/index.jsp?bf=1&fmt=6&shopid=1132"
+  ]
+ },
+ "lions-kinshicho-3": {
+  "name": "ライオンズマンション錦糸町第3（住宅の1階）",
+  "officialName": "ライオンズマンション錦糸町第3",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "kinshicho"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "tokyo-solamachi": {
+  "name": "東京スカイツリータウン・ソラマチ",
+  "officialName": "東京ソラマチ",
+  "officialUrl": "https://www.tokyo-solamachi.jp/",
+  "operator": "TOBU TOWN SOLAMACHI CO., LTD.（東武タウンソラマチ株式会社）／TOBU RAILWAY CO., LTD.（公式サイトの著作権表記による）",
+  "nearStations": [
+   "oshiage",
+   "tokyo-skytree"
+  ],
+  "storesInLedger": 5,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "東京ソラマチおよび東京スカイツリーイーストタワーの営業や運営に支障はなく通常通り営業しております。",
+   "source": "https://www.tokyo-solamachi.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式フロアガイドの記載は「押上駅連絡フロア」「とうきょう スカイツリー駅 連絡口」まで。「直結」「雨に濡れずに」の語は無い",
+   "source": "https://www.tokyo-solamachi.jp/floorguide/solamachi_ja_261029.pdf",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "Multi-Purpose Restroom Nursing Room（フロアガイドの施設の凡例）",
+    "source": "https://www.tokyo-solamachi.jp/floorguide/solamachi_en_261029.pdf",
+    "method": "公式フロアガイドPDFの文字を読み取り（HTMLページは403）",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "5F みんなの遊び場 ソラフルパーク",
+    "source": "https://www.tokyo-solamachi.jp/floorguide/solamachi_ja_261029.pdf",
+    "method": "公式フロアガイドPDFの文字を読み取り（HTMLページは403）",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tokyo-solamachi.jp/",
+   "https://www.tokyo-solamachi.jp/access/access.pdf",
+   "https://www.tokyo-solamachi.jp/floorguide/solamachi_ja_261029.pdf",
+   "https://www.tokyo-solamachi.jp/floorguide/solamachi_en_261029.pdf"
+  ]
+ },
+ "lions-azumabashi": {
+  "name": "ライオンズマンション吾妻橋（住宅の1階）",
+  "officialName": "ライオンズマンション吾妻橋",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "oshiage",
+   "tokyo-skytree"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "iy-hikifune": {
+  "name": "イトーヨーカドー曳舟店",
+  "officialName": "イトーヨーカドー曳舟店",
+  "officialUrl": "https://itoyokado.co.jp/",
+  "operator": "株式会社イトーヨーカ堂",
+  "nearStations": [
+   "oshiage"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "曳舟店 9/28(月)～9/30(水) 10/1(木)（店舗休業のお知らせ。3日間の休業ののち10/1営業開始）",
+   "source": "https://www.itoyokado.co.jp/special/closed_notice/index.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "ekia-hikifune": {
+  "name": "エキア曳舟（東武曳舟駅）",
+  "officialName": "EQUiA（エキア） 曳舟",
+  "officialUrl": "https://www.tobu-equia.com/hikifune/",
+  "operator": "東武鉄道株式会社",
+  "nearStations": [
+   "oshiage"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式に記載があるとの回答だったが、原文を出典ページで確かめられなかった",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "2026-10-30 は東武エキアの公式サイトがメンテナンス中で開けなかった（検索結果の抜粋に「「曳舟」駅構内」とあるが本文で未確認）",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tobu-equia.com/hikifune/",
+   "https://www.tobu-equia.com/",
+   "https://www.tobu.co.jp/cms-pdf/releases/20231109115445vd_KrtrV_zDEHZFFOHGK3g.pdf"
+  ]
+ },
+ "east21": {
+  "name": "イースト21モール（東陽町）",
+  "officialName": "東京イースト21",
+  "officialUrl": "https://tokyo-east21.co.jp/",
+  "operator": "鹿島東京開発株式会社",
+  "nearStations": [
+   "toyocho"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "江東少年少女合唱団スペシャルコンサート 2026年11月8日(日)",
+   "source": "https://tokyo-east21.co.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東京メトロ東西線「東陽町」駅 1番出口より徒歩約7分",
+   "source": "https://tokyo-east21.co.jp/access.html",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://tokyo-east21.co.jp/",
+   "https://tokyo-east21.co.jp/shop/index.html",
+   "https://tokyo-east21.co.jp/access.html",
+   "https://tokyo-east21.co.jp/information.html",
+   "https://tokyo-east21.co.jp/floorguide/",
+   "https://tokyo-east21.co.jp/floorguide/floorguide2f.html",
+   "https://tokyo-east21.co.jp/about.html"
+  ]
+ },
+ "sunamo": {
+  "name": "南砂町ショッピングセンターSUNAMO",
+  "officialName": "南砂町ショッピングセンターSUNAMO(スナモ)",
+  "officialUrl": "https://www.sunamo.jp/",
+  "operator": "三菱地所プロパティマネジメント株式会社",
+  "nearStations": [
+   "minami-sunamachi"
+  ],
+  "storesInLedger": 6,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10月10日（土）スタート！SUNAMO 18周年「十八祭」",
+   "source": "https://www.sunamo.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: ・東京メトロ東西線「南砂町」駅（5番出口）より徒歩8分",
+   "source": "https://www.sunamo.jp/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド、給湯設備等を設置した授乳ができるお部屋がございます。",
+    "source": "https://www.sunamo.jp/about/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "以下の場所には、いずれもオムツ交換ができるベビーベッドがございます。",
+    "source": "https://www.sunamo.jp/about/index.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "キャラクター育成プレイグラウンド「あそんで！そだてる！らくがキッズ」",
+    "source": "https://www.sunamo.jp/floor/shop_detail.html?UC=4_053",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "1Fインフォメーションカウンターにて承ります。 数に限りがございますので、ご希望に添えない場合もございます。",
+    "source": "https://www.sunamo.jp/about/index.html",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://www.sunamo.jp/",
+   "https://www.sunamo.jp/access/",
+   "https://www.sunamo.jp/about/index.html",
+   "https://www.sunamo.jp/sitemap/index.html",
+   "https://www.sunamo.jp/floor/index.html",
+   "https://www.sunamo.jp/floor/floor04.html",
+   "https://www.sunamo.jp/floor/shop_detail.html?UC=4_053",
+   "https://www.sunamo.jp/news/index.html",
+   "https://www.mjpm.co.jp/business/result/sunamo.html"
+  ]
+ },
+ "aeon-style-minamisuna": {
+  "name": "イオンスタイル南砂",
+  "officialName": "イオンスタイル南砂",
+  "officialUrl": "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/",
+  "operator": "イオンリテール株式会社",
+  "nearStations": [
+   "minami-sunamachi"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "イオンスタイル南砂　フロアガイド　※2026年3月19日更新",
+   "source": "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/floor_guide/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 「東京メトロ東西線」の「南砂町（みなみすなまち）」駅下車、徒歩７分。",
+   "source": "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/train_bus/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "Nursing Room",
+    "source": "https://www.welcome-aeon.com/storesearch/searchdetail.php?d=S00372&c=0000017880",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/hours/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/floor_guide/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/train_bus/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/map/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E5%8D%97%E7%A0%82/shop_info/specialty_store/",
+   "https://www.welcome-aeon.com/storesearch/searchdetail.php?d=S00372&c=0000017880",
+   "https://topyrec.co.jp/"
+  ]
+ },
+ "atre-kameido": {
+  "name": "アトレ亀戸",
+  "officialName": "アトレ亀戸",
+  "officialUrl": "https://www.atre.co.jp/kameido/",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "kameido"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング　10:00～21:00",
+   "source": "https://www.atre.co.jp/kameido/access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "または5Fの授乳室をご利用ください。",
+    "source": "https://www.atre.co.jp/kameido/service",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ご利用の際はお隣の3F女性トイレ内のベビーベッド",
+    "source": "https://www.atre.co.jp/kameido/service",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/kameido/",
+   "https://www.atre.co.jp/kameido/access",
+   "https://www.atre.co.jp/kameido/service",
+   "https://www.atre.co.jp/kameido/floorguide/13/56",
+   "https://www.atre.co.jp/contact/faq",
+   "https://www.atre.co.jp/",
+   "https://www.atre.co.jp/company",
+   "https://www.atre.co.jp/company/business/storelist",
+   "https://www.atre.co.jp/kameido/news"
+  ]
+ },
+ "lalaport-toyosu": {
+  "name": "アーバンドック ららぽーと豊洲",
+  "officialName": "アーバンドック ららぽーと豊洲",
+  "officialUrl": "https://mitsui-shopping-park.com/lalaport/toyosu/",
+  "operator": "三井不動産商業マネジメント株式会社",
+  "nearStations": [
+   "toyosu"
+  ],
+  "storesInLedger": 5,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "豪華賞品が当たる！ブラックフライデー抽選会 日程 : 2026/11/21(土)～11/23(月)",
+   "source": "https://mitsui-shopping-park.com/lalaport/toyosu/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●授乳室・おむつ交換室",
+    "source": "https://mitsui-shopping-park.com/lalaport/toyosu/service/babyroom.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●おむつ交換室",
+    "source": "https://mitsui-shopping-park.com/lalaport/toyosu/service/babyroom.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "キッズパーク お子様がのびのびと遊べる空間 キッズスペース 3-12歳",
+    "source": "https://mitsui-shopping-park.com/lalaport/mamawith/toyosu/approach/149.html",
+    "method": "内蔵ブラウザで本文を確認（JS描画）",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●セルフ式ベビーカー（コインリターン式）",
+    "source": "https://mitsui-shopping-park.com/lalaport/toyosu/service/babycar_self.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://mitsui-shopping-park.com/lalaport/toyosu/",
+   "https://mitsui-shopping-park.com/lalaport/toyosu/service/",
+   "https://mitsui-shopping-park.com/lalaport/toyosu/floor/",
+   "https://mitsui-shopping-park.com/lalaport/mamawith/toyosu/",
+   "https://mitsui-shopping-park.com/lalaport/toyosu/access/",
+   "https://mitsui-shopping-park.com/lalaport/toyosu/service/babyroom.html",
+   "https://mitsui-shopping-park.com/lalaport/toyosu/service/babycar_self.html",
+   "https://mitsui-shopping-park.com/lalaport/mamawith/toyosu/approach/149.html"
+  ]
+ },
+ "aeon-shinonome": {
+  "name": "イオン東雲",
+  "officialName": "イオン東雲店",
+  "officialUrl": "https://www.aeon.com/store/イオン/イオン東雲店/",
+  "operator": "イオンリテール株式会社（AEON RETAIL Co.,Ltd.）",
+  "nearStations": [
+   "toyosu"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "イオン東雲店お客さま専用お買物バス_10/24㊏「東京湾大華火祭」交通規制によるバス迂回運行のお知らせ",
+   "source": "https://www.aeon.com/store/イオン/イオン東雲店/shop_info/train_bus/",
+   "note": "2026-10-24 付の運行案内。閉店・休業の告知ではない",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.aeon.com/store/イオン/イオン東雲店/",
+   "https://www.aeon.com/store/イオン/イオン東雲店/shop_info/floor_guide/",
+   "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E6%9D%B1%E9%9B%B2%E5%BA%97/shop_info/floor_guide/2482243/",
+   "https://www.aeon.com/store/イオン/イオン東雲店/shop_info/hours/",
+   "https://www.aeon.com/store/イオン/イオン東雲店/shop_info/train_bus/",
+   "https://www.aeon.com/store/イオン/イオン東雲店/shop_info/map/",
+   "https://www.aeon.com/store/lp/592496/",
+   "https://www.aeon.com/store/イオン/イオン東雲店/archive/news/"
+  ]
+ },
+ "diver-city-tokyo": {
+  "name": "ダイバーシティ東京 プラザ",
+  "officialName": "ダイバーシティ東京 プラザ",
+  "officialUrl": "https://mitsui-shopping-park.com/divercity-tokyo/",
+  "operator": "三井不動産商業マネジメント株式会社（Mitsui Fudosan Retail Management Co., Ltd.）",
+  "nearStations": [
+   "tokyo-teleport"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "（平日）11:00～20:00　（土日祝）10:00～21:00",
+   "source": "https://mitsui-shopping-park.com/divercity-tokyo/service/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 大崎（JR、10分）→ 東京テレポートB出口（徒歩3分）",
+   "source": "https://mitsui-shopping-park.com/divercity-tokyo/access/train.html",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ交換室",
+    "source": "https://mitsui-shopping-park.com/divercity-tokyo/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "館内ではコインリターン式ベビーカーをご用意しております。",
+    "source": "https://mitsui-shopping-park.com/divercity-tokyo/service/babycar.html",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://mitsui-shopping-park.com/divercity-tokyo/service/",
+   "https://mitsui-shopping-park.com/divercity-tokyo/service/babycar.html",
+   "https://mitsui-shopping-park.com/divercity-tokyo/access/walk.html",
+   "https://mitsui-shopping-park.com/divercity-tokyo/access/train.html",
+   "https://mitsui-shopping-park.com/divercity-tokyo/floor/",
+   "https://www.twr.co.jp/guide/tabid/150/pdid/4103/Default.aspx"
+  ]
+ },
+ "decks-tokyo-beach": {
+  "name": "デックス東京ビーチ",
+  "officialName": "デックス東京ビーチ",
+  "officialUrl": "https://www.odaiba-decks.com/",
+  "operator": "東急不動産SCマネジメント",
+  "nearStations": [
+   "tokyo-teleport"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026年11月30日まで開催中！映画『ゴジラ-0.0』コラボイベント",
+   "source": "https://www.odaiba-decks.com/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東京テレポート駅より徒歩5分",
+   "source": "https://www.odaiba-decks.com/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃんにミルクをあげるための給湯器や授乳スペースをご用意しております。",
+    "source": "https://www.odaiba-decks.com/facility/detail/3",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "公式の記載: シーサイドモール3Fの多目的トイレ内",
+    "source": "https://www.odaiba-decks.com/facility/detail/30",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "休止中",
+    "value": "yes",
+    "evidence": "～現在、設備点検・修理作業に伴い、封鎖しております。ご迷惑をお掛けしますがご了承の程、何卒よろしくお願いいたします。～",
+    "source": "https://www.odaiba-decks.com/facility/detail/5",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "シーサイドモール3F デックス広場内のインフォメーションカウンターにて無料でお貸出ししております。",
+    "source": "https://www.odaiba-decks.com/facility/detail/4",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://www.odaiba-decks.com/",
+   "https://www.odaiba-decks.com/facility/",
+   "https://www.odaiba-decks.com/facility/detail/1",
+   "https://www.odaiba-decks.com/facility/detail/3",
+   "https://www.odaiba-decks.com/facility/detail/4",
+   "https://www.odaiba-decks.com/facility/detail/5",
+   "https://www.odaiba-decks.com/facility/detail/8",
+   "https://www.odaiba-decks.com/facility/detail/30",
+   "https://www.odaiba-decks.com/family_guide/",
+   "https://www.odaiba-decks.com/access/"
+  ]
+ },
+ "atre-meguro": {
+  "name": "アトレ目黒（目黒1・目黒2）",
+  "officialName": "アトレ目黒",
+  "officialUrl": "https://www.atre.co.jp/meguro",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "meguro"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング AM10:00～PM9:00",
+   "source": "https://www.atre.co.jp/meguro/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベイビーズルーム（授乳スペース） 目黒1 6F ●ご利用時間 AM10:00～PM8:00 ●授乳スペース：個室2部屋",
+    "source": "https://www.atre.co.jp/meguro/service",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●オムツ交換台",
+    "source": "https://www.atre.co.jp/meguro/service",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "お子さまがクッションの上で安全に遊べる、専用のキッズスペースを併設しています",
+    "source": "https://www.atre.co.jp/meguro/guide/14",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/meguro/access/",
+   "https://www.atre.co.jp/meguro/service",
+   "https://www.atre.co.jp/meguro",
+   "https://www.atre.co.jp/meguro/news",
+   "https://www.atre.co.jp/meguro/news/7793",
+   "https://www.atre.co.jp/meguro/guide/14",
+   "https://www.atre.co.jp/meguro/guide/15",
+   "https://www.atre.co.jp/meguro/floorguide/11/48"
+  ]
+ },
+ "shin-meguro-tokyu-bldg": {
+  "name": "新目黒東急ビル",
+  "officialName": "新目黒東急ビル",
+  "officialUrl": null,
+  "operator": "東急不動産株式会社",
+  "nearStations": [
+   "meguro"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 「目黒」駅徒歩2分、4路線利用可能な物件です。",
+   "source": "https://office.tokyu-land.co.jp/bldg/shinmeguro_tokyu_bldg/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://office.tokyu-land.co.jp/",
+   "https://office.tokyu-land.co.jp/bldg/shinmeguro_tokyu_bldg/",
+   "https://search.sunfrt.co.jp/building/8738/"
+  ]
+ },
+ "iy-oimachi": {
+  "name": "イトーヨーカドー大井町店",
+  "officialName": "イトーヨーカドー 大井町店",
+  "officialUrl": "https://stores.itoyokado.co.jp/detail/538/",
+  "operator": "株式会社イトーヨーカ堂",
+  "nearStations": [
+   "oimachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10/29(木)30(金)31(土)の3日間お休みをさせていただきます。",
+   "source": "https://stores.itoyokado.co.jp/detail/538/",
+   "note": "システム変更による3日間の休業（2026-10-29〜31）。閉店・長期休業の告知ではないので営業中として扱う（短い休業は営業中＝第3便と同じ決まり）。原文は照合スクリプトで出典ページと突き合わせる",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR京浜東北線 大井町駅 西口 徒歩約1分 東急大井町線 大井町駅 徒歩約1分 りんかい線 大井町駅 C口直結",
+   "source": "https://stores.itoyokado.co.jp/detail/538/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "りんかい線 大井町駅 C口"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "長時間のお買物でも安心な授乳室、赤ちゃん用のオムツ交換シート、ミルク用のお湯、乳幼児用の身長計・体重計を準備しております。",
+    "source": "https://www.itoyokado.co.jp/service/facilities.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "長時間のお買物でも安心な授乳室、赤ちゃん用のオムツ交換シート、ミルク用のお湯、乳幼児用の身長計・体重計を準備しております。",
+    "source": "https://www.itoyokado.co.jp/service/facilities.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://en.stores.itoyokado.co.jp/detail/538/",
+   "https://stores.itoyokado.co.jp/detail/538/",
+   "https://www.itoyokado.co.jp/service/index.html",
+   "https://www.itoyokado.co.jp/service/facilities.html",
+   "https://senmonten.itoyokado.co.jp/web/shop/176/index.html",
+   "https://www.itoyokado.co.jp/"
+  ]
+ },
+ "atre-oimachi": {
+  "name": "アトレ大井町",
+  "officialName": "アトレ大井町",
+  "officialUrl": "https://www.atre.co.jp/oimachi",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "oimachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "【11月】アトレ大井町 ハッピーWポイントデー",
+   "source": "https://www.atre.co.jp/oimachi/news",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "※小さいお子様連れのお客様のためのスペースですので、授乳目的以外のご利用はご遠慮ください",
+    "source": "https://www.atre.co.jp/oimachi/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "※3Fは授乳室内と女子化粧室内にございます。",
+    "source": "https://www.atre.co.jp/oimachi/service/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "設置場所：１F・エレベーターホール　（デリフランス付近）",
+    "source": "https://www.atre.co.jp/oimachi/service/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/oimachi/service/",
+   "https://www.atre.co.jp/oimachi/access/",
+   "https://www.atre.co.jp/oimachi",
+   "https://www.atre.co.jp/oimachi/news",
+   "https://www.atre.co.jp/oimachi/floorguide/4/7"
+  ]
+ },
+ "oimachi-tracks": {
+  "name": "OIMACHI TRACKS",
+  "officialName": "OIMACHI TRACKS",
+  "officialUrl": "https://www.oimachi-tracks.com/",
+  "operator": "東日本旅客鉄道株式会社",
+  "nearStations": [
+   "oimachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "NEW 開催中 TRACKS STREETで流れるオリジナルサウンドをご紹介 2026/03/28(土) ～ 2027/03/31(水)",
+   "source": "http://www.oimachi-tracks.com/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR京浜東北線、東急大井町線、東京臨海高速鉄道りんかい線の大井町駅から直結でお越しいただけます。",
+   "source": "http://www.oimachi-tracks.com/en/faq/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR京浜東北線 大井町駅（トラックス口、西口）",
+    "東急大井町線 大井町駅（東急線改札口）",
+    "東京臨海高速鉄道りんかい線 大井町駅（りんかい線改札）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー休憩室（おむつ替え台・調乳専用給湯器・授乳室を備えております）",
+    "source": "http://www.oimachi-tracks.com/en/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビー休憩室（おむつ替え台・調乳専用給湯器・授乳室を備えております）",
+    "source": "http://www.oimachi-tracks.com/en/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "no",
+    "evidence": "Q 車いす・ベビーカーの貸し出しはありますか？ A 当施設では貸し出しはございません。",
+    "source": "http://www.oimachi-tracks.com/en/faq/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "http://www.oimachi-tracks.com/en/information/",
+   "http://www.oimachi-tracks.com/en/faq/",
+   "http://www.oimachi-tracks.com/access/",
+   "http://www.oimachi-tracks.com/enjoy/baby/",
+   "http://www.oimachi-tracks.com/news/",
+   "http://www.oimachi-tracks.com/"
+  ]
+ },
+ "nishikoyama-ekibiru": {
+  "name": "西小山駅ビル",
+  "officialName": "西小山駅ビル",
+  "officialUrl": "https://www.tokyu-tmd.co.jp/property/nishikoyama/",
+  "operator": "株式会社東急モールズデベロップメント",
+  "nearStations": [
+   "musashi-koyama"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "西小山駅直結の西小山駅ビルと、西小山駅ビルの北側に位置する西小山第二駅ビル。毎日立ち寄りたくなるような、暮らしに便利な店舗がそろっています。",
+   "source": "https://www.tokyu-tmd.co.jp/property/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "西小山駅直結の西小山駅ビルと、西小山駅ビルの北側に位置する西小山第二駅ビル。",
+   "source": "https://www.tokyu-tmd.co.jp/property/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "西小山駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tokyu-tmd.co.jp/property/nishikoyama/",
+   "https://www.tokyu-tmd.co.jp/property/",
+   "https://www.tokyu.co.jp/railway/station_map/pdf/mg04-nishi-koyama.pdf"
+  ]
+ },
+ "park-city-musashikoyama-the-mall": {
+  "name": "パークシティ武蔵小山 ザ モール",
+  "officialName": "パークシティ武蔵小山 ザ モール",
+  "officialUrl": "https://pcmk.jp/",
+  "operator": "株式会社武蔵小山フロンティア",
+  "nearStations": [
+   "musashi-koyama"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026.10.27 まちぐるみ文化イベント2026「あつまれ！えばら」開催",
+   "source": "https://pcmk.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東急目黒線「武蔵小山」駅東口から徒歩約1分",
+   "source": "https://pcmk.jp/access",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ交換台・授乳室",
+    "source": "https://pcmk.jp/service",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ交換台・授乳室",
+    "source": "https://pcmk.jp/service",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://pcmk.jp/",
+   "https://pcmk.jp/access",
+   "https://pcmk.jp/service",
+   "https://pcmk.jp/floormap",
+   "https://pcmk.jp/faq",
+   "https://pcmk.jp/company",
+   "https://pcmk.jp/about",
+   "https://pcmk.jp/facilities"
+  ]
+ },
+ "musashikoyama-ekibiru": {
+  "name": "武蔵小山駅ビル（品川区小山3-4-8）",
+  "officialName": "etomo（エトモ）武蔵小山",
+  "officialUrl": "https://tokyu-etomo.jp/musashikoyama/",
+  "operator": "東急株式会社",
+  "nearStations": [
+   "musashi-koyama"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "営業時間 9:00～24:00 TEL 03-5749-2109 住所 東京都品川区小山3-4-8 エトモ武蔵小山 2F",
+   "source": "https://tokyu-etomo.jp/musashikoyama/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: etomo（エトモ）武蔵小山は東急目黒線の武蔵小山駅にある商業施設です。",
+   "source": "https://tokyu-etomo.jp/musashikoyama/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://tokyu-etomo.jp/musashikoyama/",
+   "https://tokyu-etomo.jp/",
+   "https://tokyu-etomo.jp/news/?cd=000670",
+   "https://www.tokyu.co.jp/area/musashi-koyama/",
+   "https://www.tokyu.co.jp/area/musashi-koyama/station/"
+  ]
+ },
+ "iy-omori": {
+  "name": "イトーヨーカドー大森店",
+  "officialName": "イトーヨーカドー 大森店",
+  "officialUrl": "https://stores.itoyokado.co.jp/detail/562/",
+  "operator": "株式会社イトーヨーカ堂",
+  "nearStations": [
+   "omori"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10:00〜22:00 2F, 3F 10:00-21:00 ※一部専門店は営業時間が異なります。",
+   "source": "https://en.stores.itoyokado.co.jp/detail/562/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 【電車】 京浜急行線 大森海岸駅 徒歩3分 JR京浜東北線 大森駅 東口 徒歩7分",
+   "source": "https://en.stores.itoyokado.co.jp/detail/562/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃん 休憩室",
+    "source": "https://en.stores.itoyokado.co.jp/detail/562/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "長時間のお買物でも安心な授乳室、赤ちゃん用のオムツ交換シート、ミルク用のお湯、乳幼児用の身長計・体重計を準備しております。",
+    "source": "https://www.itoyokado.co.jp/service/facilities.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://en.stores.itoyokado.co.jp/detail/562/",
+   "https://senmonten.itoyokado.co.jp/web/shop/227/index.html",
+   "https://www.itoyokado.co.jp/service/index.html",
+   "https://www.itoyokado.co.jp/service/facilities.html"
+  ]
+ },
+ "atre-omori": {
+  "name": "アトレ大森",
+  "officialName": "アトレ大森",
+  "officialUrl": "https://www.atre.co.jp/omori",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "omori"
+  ],
+  "storesInLedger": 6,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "アトレ大森/ ショッピングフロア 10:00～21:00",
+   "source": "https://www.atre.co.jp/omori/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "●個室　有（2室）",
+    "source": "https://www.atre.co.jp/omori/service/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "※4F・5Fは女子化粧室内にございます。",
+    "source": "https://www.atre.co.jp/omori/service/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/omori",
+   "https://www.atre.co.jp/omori/access/",
+   "https://www.atre.co.jp/omori/service/",
+   "https://www.atre.co.jp/omori/news",
+   "https://www.atre.co.jp/omori/news/4733",
+   "https://www.atre.co.jp/omori/floorguide/15/66",
+   "https://www.atre.co.jp/omori/floorguide/15/67",
+   "https://www.atre.co.jp/event/omoriopen/omori",
+   "https://www.atre.co.jp"
+  ]
+ },
+ "granduo-kamata": {
+  "name": "グランデュオ蒲田",
+  "officialName": "グランデュオ蒲田",
+  "officialUrl": "https://www.granduo.jp/kamata/",
+  "operator": "ジェイアール東日本商業開発株式会社",
+  "nearStations": [
+   "kamata",
+   "keikyu-kamata"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "西館1F・2～6F・8F ・ 東館1～5F：［全日］10：00～20：30",
+   "source": "https://www.granduo.jp/kamata/faq/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "◯JR京浜東北線 蒲田駅直結",
+   "source": "https://www.granduo.jp/kamata/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR京浜東北線 蒲田駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "東館5Fに授乳室（オムツ交換台、お着替え台、授乳専用室、調乳専用給湯器付きシンク）がございます。",
+    "source": "https://www.granduo.jp/kamata/faq/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ交換台、お着替え台、授乳専用室、調乳専用給湯器付シンクをご用意しております。",
+    "source": "https://www.granduo.jp/kamata/services/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "4歳未満・18キロ未満のお子様にご利用いただけるベビーカー西館2Fインフォメーションにございます。",
+    "source": "https://www.granduo.jp/kamata/faq/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.granduo.jp/kamata/",
+   "https://www.granduo.jp/kamata/access/",
+   "https://www.granduo.jp/kamata/services/",
+   "https://www.granduo.jp/kamata/faq/",
+   "https://www.granduo.jp/kamata/floorguide/",
+   "https://www.granduo.jp/kamata/floorguide/east5f/",
+   "https://www.granduo.jp/kamata/news/",
+   "https://www.granduo.jp/company/"
+  ]
+ },
+ "tokyu-plaza-kamata": {
+  "name": "東急プラザ蒲田",
+  "officialName": "東急プラザ蒲田",
+  "officialUrl": "https://www.tokyu-plaza.com/kamata/",
+  "operator": "東急不動産株式会社（施設サイトの著作権表記はTOKYU LAND SC MANAGEMENT＝東急不動産SCマネジメント株式会社）",
+  "nearStations": [
+   "kamata",
+   "keikyu-kamata"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "当施設の営業時間は下記の通りです。 10:00～20:00",
+   "source": "https://tokyu-plaza.com/kamata/facility/detail/1",
+   "method": "内蔵ブラウザで本文を確認（JS描画）",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR 京浜東北線「蒲田」駅 直結",
+   "source": "https://tokyu-plaza.com/kamata/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR 京浜東北線「蒲田」駅",
+    "東急電鉄 東急池上線、多摩川線「蒲田」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "7Fに、授乳スペース（女性のみ）、おむつ交換台、調乳用温水器、おむつ処理機がございます。",
+    "source": "https://tokyu-plaza.com/kamata/facility/detail/8",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "7Fに、授乳スペース（女性のみ）、おむつ交換台、調乳用温水器、おむつ処理機がございます。",
+    "source": "https://tokyu-plaza.com/kamata/facility/detail/8",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "元気な子供たちの歓声でいっぱい！飛び跳ねて遊ぶ空気膜遊具。",
+    "source": "https://tokyu-plaza.com/kamata/facility/detail/16",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "no",
+    "evidence": "誠に申し訳ございませんが、当施設では、ベビーカーおよび車椅子のお貸出しは行っておりません。",
+    "source": "https://tokyu-plaza.com/kamata/facility/detail/28",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://tokyu-plaza.com/kamata/facility/detail/8",
+   "https://www.tokyu-land.co.jp/urban/shopping/list/035.html",
+   "https://tokyu-plaza.com/kamata/facility/",
+   "https://tokyu-plaza.com/kamata/access/",
+   "https://tokyu-plaza.com/kamata/shopnews/detail/462?tenant_cd=000001086",
+   "https://tokyu-plaza.com/kamata/information/",
+   "https://tokyu-plaza.com/kamata/facility/detail/28",
+   "https://tokyu-plaza.com/kamata/facility/detail/16"
+  ]
+ },
+ "futako-tamagawa-rise": {
+  "name": "二子玉川ライズ・ショッピングセンター",
+  "officialName": "二子玉川ライズ・ショッピングセンター",
+  "officialUrl": "https://www.rise.sc/",
+  "operator": "東急モールズデベロップメント",
+  "nearStations": [
+   "futako-tamagawa"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "・元日及び法定点検日を除き、年中無休にて営業しております。（※一部店舗を除く）",
+   "source": "https://www.rise.sc/facility/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東急田園都市線・大井町線　「二子玉川駅」直結",
+   "source": "https://www.rise.sc/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東急田園都市線・大井町線「二子玉川駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ミルク用給湯器、ベビーベッド、授乳コーナー等を設置しております。",
+    "source": "https://www.rise.sc/facility/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ミルク用給湯器、ベビーベッド、授乳コーナー等を設置しております。",
+    "source": "https://www.rise.sc/facility/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "子どもたちの健やかな動きを助けるスウェーデン・HAGS社製の遊具でできたアスレチック。",
+    "source": "https://www.rise.sc/playec-kids-service",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "・各種貸出（ベビーカー、車いす、老眼鏡）",
+    "source": "https://www.rise.sc/facility/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.rise.sc/",
+   "https://www.rise.sc/facility/",
+   "https://www.rise.sc/access/",
+   "https://www.rise.sc/info/",
+   "https://www.rise.sc/info/detail/?cd=000022",
+   "https://www.rise.sc/playec-kids-service",
+   "https://www.rise.sc/faq"
+  ]
+ },
+ "tamagawa-takashimaya-sc": {
+  "name": "玉川髙島屋S・C",
+  "officialName": "玉川高島屋S.C.",
+  "officialUrl": "https://www.takashimaya.co.jp/tamagawa/sc/",
+  "operator": "東神開発株式会社",
+  "nearStations": [
+   "futako-tamagawa"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "物販店 10:00 ～ 20:00/ レストラン 11:00 ～ 22:00",
+   "source": "https://www.takashimaya.co.jp/tamagawa/sc/information/business_hours",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: ●西口（国道246号方面）徒歩2分",
+   "source": "https://www.takashimaya.co.jp/tamagawa/sc/information/access",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "男性も利用可能な授乳施設ですが、授乳ブース（個室）のご利用はお断りしております。",
+    "source": "https://www.takashimaya.co.jp/tamagawa/sc/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド（おむつ交換台）",
+    "source": "https://www.takashimaya.co.jp/tamagawa/sc/service/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "無料でご自由にご利用いただけます（要100円硬貨）。100円硬貨は返却されますので、ベビーカーは元の場所までお戻しくださいますようお願いいたします。",
+    "source": "https://www.takashimaya.co.jp/tamagawa/sc/service/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.takashimaya.co.jp/tamagawa/sc/",
+   "https://www.takashimaya.co.jp/tamagawa/sc/information/access",
+   "https://www.takashimaya.co.jp/tamagawa/sc/information/business_hours",
+   "https://www.takashimaya.co.jp/tamagawa/sc/service/",
+   "https://www.takashimaya.co.jp/tamagawa/wheelchair/",
+   "https://www.takashimaya.co.jp/tamagawa/sc/floor_map?building=1&floor=5",
+   "https://www.takashimaya.co.jp/tamagawa/sc/floor_map?building=1&floor=12",
+   "https://www.takashimaya.co.jp/tamagawa/sc/floor_map?building=2&floor=7",
+   "https://www.takashimaya.co.jp/tamagawa/sc/feature/?id=2671"
+  ]
+ },
+ "atre-ebisu": {
+  "name": "アトレ恵比寿",
+  "officialName": "アトレ恵比寿",
+  "officialUrl": "https://www.atre.co.jp/index.php/ebisu",
+  "operator": "株式会社アトレ",
+  "nearStations": [
+   "ebisu"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2026年4月1日(水)より営業時間を変更いたしましたのでご案内申し上げます。",
+   "source": "https://www.atre.co.jp/index.php/ebisu/news/6857",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "・全箇所に授乳スペース(女性専用個室)がございます。",
+    "source": "https://www.atre.co.jp/ebisu/guide/6/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "コインリターン式のベビーカーをご用意しております。",
+    "source": "https://www.atre.co.jp/index.php/ebisu/service",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.atre.co.jp/index.php/ebisu",
+   "https://www.atre.co.jp/index.php/ebisu/service",
+   "https://www.atre.co.jp/index.php/ebisu/access",
+   "https://www.atre.co.jp/ebisu/guide/6/",
+   "https://www.atre.co.jp/ebisu/guide/7",
+   "https://www.atre.co.jp/index.php/ebisu/news/6857",
+   "https://www.atre.co.jp/index.php",
+   "https://www.atre.co.jp/index.php/company",
+   "https://www.atre.co.jp/index.php/sitemap",
+   "https://www.atre.co.jp/index.php/contact/faq"
+  ]
+ },
+ "beans-asagaya": {
+  "name": "ビーンズ阿佐ヶ谷（てくて・ぷらす）",
+  "officialName": "ビーンズ阿佐ヶ谷",
+  "officialUrl": "https://beans.jrtk.jp/asagaya/",
+  "operator": "株式会社ジェイアール東日本都市開発",
+  "nearStations": [
+   "asagaya"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "平日・土曜日 10：00～21：00",
+   "source": "https://beans.jrtk.jp/asagaya/shop/hours.jsp",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR中央線・総武線「阿佐ケ谷駅」直結",
+   "source": "https://beans.jrtk.jp/asagaya/shop/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR中央線・総武線「阿佐ケ谷駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室・おむつ台・給湯器をご用意しております。",
+    "source": "https://beans.jrtk.jp/asagaya/shop/access.jsp",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室・おむつ台・給湯器をご用意しております。",
+    "source": "https://beans.jrtk.jp/asagaya/shop/access.jsp",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://beans.jrtk.jp/asagaya/",
+   "https://beans.jrtk.jp/asagaya/shop/access.jsp",
+   "https://beans.jrtk.jp/asagaya/shop/hours.jsp",
+   "https://beans.jrtk.jp/asagaya/shop/floor.jsp",
+   "https://beans.jrtk.jp/asagaya/shop/floor.jsp?fid=bt1f",
+   "https://beans.jrtk.jp/asagaya/shop/floor.jsp?fid=bp1f",
+   "https://beans.jrtk.jp/asagaya/shop/floor.jsp?fid=bp2f",
+   "https://beans.jrtk.jp/asagaya/shop/floor.jsp?fid=bk2f",
+   "https://beans.jrtk.jp/asagaya/shop/index.jsp?bf=4"
+  ]
+ },
+ "ikebukuro-parco": {
+  "name": "池袋パルコ",
+  "officialName": "池袋PARCO",
+  "officialUrl": "https://ikebukuro.parco.jp/",
+  "operator": "株式会社パルコ",
+  "nearStations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "約1年にわたるリニューアルの完成を祝して、「RENEWAL CELEBRATION」を開催。",
+   "source": "https://ikebukuro.parco.jp/page/new-renewal2026/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://ikebukuro.parco.jp/page/new-renewal2026/"
+  ]
+ },
+ "echika-ikebukuro": {
+  "name": "Echika池袋（東京メトロ池袋駅構内）",
+  "officialName": "エチカ池袋",
+  "officialUrl": "https://www.metropro-sc.jp/echika-ikebukuro/",
+  "operator": "メトロプロパティーズ（株式会社メトロプロパティーズ／東京メトロ グループ）",
+  "nearStations": [
+   "ikebukuro"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "Echika・Echika fitは、一部店舗の営業時間を変更して営業しております。",
+   "source": "https://www.metropro-sc.jp/echika-ikebukuro/event/item_eventnews.jsp?id=16",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東京メトロ丸ノ内線/有楽町線/副都心線 「池袋」駅構内",
+   "source": "https://www.metropro-sc.jp/echika-ikebukuro/shop/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ丸ノ内線/有楽町線/副都心線 「池袋」駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.metropro-sc.jp/echika-ikebukuro/",
+   "https://www.echika-echikafit.com/ikebukuro/",
+   "https://www.metropro-sc.jp/echika-ikebukuro/shop/floor.jsp",
+   "https://www.metropro-sc.jp/echika-ikebukuro/shop/access.jsp",
+   "https://www.metropro-sc.jp/echika-ikebukuro/shop/index.jsp?bf=4",
+   "https://www.metropro-sc.jp/echika-ikebukuro/event/eventnews.jsp",
+   "https://www.metropro-sc.jp/echika-ikebukuro/event/item_eventnews.jsp?id=16",
+   "https://www.metropro-sc.jp/echika-ikebukuro/shop/index.jsp?bf=1&fmt=6&shopid=1087"
+  ]
+ },
+ "sunshine-city": {
+  "name": "サンシャインシティ（アルパ・アルタ・ワールドインポートマートビル）",
+  "officialName": "サンシャインシティ",
+  "officialUrl": "https://sunshinecity.jp/",
+  "operator": "株式会社サンシャインシティ",
+  "nearStations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ],
+  "storesInLedger": 10,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング 10:00～20:00",
+   "source": "https://sunshinecity.jp/information/opening_hour.html",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "東池袋駅直結サンシャインシティ地下通路開放時間7:00～23:00",
+   "source": "https://sunshinecity.jp/information/access_train.html",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東池袋駅（東京メトロ有楽町線）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーシート（おむつ交換台）、授乳用個室を設置しています。",
+    "source": "https://sunshinecity.jp/information/guide_baby.html",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "※文化会館ビルB1（トイザらス/ベビーザらス近く）、文化会館ビル2F（展示ホールD近く）、ワールドインポートマートビル4Fトイレ前にもベビーシート（おむつ交換台）を設置しております。",
+    "source": "https://sunshinecity.jp/information/guide_baby.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "アルパ2階共有部分に、パズルを楽しんだりお友達と遊んだりできるお子様専用のプレイスペースがございます。",
+    "source": "https://sunshinecity.jp/information/guide_baby.html",
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ご利用希望の際は、下記貸出し場所からご自由にご利用ください。無料でご利用いただけます。",
+    "source": "https://sunshinecity.jp/information/guide_baby.html",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://sunshinecity.jp/",
+   "https://sunshinecity.jp/information/access_train.html",
+   "https://sunshinecity.jp/information/guide_baby.html",
+   "https://sunshinecity.jp/information/opening_hour.html",
+   "https://sunshinecity.jp/news/entry-32868.html",
+   "https://sunshinecity.jp/news/entry-9521.html",
+   "https://sunshinecity.jp/file/official/barrierfree/access.html",
+   "https://www.isetan.mistore.jp/common/alta/service.html"
+  ]
+ },
+ "tobu-ikebukuro": {
+  "name": "東武百貨店 池袋店",
+  "officialName": "東武百貨店 池袋店",
+  "officialUrl": "https://www.tobu-dept.jp/ikebukuro/",
+  "operator": "株式会社東武百貨店",
+  "nearStations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "グッチフェア ■会期：10/29(木)～11/25(水)（公式トップの催事案内）",
+   "source": "https://www.tobu-dept.jp/ikebukuro/",
+   "method": "内蔵ブラウザで本文を確認（JS描画）",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "回答の出典URLは公式に存在しない（404）。サービスガイドのページにも授乳室の記載を見つけられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "note": "回答の出典URLは公式に存在しない（404）。サービスガイドのページにも授乳室の記載を見つけられなかった",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "貸出・返却場所1F 3番地 お入口 料金無料 対象生後4ヶ月～4歳（48ヶ月）",
+    "source": "https://www.tobu-dept.jp/ikebukuro/event/detail/8651",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://www.tobu-dept.jp/ikebukuro/",
+   "https://www.tobu-dept.jp/ikebukuro/tnb/info/kids/",
+   "https://www.tobu-dept.jp/ikebukuro/event/detail/8538",
+   "https://www.tobu-dept.jp/ikebukuro/event/detail/8651"
+  ]
+ },
+ "lumine-ikebukuro": {
+  "name": "ルミネ池袋",
+  "officialName": "ルミネ池袋",
+  "officialUrl": "https://www.lumine.ne.jp/ikebukuro/",
+  "operator": "株式会社ルミネ",
+  "nearStations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "営業時間 ショッピング 平日 11:00 ~ 21:00",
+   "source": "https://www.lumine.ne.jp/ikebukuro/",
+   "method": "内蔵ブラウザで本文を確認（JS描画）",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: JR池袋駅南改札、正面右手よりすぐ",
+   "source": "https://www.lumine.ne.jp/ikebukuro/access/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "6F TULLY’S COFFEE with U内・8F",
+    "source": "https://www.lumine.ne.jp/ikebukuro/information/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ替えベッド",
+    "source": "https://www.lumine.ne.jp/ikebukuro/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "6F TULLY’S COFFEE with U内",
+    "source": "https://www.lumine.ne.jp/ikebukuro/information/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーカー貸出",
+    "source": "https://www.lumine.ne.jp/ikebukuro/information/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.lumine.ne.jp/ikebukuro/",
+   "https://www.lumine.ne.jp/ikebukuro/access/",
+   "https://www.lumine.ne.jp/ikebukuro/information/",
+   "https://www.lumine.ne.jp/ikebukuro/information/hours/",
+   "https://www.lumine.ne.jp/ikebukuro/floorguide/"
+  ]
+ },
+ "humax-ikebukuro-sunshine60": {
+  "name": "ヒューマックスパビリオン池袋サンシャイン60通り",
+  "officialName": "ヒューマックスパビリオン池袋サンシャイン60通り",
+  "officialUrl": "https://www.humax.co.jp/facility_p_ikebukuto_sunshine/",
+  "operator": "株式会社ヒューマックス",
+  "nearStations": [
+   "higashi-ikebukuro",
+   "ikebukuro"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "スシロー 池袋サンシャイン60通り店",
+   "source": "https://www.humax.co.jp/facility_p_ikebukuto_sunshine/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.humax.co.jp/facility_p_ikebukuto_sunshine/",
+   "https://www.humax.co.jp/about/",
+   "https://www.humax.co.jp/about/facility/",
+   "https://www.humax.co.jp/",
+   "https://www.humax-cinema.co.jp/ikebukuro/access"
+  ]
+ },
+ "beans-akabane": {
+  "name": "ビーンズ赤羽",
+  "officialName": "ビーンズ赤羽",
+  "officialUrl": "https://beans.jrtk.jp/akabane/",
+  "operator": "株式会社ジェイアール東日本都市開発",
+  "nearStations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "平日・土曜日 10:00～21:00",
+   "source": "https://beans.jrtk.jp/akabane/shop/hours.jsp",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "JR埼京線・京浜東北線・高崎線・東北本線「赤羽駅」直結",
+   "source": "https://beans.jrtk.jp/akabane/shop/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR埼京線・京浜東北線・高崎線・東北本線「赤羽駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ換え等にご利用いただけるベビーベッドが多目的トイレにございます。",
+    "source": "https://beans.jrtk.jp/akabane/shop/access.jsp",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://beans.jrtk.jp/akabane/",
+   "https://beans.jrtk.jp/akabane/shop/access.jsp",
+   "https://beans.jrtk.jp/akabane/shop/hours.jsp",
+   "https://beans.jrtk.jp/akabane/shop/floor.jsp",
+   "https://beans.jrtk.jp/akabane/shop/index.jsp?bf=4",
+   "https://beans.jrtk.jp/akabane/event/item_eventnews.jsp?id=2575",
+   "https://beans.jrtk.jp/akabane/event/item_eventnews.jsp?id=2282"
+  ]
+ },
+ "iy-akabane": {
+  "name": "イトーヨーカドー赤羽店",
+  "officialName": "イトーヨーカドー 赤羽店",
+  "officialUrl": "https://stores.itoyokado.co.jp/detail/535/",
+  "operator": "株式会社 イトーヨーカ堂",
+  "nearStations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "2F～6F 10:00-20:00 ※一部専門店は営業時間が異なります。",
+   "source": "https://stores.itoyokado.co.jp/detail/535/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 【電車】 JR宇都宮線・京浜東北線・高崎線・埼京線 赤羽駅から徒歩4分",
+   "source": "https://stores.itoyokado.co.jp/detail/535/",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃん 休憩室",
+    "source": "https://stores.itoyokado.co.jp/detail/535/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "長時間のお買物でも安心な授乳室、赤ちゃん用のオムツ交換シート、ミルク用のお湯、乳幼児用の身長計・体重計を準備しております。",
+    "source": "https://www.itoyokado.co.jp/service/facilities.html",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://en.stores.itoyokado.co.jp/detail/535/",
+   "https://stores.itoyokado.co.jp/detail/535/",
+   "https://www.itoyokado.co.jp/service/index.html",
+   "https://www.itoyokado.co.jp/service/facilities.html",
+   "https://senmonten.itoyokado.co.jp/web/shop/170/index.html",
+   "https://www.itoyokado.co.jp/company/newsrelease.html"
+  ]
+ },
+ "akabane-vivio": {
+  "name": "赤羽ビビオ（パルロード2）",
+  "officialName": "ショッピングセンター ビビオ",
+  "officialUrl": "https://www.bivio.jp/",
+  "operator": "Bivio Co.Ltd（公式サイトのコピーライト表記。正式な日本語社名は公式サイト上で未確認）",
+  "nearStations": [
+   "akabane",
+   "akabane-iwabuchi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10月の休館日は20日㈫です。全店休館となります。",
+   "source": "https://www.bivio.jp/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 下車駅：JR赤羽駅 西口正面",
+   "source": "https://www.bivio.jp/access",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.bivio.jp/",
+   "https://www.bivio.jp/access",
+   "https://www.bivio.jp/floormap",
+   "https://www.bivio.jp/service",
+   "https://www.bivio.jp/search?q=%E6%8E%88%E4%B9%B3"
+  ]
+ },
+ "aeon-itabashi": {
+  "name": "イオン板橋ショッピングセンター",
+  "officialName": "イオン板橋ショッピングセンター",
+  "officialUrl": "https://www.aeon.jp/sc/itabashi/",
+  "operator": null,
+  "nearStations": [
+   "tobu-nerima"
+  ],
+  "storesInLedger": 5,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "2026-10-30 はイオンの公式サイトがメンテナンス中で、営業時間のページを開けなかった",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.aeon.jp/sc/itabashi/info/time.html"
+  ]
+ },
+ "lions-sakuradai": {
+  "name": "ライオンズマンション桜台駅前（住宅の1階）",
+  "officialName": "ライオンズマンション桜台駅前",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "nerima"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": []
+ },
+ "emio-nerima": {
+  "name": "エミオ練馬",
+  "officialName": "エミオ練馬",
+  "officialUrl": "https://www.seibu-shop.jp/emio/floorguide/?emio=emio12",
+  "operator": "SEIBU REAL ESTATE PROPERTY MANAGEMENT INC.（公式サイトのコピーライト表記。日本語の正式社名は未確認）／駅は西武鉄道",
+  "nearStations": [
+   "nerima"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "西武鉄道駅ナカ商業施設 「エミオ 練馬」のフロアガイド・ショップ情報ページです。",
+   "source": "https://www.seibu-shop.jp/emio/floorguide/?emio=emio12",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "西武鉄道駅ナカ商業施設 「エミオ 練馬」のフロアガイド・ショップ情報ページです。",
+   "source": "https://www.seibu-shop.jp/emio/floorguide/?emio=emio12",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "練馬駅"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "授乳室",
+    "source": "https://www.seiburailway.jp/railway/station/nerima/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.seibu-shop.jp/emio/floorguide/?emio=emio12",
+   "https://www.seibu-shop.jp/emio/",
+   "https://www.seiburailway.jp/railway/station/nerima/",
+   "http://seibu-shop.jp/floorguide/station/?station=st06"
+  ]
+ },
+ "gran-emio-oizumigakuen": {
+  "name": "グランエミオ大泉学園",
+  "officialName": "グランエミオ大泉学園",
+  "officialUrl": "https://www.seibu-shop.jp/oizumi/",
+  "operator": "株式会社西武不動産プロパティマネジメント",
+  "nearStations": [
+   "oizumi-gakuen"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "グランエミオ大泉学園 ✕ Ｔ・ジョイＳＥＩＢＵ大泉 映画でおトク！！ 2026年4月1日(水) ～ 2027年3月31日(水)",
+   "source": "https://www.seibu-shop.jp/oizumi/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "「大泉学園」駅北口改札からペデストリアンデッキ直結",
+   "source": "https://www.seibu-shop.jp/oizumi/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "西武鉄道池袋線「大泉学園」駅 北口改札"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "・授乳室（女性専用）",
+    "source": "https://www.seibu-shop.jp/oizumi/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "・おむつ用ゴミ箱",
+    "source": "https://www.seibu-shop.jp/oizumi/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "no",
+    "evidence": "Wheelchairs and strollers Not available for lending",
+    "source": "https://www.seibu-shop.jp/oizumi/en/",
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.seibu-shop.jp/oizumi/",
+   "https://www.seibu-shop.jp/oizumi/information/",
+   "https://www.seibu-shop.jp/oizumi/access/",
+   "https://www.seibu-shop.jp/oizumi/event/",
+   "https://www.seibu-shop.jp/oizumi/floorguide/",
+   "https://www.seibu-shop.jp/oizumi/floorguide/?floor=2f",
+   "https://www.seibu-shop.jp/oizumi/en/"
+  ]
+ },
+ "lumine-kitasenju": {
+  "name": "ルミネ北千住",
+  "officialName": "ルミネ北千住",
+  "officialUrl": "https://www.lumine.ne.jp/kitasenju/",
+  "operator": "株式会社ルミネ（LUMINE Co., Ltd.）",
+  "nearStations": [
+   "kita-senju"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "ショッピング 平日 11:00 ~ 20:30 土日祝 11:00 ~ 20:30",
+   "source": "https://www.lumine.ne.jp/kitasenju/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "【改札連絡口】B1 JR常磐線、東京メトロ千代田線・日比谷線、東武線／3F JR常磐線、東京メトロ日比谷線、東武線、つくばエクスプレス",
+   "source": "https://www.lumine.ne.jp/kitasenju/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "【改札連絡口】B1 JR常磐線、東京メトロ千代田線・日比谷線、東武線",
+    "【改札連絡口】3F JR常磐線、東京メトロ日比谷線、東武線、つくばエクスプレス"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "5F 女性用トイレ横、8F 女性用トイレ横、 9Fベビー休憩コーナーsukusuku内",
+    "source": "https://www.lumine.ne.jp/kitasenju/information/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "ベビーベッド付トイレ 【男性用化粧室】2F、4F、6F、8F 【女性用化粧室】2F～9F",
+    "source": "https://www.lumine.ne.jp/kitasenju/information/",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "【ご利用対象年齢】2ヶ月～3歳 【ご利用料金】無料（100円コイン式）",
+    "source": "https://www.lumine.ne.jp/kitasenju/information/",
+    "checkedAt": "2026-10-30",
+    "note": "原文に設備名は入っていない（出典ページの該当する欄の記載）"
+   }
+  },
+  "looked": [
+   "https://www.lumine.ne.jp/kitasenju/",
+   "https://www.lumine.ne.jp/kitasenju/information/",
+   "https://www.lumine.ne.jp/kitasenju/access/",
+   "https://www.lumine.ne.jp/kitasenju/floorguide/",
+   "https://www.lumine.ne.jp/kitasenju/topics/detail/?cd=004424"
+  ]
+ },
+ "kitasenju-marui": {
+  "name": "北千住マルイ",
+  "officialName": "北千住マルイ",
+  "officialUrl": "https://www.0101.co.jp/084/",
+  "operator": "株式会社丸井",
+  "nearStations": [
+   "kita-senju"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "10:00-20:00",
+   "source": "https://omemie.0101.co.jp/buildings/event/kitasenju",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "千住ミルディス方面改札口から出て目の前が北千住マルイB1Fの入り口です。地下通路にはスロープもあり、直接マルイにつながっています。",
+   "source": "https://www.0101.co.jp/084/access/",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "東京メトロ千代田線（千住ミルディス方面改札口）"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.0101.co.jp/084/",
+   "https://www.0101.co.jp/084/access/",
+   "https://www.0101.co.jp/084/facility/",
+   "http://www.0101.co.jp/084/info/",
+   "https://www.0101.co.jp/084/info/?floor=5F",
+   "https://www.0101.co.jp/smp/084/info/",
+   "https://omemie.0101.co.jp/lease/buildings/kitasenju",
+   "https://omemie.0101.co.jp/buildings/event/kitasenju"
+  ]
+ },
+ "umejima-near-station-bldg": {
+  "name": "梅島ニアステーションビル",
+  "officialName": "梅島ニアステーションビル",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "nishiarai"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://e-umejima.com/shop/"
+  ]
+ },
+ "ario-nishiarai": {
+  "name": "アリオ西新井",
+  "officialName": "アリオ西新井",
+  "officialUrl": "https://nishiarai.ario.jp/",
+  "operator": null,
+  "nearStations": [
+   "kameari",
+   "nishiarai"
+  ],
+  "storesInLedger": 9,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "アリオモール………………10:00～21:00",
+   "source": "https://nishiarai.ario.jp/information/access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: 東武伊勢崎線 西新井駅西口 徒歩8分（東京メトロ半蔵門線・日比谷線直結）",
+   "source": "https://nishiarai.ario.jp/information/access",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃんの為の授乳室を設けております。カーテン付きで安心してご利用いただけます。おむつ交換台や温水浄水器もございます。",
+    "source": "https://nishiarai.ario.jp/mamakids/facility",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃん連れのご家族のための休憩室です。おむつ交換台、お子様用トイレ、温水浄水器、授乳室がございます。",
+    "source": "https://nishiarai.ario.jp/mamakids/facility",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://nishiarai.ario.jp/special/1500003607/",
+   "https://nishiarai.ario.jp",
+   "https://nishiarai.ario.jp/information/access",
+   "https://nishiarai.ario.jp/information/service",
+   "https://nishiarai.ario.jp/information/news",
+   "https://nishiarai.ario.jp/mamakids",
+   "https://nishiarai.ario.jp/mamakids/facility"
+  ]
+ },
+ "ario-kameari": {
+  "name": "アリオ亀有",
+  "officialName": "アリオ亀有",
+  "officialUrl": "https://kameari.ario.jp/",
+  "operator": "株式会社クリエイトリンク",
+  "nearStations": [
+   "kameari"
+  ],
+  "storesInLedger": 7,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "年中無休",
+   "source": "https://kameari.ario.jp/information/access",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "赤ちゃんづれのご家族のための休憩室です。授乳やおむつの交換、ご休憩にご利用ください。",
+    "source": "https://kameari.ario.jp/information/service",
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "おむつ交換台（8台）、ベビーキープ（調乳時に赤ちゃんをお座りさせられるイス）",
+    "source": "https://kameari.ario.jp/information/service",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://kameari.ario.jp/",
+   "https://kameari.ario.jp/information/access",
+   "https://kameari.ario.jp/information/service",
+   "https://kameari.ario.jp/lang/en/",
+   "https://kameari.ario.jp/app/13/pdf/fileupload/1300006620/kameari_floor_en.pdf",
+   "https://www.ario.jp/en/"
+  ]
+ },
+ "beans-kameari": {
+  "name": "ビーンズ亀有",
+  "officialName": "ビーンズ亀有",
+  "officialUrl": "https://beans.jrtk.jp/kameari/",
+  "operator": "株式会社ジェイアール東日本都市開発",
+  "nearStations": [
+   "kameari"
+  ],
+  "storesInLedger": 3,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "＜ショッピング＞ 平日・土曜日　10:00～21:00 日曜日・祝日　10:00～20:30",
+   "source": "https://beans.jrtk.jp/kameari/shop/hours.jsp",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "施設情報・アクセス｜ビーンズ亀有 | JR常磐線「亀有駅」直結のショッピングセンター",
+   "source": "https://beans.jrtk.jp/kameari/shop/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "ＪＲ常磐線「亀有駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "確認済み",
+    "value": "yes",
+    "evidence": "乳幼児設備（多目的トイレ）\nおむつ換え等にご利用いただけます。",
+    "source": "https://beans.jrtk.jp/kameari/shop/access.jsp",
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://beans.jrtk.jp/kameari/",
+   "https://beans.jrtk.jp/kameari/shop/access.jsp",
+   "https://beans.jrtk.jp/kameari/shop/floor.jsp",
+   "https://beans.jrtk.jp/kameari/shop/hours.jsp"
+  ]
+ },
+ "tokyu-store-kanamachi": {
+  "name": "東急ストア金町店",
+  "officialName": "東急ストア金町店",
+  "officialUrl": "https://www.tokyu-store.co.jp/shop/detail.html?pdid=42",
+  "operator": "株式会社東急ストア",
+  "nearStations": [
+   "kanamachi"
+  ],
+  "storesInLedger": 1,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "営業時間1F9:00-22:00,2F9:00-21:00",
+   "source": "https://www.tokyu-store.co.jp/shop/detail.html?pdid=42",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "note": "公式の記載: ＪＲ常磐線金町駅　北口駅前すぐ",
+   "source": "https://www.tokyu-store.co.jp/shop/detail.html?pdid=42",
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://www.tokyu-store.co.jp/shop/detail.html?pdid=42",
+   "https://www.tokyu-store.co.jp/info/",
+   "https://www.tokyu-store.co.jp/news/"
+  ]
+ },
+ "city-terrace-mall-kanamachi": {
+  "name": "シティテラスモール金町",
+  "officialName": "シティテラスモール金町",
+  "officialUrl": null,
+  "operator": null,
+  "nearStations": [
+   "kanamachi"
+  ],
+  "storesInLedger": 2,
+  "status": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "公式で確認できず",
+   "value": null,
+   "checkedAt": "2026-10-30"
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://skyskysky.net/construction/202151-1.html",
+   "https://www.niijukuclinic.com/",
+   "https://www.stepon.co.jp/center/kanamachi/",
+   "https://www.sumitomo-rd.co.jp/",
+   "https://www.sumitomo-rd.co.jp/service/retail_facilities.html",
+   "https://www.sumitomo-rd.co.jp/service/retail_consulting.html",
+   "https://sumifu-shogyo.co.jp/index.html",
+   "https://office.sumitomo-rd.co.jp/shops"
+  ]
+ },
+ "shapo-koiwa": {
+  "name": "シャポー小岩",
+  "officialName": "シャポー小岩",
+  "officialUrl": "https://shapo.jrtk.jp/koiwa/",
+  "operator": "株式会社ジェイアール東日本都市開発",
+  "nearStations": [
+   "koiwa"
+  ],
+  "storesInLedger": 4,
+  "status": {
+   "verdict": "確認済み",
+   "value": "open",
+   "evidence": "『カルビープラス』がシャポー小岩に出店！",
+   "source": "https://shapo.jrtk.jp/koiwa/",
+   "checkedAt": "2026-10-30"
+  },
+  "directAccess": {
+   "verdict": "確認済み",
+   "value": "yes",
+   "evidence": "電車でお越しの方\nJR総武線「小岩駅」 直結",
+   "source": "https://shapo.jrtk.jp/koiwa/shop/access.jsp",
+   "checkedAt": "2026-10-30",
+   "stations": [
+    "JR総武線「小岩駅」"
+   ]
+  },
+  "facilities": {
+   "nursingRoom": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "diaperChange": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "kidsSpace": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   },
+   "strollerRental": {
+    "verdict": "公式で確認できず",
+    "value": null,
+    "checkedAt": "2026-10-30"
+   }
+  },
+  "looked": [
+   "https://shapo.jrtk.jp/koiwa/",
+   "https://shapo.jrtk.jp/koiwa/shop/access.jsp"
+  ]
+ }
+}
