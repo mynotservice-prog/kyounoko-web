@@ -197,12 +197,6 @@
       "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
     },
     {
-      "slug": "gijikka-stress-kaisho",
-      "rule": "anon-voice",
-      "until": "2026-10-30",
-      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K1"
-    },
-    {
       "slug": "gusto-kodzure-koryaku",
       "rule": "aggregate",
       "until": "2026-10-22",
