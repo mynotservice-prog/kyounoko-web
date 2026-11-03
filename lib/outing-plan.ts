@@ -125,6 +125,8 @@ export type OutingPlan = {
 
 /** AnyStation → SPOTSのエリアキー（都道府県/地域）。 */
 function areaKeyOf(st: AnyStation): string {
+  // 多摩の駅は埼玉・千葉と同じ型で持っているが、スポットのエリアは東京
+  if (st.region === 'saichi' && st.prefecture === 'tokyo-tama') return 'tokyo';
   if (st.region === 'kansai' || st.region === 'saichi' || st.region === 'regional') return st.prefecture;
   return st.region; // 'tokyo' | 'kanagawa'
 }
