@@ -144,6 +144,7 @@ A. 1枚のチケットで両方に入園できます。ただし園の外を徒�
 ## 関連記事
 
 - [吉祥寺 子連れランチ](/article/tokyo-kichijoji-kodzure-lunch)
+- [吉祥寺駅の周辺で食事できるお店](/station/kichijoji)
 - [子連れで動物園いつから？年齢別ガイド](/article/kodomo-doubutsuen-itsukara)
 - [動物園の子連れ持ち物リスト](/article/doubutsuen-kozure-mochimono)
 - [上野動物園 子連れ攻略](/article/ueno-zoo-kosodate)

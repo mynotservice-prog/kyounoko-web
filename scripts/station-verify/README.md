@@ -26,7 +26,7 @@ python3 gen_ts.py ../../lib/station-verified-stores.ts list-suburb.txt "$(date +
 
 - `stations.json`: 駅の座標（`lib/station-coords.json` と、新設駅は HeartRails Express API）。
 - `list-suburb.txt`: 一律付与を受けていた郊外の主要駅＋四ツ谷。`list-tokyo23.txt`: 東京23区。
-  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。`list-city-2026-11.txt`: 横浜・川崎・さいたま・千葉の20駅と名古屋・福岡・仙台の11駅（2026-11-02・実験31）。4つで `lib/all-stations.ts` の620駅すべて。`stations.json` にはサイトに無い駅（吉祥寺など）も入っている。
+  `list-pub4.txt`: それ以外の14駅（第4便・2026-10-30。`reports/station-pub4-2026-10-30/`）。`list-city-2026-11.txt`: 横浜・川崎・さいたま・千葉の20駅と名古屋・福岡・仙台の11駅（2026-11-02・実験31）。`list-tama.txt`: 多摩10駅（2026-11）。5つで `lib/all-stations.ts` の630駅すべて。`stations.json` にはサイトに無い駅（吉祥寺など）も入っている。
   大阪王将は10/08版を差し込んだまま（公式の店舗検索がメンテナンス中）なので、`gen_ts.py` で全体を作り直すと大阪王将の行が消える。
   一部の駅だけ足すときは、その駅のリストで生成した駅ブロックだけを既存ファイルに差し込む。
 - `cache/` `stores/` `matched.json` は生成物でコミットしない。

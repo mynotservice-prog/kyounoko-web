@@ -124,7 +124,7 @@ lede: >-
 | 休み | 公式記載なし |
 | 設備 | 授乳室・ベビーコーナーあり |
 
-吉祥寺駅から徒歩圏の西友内です。料金・設備は[キッズランドUS公式サイト（東京吉祥寺店）](https://kidslandus.com/shop/tokyo-kichijoji/)で確認できます。
+吉祥寺駅から徒歩圏の西友内です。料金・設備は[キッズランドUS公式サイト（東京吉祥寺店）](https://kidslandus.com/shop/tokyo-kichijoji/)で確認できます。遊んだあとの食事は、[吉祥寺駅の周辺で食事できるお店](/station/kichijoji)から探せます。
 
 ## 年齢別の選び方
 
