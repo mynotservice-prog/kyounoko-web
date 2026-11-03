@@ -149,10 +149,17 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
         ? slot.plan?.shortAnswer ?? 'お昼寝・休憩タイム。おうちで軽く遊ぶ'
         : slot.spot?.note ?? '';
   const href = slotHref(slot);
-  const photo = spotPhoto(slot.spot);
+  const photo = slot.photo ?? spotPhoto(slot.spot);
 
   return (
-    <div className={'td3-slot ' + slot.key}>
+    <div className={'td3-slot ' + slot.key + (photo ? ' has-photo' : '')}>
+      {/* 写真があるときは行き先の名前より先に大きく出す（2026-10-28 案A） */}
+      {photo && (
+        <span className="td3-slot-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img {...optimizedImgAttrs(photo)} alt="" loading="lazy" decoding="async" />
+        </span>
+      )}
       <span className="td3-slotlab">
         <KkIcon name={slot.icon as KkIconName} size={14} />
         {slot.label}
@@ -165,13 +172,8 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
       ) : (
         <span className="td3-slot-name">{title}</span>
       )}
-      {photo && (
-        <span className="td3-slot-photo">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img {...optimizedImgAttrs(photo)} alt="" loading="lazy" decoding="async" />
-        </span>
-      )}
       {meta && <p className="td3-slot-desc">{meta}</p>}
+      {slot.hoursLine && <p className="td3-slot-hours">{slot.hoursLine}（公式サイトの記載。臨時の休みは公式でご確認ください）</p>}
       {slot.facets && slot.facets.length > 0 && <FacetChips facets={slot.facets} />}
       {slot.kind !== 'homeplan' && <FacilityTiles spot={slot.spot} />}
     </div>
@@ -266,6 +268,8 @@ export function LunchListView({
   ageLabel,
   indies = [],
   indieHref,
+  chainVerifiedAt,
+  chainHref,
 }: {
   anchorLabel: string;
   wardName: string;
@@ -276,6 +280,10 @@ export function LunchListView({
   indies?: Spot[];
   /** 個人店の詳細一覧（/station/[slug]#section-indies）へのリンク */
   indieHref?: string;
+  /** チェーン枠が「この駅で実在を確認した店」だけのとき、その確認日 */
+  chainVerifiedAt?: string;
+  /** 駅ページのチェーン一覧（/station/[slug]#section-chains）へのリンク */
+  chainHref?: string;
 }) {
   const offer = getSpotReservationOffer('restaurant');
   return (
@@ -284,7 +292,7 @@ export function LunchListView({
         <h1 className="td3-h1">子連れで入れるお店</h1>
         <CondRow anchorLabel={anchorLabel} ageLabel={ageLabel} />
       </div>
-      <p className="td3-lead">ベビーチェア・キッズメニュー・座敷など、子連れで入りやすいお店です。</p>
+      <p className="td3-lead">子連れで入りやすいお店の候補です。設備のタグは、公式に表示・記載があるものだけです。</p>
 
       {indies.length > 0 && (
         <>
@@ -318,12 +326,30 @@ export function LunchListView({
 
       {chain.length > 0 && (
         <>
-          <div className="td3-sublab">どの駅でも入りやすいファミリー向けチェーン</div>
+          <div className="td3-sublab">
+            {chainVerifiedAt
+              ? `${anchorLabel}の徒歩10分圏にあるファミリー向けチェーン`
+              : 'どの駅でも入りやすいファミリー向けチェーン'}
+          </div>
           <div className="kk-rows">
             {chain.slice(0, 8).map((s) => (
               <RestaurantRow key={s.name} s={s} />
             ))}
           </div>
+          {chainVerifiedAt && (
+            <p className="td3-morelink">
+              各チェーンの公式店舗検索で、駅から直線およそ800m以内に実在を確認した店です（確認日 {chainVerifiedAt}）。
+              {chainHref && (
+                <>
+                  {' '}
+                  <Link href={chainHref}>
+                    店名と住所をぜんぶ見る
+                    <KkIcon name="arrow-right" size={15} sw={2} />
+                  </Link>
+                </>
+              )}
+            </p>
+          )}
         </>
       )}
 

@@ -42,7 +42,12 @@ import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getCatalogItems } from '@/lib/items-catalog';
 import { getRestaurantBridgeOffer } from '@/lib/article-product-hints';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
-import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
+import { buildRestaurantFaq, buildConditionStoresFaq, faqToJsonLd } from '@/lib/station-faq';
+import { getConditionStores, getOtherVerifiedStores } from '@/lib/station-cond-stores';
+import { ConditionStoreList } from '@/components/station/ConditionStoreList';
+import { conditionEvidenceCount } from '@/lib/station-evidence';
+import { buildStoreItemListLd, buildConditionStoresLd } from '@/lib/station-ld';
+import { EvidenceChips, EVIDENCE_CHIPS_NOTE } from '@/components/station/EvidenceChips';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const dynamic = 'force-static';
@@ -109,6 +114,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // index/noindex は二段ゲート（lib/station-cond-index.ts）で判定。sitemap.ts と共通。
   // 需要実績(GSC90日) or matched件数>=閾値 のみ index。薄い死蔵 long-tail は noindex。
   let matchedCount = 0;
+  // 題名に出す件数。設備の条件（キッズメニュー・0-1歳・個室・雨の日）は根拠のある店の数だけ
+  // （lib/station-evidence.ts・2026-10-28）。配信の判定は matchedCount のまま（Phase 2 で切り替える）。
+  let titleCount = 0;
   if (kind === 'restaurant' && station) {
     const stationData = getStationWithChains(station.slug);
     const chains = stationData
@@ -119,6 +127,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       condition as StationConditionSlug,
     );
     matchedCount = chains.length + indies.length;
+    // 店単位で作り直した面は、根拠のある店の数（1km以内）
+    titleCount = getConditionStores(station.slug, condition)?.within1000 ?? conditionEvidenceCount(station.slug, condition, chains, indies) ?? matchedCount;
   } else if (kind === 'spot' && anyStation) {
     const { all: spotsAll } = getSpotsForStation(slug);
     const spotsMatched = filterSpotsByCondition(spotsAll, condition as StationConditionSlug);
@@ -134,7 +144,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   //   - GSCで実際に受けている「離乳食」がタイトルに無い
   // という問題があった。条件名＋該当件数（ページごとに必ず異なる）＋
   // 実際に検索される語（離乳食・ベビーチェア）で組み直す。
-  const countPart = matchedCount > 0 ? `${matchedCount}軒` : '';
+  const countPart = titleCount > 0 ? `${titleCount}軒` : '';
   const title =
     kind === 'spot'
       ? `${stationName}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
@@ -142,7 +152,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description =
     kind === 'spot'
       ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
-      : `${stationName}駅周辺の${cond.label}を${countPart ? `${countPart}` : ''}掲載。${cond.description}キッズチェア・離乳食持込・ベビーカー入店の可否を店ごとに整理しました。${wardName}で${cond.label}を探すならここから。`;
+      : `${stationName}駅周辺の${cond.label}を${countPart ? `${countPart}` : ''}掲載。${cond.description}${wardName}で${cond.label}を探すならここから。`;
 
   // 剪定(2026-06): スポット系は常にnoindex / 外食系は需要実績 or (主要駅×matched>=閾値)のみindex。
   const shouldNoindex = !isStationConditionIndexable(
@@ -187,16 +197,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const STROLLER_LABEL: Record<Chain['stroller'], string> = {
-  good: '◎',
-  ok: '○',
-  limited: '△',
-};
-const STROLLER_DESC: Record<Chain['stroller'], string> = {
-  good: 'ベビーカーで余裕入店',
-  ok: '通路でやや配慮',
-  limited: '混雑時は折り畳み推奨',
-};
 
 export default async function StationConditionPage({ params }: Props) {
   const { slug, condition } = await params;
@@ -223,12 +223,18 @@ export default async function StationConditionPage({ params }: Props) {
   const chains = filterChainsByCondition(data.chains, conditionSlug);
   const indies = filterIndiesByCondition(allIndies, conditionSlug);
 
+  // 店単位で作り直した面（照合済みの駅×6条件・2026-10-28 Phase 2）は、根拠のある店の数で数える。
+  // 配信の判定は isStationConditionIndexable（下）が stationConditionServeMode に委ねる。0店の面も配信する場合がある（少数掲載型）。
+  const cs = getConditionStores(slug, conditionSlug);
+
   // 0件の組み合わせは generateStaticParams で除外しているが、念のため
-  if (chains.length + indies.length === 0) notFound();
+  if (!cs && chains.length + indies.length === 0) notFound();
 
   // 該当店舗数（noindex 判定と同じロジック）。3件未満なら薄いコンテンツの旨を案内バナーで表示。
-  const matchedCount = chains.length + indies.length;
+  const matchedCount = cs ? cs.within1000 : chains.length + indies.length;
   const isThinResult = matchedCount < 3;
+  // 条件に合う店が少ない面（0〜2店）は、駅の近くのほかの実在店も案内する（「何も無い」と読めないように・2026-10-29）
+  const others = cs && isThinResult ? getOtherVerifiedStores(slug, conditionSlug) : null;
 
   // 外食系も二段ゲート（需要実績 or 主要駅×3件以上）を通らない noindex 対象は 404。
   // index 対象 1,482 ページ＋需要 allowlist は従来どおり配信され、SEO には影響しない。
@@ -247,12 +253,25 @@ export default async function StationConditionPage({ params }: Props) {
     scale: station.scale,
     familyFriendly: station.familyFriendly,
   });
-  const insight = buildRestaurantInsight(chains, indies);
+  const insight = cs
+    ? {
+        total: cs.within1000,
+        stats: [
+          { label: '駅前・徒歩圏（800m以内）', count: cs.within800 },
+          { label: '少し歩く（800m〜1km）', count: cs.within1000 - cs.within800 },
+          { label: 'チェーン（公式で実在を確認）', count: cs.stores.filter((x) => x.kind === 'chain').length },
+          { label: '個人店（ホットペッパー掲載）', count: cs.stores.filter((x) => x.kind === 'indie').length },
+        ].filter((x) => x.count > 0),
+        priceText: null,
+      }
+    : buildRestaurantInsight(slug, chains, indies);
   const insightText = insightToSentence(insight, cond.label, '店');
 
   // 該当店の実データのみから組むページ固有FAQ（捏造ゼロ・該当0件の設問は出さない）。
   // 境界ページ（該当3件前後）に固有の実質コンテンツと AEO 用の明示的 Q&A を与える。
-  const faqItems = buildRestaurantFaq(station.name, cond.label, chains, indies);
+  const faqItems = cs
+    ? buildConditionStoresFaq(station.name, cond.label, cs, others ?? undefined)
+    : buildRestaurantFaq(slug, station.name, cond.label, chains, indies);
   const faqLd = faqToJsonLd(faqItems);
 
   // チェーンをカテゴリ別にグルーピング
@@ -273,6 +292,8 @@ export default async function StationConditionPage({ params }: Props) {
   // 404化した noindex combo へリンクしないよう、二段ゲートと同じ判定でフィルタする。
   const otherConditions = STATION_CONDITIONS.filter((c) => c.slug !== conditionSlug)
     .map((c) => {
+      const ocs = getConditionStores(slug, c.slug);
+      if (ocs) return { cond: c, count: ocs.within1000 };
       const cn = filterChainsByCondition(data.chains, c.slug).length;
       const inn = filterIndiesByCondition(allIndies, c.slug).length;
       return { cond: c, count: cn + inn };
@@ -295,12 +316,16 @@ export default async function StationConditionPage({ params }: Props) {
     for (const s of TOKYO_STATIONS) {
       if (seenSlugs.has(s.slug)) continue;
       if (!filter(s)) continue;
-      const sd = getStationWithChains(s.slug);
-      const sc = sd?.chains ?? [];
-      const si = getIndieRestaurantsByStation(s.slug);
-      const cn = filterChainsByCondition(sc, conditionSlug).length;
-      const inn = filterIndiesByCondition(si, conditionSlug).length;
-      const cnt = cn + inn;
+      const ncs = getConditionStores(s.slug, conditionSlug);
+      let cnt: number;
+      if (ncs) {
+        cnt = ncs.within1000;
+      } else {
+        const sd = getStationWithChains(s.slug);
+        const sc = sd?.chains ?? [];
+        const si = getIndieRestaurantsByStation(s.slug);
+        cnt = filterChainsByCondition(sc, conditionSlug).length + filterIndiesByCondition(si, conditionSlug).length;
+      }
       // 404化した noindex combo へ送らない（近隣駅も indexable のみ）
       if (cnt >= 3 && isStationConditionIndexable(s.slug, conditionSlug, cnt, 'restaurant', s.scale)) {
         neighborSameCondition.push({ station: s, count: cnt });
@@ -318,39 +343,16 @@ export default async function StationConditionPage({ params }: Props) {
   neighborSameCondition.sort((a, b) => b.count - a.count);
   const topNeighbors = neighborSameCondition.slice(0, 5);
 
-  // JSON-LD ItemList
-  const allItemsForLd = [
-    ...chains.map((c) => ({
-      name: c.name,
-      description: c.description,
-      cuisine: CHAIN_CATEGORY_LABEL[c.category],
-      priceRange: c.lunchPrice,
-    })),
-    ...indies.map((r) => ({
-      name: r.name,
-      description: r.description,
-      cuisine: INDIE_GENRE_LABEL[r.genre],
-      priceRange: r.priceLunch,
-    })),
-  ];
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `${station.name}駅 ${cond.titlePart}子連れランチ`,
-    description: `${station.name}駅周辺で${cond.metaPart}の店舗リスト`,
-    numberOfItems: allItemsForLd.length,
-    itemListElement: allItemsForLd.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Restaurant',
-        name: c.name,
-        description: c.description,
-        servesCuisine: c.cuisine,
-        priceRange: c.priceRange,
-      },
-    })),
-  };
+  // JSON-LD ItemList（店単位。lib/station-ld.ts）
+  const jsonLd = cs
+    ? buildConditionStoresLd(cs, `${station.name}駅 ${cond.titlePart}子連れランチ`, `${station.name}駅周辺の${cond.label}の店舗リスト`)
+    : buildStoreItemListLd(
+        slug,
+        chains,
+        indies,
+        `${station.name}駅 ${cond.titlePart}子連れランチ`,
+        `${station.name}駅周辺の${cond.label}の店舗リスト`,
+      );
   const breadcrumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -365,7 +367,7 @@ export default async function StationConditionPage({ params }: Props) {
   return (
     <>
       <V2Frame header="sub" active="home">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
@@ -392,7 +394,6 @@ export default async function StationConditionPage({ params }: Props) {
               </small>
             </h1>
             <p className="lead">
-              {station.name}駅周辺で<strong>{cond.metaPart}</strong>の店舗だけを抽出してご紹介。
               {cond.description}
               {wardName}で{cond.label}のお店選びに迷ったらまずここから。
             </p>
@@ -451,7 +452,7 @@ export default async function StationConditionPage({ params }: Props) {
               </div>
             )}
 
-            {isThinResult && (
+            {cs && isThinResult && (
               <div
                 role="status"
                 style={{
@@ -465,7 +466,40 @@ export default async function StationConditionPage({ params }: Props) {
                   lineHeight: 1.7,
                 }}
               >
-                現在この条件で実訪問済み店舗は <strong>{matchedCount}件</strong>です。
+                {cs.within1000 === 0 ? (
+                  <>{station.name}駅から直線1km以内で、{cond.label}に当てはまると確かめられた店は<strong>ありませんでした</strong>。</>
+                ) : (
+                  <>{station.name}駅から直線1km以内で、{cond.label}に当てはまると確かめられた店は<strong>{cs.within1000}店</strong>です。</>
+                )}
+                {others && others.total > 0 && (
+                  <>
+                    {cond.label}以外なら、
+                    {others.stores.slice(0, 3).map((o) => o.name).join('・')}
+                    など<strong>{others.total}店</strong>を駅の近くで確認しています（下の一覧）。
+                  </>
+                )}
+                近くの駅や、同じ駅のほかの条件のページもご覧ください。
+                <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)', fontWeight: 600, margin: '0 2px' }}>
+                  {station.name}駅のページ
+                </Link>
+                には、駅の近くの子連れOKの店をまとめています。
+              </div>
+            )}
+            {!cs && isThinResult && (
+              <div
+                role="status"
+                style={{
+                  marginTop: 16,
+                  padding: '14px 16px',
+                  background: 'var(--peach-soft)',
+                  color: 'var(--clay)',
+                  border: '1px solid rgba(201,96,62,0.20)',
+                  borderRadius: 10,
+                  fontSize: 13.5,
+                  lineHeight: 1.7,
+                }}
+              >
+                現在この条件で掲載している店は <strong>{matchedCount}件</strong>です。
                 より多くの選択肢は
                 <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)', fontWeight: 600, margin: '0 2px' }}>
                   駅トップに戻る
@@ -479,19 +513,41 @@ export default async function StationConditionPage({ params }: Props) {
             )}
 
             <div className="station-summary" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 20 }}>
-              <span className="meta-chip clay">該当 {chains.length + indies.length}店</span>
-              {chains.length > 0 && <span className="meta-chip clay">チェーン{chains.length}店</span>}
-              {indies.length > 0 && <span className="meta-chip clay">個人店{indies.length}店</span>}
+              {cs ? (
+                <>
+                  <span className="meta-chip clay">1km以内 {cs.within1000}店</span>
+                  {cs.within800 > 0 && <span className="meta-chip clay">800m以内 {cs.within800}店</span>}
+                </>
+              ) : (
+                <>
+                  {chains.length > 0 && <span className="meta-chip clay">チェーン{chains.length}ブランド</span>}
+                  {indies.length > 0 && <span className="meta-chip clay">個人店{indies.length}店</span>}
+                </>
+              )}
               {station.scale === 'terminal' && <span className="meta-chip clay">ターミナル駅</span>}
               {station.scale === 'major' && <span className="meta-chip clay">主要駅</span>}
             </div>
           </header>
 
-          {/* チェーン店リスト（条件 'indie' 以外） */}
-          {Array.from(byCategory.entries()).map(([cat, list]) => (
+          {/* 店単位で作り直した面: 店の一覧（根拠つき・距離の段ごと） */}
+          {cs && (
+            <ConditionStoreList
+              cs={cs}
+              conditionLabel={cond.label}
+              stationName={station.name}
+              stationSlug={slug}
+              others={others ?? undefined}
+            />
+          )}
+
+          {/* チェーン店リスト（条件 'indie' 以外・作り直しの対象外の面） */}
+          {!cs && chains.length > 0 && (
+            <p style={{ fontSize: 12.5, color: 'var(--ink-mute)', lineHeight: 1.7, margin: '0 0 16px' }}>{EVIDENCE_CHIPS_NOTE}</p>
+          )}
+          {!cs && Array.from(byCategory.entries()).map(([cat, list]) => (
             <section key={cat} className="station-category" style={{ marginBottom: 36 }}>
               <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginBottom: 16 }}>
-                {CHAIN_CATEGORY_LABEL[cat]} <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{list.length}店</span>
+                {CHAIN_CATEGORY_LABEL[cat]} <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{list.length}チェーン</span>
               </h2>
               <div className="station-chains" style={{ display: 'grid', gap: 14 }}>
                 {list.map((c) => (
@@ -503,23 +559,17 @@ export default async function StationConditionPage({ params }: Props) {
                   }}>
                     <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
                       <h3 style={{ fontSize: 17, fontWeight: 600, margin: 0 }}>{c.name}</h3>
-                      <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {c.lunchPrice}円</span>
                     </header>
                     <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
                       {c.description}
                     </p>
                     <div className="station-chain-meta" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', fontSize: 12 }}>
-                      <span title={STROLLER_DESC[c.stroller]} style={{
-                        background: c.stroller === 'good' ? '#E8F5E9' : c.stroller === 'ok' ? '#FFF8E1' : '#FFEBEE',
-                        color: c.stroller === 'good' ? '#2E7D32' : c.stroller === 'ok' ? '#F57C00' : '#C62828',
-                        padding: '4px 10px', borderRadius: 999,
-                      }}>
-                        ベビーカー {STROLLER_LABEL[c.stroller]}
-                      </span>
-                      {c.kidsMenu && <span style={{ background: '#E3F2FD', color: '#1565C0', padding: '4px 10px', borderRadius: 999 }}>キッズメニュー</span>}
-                      {c.babyChair && <span style={{ background: '#F3E5F5', color: '#7B1FA2', padding: '4px 10px', borderRadius: 999 }}>キッズチェア</span>}
-                      {c.privateRoom && <span style={{ background: '#FFF3E0', color: '#E65100', padding: '4px 10px', borderRadius: 999 }}>個室あり</span>}
-                      {c.babyFoodOk && <span style={{ background: '#E0F7FA', color: '#00838F', padding: '4px 10px', borderRadius: 999 }}>離乳食持込OK</span>}
+                      <EvidenceChips
+                        stationSlug={slug}
+                        chainSlug={c.slug}
+                        className=""
+                        style={{ background: '#E3F2FD', color: '#1565C0', padding: '4px 10px', borderRadius: 999 }}
+                      />
                     </div>
                   </article>
                 ))}
@@ -527,8 +577,8 @@ export default async function StationConditionPage({ params }: Props) {
             </section>
           ))}
 
-          {/* 個人店リスト */}
-          {indies.length > 0 && (
+          {/* 個人店リスト（作り直しの対象外の面） */}
+          {!cs && indies.length > 0 && (
             <section className="station-indies" style={{
               marginTop: 8,
               marginBottom: 36,

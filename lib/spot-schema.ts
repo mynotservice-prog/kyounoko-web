@@ -184,6 +184,13 @@ export function buildSpotJsonLd(spot: Spot, slug: string) {
       value: true,
     });
   }
+  if (spot.zashiki) {
+    amenityFeature.push({
+      '@type': 'LocationFeatureSpecification',
+      name: '座敷・小上がり',
+      value: true,
+    });
+  }
   if (spot.waterPlay) {
     amenityFeature.push({
       '@type': 'LocationFeatureSpecification',

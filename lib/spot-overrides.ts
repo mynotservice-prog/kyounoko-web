@@ -49,7 +49,6 @@ import {
   kvHGetStrict,
   kvHSet,
   kvSet,
-  logOverridesCacheMiss,
 } from './kv-store';
 
 /** 上書き可能なトップレベルのフィールド（文字列/enum）。 */
@@ -184,9 +183,7 @@ const getCachedSplitReady = unstable_cache(
 const getCachedShard = Array.from({ length: SPOT_OV_SHARDS }, (_, n) =>
   unstable_cache(
     async (): Promise<SpotOverridesMap> => {
-      const map = (await kvHGetAllForCache<SpotOverride>(spotOvShardKey(n))) ?? {};
-      logOverridesCacheMiss(spotOvShardKey(n), map);
-      return map;
+      return (await kvHGetAllForCache<SpotOverride>(spotOvShardKey(n))) ?? {};
     },
     ['runtime-spot-overrides-shard', String(n)],
     { tags: [SPOT_OVERRIDES_TAG, shardTag(n)] },
@@ -197,10 +194,7 @@ const getCachedShard = Array.from({ length: SPOT_OV_SHARDS }, (_, n) =>
 const getCachedLegacySpotOverrides = unstable_cache(
   async (): Promise<SpotOverridesMap> => {
     const fromKv = await kvGetForCache<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
-    if (fromKv) {
-      logOverridesCacheMiss(SPOT_OVERRIDES_KV_KEY, fromKv);
-      return fromKv;
-    }
+    if (fromKv) return fromKv;
     return BUNDLED_SPOT_OVERRIDES;
   },
   ['runtime-spot-overrides'],

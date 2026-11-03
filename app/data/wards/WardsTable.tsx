@@ -10,7 +10,6 @@ type SortKey =
   | 'totalCount'
   | 'chainCount'
   | 'indieCount'
-  | 'strollerGoodRatio'
   | 'privateRoomRatio'
   | 'kidsMenuRatio'
   | 'familyScore';
@@ -96,9 +95,6 @@ export function WardsTable({ rows }: Props) {
             <th style={{ ...headerStyle, textAlign: 'right' }} onClick={() => onSort('indieCount')}>
               個人店<SortIndicator active={sortKey === 'indieCount'} />
             </th>
-            <th style={{ ...headerStyle, textAlign: 'right' }} onClick={() => onSort('strollerGoodRatio')}>
-              ベビーカー◎率<SortIndicator active={sortKey === 'strollerGoodRatio'} />
-            </th>
             <th style={{ ...headerStyle, textAlign: 'right' }} onClick={() => onSort('privateRoomRatio')}>
               個室率<SortIndicator active={sortKey === 'privateRoomRatio'} />
             </th>
@@ -122,7 +118,6 @@ export function WardsTable({ rows }: Props) {
               <td style={{ ...cellStyle, textAlign: 'right', fontWeight: 600 }}>{r.totalCount.toLocaleString()}</td>
               <td style={{ ...cellStyle, textAlign: 'right', color: 'var(--ink-sub)' }}>{r.chainCount}</td>
               <td style={{ ...cellStyle, textAlign: 'right', color: 'var(--ink-sub)' }}>{r.indieCount}</td>
-              <td style={{ ...cellStyle, textAlign: 'right' }}>{pct(r.strollerGoodRatio)}</td>
               <td style={{ ...cellStyle, textAlign: 'right' }}>{pct(r.privateRoomRatio)}</td>
               <td style={{ ...cellStyle, textAlign: 'right' }}>{pct(r.kidsMenuRatio)}</td>
               <td style={{
@@ -138,7 +133,7 @@ export function WardsTable({ rows }: Props) {
         </tbody>
       </table>
       <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 10 }}>
-        ※ ヘッダをタップすると並び替え。家族度スコアはベビーカー◎率・個室率・キッズメニュー率の3指標の単純平均。
+        ※ ヘッダをタップすると並び替え。家族度スコアは個室率・キッズメニュー率の2指標の単純平均。
       </p>
     </div>
   );

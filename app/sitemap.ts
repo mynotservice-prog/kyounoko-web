@@ -29,6 +29,7 @@ import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getConditionStores } from '@/lib/station-cond-stores';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 import { getAllEvents, isEventEnded } from '@/lib/events';
@@ -333,7 +334,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (k === 'spot') continue;
       let matchedCount = 0;
       if (k === 'restaurant') {
-        if (!hasMatchingItems(chains, indies, cond.slug)) continue;
+        // 店単位で作り直した面（2026-10-28 Phase 2）は、配信の判定（isStationConditionIndexable→
+        // stationConditionServeMode）だけで載せる。旧い数え方（チェーン単位）の件数では外さない
+        if (!getConditionStores(s.slug, cond.slug) && !hasMatchingItems(chains, indies, cond.slug)) continue;
         const cMatched = filterChainsByCondition(chains, cond.slug);
         const iMatched = filterIndiesByCondition(indies, cond.slug);
         matchedCount = cMatched.length + iMatched.length;

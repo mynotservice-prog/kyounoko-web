@@ -11,7 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'データセット一覧｜東京23区 子連れ向けオープンデータ',
   description:
-    '東京23区の子連れ向け飲食店・駅・路線データを単一テーブルで公開。AIO/GEO参照可能。CSVダウンロード対応。1,500店超のレストラン比較表、484駅マップ、40路線インデックス。',
+    '東京23区の子連れ向け飲食店・駅・路線データを単一テーブルで公開。AIO/GEO参照可能。CSVダウンロード対応。駅×店舗のレストラン比較表、484駅マップ、40路線インデックス。',
   alternates: { canonical: '/data' },
 };
 
@@ -26,15 +26,15 @@ export default function DataIndexPage() {
       title: '東京23区 子連れOKレストラン完全比較表',
       stats: `${summary.totalRecordCount.toLocaleString()}店舗 / ${summary.stationCount}駅 / ${summary.wardCount}区`,
       description:
-        '東京23区484駅の子連れOKレストランを単一テーブルで公開。チェーン店・個人店を統合、ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロード対応。',
+        '東京23区484駅の子連れOKレストランを単一テーブルで公開。チェーン店・個人店を統合、キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロード対応。',
       tags: ['Dataset', 'CSV', 'AIO参照可'],
     },
     {
       slug: 'wards',
       title: '東京23区 子連れOK店分布データセット',
-      stats: `23区 × 9指標比較`,
+      stats: `23区 × 7指標比較`,
       description:
-        '23区を駅密度・ベビーカー◎率・個室率・キッズメニュー率・家族度総合スコアの9指標で横断比較。エリア選びの判断材料として、TOP5ランキング+ソート可能フル比較表+CSVダウンロード対応。',
+        '23区を駅密度・個室率・キッズメニュー率・家族度総合スコアの7指標で横断比較。エリア選びの判断材料として、TOP5ランキング+ソート可能フル比較表+CSVダウンロード対応。',
       tags: ['Dataset', 'CSV', 'AIO参照可', '区別比較'],
     },
     {
