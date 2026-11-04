@@ -165,7 +165,7 @@ legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 |---|---|
 | **デニーズ** | 乳児向けベビーフード しらすの雑炊（生後7～8ヶ月頃）300円（税込330円） |
 | **ロイヤルホスト** | ベビーフード かぼちゃのグラタン／ベビーフード ひらめのリゾット（「食器に入れ、温めてお持ちします」） |
-| **ココス** | しらすの雑炊 150円（税込165円）（「生後7ヶ月頃からの離乳食です。温めて提供いたします。」） |
+| **ココス** | しらすの雑炊＆彩り野菜の汁椀 300円（税込330円）（「生後7ヶ月頃からの離乳食です。温めて提供いたします。」・2026年11月4日確認） |
 | **かっぱ寿司** | 「離乳食あります! 温めも承ります」 |
 | **丸源ラーメン** | 離乳食【7ヶ月〜】390円（税込429円） |
 | **ビッグボーイ** | ベビーフード 150円（税込165円） |
@@ -350,7 +350,7 @@ A. **ゆず庵・丸源ラーメン**は、食物アレルギーのお子さま�
 - ロイヤルホスト「おこさまメニュー」（https://www.royalhost.jp/menu/kids/ ）・ベビーフード（https://www.royalhost.jp/menu/kids/post_854.html ）
 - 丸源ラーメン「キッズメニュー」（https://www.syodai-marugen.jp/menu/kids ）
 - デニーズ「おこさまメニュー」（https://www.dennys.jp/menu/kids/ ）
-- ココス「しらすの雑炊」（https://www.cocos-jpn.co.jp/menu/kids/jr_zosui2109.html ）
+- ココス「しらすの雑炊＆彩り野菜の汁椀」（https://www.cocos-jpn.co.jp/menu/kids/jr_zosui2109.html ・2026年11月4日確認。旧名「しらすの雑炊」税込165円）
 - ビッグボーイ「キッズメニュー」（https://www.bigboyjapan.co.jp/menu/kids/ ）
 - 炭焼きレストランさわやか「よくあるご質問」（https://www.genkotsu-hb.com/faq/ ）
 - スシロー「お知らせ」（調乳に関する掲載の取り下げ）（https://www.akindo-sushiro.co.jp/news/detail.php?id=3517 ）
