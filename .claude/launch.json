@@ -20,6 +20,20 @@
       ],
       "port": 3100,
       "autoPort": true
+    },
+    {
+      "name": "kyounoko-sec-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/nagaminehideki/Developer/kyounoko-sec",
+        "run",
+        "dev",
+        "--",
+        "-p",
+        "3011"
+      ],
+      "port": 3011
     }
   ]
 }
