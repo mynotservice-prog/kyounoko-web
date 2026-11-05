@@ -1,6 +1,6 @@
 /**
- * 東京（lib/tokyo-stations.ts）と関西（lib/kansai-stations.ts）の駅マスタを
- * 統合して扱うための薄いアダプタ。
+ * 東京（lib/tokyo-stations.ts）・関西（lib/kansai-stations.ts）・神奈川・埼玉千葉・
+ * 地方都市（lib/regional-stations.ts）の駅マスタを統合して扱うための薄いアダプタ。
  *
  * 方針:
  * - 既存の TOKYO_STATIONS / KANSAI_STATIONS は変更しない
@@ -35,8 +35,14 @@ import {
   type SaiChiStation,
   type SaiChiPrefecture,
 } from './saitama-chiba-stations';
+import {
+  REGIONAL_STATIONS,
+  REGIONAL_CITY_NAMES,
+  type RegionalStation,
+  type RegionalCity,
+} from './regional-stations';
 
-export type StationRegion = 'tokyo' | 'kansai' | 'kanagawa' | 'saichi';
+export type StationRegion = 'tokyo' | 'kansai' | 'kanagawa' | 'saichi' | 'regional';
 
 export type TokyoAnyStation = TokyoStation & {
   region: 'tokyo';
@@ -62,7 +68,18 @@ export type SaiChiAnyStation = SaiChiStation & {
   regionLabel: string;
 };
 
-export type AnyStation = TokyoAnyStation | KansaiAnyStation | KanagawaAnyStation | SaiChiAnyStation;
+export type RegionalAnyStation = RegionalStation & {
+  region: 'regional';
+  /** 表示用のエリアラベル（市名） */
+  regionLabel: string;
+};
+
+export type AnyStation =
+  | TokyoAnyStation
+  | KansaiAnyStation
+  | KanagawaAnyStation
+  | SaiChiAnyStation
+  | RegionalAnyStation;
 
 function toTokyoAny(s: TokyoStation): TokyoAnyStation {
   return {
@@ -96,8 +113,16 @@ function toSaiChiAny(s: SaiChiStation): SaiChiAnyStation {
   };
 }
 
+function toRegionalAny(s: RegionalStation): RegionalAnyStation {
+  return {
+    ...s,
+    region: 'regional',
+    regionLabel: REGIONAL_CITY_NAMES[s.city],
+  };
+}
+
 /**
- * 全駅（東京+関西+神奈川+埼玉/千葉）を返す。
+ * 全駅（東京+関西+神奈川+埼玉/千葉+地方都市）を返す。
  */
 export function getAllStations(): AnyStation[] {
   return [
@@ -105,11 +130,12 @@ export function getAllStations(): AnyStation[] {
     ...KANSAI_STATIONS.map(toKansaiAny),
     ...KANAGAWA_STATIONS.map(toKanagawaAny),
     ...SAICHI_STATIONS.map(toSaiChiAny),
+    ...REGIONAL_STATIONS.map(toRegionalAny),
   ];
 }
 
 /**
- * slug から駅を検索（東京・関西・神奈川・埼玉/千葉を横断）。
+ * slug から駅を検索（東京・関西・神奈川・埼玉/千葉・地方都市を横断）。
  */
 export function findStationBySlug(slug: string): AnyStation | undefined {
   const tokyo = TOKYO_STATIONS.find((s) => s.slug === slug);
@@ -120,6 +146,8 @@ export function findStationBySlug(slug: string): AnyStation | undefined {
   if (kanagawa) return toKanagawaAny(kanagawa);
   const saichi = SAICHI_STATIONS.find((s) => s.slug === slug);
   if (saichi) return toSaiChiAny(saichi);
+  const regional = REGIONAL_STATIONS.find((s) => s.slug === slug);
+  if (regional) return toRegionalAny(regional);
   return undefined;
 }
 
@@ -127,7 +155,7 @@ export function findStationBySlug(slug: string): AnyStation | undefined {
 // 変換するために使う（同名は最初に登録された方を採用＝メトロ優先で東京を先頭に）。
 const STATION_NAME_TO_SLUG: Map<string, string> = (() => {
   const m = new Map<string, string>();
-  for (const s of [...TOKYO_STATIONS, ...KANSAI_STATIONS, ...KANAGAWA_STATIONS, ...SAICHI_STATIONS]) {
+  for (const s of [...TOKYO_STATIONS, ...KANSAI_STATIONS, ...KANAGAWA_STATIONS, ...SAICHI_STATIONS, ...REGIONAL_STATIONS]) {
     if (!m.has(s.name)) m.set(s.name, s.slug);
   }
   return m;
@@ -185,6 +213,7 @@ export function stationToStationKm(
  * - 関西: 同じ prefecture
  * - 神奈川: 同じ city
  * - 埼玉/千葉: 同じ prefecture
+ * - 地方都市: 同じ city
  */
 export function getSameAreaStations(station: AnyStation, limit = 12): AnyStation[] {
   if (station.region === 'tokyo') {
@@ -205,6 +234,12 @@ export function getSameAreaStations(station: AnyStation, limit = 12): AnyStation
       .slice(0, limit)
       .map(toKanagawaAny);
   }
+  if (station.region === 'regional') {
+    return REGIONAL_STATIONS
+      .filter((s) => s.city === station.city && s.slug !== station.slug)
+      .slice(0, limit)
+      .map(toRegionalAny);
+  }
   return SAICHI_STATIONS
     .filter((s) => s.prefecture === station.prefecture && s.slug !== station.slug)
     .slice(0, limit)
@@ -219,5 +254,6 @@ export {
   KANAGAWA_CITY_LABEL,
   SAICHI_PREFECTURE_NAMES,
   SAICHI_PREFECTURE_LABEL,
+  REGIONAL_CITY_NAMES,
 };
-export type { TokyoWard, KansaiPrefecture, KanagawaCity, SaiChiPrefecture };
+export type { TokyoWard, KansaiPrefecture, KanagawaCity, SaiChiPrefecture, RegionalCity };

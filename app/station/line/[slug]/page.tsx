@@ -17,6 +17,8 @@ import {
   type StationConditionSlug,
 } from '@/lib/station-conditions';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getConditionStores } from '@/lib/station-cond-stores';
+import { conditionEvidenceCount } from '@/lib/station-evidence';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 // 路線ページの「条件で探す」セクションで露出する主要条件（4種）。
@@ -44,8 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const line = getLineBySlug(slug);
   if (!line) return { title: '路線が見つかりません', robots: { index: false } };
   const stations = getStationsOnLine(line);
-  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店ガイド`;
-  const description = `${line.name}沿線の${stations.length}駅で子連れOK・ベビーカー入店OKのファミレス・カフェを駅別にチェック。キッズメニュー・キッズチェア・個室・離乳食持込まで全項目。`;
+  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカー・キッズメニュー店ガイド`;
+  const description = `${line.name}沿線の${stations.length}駅で子連れOKのファミレス・カフェを駅別に掲載。キッズメニュー・子ども用の椅子・個室などは、公式で確認できたものを店ごとに表示。`;
   return {
     title,
     description,
@@ -91,41 +93,29 @@ export default async function LinePage({ params }: Props) {
       if (!cond) return null;
       const cn = filterChainsByCondition(chainsBase, slug).length;
       const inn = filterIndiesByCondition(indiesBase, slug).length;
-      const count = cn + inn;
+      const lcs = getConditionStores(x.station.slug, slug);
+      const count = lcs ? lcs.within1000 : cn + inn;
       if (count === 0) return null;
       // 404化した noindex combo（需要なしminor駅）へリンクしない
       if (!isStationConditionIndexable(x.station.slug, slug, count, 'restaurant', x.station.scale)) {
         return null;
       }
-      return { slug, label: cond.label, count };
+      // 表示する件数は、設備の条件なら根拠のある店の数（lib/station-evidence.ts・2026-10-28）
+      const shown =
+        getConditionStores(x.station.slug, slug)?.within1000 ??
+        conditionEvidenceCount(
+          x.station.slug,
+          slug,
+          filterChainsByCondition(chainsBase, slug).map((c) => ({ slug: c.slug, name: c.name })),
+          filterIndiesByCondition(indiesBase, slug),
+        ) ?? count;
+      return { slug, label: cond.label, count: shown };
     }).filter((c): c is { slug: StationConditionSlug; label: string; count: number } => c !== null);
     return { station: x.station, total: x.total, conds };
   }).filter((x) => x.conds.length > 0);
 
-  // operator別のTipsテンプレ
-  const operatorTips: Record<typeof line.operator, string[]> = {
-    JR: [
-      'JRはホームと改札の間にエレベーター動線が整備されているため、ベビーカーでも比較的スムーズ。',
-      '休日昼下がり（13-15時）は混雑が落ち着くのでファミリーには狙い目。',
-      '主要駅は駅ナカ商業施設（エキュート/Dila/グランスタ）が充実、雨でも濡れず食事できる。',
-    ],
-    'tokyo-metro': [
-      '東京メトロは駅エレベーター位置が出口番号と紐付いているため、事前にメトロ公式アプリで動線確認推奨。',
-      'ホーム→改札→地上の3段階移動でベビーカー2回分のリフト操作が発生する駅もある。抱っこ紐併用が無難。',
-      '主要駅の地下街（銀座・新宿・池袋等）はモール直結で雨の日に強い。',
-    ],
-    toei: [
-      '都営地下鉄も全駅にエレベーターはあるが、出口によっては改札から遠回りになる場合あり。',
-      '大江戸線は深い駅（六本木・青山一丁目・麻布十番）が多くエレベーター移動の時間がかかる、余裕持って。',
-      '都営共通一日券（700円）は子連れの乗り降り多い日にお得。',
-    ],
-    private: [
-      '私鉄は改札・通路が狭めの駅もあるが、各駅停車中心の運用なら混雑は緩やか。',
-      '東急（東横・田園都市）はファミリーエリア通過、休日昼以降は混雑必至。',
-      '京王・小田急・西武・東武は住宅エリアを通るため、平日昼下がりが一番空いている。',
-    ],
-  };
-  const tips = operatorTips[line.operator];
+  // 鉄道会社の設備・料金の個別の断定は出典が無いので書かない（2026-11-02）
+  const tips = ['エレベーターの位置は、鉄道会社の公式の駅構内図で確かめられます。'];
 
   const operatorLabel =
     line.operator === 'JR' ? 'JR東日本' :
@@ -140,7 +130,7 @@ export default async function LinePage({ params }: Props) {
   const lineJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店`,
+    name: `${line.name} 全${stations.length}駅 子連れランチの店`,
     description: `${line.name}の各駅で、子連れで入れる飲食店を駅ごとに整理した一覧`,
     numberOfItems: stations.length,
     itemListElement: stations.map((st, i) => ({
@@ -188,18 +178,18 @@ export default async function LinePage({ params }: Props) {
             <h1 style={{ borderBottom: `4px solid ${line.color}`, paddingBottom: 12, display: 'inline-block' }}>
               {line.name}
               <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
-                全{stations.length}駅 子連れランチ・ベビーカーOK店ガイド
+                全{stations.length}駅 子連れランチ・ベビーカー・キッズメニュー店ガイド
               </small>
             </h1>
             <p className="lead">
-              {line.name}沿線で子連れランチ・カフェに使えるチェーン店＋個人店を、駅単位で全駅チェック。
-              ベビーカー入店◎、キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部確認できます。
+              {line.name}沿線で子連れランチ・カフェに使えるチェーン店＋個人店を、駅ごとにまとめました。
+              キッズメニュー・子ども用の椅子・個室などは、公式で確認できたものだけを示しています。
             </p>
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 18, fontSize: 13 }}>
               <span className="meta-chip clay">{operatorLabel}</span>
               <span className="meta-chip clay">全{stations.length}駅</span>
-              <span className="meta-chip clay">{totalShops.toLocaleString()}店舗</span>
+              <span className="meta-chip clay">駅×店 延べ{totalShops.toLocaleString()}件</span>
               {totalIndies > 0 && <span className="meta-chip clay">個人店{totalIndies}店</span>}
               {terminal.length > 0 && <span className="meta-chip clay">ターミナル{terminal.length}駅</span>}
             </div>
@@ -210,9 +200,9 @@ export default async function LinePage({ params }: Props) {
             <section style={{ margin: '36px 0' }}>
               <div className="kn-section-head">
                 <span className="eyebrow" style={{ color: line.color }}>RECOMMENDED · 沿線おすすめ駅</span>
-                <h2>子連れランチに使いやすいTOP3</h2>
+                <h2>掲載の多いTOP3</h2>
                 <p className="section-lede">
-                  {line.name}沿線の{stations.length}駅から、店舗数・選択肢の多さで上位3駅を抽出。「{line.name}でランチどこ？」と聞かれたらまずこの3駅。
+                  {line.name}沿線の{stations.length}駅から、掲載しているチェーン数と個人店数の合計が多い3駅です。
                 </p>
               </div>
               <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', marginTop: 16 }}>
@@ -242,7 +232,7 @@ export default async function LinePage({ params }: Props) {
                       {WARD_NAMES[x.station.ward]} · {x.station.lines.length}路線乗入
                     </div>
                     <div style={{ display: 'flex', gap: 12, fontSize: 13 }}>
-                      <span><strong>{x.total}</strong>店舗</span>
+                      <span><strong>{x.total}</strong>件</span>
                       <span style={{ color: 'var(--ink-sub)' }}>うち個人店{x.indieCount}</span>
                     </div>
                   </Link>
@@ -258,7 +248,7 @@ export default async function LinePage({ params }: Props) {
                 <span className="eyebrow" style={{ color: 'var(--sage-deep)' }}>FILTER · 条件で探す</span>
                 <h2>主要駅 × 条件で絞り込む</h2>
                 <p className="section-lede">
-                  {line.name}沿線の主要駅から、「ベビーカー◎」「個室」「キッズメニュー」「雨の日」など気になる条件で直接ジャンプ。条件にマッチする店舗だけのページに飛びます。
+                  {line.name}沿線の主要駅から、「個室」「キッズメニュー」「雨の日」など気になる条件で直接ジャンプ。条件にマッチする店舗だけのページに飛びます。
                 </p>
               </div>
               <div style={{ display: 'grid', gap: 14, marginTop: 16 }}>
@@ -281,7 +271,7 @@ export default async function LinePage({ params }: Props) {
                         {x.station.name}駅
                       </Link>
                       <span style={{ fontSize: 11, color: 'var(--ink-mute)' }}>
-                        {WARD_NAMES[x.station.ward]} · {x.total}店舗
+                        {WARD_NAMES[x.station.ward]} · {x.total}件
                       </span>
                     </div>
                     <div className="outing-chips" style={{ marginTop: 0 }}>
@@ -293,7 +283,7 @@ export default async function LinePage({ params }: Props) {
                           style={{ textDecoration: 'none', color: 'var(--ink-sub)' }}
                         >
                           {c.label}
-                          <span style={{
+                          {c.count > 0 && <span style={{
                             fontSize: 11,
                             color: 'var(--sage-deep)',
                             background: 'var(--sage-soft)',
@@ -302,7 +292,7 @@ export default async function LinePage({ params }: Props) {
                             marginLeft: 2,
                           }}>
                             {c.count}
-                          </span>
+                          </span>}
                         </Link>
                       ))}
                     </div>
@@ -326,7 +316,7 @@ export default async function LinePage({ params }: Props) {
             <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.85, fontSize: 14, color: 'var(--ink-sub)' }}>
               {tips.map((tip, i) => <li key={i} style={{ marginBottom: 6 }}>{tip}</li>)}
               <li style={{ marginBottom: 6 }}>
-                沿線で「雨の日も安心」「個室あり」等の条件で絞りたいときは、各駅ページの<strong>条件別フィルタ</strong>から絞り込めます。
+                沿線で「個室」「キッズメニュー」等の条件で絞りたいときは、各駅ページの<strong>条件別フィルタ</strong>から絞り込めます。
               </li>
             </ul>
           </section>

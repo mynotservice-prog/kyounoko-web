@@ -17,7 +17,6 @@ import {
   CHAIN_BY_SLUG,
   STATION_CHAIN_MAPPING,
   CHAIN_CATEGORY_LABEL,
-  TOTAL_STATION_CHAIN_RECORDS,
   type Chain,
   type ChainCategory,
   type SeatingType,
@@ -30,6 +29,8 @@ import {
   type IndieGenre,
 } from './indie-restaurants';
 import { TOKYO_LINES, getStationsOnLine, type TokyoLine } from './tokyo-lines';
+import { getVerifiedStores } from './station-verified-stores';
+import { brandEvidence, storeEvidence, type EvidenceNeed } from './station-evidence';
 
 /** 生成AIが引用しやすい単一データレコード（駅×店舗の最小単位）。 */
 export type DataRow = {
@@ -97,6 +98,15 @@ export function makeRowId(stationSlug: string, name: string, type: 'chain' | 'in
   return `${type}-${stationSlug}-${shortHash(name)}`;
 }
 
+/** その駅のそのチェーンについて、公式の根拠で「ある」と言える設備（店の公式の表示＋ブランドの公式の記載）。 */
+function chainEvidenceAt(stationSlug: string, chainSlug: string): Set<EvidenceNeed> {
+  const has = new Set<EvidenceNeed>(brandEvidence(chainSlug).keys());
+  for (const s of getVerifiedStores(stationSlug)?.stores ?? []) {
+    if (s.chain === chainSlug) for (const need of storeEvidence(s)) has.add(need);
+  }
+  return has;
+}
+
 /**
  * 23区全駅×全チェーン×全個人店をフラット化した配列。
  * Dataset 配信・CSV化の元データ。
@@ -110,6 +120,7 @@ export function buildAllDataRows(): DataRow[] {
     for (const chainSlug of chainSlugs) {
       const chain = CHAIN_BY_SLUG.get(chainSlug);
       if (!chain) continue;
+      const has = chainEvidenceAt(station.slug, chainSlug);
       rows.push({
         id: makeRowId(station.slug, chain.slug, 'chain'),
         name: chain.name,
@@ -119,22 +130,19 @@ export function buildAllDataRows(): DataRow[] {
         wardId: station.ward,
         category: CHAIN_CATEGORY_LABEL[chain.category],
         type: 'chain',
-        stroller: chain.stroller,
-        kidsMenu: chain.kidsMenu,
-        privateRoom: chain.privateRoom,
-        kidsChair: chain.babyChair === true,
-        // チェーン店ヒューリスティック: キッズメニューあり = カトラリー提供ありが標準
-        kidsCutlery: chain.kidsCutlery ?? chain.kidsMenu === true,
-        kidsSpace: chain.kidsSpace === true,
-        priceRange: chain.lunchPrice,
-        stepFree: chain.stepFree,
-        seatingType: chain.seatingType,
-        diaperChangingTable: chain.diaperChangingTable,
-        nursingRoom: chain.nursingRoom,
-        bringBabyFood: chain.bringBabyFood,
-        shareDish: chain.shareDish,
-        strollerToSeat: chain.strollerToSeat,
-        allergenInfo: chain.allergenInfo,
+        // 設備は公式の根拠があるものだけ（lib/station-evidence.ts）。Chain 型の手入力の値は出典が無いので使わない。
+        // ベビーカー入店・席・価格帯は公式の根拠を持っていないので「未確認」のまま
+        stroller: 'unknown',
+        kidsMenu: has.has('kidsMenu'),
+        privateRoom: has.has('privateRoom'),
+        kidsChair: has.has('babyChair'),
+        kidsCutlery: false,
+        kidsSpace: has.has('kidsSpace'),
+        priceRange: '',
+        stepFree: has.has('stepFree') || undefined,
+        diaperChangingTable: has.has('diaper') || undefined,
+        nursingRoom: has.has('nursing') || undefined,
+        bringBabyFood: has.has('babyFood') || undefined,
       });
     }
   }
@@ -186,13 +194,11 @@ export type WardMetrics = {
   indieCount: number;
   /** 全店舗（チェーン+個人）。 */
   totalCount: number;
-  /** ベビーカー◎店比率（0-1）。 */
-  strollerGoodRatio: number;
   /** 個室あり店比率。 */
   privateRoomRatio: number;
   /** キッズメニューあり店比率。 */
   kidsMenuRatio: number;
-  /** 子連れ歓迎度総合スコア（3指標の平均）。 */
+  /** 子連れ歓迎度総合スコア（2指標の平均）。 */
   familyScore: number;
 };
 
@@ -207,13 +213,11 @@ export function buildWardMetrics(): WardMetrics[] {
     const chainCount = wardRows.filter((r) => r.type === 'chain').length;
     const indieCount = wardRows.filter((r) => r.type === 'indie').length;
     const totalCount = wardRows.length;
-    const strollerGood = wardRows.filter((r) => r.stroller === 'good').length;
     const privateRoom = wardRows.filter((r) => r.privateRoom).length;
     const kidsMenu = wardRows.filter((r) => r.kidsMenu).length;
-    const strollerGoodRatio = totalCount === 0 ? 0 : strollerGood / totalCount;
     const privateRoomRatio = totalCount === 0 ? 0 : privateRoom / totalCount;
     const kidsMenuRatio = totalCount === 0 ? 0 : kidsMenu / totalCount;
-    const familyScore = (strollerGoodRatio + privateRoomRatio + kidsMenuRatio) / 3;
+    const familyScore = (privateRoomRatio + kidsMenuRatio) / 2;
     return {
       wardId,
       wardName: WARD_NAMES[wardId],
@@ -221,7 +225,6 @@ export function buildWardMetrics(): WardMetrics[] {
       chainCount,
       indieCount,
       totalCount,
-      strollerGoodRatio,
       privateRoomRatio,
       kidsMenuRatio,
       familyScore,
@@ -274,15 +277,21 @@ export type DataSummary = {
 };
 
 export function getDataSummary(): DataSummary {
-  const indieCount = getAllIndieRestaurants().length;
+  // 東京23区の表の行数に合わせる（全駅の数は関西・神奈川・埼玉千葉も含む）
+  const tokyoSlugs = new Set(TOKYO_STATIONS.map((s) => s.slug));
+  const indieCount = getAllIndieRestaurants().filter((r) => tokyoSlugs.has(r.stationSlug)).length;
+  const chainRecordCount = TOKYO_STATIONS.reduce(
+    (n, s) => n + (STATION_CHAIN_MAPPING[s.slug] ?? []).length,
+    0,
+  );
   return {
     stationCount: TOKYO_STATIONS.length,
     wardCount: Object.keys(WARD_NAMES).length,
-    chainBrandCount: CHAINS.length,
-    chainRecordCount: TOTAL_STATION_CHAIN_RECORDS,
+    chainBrandCount: CHAINS.filter((c) => !c.regional).length,
+    chainRecordCount,
     indieCount,
     lineCount: TOKYO_LINES.length,
-    totalRecordCount: TOTAL_STATION_CHAIN_RECORDS + indieCount,
+    totalRecordCount: chainRecordCount + indieCount,
   };
 }
 
