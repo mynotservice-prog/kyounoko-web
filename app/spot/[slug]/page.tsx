@@ -14,6 +14,7 @@ import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { KkLineCard } from '@/components/kk/KkLineCard';
 import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
 import { KkFooter } from '@/components/kk/KkFooter';
+import { KkFacilityInquiryLink } from '@/components/kk/KkFacilityInquiryLink';
 import { PLAYGROUND_FEATURE_LABEL } from '@/components/spot/spot-labels';
 import {
   getAllSpotsWithSlug,
@@ -1198,6 +1199,9 @@ export default async function SpotPage({ params }: Props) {
 
         {/* 保存ボタン */}
         <V2SaveButton id={slug} />
+
+        {/* 施設の運営者向けの1行リンク（11/02 D-1=A の導線実験・広告とアフィリ枠から離した位置） */}
+        <KkFacilityInquiryLink placement="spot" />
 
         {/* 回遊・再訪モジュール（リニューアル2026-09） */}
         <KkLineCard placement="spot" />
