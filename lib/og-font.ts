@@ -8,11 +8,14 @@ import { join } from 'node:path';
  * 「No fonts are loaded」でビルド全体が落ちた（2026-11-06 #433 のマージ後ビルド）。
  * そのためリポジトリに同梱したフォントを読む。ネットワークには出ない。
  *
- * assets/fonts/NotoSansJP-Bold-og.ttf = Noto Sans JP（SIL OFL 1.1・google/fonts）を
+ * lib/fonts/NotoSansJP-Bold-og.ttf = Noto Sans JP（SIL OFL 1.1・google/fonts）を
  * wght=700 に固定し、ASCII＋JIS 第1・第2水準（cp932）＋かな・記号に絞ったもの（約2.4MB）。
  * 収録外の字は豆腐になるので、珍しい字を画像に出すときは注意。
+ *
+ * 置き場所は assets/ ではなく lib/fonts/。.vercelignore が /assets を丸ごと除外しており、
+ * assets/ に置くと Vercel のビルドに上がらず ENOENT で落ちる（2026-11-07 #434）。
  */
 export async function loadOgFontBold(): Promise<ArrayBuffer> {
-  const buf = await readFile(join(process.cwd(), 'assets/fonts/NotoSansJP-Bold-og.ttf'));
+  const buf = await readFile(join(process.cwd(), 'lib/fonts/NotoSansJP-Bold-og.ttf'));
   return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength) as ArrayBuffer;
 }
