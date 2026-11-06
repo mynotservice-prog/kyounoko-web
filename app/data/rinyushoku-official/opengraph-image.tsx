@@ -1,27 +1,14 @@
 import { ImageResponse } from 'next/og';
+import { loadOgFontBold } from '@/lib/og-font';
 import { SURVEY_CELL_KEYS, SURVEY_CELL_LABELS, getRinyushokuSurvey } from '@/lib/rinyushoku-survey';
 
 /**
  * 調査ページのOGP画像。本文の図1（4項目の公式明記チェーン数）と同じ内容を1枚にする
- * （戦略§5-1 要件5: OGPと本文に同じ図を置く）。フォント取得は chain-facility-coverage と同じ方式。
+ * （戦略§5-1 要件5: OGPと本文に同じ図を置く）。フォントは同梱の Noto Sans JP（lib/og-font.ts）。
  */
 export const alt = '外食チェーン 離乳食対応の公式記載 実態調査';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-
-async function loadFont(text: string): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&text=${encodeURIComponent(text)}`,
-      { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:2.0) Gecko/20100101 Firefox/4.0' } },
-    ).then((r) => r.text());
-    const m = css.match(/src: url\(([^)]+)\) format\('(?:opentype|truetype|woff)'\)/);
-    if (!m) return null;
-    return await fetch(m[1]).then((r) => r.arrayBuffer());
-  } catch {
-    return null;
-  }
-}
 
 export default async function Image() {
   const survey = getRinyushokuSurvey();
@@ -31,8 +18,7 @@ export default async function Image() {
   const sub = `持ち込みを公式に明記しているのは${summary.chainCount}チェーン中${summary.mochikomi.stated}社`;
   const note = '公式に明記しているチェーン数 / 照合できたチェーン数（記載なし＝不可ではない）';
   const foot = '出典: きょうのこ kyounoko.jp/data/rinyushoku-official';
-  const labels = SURVEY_CELL_KEYS.map((k) => SURVEY_CELL_LABELS[k]).join('');
-  const font = await loadFont(title + sub + note + foot + labels + 'きょうのこ調査 / 年次更新社0123456789');
+  const font = await loadOgFontBold();
 
   const barW = 560;
   return new ImageResponse(
@@ -74,7 +60,7 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: font ? [{ name: 'NotoSansJP', data: font, weight: 700, style: 'normal' }] : [],
+      fonts: [{ name: 'NotoSansJP', data: font, weight: 700, style: 'normal' }],
     },
   );
 }
