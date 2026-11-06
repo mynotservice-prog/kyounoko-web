@@ -7,6 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-07-24'
+verifiedAt: '2026-11-06'
 quickInfo:
   ageRanges:
     - 2-3
@@ -211,9 +212,9 @@ legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 
 ### 規模別の特徴
 
-**大規模神社（明治神宮・氷川神社・湯島天神など）**
+**大規模神社（明治神宮・武蔵一宮 氷川神社・湯島天神など）**
 
-- 御祈祷の予約が取りやすい
+- 個人の御祈祷は予約不要・当日受付のところがある（明治神宮・武蔵一宮 氷川神社・湯島天満宮は、公式で予約不要と案内。2026年11月6日確認）
 - 設備が整っている
 - 11月の土日は非常に混雑
 
@@ -230,6 +231,8 @@ legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 - **必ず神社の公式確認を**
 
 御祈祷料（初穂料）は**5,000〜10,000円**が一般的ですが、**神社によって金額・のし袋の書き方・予約可否が異なります**。**必ず神社の公式サイトまたは社務所で要確認**してください。
+
+> 出典：[明治神宮「ご祈願の方へ（個人）」](https://www.meijijingu.or.jp/sanpai/3.php)・[武蔵一宮 氷川神社「七五三詣」](https://musashiichinomiya-hikawa.or.jp/753/)・[湯島天満宮 公式サイト](https://www.yushimatenjin.or.jp/pc/gokitou/index.htm)｜確認日 2026年11月6日
 
 ## 当日タイムテーブル（モデルケース）
 
