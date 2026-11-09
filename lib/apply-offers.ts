@@ -54,7 +54,7 @@ export const APPLY_PROGRAMS: readonly (ApplyProgram & { note: string })[] = [
     // 文言の根拠: https://fotowa.com/ の title「出張撮影・出張カメラマンならfotowa」（2026-11-10 取得）
     id: 'fotowa',
     asp: 'a8',
-    href: '',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B5WGE+BTOYB6+2NLY+HV7V6',
     copyVerifiedAt: '2026-11-10',
     eyebrow: '記念写真の撮影',
     heading: '出張撮影のfotowa（フォトワ）',
@@ -66,7 +66,7 @@ export const APPLY_PROGRAMS: readonly (ApplyProgram & { note: string })[] = [
     // 文言の根拠: https://our-photo.co/ の title「出張撮影・家族写真のOurPhoto」（2026-11-10 取得）
     id: 'ourphoto',
     asp: 'a8',
-    href: '',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B5WGE+BT3IPE+58O8+64JTE',
     copyVerifiedAt: '2026-11-10',
     eyebrow: '記念写真の撮影',
     heading: '出張撮影のOurPhoto',
