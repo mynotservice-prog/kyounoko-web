@@ -5,7 +5,8 @@
  * 止めるもの（exit 1）:
  *   - 置き場所の slug が content/articles に無い／noindex／タイアップ記事
  *   - 置き場所の slug が docs/experiments-active.md の凍結 slug、または台帳の現役の節に名前が出る記事
- *     （処置・対照でも機械可読ブロックに入れていない実験があるため、名前が出たら止めて人が確かめる）
+ *     （処置・対照でも機械可読ブロックに入れていない実験があるため、名前が出たら止めて人が確かめる。
+ *       見出しに「申込型アフィリ」を含む節＝この導線そのものの実験の節は数えない）
  *   - 置き場所が、定義の無い案件を指している
  *   - 描画できる状態の案件のリンクが https でない／ASP のホストでない／確認日の形式が違う
  *
@@ -26,21 +27,31 @@ const { isTieupArticle } = await import('../lib/reservation-cta.ts');
 const ASP_HOSTS = { a8: /^px\.a8\.net$/, moshimo: /^af\.moshimo\.com$/ };
 const errors = [];
 
-/* 1. 凍結・判定中の記事（check-frozen.mjs --list の出力を正とする） */
+/* 1. 凍結中の記事（check-frozen.mjs --list の出力を正とする） */
 const listOut = execFileSync('node', ['scripts/check-frozen.mjs', '--list'], { encoding: 'utf8' });
 const frozen = new Set();
-const mentioned = new Set();
-let section = '';
+let inFrozen = false;
 for (const line of listOut.split('\n')) {
-  if (/^凍結slug/.test(line)) section = 'frozen';
-  else if (/^△ 本文に出てくるが/.test(line)) section = 'mentioned';
-  else if (/^\S/.test(line)) section = '';
+  if (/^凍結slug/.test(line)) inFrozen = true;
+  else if (/^\S/.test(line)) inFrozen = false;
   const m = line.match(/^\s{2}([a-z0-9][a-z0-9-]+)\s*$/);
-  if (!m) continue;
-  if (section === 'frozen') frozen.add(m[1]);
-  if (section === 'mentioned') mentioned.add(m[1]);
+  if (m && inFrozen) frozen.add(m[1]);
 }
 if (frozen.size === 0) errors.push('凍結 slug を1件も読めませんでした（check-frozen.mjs --list の出力形式が変わった可能性）');
+
+/* 1b. 台帳の現役の節（「## 汚染の記録」より上・判定済みを除く）に名前が出る記事。
+ *     この導線そのものの実験の節（見出しに「申込型アフィリ」）は数えない。 */
+const registry = readFileSync('docs/experiments-active.md', 'utf8');
+const cutAt = registry.indexOf('## 汚染の記録');
+const mentioned = new Set();
+for (const sec of (cutAt >= 0 ? registry.slice(0, cutAt) : registry).split(/^### /m)) {
+  const heading = sec.split('\n', 1)[0] ?? '';
+  if (/判定済み|申込型アフィリ/.test(heading)) continue;
+  for (const [, token] of sec.matchAll(/`([^`\n]+)`/g)) {
+    const m = token.trim().match(/^([a-z0-9][a-z0-9-]{5,})(?:\.md)?$/);
+    if (m && m[1].includes('-')) mentioned.add(m[1]);
+  }
+}
 
 /* 2. 案件の定義 */
 const programs = new Map(APPLY_PROGRAMS.map((p) => [p.id, p]));
@@ -69,7 +80,7 @@ for (const [slug, ids] of Object.entries(APPLY_PLACEMENTS)) {
   if (/^noindex:\s*true/m.test(fm)) errors.push(`${slug}: noindex の記事です`);
   if (isTieupArticle(slug)) errors.push(`${slug}: タイアップ記事です`);
   if (frozen.has(slug)) errors.push(`${slug}: 凍結中の記事です（docs/experiments-active.md）`);
-  if (mentioned.has(slug)) errors.push(`${slug}: 実験台帳の現役の節に名前が出ます。処置・対照でないことを確かめてから入れてください`);
+  else if (mentioned.has(slug)) errors.push(`${slug}: 実験台帳の現役の節に名前が出ます。処置・対照でないことを確かめてから入れてください`);
   for (const id of ids) if (!programs.has(id)) errors.push(`${slug}: 案件 ${id} の定義がありません`);
   const offer = getApplyOffer(slug);
   rows.push({ slug, programs: ids, renders: offer ? offer.itemId : null });
