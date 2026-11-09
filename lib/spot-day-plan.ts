@@ -100,6 +100,12 @@ export function buildSpotDayPlan(entry: {
   const axis = entry.spot;
   if (axis.category === 'restaurant') return null;
   if (!isSpotAvailableNow(axis.name)) return null;
+  if (axis.dayPlanOverride) {
+    return {
+      steps: axis.dayPlanOverride.steps.map((s) => ({ ...s, kind: 'spot' as const })),
+      usedSlugs: [],
+    };
+  }
 
   const areaName = getAreaName(entry.area as AreaSlug);
   const cityKey = axis.ward ?? axis.city ?? '';

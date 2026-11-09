@@ -618,3 +618,11 @@ a.kk-chip:hover { border-color: var(--kk-orange); color: var(--kk-orange-deep); 
   .kk-line-phone { flex: none; align-self: center; }
 }
 @media (max-width: 420px) { .kk-line-phone { width: 76px; height: auto; } .kk-line { gap: 10px; padding: 14px 12px 16px; } }
+
+/* 施設・店舗の運営者向けの1行リンク（2026-11-05・11/02 D-1=A の導線実験）。控えめに置く */
+.kk-facility-inquiry {
+  margin: 24px 0 8px; padding: 0 2px;
+  font-size: 12.5px; line-height: 1.7;
+  color: var(--kk-ink-mute);
+}
+.kk-facility-inquiry a { color: var(--kk-ink-soft); text-decoration: underline; text-underline-offset: 2px; }
