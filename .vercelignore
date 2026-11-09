@@ -47,10 +47,10 @@
 public/new_image
 public/new_hero
 docs/_image-sheets
-# assets は追跡ファイルが0件（中身は kura-src の原本画像のみ）。
-# `assets/kura-src` とだけ書くと assets が「空ディレクトリ」扱いになって
-# 上記の罠に落ちるので、ディレクトリごと除外する。
-/assets
+# assets/kura-src は原本画像（git 未追跡）。2026-11-07 から assets/fonts（OG 画像の
+# 同梱フォント・PR #434）が追跡されてビルドに必要なので、assets ごとは除外しない。
+# fonts が入って assets は空にならないため、上記の「空ディレクトリ」の罠には当たらない。
+/assets/kura-src
 # public/hero は png と webp が同数入っている。png だけ落としても空にはならない
 public/hero/*.png
 

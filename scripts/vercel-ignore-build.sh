@@ -48,6 +48,10 @@ CODE_PATHS=(
   "vercel.json"
   "middleware.ts"
   "scripts/vercel-ignore-build.sh"
+  # デプロイに含めるファイルを決める設定と、ビルドが読む同梱フォント。
+  # 入れていなかったため 2026-11-07 の PR#436（.vercelignore の修正）がビルドされず本番に出なかった。
+  ".vercelignore"
+  "assets/fonts"
 )
 
 # コードに変更があれば必ずビルド
