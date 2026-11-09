@@ -15,6 +15,7 @@
 
 import { AREAS, type AreaSlug } from './area';
 import { BUNDLED_EVENT_OVERRIDES, type EventOverridesMap } from './event-overrides';
+import type { KidReport } from './spots';
 // 管理画面「新規イベント」で作成したイベント（/api/admin/event-create が GitHub commit で追記）。
 import EVENTS_EXTRA from './events-extra.json';
 
@@ -80,6 +81,12 @@ export type EventEntry = {
   datesUnverified?: boolean;
   /** 施設・イベント自体が公式で営業終了・廃止になった。「来年も開催される場合があります」を出さない。 */
   closed?: boolean;
+  /**
+   * 運営者が実際に子連れで行った記録（スポットの kidReport と同じ形）。
+   * 運営者本人の実体験だけを書く。覚えていない項目は埋めない。
+   * 毎年開く行事は、前回行ったときの記録を次回の回に残す（何年の訪問かを visitAge に書く）。
+   */
+  kidReport?: KidReport;
 };
 
 /**
