@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { loadOgFontBold } from '@/lib/og-font';
 import {
   COVERAGE_LABELS,
   formatRate,
@@ -13,27 +14,11 @@ import {
  * （戦略§5-1 要件5: 引用されやすいのは表ではなく1枚の図。OGPと本文に同じ図を置く）。
  * 率の表記も本文と同じ formatRate を使う。
  *
- * 日本語フォントは Google Fonts の CSS API に text= で必要文字だけ渡し、
- * 返ってきた TTF を埋め込む（全グリフだと数MBになるため）。ビルド時に1回だけ取得される。
- * 画像に出す文字列はすべて TEXTS に集めてから text= に渡す（漏れた字は豆腐になる）。
+ * 日本語フォントは同梱の Noto Sans JP（lib/og-font.ts）。ビルド時にネットワークへ出ない。
  */
 export const alt = '外食チェーン 子連れ設備カバー率調査';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-
-async function loadFont(text: string): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&text=${encodeURIComponent(text)}`,
-      { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:2.0) Gecko/20100101 Firefox/4.0' } },
-    ).then((r) => r.text());
-    const m = css.match(/src: url\(([^)]+)\) format\('(?:opentype|truetype|woff)'\)/);
-    if (!m) return null;
-    return await fetch(m[1]).then((r) => r.arrayBuffer());
-  } catch {
-    return null;
-  }
-}
 
 const pct = formatRate;
 
@@ -52,8 +37,7 @@ export default async function Image() {
   const chartTitle = '設備の表示がある店舗の割合（その設備を公開しているチェーンのみ集計）';
   const foot = '出典: きょうのこ kyounoko.jp/data/chain-facility-coverage';
   const rowTexts = rows.map((r) => [COVERAGE_LABELS[r.key], pct(r.rate), `${r.chains}チェーン`]);
-  const TEXTS = [eyebrow, title, sub, lead, chartTitle, foot, ...rowTexts.flat()];
-  const font = await loadFont([...new Set(TEXTS.join(''))].join(''));
+  const font = await loadOgFontBold();
 
   const barW = 600;
   const rowH = rows.length > 8 ? 34 : 40;
@@ -97,7 +81,7 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: font ? [{ name: 'NotoSansJP', data: font, weight: 700, style: 'normal' }] : [],
+      fonts: [{ name: 'NotoSansJP', data: font, weight: 700, style: 'normal' }],
     },
   );
 }

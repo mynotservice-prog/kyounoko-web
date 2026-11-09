@@ -214,6 +214,14 @@ export type Spot = {
    * admin で FAQ を読み込んで編集・削除したスポットに付与し、削除が確実に効くようにする。
    */
   faqComplete?: boolean;
+  /**
+   * 「このスポットを軸にした1日の流れ」を施設の案内どおりの内容に差し替える。
+   * 指定すると自動生成（近くの店・別スポットへの移動）を使わない。無料掲載の施設から依頼があったときだけ入れる。
+   */
+  dayPlanOverride?: {
+    intro: string;
+    steps: Array<{ slot: string; icon: string; title: string; note?: string }>;
+  };
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
   ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
   // レストラン向けフラグ
