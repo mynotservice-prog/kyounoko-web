@@ -16,6 +16,7 @@ import {
   formatEventPeriod,
   getEventBySlug,
   getEventsByArea,
+  isEventDateReliable,
   isEventEnded,
 } from '@/lib/events';
 import { getRuntimeEventOverrides } from '@/lib/event-overrides';
@@ -206,7 +207,11 @@ export default async function EventPage({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvent) }} />
+      {/* 開催日を公式で確認できていない回（datesUnverified）と営業終了（closed）は Event を出さない。
+          画面は「例年◯月ごろ」なのに、構造化データでは仮の日付が「開催予定」として Google に渡っていた（2026-11-09）。 */}
+      {isEventDateReliable(ev) && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvent) }} />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       <V2Frame header="sub" active="events" backHref="/events">
@@ -286,6 +291,40 @@ export default async function EventPage({ params }: Props) {
             ))}
           </div>
         </div>
+
+        {/* 運営者の一次情報（実際に子連れで行った記録）。スポット詳細の同じ節と項目をそろえる */}
+        {ev.kidReport && (
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle as="h2" title="運営者が子連れで行ってきました" />
+            <div className="ev3-measure">
+              <span className="ev3-report-badge">
+                <KkIcon name="check" size={14} sw={2.2} />
+                運営者が実際に子連れで行って記録
+              </span>
+              <dl className="ev3-report">
+                {[
+                  { label: '行った年齢', value: ev.kidReport.visitAge },
+                  { label: 'ベビーカー動線', value: ev.kidReport.strollerNote },
+                  { label: '混雑・狙い目', value: ev.kidReport.crowdNote },
+                  { label: 'おむつ替え・授乳', value: ev.kidReport.diaperNote },
+                  { label: '滞在時間の目安', value: ev.kidReport.stayNote },
+                  { label: 'ヒヤッとした点・注意', value: ev.kidReport.cautionNote },
+                ]
+                  .filter((r) => r.value) // 覚えていない項目は見出しごと出さない
+                  .map((r) => (
+                    <div key={r.label} className="ev3-report-row">
+                      <dt className="ev3-report-dt">{r.label}</dt>
+                      <dd className="ev3-report-dd">
+                        {toParagraphs(r.value as string).map((p, j) => (
+                          <p key={j}>{p}</p>
+                        ))}
+                      </dd>
+                    </div>
+                  ))}
+              </dl>
+            </div>
+          </div>
+        )}
 
         {/* 基本情報（罫線で組んだデータテーブル）＋公式サイト */}
         <div className="kk-sec ev3-sec">

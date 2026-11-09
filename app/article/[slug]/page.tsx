@@ -73,6 +73,7 @@ import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
 import { KkIcon } from '@/components/kk/KkIcon';
 import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
 import { KkFooter } from '@/components/kk/KkFooter';
+import { KkFacilityInquiryLink } from '@/components/kk/KkFacilityInquiryLink';
 import { getArticlePr } from '@/lib/pr-placements';
 import { PrCard } from '@/components/pr/PrCard';
 
@@ -1629,6 +1630,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
               />
             </section>
           )}
+
+          {/* 施設の運営者向けの1行リンク（11/02 D-1=A の導線実験）。室内遊び場のエリア記事 shitsunai-asobi-*（99本）だけ。
+              AdSense 枠（article-related）から著者・シェア・回遊・関連記事を挟んだ位置に置く */}
+          {/^shitsunai-asobi-/.test(article.slug) && <KkFacilityInquiryLink placement="article" />}
 
           {/* ホーム画面に追加（回遊・再訪装置。リンク追加のみ） */}
           <KkAddToHomeCard placement="article" />
