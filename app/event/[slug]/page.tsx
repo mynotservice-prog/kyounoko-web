@@ -16,6 +16,7 @@ import {
   formatEventPeriod,
   getEventBySlug,
   getEventsByArea,
+  isEventDateReliable,
   isEventEnded,
 } from '@/lib/events';
 import { getRuntimeEventOverrides } from '@/lib/event-overrides';
@@ -206,7 +207,11 @@ export default async function EventPage({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvent) }} />
+      {/* 開催日を公式で確認できていない回（datesUnverified）と営業終了（closed）は Event を出さない。
+          画面は「例年◯月ごろ」なのに、構造化データでは仮の日付が「開催予定」として Google に渡っていた（2026-11-09）。 */}
+      {isEventDateReliable(ev) && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvent) }} />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       <V2Frame header="sub" active="events" backHref="/events">
