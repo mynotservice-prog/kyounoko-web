@@ -40,6 +40,10 @@ export type ReservationOffer = {
   cta: string;
   /** GA4 トラッキング用の識別子 */
   itemId: string;
+  /** PR ラベルの横の短い見出し。省略時は「今から行くなら・ネット予約」（外食・レジャー向けの既定） */
+  eyebrow?: string;
+  /** GA4 に送る provider。省略時は href から判定（px.a8.net なら a8、それ以外は valuecommerce） */
+  provider?: string;
 };
 
 /**
