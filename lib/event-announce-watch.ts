@@ -354,10 +354,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月、イルミは11月中旬〜翌3月',
     checkFromMonth: 9,
-    lastChecked: '2026-11-02',
+    lastChecked: '2026-11-09',
     lastCheckedState:
-      '2026-11-02確認: 冬イルミ・クリスマスは未発表。お知らせAPI infoList.jsp?site=ha の最新は2026年10月27日「こども半額ワンデーパスパック」で、全件・トップに「クリスマス」「イルミ」「冬」なし。LIGHTIAページはコメント除去後0件。12月の星空観測クルージング（2026年12月13日）を seaparadise-hoshizora-cruise-dec-2026 として投入。',
-    status: 'waiting',
+      '2026-11-09確認: 公式トップに「Seaparadise Christmas【11/14～12/25】シーパラならではのイルミネーションを毎夜お届け」が掲載され、特設ページ /event/xmas2026.html にクリスタルツリー（点灯16:30〜閉島）とライティングショー（毎時20分・50分）、LIGHTIA 11/14〜2/28 毎日開催を確認＝seaparadise-christmas-2026 として投入。特設ページのイベント欄には「12/20(土)」など曜日が2026年と合わない記載が残るため、個別の催しは入れていない。',
+    status: 'added',
+    addedSlug: 'seaparadise-christmas-2026',
   },
   {
     venue: '国営武蔵丘陵森林公園',
@@ -381,9 +382,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '冬企画は12月開催（発表は11月下旬〜12月中旬）',
     checkFromMonth: 11,
-    lastChecked: '2026-11-02',
+    lastChecked: '2026-11-09',
     lastCheckedState:
-      '2026-11-02確認: 冬・クリスマスは未発表。MOFFのPR TIMES RSS 最新は2026-10-19（MOFF Halloween2026）、カワスイ名の最新は2026-10-16（ビオトープ再生）で、今冬のクリスマス企画の配信なし（RSS内の「クリスマス」は2025年分のみ）。ハリモグラ フェスは10/31で終了したので events.ts から削除。冬企画の発表は11月下旬〜12月中旬。',
+      '2026-11-09確認: 冬・クリスマスは未発表。PR TIMES RSS（company_id=102762）の最新は2026-11-05（Cat Cafe MOFF イオンモール伊達店）、カワスイ名の最新は2026-10-16（ビオトープ再生）のまま。kawa-sui.com トップにも「クリスマス」「冬」の告知なし。冬企画の発表は11月下旬〜12月中旬。',
     status: 'waiting',
   },
   {
@@ -394,9 +395,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '9月下旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-11-02',
+    lastChecked: '2026-11-09',
     lastCheckedState:
-      '2026-11-02確認: クリスマス・冬は未発表。aquarium/js/event.js 4件と全館 js/event.js 37件の全項目に「クリスマス」「イルミ」なし。開催中はタチウオの日（〜11/15）とざんねんないきもの展３（〜11/23）。',
+      '2026-11-09確認: クリスマス・冬は未発表。aquarium/js/event.js は3件（タチウオの日〜11/15・ざんねんないきもの展３〜11/23・エサカプセル販売）で「クリスマス」「イルミ」なし。全館 js/event.js 39件で該当は展望台のクリスマスキャンドルワークショップ（11/7〜12/31）のみ。',
     status: 'waiting',
   },
 
@@ -478,9 +479,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月中旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-11-02',
+    lastChecked: '2026-11-09',
     lastCheckedState:
-      '2026-11-02確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.10.31「【ご案内】休止情報」、その前は10.16（ウルトラマンウィーク/ゴジラウィーク）。推測URL /event/nostalgic-christmas2026/ は404のまま。初報の実績は10/24（前々年）・11/11（前年）＝来週も本命。',
+      '2026-11-09確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.11.06「超お得！夜のイマ－シブショー」、その前は11.05・11.03（いずれもチケット関連の重要なお知らせ）。推測URL /event/nostalgic-christmas2026/ は404のまま。前年の初報は11/11＝来週も本命。',
     status: 'waiting',
   },
   {
@@ -561,9 +562,61 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（10月・12月）',
     checkFromMonth: 10,
-    lastChecked: '2026-11-02',
+    lastChecked: '2026-11-09',
     lastCheckedState:
-      '2026-11-02確認: クリスマスの来園者向け告知はなし。press.bindcloud.jp の一次データで、お知らせ（3U4nEb-MqAqO）40件・当日申込（U2TUCFli7Mic）16件とも「クリスマス」「ハロウィン」0件。お知らせ最新は2026/10/24（落ち葉ベッドづくり中止）。手法: BiND製でHTMLは本文ゼロ、https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。',
+      '2026-11-09確認: クリスマス企画の告知はなし（お知らせ 40件・当日申込 16件・定期 4件とも「クリスマス」0件）。当日申込（U2TUCFli7Mic）に「夜間特別開園」「冬のホタル観賞会」（2026年11月28日〜12月20日の土日、2026/11/01更新）があり、adachi-seibutsuen-yakan-hotaru-2026 として投入。手法: https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。',
+    status: 'waiting',
+  },
+  {
+    venue: '国営昭和記念公園',
+    eventName: 'ウインタービスタイルミネーション（冬のイルミネーション）',
+    officialUrl: 'https://www.showakinen-koen.jp/event/',
+    area: 'tokyo',
+    category: 'illumination',
+    typicalPeriod: '冬（会期は公式発表待ち）',
+    checkFromMonth: 11,
+    lastChecked: '2026-11-09',
+    lastCheckedState:
+      '2026-11-09確認: 公式イベント一覧・トップに冬のイルミネーションの掲載なし（「イルミ」0件。クリスマス関連はクラフト教室のリース作りのみ）。秋の夜散歩は11/29まで。',
+    status: 'waiting',
+  },
+  {
+    venue: 'カレッタ汐留',
+    eventName: '冬のイルミネーション',
+    officialUrl: 'https://www.caretta.jp/',
+    area: 'tokyo',
+    category: 'illumination',
+    typicalPeriod: '冬（会期は公式発表待ち）',
+    checkFromMonth: 11,
+    lastChecked: '2026-11-09',
+    lastCheckedState:
+      '2026-11-09確認: 公式サイトがメンテナンス中で503（「メンテナンス期間 2026年10月22日（木）8:00 ～ 未定」「セキュリティ対策を優先し、Webサービスを停止」）。会期を公式で確認できないため未投入。',
+    status: 'waiting',
+  },
+  {
+    venue: '都立動物園（上野動物園・多摩動物公園ほか）',
+    eventName: 'お正月の催し（正月開園日のイベント）',
+    officialUrl: 'https://www.tokyo-zoo.net/',
+    area: 'tokyo',
+    category: 'seasonal',
+    typicalPeriod: '1月初め（会期は公式発表待ち）',
+    checkFromMonth: 12,
+    lastChecked: '2026-11-09',
+    lastCheckedState:
+      '2026-11-09確認: 東京ズーネットのトップ・上野・葛西のページに2027年のお正月の催しの告知なし（「2026年上野動物園のお正月」の動画公開のお知らせのみ）。',
+    status: 'waiting',
+  },
+  {
+    venue: '湯島天満宮（湯島天神）',
+    eventName: '梅まつり',
+    officialUrl: 'https://www.yushimatenjin.or.jp/',
+    area: 'tokyo',
+    category: 'matsuri',
+    typicalPeriod: '2〜3月（会期は公式発表待ち）',
+    checkFromMonth: 1,
+    lastChecked: '2026-11-09',
+    lastCheckedState:
+      '2026-11-09確認: 公式トップに2027年の梅まつりの告知なし（「梅」は境内紹介文のみ。2027年関連は初詣の巫女奉仕者募集だけ）。',
     status: 'waiting',
   },
 ];
