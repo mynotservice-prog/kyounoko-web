@@ -129,6 +129,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'tokyo-station-babyroom', 'kodomo-renji-mushipan-5min-asa', 'tokyo-kichijoji-kodzure-lunch',
   'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo', 'showa-kinen-koen-kodzure',
   'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
+  // 実験14（作り直し・大戸屋 title 語彙併記・2026-11-10 登録）: 処置1本（比べる相手は凍結しないパネル）
+  'ootoya-kodzure-koryaku',
 ]);
 
 /**
@@ -138,7 +140,10 @@ export const FROZEN_TARGET_SLUGS = new Set([
  * 9/25 以降に足したルールのリンクが登録の時点で消え、処置・対照の描画が変わる。
  */
 const R1B_CUTOFF = '2026-10-25';
-const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
+/** 実験14（作り直し）の凍結日。本番反映日に合わせる（反映日が動いたらここも直す）。 */
+const EXP14_CUTOFF = '2026-11-17';
+const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = {
+  ...Object.fromEntries(
   [
     'reitou-shokuhin-ranking', 'kodomo-grape-itsukara', 'gyuuniku-ryouri-kodomo-okiniiri', 'babyfuku-tatami',
     'kodzure-deli-takeout-10', 'tokyo-kodomo-mushiyoke-spot', 'jiyugaoka-muse-square-kodzure',
@@ -155,7 +160,9 @@ const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
     'tokyo-kichijoji-kodzure-lunch', 'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo',
     'showa-kinen-koen-kodzure', 'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
   ].map((s) => [s, R1B_CUTOFF]),
-);
+  ),
+  'ootoya-kodzure-koryaku': EXP14_CUTOFF,
+};
 
 export function frozenCutoff(slug: string): string {
   return FROZEN_CUTOFF_BY_SLUG[slug] ?? FROZEN_INBOUND_CUTOFF;
