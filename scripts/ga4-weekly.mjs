@@ -112,4 +112,48 @@ for (const w of all.slice(-WEEKS)) {
 say('');
 say('読み方: PVを動かすのは流入（セッション/日）、回遊はその掛け算の係数。スポット着地は季節（水遊び）で夏に膨らむ。');
 
+// SNS別（2026-11-10 追加）: どのSNSから何人来たかを週ごとに見る。数が小さいので「/日」ではなく週合計。
+// sessionSource で媒体を判定し、どれにも当たらない Organic/Paid Social は「その他SNS」にまとめる。
+const SNS = [
+  ['Instagram', /instagram|^ig$/i],
+  ['X', /^t\.co$|twitter|^x\.com$|^x$/i],
+  ['Facebook', /facebook|^fb$/i],
+  ['Threads', /threads/i],
+  ['TikTok', /tiktok/i],
+  ['YouTube', /youtube/i],
+  ['Pinterest', /pinterest/i],
+  ['LINE', /^line$|line\.me/i],
+];
+const snsRows = await ga4({
+  dateRanges: [range],
+  dimensions: [{ name: 'date' }, { name: 'sessionSource' }, { name: 'sessionDefaultChannelGroup' }],
+  metrics: [{ name: 'sessions' }],
+  dimensionFilter: { orGroup: { expressions: [
+    { filter: { fieldName: 'sessionDefaultChannelGroup', stringFilter: { matchType: 'CONTAINS', value: 'Social' } } },
+    { filter: { fieldName: 'sessionSource', stringFilter: { matchType: 'PARTIAL_REGEXP', value: 'instagram|^ig$|^t\\.co$|twitter|^x\\.com$|^x$|facebook|^fb$|threads|tiktok|youtube|pinterest|^line$|line\\.me' } } },
+  ] } },
+  limit: 10000,
+});
+const snsW = {};
+for (const r of snsRows) {
+  const [date, source] = r.dimensionValues.map((v) => v.value);
+  const name = (SNS.find(([, re]) => re.test(source)) || ['その他SNS'])[0];
+  const k = weekKey(date);
+  snsW[k] = snsW[k] || {};
+  snsW[k][name] = (snsW[k][name] || 0) + +r.metricValues[0].value;
+}
+const snsCols = [...SNS.map(([n]) => n), 'その他SNS'];
+say('');
+say('## SNS別（セッション・週合計）');
+say('');
+say(`| 週 | 日数 | ${snsCols.join(' | ')} | 合計 |`);
+say(`|---|---:|${snsCols.map(() => '---:').join('|')}|---:|`);
+for (const w of all.slice(-WEEKS)) {
+  const v = snsW[w.week] || {};
+  const total = snsCols.reduce((a, n) => a + (v[n] || 0), 0);
+  say(`| ${w.week} | ${w.days} | ${snsCols.map((n) => f0(v[n] || 0)).join(' | ')} | ${f0(total)} |`);
+}
+say('');
+say('読み方: 参照元（sessionSource）で振り分けた実数。Instagram・LINE などのアプリ内ブラウザは参照元を渡さないことがあり、その分は Direct に入るので、ここの数字は下限として読む。自社の投稿リンクに `utm_source=instagram` などを付ければ、その分は確実にここへ入る。LINE はきょうのこ公式LINEからの流入を含む。');
+
 if (MD_OUT) { mkdirSync(dirname(resolve(MD_OUT)), { recursive: true }); writeFileSync(MD_OUT, out.join('\n') + '\n'); console.error(`md: ${MD_OUT}`); }
