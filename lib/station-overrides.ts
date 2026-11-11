@@ -163,24 +163,6 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
     ],
   },
   // 定期便 2026-11-03 の駅×子連れランチ（docs/experiments-active.md 定期便コホート 2026-11-03）
-  'takadanobaba': {
-    tldrExtraItems: [
-      {
-        href: '/article/takadanobaba-kodzure-lunch',
-        label: '高田馬場 子連れランチ完全ガイド',
-        value: '駅すぐBIGBOX 9Fでランチ・授乳室は1F',
-      },
-    ],
-  },
-  'ryogoku': {
-    tldrExtraItems: [
-      {
-        href: '/article/ryogoku-kodzure-lunch',
-        label: '両国 子連れランチ完全ガイド',
-        value: '江戸博1Fのこよみにお子様プレート・授乳室は2館',
-      },
-    ],
-  },
   'nerima': {
     tldrExtraItems: [
       {
