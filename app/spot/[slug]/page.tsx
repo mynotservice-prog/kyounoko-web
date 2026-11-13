@@ -14,6 +14,7 @@ import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { KkLineCard } from '@/components/kk/KkLineCard';
 import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
 import { KkFooter } from '@/components/kk/KkFooter';
+import { KkFacilityInquiryLink } from '@/components/kk/KkFacilityInquiryLink';
 import { PLAYGROUND_FEATURE_LABEL } from '@/components/spot/spot-labels';
 import {
   getAllSpotsWithSlug,
@@ -1057,7 +1058,10 @@ export default async function SpotPage({ params }: Props) {
               plan={dayPlan}
               cityLabel={spot.ward ?? spot.city ?? getAreaName(entry.area)}
               heading={`${spot.name}を軸にした1日の流れ`}
-              intro={`編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`}
+              intro={
+                spot.dayPlanOverride?.intro ??
+                `編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`
+              }
               footer={
                 stationSlug ? (
                   <p style={{ fontSize: 13.5, margin: '12px 2px 0' }}>
@@ -1195,6 +1199,9 @@ export default async function SpotPage({ params }: Props) {
 
         {/* 保存ボタン */}
         <V2SaveButton id={slug} />
+
+        {/* 施設の運営者向けの1行リンク（11/02 D-1=A の導線実験・広告とアフィリ枠から離した位置） */}
+        <KkFacilityInquiryLink placement="spot" />
 
         {/* 回遊・再訪モジュール（リニューアル2026-09） */}
         <KkLineCard placement="spot" />

@@ -214,6 +214,14 @@ export type Spot = {
    * admin で FAQ を読み込んで編集・削除したスポットに付与し、削除が確実に効くようにする。
    */
   faqComplete?: boolean;
+  /**
+   * 「このスポットを軸にした1日の流れ」を施設の案内どおりの内容に差し替える。
+   * 指定すると自動生成（近くの店・別スポットへの移動）を使わない。無料掲載の施設から依頼があったときだけ入れる。
+   */
+  dayPlanOverride?: {
+    intro: string;
+    steps: Array<{ slot: string; icon: string; title: string; note?: string }>;
+  };
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
   ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
   // レストラン向けフラグ
@@ -425,7 +433,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。忍者テーマの複合遊具がある無料の室内遊び場を併設', budget: 'free',
+      name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。無料の遊具スペース「わんぱく広場」（市場棟2F・小2まで）と、忍者テーマの複合遊具がある有料の「くりやランド」（1歳〜小2は45分500円）を併設', budget: 'free', budgetLabel: 'わんぱく広場は無料／くりやランドは45分500円（1歳〜小2）',
       summerCool: true,
     },
     {

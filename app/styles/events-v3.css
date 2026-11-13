@@ -271,6 +271,22 @@
 .events-v3 .ev3-official { justify-content: flex-start; gap: 9px; font-weight: 700; margin-top: 16px; }
 .events-v3 .ev3-official .ev3-official-arrow { margin-left: auto; color: rgba(255, 255, 255, .8); display: flex; }
 
+/* 運営者が子連れで行ってきました（スポット詳細 .sv3-report と同じ組み） */
+.events-v3 .ev3-report-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .04em;
+  color: var(--kk-orange-deep); margin-bottom: 6px;
+}
+.events-v3 .ev3-report { margin: 0; border-top: 1px solid var(--kk-rule); }
+.events-v3 .ev3-report-row { padding: 13px 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.events-v3 .ev3-report-dt {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+  color: var(--kk-ink-mute); margin-bottom: 4px;
+}
+.events-v3 .ev3-report-dd { margin: 0; }
+.events-v3 .ev3-report-dd p { margin: 0 0 12px; font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh); color: var(--kk-body-color); }
+.events-v3 .ev3-report-dd p:last-child { margin-bottom: 0; }
+
 /* 編集部のひとこと（塗り箱にしない・上下の罫線と余白で編集部コメントに見せる） */
 .events-v3 .ev3-note { padding-top: 16px; border-top: 1px solid var(--kk-rule-soft); }
 .events-v3 .ev3-note-lab {
