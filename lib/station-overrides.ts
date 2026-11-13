@@ -234,6 +234,52 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       },
     ],
   },
+  // 定期便 2026-11-06（型E 駅×子連れランチ）
+  'oji': {
+    tldrExtraItems: [
+      {
+        href: '/article/oji-kodzure-lunch',
+        label: '王子 子連れランチ完全ガイド',
+        value: '北とぴあ1Fの赤ちゃん休憩室と駅前ファミレスを公式で整理',
+      },
+    ],
+  },
+  'akihabara': {
+    tldrExtraItems: [
+      {
+        href: '/article/akihabara-kodzure-lunch',
+        label: '秋葉原 子連れランチ完全ガイド',
+        value: 'アトレ秋葉原2にファミレス3店・授乳室とお湯はアトレ1の3F',
+      },
+    ],
+  },
+  'hon-atsugi': {
+    tldrExtraItems: [
+      {
+        href: '/article/hon-atsugi-kodzure-lunch',
+        label: '本厚木 子連れランチ完全ガイド',
+        value: 'ミロード1の6〜7Fと、授乳室・給湯のあるベビー休憩室（5F）',
+      },
+    ],
+  },
+  'omori': {
+    tldrExtraItems: [
+      {
+        href: '/article/omori-kodzure-lunch',
+        label: '大森 子連れランチ完全ガイド',
+        value: 'アトレ大森5Fのレストランと4F・5Fの授乳スペース（調乳用給湯あり）',
+      },
+    ],
+  },
+  'mizonokuchi': {
+    tldrExtraItems: [
+      {
+        href: '/article/mizonokuchi-kodzure-lunch',
+        label: '溝の口 子連れランチ完全ガイド',
+        value: 'マルイファミリー溝口10Fと8Fのベビー休憩室（ベビーカー貸出あり）',
+      },
+    ],
+  },
   // =========================================================================
   // 越谷レイクタウン
   //
