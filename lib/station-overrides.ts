@@ -162,6 +162,16 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       },
     ],
   },
+  // 定期便 2026-11-03 の駅×子連れランチ（docs/experiments-active.md 定期便コホート 2026-11-03）
+  'nerima': {
+    tldrExtraItems: [
+      {
+        href: '/article/nerima-kodzure-lunch',
+        label: '練馬駅 子連れランチ完全ガイド',
+        value: '駅前チェーンで食べて授乳は北口ココネリ3〜4階',
+      },
+    ],
+  },
   'harajuku': {
     tldrExtraItems: [
       {
