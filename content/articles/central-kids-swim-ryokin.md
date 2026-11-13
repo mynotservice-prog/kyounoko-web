@@ -206,5 +206,6 @@ lede: >-
 
 - [子どものプールは何歳から](/article/kodomo-pool-itsukara)
 - [1歳のプールデビューの持ち物](/article/1sai-pool-debut-motimono)
+- [コナミのスイミングの料金（全103施設を集計）](/article/konami-kids-swim-ryokin)
 
 **確認日：2026年11月6日｜出典：セントラルスポーツ公式サイト（本部のページと全109クラブのスイミングスクールのページ）**
