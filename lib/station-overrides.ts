@@ -530,6 +530,13 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
     },
   },
   'ofuna': {
+    tldrExtraItems: [
+      {
+        href: '/article/ofuna-kodzure-lunch',
+        label: '大船 子連れランチ完全ガイド',
+        value: '直結のルミネウィング7Fが本命・ベビー休憩室は3F',
+      },
+    ],
     hallFacilities: {
       heading: 'ベビー休憩室とベビーカー貸出は大船ルミネウィング',
       lead: '大船駅前の商業施設で、公式サイトにベビー休憩室とベビーカー貸出の記載を確認できたのは大船ルミネウィングです。',
@@ -717,6 +724,54 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       crossHallRules: [],
       source: 'グランエミオ所沢公式「サービス」（et-ge-tokorozawa.com/grandemio/services/）、西武所沢S.C.公式「サービスガイド」（sogo-seibu.jp/tokorozawa/service-guide）、エミテラス所沢公式「サービス」（et-ge-tokorozawa.com/emiterrace/services/）を、2026年10月7日に確認。',
     },
+  },
+  // =========================================================================
+  // 型E 駅×子連れランチ（2026-11-11 便）への導線。駅ごとに記事へ1本だけ。
+  // =========================================================================
+  'kawagoe': {
+    tldrExtraItems: [
+      {
+        href: '/article/kawagoe-kodzure-lunch',
+        label: '川越 子連れランチ完全ガイド',
+        value: '東口1分のアトレマルヒロ7Fが本命・キッズメニュー8店と5Fの授乳室',
+      },
+    ],
+  },
+  'odawara': {
+    tldrExtraItems: [
+      {
+        href: '/article/odawara-kodzure-lunch',
+        label: '小田原 子連れランチ完全ガイド',
+        value: '改札すぐのラスカ小田原2Fが本命・調乳機は5F、ミナカは授乳室3か所',
+      },
+    ],
+  },
+  'daimon': {
+    tldrExtraItems: [
+      {
+        href: '/article/daimon-kodzure-lunch',
+        label: '大門 子連れランチ完全ガイド',
+        value: 'アトレ竹芝のベビールーム2か所と、B1出口すぐのデニーズ',
+      },
+    ],
+  },
+  'kawasaki': {
+    tldrExtraItems: [
+      {
+        href: '/article/kawasaki-kodzure-lunch',
+        label: '川崎 子連れランチ完全ガイド',
+        value: '直結ラゾーナ4Fと、キッズパークと同じ階のアトレ7F',
+      },
+    ],
+  },
+  'osaka-umeda': {
+    tldrExtraItems: [
+      {
+        href: '/article/osaka-umeda-kodzure-lunch',
+        label: '梅田 子連れランチ完全ガイド',
+        value: '阪急うめだ本店12・13Fが本命・授乳室とミルクのお湯は11F',
+      },
+    ],
   },
 };
 
