@@ -159,6 +159,10 @@ export default function AboutPage() {
                   </td>
                 </tr>
                 <tr>
+                  <th>屋号</th>
+                  <td>快星舎</td>
+                </tr>
+                <tr>
                   <th>運営形態</th>
                   <td>個人運営（法人格なし・編集部や外注ライターはいません）</td>
                 </tr>
