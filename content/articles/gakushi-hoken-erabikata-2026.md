@@ -28,7 +28,7 @@ seoRelated: chiiku-subsc-3sha-2026-comparison
 legacyHero: /hero/commerce-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 > 本記事は一般的な情報提供であり、特定の金融商品の推奨ではありません。実際の加入判断はファイナンシャルプランナー・各保険会社・税理士等の専門家にご相談ください。
 

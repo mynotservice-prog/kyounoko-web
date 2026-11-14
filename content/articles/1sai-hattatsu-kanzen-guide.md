@@ -25,7 +25,7 @@ seoRelated: hitomishiri-atooi-itsumade
 legacyHero: /hero/baby-03.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜1歳児の発達の3軸
 

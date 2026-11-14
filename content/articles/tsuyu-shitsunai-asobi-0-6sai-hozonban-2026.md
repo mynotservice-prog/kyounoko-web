@@ -25,7 +25,7 @@ lede: >-
 seoRelated: ame-tsuzuki-2sai-ichinichi
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜梅雨を乗り切る5つの基本方針
 

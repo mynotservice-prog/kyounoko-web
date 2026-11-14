@@ -27,7 +27,7 @@ seoRelated: kodomo-kaze-hayaku-naosu-kanzen-guide
 legacyHero: /hero/baby-02.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論
 
