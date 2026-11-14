@@ -6,13 +6,12 @@ import { SITE_FACTS, SITE_FACTS_APPROX, CONTACT_EMAIL, INSTAGRAM_URL, INSTAGRAM_
 export const metadata: Metadata = {
   // layout の title.template が「%s｜きょうのこ」を付けるので、ここでは媒体名を重ねない
   title: 'タイアップ・広告掲載のご案内（媒体資料）',
-  description:
-    '子育て家庭向けおでかけメディア「きょうのこ」のタイアップ・広告掲載窓口。月間13万PV超（2026年9月）・読者の9割以上がスマホの子育て世帯。取材なしでも制作できるPR記事、トップページや関連記事のPR枠、商品モニターに対応します。PR表記・編集権の方針、お受けできないご依頼、進め方も明記しています。',
+  // PV は lib/site-facts.ts の正本から組み立てる（数字の直書きをしない）
+  description: `子育て家庭向けおでかけメディア「きょうのこ」のタイアップ・広告掲載窓口。月間${SITE_FACTS_APPROX.monthlyPv}PV超（${SITE_FACTS.monthlyPvLabel}）・読者の9割以上がスマホの子育て世帯。取材なしでも制作できるPR記事、トップページや関連記事のPR枠、商品モニターに対応します。PR表記・編集権の方針、お受けできないご依頼、進め方も明記しています。`,
   alternates: { canonical: '/business' },
   openGraph: {
     title: 'タイアップ・広告掲載のご案内（媒体資料）｜きょうのこ',
-    description:
-      '月間13万PV超（2026年9月）の子育ておでかけメディア。PR記事（取材なし／実訪問取材つき）・PR枠・商品モニターに対応。媒体データと進め方を公開しています。',
+    description: `月間${SITE_FACTS_APPROX.monthlyPv}PV超（${SITE_FACTS.monthlyPvLabel}）の子育ておでかけメディア。PR記事（取材なし／実訪問取材つき）・PR枠・商品モニターに対応。媒体データと進め方を公開しています。`,
     url: 'https://kyounoko.jp/business',
     type: 'website',
     images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
@@ -23,13 +22,17 @@ export const metadata: Metadata = {
    /business — タイアップ・広告掲載の窓口（媒体資料）
    位置づけ: 企業・施設のご担当者さまが「出稿していいか」を
    このページだけで判断できるようにする。
-   - 数字は lib/site-facts.ts（/about と共通の実測値）
+   - 数字は lib/site-facts.ts（/about と共通の実測値）。metadata の PV も同じ正本から組み立てる
+   - 料金は媒体資料にだけ載せる（2026-10-03 社長裁可 D-3）。ページには「媒体資料に記載」とだけ書く
    - 料金（金額）は一切出さない（社長指示 2026-09-28）。ページ・メタデータ・FAQ・構造化データのどこにも書かない
    - 施設PRの標準形は「取材なしのPR記事＋期間限定のPR枠」（2026-09-27 社長決定）。実訪問取材はオプション
    - Kids Base 等、契約前・許諾のない取引先名や事例は載せない
    - ステマ規制（景表法）対応として PR 表記と編集権の方針を先に明示する
    - 「お受けできないご依頼」を書くほど、まともな相談だけが残る
    =========================================================== */
+
+/** このページの文面の最終更新日（媒体データの更新日 SITE_FACTS.updatedAtLabel とは別に持つ） */
+const PAGE_UPDATED_LABEL = '2026年11月14日';
 
 const MAIL_SUBJECT = encodeURIComponent('【タイアップ・広告のご相談】会社名：');
 const MAIL_BODY = encodeURIComponent(
@@ -77,7 +80,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: '個人運営とのことですが、契約や請求書は発行できますか？',
-    a: '可能です。個人事業としての請求書発行、必要に応じた契約書・秘密保持契約の締結に対応します。所在地などの情報も、ご契約の際に開示します。',
+    a: '可能です。個人事業（屋号：快星舎）としての請求書発行、必要に応じた契約書・秘密保持契約の締結に対応します。所在地などの情報も、ご契約の際に開示します。',
   },
   {
     q: '掲載をやめてほしい場合は？',
@@ -256,7 +259,7 @@ export default function BusinessPage() {
                 <tr>
                   <th>運営</th>
                   <td>
-                    個人運営（<Link href="/about">運営者情報</Link>）
+                    快星舎（個人運営・<Link href="/about">運営者情報</Link>）
                   </td>
                 </tr>
               </tbody>
@@ -341,7 +344,7 @@ export default function BusinessPage() {
                     料金・対象年齢・予約・アクセス・よくある質問など、保護者が出かける前に知りたいことを早見表つきでまとめます。
                     運営者が子どもを連れて実際に訪問する<strong>実訪問取材つき</strong>もお選びいただけます（写真撮影を含みます）。
                   </td>
-                  <td>要お見積り</td>
+                  <td>媒体資料に記載</td>
                 </tr>
                 <tr>
                   <th>PR枠（期間限定の掲載）</th>
@@ -352,7 +355,7 @@ export default function BusinessPage() {
                       ランキングの順位の中には入れません。「PR」と提供元を必ず表示します。同じ場所に同時に出すPR枠は1枠までです。
                     </span>
                   </td>
-                  <td>要お見積り</td>
+                  <td>媒体資料に記載</td>
                 </tr>
                 <tr>
                   <th>商品モニター・レビュー記事</th>
@@ -360,7 +363,7 @@ export default function BusinessPage() {
                     ベビー用品・幼児食などを実際に使い、使用感を記事化します。
                     薬機法に配慮した表現で、効果を断定しない形で執筆します。
                   </td>
-                  <td>要お見積り</td>
+                  <td>媒体資料に記載</td>
                 </tr>
                 <tr>
                   <th>イベント・キャンペーンの記事化</th>
@@ -389,7 +392,8 @@ export default function BusinessPage() {
               </tbody>
             </table>
             <p>
-              個人運営のため定額の料金表は設けていません。ご予算に合わせて設計します。ご予算と達成したいことをお聞きしたうえで、
+              料金はメニューごとに定めて媒体資料に記載しています（このページには載せていません）。
+              お問い合わせいただいた方に媒体資料をお送りします。ご予算と達成したいことをお聞きしたうえで、
               できること・できないことを率直にお伝えし、内容を設計してお見積りします。
               ご予算が合わない場合はその場でお断りしますので、まずはお気軽にご相談ください。
             </p>
@@ -508,7 +512,7 @@ export default function BusinessPage() {
             </p>
 
             <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
-              最終更新：{SITE_FACTS.updatedAtLabel}
+              最終更新：{PAGE_UPDATED_LABEL}（媒体データの更新：{SITE_FACTS.updatedAtLabel}）
             </p>
           </article>
         </div>
