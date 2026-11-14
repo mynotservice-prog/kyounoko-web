@@ -120,7 +120,7 @@
     {"slug":"babysitter-toha","proposed":"remove","batch":"K2","until":"2026-11-10","n":{"exp-section":1,"first-person":2},"audit":"N"},
     {"slug":"bamiyan-kids-menu","proposed":"revise","batch":"保留","until":"2027-03-04","n":{"exp-section":1,"first-person":1},"audit":"C","hold":"凍結（KY-E2-1021(treated)・〜2026-10-21）"},
     {"slug":"bamiyan-kodzure-koryaku","proposed":"revise","batch":"保留","until":"2027-03-04","n":{"exp-section":6,"first-person":4},"audit":"C","hold":"凍結（KY-E2-1021(treated)・〜2026-10-21）"},
-    {"slug":"bamiyan-yoji-drinkbar","proposed":"revise","batch":"K2","until":"2026-11-10","n":{"exp-section":1},"audit":"C"},
+    {"slug":"bamiyan-yoji-drinkbar","proposed":"revise","batch":"K2","until":"2026-11-10","n":{"exp-section":1,"first-person":1},"audit":"C"},
     {"slug":"baskin-robbins-31-kodzure-koryaku","proposed":"remove","batch":"K2","until":"2026-11-10","n":{"exp-section":2,"first-person":4},"audit":"N"},
     {"slug":"bebycar-ok-cafe-15","proposed":"remove","batch":"K3/K4","until":"2027-01-07","n":{"exp-section":1},"audit":"N"},
     {"slug":"bedlight-3type-kodomo","proposed":"revise","batch":"K1","until":"2026-10-30","n":{"exp-section":1,"first-person":5},"audit":"N"},
