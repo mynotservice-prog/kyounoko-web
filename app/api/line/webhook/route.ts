@@ -11,7 +11,8 @@ import crypto from 'node:crypto';
  * 設計:
  *   - 一般ユーザーへの誤返信を避けるため、返信するのは ID_KEYWORDS のときだけ。
  *     それ以外のメッセージには何もしない（フォロワーが増えても無害）。
- *   - userId は console.log にも出すので、Vercel ランタイムログからも拾える（保険）。
+ *   - userId はログに出さない（2026-11-14〜。LINE_OWNER_USER_ID は本番に設定済み。
+ *     友だち全員の識別子をランタイムログに残さないため。プライバシーポリシー第11条と対応）。
  *   - 署名検証は LINE_CHANNEL_SECRET 設定時のみ実施。未設定でも 200 を返し、
  *     LINE の再送ループを避ける（返信には正規の replyToken が必要なので悪用余地は小さい）。
  *
@@ -64,7 +65,6 @@ export async function POST(req: Request) {
   const events = Array.isArray(body.events) ? body.events : [];
   for (const ev of events as Array<Record<string, any>>) {
     const userId: string | undefined = ev?.source?.userId;
-    if (userId) console.log('[line-webhook] userId=', userId);
 
     if (
       ev?.type === 'message' &&
