@@ -25,7 +25,7 @@ seoRelated: yonaki-taisaku-0-1sai
 legacyHero: /hero/parent-child-02.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜人見知り・後追いの時期と要点
 

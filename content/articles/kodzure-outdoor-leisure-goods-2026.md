@@ -26,7 +26,7 @@ seoRelated: jabujabuike-mizuasobi-tokyo-30
 legacyHero: /hero/park-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜まず揃えたい子連れレジャー3種の神器
 
