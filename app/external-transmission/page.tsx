@@ -59,7 +59,7 @@ const ENTRIES: TransmissionEntry[] = [
   {
     name: 'Google AdSense（広告配信）',
     company: 'Google LLC',
-    timing: '広告を配信するページを閲覧したとき（広告配信を行っている場合）',
+    timing: '当サイトの各ページを閲覧したとき',
     data: [
       '閲覧したページのURL',
       'ブラウザ・OS・端末の種類',
@@ -77,7 +77,7 @@ const ENTRIES: TransmissionEntry[] = [
   {
     name: 'Cloudflare Turnstile（スパム対策CAPTCHA）',
     company: 'Cloudflare, Inc.',
-    timing: '口コミ投稿フォーム等、Turnstileを設置したページを表示・送信したとき',
+    timing: 'スポット詳細ページで口コミ投稿フォームを開いたとき、および投稿を送信したとき',
     data: [
       'IPアドレス',
       'ブラウザ・OS・端末の環境情報',
@@ -87,11 +87,30 @@ const ENTRIES: TransmissionEntry[] = [
     purposeThirdParty: 'ボット判定サービスの提供・改善のため',
     links: [
       { label: 'Cloudflare プライバシーポリシー', href: 'https://www.cloudflare.com/ja-jp/privacypolicy/' },
+      { label: 'Turnstile プライバシー補足', href: 'https://www.cloudflare.com/turnstile-privacy-policy/' },
+    ],
+  },
+  {
+    name: 'Google マップ（地図の埋め込み）',
+    company: 'Google LLC',
+    timing: 'スポット（施設・店舗）の詳細ページで「地図・アクセス」の欄を表示したとき（欄に近づいた時点で読み込みます）',
+    data: [
+      '地図に表示する施設名・市区町村名',
+      '地図を表示したページのURL',
+      'ブラウザ・OS・端末の種類、言語設定',
+      'IPアドレス',
+      'Cookie等に保存される識別子',
+    ],
+    purposeSite: '施設・店舗の場所を地図でお示しするため',
+    purposeThirdParty: '地図サービスの提供・改善のため',
+    links: [
+      { label: 'Google プライバシーポリシー', href: 'https://policies.google.com/privacy?hl=ja' },
+      { label: 'Google のサービスを使用するサイトからの情報の使用', href: 'https://policies.google.com/technologies/partner-sites?hl=ja' },
     ],
   },
   {
     name: 'アフィリエイトプログラム（成果計測）',
-    company: 'バリューコマース株式会社、株式会社ファンコミュニケーションズ（A8.net）、株式会社もしも ほか',
+    company: '株式会社もしも（もしもアフィリエイト）、バリューコマース株式会社、株式会社ファンコミュニケーションズ（A8.net）',
     timing: '当サイト内のアフィリエイトリンク（「PR」表記のあるリンク）をクリックしたとき',
     data: [
       'クリックしたリンクの情報・クリック日時',
@@ -102,9 +121,9 @@ const ENTRIES: TransmissionEntry[] = [
     purposeSite: '紹介料（成果報酬）の計測によるサイト運営のため',
     purposeThirdParty: '成果の計測・不正防止のため',
     links: [
-      { label: 'バリューコマース 個人情報保護方針', href: 'https://www.valuecommerce.co.jp/privacy/' },
-      { label: 'A8.net プライバシーポリシー', href: 'https://www.fancs.com/privacypolicy' },
-      { label: 'もしも プライバシーポリシー', href: 'https://www.moshimo.co.jp/privacy' },
+      { label: 'もしも プライバシーポリシー', href: 'https://www.moshimo.co.jp/company/privacy' },
+      { label: 'バリューコマース 行動履歴情報保護方針', href: 'https://www.valuecommerce.co.jp/privacy/' },
+      { label: 'ファンコミュニケーションズ（A8.net） 個人情報の取り扱い', href: 'https://www.fancs.com/privacypolicy/' },
     ],
   },
 ];
@@ -129,7 +148,7 @@ export default function ExternalTransmissionPage() {
         <header className="page-head">
           <span className="eyebrow">External Transmission Policy</span>
           <h1>外部送信ポリシー</h1>
-          <p className="lead">きょうのこ（以下「当サイト」）では、サイトの利用状況の分析、広告配信、スパム対策等のために、外部事業者が提供するサービス（タグ・プログラム等）を利用しています。これらのサービスの利用に伴い、利用者の端末から外部事業者へ利用者に関する情報が送信されます。電気通信事業法第27条の12（いわゆる外部送信規律）に基づき、送信される情報の内容・送信先・利用目的を以下のとおり公表します。</p>
+          <p className="lead">きょうのこ（以下「当サイト」）では、サイトの利用状況の分析、広告配信、スパム対策、地図の表示等のために、外部事業者が提供するサービス（タグ・プログラム等）を利用しています。これらのサービスの利用に伴い、利用者の端末から外部事業者へ利用者に関する情報が送信されます。電気通信事業法第27条の12（いわゆる外部送信規律）に基づき、送信される情報の内容・送信先・利用目的を以下のとおり公表します。</p>
         </header>
         <article className="prose">
           <h2>外部送信の一覧</h2>
@@ -182,7 +201,8 @@ export default function ExternalTransmissionPage() {
           </ul>
 
           <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
-            <strong>制定日</strong>：2026年7月3日
+            <strong>制定日</strong>：2026年7月3日<br/>
+            <strong>最終改定日</strong>：2026年11月14日（Google マップの埋め込みを追加。Google AdSense の送信タイミング、Cloudflare Turnstile の送信タイミング、アフィリエイトプログラムの送信先事業者を実際の利用状況に合わせて更新）
           </p>
         </article>
       </div>

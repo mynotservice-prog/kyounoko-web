@@ -29,6 +29,10 @@ export const metadata: Metadata = {
      このページは「全体像 + 窓口の交通整理」に徹する
    =========================================================== */
 
+/** このページの文面の最終更新日（媒体データの更新日 SITE_FACTS.updatedAtLabel とは別に持つ） */
+const PAGE_UPDATED_LABEL = '2026年11月14日';
+const PAGE_UPDATED_ISO = '2026-11-14';
+
 const CARD: React.CSSProperties = {
   background: 'var(--paper-card)',
   border: '1px solid var(--line)',
@@ -92,7 +96,7 @@ export default function AboutPage() {
     inLanguage: 'ja',
     isPartOf: { '@id': 'https://kyounoko.jp/#website' },
     about: { '@id': 'https://kyounoko.jp/about#author' },
-    dateModified: SITE_FACTS.updatedAtIso,
+    dateModified: PAGE_UPDATED_ISO,
   };
 
   return (
@@ -258,7 +262,7 @@ export default function AboutPage() {
             {/* ============ 実績 ============ */}
             <h2 id="stats">数字で見るきょうのこ</h2>
             <p>
-              {SITE_FACTS.asOfLabel}時点の実績です。
+              {SITE_FACTS.updatedAtLabel}時点の数です。
             </p>
             <table className="table-wrap">
               <thead>
@@ -317,7 +321,7 @@ export default function AboutPage() {
               </li>
               <li>
                 <strong>子連れ向けレシピ・育児の困りごと</strong>：
-                幼児食・取り分け・常備菜など、家庭で実際に作って自分の子どもに出したものを中心に紹介します。
+                幼児食・取り分け・常備菜など、家庭で作りやすいものを中心に紹介します。
               </li>
               <li>
                 <strong>季節記事</strong>：
@@ -386,7 +390,7 @@ export default function AboutPage() {
                 <tr>
                   <th>アフィリエイト</th>
                   <td>
-                    Amazonアソシエイト・楽天アフィリエイト・A8.net・バリューコマース・もしもアフィリエイト等に参加しています。
+                    もしもアフィリエイト（楽天市場）・バリューコマース・A8.net 等に参加しています。
                     紹介リンクを含む記事には「PR」表記を付けます。
                     <strong>報酬額の高さで掲載順位を決めることはしません。</strong>
                   </td>
@@ -486,7 +490,7 @@ export default function AboutPage() {
             </ul>
 
             <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
-              最終更新：{SITE_FACTS.updatedAtLabel}
+              最終更新：{PAGE_UPDATED_LABEL}
             </p>
           </article>
         </div>

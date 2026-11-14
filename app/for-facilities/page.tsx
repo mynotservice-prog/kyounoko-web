@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { CONTACT_EMAIL } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
   title: '施設・店舗のご担当者さまへ｜公式写真ご提供のお願い',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/for-facilities' },
 };
 
-const MAIL = 'service@remegift.jp';
+const MAIL = CONTACT_EMAIL;
 const MAIL_SUBJECT = encodeURIComponent('【写真提供】施設名：');
 const MAIL_BODY = encodeURIComponent(
   [
@@ -60,7 +61,7 @@ export default function ForFacilitiesPage() {
             <h1>貴施設のページ、もう公開しています。公式のお写真で、もっと魅力的に。</h1>
             <p className="lead">
               子育て家庭向けおでかけメディア「きょうのこ」では、おすすめの施設・店舗さまを
-              <strong>無料でご紹介</strong>しています。今は一般的なお写真で掲載しておりますので、
+              <strong>無料でご紹介</strong>しています。公式のお写真をまだいただいていないページは、イメージ画像などで掲載しておりますので、
               公式のお写真をいただければ<strong>無料で差し替え</strong>、より魅力が伝わるページにいたします。
             </p>
           </header>
@@ -86,7 +87,7 @@ export default function ForFacilitiesPage() {
                 <strong>利用範囲</strong>：きょうのこの貴施設掲載ページ、および当メディアのSNSでのご紹介に限定します
               </li>
               <li>
-                <strong>クレジット</strong>：ご希望に応じて「©施設名」を明記します
+                <strong>クレジット</strong>：お写真には「写真提供：施設名」と明記します（表記にご希望があればお知らせください）
               </li>
               <li>
                 <strong>確認フロー</strong>：公開前に確認用URLを共有します。修正・取り下げは無料で承ります
@@ -146,14 +147,16 @@ export default function ForFacilitiesPage() {
             <h3>どんなメディアですか？</h3>
             <p>
               0〜6歳のお子さまを育てるご家庭向けに「今日どこへ行こう？何をしよう？」の意思決定を助ける
-              おでかけ・育児メディアです。運営方針は
-              <Link href="/editorial-policy">編集ポリシー</Link>、運営者情報は
+              おでかけ・育児メディアです。運営者ながみー（屋号：快星舎）が個人で運営しており、
+              お問い合わせには運営者本人が対応します。運営方針は
+              <Link href="/editorial-policy">編集方針</Link>、運営者情報は
               <Link href="/about">運営者情報</Link>をご覧ください。
             </p>
 
-            <h3>取材つきのタイアップ記事もお願いできますか？</h3>
+            <h3>タイアップ記事（PR記事）もお願いできますか？</h3>
             <p>
-              はい。運営者が実際にお子さま連れで訪問し、写真つきで記事化するタイアップも承っています。
+              はい。公式情報・ご提供いただいたお写真・メールでのご質問へのご回答をもとに、取材なしで制作するのが標準です。
+              運営者が子どもを連れて実際に訪問する取材つきもお選びいただけます。
               媒体データ・ご対応できるメニュー・PR表記の方針は
               <Link href="/business">タイアップ・広告掲載のご案内</Link> に公開しています。
               なお、このページでご案内している<strong>写真のご提供・情報更新は引き続き無料</strong>です。
