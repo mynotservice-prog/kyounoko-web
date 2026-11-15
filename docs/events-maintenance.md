@@ -1,6 +1,6 @@
 # イベント メンテナンス・レビュー
 
-> 基準日: 2026-11-02 ／ 全295件（開催予定154 / 終了141）
+> 基準日: 2026-11-09 ／ 全299件（開催予定139 / 終了160）
 
 ## 0. 存命カーブ（在庫が尽きる日）
 
@@ -9,17 +9,17 @@
 
 | 基準日 | 開催中 | 東京 | うち11月以降まで持つもの |
 |---|---|---|---|
-| 2026-11-02（今日） | **94件** | 19件 | 94件 |
-| 2026-11-16（+14日） | **88件** | 18件 | 88件 |
-| 2026-12-02（+30日） | **82件** | 18件 | 82件 |
-| 2026-12-17（+45日） | **76件** | 18件 | 76件 |
-| 2027-01-01（+60日） | **53件** | 5件 | 53件 |
-| 2027-01-31（+90日） | **38件** | 5件 | 38件 |
-| 2027-03-02（+120日） | **18件** | 3件 | 18件 |
+| 2026-11-09（今日） | **93件** | 22件 | 93件 |
+| 2026-11-23（+14日） | **108件** | 27件 | 108件 |
+| 2026-12-09（+30日） | **91件** | 29件 | 91件 |
+| 2026-12-24（+45日） | **87件** | 27件 | 87件 |
+| 2027-01-08（+60日） | **60件** | 13件 | 60件 |
+| 2027-02-07（+90日） | **42件** | 12件 | 42件 |
+| 2027-03-09（+120日） | **16件** | 2件 | 16件 |
 
-→ **2027-03-02（+120日）に開催中が20件を切る。それまでに補填が必要。**
+→ **2027-03-09（+120日）に開催中が20件を切る。それまでに補填が必要。**
 
-## 1. 終了した年次イベント — 翌年へ繰り上げ候補（140件）
+## 1. 終了した年次イベント — 翌年へ繰り上げ候補（159件）
 
 > 下記の新日付は「同月同日+1年」の機械計算。**必ず公式サイトで翌年の実際の日程を確認**してから反映してください。
 
@@ -106,22 +106,30 @@
 | `nagasaki-kunchi-2026` | 長崎くんち 2026 | 2026-10-07〜2026-10-09 | 2027-10-07〜2027-10-09 | https://www.osuwasan.jp/kunchi/ |
 | `tokyo-disney-halloween-2026` | ディズニー・ハロウィーン 2026（東京ディズニーランド／東京ディズニーシー） | 2026-09-16〜2026-10-31 | 2027-09-16〜2027-10-31 | https://www.tokyodisneyresort.jp/treasure/halloween2026/tdl/ |
 | `showa-kinen-cosmos-2026` | 国営昭和記念公園 コスモスまつり2026 | 2026-09-12〜2026-10-25 | 2027-09-12〜2027-10-25 | https://www.showakinen-koen.jp/event/56303/ |
+| `wb-studio-tour-dark-arts-2026` | ワーナー ブラザース スタジオツアー東京 闇の魔術のハロウィーン | 2026-09-10〜2026-11-08 | 2027-09-10〜2027-11-08 | https://www.wbstudiotour.jp/dark-arts/ |
+| `aquapark-shinagawa-momiji-2026` | マクセル アクアパーク品川 MOMIJI AQUARIUM by NAKED | 2026-09-12〜2026-11-08 | 2027-09-12〜2027-11-08 | https://www.aqua-park.jp/aqua/momijiaquarium2026/ |
 | `tama-zoo-naku-mushi-2026` | 多摩動物公園 秋の鳴く虫展 | 2026-09-10〜2026-09-23 | 2027-09-10〜2027-09-23 | https://www.tokyo-zoo.net/tama/news/12747/index.html |
 | `yokohama-anpanman-halloween-2026` | 横浜アンパンマンこどもミュージアム ハロウィーンシールラリー | 2026-09-14〜2026-10-31 | 2027-09-14〜2027-10-31 | https://www.yokohama-anpanman.jp/news/article/92wo6bhzkvmxwvxp.html |
 | `zoorasia-fes-2026` | よこはま動物園ズーラシア ズーラシアフェス！〜アジアの動物たち〜 | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://www.hama-midorinokyokai.or.jp/zoo/zoorasia/details/2026/post-558906.php |
 | `nogeyama-kanazawa-halloween-2026` | 野毛山動物園・金沢動物園 ハロウィン装飾 | 2026-09-29〜2026-11-01 | 2027-09-29〜2027-11-01 | https://www.hama-midorinokyokai.or.jp/zoo/nogeyama/ |
 | `funabashi-andersen-cosmos-2026` | ふなばしアンデルセン公園 コスモスまつり | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://www.park-funabashi.or.jp/and/aevents/event_cosmosmaturi.html |
 | `narita-yumebokujo-dream-dungeon-2026` | 成田ゆめ牧場 ドリームダンジョン〜ハロウィンともぐらとゆめこ〜 | 2026-10-10〜2026-11-01 | 2027-10-10〜2027-11-01 | https://www.yumebokujo.com/?p=59951 |
+| `chiba-zoo-festa-2026` | 千葉市動物公園 ちばZOOフェスタ・2026 | 2026-11-07〜2026-11-08 | 2027-11-07〜2027-11-08 | https://www.city.chiba.jp/zoo/event/2026chiazoofesta.html |
 | `hitachi-kochia-lightup-2026` | 国営ひたち海浜公園 コキアライトアップ2026 | 2026-09-18〜2026-09-27 | 2027-09-18〜2027-09-27 | https://www.hitachikaihin.jp/event/kochialightup/kochialightup2026.html |
+| `hitachi-umihana-sotoasobi-2026` | 国営ひたち海浜公園 海・花 そとあそび 2026 | 2026-11-07〜2026-11-08 | 2027-11-07〜2027-11-08 | https://www.hitachikaihin.jp/event/recommend-event/kaihanasotoasobi-2026.html |
 | `aquaworld-oarai-halloween-2026` | アクアワールド茨城県大洗水族館 ハロウィンアクアワールド2026 | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://www.aquaworld-oarai.com/2026/08/31/halloweenaqua2026/ |
 | `saitama-kodomo-zoo-nightzoo-2026` | 埼玉県こども動物自然公園 ナイトズー2026 | 2026-09-12〜2026-09-27 | 2027-09-12〜2027-09-27 | https://www.parks.or.jp/sczoo/event/009/009070.html |
+| `musashinomura-halloween-2026` | むさしの村deハロウィン | 2026-10-01〜2026-11-03 | 2027-10-01〜2027-11-03 | https://www.musashinomura.co.jp/news/2026autumnevent/ |
 | `tonami-yumenotaira-cosmos-2026` | となみ夢の平コスモスウォッチング | 2026-10-09〜2026-10-18 | 2027-10-09〜2027-10-18 | https://www.city.tonami.lg.jp/kanko/event/564p/ |
 | `suzaka-zoo-aki-matsuri-2026` | 須坂市動物園 秋の動物園まつり | 2026-10-31〜2026-11-01 | 2027-10-31〜2027-11-01 | https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html |
 | `port-island-science-festival-2026` | 第8回ポートアイランドサイエンスフェスティバル | 2026-10-31〜2026-11-01 | 2027-10-31〜2027-11-01 | https://www.kobe-kagakukan.jp/topics/archives/522 |
 | `shikoku-aquarium-tasokare-2026` | 四国水族館 秋の延長営業「誰そ彼時（たそかれどき）」 | 2026-08-31〜2026-09-30 | 2027-08-31〜2027-09-30 | https://shikoku-aquarium.jp/news/archive/1519/ |
 | `hiroshima-castle-otsukimi-night-2026` | お月見ナイト in 広島城 | 2026-09-25〜2026-09-26 | 2027-09-25〜2027-09-26 | https://hiroshimacastle.jp/2910 |
 | `matsue-suitouro-2026` | 松江水燈路2026 | 2026-09-26〜2026-10-18 | 2027-09-26〜2027-10-18 | https://www.suitouro.jp/ |
+| `tosa-hojosai-kochi-2026` | 土佐の豊穣祭2026 高知市会場 | 2026-11-07〜2026-11-08 | 2027-11-07〜2027-11-08 | https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/event.html?id=169 |
+| `saga-balloon-fiesta-2026` | 2026佐賀インターナショナルバルーンフェスタ | 2026-10-30〜2026-11-03 | 2027-10-30〜2027-11-03 | https://www.sibf.jp/2026/outline/ |
 | `fujisaki-hachimangu-reitaisai-2026` | 藤崎八旛宮秋季例大祭 | 2026-09-13〜2026-09-21 | 2027-09-13〜2027-09-21 | https://fujisakigu.or.jp/reitaisai/info/ |
+| `kagoshima-ohara-matsuri-2026` | おはら祭 | 2026-11-02〜2026-11-03 | 2027-11-02〜2027-11-03 | https://www.kagoshima-yokanavi.jp/event/10001 |
 | `naha-otsunahiki-2026` | 第56回那覇大綱挽まつり | 2026-10-10〜2026-10-12 | 2027-10-10〜2027-10-12 | https://www.naha-navi.or.jp/magazine/2026/07/49306/ |
 | `musashi-kyuryo-halloween-night-2026` | 国営武蔵丘陵森林公園 森のハロウィンナイト（光と森のStory 第1章） | 2026-10-11〜2026-10-31 | 2027-10-11〜2027-10-31 | https://www.shinrinkoen.jp/?p=we-page-event-entry&event=591768&cat=26085&type=event |
 | `suma-seaworld-night-aqualive-2026` | 神戸須磨シーワールド ナイトアクアライブ＆ドルフィンナイトパフォーマンス | 2026-09-20〜2026-09-23 | 2027-09-20〜2027-09-23 | https://www.kobesuma-seaworld.jp/guide/event/10225/ |
@@ -135,11 +143,16 @@
 | `aquamarine-sanma-school-festival-2026` | アクアマリンふくしま サンマの学校 学園祭 | 2026-09-21〜2026-10-18 | 2027-09-21〜2027-10-18 | https://www.aquamarine.or.jp/events/sanma-schoolfestival/ |
 | `fujiq-thomasland-halloween-2026` | 富士急ハイランド トーマスランド HALLOWEEN PARTY！ | 2026-09-12〜2026-11-01 | 2027-09-12〜2027-11-01 | https://www.fujiq.jp/event/thomasland_halloween2026.html |
 | `fuefukigawa-budou-fes-2026` | ぶどうフェス in 笛吹川フルーツ公園 | 2026-09-19〜2026-09-23 | 2027-09-19〜2027-09-23 | https://fuefukigawafp.co.jp/event/%e3%81%b6%e3%81%a9%e3%81%86%e3%83%95%e3%82%a7%e3%82%b9in%e7%ac%9b%e5%90%b9%e5%b7%9d%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%922026/ |
+| `oasispark-autumn-festival-2026` | 河川環境楽園 オアシスパーク 秋の楽園祭 | 2026-09-19〜2026-11-03 | 2027-09-19〜2027-11-03 | https://www.oasispark.co.jp/event/2026/09/12351/ |
+| `legoland-halloween-party-2026` | レゴランドでハロウィンパーティー | 2026-10-02〜2026-11-03 | 2027-10-02〜2027-11-03 | https://www.legoland.jp/operation/seasonal-events/halloween/2026/ |
 | `tokushima-zoo-night-autumn-2026` | とくしま動物園 夜の動物園2026（秋開催） | 2026-10-04〜2026-10-18 | 2027-10-04〜2027-10-18 | https://tokushimazoo.jp/info/item.cgi?Id=55 |
 | `miyazaki-science-festival-2026` | 青少年のための科学の祭典2026 宮崎大会 | 2026-09-19〜2026-09-20 | 2027-09-19〜2027-09-20 | https://cosmoland.miyabunkyo.com/event-info/science_festival2026 |
 | `sunshine-city-halloween-2026` | サンシャインシティ FUN! FUN! HALLOWEEN 2026 | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://sunshinecity.jp/file/official/halloween/ |
+| `hitachi-kaihin-kochia-carnival-2026` | 国営ひたち海浜公園 きて みて さわって コキアカーニバル | 2026-09-18〜2026-11-03 | 2027-09-18〜2027-11-03 | https://www.hitachikaihin.jp/event/kochiacarnival2026/kochia.html |
+| `nara-shika-tsunokiri-2026` | 古式「鹿の角きり」 | 2026-11-07〜2026-11-08 | 2027-11-07〜2027-11-08 | https://naradeer.com/event/tsunokiri.html |
 | `suma-seaworld-halloween-2026` | 神戸須磨シーワールド 水族館で楽しむハロウィン | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://www.kobesuma-seaworld.jp/news/10273/ |
 | `tobu-zoo-autumn-night-zoo-2026` | 東武動物公園 オータムナイトZOO 2026 | 2026-10-10〜2026-10-12 | 2027-10-10〜2027-10-12 | https://www.tobuzoo.com/event/13713.html |
+| `uminaka-animal-nakayoshi-2026` | 海の中道海浜公園 動物なかよし広場 | 2026-10-03〜2026-11-08 | 2027-10-03〜2027-11-08 | https://uminaka-park.jp/event/animal/post_401.html |
 | `uminaka-takoage-festival-2026` | 海の中道海浜公園 うみなか凧揚げフェスティバル | 2026-10-10〜2026-10-11 | 2027-10-10〜2027-10-11 | https://uminaka-park.jp/event/sports/post_522.html |
 | `hibikinada-toy-railway-2026` | 響灘グリーンパーク おもちゃと模型の鉄道まつり | 2026-10-03〜2026-10-04 | 2027-10-03〜2027-10-04 | https://hibikinadagp.org/events/event/tetudou/ |
 | `kamogawa-seaworld-night-adventure-2026` | 鴨川シーワールド 秋のナイトアドベンチャー | 2026-10-03〜2026-10-25 | 2027-10-03〜2027-10-25 | https://www.kamogawa-seaworld.jp/event/event_info/16014/ |
@@ -147,10 +160,13 @@
 | `hamura-zoo-night-tour-2026` | 羽村市動物公園 夜の動物園をまわろう！ナイトツアー | 2026-10-10〜2026-10-31 | 2027-10-10〜2027-10-31 | https://hamurazoo.jp/event/detail.html?CN=432973 |
 | `saitama-kodomo-zoo-australia-fair-2026` | 埼玉県こども動物自然公園 オーストラリアフェア2026 | 2026-10-24〜2026-10-25 | 2027-10-24〜2027-10-25 | https://www.parks.or.jp/sczoo/event/009/009315.html |
 | `kasai-aquarium-kaien-kinenbi-2026` | 葛西臨海水族園 開園記念日イベント「All About MAGURO」 | 2026-10-10〜2026-10-12 | 2027-10-10〜2027-10-12 | https://www.tokyo-zoo.net/kasai/news/12632/index.html |
+| `inokashira-zoo-aki-no-yonaga-2026` | 井の頭自然文化園 ちょっとおでかけ 秋の夜長の自然文化園 | 2026-11-07〜2026-11-08 | 2027-11-07〜2027-11-08 | https://www.tokyo-zoo.net/inokashira/news/12657/index.html |
 | `inokashira-zoo-shima-no-ikimono-haku-2026` | 井の頭自然文化園 島のいきもの博―ツシマヤマネコがつなぐ島とわたしたち | 2026-10-17〜2026-10-18 | 2027-10-17〜2027-10-18 | https://www.tokyo-zoo.net/inokashira/news/12951/index.html |
 | `edogawa-shizen-zoo-aigo-shukan-2026` | 江戸川区自然動物園 動物愛護週間イベント | 2026-09-26〜2026-09-26 | 2027-09-26〜2027-09-26 | https://www.edogawa-kankyozaidan.jp/zoo/event/242/ |
 | `kumamoto-castle-oshiro-matsuri-2026` | 秋のくまもとお城まつり ～いざ、前へ～（城あかり） | 2026-10-02〜2026-11-01 | 2027-10-02〜2027-11-01 | https://castle.kumamoto-guide.jp/news/detail/1475 |
+| `greenland-halloween-2026` | グリーンランド グリーンランドハロウィン | 2026-10-01〜2026-11-03 | 2027-10-01〜2027-11-03 | https://www.greenland.co.jp/park/halloween2026/ |
 | `motherfarm-halloween-2026` | マザー牧場 ハロウィーン フォトラリー | 2026-10-03〜2026-10-31 | 2027-10-03〜2027-10-31 | https://www.motherfarm.co.jp/information/news/detail.php?CN=434779 |
+| `echigo-park-autumn-rose-halloween-2026` | 国営越後丘陵公園 秋バラとハロウィン・ハーベスト | 2026-10-03〜2026-11-03 | 2027-10-03〜2027-11-03 | https://echigo-park.jp/events/schedule/rose_fes_autumn/ |
 | `nagaoka-hanabi-halloween-fantasy-2026` | 長岡花火ハロウィンファンタジー | 2026-10-24〜2026-10-24 | 2027-10-24〜2027-10-24 | https://echigo-park.jp/イベント/19974/ |
 | `echigo-park-doboku-festival-2026` | 国営越後丘陵公園 土木フェスティバル | 2026-10-04〜2026-10-04 | 2027-10-04〜2027-10-04 | https://echigo-park.jp/イベント/7535/ |
 | `sci-pia-starry-halloween-2026` | 人と科学の未来館サイピア プラネタリウム「スターリーハロウィン」 | 2026-10-11〜2026-10-31 | 2027-10-11〜2027-10-31 | https://www.sci-pia.pref.okayama.jp/planetarium/detail.aspx?servno=19373 |
@@ -164,7 +180,10 @@
 | `ishikawa-zoo-night-zoo-october-2026` | いしかわ動物園 ナイトZOO 2026（10月開催） | 2026-10-10〜2026-10-11 | 2027-10-10〜2027-10-11 | https://www.ishikawazoo.jp/box/ichiran/nightzoo2/index.html |
 | `reoma-happy-halloween-2026` | NEWレオマワールド レオマでハッピーハロウィン2026 | 2026-10-01〜2026-11-01 | 2027-10-01〜2027-11-01 | https://www.newreomaworld.com/event/2026-4/ |
 | `oga-aquarium-gao-night-halloween-2026` | 男鹿水族館GAO 夜の水族館（ハロウィン） | 2026-10-24〜2026-10-31 | 2027-10-24〜2027-10-31 | https://www.gao-aqua.jp/event/52490.html |
+| `seibuen-awaodori-2026` | 阿波おどり in 西武園ゆうえんち 〜2026秋〜 | 2026-11-08〜2026-11-08 | 2027-11-08〜2027-11-08 | https://www.seibuen-amusement-park.jp/news/awaodori20261108/index.html |
+| `sahimel-susuki-meiro-2026` | ススキの迷路2026（三瓶山 北の原） | 2026-10-10〜2026-11-03 | 2027-10-10〜2027-11-03 | https://www.nature-sanbe.jp/sahimel/event/7330 |
 | `kaikyokan-halloween-2026` | 海響館 de ハロウィン 2026 | 2026-10-01〜2026-10-31 | 2027-10-01〜2027-10-31 | https://www.kaikyokan.com/cms/cp_event/https-www-kaikyokan-com-cms-cp_event-halloween2026/ |
+| `hirosaki-castle-kiku-momiji-2026` | 弘前城菊と紅葉まつり2026 | 2026-10-30〜2026-11-08 | 2027-10-30〜2027-11-08 | https://www.hirosaki-kanko.or.jp/edit.html?id=cat02_autumn_momiji |
 
 ## 2. 終了した単発イベント — 削除候補（0件）
 
@@ -178,13 +197,15 @@
 | 2026-04 | 2 |
 | 2026-05 | 1 |
 | 2026-06 | 3 |
-| 2026-07 | 9 |
+| 2026-07 | 8 |
 | 2026-08 | 1 |
-| 2026-09 | 20 |
-| 2026-10 | 49 |
-| 2026-11 | 57 |
-| 2026-12 | 10 |
+| 2026-09 | 11 |
+| 2026-10 | 42 |
+| 2026-11 | 56 |
+| 2026-12 | 11 |
 | 2027-06 | 1 |
+| 2027-10 | 1 |
+| 2027-11 | 1 |
 
 ## 4. 開催予定イベントが無い都道府県（今週の調査ターゲット・0件）
 
@@ -196,9 +217,9 @@
 
 | 期待されるカテゴリ | 想定月 | 今後開催の在庫 |
 |---|---|---|
-| 紅葉ライトアップ・冬イルミの立ち上がり（`illumination`） | 10・11月 | 39件 |
-| 冬イルミネーション（`illumination`） | 11・12・1月 | 39件 |
-| クリスマスマーケット（`market`） | 11・12月 | 8件 |
+| 紅葉ライトアップ・冬イルミの立ち上がり（`illumination`） | 10・11月 | 47件 |
+| 冬イルミネーション（`illumination`） | 11・12・1月 | 47件 |
+| クリスマスマーケット（`market`） | 11・12月 | 7件 |
 
 → 穴なし。
 
@@ -207,23 +228,26 @@
 > 秋冬イベントは公式発表そのものが9〜11月まで出ない。探しても無いものは無いので、
 > **発表される月に取りに行く**。公式に載っていない日付は絶対に書かない（去年+1年の推測を入れない）。
 
-### 今すぐ公式を見に行くもの（5件）
+### 今すぐ公式を見に行くもの（6件）
 
 | 会場 | イベント | 例年の会期 | 前回確認（状態） | 公式 |
 |---|---|---|---|---|
-| 横浜・八景島シーパラダイス | 秋・ハロウィン企画／冬のイルミネーション | ハロウィンは10月、イルミは11月中旬〜翌3月 | 2026-11-02: 2026-11-02確認: 冬イルミ・クリスマスは未発表。お知らせAPI infoList.jsp?site=ha の最新は2026年10月27日「こども半額ワンデーパスパック」で、全件・トップに「クリスマス」「イルミ」「冬」なし。LIGHTIAページはコメント除去後0件。12月の星空観測クルージング（2026年12月13日）を seaparadise-hoshizora-cruise-dec-2026 として投入。 | https://www.seaparadise.co.jp/ |
-| カワスイ 川崎水族館 | 冬・クリスマスの季節企画 | 冬企画は12月開催（発表は11月下旬〜12月中旬） | 2026-11-02: 2026-11-02確認: 冬・クリスマスは未発表。MOFFのPR TIMES RSS 最新は2026-10-19（MOFF Halloween2026）、カワスイ名の最新は2026-10-16（ビオトープ再生）で、今冬のクリスマス企画の配信なし（RSS内の「クリスマス」は2025年分のみ）。ハリモグラ フェスは10/31で終了したので events.ts から削除。冬企画の発表は11月下旬〜12月中旬。 | https://prtimes.jp/companyrdf.php?company_id=102762 |
-| サンシャイン水族館 | ハロウィン企画 | 9月下旬〜10月末 | 2026-11-02: 2026-11-02確認: クリスマス・冬は未発表。aquarium/js/event.js 4件と全館 js/event.js 37件の全項目に「クリスマス」「イルミ」なし。開催中はタチウオの日（〜11/15）とざんねんないきもの展３（〜11/23）。 | https://sunshinecity.jp/aquarium/event_performance/event/ |
-| 西武園ゆうえんち | ノスタルジック・クリスマス | 11月中旬〜12月下旬 | 2026-11-02: 2026-11-02確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.10.31「【ご案内】休止情報」、その前は10.16（ウルトラマンウィーク/ゴジラウィーク）。推測URL /event/nostalgic-christmas2026/ は404のまま。初報の実績は10/24（前々年）・11/11（前年）＝来週も本命。 | https://www.seibuen-amusement-park.jp/news/ |
-| 足立区生物園 | ハロウィン・クリスマスの企画 | 不定（10月・12月） | 2026-11-02: 2026-11-02確認: クリスマスの来園者向け告知はなし。press.bindcloud.jp の一次データで、お知らせ（3U4nEb-MqAqO）40件・当日申込（U2TUCFli7Mic）16件とも「クリスマス」「ハロウィン」0件。お知らせ最新は2026/10/24（落ち葉ベッドづくり中止）。手法: BiND製でHTMLは本文ゼロ、https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。 | https://seibutuen.jp/cn1/index.html |
+| カワスイ 川崎水族館 | 冬・クリスマスの季節企画 | 冬企画は12月開催（発表は11月下旬〜12月中旬） | 2026-11-09: 2026-11-09確認: 冬・クリスマスは未発表。PR TIMES RSS（company_id=102762）の最新は2026-11-05（Cat Cafe MOFF イオンモール伊達店）、カワスイ名の最新は2026-10-16（ビオトープ再生）のまま。kawa-sui.com トップにも「クリスマス」「冬」の告知なし。冬企画の発表は11月下旬〜12月中旬。 | https://prtimes.jp/companyrdf.php?company_id=102762 |
+| サンシャイン水族館 | ハロウィン企画 | 9月下旬〜10月末 | 2026-11-09: 2026-11-09確認: クリスマス・冬は未発表。aquarium/js/event.js は3件（タチウオの日〜11/15・ざんねんないきもの展３〜11/23・エサカプセル販売）で「クリスマス」「イルミ」なし。全館 js/event.js 39件で該当は展望台のクリスマスキャンドルワークショップ（11/7〜12/31）のみ。 | https://sunshinecity.jp/aquarium/event_performance/event/ |
+| 西武園ゆうえんち | ノスタルジック・クリスマス | 11月中旬〜12月下旬 | 2026-11-09: 2026-11-09確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.11.06「超お得！夜のイマ－シブショー」、その前は11.05・11.03（いずれもチケット関連の重要なお知らせ）。推測URL /event/nostalgic-christmas2026/ は404のまま。前年の初報は11/11＝来週も本命。 | https://www.seibuen-amusement-park.jp/news/ |
+| 足立区生物園 | ハロウィン・クリスマスの企画 | 不定（10月・12月） | 2026-11-09: 2026-11-09確認: クリスマス企画の告知はなし（お知らせ 40件・当日申込 16件・定期 4件とも「クリスマス」0件）。当日申込（U2TUCFli7Mic）に「夜間特別開園」「冬のホタル観賞会」（2026年11月28日〜12月20日の土日、2026/11/01更新）があり、adachi-seibutsuen-yakan-hotaru-2026 として投入。手法: https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。 | https://seibutuen.jp/cn1/index.html |
+| 国営昭和記念公園 | ウインタービスタイルミネーション（冬のイルミネーション） | 冬（会期は公式発表待ち） | 2026-11-09: 2026-11-09確認: 公式イベント一覧・トップに冬のイルミネーションの掲載なし（「イルミ」0件。クリスマス関連はクラフト教室のリース作りのみ）。秋の夜散歩は11/29まで。 | https://www.showakinen-koen.jp/event/ |
+| カレッタ汐留 | 冬のイルミネーション | 冬（会期は公式発表待ち） | 2026-11-09: 2026-11-09確認: 公式サイトがメンテナンス中で503（「メンテナンス期間 2026年10月22日（木）8:00 ～ 未定」「セキュリティ対策を優先し、Webサービスを停止」）。会期を公式で確認できないため未投入。 | https://www.caretta.jp/ |
 
-### 来月以降（1件）
+### 来月以降（3件）
 
 | 会場 | イベント | チェック開始月 | 例年の会期 |
 |---|---|---|---|
 | よこはまコスモワールド | 冬・クリスマスの企画 | 12月 | 12月（クリスマス前後） |
+| 都立動物園（上野動物園・多摩動物公園ほか） | お正月の催し（正月開園日のイベント） | 12月 | 1月初め（会期は公式発表待ち） |
+| 湯島天満宮（湯島天神） | 梅まつり | 1月 | 2〜3月（会期は公式発表待ち） |
 
-### 投入済み（30件）
+### 投入済み（31件）
 
 - 遊園地よみうりランド「ジュエルミネーション」→ `yomiuriland-jewellumination-2026`
 - 遊園地よみうりランド「よみラン ハロウィン（Jump in Party）」→ `yomiuriland-halloween-2026`
@@ -245,6 +269,7 @@
 - 四国水族館「秋の延長営業「誰そ彼時」・秋の企画展」→ `shikoku-aquarium-tasokare-2026`
 - 神戸須磨シーワールド「秋・冬の季節イベント」→ `kobesuma-sumasea-christmas-2026`
 - 東武動物公園「ハロウィンナイトZOO・ウインターイルミネーション」→ `tobu-zoo-winter-illumination-2026`
+- 横浜・八景島シーパラダイス「秋・ハロウィン企画／冬のイルミネーション」→ `seaparadise-christmas-2026`
 - 国営武蔵丘陵森林公園「紅葉見ナイト（光と森のStory）」→ `musashi-kyuryo-momijimi-night-2026`
 - 丸の内（三菱地所・丸の内イルミネーション実行委員会）「丸の内イルミネーション」→ `marunouchi-illumination-2026`
 - 東京ミッドタウン「MIDTOWN CHRISTMAS（イルミネーション）」→ `midtown-christmas-2026`

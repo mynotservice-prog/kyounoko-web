@@ -332,7 +332,7 @@ export const SPOT_VERIFICATION: Record<string, SpotVerification> = {
   "天童市子育て未来館 げんキッズ": { verifiedAt: '2026-06-18', method: 'official' },
   "東山動植物園": { verifiedAt: '2026-06-18', method: 'official' },
   "八戸公園（こどもの国）": { verifiedAt: '2026-06-18', method: 'official' },
-  "八食センター": { verifiedAt: '2026-06-18', method: 'official' },
+  "八食センター": { verifiedAt: '2026-11-09', method: 'official' },
   "八木山ベニーランド": { verifiedAt: '2026-06-18', method: 'official' },
   "八木山動物公園 フジサキの杜": { verifiedAt: '2026-06-18', method: 'official' },
   "八木山動物公園フジサキの杜": { verifiedAt: '2026-06-18', method: 'official' },
