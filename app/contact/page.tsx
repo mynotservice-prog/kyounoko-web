@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { CONTACT_EMAIL } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
   title: 'お問い合わせ',
@@ -35,9 +36,12 @@ export default function ContactPage() {
 
         <article className="prose" id="main">
           <h2>お問い合わせ方法</h2>
-          <p>現在はメールでのお問い合わせを承っています。</p>
+          <p>
+            お問い合わせはメールで承っています（お問い合わせフォームはありません）。
+            きょうのこは運営者ながみー（屋号：快星舎）が個人で運営しており、いただいたメールは運営者本人が読んで返信します。
+          </p>
           <ul>
-            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
+            <li>メール：<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
           </ul>
           <p style={{ fontSize: 13, color: 'var(--ink-sub)' }}>
             運営者の連絡先は、同一運営者が運営する他サイトと共通のメールアドレスを使用しています。
@@ -47,7 +51,7 @@ export default function ContactPage() {
           <h2>よくあるお問い合わせ</h2>
 
           <h3>記事の情報が古い / 間違いがある</h3>
-          <p>該当記事のURLとご指摘内容を添えて、メールでお知らせください。2営業日以内に確認の上、修正いたします。</p>
+          <p>該当記事のURLとご指摘内容を添えて、メールでお知らせください。2〜3営業日以内に確認の上、修正いたします。</p>
 
           <h3>施設・店舗の掲載を希望 / 掲載中の情報を更新したい</h3>
           <p>
@@ -59,7 +63,7 @@ export default function ContactPage() {
           <p>該当ページのURLとご依頼内容を添えてメールでご連絡ください。速やかに取り下げ・修正に対応します。</p>
 
           <h3>取材・メディアからのお問い合わせ</h3>
-          <p>メディア・雑誌等の取材は、日程と概要をご明記の上、<a href="mailto:service@remegift.jp">service@remegift.jp</a> までご連絡ください。</p>
+          <p>メディア・雑誌等の取材は、日程と概要をご明記の上、<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> までご連絡ください。</p>
 
           <h3>広告掲載・タイアップについて</h3>
           <p>
@@ -68,9 +72,10 @@ export default function ContactPage() {
             媒体データ、ご対応できるメニュー、PR表記の方針、お受けできないご依頼をすべて公開しています。
           </p>
 
-          <h3>執筆者・取材協力者の募集について</h3>
+          <h3>監修協力のご相談について</h3>
           <p>
-            子育て経験のあるライターさん、保育士・管理栄養士・小児科医等の監修者の方の応募も随時受け付けています。
+            きょうのこは運営者1人で書いており、ライターの募集はしていません。
+            保育士・管理栄養士・小児科医等の専門家の方で、記事の監修にご協力いただける場合はご相談ください。
             監修については <Link href="/supervisors">監修について</Link> もあわせてご覧ください。
           </p>
 
@@ -78,7 +83,7 @@ export default function ContactPage() {
           <p>いただいたお問い合わせには、順次返信いたします。お急ぎの場合は件名に<strong>【至急】</strong>とご記載ください。土日祝は対応が遅れる場合があります。</p>
           <p>スパム対策により、自動的に迷惑メールフォルダに振り分けられる場合があります。返信が3営業日以上ない場合は、お手数ですが再送してください。</p>
 
-          <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>最終更新：2026年8月5日</p>
+          <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>最終更新：2026年11月14日</p>
         </article>
       </div>
       </V2Frame>

@@ -433,7 +433,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。忍者テーマの複合遊具がある無料の室内遊び場を併設', budget: 'free',
+      name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。無料の遊具スペース「わんぱく広場」（市場棟2F・小2まで）と、忍者テーマの複合遊具がある有料の「くりやランド」（1歳〜小2は45分500円）を併設', budget: 'free', budgetLabel: 'わんぱく広場は無料／くりやランドは45分500円（1歳〜小2）',
       summerCool: true,
     },
     {

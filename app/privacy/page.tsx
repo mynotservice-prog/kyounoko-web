@@ -35,14 +35,15 @@ export default function PrivacyPage() {
           <ul>
             <li>サイト名：きょうのこ</li>
             <li>URL：<a href="https://kyounoko.jp">https://kyounoko.jp</a></li>
-            <li>運営者：ながみー（個人事業主）</li>
+            <li>運営者：ながみー（屋号：快星舎／個人運営）</li>
+            <li>所在地：東京都（個人運営のため番地は非公開としています。契約・請求等で必要な場合はメールにて個別に開示します）</li>
             <li>連絡先：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
           </ul>
 
           <h2>2. 取得する情報</h2>
           <p>当サイトでは、次の情報を取得する場合があります。</p>
           <ul>
-            <li><strong>お問い合わせ等でご提供いただく情報</strong>：お問い合わせフォーム、取材依頼、広告掲載のお申込み等を通じてご提供いただく氏名・メールアドレス・お問い合わせ内容等</li>
+            <li><strong>お問い合わせ等でご提供いただく情報</strong>：メールでのお問い合わせ、取材依頼、広告掲載のご相談等を通じてご提供いただく氏名・メールアドレス・お問い合わせ内容等</li>
             <li><strong>口コミ・写真の投稿でご提供いただく情報</strong>：ニックネーム、お子さまの年齢層、投稿本文、写真等（詳細は第10条をご覧ください）</li>
             <li><strong>自動的に取得する情報</strong>：Cookie等の識別子、端末情報、IPアドレス、リファラ、ユーザーエージェント、閲覧・操作の履歴等</li>
           </ul>
@@ -63,7 +64,8 @@ export default function PrivacyPage() {
           <p>法令に基づく場合、またはご本人の同意がある場合を除き、取得した個人情報を第三者に提供することはありません。ただし、利用目的の達成に必要な範囲で、次のような業務委託先（クラウドサービス事業者等）に情報の取り扱いを委託する場合があります。委託先には適切な安全管理を求めます。</p>
           <ul>
             <li>ホスティング・コンテンツ配信：Vercel Inc.、Cloudflare, Inc.</li>
-            <li>コンテンツ・投稿データの管理：クラウドCMS等のデータ管理サービス</li>
+            <li>口コミ投稿データの保存：Upstash, Inc.（Vercel 経由で利用するデータベース）</li>
+            <li>投稿写真の保存：Vercel Inc.（Vercel Blob）</li>
           </ul>
           <p>これらの委託先のサーバーは国外（主に米国）に所在する場合があります。委託先は各国の法制度のもとで適切に個人情報を管理しています。</p>
 
@@ -96,7 +98,7 @@ export default function PrivacyPage() {
           <p>当サイトの口コミ投稿フォーム等では、ボットによる不正な投稿を防止するため、Cloudflare, Inc. が提供する認証サービス「Cloudflare Turnstile」を利用しています。フォームの表示・送信の際に、IPアドレス・ブラウザ環境等の情報がボット判定のためにCloudflare社へ送信されます。詳しくは<a href="https://www.cloudflare.com/ja-jp/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare プライバシーポリシー</a>をご確認ください。</p>
 
           <h2>9. 第三者配信の広告サービスについて</h2>
-          <p>当サイトは、Google LLC が提供する広告配信サービス「<strong>Google AdSense</strong>」をはじめとする第三者配信事業者を利用する場合があります。これらの事業者は、ユーザーの興味に応じた広告を表示するために、当サイトや他サイトへのアクセス情報（Cookie、IPアドレス、閲覧履歴等）を利用することがあります。</p>
+          <p>当サイトは、Google LLC が提供する広告配信サービス「<strong>Google AdSense</strong>」を利用しています。Google などの第三者配信事業者は、ユーザーの興味に応じた広告を表示するために、当サイトや他サイトへのアクセス情報（Cookie、IPアドレス、閲覧履歴等）を利用することがあります。</p>
           <ul>
             <li>Google による Cookie の使用については、<a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer">Google のポリシーと規約</a>をご参照ください。</li>
             <li>パーソナライズド広告を無効化したい場合は、<a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google 広告設定（https://adssettings.google.com/）</a>から設定を変更できます。</li>
@@ -113,15 +115,17 @@ export default function PrivacyPage() {
           </ul>
           <p>投稿内容は当サイトによる確認のうえで公開されます。ニックネームは本名以外の使用を推奨します。お子さまやほかの方の顔が判別できる写真については、掲載を見合わせ、または加工のうえ掲載する場合があります。投稿の削除をご希望の場合は、お問い合わせ窓口までご連絡ください。投稿に関する規約は<Link href="/terms">利用規約</Link>をご確認ください。</p>
 
-          <h2>11. LINE・SNS等の外部サービスとの連携</h2>
-          <p>当サイトには、LINE公式アカウントの友だち追加ボタンや、Instagram等のSNSへのリンクを設置する場合があります。これらのボタン・リンクを利用して各サービスに移動・登録した場合、各サービスの事業者（LINEヤフー株式会社、Meta Platforms, Inc. 等）が独自に利用者の情報を取得します。取得される情報や取り扱いは各社のプライバシーポリシーをご確認ください。友だち追加・フォローは任意であり、解除は各サービス上でいつでも行えます。</p>
+          <h2>11. LINE・SNS・地図等の外部サービスとの連携</h2>
+          <p>当サイトには、LINE公式アカウントの友だち追加ボタンや、Instagram等のSNSへのリンクを設置しています。これらのボタン・リンクを利用して各サービスに移動・登録した場合、各サービスの事業者（LINEヤフー株式会社、Meta Platforms, Inc. 等）が独自に利用者の情報を取得します。取得される情報や取り扱いは各社のプライバシーポリシーをご確認ください。友だち追加・フォローは任意であり、解除は各サービス上でいつでも行えます。</p>
+          <p>LINE公式アカウントにメッセージを送っていただいた場合、LINEヤフー株式会社から当サイトのサーバーに、送信者の識別子（ユーザーID）とメッセージの内容が届きます。当サイトはこれを、特定の言葉への自動返信にだけ使い、保存・記録はしません。</p>
+          <p>スポット（施設・店舗）の詳細ページでは、場所をお示しするため Google LLC の「Google マップ」を埋め込んでいます。地図の表示に伴い、IPアドレス・閲覧中のページのURL・ブラウザ情報・Cookie等の識別子が Google 社へ送信されます。取り扱いは<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a>をご確認ください。</p>
 
           <h2>12. アフィリエイトプログラムへの参加</h2>
           <p>当サイトは、以下のアフィリエイトプログラムに参加し、商品・サービスを紹介することがあります。紹介リンクを経由して商品が購入された場合、当サイトに一定の紹介料が発生します。</p>
           <ul>
-            <li>Amazonアソシエイト・プログラム</li>
-            <li>楽天アフィリエイト</li>
-            <li>A8.net、バリューコマース、もしもアフィリエイト 等</li>
+            <li>もしもアフィリエイト（楽天市場の商品紹介等）</li>
+            <li>バリューコマース</li>
+            <li>A8.net</li>
           </ul>
           <p>アフィリエイトリンクを含む記事には、景品表示法に基づき「PR」「広告」等の表記を明示します。紹介する商品・サービスは、当サイトが実際に利用したもの、または信頼できる一次情報に基づいて選定しています。</p>
 
@@ -146,13 +150,13 @@ export default function PrivacyPage() {
           <h2>17. お問い合わせ窓口</h2>
           <ul>
             <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
-            <li><Link href="/contact">お問い合わせフォーム</Link></li>
+            <li><Link href="/contact">お問い合わせ（窓口のご案内）</Link></li>
           </ul>
 
           <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
             <strong>制定日</strong>：2026年4月17日<br/>
-            <strong>最終改定日</strong>：2026年7月3日（安全管理措置・口コミ投稿・Cloudflare Turnstile・LINE等の外部サービス連携・外部送信ポリシー・開示等請求手続きに関する記載を追加）<br/>
-            <strong>改定履歴</strong>：2026年4月19日 改定
+            <strong>最終改定日</strong>：2026年11月14日（運営者の表記に屋号「快星舎」と所在地を追加。お問い合わせ方法をメールに修正。利用中の外部サービス（Google マップ・アフィリエイトプログラム・口コミのデータ保存先）の記載を実際の利用状況に合わせて更新。LINE公式アカウントへのメッセージで当サイトが受け取る情報を追記）<br/>
+            <strong>改定履歴</strong>：2026年4月19日 改定／2026年7月3日 改定（安全管理措置・口コミ投稿・Cloudflare Turnstile・LINE等の外部サービス連携・外部送信ポリシー・開示等請求手続きに関する記載を追加）
           </p>
         </article>
       </div>
