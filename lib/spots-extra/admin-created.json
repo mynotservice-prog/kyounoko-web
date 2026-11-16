@@ -1006,6 +1006,57 @@
           }
         ]
       }
+    },
+    {
+      "name": "江戸東京博物館",
+      "category": "museum",
+      "place": "indoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "墨田区",
+      "ward": "墨田区",
+      "note": "両国駅すぐの、江戸と東京の暮らしを大型模型で見せる博物館（愛称：えどはく）。2022年4月から約4年の休館を経て、2026年3月31日にリニューアルオープンした。常設展（5・6階）には実物大の日本橋、原寸大の芝居小屋・中村座（正面部分）と神田明神山車、実物大の棟割長屋、浅草花屋敷の門などが並ぶ（公式）。常設展は一般800円で、中学生以下は無料。チケットは1階のチケットうりばか、オンライン（Webket）で買える。",
+      "images": [
+        "/photos/spot-edo-tokyo-museum-gaikan-2026-11.webp",
+        "/photos/spot-edo-tokyo-museum-nakamuraza-2026-11.webp",
+        "/photos/spot-edo-tokyo-museum-mokei-2026-11.webp"
+      ],
+      "imageKind": "実写",
+      "imageCredit": "実写（2026年11月・運営者撮影）",
+      "nearestStation": "ryogoku",
+      "walkMinutes": 1,
+      "budget": "low",
+      "reservation": "none",
+      "officialUrl": "https://www.edo-tokyo-museum.or.jp/",
+      "businessHours": "9:30〜17:30（土曜は19:30まで・入館は閉館30分前まで）・月曜休館（祝日・振替休日の場合は翌日）・年末年始休館",
+      "pricing": {
+        "adult": "800円（常設展・一般）、65歳以上400円、中学生以下は無料",
+        "elementary": "無料",
+        "preschool": "無料",
+        "infant": "無料"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "diaperChange": "yes",
+        "nursingRoom": "yes",
+        "strollerRental": "yes",
+        "note": "公式のバリアフリー案内に、1階の「ベビーケアルーム」（授乳ソファ・おむつ交換台）、5階のベビーケアルーム（簡易的なおむつ交換スペース）、各階の「バリアフリートイレ」と5階女子トイレのおむつ交換台、1・5・6階でのベビーカー貸出の記載。ベビーカーのまま入館・観覧できる（2026-11-16確認）。館内の飲食は定められた場所のみ。ロッカーは1階と7階。"
+      },
+      "accessTips": "都営大江戸線「両国駅（江戸東京博物館前）」A3・A4出口から徒歩1分。JR総武線「両国駅」は西口から徒歩3分（東口からは7分）。都バス錦27・両28・門33系統などの「都営両国駅前（江戸東京博物館前）」から徒歩3分（JR両国駅のバス停とは別）。来館者用駐車場は普通車1時間1,000円・以降30分ごとに500円で台数に限りあり、清澄通りから左折で入る。開館は9:30〜17:30（土曜は19:30まで）、月曜休館（公式）。",
+      "hiddenTip": "常設展示室は入口が6階、出口が5階。大きな荷物は1階のロッカーか総合案内に預ける。常設展示室は原則撮影できるが、フラッシュ・三脚・自撮り棒は使えない。毎月第3土曜と続く日曜の「家族ふれあいの日」は、都内在住の保護者が18歳未満の子を連れて行くと保護者2名まで一般料金が半額（都内在住の証明が必要）。オンラインチケットは購入後の払戻・日時変更ができない。",
+      "relatedArticleSlugs": [
+        "shitsunai-asobi-sumida-tokyo",
+        "natsuyasumi-hakubutsukan-jiyukenkyu-2026"
+      ],
+      "verification": {
+        "verifiedAt": "2026-11-16",
+        "method": "official"
+      },
+      "excludeRecommendedItems": [
+        "子供用室内シューズ（軽量）"
+      ]
     }
   ],
   "kanagawa": [
