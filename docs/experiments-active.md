@@ -704,7 +704,7 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 - 処置（凍結はしない・公開後は事実修正と公式への追従のみ）: `sakai-coffee-kodzure-koryaku`（42店）`nigiri-chojiro-kodzure-koryaku`（69店）`mita-seimen-kodzure-koryaku`（52店）`icho-kodzure-koryaku`（41店）`kobecook-world-buffet-kodomo-ryokin`（19店・子ども料金）`saika-ramen-kodzure-koryaku`（11か所）
 - 作らなかった候補（11/11 社長「今入れる」で足した3社）: 揚州商人（全40店でお子様セットの有無が公式メニューの対象外6店の列挙と完全に一致＝公式完答に近い）・ステーキのあさくま（Yahoo で AI の回答あり・1件目 914px）・岐阜タンメン（運営会社の公式に「毎日こども食堂」の専用ページあり）
-- **公開日: 未定（マージ日）**。起点は各記事が検索に初めて表示された日（公開日ではない）
+- **公開日: 2026-11-13**（PR #450 マージ e8489284・本番 Ready 10:48 JST。同日 Google Indexing API・IndexNow へ送信）。起点は各記事が検索に初めて表示された日（公開日ではない）。各記事の初表示日は未取得（公開当日のため。GSC に出た後の回で埋める）
 - **合格線（事前固定・§3b のとおり）**: 起点+28日で1本ごとに30クリック以上、かつ6本の中央値100クリック以上。起点+56日で1本ごとに60以上・中央値200以上。あわせて、起点+28日で表示のある記事が8割以上（定期便の条件）
 - **不合格**: 起点+28日で全本が30未満。この場合、サジェストのふるいで拾った残りの候補は作らない。一部だけ合格のときは合否を作らず、当たった社と外れた社の違い（店舗数・公式の情報の形）を記録する
 - 物差し（参考）: 先行7本（田所商店 621・赤から 350・神座 216・トラジ 74・町田商店 51・やまなか家 31・横綱 25／公開約24日・GSC 10/10〜11/06。中央値74）
@@ -724,8 +724,8 @@ URLを知っているがクロール順を待たせている状態。したが�
 ### 型E 駅ランチ便コホート 2026-11-11（新規記事6本・社長指示 2026-11-11「月の上限150本・記事制作は並列で積極的に」）
 配分の正本は `~/.claude/company/kyounoko-article-teikibin.md`。凍結はしない（公開後は事実修正と公式への追従のみ）。候補の正本は `~/.claude/company/reports/2026-11-11/cap150/candidates-area.json`（id が `E-` の行）。
 
-- **公開日: 未定（マージ日。マージ後の回で埋める）**
-- **判定日: 公開日から56日後**
+- **公開日: 2026-11-13**（PR #451 マージ 07f95374・本番 Ready 10:55 JST。同日 Google Indexing API・IndexNow へ送信）
+- **判定日: 公開日から56日後 = 2027-01-08**（窓は公開の翌日を1日目として29〜56日目 = 2026-12-12〜2027-01-08）
 - **窓: 公開29〜56日目の28日間（GSC final で読む。速報値は使わない）。page equals で記事URLだけを集計する**
 
 | 型 | slug | 合格線（事前固定） | 基準値の取り方 |
@@ -755,8 +755,9 @@ URLを知っているがクロール順を待たせている状態。したが�
 ### 定期便コホート 2026-11-06（新規記事・型ごと／定期便の2回目）
 配分の正本は `~/.claude/company/kyounoko-article-teikibin.md`。凍結はしない（公開後は事実修正と公式への追従のみ）。
 
-- **公開日: 未定（マージ日。マージ後の定期便の回で埋める）**
-- **判定日: 公開日から56日後**
+- **公開日: 2026-11-13**（PR #429 マージ a714c36b・本番 Ready 10:13 JST。同日 Google Indexing API・IndexNow へ送信）
+- **判定日: 公開日から56日後 = 2027-01-08**（窓は公開の翌日を1日目として29〜56日目 = 2026-12-12〜2027-01-08）
+- 公開後の関連記事欄の取り直し: `reports/teikibin-2026-11-06/related-after-2026-11-13.json`（同じ248ページ・Vercel別名URL・2026-11-13 取得）。比べた結果は「汚染の記録」の 2026-11-13 の項
 - **窓: 公開29〜56日目の28日間（GSC final で読む。速報値は使わない）。page equals で記事URLだけを集計する**
 - 合格線はどの型も「基準値以上」かつ「表示のある記事が8割以上」（1本の型は「その1本に表示がある」）
 - 公開前の関連記事欄の記録: `reports/teikibin-2026-11-06/related-before-2026-11-06.json`（11/03 と同じ248ページ、本番デプロイURL、2026-11-06 取得。#416 は未マージなので、#416 と本PRの両方の公開前の状態）
@@ -768,7 +769,7 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 - ゲートの記録: GSC 10/06〜11/02 の子連れ×ランチ語で、記事が無く駅ページだけが受けている駅を表示の多い順に選んだ（王子190表示・溝の口152・本厚木144・秋葉原142＋・大森124前後。いずれも駅ページが7〜10位）。横浜（表示の大半は新横浜の駅ページ）・葛西（葛西臨海公園の駅）・荻窪（既存の杉並記事が受ける）は外した。Yahoo（11/06・内蔵ブラウザで「のAI回答」の表示を確認）は、王子・秋葉原・本厚木・溝の口・大森・武蔵小山の「<駅> 子連れ ランチ」、「セントラル スイミング 料金」「セントラル キッズスイミング 料金」でAI回答なし（較正として「コナミ スイミング 何歳から」はAI回答ありを再現）
 - 型Eの設備の条件（授乳室など2施設以上）: 王子＝北とぴあ1F赤ちゃん休憩室＋北区飛鳥山博物館の赤ちゃん休けい室（区公式）、秋葉原＝アトレ秋葉原1の3F授乳スペース＋秋葉原UDX 4Fベビールーム、本厚木＝本厚木ミロードのベビー休憩室＋アミューあつぎ8F（＋厚木市の赤ちゃんの駅台帳でイオン厚木店）、溝の口＝マルイファミリー溝口8Fベビー休憩室＋イトーヨーカドー溝ノ口店の赤ちゃん休憩室、大森＝アトレ大森4F・5F授乳スペース（調乳用給湯）＋イトーヨーカドー大森店の赤ちゃん休憩室。溝の口・大森の2施設目（イトーヨーカドー）は店舗ページの施設欄に「赤ちゃん休憩室」とあるだけで、階と中の設備は記載なし。駅ページ（oji・akihabara・hon-atsugi・mizonokuchi・omori）の `tldrExtraItems` に記事への導線を1本ずつ足した
-- 試し（セントラルスポーツ）: 全109クラブのスイミングスクールのページを 11/06 に取り直し、1,276行中1,266行が 10/26 と一致（戸塚の10行が値上げ。11/06 の値を使用）。体験料の案内ページ109件・入会時費用の欄も 11/06 に全件読んだ。コナミの記事（#416・未マージ）とは、両方の公開後に相互リンクを足す
+- 試し（セントラルスポーツ）: 全109クラブのスイミングスクールのページを 11/06 に取り直し、1,276行中1,266行が 10/26 と一致（戸塚の10行が値上げ。11/06 の値を使用）。体験料の案内ページ109件・入会時費用の欄も 11/06 に全件読んだ。コナミの記事（#416・未マージ）とは、両方の公開後に相互リンクを足す → 2026-11-13（両方の公開日・窓の前）の後始末PRで、両記事の本文末に1本ずつ足した（updatedAt は据え置き。関連欄の新しさの加点を起こさないため）
 - 新記事の関連記事欄（`getRelatedFileArticles` の上位3件）が凍結面・137本にならないことを本番と同じ関数で確かめた。初稿では秋葉原→名古屋・仙台、大森→名古屋（実験の処置C）が入ったので、2本の題から「授乳」「軸」を外した。王子・本厚木・溝の口の上位3件にはセンター南（実験29の物差しの11本の1本。物差しの窓は過去で確定済み）が入る
 - 対照なし。季節と全体の伸びを分離できないので、因果は主張しない
 
@@ -949,8 +950,8 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 ### 定期便コホート 2026-11-03（新規記事・型ごと／定期便の初回）
 配分の正本は `~/.claude/company/kyounoko-article-teikibin.md`。凍結はしない（公開後は事実修正と公式への追従のみ）。
 
-- **公開日: 未定（マージ日。マージ後の定期便の回で埋める）**
-- **判定日: 公開日から56日後**
+- **公開日: 2026-11-13**（PR #416 マージ 1c6c40e3・本番 Ready 11:03 JST。同日 Google Indexing API・IndexNow へ送信。スポット3件も同じ）
+- **判定日: 公開日から56日後 = 2027-01-08**（窓は公開の翌日を1日目として29〜56日目 = 2026-12-12〜2027-01-08）
 - **窓: 公開29〜56日目の28日間（GSC final で読む。速報値は使わない）。page equals で記事URLだけを集計する**
 - 基準値は 2026-11-03 に GSC final（〜10/30）で取った「同じ型の既存記事の、公開29〜56日目の28日クリック」の中央値。合格線はどの型も「基準値以上」かつ「表示のある記事が8割以上」（1本の型は「その1本に表示がある」）
 - 同じ PR に、ブロンコビリー・ゆず庵の押上げ修正（cherry-pick 9e51e728）を同梱した。本数・コホートには入れない
@@ -965,6 +966,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 - ゲートの記録: 駅ランチの候補10駅（GSC 10/03〜10/30）はどの駅も駅ページが6〜10位で受けており、ランチ記事は無い。型Eの条件（配分ファイル）は駅ページとの併存を前提にしているので、駅ページの10位内は新規を止める理由にしなかった。Yahoo（11/03・内蔵ブラウザ）は「練馬駅 ランチ 子連れ」「両国 子連れ ランチ」「伊豆 いちご狩り 子連れ」「江間いちご狩り ベビーカー」「コナミ スイミング 料金」が AI 回答なし、「コナミ スイミング 何歳から」は AI 回答あり（題の主軸を料金にした）
 - 型Eの設備の条件（授乳室など2施設以上）は、区の公式に授乳の記載がある公共施設も数えた（高田馬場＝BIGBOX＋区立児童館、練馬＝ココネリ内の区民・産業プラザ＋区役所ほか、両国＝江戸東京博物館＋すみだ北斎美術館）。駅ページ3面（takadanobaba・nerima・ryogoku）の `tldrExtraItems` に記事への導線を1本ずつ足した
 - 新記事の関連記事欄（`getRelatedFileArticles` の上位3件）が凍結面・137本にならないことを、本番と同じ関数で確かめた。初稿では いちご狩り→水族館・動物園ガイド3本（137本）、コナミ→有楽町（実験29の物差し）が入ったので、題の語を直して外した（いちご狩りは題に「予約不要」、コナミは題から「公式」を外した）。4位以下には凍結面が残るので、関連欄の計算が変わると入る可能性がある
+- `konami-kids-swim-ryokin` には 2026-11-13 の後始末PRで、本文末にセントラル（定期便 2026-11-06 の試し）への関連リンクを1本足した（#429 で予定していた相互リンク。updatedAt は据え置き）
 - 見送った候補: 三軒茶屋（授乳・おむつ替えを公式で確認できた施設が西友三軒茶屋店の1つだけ。キャロットタワーの東急ストアは記載なし）
 - 対照なし。季節と全体の伸びを分離できないので、因果は主張しない
 
@@ -1105,6 +1107,39 @@ PR #412 とその追加修正（全589駅の台帳更新、対応表の廃止、
 
 
 ## 汚染の記録
+
+### 定期便2本（#429・#416）・型E 駅ランチ便（#451）・型A 前倒し便（#450）の公開で関連記事欄が入れ替わった（2026-11-13・描画層）— 凍結面13本・137本コホート60本
+
+2026-11-13 に4本のPR（新規記事21本）を本番へ出したあと、Vercel別名URL（CFを通らない）で、公開前の記録 `reports/teikibin-2026-11-06/related-before-2026-11-06.json`（凍結面・比較基準・137本・実験28の248ページ。2026-11-06 取得で、4本のPRはどれも未公開の時点。#416 の 11/03 の記録より新しいのでこちらを基準にした）と同じ248ページの「関連する記事」を取り直して比べた（取り直し `reports/teikibin-2026-11-06/related-after-2026-11-13.json`）。**73ページで、今回の新規記事が関連欄に入った**（本数は不変・入れ替わり）。入ったのはほとんどが型A 前倒し便の6本で、`icho-kodzure-koryaku` 45ページ・`saika-ramen-kodzure-koryaku` 20・`sakai-coffee-kodzure-koryaku` 13・`mita-seimen-kodzure-koryaku` 12・`nigiri-chojiro-kodzure-koryaku` 3・`kobecook-world-buffet-kodomo-ryokin` 3。ほかは `odawara-kodzure-lunch`・`osaka-umeda-kodzure-lunch`・`ichigogari-izu-kodzure`（各1）。#450 は本文から凍結面・137本へリンクしないことを確かめていたが、関連欄（描画層）は `scripts/check-frozen.mjs` の描画シミュレーションの対象外で、公開時の新しさの加点（7日以内）で上位に入った。
+
+**凍結面（13本）**
+
+| ページ | 区分 | 外れたリンク | 入ったリンク |
+|---|---|---|---|
+| `akakara-kodzure-koryaku` | 凍結面（実験15） | `toraji-kodzure-koryaku`（実験16） | icho |
+| `bigboy-kodomo-ryokin` | 凍結面（実験18の対照） | `gyukaku-kodomo-ryokin` | kobecook-world-buffet |
+| `ginza-onodera-kaitensushi-kodzure` | 凍結面（実験27） | `daishogun-kodzure-koryaku`（137本） | icho |
+| `haneda-rinyushoku-milk` | 凍結面（実験26 R1b 対19の処置） | `marugame-kodzure-koryaku`・`nagoya-kodzure-lunch`（実験31の処置C） | odawara・osaka-umeda |
+| `ichiran-kodzure-koryaku` | 凍結面（実験10の処置） | `machida-shoten-kodzure-koryaku`（実験12）・`tenkaippin-kodzure-koryaku` | mita-seimen・saika-ramen |
+| `ikea-smaland` | 凍結面（実験26 対17の対照。対17は判定から外し済み） | `camp-bub-resort-chosei-kodzure` | ichigogari-izu |
+| `kamukura-kodzure-koryaku` | 凍結面（実験15） | `ichikakuya`・`makino-udon`・`yamaokaya`（いずれも137本） | saika-ramen・icho・mita-seimen |
+| `machida-shoten-kodzure-koryaku` | 凍結面（実験12） | `gyoza-no-mansyu`（137本）・`kamukura`（実験15）・`yamaokaya`（137本） | saika-ramen・icho・mita-seimen |
+| `sanmarc-cafe-kodzure-koryaku` | 凍結面（実験17の処置） | `wendys-first-kitchen`（137本）・`yamanakaya`（実験20） | `kfc-fukubukuro`（#431・11/06 公開。今回の4本ではない）・kobecook-world-buffet |
+| `tadokoro-shoten-kodzure-koryaku` | 凍結面（実験12） | `ginza-onodera-kaitensushi-kodzure`（実験27）・`yamanakaya`（実験20） | icho・mita-seimen |
+| `toraji-kodzure-koryaku` | 凍結面（実験16） | `ginza-onodera-kaitensushi-kodzure`（実験27） | icho |
+| `yamanakaya-kodzure-koryaku` | 凍結面（実験20） | `aiya`・`bannai`（137本） | icho・sakai-coffee |
+| `yokozuna-ramen-kodzure-koryaku` | 凍結面（実験21） | `machida-shoten`（実験12） | saika-ramen |
+
+（表の「外れたリンク」「入ったリンク」の短い名前は `-kodzure-koryaku` などを省いたもの）
+
+**137本コホート（実験9・60本）**: 551-horai・aiya・bannai・chibo・dengana・domdom-hamburger・excelsior-caffe・gindaco・gyoza-no-mansyu・gyutan-rikyu・hachiban-ramen・hamakatsu・ichikakuya・ikinari-steak・isomaru-suisan・jojoen・jolly-pasta・joyfull・jujukarubi・jukusei-yakiniku-ichiban・kairikiya・kamakura-pasta・kamimura-bokujo・karayama・katsuya・kineya・komoro-soba・krispy-kreme・kushiya-monogatari・lucky-pierrot・makino-udon・matsunoya・miraizaka・motomachi-coffee・moukotanmen-nakamoto・my-curry-shokudo・negishi・osaka-ohsho・pietro・popolamama・pronto・shabusai・shinjuku-saboten・sugakiya・sutadonya・sutamina-taro・sweets-paradise・takakuramachi-coffee・tempura-makino・tonkatsu-wako・totomaru・udon-west・wendys-first-kitchen・yabaton・yakiniku-anan・yamaokaya・yappari-steak・yomenya-goemon・zundouya（いずれも `-kodzure-koryaku`）と `sweets-paradise-kodomo-ryokin`。各ページで1〜3枠が今回の新規記事に替わった。
+
+- **248ページの中での被関連リンクの減少**: 凍結面 `yamanakaya` −12・`kamukura` −5・`machida-shoten` −4・`akakara` −3・`yokozuna-ramen` −3・`ginza-onodera` −2・`toraji` −1。137本 `aiya` −13・`rairaitei` −4・`kuidon`・`bannai`・`yamaokaya` 各−3・ほか28本が各−1〜2。実験31の処置C `nagoya-kodzure-lunch` −1。
+- **新規記事の関連欄から凍結面・測定中の面へのリンク（被関連リンクの増加）**: `sakai-coffee`→`yamanakaya`（実験20）・`motomachi-coffee`（137本）、`nigiri-chojiro`→`yamanakaya`・`akakara`（実験15）、`mita-seimen`→`tadokoro-shoten`・`machida-shoten`（実験12）、`icho`→`akakara`・`yamanakaya`・`aiya`（137本）、`kobecook-world-buffet`→`one-karubi-kodomo-ryokin`・`kushiya-monogatari-kodomo-ryokin`（137本）、`saika-ramen`→`gyoza-no-mansyu`・`yamaokaya`・`ichikakuya`（137本）、`ichigogari-izu-kodzure`→`enoshima-aquarium-kosodate`・`ichihara-zounokuni-kosodate`（137本）、`nerima-kodzure-lunch`→`nagoya-kodzure-lunch`・`sendai-kodzure-lunch`（実験31の処置C）・`shimbashi-kodzure-lunch`（実験29の処置）。差し引きで `yamanakaya` は −12＋3、`akakara` は −3＋2。
+- **実験29の処置（248ページの外・公開前の記録なし）の今の関連欄**: `shimbashi`→nerima、`sagami-ono`・`kamata`→hon-atsugi・oji、`omiya-station`→kawagoe・ofuna・daimon（いずれも今回の新規記事。入れ替わる前の中身は取っていないので、外れたリンクは不明）。実験31の処置C（名古屋・博多・仙台）の関連欄には今回の新規記事は入っていない。
+- **今回の4本と無関係の入れ替わり（14ページ）**: 11/06〜11/13 に公開・更新された別の記事（`tokyo-midtown-yaesu-christmas-kodzure` 5ページ・`nakau-kids-menu`・`shibuya-hikarie-christmas-kodzure`・`shin-tsunashima-micca-kodzure` 各3・`komeda-morning-kosodate`・`gusto-morning-kosodate`・`tokyo-nerima-free-park-muryou` 各1）が凍結面13本と `imohori-kanto-kodzure` の関連欄に入った。記録のため併記する（今回の後始末の対象外）。
+
+判定時の扱い: これまでの関連欄の入れ替わり（実験20・21・27）と同じく、各実験の判定で処置・対照の被関連リンクの増減を併記する。新しさの加点は 11/20（7日）・12/13（30日）で切れる。**実験9（137本）の判定窓（GSC final 11/14〜11/20）は加点7日の期間と重なり、60本の関連欄が窓の全期間で入れ替わったまま読むことになる**。実験17（サンマルク・比較窓 10/26〜11/22）・実験18（ビッグボーイ料金・対照）・実験10（一蘭・比較窓 11/01〜11/28）も窓の中で入れ替わった。
 
 ### `komeda-morning-kosodate`（測定中のモーニング4本）に残っていた星乃珈琲店の旧価格を訂正（作業 2026-10-09・照合し直し 2026-11-05・**反映日 2026-11-05**（PR #422・16:01 マージ・本番 Ready 16:06 頃・CFパージ 16:07））— 事実修正・リンク本数は不変
 
