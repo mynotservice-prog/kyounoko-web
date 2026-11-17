@@ -158,6 +158,15 @@ export const SPOT_PARKING: Record<string, SpotParking> = {
     sourceUrl: 'https://www.gsi.go.jp/MUSEUM/p02.html',
     confirmedAt: '2026-08-28',
   },
+  // ───────── 福井 ─────────
+  'かにファクトリー 甲羅組': {
+    exists: true,
+    capacity: 250,
+    fee: '無料',
+    note: '公式FAQに「普通自動車250台、大型バス最大20台駐車可能」と記載。かにファクトリーの利用者以外は駐車できない。自転車・バイクの駐輪スペースもある。',
+    sourceUrl: 'https://www.kanifactory.com/faq',
+    confirmedAt: '2026-11-17',
+  },
 };
 
 /**
