@@ -46,8 +46,10 @@ import {
   getCoopOffer,
   getTravelOffer,
   getLeisureBridgeOffer,
+  isTieupArticle,
 } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
+import { getApplyOffer } from '@/lib/apply-offers';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -815,9 +817,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
     article.area,
   );
 
+  // 申込型（撮影の予約・習い事の体験）の導線。明示の一覧（lib/apply-offers.ts の APPLY_PLACEMENTS）に
+  // 載った記事で、リンクと公式で確かめた文言の両方がある案件だけ。無ければ null（描画されない）。
+  // noindex の記事とタイアップ記事には出さない。
+  const applyOffer =
+    article.noindex || isTieupArticle(article.slug) ? null : getApplyOffer(article.slug);
+
   // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
-  // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
-  const endOffer = coopOffer ?? travelOffer ?? null;
+  // 優先度: 申込型(明示の一覧) > 生協(資料請求) > 宿予約 > 幼児食宅配ブリッジ。
+  // 申込型は新しい枠を足さず、この1枚の枠に入る（ページあたりの上限は変えない）。
+  const endOffer = applyOffer ?? coopOffer ?? travelOffer ?? null;
   // 通常は末尾の高単価CTAは1枚に絞る(endOffer優先)。ただし離乳食/幼児食の濃い意図面
   // (GSC実流入あり・明示allowlist)では、生協(資料請求)と冷凍宅配ブリッジ(高EPC・年齢一致で
   // ファーストスプーン/mogumo)は補完関係のため両方を1枠ずつ併載する。allowlist外は従来どおり。
