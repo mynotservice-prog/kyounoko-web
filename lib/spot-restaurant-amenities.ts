@@ -79,6 +79,7 @@ export const RESTAURANT_VENUE: Record<string, { type: RestaurantVenueType; basis
   '子育てカフェeatoco（イイトコ）': { type: 'shop', basis: '足立区関原の1店舗（無料掲載・公式 eatoco.com）' },
   'ひよこのカフェハウス': { type: 'shop', basis: '足立区東和の1店舗（無料掲載）' },
   '絵本カフェぷあぷ': { type: 'shop', basis: '向河原（COYAMA併設）の1店舗（無料掲載）' },
+  'ステーキハウス B&M 大井本店': { type: 'shop', basis: '品川区二葉の1店舗（無料掲載・公式 steakbm.com/shop/ooi.html）' },
   '東京ステーションホテル ロビーラウンジ': { type: 'shop', basis: 'ホテル内の1店舗' },
   'コストコ 多摩境倉庫 フードコート': { type: 'shop', basis: 'コストコ直営の1倉庫店のフードコート' },
   'ロイズチョコレートワールド': { type: 'shop', basis: '新千歳空港内の1施設（ロイズ直営）' },
@@ -295,6 +296,35 @@ export const RESTAURANT_AMENITY_EVIDENCE: Record<string, AmenityEvidenceMap> = {
       ref: `${LEDGER} 2026-10-08「古瀬村様 13:10 設備の回答」→ 17:21 最終OK。確認した掲載文に「子ども用の椅子が用意されています」`,
       checkedAt: '2026-10-08',
       quote: '子ども用の椅子が用意されています（掲載文を先方が確認）',
+    },
+  },
+  'ステーキハウス B&M 大井本店': {
+    kidsMenu: {
+      kind: 'official-site',
+      url: 'https://www.steakbm.com/menu/steak.html',
+      checkedAt: '2026-11-09',
+      quote: 'お子様ステーキセット…お子様が食べやすいようにスモールサイズにしました。（小学生以下とさせていただきます）※このメニューは大井店…のものです',
+    },
+    babyChair: {
+      kind: 'owner-reply',
+      ref: `${LEDGER} 2026-11-09「ステーキハウスB&M大井本店 青沼様 11/08 16:55 回答＋写真7枚」`,
+      checkedAt: '2026-11-08',
+      quote: '椅子に関しては補助シートをご用意しておりますが、シートベルトなどがついておりません',
+      displayText: '補助シート（ベルトなし）',
+    },
+    strollerAccess: {
+      kind: 'owner-reply',
+      ref: `${LEDGER} 2026-11-09「ステーキハウスB&M大井本店 青沼様 11/08 16:55 回答＋写真7枚」`,
+      checkedAt: '2026-11-08',
+      quote: '可能ですが出入り口が狭いため、大きなベビーカーは入りにくいかもしれません',
+      displayText: '可（入口が狭い）',
+    },
+    diaperChange: {
+      kind: 'owner-reply',
+      ref: `${LEDGER} 2026-11-09「ステーキハウスB&M大井本店 青沼様 11/08 16:55 回答＋写真7枚」`,
+      checkedAt: '2026-11-08',
+      quote: '（おむつ替えの場所）1Ｆトイレに設置しております',
+      value: 'yes',
     },
   },
 };
