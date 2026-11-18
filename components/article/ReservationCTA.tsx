@@ -22,13 +22,15 @@ export function ReservationCTA({ offer }: ReservationCTAProps) {
   if (!/^https?:\/\//i.test(offer.href.trim())) return null;
 
   // 計測用プロバイダ判定: A8リンク(px.a8.net)は 'a8'、それ以外は従来通り 'valuecommerce'。
-  const provider = /px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce';
+  // 申込型の導線（lib/apply-offers.ts）は offer.provider で明示する（もしも経由のリンクを区別するため）。
+  const provider =
+    offer.provider ?? (/px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce');
 
   return (
     <aside aria-label={offer.heading} className="av3-resv">
       <div className="av3-resv-head">
         <span className="pr-label">PR</span>
-        <span className="av3-resv-eyebrow">今から行くなら・ネット予約</span>
+        <span className="av3-resv-eyebrow">{offer.eyebrow ?? '今から行くなら・ネット予約'}</span>
       </div>
       <h4 className="av3-resv-title">{offer.heading}</h4>
       <p className="av3-resv-note">{offer.note}</p>
