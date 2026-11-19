@@ -167,6 +167,137 @@ export const SPOT_PARKING: Record<string, SpotParking> = {
     sourceUrl: 'https://www.kanifactory.com/faq',
     confirmedAt: '2026-11-17',
   },
+  // ───────── 品川区（2026-11-20 公式確認・batch-10） ─────────
+  "IKUMOやしお（品川区立八潮子育て支援施設）": {
+    "exists": false,
+    "note": "区のページと施設の公式に「駐車場はございませんので、公共交通機関の利用にご協力をお願いいたします」と明記。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kodomo/kodomoshisetsu/1002259.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "しながわ区民公園": {
+    "exists": true,
+    "note": "区の公式に「駐車場有り（有料）」。台数・料金・利用時間は公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008265.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "東品川公園": {
+    "exists": true,
+    "note": "区の公式に「有料駐車場有り」。台数・料金・利用時間は公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008279.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "エコルとごし（品川区立環境学習交流施設）": {
+    "exists": false,
+    "note": "公式に「一般車両用の駐車場はございません。公共交通機関をご利用ください」。障がい者等専用駐車場が1台分（予約不可）。",
+    "sourceUrl": "https://ecoru-togoshi.jp/guide/access/",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立五反田文化センター プラネタリウム": {
+    "exists": true,
+    "capacity": 8,
+    "note": "公式に「施設利用者用の有料駐車場があります。（8台）」「台数に限りがありますので、お車でのご来館はお控え下さい」。料金は公式記載なし。1階エントランス前に障害者用1台。",
+    "sourceUrl": "https://shinagawa-gotanda-planetarium.com/access/",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立品川歴史館": {
+    "exists": true,
+    "capacity": 3,
+    "note": "公式に「駐車スペース（3台分）が歴史館玄関前にあります」「できる限り公共交通機関をご利用いただきますよう」「歴史館の利用目的以外での駐車は、固くお断りいたします」。料金は公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/historyhp/raikan/1009749.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "ニコンミュージアム": {
+    "exists": false,
+    "note": "公式に「お客様用の駐車場はございません。公共交通機関をご利用ください」。",
+    "sourceUrl": "https://www.jp.nikon.com/company/corporate/museum/guide/",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立荏原文化センター温水プール": {
+    "exists": true,
+    "note": "公式に、2026年12月1日（火）〜2027年4月30日（金）は外壁改修工事で足場・仮囲いを設置するため「駐車場」は利用できないとの記載。台数・料金は公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/bunkasportsshisetsu/1008281/1008282.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立品川図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立二葉図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立荏原図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立南大井図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立源氏前図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立ゆたか図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立大井図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立五反田図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立大崎図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立大崎図書館分館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "品川区立八潮図書館": {
+    "exists": false,
+    "note": "公式（よくある質問）に「図書館には駐車場が完備されていません。近くの有料駐車場または公共交通機関をご利用ください」。",
+    "sourceUrl": "https://library.city.shinagawa.tokyo.jp/tabid/169/Default.aspx",
+    "confirmedAt": "2026-11-20"
+  },
+  "キッズランドUS mini 東京大森店（キッズランドユーエス ミニ）": {
+    "exists": true,
+    "capacity": 151,
+    "fee": "2,000円以上お買上げで2時間無料。一般料金は8:00〜24:00が30分ごとに200円、24:00〜8:00が60分ごとに100円",
+    "note": "西友大森店の駐車場（店舗ページに「駐車場:あり(有料)、駐車台数:151台」）。利用できる時間帯の記載はない。",
+    "sourceUrl": "https://kidslandus.com/shop/tokyo-omori/",
+    "confirmedAt": "2026-11-20"
+  },
+  "La Pause（ラ・ポーズ）": {
+    "exists": false,
+    "note": "公式FAQ「駐車場はありますか？」に「駐車場はございません。」。自転車置き場はある。",
+    "sourceUrl": "https://www.lapause.or.jp/%E6%96%99%E9%87%91",
+    "confirmedAt": "2026-11-20"
+  },
 };
 
 /**
