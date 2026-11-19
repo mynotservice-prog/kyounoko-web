@@ -1066,7 +1066,7 @@ export const SPOTS_EXTRA_10: Partial<Record<AreaSlug, Spot[]>> = {
       }
     },
     {
-      "name": "ポップンルーム（荏原保健センター内）",
+      "name": "ポップンルーム 荏原保健センター",
       "category": "indoor",
       "place": "indoor",
       "ages": [
@@ -1105,7 +1105,7 @@ export const SPOTS_EXTRA_10: Partial<Record<AreaSlug, Spot[]>> = {
       }
     },
     {
-      "name": "ポップンルーム（北品川第二保育園内）",
+      "name": "ポップンルーム 北品川第二保育園",
       "category": "indoor",
       "place": "indoor",
       "ages": [
@@ -1143,7 +1143,7 @@ export const SPOTS_EXTRA_10: Partial<Record<AreaSlug, Spot[]>> = {
       }
     },
     {
-      "name": "ポップンルーム（平塚ゆうゆうプラザ）",
+      "name": "ポップンルーム 平塚ゆうゆうプラザ",
       "category": "indoor",
       "place": "indoor",
       "ages": [
