@@ -287,6 +287,7 @@ export default async function CategoryPage({ params }: Props) {
                     price={it.price}
                     provider={it.provider}
                     itemId={it.id}
+                    placement="category-items"
                   />
                 ))}
               </div>

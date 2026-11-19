@@ -766,7 +766,7 @@ export default async function SpotPage({ params }: Props) {
         {/* ネット予約/チケットCTA（restaurant→ホットペッパー / レジャー→アソビュー）。env未設定なら非表示 */}
         {reservationOffer && (
           <div className="v2-section" style={{ marginTop: 18 }}>
-            <ReservationCTA offer={reservationOffer} />
+            <ReservationCTA offer={reservationOffer} placement="spot-reservation" />
           </div>
         )}
 
@@ -791,7 +791,7 @@ export default async function SpotPage({ params }: Props) {
         {/* 子連れ宿予約CTA（レジャースポットのみ）。env未設定なら非表示 */}
         {travelOffer && (
           <div className="v2-section" style={{ marginTop: 10 }}>
-            <ReservationCTA offer={travelOffer} />
+            <ReservationCTA offer={travelOffer} placement="spot-travel" />
           </div>
         )}
 
