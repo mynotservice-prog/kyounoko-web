@@ -3464,14 +3464,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'リニューアル済、ベビーカー貸出あり。天神から地下鉄＋バスで20分程度',
       nearby: '隣接の福岡市植物園（同入場料共通）も合わせて半日',
     },
-    {
-      name: 'ボーネルンドあそびのせかい（ららぽーと等）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '複数', note: '屋内遊び場、雨天の救世主', budget: 'mid',
-      pricing: { adult: '600円（保護者）', preschool: '600円/30分＋延長料金', infant: '600円（6ヶ月〜）' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '平日フリーパス（1,200円程度）がお得。休日は整理券制になることも',
-      summerCool: true,
-    },
   ],
   saga: [
     {

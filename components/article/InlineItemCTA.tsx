@@ -3,6 +3,7 @@ import {
   AffiliateLink,
   type AffiliateLinkProps,
 } from '@/components/affiliate/AffiliateLink';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type InlineItemCTAProps = {
   /** 差し込む 1 商品 */
@@ -16,6 +17,8 @@ export type InlineItemCTAProps = {
    * 計測期間と母数を明記すること。
    */
   note?: string;
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 /**
@@ -29,7 +32,7 @@ export type InlineItemCTAProps = {
  * 後々、本文 HTML に <!--INLINE_CTA--> プレースホルダを埋めて
  * 最初の H2 直前に差し込む運用も可能。
  */
-export function InlineItemCTA({ item, note }: InlineItemCTAProps) {
+export function InlineItemCTA({ item, note, placement }: InlineItemCTAProps) {
   const microCopy = note ?? 'この記事に関連するアイテム';
 
   return (
@@ -39,7 +42,7 @@ export function InlineItemCTA({ item, note }: InlineItemCTAProps) {
         <span className="inline-item-cta-micro">{microCopy}</span>
       </p>
       <div className="inline-item-cta-card">
-        <AffiliateLink {...item} />
+        <AffiliateLink {...item} placement={placement} />
       </div>
     </aside>
   );
