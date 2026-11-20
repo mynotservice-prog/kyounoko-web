@@ -196,8 +196,9 @@ const PRODUCTS: AffiliateProduct[] = [
     provider: 'moshimo',
     href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
     title: 'トイサブ！',
-    subtitle: '業界最大手・月齢に合わせて知育玩具6点が届く',
-    price: '月額 ¥3,674〜',
+    // 2026-11-20 公式 https://toysub.net/course-202606_b/ で照合（エコノミー3,280円・スタンダード3,980円・プラチナ5,980円、各税込）
+    subtitle: '月齢に合った知育玩具が届く（コースにより4点または6点）',
+    price: '月額3,280円〜（税込・エコノミーコース）',
   },
   {
     id: 'cs-chachacha',
@@ -701,14 +702,14 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'ehon-yomikikase-kotsu',
     ],
   },
-  // ---- ④ トイサブ！ファーストセレクション（はじめての知育玩具）2,500円 ----
+  // ---- ④ トイサブ！ファーストセレクション（2026-11-20 公式照合: 2か月間990円税込・3点・妊娠中〜生後1.5か月未満の申込・2か月後スタンダードへ自動移行）----
   {
     id: 'mo-toysub-first',
     provider: 'moshimo',
     href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
     title: 'トイサブ！ファーストセレクション',
-    subtitle: '0〜1歳向けの月齢に合った知育玩具を厳選。初回購入で送料無料',
-    price: '一括¥3,490（送料込）',
+    subtitle: '妊娠中〜生後1.5か月未満の申し込み向け。おもちゃ3点を2か月間（その後スタンダードコースへ自動移行）',
+    price: '2か月間で990円（税込）',
     slugs: [
       'chiiku-subsc-hikaku-4sha',
       'chiiku-subsc-3sha-2026-comparison',

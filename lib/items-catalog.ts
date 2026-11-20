@@ -286,8 +286,9 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     provider: 'moshimo',
     href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
     name: 'トイサブ！',
-    subtitle: '業界最大手・月齢に合わせて知育玩具6点が届く',
-    price: '月額 ¥3,674〜',
+    // 2026-11-20 公式 https://toysub.net/course-202606_b/ で照合（lib/affiliate-products.ts の cs-toysub と同じ文言）
+    subtitle: '月齢に合った知育玩具が届く（コースにより4点または6点）',
+    price: '月額3,280円〜（税込・エコノミーコース）',
     articleSlug: 'chiiku-subsc-hikaku-4sha',
   },
   {

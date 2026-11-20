@@ -1290,7 +1290,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
               ため削除。物販は末尾のAffiliateLinkGroup/RelatedItemsCTAの1枠に集約。 */}
 
           {/* 外食記事向けネット予約CTA（高インテント位置：結論直後）。env未設定なら非表示。 */}
-          {reservationOffer && <ReservationCTA offer={reservationOffer} />}
+          {reservationOffer && <ReservationCTA offer={reservationOffer} placement="article-top-reservation" />}
 
           {/* インタラクティブ図解（frontmatter `interactive:` で指定された記事のみ） */}
           {article.interactive === 'AgeMonthCalculator' && <AgeMonthCalculator />}
@@ -1433,16 +1433,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
               heading="PICK UP"
               title="この記事で紹介したアイテム"
               items={affiliateProducts}
+              placement="article-end-picks"
             />
           ) : (
             <RelatedItemsCTA
               items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
+              placement="article-end-related"
             />
           )}
 
           {/* 読了後の高単価CTAは1枚だけ（生協 > 宿予約）。ネット予約の再掲は
               結論直後と重複していたため廃止（PRブロック過密の解消）。 */}
-          {endOffer && <ReservationCTA offer={endOffer} />}
+          {endOffer && <ReservationCTA offer={endOffer} placement="article-end-offer" />}
 
           {/* 外食記事向け高単価ブリッジ（幼児食宅配）。endOfferが無い記事のみ1点。 */}
           {showBridge && restaurantBridge && (
@@ -1459,6 +1461,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
                   provider: restaurantBridge.provider,
                   pr: true,
                 }}
+                placement="article-end-bridge"
               />
             </div>
           )}
@@ -1467,7 +1470,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
               レジャー予約CTA（アソビュー優先・じゃらん宿泊に暫定フォールバック）。endOffer/
               ブリッジとは独立した専用枠で、冷凍宅配ブリッジを奪わずに1枠だけ併載する。
               両env未設定なら非表示。 */}
-          {leisureBridgeOffer && <ReservationCTA offer={leisureBridgeOffer} />}
+          {leisureBridgeOffer && <ReservationCTA offer={leisureBridgeOffer} placement="article-end-leisure" />}
 
           {/* AdSense: 記事末尾（FAQ前） */}
           <AdSlot placement="article-end" />
