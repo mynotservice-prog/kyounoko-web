@@ -2,6 +2,7 @@
 slug: shitsunai-asobi-machida
 seoRelated: shitsunai-asobi-setagaya-tokyo
 title: 町田市の子連れ室内遊び場5選｜無料の子どもセンターまあちから南町田つみきまで【2026】
+seoTitle: 町田市の子供の室内遊び場5選｜無料のまあちは町田駅徒歩8分・図書館こどものひろばは徒歩2分【2026】
 metaDescription: >-
   町田市で0〜6歳と行ける室内の遊び場を5つ、公式情報で確認した料金・休館日つきで整理。無料の子どもセンターまあち・ばあん・つるっこ、町田市立中央図書館こどものひろば、南町田子どもクラブつみき（授乳室あり）。雨の日・猛暑日に使えます。
 category: today-doko

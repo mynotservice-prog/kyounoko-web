@@ -741,6 +741,7 @@ export default async function StationConditionPage({ params }: Props) {
               ベビーチェアが無い店でも安心。持っていくと外食がぐっとラクになる定番。
             </p>
             <AffiliateLinkGroup
+              placement="station-condition-items"
               items={getCatalogItems('gaishoku').slice(0, 3).map((it) => ({
                 href: it.href,
                 title: it.name,
@@ -757,7 +758,7 @@ export default async function StationConditionPage({ params }: Props) {
                   <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
                     外食が増える時期は、家の食事を宅配でラクにするご家庭も。
                   </p>
-                  <AffiliateLink {...bridge} />
+                  <AffiliateLink {...bridge} placement="station-condition-bridge" />
                 </div>
               ) : null;
             })()}
