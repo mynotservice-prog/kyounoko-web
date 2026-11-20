@@ -95,7 +95,7 @@ lede: >-
 
 ベビーチェアのある店は公式検索で9件、**ベビーカーで入れる店は19件**（ほぼ全レストラン）。**唯一ベビーカー不可なのは「紅はし」（本館B1・6席）**です。
 
-**この記事の賞味期限**：屋上で開催中の「グリルテラス日本橋」は**2026年10月25日（日）まで**です。
+**この記事の賞味期限**：屋上で開かれていた「グリルテラス日本橋」は**2026年10月25日（日）まで**の営業でした。2026年11月20日時点の公式の本館屋上のイベント一覧には載っていません（[本館屋上フロアガイド](https://www.mistore.jp/store/nihombashi/shops/mainfloorrf.html)）。
 
 > 出典：日本橋三越本店 レストラン検索（https://www.mistore.jp/store/nihombashi/restaurant_search.html ）／アクセス・営業時間（https://www.mistore.jp/store/nihombashi/access.html ）／東京都福祉局「赤ちゃん・ふらっと」（https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate/akachanflat ）｜確認日 2026年9月1日
 
