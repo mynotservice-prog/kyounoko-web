@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
 import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
 import { hashIp, checkRateLimit } from '@/lib/reviews';
+import { detectImageSignature } from '@/lib/image-signature';
 
 /**
  * 口コミ写真アップロード（P1-8b）。
@@ -13,6 +14,8 @@ export const runtime = 'nodejs';
 
 const MAX_BYTES = 5 * 1024 * 1024;
 const ALLOWED = ['image/jpeg', 'image/png', 'image/webp'];
+// 画素数の上限（約6,700万画素＝8192×8192）。スマホの5,000万画素級の写真は通し、異常に大きい寸法の画像は処理しない。
+const MAX_INPUT_PIXELS = 8192 * 8192;
 
 function clientIp(req: NextRequest): string {
   const xff = req.headers.get('x-forwarded-for');
@@ -40,9 +43,14 @@ export async function POST(req: NextRequest) {
 
   try {
     const input = Buffer.from(await file.arrayBuffer());
+    // 名乗りの file.type ではなく中身の先頭バイトで jpg / png / webp を確かめてから sharp に渡す。
+    if (!detectImageSignature(input)) {
+      return NextResponse.json({ ok: false, error: 'jpg / png / webp のみ対応しています' }, { status: 400 });
+    }
     // sharp はデフォルトでメタデータを引き継がない＝EXIF(GPS含む)は除去される。
     // rotate() で撮影向きを反映してからリサイズ・webp化。
-    const output = await sharp(input)
+    // failOn は sharp の既定（最も厳しい 'warning'）を明示し、画素数に上限を設ける。
+    const output = await sharp(input, { failOn: 'warning', limitInputPixels: MAX_INPUT_PIXELS })
       .rotate()
       .resize({ width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true })
       .webp({ quality: 82 })

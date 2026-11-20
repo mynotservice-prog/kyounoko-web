@@ -4,6 +4,7 @@ import * as React from 'react';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { wrapAmazonAssociate } from '@/lib/amazon';
 import { trackEvent } from '@/lib/analytics';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type AffiliateProvider =
   | 'amazon'
@@ -25,6 +26,12 @@ export type AffiliateLinkProps = {
   pr?: boolean;
   /** GA4 イベントで item_id として送る識別子（任意）。商品ID / slug など。 */
   itemId?: string;
+};
+
+/** カード部品の props。データ（AffiliateLinkProps）に、置き場所ごとの枠の位置を足したもの。 */
+export type AffiliateLinkComponentProps = AffiliateLinkProps & {
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 const PROVIDER_LABELS: Record<AffiliateProvider, string> = {
@@ -80,7 +87,8 @@ export function AffiliateLink({
   provider,
   pr = true,
   itemId,
-}: AffiliateLinkProps) {
+  placement,
+}: AffiliateLinkComponentProps) {
   const providerLabel = PROVIDER_LABELS[provider];
 
   // href の健全性チェック（ランタイム防御）。
@@ -109,7 +117,7 @@ export function AffiliateLink({
       // クリックを GA4 に送る。item_id は明示渡しがなければ title をフォールバックに使う
       // （タイトル文字列でも識別性は十分。長すぎる場合は呼び出し側で itemId を明示すること）。
       onClick={() => {
-        trackEvent('affiliate_click', { provider, item_id: itemId ?? title });
+        trackEvent('affiliate_click', { provider, item_id: itemId ?? title, placement });
       }}
     >
       {imageUrl && (

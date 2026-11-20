@@ -439,13 +439,15 @@ export function injectInternalLinks(
     const escapedKeyword = escapeRegExp(rule.keyword);
     // マッチ: そのキーワードが既に<a>タグ内でない、見出し内でない、コードブロック内でない場所
     // セグメント単位の分解アプローチで実装（正規表現だけでHTMLをパースしない）
-    const segmentRegex = /(<(?:a\b[^>]*?>[\s\S]*?<\/a>|h[1-6]\b[^>]*?>[\s\S]*?<\/h[1-6]>|pre\b[^>]*?>[\s\S]*?<\/pre>|code\b[^>]*?>[\s\S]*?<\/code>|blockquote\b[^>]*?>[\s\S]*?<\/blockquote>))/gi;
+    // 末尾の `[^>]*>` は残りすべてのタグ（<img alt="…"> 等）を除外ゾーンにし、テキストノードにだけ注入する。
+    // これが無いと、キーワードが最初に出るのが alt 属性内のとき <img alt="<a href=…>"> を生成して画像が壊れる。
+    const segmentRegex = /(<(?:a\b[^>]*?>[\s\S]*?<\/a>|h[1-6]\b[^>]*?>[\s\S]*?<\/h[1-6]>|pre\b[^>]*?>[\s\S]*?<\/pre>|code\b[^>]*?>[\s\S]*?<\/code>|blockquote\b[^>]*?>[\s\S]*?<\/blockquote>|[^>]*>))/gi;
     const parts = result.split(segmentRegex);
 
     let replaced = false;
     const kwRegex = new RegExp(escapedKeyword, '');
     const processedParts = parts.map((part, idx) => {
-      // 奇数index = skip zones (a/h1-6/pre/code/blockquote tags)
+      // 奇数index = skip zones (a/h1-6/pre/code/blockquote 要素と、その他すべてのタグ)
       if (idx % 2 === 1 || replaced) return part;
       const m = part.match(kwRegex);
       if (!m) return part;

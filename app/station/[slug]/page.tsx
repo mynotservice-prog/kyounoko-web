@@ -958,6 +958,7 @@ export default async function StationPage({ params }: Props) {
             return outingItems.length > 0 ? (
               <RelatedItemsCTA
                 label="外食のときに持っていくとラクなもの"
+                placement="station-items"
                 items={outingItems.map((it) => ({
                   href: it.href,
                   title: it.name,
