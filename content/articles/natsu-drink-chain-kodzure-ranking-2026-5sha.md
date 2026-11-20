@@ -99,9 +99,7 @@ youtubeSearch: 子連れ カフェ 夏 ドリンク 何歳から
 >
 > **公的・公式参照**：厚生労働省「授乳・離乳の支援ガイド（2019年改定版）」「日本人の食事摂取基準（2020年版）」 [www.mhlw.go.jp](https://www.mhlw.go.jp/) ／農林水産省「カフェインの過剰摂取について」 [www.maff.go.jp](https://www.maff.go.jp/) ／食品安全委員会 [www.fsc.go.jp](https://www.fsc.go.jp/) ／消費者庁「食品による子供の窒息事故」 [www.caa.go.jp](https://www.caa.go.jp/) ／コメダ珈琲店公式 [www.komeda.co.jp](https://www.komeda.co.jp/) ／スターバックス公式 [www.starbucks.co.jp](https://www.starbucks.co.jp/) ／タリーズコーヒー公式 [www.tullys.co.jp](https://www.tullys.co.jp/) ／ミスタードーナツ公式 [www.misterdonut.jp](https://www.misterdonut.jp/) ／ゴンチャ公式 [www.gongcha.co.jp](https://www.gongcha.co.jp/) （いずれも2026年5月時点で参照）
 
-## ながみー家のリアル｜我が家の夏ドリンクの使い分け
-
-我が家では、暑い日の外出で休憩したいときはまずコメダを探します。座ってゆっくりでき、娘はクリームソーダの見た目に毎回大喜び（ただしソーダは少量だけ）。スタバでは、娘が「フラペチーノ飲みたい」と言ったとき、**サイズ最小・甘さ控えめ・ミルク多め**にカスタムして“特別なおやつ”にしています。一度ゴンチャで2歳の息子にタピオカを与えそうになり、弾力のあるパールを見てヒヤッとしたことがあり、以来**息子にはタピオカ抜きのドリンクか、別の飲み物**にするのが我が家のルール。基本の水分補給はマイボトルの麦茶で、甘い飲み物はあくまで“ときどき”。水筒選びは[子ども用水筒の夏向け比較](/article/kodomo-suitou-natsu-hikaku-7)が役立ちました。
+水筒選びは[子ども用水筒の夏向け比較](/article/kodomo-suitou-natsu-hikaku-7)が役立ちます。
 
 ## お店に入る前の30秒チェックリスト
 
