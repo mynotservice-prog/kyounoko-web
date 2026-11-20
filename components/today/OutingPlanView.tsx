@@ -359,7 +359,7 @@ export function LunchListView({
             <span className="pr-label">PR</span>
             <span>広告を含みます</span>
           </div>
-          <ReservationCTA offer={offer} />
+          <ReservationCTA offer={offer} placement="today-lunch-list" />
         </div>
       )}
     </section>
@@ -496,7 +496,7 @@ export function OutingPlanView({
             <span className="pr-label">PR</span>
             <span>広告を含みます</span>
           </div>
-          <ReservationCTA offer={reservationOffer} />
+          <ReservationCTA offer={reservationOffer} placement="today-plan-lunch" />
         </div>
       )}
 
