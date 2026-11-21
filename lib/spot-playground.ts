@@ -129,6 +129,194 @@ export const SPOT_PLAYGROUND: Record<string, SpotPlayground> = {
     sourceUrl: 'https://www.tokyo-park.or.jp/park/hikarigaoka/facility/',
     confirmedAt: '2026-09-12',
   },
+  // ───────── 品川区（2026-11-20 公式確認・batch-10） ─────────
+  "しながわ区民公園": {
+    "summary": "園内に「子どもの遊び場」と、専任のプレイワーカーがいるプレイパーク「しながわこども冒険ひろば」がある。",
+    "areas": [
+      {
+        "name": "子どもの遊び場",
+        "items": "子どもたちのアイデアを取り入れた遊戯施設（遊具の種類は公式記載なし）"
+      },
+      {
+        "name": "しながわこども冒険ひろば",
+        "items": "泥んこ遊び・木登り・火起こしなどの自然体験ができるプレイパーク（専任のプレイワーカーがいる）"
+      }
+    ],
+    "note": "冒険ひろばの開園は月・火・水・土・日の10:30〜17:30（木・金・年末年始は休み・区の公式 https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008269.html）。平成26〜令和5年度に全面改修。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008265.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "東品川海上公園": {
+    "summary": "公園の北側に、クジラをイメージした滑り台がある。",
+    "areas": [
+      {
+        "name": "クジラの滑り台",
+        "items": "クジラをイメージした滑り台",
+        "location": "公園の北側（区の公園調書）"
+      }
+    ],
+    "note": "滑り台以外の遊具は公式記載なし。南側の噴水で水遊びができるかは公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008271.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "東品川公園": {
+    "summary": "子どもたちのアイデアを取り入れた遊具が数多く置かれている（区の公式）。",
+    "areas": [
+      {
+        "name": "園内の遊具",
+        "items": "子どもたちのアイデアを取り入れた遊具（種類は公式記載なし）"
+      }
+    ],
+    "note": "区の公式は「一般的公園機能に加え交通公園、運動公園の機能も併せ持つ」とだけ書いており、交通公園の中身（コース・貸し自転車の条件など）は公式記載なし。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008264/1008279.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "鮫洲運動公園": {
+    "summary": "園内の北半分が、子どものアイデアを取り入れた様々な遊具の置かれた遊戯ゾーンになっている。",
+    "areas": [
+      {
+        "name": "遊戯ゾーン",
+        "items": "子どものアイデアを取り入れた様々な遊具（種類は公式記載なし）",
+        "location": "園内の北半分"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "大井水神公園": {
+    "summary": "大森駅寄りの南側区域に、水神にちなんだ龍をモチーフにした遊具がある。",
+    "areas": [
+      {
+        "name": "南側区域",
+        "items": "水神にちなんだ龍をモチーフにした遊具",
+        "location": "大森駅寄りの南側区域"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "しおじ公園": {
+    "summary": "道路をはさんだ西側が、広場と遊具を備えた公園になっている。",
+    "areas": [
+      {
+        "name": "西側の広場",
+        "items": "遊具（種類は公式記載なし）",
+        "location": "公園の西側（東側は遊戯型の緑道）"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "権現山公園": {
+    "summary": "様々な遊具が置かれた遊戯ゾーンがある。",
+    "areas": [
+      {
+        "name": "遊戯ゾーン",
+        "items": "様々な遊具（種類は公式記載なし）"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "荏原南公園": {
+    "summary": "大型複合遊具と、霧を発生させる噴水がある。",
+    "areas": [
+      {
+        "name": "園内の遊具",
+        "items": "大型複合遊具"
+      }
+    ],
+    "note": "霧を発生させる噴水がある（水遊びができるかは公式記載なし）。",
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "鈴ヶ森公園": {
+    "summary": "幼児用遊具と複合遊具がある。",
+    "areas": [
+      {
+        "name": "園内の遊具",
+        "items": "幼児用遊具、複合遊具、健康遊具",
+        "ages": "幼児用遊具あり"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "浜川公園": {
+    "summary": "複合遊具がある。",
+    "areas": [
+      {
+        "name": "園内の遊具",
+        "items": "複合遊具、健康遊具"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "大井中央公園": {
+    "summary": "三段に分かれ、上段が大型複合遊具のある児童ゾーン、中段が砂場のある幼児ゾーン。",
+    "areas": [
+      {
+        "name": "児童ゾーン",
+        "items": "大型複合遊具",
+        "ages": "児童向けのゾーン",
+        "location": "上段"
+      },
+      {
+        "name": "幼児ゾーン",
+        "items": "砂場",
+        "ages": "幼児向けのゾーン",
+        "location": "中段"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "大井坂下公園": {
+    "summary": "令和3年度に、子どもたちのアイデアを活かしたユニバーサルデザイン遊具を整備した。",
+    "areas": [
+      {
+        "name": "ユニバーサルデザイン遊具",
+        "items": "複合遊具、ブランコ、砂場など"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "荏原中央公園": {
+    "summary": "令和5年度の改修で、中央の広場を囲むようにブランコやターザンロープなどの遊具を整備した。",
+    "areas": [
+      {
+        "name": "中央の広場のまわり",
+        "items": "ブランコ、ターザンロープなど",
+        "location": "園内中央の広場空間を囲むように配置"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "西五反田公園": {
+    "summary": "令和6年度の改修で、目玉焼き型のインクルーシブ遊具などを整備し、区内で唯一の迷路遊具もリニューアルした。",
+    "areas": [
+      {
+        "name": "園内の遊具",
+        "items": "目玉焼き型のインクルーシブ遊具、迷路遊具（区内で唯一）など"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
+  "源氏前公園": {
+    "summary": "令和4年度に、子どもたちのアイデアを活かしたユニバーサルデザイン遊具（複合遊具）を整備した。",
+    "areas": [
+      {
+        "name": "ユニバーサルデザイン遊具",
+        "items": "複合遊具"
+      }
+    ],
+    "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004631.html",
+    "confirmedAt": "2026-11-20"
+  },
 };
 
 /**
