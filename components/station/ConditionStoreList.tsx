@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { COND_SOURCE_LABEL, type ConditionStores, type CondStore, type OtherStore } from '@/lib/station-cond-stores';
 import { hotpepperShopHref } from '@/lib/reservation-cta';
+import { affiliateClickAttrs } from '@/lib/affiliate-placement';
 
 /**
  * 駅×条件ページの店の一覧（店単位・根拠つき。2026-10-28・Phase 2）。
@@ -18,9 +19,14 @@ function StoreCard({ s }: { s: CondStore }) {
     if (!s.url) return null;
     if (s.kind === 'indie') {
       const { href, affiliate } = hotpepperShopHref(s.url);
-      return { href, rel: affiliate ? 'sponsored noopener' : 'nofollow noopener', label: 'ホットペッパーで店舗情報を見る' };
+      return {
+        href,
+        rel: affiliate ? 'sponsored noopener' : 'nofollow noopener',
+        label: 'ホットペッパーで店舗情報を見る',
+        ev: affiliate ? affiliateClickAttrs('station-condition-shops', 'hotpepper-shop') : undefined,
+      };
     }
-    return { href: s.url, rel: 'noopener noreferrer', label: '公式の店舗ページ' };
+    return { href: s.url, rel: 'noopener noreferrer', label: '公式の店舗ページ', ev: undefined };
   })();
   return (
     <article
@@ -53,7 +59,7 @@ function StoreCard({ s }: { s: CondStore }) {
       </p>
       {link && (
         <p style={{ margin: '8px 0 0', fontSize: 13, fontWeight: 700 }}>
-          <a href={link.href} target="_blank" rel={link.rel} style={{ color: 'var(--clay-deep)' }}>
+          <a href={link.href} target="_blank" rel={link.rel} style={{ color: 'var(--clay-deep)' }} {...(link.ev ?? {})}>
             {link.label} →
           </a>
         </p>
