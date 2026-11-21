@@ -167,6 +167,202 @@ export const SPOT_PARKING: Record<string, SpotParking> = {
     sourceUrl: 'https://www.kanifactory.com/faq',
     confirmedAt: '2026-11-17',
   },
+  // ───────── 新宿区（2026-11-19 公式確認・batch-9） ─────────
+  "薬王寺児童館": {
+    "exists": false,
+    "note": "区公式に「駐輪場・駐車場はありませんので、徒歩又は、公共交通機関等をご利用ください」と明記。",
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/kodomo/file03_03_00011.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "落合三世代交流サロン": {
+    "exists": false,
+    "note": "運営団体の公式Q&Aに「駐車場はございません」と明記。建物入口に駐輪スペースあり。",
+    "sourceUrl": "https://www.3sedai.com/%e8%90%bd%e5%90%88%e4%b8%89%e4%b8%96%e4%bb%a3%e4%ba%a4%e6%b5%81%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿中央公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/file15_02_00001.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式「公園内に駐車場はありません。近隣の駐車場をご利用ください。」。公園のFAQは「公園に近い駐車場が都庁にございます」と案内。"
+  },
+  "おとめ山公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/midori02_001013.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式「公園内に一般の駐車場はありません。近隣の駐車場をご利用ください。」。バリアフリーの駐車場が必要な方はみどり公園課へ事前連絡。"
+  },
+  "落合中央公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/midori02_001016.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式の備考「駐車場：×」。"
+  },
+  "みなみもと町公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/midori05_001015.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式の備考「駐車場：☓」。"
+  },
+  "北新宿公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/midori01_001031.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式「園内に駐車場はありません。車での来園はご遠慮ください。」"
+  },
+  "鶴巻南公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/seikatsu/midori01_001016.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式の備考「駐車場：×」。"
+  },
+  "白銀（しろがね）公園": {
+    "exists": false,
+    "sourceUrl": "https://www.city.shinjuku.lg.jp/kanko/midori01_001006.html",
+    "confirmedAt": "2026-11-19",
+    "note": "公式の備考「駐車場：×」。"
+  },
+  "戸山公園": {
+    "exists": false,
+    "sourceUrl": "https://www.tokyo-park.or.jp/park/toyama/",
+    "confirmedAt": "2026-11-19",
+    "note": "公式「当公園には駐車場はございません。」"
+  },
+  "新宿区立漱石山房記念館": {
+    "exists": false,
+    "note": "公式「身障者用以外の駐車場はございません。公共交通機関をご利用ください。」（身障者用駐車場は1台）",
+    "sourceUrl": "https://soseki-museum.jp/user-guide/usage/",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿コズミックスポーツセンター": {
+    "exists": true,
+    "fee": "30分まで無料、以降30分ごとに100円（現金のみ）",
+    "note": "地下2階。車両制限は重量1.5t・高さ2.2m・幅1.8m・全長4.9m以下。当館利用者以外の駐車は不可。22:15以降は出庫できない。",
+    "sourceUrl": "https://www.regasu-shinjuku.or.jp/?p=667",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立新宿スポーツセンター": {
+    "exists": true,
+    "capacity": 17,
+    "fee": "60分300円（以降30分ごとに150円）",
+    "note": "車両制限は車高2.4m・車長4.7m・車幅1.7m・重量1.5t以下。公式は台数に限りがあるため公共交通機関の利用を案内。",
+    "sourceUrl": "https://www.shinjuku-sportscenter.jp/",
+    "confirmedAt": "2026-11-19"
+  },
+  "東京都庁 展望室": {
+    "exists": true,
+    "hours": "第一本庁舎駐車場 入口8:00（公園通り）/8:30（都庁通り）〜21:30、出口〜22:00",
+    "fee": "最初の1時間は30分ごと150円、1時間以降は30分ごと250円（当日上限2,000円）",
+    "note": "第一本庁舎駐車場（高さ制限2.2m）。年末年始（12/29〜31、1/2・1/3）と庁舎点検日は休業。第二本庁舎駐車場は土日祝休業。",
+    "sourceUrl": "https://www.zaimu.metro.tokyo.lg.jp/tochousha/goannai/shisetsu",
+    "confirmedAt": "2026-11-19"
+  },
+  "日本オリンピックミュージアム": {
+    "exists": false,
+    "note": "公式「日本オリンピックミュージアムには駐車場及び乗降スペースはございません。お越しの際は、公共交通機関のご利用をお願いします。」",
+    "sourceUrl": "https://japan-olympicmuseum.jp/jp/access/",
+    "confirmedAt": "2026-11-19"
+  },
+  "平和祈念展示資料館": {
+    "exists": false,
+    "note": "公式「駐車場はありません。近隣の駐車場をご利用ください。」",
+    "sourceUrl": "https://www.heiwakinen.go.jp/goriyou/faq/",
+    "confirmedAt": "2026-11-19"
+  },
+  "SOMPO美術館（ソンポびじゅつかん）": {
+    "exists": false,
+    "note": "公式「美術館専用の駐車場はございません」。隣接する損保ジャパン本社ビルの地下5階に有料駐車場（30分400円・高さ2.1m・幅2.5m・長さ6mまで、台数に限り）。",
+    "sourceUrl": "https://www.sompo-museum.org/faq/",
+    "confirmedAt": "2026-11-19"
+  },
+  "東京オペラシティ アートギャラリー": {
+    "exists": true,
+    "fee": "30分300円（東京オペラシティB2F時間貸駐車場）",
+    "note": "アートギャラリーの公式には記載なし。同じ東京オペラシティタワーのNTTインターコミュニケーション・センター［ICC］の来館案内の記載による。",
+    "sourceUrl": "https://www.ntticc.or.jp/ja/about/visit/",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立こども図書館": {
+    "exists": false,
+    "note": "公式（中央図書館の案内）に「駐車場 なし」。駐輪場は正門から直進し校庭右手側（同じ建物の中央図書館の案内）。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/chuo/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立四谷図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は区民センター正面入り口付近。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/yotsuya/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立鶴巻図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」「駐輪場 なし」。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/tsurumaki/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立西落合図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は図書館敷地内の入り口付近。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/nishiochiai/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立戸山図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は正面入り口左手のブックポスト横。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/toyama/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立北新宿図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は正門を入ったピロティ。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/kitashinjuku/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立中町図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」「駐輪場 なし」。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/nakamachi/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立角筈図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」「駐輪場 なし」。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/tsunohazu/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立大久保図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は正面入り口左手のブックポスト横。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/okubo/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "新宿区立下落合図書館": {
+    "exists": false,
+    "note": "公式に「駐車場 なし」。駐輪場は正面入り口左奥。",
+    "sourceUrl": "https://www.library.shinjuku.tokyo.jp/facility/shimoochiai/index.html",
+    "confirmedAt": "2026-11-19"
+  },
+  "しゅみの森 東新宿店": {
+    "exists": false,
+    "note": "公式に「駐車場 なし（近隣コインパーキングをご利用ください）／駐輪場あり」。",
+    "sourceUrl": "https://www.shuminomori.jp/",
+    "confirmedAt": "2026-11-19"
+  },
+  "べるべるパーク新宿本店": {
+    "exists": false,
+    "note": "公式FAQに「専用駐車場および提携駐車場のご用意はございません。お近くのコインパーキングをご利用ください。」",
+    "sourceUrl": "https://www.pasela.co.jp/mamakai/beruberu-park/faq/",
+    "confirmedAt": "2026-11-19"
+  },
+  "明治神宮外苑アイススケート場": {
+    "exists": true,
+    "capacity": 9,
+    "hours": "24時間",
+    "fee": "5:00〜21:00は1時間600円・以後30分ごとに300円／21:00〜5:00は2時間400円・以後1時間ごとに100円",
+    "note": "障がい者専用1台を含む9台。公式FAQに「駐車可能台数が9台と少ないので出来るだけ公共の交通機関をご利用ください」、割引・提携駐車場なし。周辺の絵画館駐車場は5:30〜21:00・普通車1日1回2,000円（日曜・祝日は交通規制の場合あり）。",
+    "sourceUrl": "https://meijijingugaien-iceskating.com/access/",
+    "confirmedAt": "2026-11-19"
+  },
 };
 
 /**
