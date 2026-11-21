@@ -26,7 +26,7 @@ seoRelated: shougakkou-nyugaku-junbi-kanzen-list
 legacyHero: /hero/classroom-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜ランドセル選びの早見表
 

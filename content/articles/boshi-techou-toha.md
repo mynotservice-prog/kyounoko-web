@@ -24,7 +24,7 @@ lede: >-
 legacyHero: /hero/commerce-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年9月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年9月
 
 ## 結論｜母子手帳の基本
 
