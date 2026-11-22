@@ -14,6 +14,7 @@ import {
   type ChainCategory,
 } from '@/lib/station-restaurants';
 import { hotpepperShopHref } from '@/lib/reservation-cta';
+import { affiliateClickAttrs } from '@/lib/affiliate-placement';
 import {
   getIndieRestaurantsByStation,
   isHotpepperStation,
@@ -644,7 +645,13 @@ export default async function StationConditionPage({ params }: Props) {
                           const { href, affiliate } = hotpepperShopHref(r.url);
                           return (
                             <p style={{ margin: '8px 0 0', fontSize: 13, fontWeight: 700 }}>
-                              <a href={href} target="_blank" rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'} style={{ color: 'var(--clay-deep)' }}>
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'}
+                                style={{ color: 'var(--clay-deep)' }}
+                                {...(affiliate ? affiliateClickAttrs('station-condition-shops', 'hotpepper-shop') : {})}
+                              >
                                 ホットペッパーで店舗情報・予約を見る →
                               </a>
                             </p>
