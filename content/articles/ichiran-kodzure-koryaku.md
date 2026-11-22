@@ -8,6 +8,9 @@ publishedAt: '2026-07-23'
 updatedAt: '2026-10-17'
 hero: /photos/ichiran-okosama-ramen-hikaku.webp
 heroAlt: 一蘭のお子様ラーメンと大人の天然とんこつラーメンの比較。お子様ラーメンは半分量で赤い秘伝のたれ不使用（写真提供：株式会社一蘭）
+sponsor: 株式会社一蘭
+sponsorUrl: https://ichiran.com/
+sponsorDisclosure: この記事は株式会社一蘭の協力（公式写真・イラストのご提供、掲載内容のご確認）を受けて制作したタイアップ記事（広告）です。
 area: all
 quickInfo:
   ageRanges:
