@@ -1129,7 +1129,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
             {(article.sponsor || hasAffiliate || (article.photoProviders && article.photoProviders.length > 0)) && (
               <div style={{ margin: '12px 0 16px' }}>
                 {article.sponsor && (
-                  <PRBadge text={`この記事は${article.sponsor}から対価を受けて制作したタイアップ記事（広告）です。`} />
+                  <PRBadge
+                    text={
+                      article.sponsorDisclosure ??
+                      `この記事は${article.sponsor}から対価を受けて制作したタイアップ記事（広告）です。`
+                    }
+                  />
                 )}
                 {hasAffiliate && <PRBadge />}
                 {article.photoProviders && article.photoProviders.length > 0 && (

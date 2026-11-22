@@ -52,6 +52,7 @@ import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getCatalogItems } from '@/lib/items-catalog';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 import { hotpepperShopHref } from '@/lib/reservation-cta';
+import { affiliateClickAttrs } from '@/lib/affiliate-placement';
 import { getStationPr } from '@/lib/pr-placements';
 import { PrCard } from '@/components/pr/PrCard';
 
@@ -744,6 +745,7 @@ export default async function StationPage({ params }: Props) {
                                 href={href}
                                 target="_blank"
                                 rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'}
+                                {...(affiliate ? affiliateClickAttrs('station-shops', 'hotpepper-shop') : {})}
                               >
                                 ホットペッパーで店舗情報・予約を見る →
                               </a>
