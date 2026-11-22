@@ -63,8 +63,19 @@ import { getAreaName } from '@/lib/area';
 import { getTempClosure } from '@/lib/spot-temp-closed';
 import { getSpotHours } from '@/lib/spot-hours';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
+import { getSpotSponsor } from '@/lib/pr-placements';
+import { PRBadge } from '@/components/affiliate/PRBadge';
 
 export const revalidate = 86400;
+
+/**
+ * 構造化データ（JSON-LD）を <script> に埋め込むための文字列化。
+ * 口コミのニックネーム・本文など利用者の入力が入るので、"<" を < に置き換えて
+ * 「</script>」で要素が閉じられないようにする（JSON としての中身は変わらない）。
+ */
+function toJsonLdHtml(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -259,6 +270,9 @@ export default async function SpotPage({ params }: Props) {
 
   // 改修等による一時休館（期間が明ければ自動で通常表示に戻る）。恒久閉館とは分けて出す。
   const tempClosure = getTempClosure(spot.name);
+
+  // 有償PRの広告主本人の施設ページか（lib/pr-placements.ts の掲載期間中だけ。期間が過ぎれば出ない）。
+  const spotSponsor = getSpotSponsor(slug);
 
   // 情報の鮮度（最終確認日）。未確認なら「未確認」と正直に出す（推測日を出さない）。
   const freshness = getSpotFreshness(spot);
@@ -568,10 +582,10 @@ export default async function SpotPage({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlace) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLdHtml(jsonLdPlace) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLdHtml(jsonLdBreadcrumb) }} />
       {jsonLdFaq && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLdHtml(jsonLdFaq) }} />
       )}
 
       <V2Frame header="sub" active="area" backHref="/spots">
@@ -607,6 +621,12 @@ export default async function SpotPage({ params }: Props) {
               {location && stationWalkLabel && <span className="sv3-loc-sep">・</span>}
               {stationWalkLabel && <span>{stationWalkLabel}</span>}
             </div>
+          )}
+          {/* 広告主である旨の開示（最初の画面に出す。ステマ規制・編集方針5-4） */}
+          {spotSponsor && (
+            <PRBadge
+              text={`この施設は当サイトの広告主です（${spotSponsor.sponsor}から対価を受けてタイアップ記事を掲載しています）。`}
+            />
           )}
         </div>
 
