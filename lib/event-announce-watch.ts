@@ -382,10 +382,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '冬企画は12月開催（発表は11月下旬〜12月中旬）',
     checkFromMonth: 11,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: 冬・クリスマスは未発表。PR TIMES RSS（company_id=102762）の最新は2026-11-05（Cat Cafe MOFF イオンモール伊達店）、カワスイ名の最新は2026-10-16（ビオトープ再生）のまま。kawa-sui.com トップにも「クリスマス」「冬」の告知なし。冬企画の発表は11月下旬〜12月中旬。',
-    status: 'waiting',
+      '2026-11-23確認: PR TIMES RSS（company_id=102762）に2026-11-20付の「カワスイ冬まつり」リリース。「2026年12月4日(金)～2027年1月31日(日)」と明記されていたので kawasui-fuyu-matsuri-2026 として投入。kawa-sui.com トップにはまだ告知なし。',
+    status: 'added',
+    addedSlug: 'kawasui-fuyu-matsuri-2026',
   },
   {
     venue: 'サンシャイン水族館',
@@ -395,9 +396,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '9月下旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: クリスマス・冬は未発表。aquarium/js/event.js は3件（タチウオの日〜11/15・ざんねんないきもの展３〜11/23・エサカプセル販売）で「クリスマス」「イルミ」なし。全館 js/event.js 39件で該当は展望台のクリスマスキャンドルワークショップ（11/7〜12/31）のみ。',
+      '2026-11-23確認: クリスマス・冬の季節企画は未発表。aquarium/js/event.js に「クリスマス」「イルミ」は0件で、新着はゲームとのコラボ「アビドスアクアリウム」（2026-12-11〜2027-01-17・季節企画ではないので未投入）のみ。全館のクリスマス関連は展望台の2件だけ。',
     status: 'waiting',
   },
 
@@ -466,9 +467,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '12月（クリスマス前後）',
     checkFromMonth: 12,
-    lastChecked: '2026-10-12',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-10-12確認: トピックス最新は2026.10.10（パンプキンカステラ）。前週から2本増えたが2026.10.09の新テニスの王子様コラボ（2026年10月9日〜11月4日）＝秋のコラボで、冬企画ではない。営業カレンダーにも12月の日付は0件。クリスマス関連の投稿は一覧100件中2025.12.18の1本のみで画像パスも /uploads/2025/12/ ＝前年分。2026年版は未発表。前年の初報が2025.12.08・2025.12.18だったことから、この会場は12月に入ってから告知する型と判断し checkFromMonth を10→12に変更（10〜11月の週次確認は空振りする）。',
+      '2026-11-23確認: クリスマス特別演出は未発表。トピックスには Winter Holiday 2026（DQ×FFコラボ・11/14〜11/29、観覧車の特別演出イルミは11/21〜29）が出ているが、ゲームとのコラボで残り6日のため未投入。個別トピックの本文は HTML の <article> を直接読む（WP REST の content は空）。',
     status: 'waiting',
   },
   {
@@ -479,10 +480,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月中旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.11.06「超お得！夜のイマ－シブショー」、その前は11.05・11.03（いずれもチケット関連の重要なお知らせ）。推測URL /event/nostalgic-christmas2026/ は404のまま。前年の初報は11/11＝来週も本命。',
-    status: 'waiting',
+      '2026-11-23確認: お知らせに2026.11.13付で「ノスタルジック・クリスマス」。イベントページは /event/christmas2026 で「2026/11/26(木)-12/25(金)」と明記。seibuen-nostalgic-christmas-2026 として投入。',
+    status: 'added',
+    addedSlug: 'seibuen-nostalgic-christmas-2026',
   },
   {
     venue: '鴨川シーワールド',
@@ -562,9 +564,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（10月・12月）',
     checkFromMonth: 10,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: クリスマス企画の告知はなし（お知らせ 40件・当日申込 16件・定期 4件とも「クリスマス」0件）。当日申込（U2TUCFli7Mic）に「夜間特別開園」「冬のホタル観賞会」（2026年11月28日〜12月20日の土日、2026/11/01更新）があり、adachi-seibutsuen-yakan-hotaru-2026 として投入。手法: https://press.bindcloud.jp/posts?b=<sid>&limit=40 で全件取得（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。',
+      '2026-11-23確認: press.bindcloud.jp の3系統（お知らせ 3U4nEb-MqAqO／当日申込 U2TUCFli7Mic／定期 rXZA2hQCdbJ）とも「クリスマス」「サンタ」「正月」「冬休み」は0件。お知らせ最新は11/18（近隣道路の電気工事）。冬はホタル観賞会（投入済み）のみ。',
     status: 'waiting',
   },
   {
@@ -575,9 +577,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '冬（会期は公式発表待ち）',
     checkFromMonth: 11,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: 公式イベント一覧・トップに冬のイルミネーションの掲載なし（「イルミ」0件。クリスマス関連はクラフト教室のリース作りのみ）。秋の夜散歩は11/29まで。',
+      '2026-11-23確認: /event/ の1・2ページ目とトップに「イルミ」「ウインター」「ビスタ」は0件。冬関連はクラフト教室（11/27・12/12）と Sippo Festa 2026 冬（12/5・6）だけ。',
     status: 'waiting',
   },
   {
@@ -588,9 +590,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '冬（会期は公式発表待ち）',
     checkFromMonth: 11,
-    lastChecked: '2026-11-09',
+    lastChecked: '2026-11-23',
     lastCheckedState:
-      '2026-11-09確認: 公式サイトがメンテナンス中で503（「メンテナンス期間 2026年10月22日（木）8:00 ～ 未定」「セキュリティ対策を優先し、Webサービスを停止」）。会期を公式で確認できないため未投入。',
+      '2026-11-23確認: www.caretta.jp は今も503のメンテナンス画面（期間「2026年10月22日（木）8:00 ～ 未定」）。会期を公式で確認できないため未投入。',
     status: 'waiting',
   },
   {
