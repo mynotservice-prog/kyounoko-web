@@ -111,6 +111,11 @@ export type FileArticleMeta = {
   sponsor?: string;
   /** 提供元の公式サイトURL。本文中の同一ホストへのリンクに rel="sponsored" を付ける。 */
   sponsorUrl?: string;
+  /**
+   * PRバッジの文面（任意）。対価を受けていない協力型のタイアップなど、既定の文面
+   * 「〜から対価を受けて制作したタイアップ記事（広告）です。」が事実と合わないときだけ設定する。
+   */
+  sponsorDisclosure?: string;
 };
 
 export type FileArticleFaq = {
@@ -250,6 +255,10 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     sponsorUrl:
       typeof d.sponsorUrl === 'string' && /^https?:\/\//.test(d.sponsorUrl.trim())
         ? d.sponsorUrl.trim()
+        : undefined,
+    sponsorDisclosure:
+      typeof d.sponsorDisclosure === 'string' && d.sponsorDisclosure.trim()
+        ? d.sponsorDisclosure.trim()
         : undefined,
   };
 
