@@ -3,9 +3,12 @@
 import * as React from 'react';
 import { trackEvent } from '@/lib/analytics';
 import type { ReservationOffer } from '@/lib/reservation-cta';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type ReservationCTAProps = {
   offer: ReservationOffer;
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 /**
@@ -15,10 +18,10 @@ export type ReservationCTAProps = {
  * 最も近い導線なので、結論直後の高インテント位置に置く想定。
  *
  * - 景表法・ステマ規制対応: PR 表記 + rel="sponsored nofollow noopener" を強制。
- * - クリックを GA4 に送る（affiliate_click / provider=valuecommerce）。
+ * - クリックを GA4 に送る（affiliate_click / provider=valuecommerce / placement=置き場所）。
  * - href の健全性は lib 側で検査済みだが、ここでも二重防御で http(s) のみ許可。
  */
-export function ReservationCTA({ offer }: ReservationCTAProps) {
+export function ReservationCTA({ offer, placement }: ReservationCTAProps) {
   if (!/^https?:\/\//i.test(offer.href.trim())) return null;
 
   // 計測用プロバイダ判定: A8リンク(px.a8.net)は 'a8'、それ以外は従来通り 'valuecommerce'。
@@ -44,6 +47,7 @@ export function ReservationCTA({ offer }: ReservationCTAProps) {
           trackEvent('affiliate_click', {
             provider,
             item_id: offer.itemId,
+            placement,
           });
         }}
       >
