@@ -605,19 +605,6 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     price: 'おためしセット ¥1,980前後',
     slugs: ['takuhai-shoku-5sha-hikaku-2026'],
   },
-  // ---- ⑧ シールDEネーム（2026-06-11 追加 / 既存9記事に本文リンク配置済みの承認案件） ----
-  {
-    id: 'a8-seal-de-name',
-    provider: 'a8',
-    href: 'https://px.a8.net/svt/ejp?a8mat=4B5Q81+DLEC1E+5V9K+5YRHE',
-    title: 'シールDEネーム（名前シール・名前スタンプ）',
-    subtitle: '入園準備の名前書きをシール・スタンプで時短。耐水でコップ・お弁当箱もOK',
-    price: '¥1,000前後〜',
-    slugs: [
-      'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
-      'onamae-seal-7sha-hikaku-2026',
-    ],
-  },
   // ---- ⑨ Z会の通信教育（2026-06-16 承認 / 素材ID155 幼児向け・EPC50以上・クリック率5%以上） ----
   {
     id: 'a8-zkai',
