@@ -1207,7 +1207,8 @@ PR #412 とその追加修正（全589駅の台帳更新、対応表の廃止、
 
 ### 実験43の処置の実施（2026-11-25・チェーン記事の作り替えの変更案）— 汚染ではなく処置そのもの
 - 処置3本（`ohsho-kids-menu`・`kurasushi-kids-menu`・`isomaru-suisan-kodzure-koryaku`）の md を、凍結登録と同じ変更案で書き換えた（実験の開始点）。`scripts/check-frozen.mjs` の [A]（凍結記事の md の変更）と、処置記事の本文から出る自動リンクの増減（[D]）に当たる。対照3本は触っていない。
-- 対照の `kurasushi-kids-menu`・`hamasushi-kids-menu`・`matsuya-kodzure-koryaku` のうち、後の2本と処置の `kurasushi-kids-menu` は実験25（R1・観察のみ）で `released` にしていたものを、この実験で凍結に戻した。
+- 処置の `kurasushi-kids-menu`・`hamasushi-kids-menu`（対照）・`matsuya-kodzure-koryaku`（対照）は実験25（R1・観察のみ）で `released` にしていたものを、この実験で凍結に戻した。
+- 描画層（`check-frozen.mjs --force-render`・Node 24）: 全記事の描画リンク 8021→8022。増えた1本は処置 `kurasushi-kids-menu` の新しい節の「ベビーカー」から `babycar-ranking-2026` への本文キーワード自動リンク（処置の一部）。凍結面・比較基準への被リンクの増減はなし。
 
 ### #464（実験42・群の外の中央区）から R1b 対21の処置 `tokyo-station-babyroom` へのリンク1本（作業 2026-11-20・反映予定 2026-11-25・社長の再承認待ち）— 実験26（R1b）・処置群
 - **何を**: `shitsunai-asobi-chuo-tokyo` の関連の一覧に「[東京駅の授乳室](/article/tokyo-station-babyroom)」を足す（#464 の承認時の中身のまま）。`tokyo-station-babyroom` 自体は変えない。
