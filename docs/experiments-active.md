@@ -836,6 +836,19 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **公開前の検査（2026-11-16・この PR）**: `check-fabricated-claims`・`check-internal-links`・`check-parking-claims` は新規0。`check-frozen`（描画層まで・Node 24）は通過。旧記事の「水筒・離乳食・おやつ」を消すと凍結記事（離乳食・おやつ）への自動リンクが消えて落ちたため、旧記事にあった語だけを「雨の日の持ち物」の節に戻した。`check-cross-article-facts` は main の11件から増えるが、この8本が関わるものは別の施設の階・徒歩分を1つにまとめて照合した誤検出（他の記事の古い記述2件＝木場公園・戸山公園は範囲外）
 
 
+### 43. チェーン記事の題と冒頭を「店の設備・可否」が先に来る形に作り替える（処置3本・対照3本・対ごとの比較）（2026-11-25 登録・社長承認 2026-11-25「始めて」（下書きの変更案まで）／**本番反映日: 社長承認後に記入**／判定日は社内の設計書）★対照群あり
+
+設計の正本は社内の `reports/core-update-recovery-2026-11/k2-design.md`（リポジトリが公開のため、割り付けに使った数字・判定の線・判定日は社内に置く）。割り付けの規則・判定の線は割り付けの前に固定した。
+
+- **問い**: 「店名×キッズメニュー」の語が主だったチェーン記事で、題・説明文・冒頭の節を、公式が答えない属性（公式店舗検索の全店集計・公式に記載がない設備の明示）が先に来る形にすると、作り替えない同型の記事よりクリックが戻るか。
+- **割り付け**: 候補を基準週のクリック順に並べて上から2本ずつ対にし、対の中は `sha256("K2-2026-11-25-pair" + 対番号2桁)` の先頭バイトの偶奇で処置・対照を決めた（偶数なら上位側が処置）。
+- **処置（3本・同じ日に1回だけ）**: `ohsho-kids-menu`（対01）・`kurasushi-kids-menu`（対02）・`isomaru-suisan-kodzure-koryaku`（対03）。中身は ①題（title）と metaDescription を店の設備・可否が先に来る形に ②lede と冒頭の結論の段落・結論の箇条書きの先頭に全店集計の数と「公式に記載なし」の設備を置く ③王将・くら寿司は冒頭に全店集計の節（H2）を1つ足す（2026-11-25 に公式店舗検索を全店集計）。キッズメニューの品目・値段の節と体験の節は変えない。磯丸水産は題と metaDescription だけ（本文はもともと全店集計が先に来ている・集計は 2026-09-27 のまま）。updatedAt・内部リンク（明示の `](/`）の本数は変えない。
+- **対照（3本・判定日まで編集しない）**: `rairaitei-kodzure-koryaku`（対01）・`hamasushi-kids-menu`（対02）・`matsuya-kodzure-koryaku`（対03）。事実の訂正だけは可（行ったらこの台帳の「汚染の記録」に書き、その対を主判定から外す）。
+- **外した候補**: 大戸屋（#447・実験14）、`tadokoro-shoten-kodzure-koryaku`（実験12・凍結中）、`akakara-kodzure-koryaku`（実験15・凍結中）、`misdo-kodzure-koryaku`（#461・#491 が同じ記事を触る）。
+- **凍結**: 6本を `frozenSlugs` と `FROZEN_TARGET_SLUGS` に登録した。カットオフは slug ごとに 2026-11-26（`FROZEN_CUTOFF_BY_SLUG`）。既定の 9/25 を当てると、9/25 以降に公開した記事と足したルールからの既存のリンクが登録の時点で消えるため。K3・K4・K1（家族の記述の便）・A1 の対象から外す。
+- **交絡**: 12月のコアアップデート（開始日は未定）と比較の窓が重なる見込み。対ごとの比で読み、対照のない前後比較はしない。年末年始は両群に共通。
+- **ほかの変更案との重なり**: 6本とも、2026-11-25 時点の open な変更案（#461・#486・#487・#491 を含む）と承認台帳の未反映の行が触らない（`git diff --name-only` で確認）。
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -945,7 +958,13 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "rinyuushoku-frozen-gekkabetsu",
     "tokyo-fuwafuwa-park-20",
     "kodomo-kamareta-taisho",
-    "junior-seat-2-3sai-hikaku-15"
+    "junior-seat-2-3sai-hikaku-15",
+    "ohsho-kids-menu",
+    "kurasushi-kids-menu",
+    "isomaru-suisan-kodzure-koryaku",
+    "rairaitei-kodzure-koryaku",
+    "hamasushi-kids-menu",
+    "matsuya-kodzure-koryaku"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -954,8 +973,6 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
   "released": [
     "gusto-kids-menu",
     "sukesan-udon-kodzure-koryaku",
-    "kurasushi-kids-menu",
-    "hamasushi-kids-menu",
     "burger-king-kids-menu",
     "burger-king-kodzure-koryaku",
     "hama-sushi-kodzure-koryaku",
@@ -984,7 +1001,6 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "mos-burger-kids-menu",
     "kushikatsu-tanaka-kodzure-koryaku",
     "steak-miya-kodzure-koryaku",
-    "matsuya-kodzure-koryaku",
     "flying-garden-kodzure-koryaku",
     "yamada-udon-kodzure-koryaku",
     "nakau-kids-menu",
@@ -1188,6 +1204,10 @@ PR #412 とその追加修正（全589駅の台帳更新、対応表の廃止、
 
 
 ## 汚染の記録
+
+### 実験43の処置の実施（2026-11-25・チェーン記事の作り替えの変更案）— 汚染ではなく処置そのもの
+- 処置3本（`ohsho-kids-menu`・`kurasushi-kids-menu`・`isomaru-suisan-kodzure-koryaku`）の md を、凍結登録と同じ変更案で書き換えた（実験の開始点）。`scripts/check-frozen.mjs` の [A]（凍結記事の md の変更）と、処置記事の本文から出る自動リンクの増減（[D]）に当たる。対照3本は触っていない。
+- 対照の `kurasushi-kids-menu`・`hamasushi-kids-menu`・`matsuya-kodzure-koryaku` のうち、後の2本と処置の `kurasushi-kids-menu` は実験25（R1・観察のみ）で `released` にしていたものを、この実験で凍結に戻した。
 
 ### #464（実験42・群の外の中央区）から R1b 対21の処置 `tokyo-station-babyroom` へのリンク1本（作業 2026-11-20・反映予定 2026-11-25・社長の再承認待ち）— 実験26（R1b）・処置群
 - **何を**: `shitsunai-asobi-chuo-tokyo` の関連の一覧に「[東京駅の授乳室](/article/tokyo-station-babyroom)」を足す（#464 の承認時の中身のまま）。`tokyo-station-babyroom` 自体は変えない。
