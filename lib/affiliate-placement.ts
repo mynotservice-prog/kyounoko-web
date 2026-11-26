@@ -26,9 +26,31 @@ export type AffiliatePlacement =
   | 'today-items' // 「あったら便利なもの」
   // --- 駅 /station/[slug]・/station/[slug]/[condition] ---
   | 'station-items' // 駅ページ下部の外食グッズ
+  | 'station-shops' // 駅ページの子連れOK店の「ホットペッパーで店舗情報・予約を見る」（2026-11-21〜）
   | 'station-condition-items' // 条件ページのお助けグッズ
   | 'station-condition-bridge' // 条件ページの幼児食宅配ブリッジ
+  | 'station-condition-shops' // 条件ページの店の一覧のホットペッパー店舗リンク（作り直した面・旧い面の両方。2026-11-21〜）
   // --- その他の一覧・カタログ ---
   | 'category-items' // /category/[slug] の人気商品
   | 'plan-items' // /plan/[id] の「あると便利なもの」
   | 'items-catalog'; // /items のカタログ
+
+/**
+ * Server Component の `<a>` に付ける `affiliate_click` の計測属性（`<a {...affiliateClickAttrs(…)}>`）。
+ *
+ * クリックは components/common/AnalyticsRouteTracker.tsx が `data-ev` を拾って送る
+ * （`data-ev-xxx` がそのままパラメータ xxx になる）。onClick で送る部品（ReservationCTA など）と
+ * 同じ provider・item_id・placement の 3 つを送る。アフィリエイトの計測付きリンクのときだけ付けること。
+ */
+export function affiliateClickAttrs(
+  placement: AffiliatePlacement,
+  itemId: string,
+  provider = 'valuecommerce',
+) {
+  return {
+    'data-ev': 'affiliate_click',
+    'data-ev-provider': provider,
+    'data-ev-item_id': itemId,
+    'data-ev-placement': placement,
+  };
+}

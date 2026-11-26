@@ -111,6 +111,16 @@ export type FileArticleMeta = {
   sponsor?: string;
   /** 提供元の公式サイトURL。本文中の同一ホストへのリンクに rel="sponsored" を付ける。 */
   sponsorUrl?: string;
+  /**
+   * PRバッジの文面（任意）。対価を受けていない協力型のタイアップなど、既定の文面
+   * 「〜から対価を受けて制作したタイアップ記事（広告）です。」が事実と合わないときだけ設定する。
+   */
+  sponsorDisclosure?: string;
+  /**
+   * false にすると、H3 が多いセクションの自動の開閉（wrapDenseH3Sections）をこの記事だけ止める。
+   * 提供元との確認で「全部開いた状態で見せる」と決めた記事などに使う。
+   */
+  bodyAccordion?: boolean;
 };
 
 export type FileArticleFaq = {
@@ -247,9 +257,14 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     heroCredit:
       typeof d.heroCredit === 'string' && d.heroCredit.trim() ? d.heroCredit.trim() : undefined,
     sponsor: typeof d.sponsor === 'string' && d.sponsor.trim() ? d.sponsor.trim() : undefined,
+    bodyAccordion: d.bodyAccordion === false ? false : undefined,
     sponsorUrl:
       typeof d.sponsorUrl === 'string' && /^https?:\/\//.test(d.sponsorUrl.trim())
         ? d.sponsorUrl.trim()
+        : undefined,
+    sponsorDisclosure:
+      typeof d.sponsorDisclosure === 'string' && d.sponsorDisclosure.trim()
+        ? d.sponsorDisclosure.trim()
         : undefined,
   };
 
@@ -1118,7 +1133,10 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
   const rawHtml = await renderMarkdownToHtml(tldr.body);
   const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug, { publishedAt: meta.publishedAt });
   const { html: bodyWithIds, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
-  const bodyHtml = markSponsorLinks(wrapDenseH3Sections(bodyWithIds), meta.sponsorUrl);
+  const bodyHtml = markSponsorLinks(
+    meta.bodyAccordion === false ? bodyWithIds : wrapDenseH3Sections(bodyWithIds),
+    meta.sponsorUrl,
+  );
   const tldrHtml = tldr.sectionMd ? await renderMarkdownToHtml(tldr.sectionMd) : null;
   const readingTimeMin = estimateReadingTime(bodyMd);
   // FAQ回答はプレーンテキストではなく markdown として描画する（太字/リンク等）。
