@@ -66,6 +66,9 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
     if (!Array.isArray(f.sourceUrls) || f.sourceUrls.length === 0) err(slug, n, 'sourceUrls が空');
     for (const u of [f.officialUrl, ...(f.sourceUrls ?? [])]) if (NOT_OFFICIAL.test(String(u))) err(slug, n, `公式でない出典: ${u}`);
     if (!f.fee || !(f.fee.free === true || f.fee.free === false || f.fee.free === null)) err(slug, n, 'fee.free が true/false/null でない');
+    // 有料と書くなら公式の金額があること／無料と書くなら text が「記載なし」でないこと（推測で埋めない・2026-11-27 に錦糸町で19件あった）
+    if (f.fee?.free === false && !/\d/.test(f.fee.text ?? '')) err(slug, n, 'fee.free=false なのに金額が無い（公式に金額が無ければ null）');
+    if (f.fee?.free === true && /記載なし|記載がない/.test(f.fee.text ?? '')) err(slug, n, 'fee.free=true なのに「記載なし」と書いている（null にする）');
     for (const k of TRISTATE) if (!(f[k] === true || f[k] === false || f[k] === null)) err(slug, n, `${k} が true/false/null でない`);
     for (const k of NULLABLE_STR) if (!(f[k] === null || typeof f[k] === 'string')) err(slug, n, `${k} が文字列/null でない`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(f.verifiedAt ?? '')) err(slug, n, 'verifiedAt の書式');
