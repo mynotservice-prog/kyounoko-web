@@ -1,1 +1,661 @@
-[]
+[
+  {
+    "name": "上野恩賜公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区上野公園・池之端三丁目",
+    "lat": 35.715328,
+    "lng": 139.773544,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno",
+    "sourceUrls": [
+      "https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/kouenannai",
+      "https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/access",
+      "https://www.kensetsu.metro.tokyo.lg.jp/jimusho/toubuk/ueno/sisetu",
+      "https://www.tokyo-park.or.jp/park/ueno/",
+      "https://www.tokyo-park.or.jp/park/ueno/facility/"
+    ],
+    "fee": {
+      "free": true,
+      "text": "入園無料（ボート場など一部有料施設あり）"
+    },
+    "ages": null,
+    "hours": "5:00〜23:00（時間外は立入禁止）",
+    "closed": "休園日なし（常時開園。サービスセンター・各施設は年末年始休業）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅から徒歩2分、東京メトロ銀座線・日比谷線上野駅から徒歩4分、京成上野駅から徒歩1分",
+    "notes": "都立公園（東京都建設局の管理）。開園面積約53.9ha。不忍池ボート場は有料（ローボート30分800円、サイクルボート・スワンボート30分1,000円。12〜2月は水曜定休）。園内に動物園・博物館・国際子ども図書館などがある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "恩賜上野動物園",
+    "kind": "other",
+    "place": "mixed",
+    "address": "東京都台東区上野公園9-83",
+    "lat": 35.715878,
+    "lng": 139.772903,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.tokyo-zoo.net/ueno/",
+    "sourceUrls": [
+      "https://www.tokyo-zoo.net/ueno/visitor-info/tickets/index.html",
+      "https://www.tokyo-zoo.net/ueno/visitor-info/infant-care/index.html",
+      "https://www.tokyo-zoo.net/ueno/visitor-info/access/index.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "一般600円・65歳以上300円・中学生200円（都内在住・在学の中学生は無料）・小学6年生まで無料"
+    },
+    "ages": null,
+    "hours": "9:30〜17:00（入園は閉園の1時間前まで）",
+    "closed": "月曜（祝日・振替休日の場合は翌日）、年末年始（12/29〜1/1）。一部の月曜は開園（開園日カレンダー参照）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": true,
+    "directFromStation": null,
+    "accessOfficial": "正門はJR上野駅公園口から徒歩5分、東京メトロ銀座線・日比谷線上野駅から徒歩8分",
+    "notes": "授乳室は園内3か所（東園さるやまキッチン、西園弁天門、西園休憩所内）＋東園総合案内所前に屋外型簡易授乳室。ベビーカー貸出は1台1日500円（現金のみ・正門前ほか。池之端門脇は土日祝のみ）。子ども用トイレは西園の子ども動物園すてっぷ内。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "国立科学博物館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都台東区上野公園7-20",
+    "lat": 35.716393,
+    "lng": 139.776062,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.kahaku.go.jp/",
+    "sourceUrls": [
+      "https://www.kahaku.go.jp/riyou/nyukan-annai/index.html",
+      "https://www.kahaku.go.jp/riyou/kannai-guide/accessibility.html",
+      "https://www.kahaku.go.jp/riyou/access.html",
+      "https://www.kahaku.go.jp/learning/compass/",
+      "https://www.kahaku.go.jp/learning/compass/ticket.php"
+    ],
+    "fee": {
+      "free": false,
+      "text": "常設展 一般・大学生630円、高校生以下と65歳以上は無料。「親と子のたんけんひろば コンパス」は別途要予約で大人・2歳〜小学6年生300円、0〜1歳無料"
+    },
+    "ages": "コンパスは0歳〜小学6年生と保護者（主に4〜6歳向け）",
+    "hours": "9:00〜17:00（特別展は展覧会ごとに異なる）",
+    "closed": "月曜（日・月曜が祝休日の場合は火曜）、年末年始（12/28〜1/1）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": true,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅公園口から徒歩5分、東京メトロ銀座線・日比谷線上野駅から徒歩10分",
+    "notes": "授乳室は日本館地下1階と地球館3階。ベビーカー貸出2台（予約不可）。コンパスは日時指定の予約制・45分入れ替え制で、子どもだけ・大人だけでは利用不可。地球館2階の一部展示室は閉鎖中、地球館地下3階は2026年9月8日から展示改修で閉鎖。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "国立国会図書館国際子ども図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都台東区上野公園12-49",
+    "lat": 35.719219,
+    "lng": 139.773834,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.kodomo.go.jp/",
+    "sourceUrls": [
+      "https://www.kodomo.go.jp/use/date",
+      "https://www.kodomo.go.jp/use/access/access",
+      "https://www.kodomo.go.jp/use/access/child",
+      "https://www.kodomo.go.jp/use/room",
+      "https://www.kodomo.go.jp/about/faq"
+    ],
+    "fee": {
+      "free": true,
+      "text": "入館・資料の閲覧・展示会は無料（複写は有料）"
+    },
+    "ages": "子どもから大人までどなたでも",
+    "hours": "9:30〜17:00",
+    "closed": "月曜、国民の祝日・休日（5/5こどもの日は開館）、年末年始、第3水曜（資料整理休館日）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅公園口から徒歩10分、東京メトロ日比谷線・銀座線上野駅7番出口から徒歩15分",
+    "notes": "レンガ棟1階に休憩・飲食・授乳スペース（ミルク用のお湯あり）、ベビーシートは同スペースと多目的トイレに。子ども用便座あり。「子どものへや」に絵本・読み物。一般用駐車場はなし。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東京国立博物館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都台東区上野公園13-9",
+    "lat": 35.717556,
+    "lng": 139.775543,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.tnm.jp/",
+    "sourceUrls": [
+      "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+      "https://www.tnm.jp/modules/r_free_page/index.php?id=1576",
+      "https://www.tnm.jp/modules/r_free_page/index.php?id=127"
+    ],
+    "fee": {
+      "free": false,
+      "text": "東博コレクション展 一般1,000円・大学生500円、高校生以下および18歳未満は無料（特別展は別料金）"
+    },
+    "ages": null,
+    "hours": "9:30〜17:00（金・土曜などは20:00まで。入館は閉館30分前まで）",
+    "closed": "月曜（祝休日の場合は開館し翌平日休館）、年末休館（2026年は12/26〜12/31）",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅公園口または鶯谷駅南口から徒歩10分、東京メトロ銀座線・日比谷線上野駅から徒歩15分",
+    "notes": "正門プラザに授乳室と託児室。託児サービスは0歳から・有料（0〜1歳2,000円、2歳以上1,000円）・事前予約制（空きがあれば当日可）。混雑時はベビーカーの使用を断る場合あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "台東区立したまちミュージアム",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都台東区上野公園2-1",
+    "lat": 35.709961,
+    "lng": 139.772888,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.taitogeibun.net/shitamachi/",
+    "sourceUrls": [
+      "https://www.taitogeibun.net/shitamachi/kannai/",
+      "https://www.taitogeibun.net/shitamachi/kannai/riyou/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "一般300円・小中高生100円。台東区内在住の高校生相当年齢以下と区内在学の小中高生は無料"
+    },
+    "ages": null,
+    "hours": "9:30〜16:30（入館は16:00まで）",
+    "closed": "月曜（祝休日の場合は翌平日）、12/29〜1/3、特別整理期間",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅不忍口から徒歩5分、東京メトロ銀座線・日比谷線上野駅から徒歩5分",
+    "notes": "旧・下町風俗資料館。改修を経て2025年3月に名称変更しリニューアル。2階に授乳室（利用時は受付に声をかける）。3階に昔の道具体験コーナー。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "池之端児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都台東区池之端2-3-3",
+    "lat": 35.714516,
+    "lng": 139.766922,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kusei/shisetsu/kodomo/jidoukan/ikenohata_jidoukan.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kusei/shisetsu/kodomo/jidoukan/ikenohata_jidoukan.html",
+      "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/shisetsu_asobiba/jidoukan/jidoukan-annai.html",
+      "https://taitoswc.org/facility"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "0〜18歳の児童とその保護者（幼児は保護者同伴）",
+    "hours": "月〜土 9:30〜18:00",
+    "closed": "日曜、祝日、年末年始（12/29〜1/3）。5/5は開館",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東京メトロ千代田線根津駅から徒歩4分",
+    "notes": "区立（台東区社会福祉事業団が運営）。遊戯室・図書室あり。未就学児と保護者向けの「幼児タイム」は館ごとに日程が異なる。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "松が谷児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都台東区松が谷4-15-11",
+    "lat": 35.718555,
+    "lng": 139.786407,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kusei/shisetsu/kodomo/jidoukan/matsugaya_jidoukan.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kusei/shisetsu/kodomo/jidoukan/matsugaya_jidoukan.html",
+      "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/shisetsu_asobiba/jidoukan/jidoukan-annai.html",
+      "https://taitoswc.org/facility"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "0〜18歳の児童とその保護者（幼児は保護者同伴）",
+    "hours": "月〜土 9:30〜18:00",
+    "closed": "日曜、祝日、年末年始（12/29〜1/3）。5/5は開館",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東京メトロ日比谷線入谷駅から徒歩4分",
+    "notes": "区立（台東区社会福祉事業団が運営）。遊戯室・図書室あり。未就学児と保護者向けの「幼児タイム」は館ごとに日程が異なる。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "べるべるパーク上野公園前店",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都台東区上野2-14-30 パセラリゾーツ上野公園前店7F",
+    "lat": 35.710747,
+    "lng": 139.773224,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/",
+    "sourceUrls": [
+      "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人1名につき小学生以下2名まで無料（3人目以降は大人料金の半額）。大人は30分380円（平日）・580円（土日祝）、3時間パック2,980円（平日）・3,980円（土日祝）など"
+    },
+    "ages": "0歳から",
+    "hours": "月・水〜日・祝 10:00〜21:00（最終受付20:00）、火 10:00〜18:00（最終受付17:00）",
+    "closed": null,
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": true,
+    "directFromStation": null,
+    "accessOfficial": "東京メトロ銀座線・日比谷線上野駅C6出口から徒歩1分、JR上野駅不忍口から徒歩3分",
+    "notes": "カラオケパセラ内の有料キッズスペース（カラオケ個室は別フロア）。おむつ・おしり拭き無料、離乳食持ち込み可、ベビーカー置き場あり。2026年12月1日〜2027年1月3日は全日週末料金。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "台東区立清島温水プール",
+    "kind": "pool",
+    "place": "indoor",
+    "address": "東京都台東区東上野6-16-8",
+    "lat": 35.713688,
+    "lng": 139.783112,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.taito-shakyo.com/pool-tk/",
+    "sourceUrls": [
+      "https://www.taito-shakyo.com/pool-tk/pool-guide/",
+      "http://www.taito-shakyo.com/pool_faq/",
+      "https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/kiyoshimapool/oshirase.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "2時間につき大人500円・子ども（中学生まで）200円"
+    },
+    "ages": "満3歳から（3歳未満は利用不可）",
+    "hours": "9:00〜21:00（最終入場20:15）",
+    "closed": "第1・3・5週の月曜（祝日は開館）、年末年始（12/29〜1/3）、保守点検日",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR上野駅から徒歩約10分、東京メトロ銀座線稲荷町駅から徒歩約4〜5分",
+    "notes": "25m×15m・水深最大1.3m（底昇降装置付き）。幼児と保護者枠と個人利用枠で入場条件が異なる。団体利用の時間帯があるため、個人利用できる時間は月間スケジュールで確認。水着等のレンタル各200円。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "西町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区東上野2-23-3",
+    "lat": 35.709141,
+    "lng": 139.779724,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約2,936㎡）。大きな樹木が多く、実のなる木や江戸凧の碑がある。区の遊具一覧（2021年3月更新）ではすべり台・ブランコ・砂場・リンク遊具・鉄棒あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "山伏公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区北上野2-9-7",
+    "lat": 35.71674,
+    "lng": 139.783447,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/mizuasobi.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約1,461㎡）。複合遊具、ミスト遊具（4月下旬〜9月下旬）、スポーツコーナーがある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "御徒町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区台東4-13-3",
+    "lat": 35.706169,
+    "lng": 139.777481,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/mizuasobi.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約3,312㎡）。流れのある池と大きなフジ棚がある。ミスト遊具（4月下旬〜9月下旬）。区の遊具一覧（2021年3月更新）では複合遊具・ブランコ・砂場・ジャングルジム等あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "松葉公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区松が谷1-12-6",
+    "lat": 35.71209,
+    "lng": 139.787048,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約2,972㎡）。大きな複合遊具と広場がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "竹町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区台東4-21-3",
+    "lat": 35.70557,
+    "lng": 139.780273,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約3,732㎡）。複合遊具、小山、広場がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "入谷南公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区松が谷3-23-7",
+    "lat": 35.717163,
+    "lng": 139.785538,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約3,910㎡）。小山とジャングルジムが一体になった大型複合遊具、石の山、広場、砂場、クライミングウォールがある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "小島公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区小島2-9-4",
+    "lat": 35.705521,
+    "lng": 139.783691,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約2,796㎡）。スポーツコーナーと、小さい子向けのゴムチップ敷きの遊具広場がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "谷中清水町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区谷中1-1-32",
+    "lat": 35.720364,
+    "lng": 139.76944,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約738㎡）。回転遊具がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "鶯谷公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区根岸1-3-17",
+    "lat": 35.721161,
+    "lng": 139.779663,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約968㎡）。JR線路沿い。区の遊具一覧（2021年3月更新）ではブランコ・砂場・鉄棒・ジャングルジム等あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "菊屋橋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区元浅草3-20-6",
+    "lat": 35.708706,
+    "lng": 139.786804,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/koenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立公園（約498㎡）。幼児向けの遊具がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東上野児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区東上野5-23-7",
+    "lat": 35.71497,
+    "lng": 139.78215,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立児童遊園（約347㎡）。動物をモチーフにした遊具が多い。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "新坂本児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区北上野2-19-8",
+    "lat": 35.717995,
+    "lng": 139.784576,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立児童遊園（約445㎡）。複合遊具がある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "池之端児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都台東区池之端2-9-8",
+    "lat": 35.7155,
+    "lng": 139.767395,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+    "sourceUrls": [
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/jidoyuenshozaichi.html",
+      "https://www.city.taito.lg.jp/kenchiku/hanamidori/koen/shokai/yuugusyoukai.files/yuguitiranhyou.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区立児童遊園（約303㎡）。園内に都電の車両が置かれている。",
+    "verifiedAt": "2026-11-27"
+  }
+]

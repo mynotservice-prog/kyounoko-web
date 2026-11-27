@@ -9,10 +9,10 @@
  * - 距離は駅の座標（lib/station-coords.json）からの直線距離。徒歩の目安は直線×1.3を道のりとし、
  *   大人 分速80m・子連れ（ベビーカー・幼児の歩き）分速60mで割った概算。
  * - 台帳の施設が STATION_ASOBIBA_MIN 件に満たない駅は配信しない（少ない駅を量産しない）。
+ * - next.config.ts → station-cond-index から読まれるので、lib/spots.ts を import しない（循環で落ちる）。
  */
 import { STATION_ASOBIBA_LEDGER, type AsobibaLedgerFacility } from './station-asobiba-ledger';
 import { getStationCoords, haversineKm } from './all-stations';
-import { getOutingSpotsWithSlug, isSpotIndexable } from './spots';
 import type { FaqItem } from './station-faq';
 
 /** 配信に要る、公式で確かめた施設の最小件数 */
@@ -30,7 +30,7 @@ export type AsobibaFacility = AsobibaLedgerFacility & {
   walkAdult: number;
   /** 子連れの徒歩の目安（分） */
   walkKids: number;
-  /** きょうのこに同じ施設の個別ページがあれば、その slug */
+  /** きょうのこに同じ施設の個別ページがあれば、その slug（lib/station-asobiba-spot-link.ts がページ側で付ける） */
   spotSlug?: string;
 };
 
@@ -60,21 +60,6 @@ export const ASOBIBA_KIND_LABEL: Record<AsobibaLedgerFacility['kind'], string> =
   other: 'そのほか',
 };
 
-const normName = (s: string) => s.replace(/[（(].*?[）)]/g, '').replace(/[\s・　]/g, '').trim();
-
-let spotIndex: Map<string, string> | null = null;
-function findSpotSlug(name: string): string | undefined {
-  if (!spotIndex) {
-    spotIndex = new Map();
-    for (const { slug, spot } of getOutingSpotsWithSlug()) {
-      if (!isSpotIndexable(spot)) continue;
-      const k = normName(spot.name);
-      if (!spotIndex.has(k)) spotIndex.set(k, slug);
-    }
-  }
-  return spotIndex.get(normName(name));
-}
-
 function bandOf(m: number): AsobibaBand {
   if (m <= 300) return '駅前';
   if (m <= 800) return '徒歩圏';
@@ -103,7 +88,6 @@ export function getStationAsobiba(stationSlug: string): StationAsobiba | null {
         band: bandOf(m),
         walkAdult: Math.max(1, Math.round(road / 80)),
         walkKids: Math.max(1, Math.round(road / 60)),
-        spotSlug: findSpotSlug(f.name),
       };
     })
     .filter((f) => f.m <= STATION_ASOBIBA_MAX_M)

@@ -1,1 +1,763 @@
-[]
+[
+  {
+    "name": "わんぱく天国",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区押上一丁目47番8号",
+    "lat": 35.708935,
+    "lng": 139.817307,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kosodate/wanpaku.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/wanpaku.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park17.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "4〜9月 9:00〜18:00／10〜3月 9:00〜17:00（木工室は閉園1時間前まで）",
+    "closed": "12月31日〜1月4日（やすらぎ広場は休園日・時間の制限なし）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "押上駅B3出口から徒歩5分",
+    "notes": "わんぱく砦・わんぱく広場・やすらぎ広場の3ゾーン。大型木製遊具・ターザンロープ・木工室あり、プレーリーダー常駐。入園時に名簿へ記入。未就学児は保護者の同伴が必要。駐車場・駐輪場なし。押上公園（すべり台・砂場）に併設。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "業平公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区業平二丁目3番2号",
+    "lat": 35.706249,
+    "lng": 139.812057,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park15.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park15.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/riyou/mizushisetsu.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園（水施設は7〜9月の9:00〜17:00）",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は押上駅（都営浅草線・京成押上線・東京メトロ半蔵門線）",
+    "notes": "複合遊具・ぶらんこ・砂場・水施設（流れ）・ボール遊び広場・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "大横川親水公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区吾妻橋三丁目・業平一丁目・東駒形四丁目・横川一丁目ほか",
+    "lat": 35.7074961,
+    "lng": 139.8079259,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park60.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park60.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/riyou/mizushisetsu.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園（業平橋北側は9:30〜17:00、魚つり場は9:00〜17:00）",
+    "closed": "なし（業平橋北側・魚つり場は12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "釣河原ゾーンの最寄りはとうきょうスカイツリー駅・本所吾妻橋駅",
+    "notes": "錦糸町方面まで南北に長い公園。座標は区公式地図の位置。複合遊具・ローラー滑り台・水施設・魚つり場など。2026年4月にパレットプラザゾーンへインクルーシブ遊具広場が開設。じゃぶじゃぶ池（平川橋跡〜横川橋間）は通年だが設備不具合で流水が止まる場合あり。魚つり場はリニューアル工事の案内あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区東駒形四丁目18番21号",
+    "lat": 35.706669,
+    "lng": 139.806152,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park12.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park12.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は都営浅草線本所吾妻橋駅、都営バス「東駒形三丁目」",
+    "notes": "複合遊具・ジャングルジム・ぶらんこ・回転遊具（インクルーシブ遊具）・砂場・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川さんかく公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区横川五丁目9番31号",
+    "lat": 35.705463,
+    "lng": 139.817932,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park64.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park64.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "区内循環バス南部ルート「本所警察署・本所防災館入口」（平日は「すみだ保健子育て総合センター・横川コミュニティ会館前」にも停車）",
+    "notes": "複合遊具・砂場・健康器具・トイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川東公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区横川五丁目2番8号",
+    "lat": 35.703003,
+    "lng": 139.817505,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park41.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park41.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営バス「太平四丁目」",
+    "notes": "複合遊具・ぶらんこ・ジャングルジム・シーソー・砂場・健康器具・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "隅田公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区向島一丁目・二丁目・五丁目",
+    "lat": 35.7120164,
+    "lng": 139.803566,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park33.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park33.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/seibi/sumidakouendai2ki.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は都営浅草線本所吾妻橋駅、東武スカイツリーラインとうきょうスカイツリー駅",
+    "notes": "墨田区側の隅田公園。座標は区公式地図の位置。複合遊具・ぶらんこ・砂場・ボール遊び広場・魚釣り場・駐車場など。一部を指定管理者が管理。第2期再整備（日本庭園周辺）は2024年度末にリニューアルオープン済み。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "京島西公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区京島一丁目22番3号",
+    "lat": 35.715698,
+    "lng": 139.818665,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park37.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park37.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は京成押上線京成曳舟駅、東武スカイツリーライン曳舟駅",
+    "notes": "ぶらんこ・すべり台・砂場・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ひきふねどんぐり公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区京島一丁目7番3号",
+    "lat": 35.716717,
+    "lng": 139.819016,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/hikifunedonguri.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/hikifunedonguri.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は京成押上線京成曳舟駅、東武スカイツリーライン曳舟駅",
+    "notes": "複合遊具・砂場。面積約560平方メートルの小さな公園。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "曳舟さくら公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区京島一丁目40番1号",
+    "lat": 35.718967,
+    "lng": 139.819962,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park42.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park42.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は京成押上線京成曳舟駅、東武スカイツリーライン曳舟駅",
+    "notes": "複合遊具・ぶらんこ・すべり台・鉄棒・砂場・健康器具・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "京島南公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区京島二丁目20番17号",
+    "lat": 35.712963,
+    "lng": 139.821991,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park28.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park28.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "区内循環バス北東部ルート「下町人情キラキラ橘商店街入口」、都営バス「文花三丁目」",
+    "notes": "すべり台・複合遊具・ブランコ・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "あずま百樹園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区文花一丁目19番4号",
+    "lat": 35.710419,
+    "lng": 139.824265,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park19.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park19.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/riyou/mizushisetsu.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園（水施設は7〜9月の9:00〜17:00）",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は東武亀戸線小村井駅",
+    "notes": "2025年2月9日にリニューアルオープン。高さ634cmの遊具「二重らせんタワー」・かごブランコ・鉄棒・水施設（ポップアップ噴水）・バリアフリートイレ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "文花宮前橋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区文花一丁目32番11号",
+    "lat": 35.70874,
+    "lng": 139.823792,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park40.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park40.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄り駅は東武亀戸線小村井駅",
+    "notes": "複合遊具・ぶらんこ・すべり台・シーソー・砂場・バリアフリートイレ。文花児童館が隣接。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "さくら橋コミュニティセンター",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区向島二丁目3番8号",
+    "lat": 35.713688,
+    "lng": 139.805969,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/sakurabasi.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/sakurabasi.html",
+      "https://fukushi.unchusha.com/sakurabashi/",
+      "https://fukushi.unchusha.com/sakurabashi/overview.html",
+      "https://fukushi.unchusha.com/sakurabashi/otayori/2026%E5%B9%B4%E5%BA%A6%E4%B9%B3%E5%B9%BC%E5%85%90%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "0〜18歳の子どもと保護者",
+    "hours": "平日 9:00〜20:00／土日祝 9:00〜19:00（プログラムにより変わる場合あり）",
+    "closed": "年末年始（12月29日〜1月3日）、ほかに館内整理日あり",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武線とうきょうスカイツリー駅から7分、都営浅草線本所吾妻橋駅から7分",
+    "notes": "児童館機能の施設。体育室・図書室・遊戯室・音楽室など。乳幼児室（小学生未満が開館中いつでも利用可・授乳スペースあり）、1階だれでもトイレにおむつ替えスペース、ミルク用のお湯あり。乳幼児クラス活動は年度ごとの登録制。ひととき預かりあり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "文花児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区文花一丁目32番11号",
+    "lat": 35.70874,
+    "lng": 139.823792,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/bunka.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/bunka.html",
+      "https://fukushi.unchusha.com/bunka/",
+      "https://fukushi.unchusha.com/bunka/overview.html",
+      "https://fukushi.unchusha.com/bunka/otayori/2026%E5%B9%B4%E5%BA%A6%E4%B9%B3%E5%B9%BC%E5%85%90%E8%A6%AA%E5%AD%90%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "0〜18歳",
+    "hours": "平日 9:00〜20:00／土日祝 9:00〜19:00",
+    "closed": "年末年始（12月29日〜1月3日）、月1回の館内整理日",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武亀戸線小村井駅から8分、バス停「柳島」「十間橋」",
+    "notes": "運営者の表記は「フレンドリープラザ文花児童館」。体育室・図書室・ゲーム室・図工室・乳児室・幼児室など。授乳コーナー・おむつ替えスペース・幼児用トイレあり。エレベーターなし、ベビーカーは1階で預かり。乳幼児は保護者の付き添いが必要。文花宮前橋公園の横。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東向島児童館分館「キラむこ」",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区京島一丁目44番21号（京成曳舟駅高架下）",
+    "lat": 35.719296,
+    "lng": 139.820908,
+    "geoSource": "gsi",
+    "officialUrl": "https://r.goope.jp/kiramuko-bunkan",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/higamuko_bunkan.html",
+      "https://r.goope.jp/kiramuko-bunkan/free/goriyouniatatte",
+      "https://r.goope.jp/kiramuko-bunkan/menu",
+      "https://r.goope.jp/kiramuko-bunkan/about"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料"
+    },
+    "ages": "小学6年生までの子どもと保護者（区内・区外とも）",
+    "hours": "9:00〜18:00",
+    "closed": "月1回の館内整理日、年末年始（12月29日〜1月3日）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "京成曳舟駅の八広方面口改札を出て連絡通路エスカレーター下（明治通り沿い）",
+    "notes": "すくすくルーム（未就学児親子専用・ボールプールやジャングルジム）とわくわくルーム（小学生向けアスレチック・クライミングウォール）。土日祝のすくすくルームは1時間ごとの入替制で予約優先（前日9時から電話・館内受付）。わくわくルームは小学生の少ない時間帯のみ3歳以上も保護者付き添いで利用可。館内は靴下着用、飲食不可。授乳室は職員に声かけ、各トイレにおむつ交換台。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川コミュニティ会館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区横川五丁目9番1号",
+    "lat": 35.704929,
+    "lng": 139.816772,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.yokokomi.ashita-ba.co.jp/index.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/tamokuteki/communitykaikan/yokokawa/index.html",
+      "https://www.yokokomi.ashita-ba.co.jp/index.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料（児童室。行事により材料費等の実費あり）"
+    },
+    "ages": "0〜18歳の児童と保護者（幼児は保護者の付き添いが必要）",
+    "hours": "児童室 月〜土 9:00〜19:00（18時以降は中高生優先）／日祝 9:00〜17:00",
+    "closed": "毎月第3木曜日（館内整理日）、年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営地下鉄・京成線押上駅から徒歩12分、バス停「横川三丁目」から徒歩5分",
+    "notes": "児童室・図書室・学童クラブの複合施設（都営アパート1〜4階）。児童室に遊戯室（積木など幼児向け）・体育室・音楽室・グループ室。18時以降の小学生は保護者の同伴が必要。乳幼児向けのおたより「プチよこかわ通信」を毎月掲載。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "文花子育てひろば",
+    "kind": "kosodate-hiroba",
+    "place": "mixed",
+    "address": "東京都墨田区文花一丁目20番7号",
+    "lat": 35.710411,
+    "lng": 139.822327,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kosodate/kosodatehiroba/kosodate_hiroba.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/kosodatehiroba/kosodate_hiroba.html",
+      "https://fukushi.unchusha.com/bunka-kosodate/"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "乳幼児と保護者",
+    "hours": "火〜日 9:30〜17:30",
+    "closed": "月曜、祝日、年末年始（日曜と祝日が重なる日は開室）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武線小村井駅から徒歩7分、都営バス「十間橋通り」から徒歩3分",
+    "notes": "おもちゃや絵本のある室内ひろばと、ゴムチップ敷きの小さな庭。授乳室・おむつ交換室・食事ができる部屋あり。駐輪場・ベビーカー置場あり。子育て相談・講座、一時預かり「ひととき保育」あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "墨田区子育て支援総合センター 交流室",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都墨田区横川五丁目7番4号 すみだ保健子育て総合センター4階",
+    "lat": 35.704685,
+    "lng": 139.818054,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/asobiba/kouryuusitu.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/asobiba/kouryuusitu.html",
+      "https://www.city.sumida.lg.jp/eventcalendar/kodomo_kosodate/zanteikaihou.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/kosodate_sougouc/index.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "墨田区在住の未就学児と保護者",
+    "hours": "「親子であ・そ・ぼ」（予約不要）は火・水・木 10:00〜16:00",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "墨田区民のみ対象。多くの事業は事前予約制。混雑時は入室を断る場合あり。2027年1月12日から8月末（予定）まで、事務室拡張工事のため同センター3階305会議室へ仮移転し、「親子であ・そ・ぼ」は休止。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ひきふね図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都墨田区京島1-36-5",
+    "lat": 35.716995,
+    "lng": 139.818939,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.library.sumida.tokyo.jp/libguide?pid=28",
+    "sourceUrls": [
+      "https://www.library.sumida.tokyo.jp/libguide?pid=28",
+      "https://www.library.sumida.tokyo.jp/maphikifune?pid=129",
+      "https://www.library.sumida.tokyo.jp/info?pid=5337"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "月〜土 9:00〜21:00（こどもとしょしつは9:00〜18:00）／日祝 9:00〜17:00",
+    "closed": "第3木曜日（館内整理日）、年末年始、特別整理期間",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "京成曳舟駅西改札口から徒歩3分、曳舟駅から徒歩5分",
+    "notes": "2階にこどもとしょしつ・はだしのコーナー。図書館システム更新のため2026年12月17日〜2027年1月4日は全館休館。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "すみだ水族館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都墨田区押上一丁目1番2号 東京スカイツリータウン・ソラマチ5F・6F",
+    "lat": 35.710083,
+    "lng": 139.808609,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.sumida-aquarium.com/",
+    "sourceUrls": [
+      "https://www.sumida-aquarium.com/about/access/",
+      "https://www.sumida-aquarium.com/about/price/",
+      "https://www.sumida-aquarium.com/about/support/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人2,700円・高校生2,000円・中学生小学生1,400円・幼児（3歳以上）900円（一般料金）"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": "なし（年中無休）",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": true,
+    "directFromStation": true,
+    "accessOfficial": "押上（スカイツリー前）駅から直通徒歩5分",
+    "notes": "営業時間は日により異なり、公式サイトのカレンダーで案内。入場受付は閉館1時間前まで。メンテナンスやイベントで入場できない場合あり。ベビー休憩室が各フロアに1か所（授乳室・調乳用浄水給湯つき、授乳室は男性入室不可）。スロープとエレベーターでベビーカーのまま移動できると公式に記載。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "コニカミノルタプラネタリウム天空",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都墨田区押上1丁目1番2号 東京スカイツリータウン・イーストヤード7階",
+    "lat": 35.710083,
+    "lng": 139.808609,
+    "geoSource": "gsi",
+    "officialUrl": "https://planetarium.konicaminolta.jp/tenku/",
+    "sourceUrls": [
+      "https://planetarium.konicaminolta.jp/tenku/access/",
+      "https://planetarium.konicaminolta.jp/tenku/charge/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "一般シート 大人（中学生以上）1,600円・こども（4歳以上）1,000円（オンライン購入）、窓口は大人1,800円・こども1,200円。作品により料金が異なる。4歳未満は席が必要な場合のみチケットが必要"
+    },
+    "ages": null,
+    "hours": "平日 10:30〜22:00／土日祝 9:30〜22:00（上映時間は作品ごと）",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": true,
+    "accessOfficial": "押上駅の東京スカイツリータウン方面改札出口からソラマチ直結、ソラマチ入口から天空まで徒歩約10分",
+    "notes": "上映途中の入退場不可。ヒーリングプラネタリウム作品は未就学児は入場不可。ドーム内は暗く大きな音の演出があると公式が注意。土日祝の10時の回は来館ルートが限られる。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "郵政博物館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都墨田区押上一丁目1番2号 東京スカイツリータウン・ソラマチ9階",
+    "lat": 35.710083,
+    "lng": 139.808609,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.postalmuseum.jp/",
+    "sourceUrls": [
+      "https://www.postalmuseum.jp/guide/open.html",
+      "https://www.postalmuseum.jp/guide/access.html",
+      "https://www.postalmuseum.jp/news/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人300円、小・中・高校生150円"
+    },
+    "ages": null,
+    "hours": "10:00〜17:30（入館は17:00まで）",
+    "closed": "不定休",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "押上（スカイツリー前）駅 地下3階B3出口よりすぐ",
+    "notes": "イーストヤード12番地のエレベーター等で8階へ上がり、8〜10F用エレベーターに乗り換えて9階へ。2026年11月〜2027年2月の休館日を公式の重要なお知らせで告知中。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東京スカイツリー",
+    "kind": "other",
+    "place": "indoor",
+    "address": "東京都墨田区押上1丁目1-2",
+    "lat": 35.710083,
+    "lng": 139.808609,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.tokyo-skytree.jp/",
+    "sourceUrls": [
+      "https://www.tokyo-skytree.jp/ticket/",
+      "https://www.tokyo-skytree.jp/open-hours/",
+      "https://www.tokyo-skytree.jp/floor/guide/",
+      "https://www.tokyo-skytree.jp/ticket/admission/",
+      "https://www.tokyo-skytree.jp/access/public-transport/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "天望デッキ 大人（15歳以上）1,800円〜・こども（6〜14歳）900円〜、天望デッキ＆天望回廊 大人3,000円〜・こども1,500円〜。5歳以下の幼児・6歳以下の未就学児は無料。日により価格が変わり、4F窓口・券売機での購入は1枚500円加算"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": true,
+    "accessOfficial": "押上駅直結",
+    "notes": "営業時間は公式の営業時間カレンダーで案内、最終入場はクローズの1時間前。ベビーケアルーム（おむつ替え・授乳）は1F団体東ロビーと4F正面エントランス内。ベビーカーの貸し出しあり（数に限り）、4Fにベビーカー置き場あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ちきゅうのにわ 東京ソラマチ店",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都墨田区押上1-1-2 東京スカイツリータウン・ソラマチ5階",
+    "lat": 35.710083,
+    "lng": 139.808609,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.fantasy.co.jp/shoplist/shop-2308/",
+    "sourceUrls": [
+      "https://www.fantasy.co.jp/shoplist/shop-2308/",
+      "https://www.fantasy.co.jp/chikyunoniwa/",
+      "https://www.tokyo-solamachi.jp/pdf/floorguide/floorguide_ja.pdf"
+    ],
+    "fee": {
+      "free": false,
+      "text": "有料（運営者の公式ページに料金の掲載なし）"
+    },
+    "ages": null,
+    "hours": "10:00〜21:00",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "イオンファンタジーが運営する屋内の遊び場。東京ソラマチ公式フロアガイドでは5階に「ベビーガーデン」「キッズガーデン」「ゲットガーデン」として掲載。料金・対象年齢・授乳室などの設備は公式で確認できなかったため未記入。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "本所防災館",
+    "kind": "other",
+    "place": "indoor",
+    "address": "東京都墨田区横川4-6-6",
+    "lat": 35.703644,
+    "lng": 139.814804,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html",
+    "sourceUrls": [
+      "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料（見学・体験すべて無料）"
+    },
+    "ages": null,
+    "hours": "9:00〜17:00（入館受付は16:45まで）",
+    "closed": "毎週水曜日・第3木曜日（祝日の場合は直後の平日）、年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "押上駅B1・B2出口から徒歩10分（B1が便利）、JR・半蔵門線錦糸町駅から徒歩10分",
+    "notes": "東京消防庁本所都民防災教育センター。都市型水害・暴風雨体験、消火体験、応急手当などの防災体験ツアーは予約制（空きがあれば予約なしでも可）。体験時は靴下着用、サンダルやかかとの高い靴は不可。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "すみだ郷土文化資料館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都墨田区向島二丁目3番5号",
+    "lat": 35.713982,
+    "lng": 139.805923,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/siryou/kyoudobunka/index.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/siryou/kyoudobunka/sisetuannai/riyou_annai.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/siryou/kyoudobunka/index.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "個人100円、中学生以下無料"
+    },
+    "ages": null,
+    "hours": "9:00〜17:00（入館は16:30まで）",
+    "closed": "毎週月曜日・毎月第4火曜日（祝日の場合は翌平日）、12月29日〜1月2日",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武線とうきょうスカイツリー駅から徒歩7分、都営浅草線本所吾妻橋駅から徒歩8分",
+    "notes": "臨時に休館・開館する場合あり。",
+    "verifiedAt": "2026-11-27"
+  }
+]

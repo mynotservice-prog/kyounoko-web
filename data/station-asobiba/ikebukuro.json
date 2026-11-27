@@ -1,1 +1,817 @@
-[]
+[
+  {
+    "name": "区民ひろば西池袋",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都豊島区西池袋2-37-4 としま産業振興プラザ（イケ・ビズ）2階",
+    "lat": 35.727669,
+    "lng": 139.706528,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/580/kurashi/hiroba/shisetsu/007027.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/580/kurashi/hiroba/shisetsu/007027.html",
+      "https://www.city.toshima.lg.jp/072/kurashi/hiroba/hiroba/007000.html",
+      "https://www.city.toshima.lg.jp/580/suzumidokoro/2507070910.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に個人利用の料金の記載なし"
+    },
+    "ages": "年齢制限なし（乳幼児は保護者の付き添いが必要）",
+    "hours": "9:00〜17:00",
+    "closed": "祝日・年末年始（12月29日〜1月3日）・館ごとの定期休館日（区の休館日一覧で確認）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "子育てひろば・子育てのへや（おままごと・ブロック等の玩具）あり。ベビーカー置き場は1階。個人利用は区内在住者が対象（運営に支障のない範囲で区外在住者も可）。利用には登録が必要（身分証明を持参）。乳幼児は保護者の付き添いが必要。令和9年1〜2月に工事による休館を予定する館あり（区の休館日一覧PDF）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "区民ひろば南池袋",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都豊島区南池袋3-5-12",
+    "lat": 35.723572,
+    "lng": 139.714096,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/580/kurashi/hiroba/shisetsu/007029.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/580/kurashi/hiroba/shisetsu/007029.html",
+      "https://www.city.toshima.lg.jp/072/kurashi/hiroba/hiroba/007000.html",
+      "https://www.city.toshima.lg.jp/580/suzumidokoro/2507070910.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に個人利用の料金の記載なし"
+    },
+    "ages": "年齢制限なし（乳幼児は保護者の付き添いが必要）",
+    "hours": "9:00〜17:00",
+    "closed": "祝日・年末年始（12月29日〜1月3日）・館ごとの定期休館日（区の休館日一覧で確認）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "乳幼児親子向けの子育てプログラム（ベビータイム・おひさまタイム・のりものランド等）を月1回程度実施。個人利用は区内在住者が対象（運営に支障のない範囲で区外在住者も可）。利用には登録が必要（身分証明を持参）。乳幼児は保護者の付き添いが必要。令和9年1〜2月に工事による休館を予定する館あり（区の休館日一覧PDF）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "区民ひろば池袋",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都豊島区池袋4-21-10",
+    "lat": 35.738529,
+    "lng": 139.70871,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/087/kurashi/hiroba/shisetsu/007028.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/087/kurashi/hiroba/shisetsu/007028.html",
+      "https://www.city.toshima.lg.jp/072/kurashi/hiroba/hiroba/007000.html",
+      "https://www.city.toshima.lg.jp/580/suzumidokoro/2507070910.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に個人利用の料金の記載なし"
+    },
+    "ages": "年齢制限なし（乳幼児は保護者の付き添いが必要）",
+    "hours": "9:00〜17:00",
+    "closed": "祝日・年末年始（12月29日〜1月3日）・館ごとの定期休館日（区の休館日一覧で確認）",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "令和5年2月リニューアル、エレベーター付き2階建て。2階に子育て室・授乳室。プラレール遊び（月3回・申込不要）など乳幼児親子向けプログラムあり。駐車場なし。個人利用は区内在住者が対象（運営に支障のない範囲で区外在住者も可）。利用には登録が必要（身分証明を持参）。乳幼児は保護者の付き添いが必要。令和9年1〜2月に工事による休館を予定する館あり（区の休館日一覧PDF）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "区民ひろば朋有",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋2-38-10",
+    "lat": 35.732029,
+    "lng": 139.721313,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/083/kurashi/hiroba/shisetsu/007023.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/083/kurashi/hiroba/shisetsu/007023.html",
+      "https://www.city.toshima.lg.jp/072/kurashi/hiroba/hiroba/007000.html",
+      "https://www.city.toshima.lg.jp/580/suzumidokoro/2507070910.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に個人利用の料金の記載なし"
+    },
+    "ages": "年齢制限なし（乳幼児は保護者の付き添いが必要）",
+    "hours": "9:00〜17:00",
+    "closed": "祝日・年末年始（12月29日〜1月3日）・その他休館日あり（区の休館日一覧で確認）",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "2階は授乳室併設の部屋で、午前中はホールに乗り物を出している。中高生センタージャンプ東池袋と併設。個人利用は区内在住者が対象（運営に支障のない範囲で区外在住者も可）。利用には登録が必要（身分証明を持参）。乳幼児は保護者の付き添いが必要。令和9年1〜2月に工事による休館を予定する館あり（区の休館日一覧PDF）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "区民ひろば目白",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都豊島区目白2-20-26",
+    "lat": 35.722149,
+    "lng": 139.710129,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/077/kurashi/hiroba/shisetsu/1506301029.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/077/kurashi/hiroba/shisetsu/1506301029.html",
+      "https://www.city.toshima.lg.jp/072/kurashi/hiroba/hiroba/007000.html",
+      "https://www.city.toshima.lg.jp/580/suzumidokoro/2507070910.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に個人利用の料金の記載なし"
+    },
+    "ages": "年齢制限なし（乳幼児は保護者の付き添いが必要）",
+    "hours": "9:00〜17:00",
+    "closed": "祝日・年末年始（12月29日〜1月3日）・その他臨時休館あり（毎月のカレンダーで確認）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR目白駅から徒歩8分",
+    "notes": "1階に乳幼児親子向けの子育てルーム。持参の弁当・おやつを食べられる時間あり（家族単位の予約制・8家族まで）。個人利用は区内在住者が対象（運営に支障のない範囲で区外在住者も可）。利用には登録が必要（身分証明を持参）。乳幼児は保護者の付き添いが必要。令和9年1〜2月に工事による休館を予定する館あり（区の休館日一覧PDF）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東部子ども家庭支援センター（親子遊び広場）",
+    "kind": "kosodate-hiroba",
+    "place": "mixed",
+    "address": "東京都豊島区上池袋2-35-22",
+    "lat": 35.737057,
+    "lng": 139.718262,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/265/kosodate/kosodate/shiencenter/001746/annai/006556.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/265/kosodate/kosodate/shiencenter/001746/annai/006556.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に親子遊び広場の料金の記載なし"
+    },
+    "ages": null,
+    "hours": "親子遊び広場は毎日10:00〜17:00",
+    "closed": "年末年始（12月29日〜1月3日）・祝日",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "公式にアクセス案内PDFあり（上池袋1丁目バス停から・北池袋駅から、池袋駅からの地図）",
+    "notes": "ボールプール・木のおもちゃの木育ひろば、0歳児向けの赤ちゃんひろば（ベビーベッド・カーテンで仕切った授乳スペース）、三輪車や砂場のある庭あり。ランチタイム11:30〜13:00・おやつタイム15:00〜15:30は所定の場所で飲食可。ウォーターサーバーあり。一時保育は登録・予約制。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "アーバンスポーツエリア 裏トシマ",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋4-42-16 2階",
+    "lat": 35.727962,
+    "lng": 139.720795,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/601/2606291707.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/601/2606291707.html",
+      "https://www.city.toshima.lg.jp/601/2606161422.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料"
+    },
+    "ages": "区内在住・在学の小中高生（未就学児が利用できるキッズエリアもあり）",
+    "hours": "月・水・金 16:00〜19:00、土日祝 10:00〜17:00（夏・冬・春休み期間は10:00〜17:00）",
+    "closed": "火曜・木曜（長期休み期間と祝日は運営）、年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東京メトロ有楽町線東池袋駅6番出口から徒歩5分",
+    "notes": "2026年7月18日開設。屋内スケートボード・パルクール・ダンス等。スケートボード・ヘルメット・プロテクターの用意あり。初回は保護者同伴か保護者記入の同意書が必要。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "としまキッズパーク",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区東池袋4-42",
+    "lat": 35.727401,
+    "lng": 139.721311,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/454/shisetsu/koen/documents/2009141032.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/454/shisetsu/koen/documents/2009141032.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料（予約制）"
+    },
+    "ages": "小学校低学年まで・障がいのある子ども（保護者同伴）",
+    "hours": "10:00〜16:00（1時間の完全入替制）",
+    "closed": "1月1日〜1月3日、メンテナンス日（不定期）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR池袋駅東口から徒歩15分、東京メトロ有楽町線東池袋駅6番出口から徒歩5分",
+    "notes": "予約サイトから申込み。定員は保護者を含め最大100人。ミニSL（IKEDEN）が走るインクルーシブ公園。雨天・荒天時は急きょ休園あり。駐車場なし。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "としまみどりの防災公園（IKE・SUNPARK）",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区東池袋4-42",
+    "lat": 35.727703,
+    "lng": 139.722095,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/2009031543.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/2009031543.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": "5:00〜22:00",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR池袋駅東口から徒歩15分、東京メトロ有楽町線東池袋駅6番出口から徒歩5分",
+    "notes": "区内最大の芝生広場（約1.7ha）。カフェ併設。駐車場なし。同じ敷地内に、としまキッズパークがある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "南池袋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区南池袋2-21-1",
+    "lat": 35.727917,
+    "lng": 139.714517,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/026.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/026.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": "8:00〜22:00",
+    "closed": "12月31日〜1月3日",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：池袋駅（JR・東京メトロ・東武東上線・西武池袋線）",
+    "notes": "芝生広場が中心。芝生広場は11月9日から令和9年1月中旬まで種まき・養生のため全面閉鎖の予定。テント・ビニールシート・イス等の芝生への持ち込み不可。自転車・ペットは園内に入れない。カフェレストラン併設。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "西池袋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区西池袋3-20-1",
+    "lat": 35.730571,
+    "lng": 139.705544,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/032.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/032.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：池袋駅（JR・東京メトロ・東武東上線・西武池袋線）",
+    "notes": "広場に子供用の遊具あり（平成18年度の改修で設置）。キャッチボール場あり（4〜10月9:00〜18:00、11〜3月9:00〜17:00）。身障者対応トイレは9:00〜16:00。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "上り屋敷公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区西池袋2-14-2",
+    "lat": 35.726443,
+    "lng": 139.705442,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/031.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/031.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：JR目白駅",
+    "notes": "円形の運動広場、パーゴラ付きの砂場と遊具あり。身障者対応トイレは24時間。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "東池袋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区東池袋3-14-1",
+    "lat": 35.731492,
+    "lng": 139.717555,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/023.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/023.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：東京メトロ有楽町線東池袋駅",
+    "notes": "スベリ台などの子供向け遊具と健康遊具あり。身障者対応トイレは9:00〜16:00。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "日出町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区東池袋4-22-1",
+    "lat": 35.727824,
+    "lng": 139.718826,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/025.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/025.html",
+      "https://www.city.toshima.lg.jp/340/2108261057.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：東京メトロ有楽町線東池袋駅",
+    "notes": "ブランコやスベリ台のある広場あり。じゃぶじゃぶ池（親水施設）あり：令和8年度はゴールデンウイーク・5月中旬〜6月中旬の土日・6月中旬〜10月4日の毎日などに稼働（今季の稼働は終了）。オムツ着用での利用不可、未就学児は保護者が見守り。身障者対応トイレは9:00〜16:00。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "南池袋第二公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区南池袋4-8-5",
+    "lat": 35.722565,
+    "lng": 139.71693,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/028.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/028.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：都電雑司が谷駅",
+    "notes": "子ども用の遊具がいくつかあり、末端がスベリ台になった木製遊具あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "池袋第二公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区池袋3-29-4",
+    "lat": 35.735851,
+    "lng": 139.7055,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/038.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/038.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：東京メトロ有楽町線要町駅",
+    "notes": "小さなスベリ台付きのコンビネーション遊具あり。池袋図書館に隣接。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "池袋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区池袋4-22-9",
+    "lat": 35.737947,
+    "lng": 139.708505,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/040.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/040.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：池袋駅（JR・東京メトロ・東武東上線・西武池袋線）",
+    "notes": "複合遊具あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "御嶽北公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都豊島区池袋3-44-20",
+    "lat": 35.737214,
+    "lng": 139.706105,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.toshima.lg.jp/340/shisetsu/koen/037.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/340/shisetsu/koen/037.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式ページに料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "最寄駅：東京メトロ有楽町線要町駅",
+    "notes": "中央に多目的広場。小さな子ども向けにゾウのスベリ台や鉄棒あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "豊島区立中央図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋4-5-2 ライズアリーナビル4階・5階",
+    "lat": 35.726265,
+    "lng": 139.718887,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.library.toshima.tokyo.jp/contents?pid=40",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/141/shisetsu/shogaigakushu/001.html",
+      "https://www.library.toshima.tokyo.jp/contents?pid=40",
+      "https://www.library.toshima.tokyo.jp/contents?pid=91"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし"
+    },
+    "ages": null,
+    "hours": "平日10:00〜22:00、土日祝10:00〜18:00",
+    "closed": "第2月曜、第4金曜（祝休日を除く）、特別整理期間、年末年始",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "児童用閲覧席37席、児童コーナーにじゅうたん敷きの閲覧スペースあり。授乳室あり。4階の多目的トイレにベビーベッド・ベビーチェア、5階にベビーチェア。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "豊島区立池袋図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都豊島区池袋3-29-10",
+    "lat": 35.736069,
+    "lng": 139.706024,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.library.toshima.tokyo.jp/contents?pid=89",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/141/shisetsu/shogaigakushu/005.html",
+      "https://www.library.toshima.tokyo.jp/contents?pid=89",
+      "https://www.library.toshima.tokyo.jp/contents?pid=100"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし"
+    },
+    "ages": null,
+    "hours": "平日9:00〜20:00、土日祝9:00〜18:00",
+    "closed": "第1月曜、第4金曜（祝休日を除く）、特別整理期間、年末年始",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "児童用閲覧席20席、児童コーナーにじゅうたん敷きの閲覧スペースあり。エレベーターは設置なし。多目的トイレは1階。池袋第二公園に隣接。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "豊島区立池袋スポーツセンター（温水プール）",
+    "kind": "pool",
+    "place": "indoor",
+    "address": "東京都豊島区上池袋2-5-1 健康プラザとしま11階",
+    "lat": 35.734627,
+    "lng": 139.715485,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.toshima.lg.jp/501/bunka/sports/sports/003418/003496.html",
+    "sourceUrls": [
+      "https://www.city.toshima.lg.jp/501/bunka/sports/sports/003418/003496.html",
+      "https://www.city.toshima.lg.jp/501/kuse/shisetsu/2506091113.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "2時間 一般400円・小中学生200円（超過は1時間ごとに一般200円・小中学生100円）"
+    },
+    "ages": "満3歳（オムツがとれていること）から",
+    "hours": "平日・土曜（祝日含む）8:30〜22:00（利用は21:45まで）、日曜8:30〜21:00（利用は20:45まで）",
+    "closed": "毎月第2月曜（祝日の場合は翌週の月曜）、12月30日〜1月3日、6月と11月の中旬に各5日間の長期休館",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "異性の更衣室の利用は原則6歳まで。指定管理者（としま未来創造パートナーズ）が運営。休館日以外にも個人利用できない日あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "池袋防災館",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都豊島区西池袋2-37-8",
+    "lat": 35.72813,
+    "lng": 139.706833,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html",
+    "sourceUrls": [
+      "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "入館料無料"
+    },
+    "ages": "体験により対象あり（地震コーナー満3歳以上、VR防災体験小学2年生以上、消火コーナー小学3年生以上、救急コーナー小学4年生以上）",
+    "hours": "9:00〜17:00（金曜は21:00まで）",
+    "closed": "毎月第1火曜・第3火曜・第3火曜の翌日（祝日の場合は直後の平日）、年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "池袋駅（西口（南）・メトロポリタン口）から徒歩5分",
+    "notes": "東京消防庁の施設。防災体験ツアー（基本ツアー1時間40分・ショートツアー50分・金曜のナイトツアー）はWeb予約可（利用5日前まで。4日以内は電話）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "サンシャイン水族館",
+    "kind": "museum",
+    "place": "mixed",
+    "address": "東京都豊島区東池袋3-1 サンシャインシティ ワールドインポートマートビル屋上",
+    "lat": 35.727844,
+    "lng": 139.719986,
+    "geoSource": "gsi",
+    "officialUrl": "https://sunshinecity.jp/aquarium/",
+    "sourceUrls": [
+      "https://sunshinecity.jp/aquarium/ticket/",
+      "https://sunshinecity.jp/aquarium/access/",
+      "https://sunshinecity.jp/aquarium/information/child.html",
+      "https://sunshinecity.jp/aquarium/information/faq.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人（高校生以上）2,600〜3,200円、小・中学生1,300円、幼児（4歳以上）800円。3歳以下はチケット不要。入場日により大人料金が異なる"
+    },
+    "ages": null,
+    "hours": "日により異なる（公式の営業カレンダーで確認）",
+    "closed": "公式の営業カレンダーで確認（2027年1月14日は休館）",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": true,
+    "directFromStation": null,
+    "accessOfficial": "池袋駅東口（35番出口）からサンシャインシティ入口まで徒歩約8分（サンシャインシティ公式）",
+    "notes": "本館2階にベビールーム（オムツ替えベッド・授乳個室・ミルク用のお湯）。ベビーカーは持ち込み可だが通路が狭く、入口にベビーカー置場あり。館内でのベビーカー貸出はなし。土日祝・特定日は入場制限の場合あり（日時指定の事前予約を推奨）。再入場不可。屋外エリアあり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "サンシャイン60展望台 てんぼうパーク",
+    "kind": "other",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋3-1 サンシャインシティ サンシャイン60ビル60階",
+    "lat": 35.727703,
+    "lng": 139.720245,
+    "geoSource": "gsi",
+    "officialUrl": "https://sunshinecity.jp/observatory/",
+    "sourceUrls": [
+      "https://sunshinecity.jp/observatory/ticket/",
+      "https://sunshinecity.jp/observatory/information/",
+      "https://sunshinecity.jp/observatory/access/",
+      "https://sunshinecity.jp/information/guide_baby.html"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人（高校生以上）平日700円・土日祝900円、小・中学生 平日500円・土日祝600円（繁忙期・最繁忙期は別料金）。未就学児は無料"
+    },
+    "ages": null,
+    "hours": "11:00〜21:00（最終入場20:30）",
+    "closed": null,
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "池袋駅東口（35番出口）からサンシャインシティ入口まで徒歩約8分（サンシャインシティ公式）",
+    "notes": "ベビールーム（ベビーシート・授乳用個室〔女性のみ〕・調乳用温水器・電子レンジ）あり。展望台内のトイレにベビーシートあり。展望台でのベビーカー貸出はなし（アルパで貸出あり）。土日祝・特定日は日時指定の事前予約が必要。再入場不可。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "サンシャインシティ キッズプレイスペース",
+    "kind": "mall-kids",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋3-1 サンシャインシティ アルパ2階",
+    "lat": 35.72929,
+    "lng": 139.719193,
+    "geoSource": "gsi",
+    "officialUrl": "https://sunshinecity.jp/information/guide_baby.html",
+    "sourceUrls": [
+      "https://sunshinecity.jp/information/guide_baby.html",
+      "https://sunshinecity.jp/information/access_train.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "未就学児",
+    "hours": "10:00〜20:00",
+    "closed": null,
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "池袋駅東口（35番出口）からサンシャインシティ入口まで徒歩約8分",
+    "notes": "アルパ2階の共用部分にあるパズルなどで遊べるスペース。アルパB1・2F・3Fにベビールーム（ベビーシート・授乳用個室〔女性のみ〕・ミルク用お湯）。ベビーカー無料貸出（1か月〜2歳、10:00〜20:00、予約不可）あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ナンジャタウン",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋3-1-3 サンシャインシティ ワールドインポートマートビル2階",
+    "lat": 35.727844,
+    "lng": 139.719986,
+    "geoSource": "gsi",
+    "officialUrl": "https://bandainamco-am.co.jp/tp/namja/",
+    "sourceUrls": [
+      "https://bandainamco-am.co.jp/tp/namja/",
+      "https://bandainamco-am.co.jp/tp/namja/ticket/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "入園料は日により変動（公式の料金カレンダー参照）。4歳未満は入園無料。アトラクション・飲食は別料金"
+    },
+    "ages": null,
+    "hours": "10:00〜20:00（最終入園19:30）",
+    "closed": "年中無休",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "屋内型テーマパーク。公式トップには10:00〜21:00（最終入園20:00）の表記もあり、来園前に公式で確認。11月9日以降、入園券は変動価格制。営業日・時間・料金は予告なく変更あり。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "コニカミノルタプラネタリウム満天",
+    "kind": "museum",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋3-1-3 サンシャインシティ ワールドインポートマートビル屋上",
+    "lat": 35.727844,
+    "lng": 139.719986,
+    "geoSource": "gsi",
+    "officialUrl": "https://planetarium.konicaminolta.jp/manten/",
+    "sourceUrls": [
+      "https://planetarium.konicaminolta.jp/manten/",
+      "https://planetarium.konicaminolta.jp/manten/charge",
+      "https://planetarium.konicaminolta.jp/manten/access/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人（中学生以上）オンライン1,600円・窓口1,800円、こども（4歳以上）オンライン1,000円・窓口1,200円（一般シート）"
+    },
+    "ages": null,
+    "hours": "平日10:00〜21:00、土日祝10:00〜22:00",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "池袋駅東口から徒歩約20分、東京メトロ有楽町線東池袋駅6・7番出口から徒歩約10分",
+    "notes": "大人向け作品も上映。大声・泣き声が目立つ場合は退室を求めることがあり、乳幼児連れは注意と公式に記載。ヒーリングプラネタリウムは未就学児入場不可。3歳以下の料金は公式に記載なし（施設に確認）。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ちいかわパーク",
+    "kind": "other",
+    "place": "indoor",
+    "address": "東京都豊島区東池袋3-3-5 サンシャインシティ アネックス B1F・1F",
+    "lat": 35.729961,
+    "lng": 139.717072,
+    "geoSource": "gsi",
+    "officialUrl": "https://chiikawapark-tokyo.jp/",
+    "sourceUrls": [
+      "https://chiikawapark-tokyo.jp/",
+      "https://chiikawapark-tokyo.jp/ticket/",
+      "https://chiikawapark-tokyo.jp/faq/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人（12歳以上）3,500円、学生（中学生以上）2,800円、子ども（4〜11歳）1,800円。4歳未満は無料（大人・学生チケット1枚につき1名まで同伴可）"
+    },
+    "ages": null,
+    "hours": "10:00〜19:00（最終入場17:40）",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": false,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "日時指定のチケット制（当日券は完売の日あり）。小学生以下のみでの入場不可。ベビーカーの持ち込みは不可・貸出もなし。キャンセル・返金・変更不可。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "にこはぴきっず 池袋店",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都豊島区西池袋1-1-25 東武百貨店池袋店7階",
+    "lat": 35.729939,
+    "lng": 139.71051,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.fantasy.co.jp/shoplist/shop-2305/",
+    "sourceUrls": [
+      "https://www.fantasy.co.jp/shoplist/shop-2305/",
+      "https://www.fantasy.co.jp/brand/nicohapikids/",
+      "https://www.tobu-dept.jp/ikebukuro/access/",
+      "https://www.tobu-dept.jp/ikebukuro/information/detail/7"
+    ],
+    "fee": {
+      "free": false,
+      "text": "有料（前払い・時間制、60分を超えると自動延長料金。金額は公式の料金表を参照）"
+    },
+    "ages": "遊具の利用は小学2年生以下（16歳以上の保護者の同伴が必要）",
+    "hours": "10:00〜19:00",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": true,
+    "accessOfficial": "池袋駅西口直結（東武百貨店池袋店）",
+    "notes": "イオンファンタジーが運営。同じ7階（2番地）に東武百貨店のベビー休憩室（授乳室3室・おむつ交換台5台・給湯器・電子レンジ）あり。小学3年生〜15歳は入場のみ（遊具利用不可）。",
+    "verifiedAt": "2026-11-27"
+  }
+]

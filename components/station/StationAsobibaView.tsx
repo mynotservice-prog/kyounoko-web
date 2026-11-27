@@ -31,7 +31,9 @@ const OFFICIAL = chip('#E3F2FD', '#1565C0');
 const NEUTRAL = chip('rgba(201,96,62,0.08)', 'var(--clay-deep)');
 
 const placeLabel = (p: AsobibaFacility['place']) => (p === 'indoor' ? '屋内' : p === 'outdoor' ? '屋外' : '屋内と屋外');
-const feeLabel = (f: AsobibaFacility) => (f.fee.free === true ? '無料' : f.fee.text ?? '料金は公式で確認');
+// 料金: 公式に無料とあれば「無料」、有料なら公式の料金の要約、記載が無ければそう書く（無料と推測しない）
+const feeLabel = (f: AsobibaFacility) =>
+  f.fee.free === true ? '無料' : f.fee.free === false ? f.fee.text ?? '有料' : '料金は公式に記載なし';
 const fmtDate = (iso: string) => {
   const [y, m, d] = iso.split('-').map(Number);
   return y && m && d ? `${y}年${m}月${d}日` : iso;

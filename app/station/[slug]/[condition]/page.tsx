@@ -58,6 +58,7 @@ import {
   buildAsobibaLd,
 } from '@/lib/station-asobiba';
 import { StationAsobibaView } from '@/components/station/StationAsobibaView';
+import { withSpotLinks } from '@/lib/station-asobiba-spot-link';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -125,8 +126,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const a = getStationAsobiba(slug)!;
     const nm = anyStation!.name;
     const c = a.counts;
-    const title = `${nm}駅周辺の子供の遊び場${c.total}か所｜無料${c.free}・屋内${c.indoor}・子連れの徒歩分`;
-    const description = `${nm}駅から直線1.2km以内の子供の遊び場${c.total}か所を、区や施設の公式で1件ずつ確かめて駅に近い順に掲載。無料の施設${c.free}か所、屋内${c.indoor}か所、授乳室の記載${c.nursingRoom}か所。子連れで歩く目安の時間と料金・対象年齢つき。`;
+    const parks = a.facilities.filter((f) => f.kind === 'park').length;
+    // 公式に無料と書かれた施設が3か所以上ある駅だけ、題に無料の数を出す（少ない数は弱く見える）
+    const mix = [c.free >= 3 ? `無料${c.free}` : null, c.indoor > 0 ? `屋内${c.indoor}` : null, parks > 0 ? `公園${parks}` : null].filter(Boolean).join('・');
+    const title = `${nm}駅周辺の子供の遊び場${c.total}か所｜${mix}・子連れで何分`;
+    const description = `${nm}駅から直線1.2km以内の子供の遊び場${c.total}か所を、区や施設の公式で1件ずつ確かめて駅に近い順に掲載。${c.free > 0 ? `公式に無料とある施設${c.free}か所、` : ''}屋内${c.indoor}か所、授乳室の記載${c.nursingRoom}か所。子連れで歩く目安の時間と料金・対象年齢つき。`;
     const ogImages = [{ url: `/api/og?title=${encodeURIComponent(`${nm}駅周辺の子供の遊び場${c.total}か所`)}`, width: 1200, height: 630 }];
     return {
       title,
@@ -911,7 +915,7 @@ export default async function StationConditionPage({ params }: Props) {
 /** 駅×子供の遊び場（施設台帳型・実験47・2026-11-27）。台帳は lib/station-asobiba-ledger.ts。 */
 function StationAsobibaPage({ slug }: { slug: string }) {
   const station = getStationBySlug(slug)!;
-  const a = getStationAsobiba(slug)!;
+  const a = withSpotLinks(getStationAsobiba(slug)!);
   const wardName = WARD_NAMES[station.ward] ?? '';
   const faq = buildAsobibaFaq(station.name, a);
   const faqLd = faqToJsonLd(faq);
