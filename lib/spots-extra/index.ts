@@ -18,6 +18,8 @@ import { SPOTS_EXTRA_5 } from './batch-5';
 import { SPOTS_EXTRA_6 } from './batch-6';
 import { SPOTS_EXTRA_7 } from './batch-7';
 import { SPOTS_EXTRA_8 } from './batch-8';
+// 2026-11-27 関東のいちご狩り農園5件（定期便 12/04 第1便）
+import { SPOTS_EXTRA_ICHIGO_2026 } from './batch-11-ichigo';
 // 管理画面「新規スポット」で作成したスポット（/api/admin/spot-create が GitHub commit で追記）。
 // エリア(都道府県slug) → Spot[] の形。デプロイで本番反映される。
 import ADMIN_CREATED from './admin-created.json';
@@ -31,6 +33,7 @@ const BATCHES: Partial<Record<AreaSlug, Spot[]>>[] = [
   SPOTS_EXTRA_6,
   SPOTS_EXTRA_7,
   SPOTS_EXTRA_8,
+  SPOTS_EXTRA_ICHIGO_2026,
   ADMIN_CREATED as Partial<Record<AreaSlug, Spot[]>>,
 ];
 
