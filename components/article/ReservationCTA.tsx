@@ -3,9 +3,12 @@
 import * as React from 'react';
 import { trackEvent } from '@/lib/analytics';
 import type { ReservationOffer } from '@/lib/reservation-cta';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type ReservationCTAProps = {
   offer: ReservationOffer;
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 /**
@@ -15,20 +18,22 @@ export type ReservationCTAProps = {
  * 最も近い導線なので、結論直後の高インテント位置に置く想定。
  *
  * - 景表法・ステマ規制対応: PR 表記 + rel="sponsored nofollow noopener" を強制。
- * - クリックを GA4 に送る（affiliate_click / provider=valuecommerce）。
+ * - クリックを GA4 に送る（affiliate_click / provider=valuecommerce / placement=置き場所）。
  * - href の健全性は lib 側で検査済みだが、ここでも二重防御で http(s) のみ許可。
  */
-export function ReservationCTA({ offer }: ReservationCTAProps) {
+export function ReservationCTA({ offer, placement }: ReservationCTAProps) {
   if (!/^https?:\/\//i.test(offer.href.trim())) return null;
 
   // 計測用プロバイダ判定: A8リンク(px.a8.net)は 'a8'、それ以外は従来通り 'valuecommerce'。
-  const provider = /px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce';
+  // 申込型の導線（lib/apply-offers.ts）は offer.provider で明示する（もしも経由のリンクを区別するため）。
+  const provider =
+    offer.provider ?? (/px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce');
 
   return (
     <aside aria-label={offer.heading} className="av3-resv">
       <div className="av3-resv-head">
         <span className="pr-label">PR</span>
-        <span className="av3-resv-eyebrow">今から行くなら・ネット予約</span>
+        <span className="av3-resv-eyebrow">{offer.eyebrow ?? '今から行くなら・ネット予約'}</span>
       </div>
       <h4 className="av3-resv-title">{offer.heading}</h4>
       <p className="av3-resv-note">{offer.note}</p>
@@ -42,6 +47,7 @@ export function ReservationCTA({ offer }: ReservationCTAProps) {
           trackEvent('affiliate_click', {
             provider,
             item_id: offer.itemId,
+            placement,
           });
         }}
       >

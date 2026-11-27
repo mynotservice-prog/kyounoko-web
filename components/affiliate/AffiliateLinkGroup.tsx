@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { AffiliateLink, type AffiliateLinkProps } from './AffiliateLink';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type AffiliateLinkGroupProps = {
   items: AffiliateLinkProps[];
@@ -7,6 +8,8 @@ export type AffiliateLinkGroupProps = {
   title?: string;
   /** eyebrow 用の小見出し（例: "PICK UP" など） */
   heading?: string;
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 /**
@@ -17,6 +20,7 @@ export function AffiliateLinkGroup({
   items,
   title,
   heading,
+  placement,
 }: AffiliateLinkGroupProps) {
   if (items.length === 0) return null;
 
@@ -30,7 +34,7 @@ export function AffiliateLinkGroup({
       {title && <h3 className="affiliate-group-title">{title}</h3>}
       <div className="affiliate-group-list">
         {items.map((item) => (
-          <AffiliateLink key={item.href + item.title} {...item} />
+          <AffiliateLink key={item.href + item.title} {...item} placement={placement} />
         ))}
       </div>
     </section>

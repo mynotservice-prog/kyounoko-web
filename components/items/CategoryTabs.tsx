@@ -104,6 +104,7 @@ export function CategoryTabs({ items, currentMonth }: Props) {
                     price={item.price}
                     provider={item.provider}
                     pr={false}
+                    placement="items-catalog"
                   />
                 ))}
               </div>

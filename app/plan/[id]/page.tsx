@@ -307,6 +307,7 @@ export default async function PlanPage({ params }: Props) {
           <div className="kk-sec pv3-sec pv3-items">
             <RelatedItemsCTA
               label="このプランに、あると便利なもの"
+              placement="plan-items"
               items={planItems.map((it) => ({
                 href: it.href,
                 title: it.name,
