@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
+import { todayHref } from '@/lib/today-query';
 import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
@@ -23,16 +24,13 @@ export function NextPlanCTA({
   /** 記事の対象年齢帯（あれば /today に引き継ぐ） */
   age?: '0-1' | '2-3' | '4-6';
 }) {
-  const params = new URLSearchParams();
-  if (area && area !== 'all') params.set('area', area);
-  if (age) params.set('age', age);
-  const qs = params.toString();
-  const href = qs ? `/today?${qs}` : '/today';
+  const href = todayHref({ age, area });
 
   return (
     <section className="av3-planlink">
       <Link
         href={href}
+        prefetch={false}
         onClick={() => trackEvent('today_cta_click', { area: area ?? 'all', age: age ?? 'none' })}
         className="av3-planlink-link"
       >

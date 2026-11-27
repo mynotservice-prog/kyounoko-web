@@ -6,6 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 import type { FinderStation } from '@/lib/finder-stations';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { KkArt, type KkArtName } from '@/components/kk/KkArt';
+import { todayHref } from '@/lib/today-query';
 
 /**
  * /today 条件入力フォーム（リニューアル 2026-09 / 第3版 §3-3）。
@@ -212,8 +213,8 @@ export function TodayConditionForm({
     }
     writeRecent(target.slug);
     trackEvent('today_plan_create', { method: 'form', station_slug: target.slug });
-    const params = new URLSearchParams({ date, age, station: target.slug, weather });
-    router.push(`/today?${params.toString()}`);
+    // 正規の並び順で作る（date はページが読まず middleware が削るので載せない。lib/today-query.ts）
+    router.push(todayHref({ station: target.slug, age, weather }));
   };
 
   // よく使う駅: ターミナル＋子育て世帯に人気（重複除去）

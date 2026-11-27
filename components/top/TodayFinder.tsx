@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { AREAS, type AreaSlug } from '@/lib/area';
 import { useUserSettings } from '@/hooks/useUserSettings';
 import { trackEvent } from '@/lib/analytics';
+import { todayHref } from '@/lib/today-query';
 import { AnswerPreview } from './AnswerPreview';
 
 /**
@@ -178,7 +179,8 @@ export function TodayFinder() {
       if (k === 'area' && v === 'all') return;
       if (v !== 'any') params.set(k, String(v));
     });
-    router.push(`/today?${params.toString()}`);
+    // 正規の並び順で作る（middleware が並び順・値のゆれを 308 で寄せるため。lib/today-query.ts）
+    router.push(todayHref(params));
   }
 
   function reset() {
@@ -210,7 +212,8 @@ export function TodayFinder() {
       if (k === 'area' && v === 'all') return;
       if (v !== 'any') params.set(k, String(v));
     });
-    router.push(`/today?${params.toString()}`);
+    // 正規の並び順で作る（middleware が並び順・値のゆれを 308 で寄せるため。lib/today-query.ts）
+    router.push(todayHref(params));
   }
 
   // エリアセレクタ（地方ブロックごとにグルーピング）

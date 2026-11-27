@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics';
 import { KkIcon } from '@/components/kk/KkIcon';
 import { KkArt, type KkArtName } from '@/components/kk/KkArt';
+import { todayHref } from '@/lib/today-query';
 import type { FinderStation } from '@/lib/finder-stations';
 
 /**
@@ -92,9 +93,9 @@ export function V2HeroForm({
     } catch {
       /* ignore */
     }
-    const params = new URLSearchParams({ date, age, station: station.slug, weather });
+    // 正規の並び順で作る（date はページが読まず middleware が削るので載せない。lib/today-query.ts）
     trackEvent('today_entry_click', { link_url: '/today', method: 'hero_form' });
-    router.push(`/today?${params.toString()}`);
+    router.push(todayHref({ station: station.slug, age, weather }));
   };
 
   const pick = (s: FinderStation) => {

@@ -10,6 +10,15 @@ import {
   V2ContextProvider,
 } from './V2Base';
 
+/**
+ * 先読み（prefetch）しない導線（2026-11-27）。/today と /search は毎回描画する動的ページで、
+ * Link の先読みは「どのページから来たか」ごとに別のキャッシュになる（Vary: Next-Router-State-Tree）。
+ * 全ページのヘッダが毎回先読みするため、両ページの呼び出しの大半が先読みだった
+ * （本番で1ページ開くと /today・/search へ _rsc 付きの要求が飛ぶのを確認）。
+ * 押したときに読み込むだけなので、人の操作は壊れない（表示が少し遅れるだけ）。
+ */
+const DYNAMIC_NAV = new Set(['/today', '/search']);
+
 /* ===========================================================
    Mobile Menu Drawer
    - 「メニュー」ボタンタップで右からスライドイン
@@ -142,6 +151,7 @@ function V2MobileMenu({
             <Link
               key={p.href}
               href={p.href}
+              prefetch={DYNAMIC_NAV.has(p.href) ? false : undefined}
               onClick={onClose}
               style={{
                 display: 'flex',
@@ -278,7 +288,7 @@ function V2Header({
         <div className="v2-app-header">
           <V2Logo tagline size={36} />
           <div className="v2-header-actions">
-            <Link href="/search" className="v2-header-act" aria-label="検索">
+            <Link href="/search" prefetch={false} className="v2-header-act" aria-label="検索">
               <V2Icon name="search" size={22} color="var(--v2-ink)" />
               <span>検索</span>
             </Link>
@@ -312,7 +322,7 @@ function V2Header({
             <h1 style={{ fontSize: 21, fontWeight: 800, margin: 0 }}>保存したもの</h1>
           </div>
           <div className="v2-header-actions">
-            <Link href="/search" className="v2-header-act" aria-label="検索">
+            <Link href="/search" prefetch={false} className="v2-header-act" aria-label="検索">
               <V2Icon name="search" size={22} color="var(--v2-ink)" />
               <span>検索</span>
             </Link>
@@ -347,7 +357,7 @@ function V2Header({
   return (
     <>
       <div className="v2-app-header plain">
-        <Link href={backHref} className="v2-back-btn">
+        <Link href={backHref} prefetch={DYNAMIC_NAV.has(backHref.split('?')[0]) ? false : undefined} className="v2-back-btn">
           <V2Icon name="chevron-left" size={20} />
           戻る
         </Link>
@@ -361,7 +371,7 @@ function V2Header({
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Link href="/search" className="v2-header-act" aria-label="検索">
+          <Link href="/search" prefetch={false} className="v2-header-act" aria-label="検索">
             <V2Icon name="search" size={20} color="var(--v2-ink)" />
             <span>検索</span>
           </Link>
@@ -412,6 +422,7 @@ function V2DesktopHeader({ active }: { active?: V2NavActive }) {
             <Link
               key={l.k}
               href={l.href}
+              prefetch={DYNAMIC_NAV.has(l.href) ? false : undefined}
               className={'v2-dt-link' + (on ? ' on' : '')}
             >
               <V2Icon
@@ -425,7 +436,7 @@ function V2DesktopHeader({ active }: { active?: V2NavActive }) {
         })}
       </nav>
       <div className="v2-dt-spacer"></div>
-      <Link href="/search" className="v2-dt-search">
+      <Link href="/search" prefetch={false} className="v2-dt-search">
         <V2Icon name="search" size={17} />
         スポット・駅を検索
       </Link>

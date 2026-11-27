@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Spot } from '@/lib/spots';
 import { SPOTS, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { getAreaName, type AreaSlug } from '@/lib/area';
+import { todayHref } from '@/lib/today-query';
 
 /**
  * 「今週のおすすめ」セクション。
@@ -204,7 +205,7 @@ export function WeeklyPick({ month }: Props) {
               )}
 
               <Link
-                href={`/today?area=${area}&place=${spot.place === 'outdoor' ? 'outside' : spot.place === 'indoor' ? 'home' : 'any'}`}
+                href={todayHref({ place: spot.place === 'outdoor' ? 'outside' : spot.place === 'indoor' ? 'home' : 'any', area })}
                 style={{
                   marginTop: 'auto',
                   fontSize: 12,
