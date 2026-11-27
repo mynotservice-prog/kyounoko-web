@@ -574,8 +574,8 @@
       "https://www.0101.co.jp/054/access/"
     ],
     "fee": {
-      "free": false,
-      "text": "有料施設（料金は公式の店舗ページに記載なし）"
+      "free": null,
+      "text": "公式に料金の記載なし"
     },
     "ages": null,
     "hours": "10:30〜20:00（キッズパーク「nico ground」は18:00閉店・最終受付17:40）",

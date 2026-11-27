@@ -691,8 +691,8 @@
       "https://www.tokyo-solamachi.jp/pdf/floorguide/floorguide_ja.pdf"
     ],
     "fee": {
-      "free": false,
-      "text": "有料（運営者の公式ページに料金の掲載なし）"
+      "free": null,
+      "text": "公式に料金の記載なし"
     },
     "ages": null,
     "hours": "10:00〜21:00",

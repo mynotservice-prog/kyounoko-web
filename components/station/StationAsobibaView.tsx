@@ -128,9 +128,9 @@ export function StationAsobibaView({
           </small>
         </h1>
         <p className="lead">
-          {stationName}駅から直線1.2km以内で、区・都・施設の公式で1件ずつ確かめた子供の遊び場は{c.total}か所です。
-          うち公式に無料とあるのが{c.free}か所、屋内が{c.indoor}か所、授乳室の記載があるのが{c.nursingRoom}か所。
-          施設ごとに、駅から子連れで歩いたときの目安の時間を出しています。
+          {`${stationName}駅から直線1.2km以内で、区・都・施設の公式で1件ずつ確かめた子供の遊び場は${c.total}か所です。`}
+          {`${c.free > 0 ? `うち公式に無料とあるのが${c.free}か所、` : 'うち'}屋内が${c.indoor}か所、授乳室の記載があるのが${c.nursingRoom}か所。`}
+          {'施設ごとに、駅から子連れで歩いたときの目安の時間を出しています。'}
         </p>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 16 }}>
           <span className="meta-chip clay">1.2km以内 {c.total}か所</span>
@@ -144,7 +144,7 @@ export function StationAsobibaView({
       <section style={{ margin: '28px 0 36px' }}>
         <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, margin: '0 0 10px' }}>一覧（駅から近い順）</h2>
         <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+          <table style={{ width: '100%', minWidth: 560, borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>
               <tr style={{ textAlign: 'left', borderBottom: '2px solid rgba(201,96,62,0.25)' }}>
                 <th scope="col" style={{ padding: '6px 8px' }}>施設</th>
@@ -160,8 +160,8 @@ export function StationAsobibaView({
                   <th scope="row" style={{ padding: '6px 8px', fontWeight: 600, textAlign: 'left' }}>{f.name}</th>
                   <td style={{ padding: '6px 8px' }}>{ASOBIBA_KIND_LABEL[f.kind]}（{placeLabel(f.place)}）</td>
                   <td style={{ padding: '6px 8px', whiteSpace: 'nowrap' }}>約{f.walkKids}分（{f.m}m）</td>
-                  <td style={{ padding: '6px 8px' }}>{f.fee.free === true ? '無料' : f.fee.free === false ? '有料' : '—'}</td>
-                  <td style={{ padding: '6px 8px' }}>{f.nursingRoom === true ? 'あり（公式）' : f.nursingRoom === false ? 'なし（公式）' : '—'}</td>
+                  <td style={{ padding: '6px 8px', whiteSpace: 'nowrap' }}>{f.fee.free === true ? '無料' : f.fee.free === false ? '有料' : '—'}</td>
+                  <td style={{ padding: '6px 8px', whiteSpace: 'nowrap' }}>{f.nursingRoom === true ? 'あり（公式）' : f.nursingRoom === false ? 'なし（公式）' : '—'}</td>
                 </tr>
               ))}
             </tbody>
@@ -238,10 +238,10 @@ export function StationAsobibaView({
       <section style={{ margin: '8px 0 32px', padding: '14px 16px', background: 'var(--paper-card)', borderRadius: 10, border: '1px solid rgba(201,96,62,0.16)' }}>
         <h2 style={{ fontSize: 15, fontWeight: 700, margin: '0 0 6px' }}>このページの調べ方</h2>
         <p style={{ fontSize: 12.5, color: 'var(--ink-sub)', lineHeight: 1.8, margin: 0 }}>
-          区・都の公式の施設一覧（児童館・公園・図書館など）と、施設・商業施設の公式ページで、1件ずつ所在地・料金・対象・設備を確かめました。
-          口コミサイトやまとめ記事の情報は使っていません。閉館・長期休館中の施設は載せていません。
-          距離は駅の中心からの直線距離です。子連れの時間は、道のりを直線の1.3倍として分速60m（大人は分速80m）で割った目安で、
-          改札や出口、信号、エレベーターの位置で変わります。休館日や時間は変わることがあるので、行く前に各施設の公式ページでご確認ください。
+          {'区・都の公式の施設一覧（児童館・公園・図書館など）と、施設・商業施設の公式ページで、1件ずつ所在地・料金・対象・設備を確かめました。' +
+            '口コミサイトやまとめ記事の情報は使っていません。閉館・長期休館中の施設は載せていません。' +
+            '距離は駅の中心からの直線距離です。子連れの時間は、道のりを直線の1.3倍として分速60m（大人は分速80m）で割った目安で、' +
+            '改札や出口、信号、エレベーターの位置で変わります。休館日や時間は変わることがあるので、行く前に各施設の公式ページでご確認ください。'}
         </p>
       </section>
 
