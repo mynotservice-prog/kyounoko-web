@@ -59,6 +59,8 @@ export const AFFILIATE_TARGET_SLUGS = [
   'toysub-tettei-kaisetsu-2026',
   // 2026-09-16 追加：帰省・旅行の持ち物記事（トイサブ！より商品画像の無償提供）
   'kisei-ryokou-omocha-ikisaki-betsu',
+  // 2026-11-19 追加：おでかけ→おうち遊びの記事（トイサブ！より商品画像の無償提供）
+  'odekake-suki-ouchi-asobi-omocha',
   // 2026-06-16 追加：Z会 通信教育の本命配置先（Z会を直接比較する未登録記事）
   'benesse-vs-zkai-youji',
   'tsuushin-kyouzai-hikaku',
@@ -196,8 +198,9 @@ const PRODUCTS: AffiliateProduct[] = [
     provider: 'moshimo',
     href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
     title: 'トイサブ！',
-    subtitle: '業界最大手・月齢に合わせて知育玩具6点が届く',
-    price: '月額 ¥3,674〜',
+    // 2026-11-20 公式 https://toysub.net/course-202606_b/ で照合（エコノミー3,280円・スタンダード3,980円・プラチナ5,980円、各税込）
+    subtitle: '月齢に合った知育玩具が届く（コースにより4点または6点）',
+    price: '月額3,280円〜（税込・エコノミーコース）',
   },
   {
     id: 'cs-chachacha',
@@ -602,19 +605,6 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     price: 'おためしセット ¥1,980前後',
     slugs: ['takuhai-shoku-5sha-hikaku-2026'],
   },
-  // ---- ⑧ シールDEネーム（2026-06-11 追加 / 既存9記事に本文リンク配置済みの承認案件） ----
-  {
-    id: 'a8-seal-de-name',
-    provider: 'a8',
-    href: 'https://px.a8.net/svt/ejp?a8mat=4B5Q81+DLEC1E+5V9K+5YRHE',
-    title: 'シールDEネーム（名前シール・名前スタンプ）',
-    subtitle: '入園準備の名前書きをシール・スタンプで時短。耐水でコップ・お弁当箱もOK',
-    price: '¥1,000前後〜',
-    slugs: [
-      'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
-      'onamae-seal-7sha-hikaku-2026',
-    ],
-  },
   // ---- ⑨ Z会の通信教育（2026-06-16 承認 / 素材ID155 幼児向け・EPC50以上・クリック率5%以上） ----
   {
     id: 'a8-zkai',
@@ -701,14 +691,14 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'ehon-yomikikase-kotsu',
     ],
   },
-  // ---- ④ トイサブ！ファーストセレクション（はじめての知育玩具）2,500円 ----
+  // ---- ④ トイサブ！ファーストセレクション（2026-11-20 公式照合: 2か月間990円税込・3点・妊娠中〜生後1.5か月未満の申込・2か月後スタンダードへ自動移行）----
   {
     id: 'mo-toysub-first',
     provider: 'moshimo',
     href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
     title: 'トイサブ！ファーストセレクション',
-    subtitle: '0〜1歳向けの月齢に合った知育玩具を厳選。初回購入で送料無料',
-    price: '一括¥3,490（送料込）',
+    subtitle: '妊娠中〜生後1.5か月未満の申し込み向け。おもちゃ3点を2か月間（その後スタンダードコースへ自動移行）',
+    price: '2か月間で990円（税込）',
     slugs: [
       'chiiku-subsc-hikaku-4sha',
       'chiiku-subsc-3sha-2026-comparison',
@@ -740,6 +730,18 @@ PRODUCTS.push(
       ),
   ),
 );
+
+// おでかけ→おうち遊びの記事。2026-11-24 リンク先をトイサブ！指定のきょうのこ読者限定ページにした。
+// ファーストセレクションは記事の対象月齢と合わないため外した。
+PRODUCTS.push({
+  id: 'oo-toysub',
+  slug: 'odekake-suki-ouchi-asobi-omocha',
+  provider: 'other',
+  href: 'https://toysub.net/lp-kyounoko/?utm_source=kyounoko&utm_medium=referral&utm_campaign=2611',
+  title: 'トイサブ！【きょうのこ読者限定】初月1円',
+  subtitle: 'プロモーションコード KNK26win1／最低利用期間90日／2027年2月末まで',
+  price: '初月1円・2か月目以降 月額3,980円（税込）',
+});
 
 /**
  * 指定 slug に紐づくアフィリエイト商品を返す。

@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-29'
+updatedAt: '2026-11-20'
 area: all
 quickInfo:
   ageRanges:
@@ -126,7 +126,7 @@ legacyHero: /hero/baby-01.webp
 
 おもちゃは「子供がすぐ飽きる」「収納場所を取る」が悩みのタネ。最近はサブスク・レンタルが人気。
 
-- **トイサブ！**：月3,674円〜、月齢に合わせて毎月届く
+- **トイサブ！**：月3,280円〜（税込）、月齢に合わせて届く（交換はコースにより毎月〜3ヶ月ごと）
 - **キッズラボラトリー**：毎月のレンタル
 - **[And TOYBOX](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)**：LINE完結・発送前に内容確認OK・プラン豊富
 - **ジニーキッズ**：定額レンタル

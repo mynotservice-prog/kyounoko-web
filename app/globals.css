@@ -3408,6 +3408,12 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
     font-size: 13px;
     white-space: nowrap; /* セル内は折り返さず、全体で横スクロール */
   }
+  /* 2列だけの表（「項目｜内容」型）は、右の列も折り返す。横スクロールにすると
+     長い説明文が画面外に切れて読めない（2026-11-24 トイサブ！から指摘）。 */
+  .prose table th:nth-child(2):last-child,
+  .prose table td:nth-child(2):last-child {
+    white-space: normal;
+  }
   /* 最初の列は折り返してOK（見出し列が長い時の対策）。
      さらに横スクロール中も左に貼り付けて、行が何の行か見失わないようにする
      （チェーン比較・キッズメニュー比較など、この表がサイトの主力コンテンツ）。 */

@@ -14,6 +14,7 @@ import {
   type ChainCategory,
 } from '@/lib/station-restaurants';
 import { hotpepperShopHref } from '@/lib/reservation-cta';
+import { affiliateClickAttrs } from '@/lib/affiliate-placement';
 import {
   getIndieRestaurantsByStation,
   isHotpepperStation,
@@ -644,7 +645,13 @@ export default async function StationConditionPage({ params }: Props) {
                           const { href, affiliate } = hotpepperShopHref(r.url);
                           return (
                             <p style={{ margin: '8px 0 0', fontSize: 13, fontWeight: 700 }}>
-                              <a href={href} target="_blank" rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'} style={{ color: 'var(--clay-deep)' }}>
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'}
+                                style={{ color: 'var(--clay-deep)' }}
+                                {...(affiliate ? affiliateClickAttrs('station-condition-shops', 'hotpepper-shop') : {})}
+                              >
                                 ホットペッパーで店舗情報・予約を見る →
                               </a>
                             </p>
@@ -741,6 +748,7 @@ export default async function StationConditionPage({ params }: Props) {
               ベビーチェアが無い店でも安心。持っていくと外食がぐっとラクになる定番。
             </p>
             <AffiliateLinkGroup
+              placement="station-condition-items"
               items={getCatalogItems('gaishoku').slice(0, 3).map((it) => ({
                 href: it.href,
                 title: it.name,
@@ -757,7 +765,7 @@ export default async function StationConditionPage({ params }: Props) {
                   <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
                     外食が増える時期は、家の食事を宅配でラクにするご家庭も。
                   </p>
-                  <AffiliateLink {...bridge} />
+                  <AffiliateLink {...bridge} placement="station-condition-bridge" />
                 </div>
               ) : null;
             })()}

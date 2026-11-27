@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   // layout の title.template が「%s｜きょうのこ」を付けるので、ここでは媒体名を重ねない
   title: '運営者情報',
   description:
-    'きょうのこは、東京23区で2人の子どもを育てる「ながみー」が実訪問をもとに1人で運営する子育ておでかけメディアです。運営者・媒体概要・実績データ・編集体制・収益と利益相反の開示・タイアップや取材のお問い合わせ窓口をまとめています。',
+    'きょうのこは、東京23区で2歳の子どもを育てる「ながみー」が実訪問をもとに1人で運営する子育ておでかけメディアです。運営者・媒体概要・実績データ・編集体制・収益と利益相反の開示・タイアップや取材のお問い合わせ窓口をまとめています。',
   alternates: { canonical: '/about' },
   openGraph: {
     title: '運営者情報｜きょうのこ',
@@ -28,6 +28,10 @@ export const metadata: Metadata = {
    - 商談系の詳細は /business、規範の詳細は /editorial-policy に分離し、
      このページは「全体像 + 窓口の交通整理」に徹する
    =========================================================== */
+
+/** このページの文面の最終更新日（媒体データの更新日 SITE_FACTS.updatedAtLabel とは別に持つ） */
+const PAGE_UPDATED_LABEL = '2026年11月14日';
+const PAGE_UPDATED_ISO = '2026-11-14';
 
 const CARD: React.CSSProperties = {
   background: 'var(--paper-card)',
@@ -57,7 +61,7 @@ export default function AboutPage() {
     image: 'https://kyounoko.jp/img/ogp-default-v2.webp',
     jobTitle: 'きょうのこ 編集長 / 運営者',
     description:
-      '東京23区に住む30代後半の会社員。2人の子どもを育てる父親として、平日夜と休日に都内の駅前個人店・公園・屋内施設を実訪問し、子連れ目線の一次情報を蓄積しています。',
+      '東京23区に住む30代後半の会社員。2歳の子どもを育てる父親として、平日夜と休日に都内の駅前個人店・公園・屋内施設を実訪問し、子連れ目線の一次情報を蓄積しています。',
     homeLocation: {
       '@type': 'Place',
       name: '東京23区',
@@ -92,7 +96,7 @@ export default function AboutPage() {
     inLanguage: 'ja',
     isPartOf: { '@id': 'https://kyounoko.jp/#website' },
     about: { '@id': 'https://kyounoko.jp/about#author' },
-    dateModified: SITE_FACTS.updatedAtIso,
+    dateModified: PAGE_UPDATED_ISO,
   };
 
   return (
@@ -123,7 +127,7 @@ export default function AboutPage() {
             <span className="eyebrow">About</span>
             <h1>運営者情報</h1>
             <p className="lead">
-              きょうのこは、東京23区で2人の子どもを育てる会社員「ながみー」が、平日の夜と休日に実際に足を運びながら
+              きょうのこは、東京23区で2歳の子どもを育てる会社員「ながみー」が、平日の夜と休日に実際に足を運びながら
               1人で運営している子育ておでかけメディアです。誰が、どんな方針で、どうやってお金を得ながら作っているのか。
               判断に必要な情報をすべてこのページに置いています。
             </p>
@@ -217,7 +221,7 @@ export default function AboutPage() {
                 ながみー（kyounoko-editor）｜きょうのこ 運営者・編集長
               </p>
               <p style={{ margin: 0, fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.9 }}>
-                30代後半の会社員。妻と2人の子ども（未就学児）と東京23区で暮らしています。
+                30代後半の会社員。妻と2歳の子ども1人の3人家族で、東京23区で暮らしています。
                 平日の夜と休日に、子どもをベビーカーや抱っこ紐で連れて都内の飲食店・公園・屋内施設を実際に訪問し、
                 「子連れで本当に入れるか」「動線・段差・ベビーカーの置き場・おむつ替え・離乳食対応・混雑する時間帯」を
                 自分の目で確認して記録しています。
@@ -250,15 +254,15 @@ export default function AboutPage() {
                 <Link href="/supervisors">監修について</Link>）。
               </li>
               <li>
-                すべてのスポットを訪問できているわけではありません。実訪問と、公式情報をもとにした調査は
-                <strong>ページ上で明確に区別</strong>しています。
+                すべてのスポットを訪問できているわけではありません。訪問の記録がある内容と、公式情報をもとにした調査は
+                <strong>分けて書くのがルール</strong>です（<Link href="/editorial-policy">編集方針</Link>）。
               </li>
             </ul>
 
             {/* ============ 実績 ============ */}
             <h2 id="stats">数字で見るきょうのこ</h2>
             <p>
-              {SITE_FACTS.asOfLabel}時点の実績です。
+              {SITE_FACTS.updatedAtLabel}時点の数です。
             </p>
             <table className="table-wrap">
               <thead>
@@ -317,7 +321,7 @@ export default function AboutPage() {
               </li>
               <li>
                 <strong>子連れ向けレシピ・育児の困りごと</strong>：
-                幼児食・取り分け・常備菜など、家庭で実際に作って自分の子どもに出したものを中心に紹介します。
+                幼児食・取り分け・常備菜など、家庭で作りやすいものを中心に紹介します。
               </li>
               <li>
                 <strong>季節記事</strong>：
@@ -354,7 +358,7 @@ export default function AboutPage() {
               <Link href="/kid-reports">実訪問レポート一覧</Link>）。
             </p>
             <ul>
-              <li>訪問していない場所を「訪問済み」として書くことはありません。調査ベースの情報は本文で明確に切り分けます。</li>
+              <li>訪問の記録がない場所は、体験として書かないのがルールです。調査ベースの情報は本文で切り分けます。</li>
               <li>
                 店舗情報（営業時間・メニュー・料金）は変化が早いため、
                 本文に「<strong>来店前に公式情報を必ずご確認ください</strong>」の注意書きを添えています。
@@ -386,7 +390,7 @@ export default function AboutPage() {
                 <tr>
                   <th>アフィリエイト</th>
                   <td>
-                    Amazonアソシエイト・楽天アフィリエイト・A8.net・バリューコマース・もしもアフィリエイト等に参加しています。
+                    もしもアフィリエイト（楽天市場）・バリューコマース・A8.net 等に参加しています。
                     紹介リンクを含む記事には「PR」表記を付けます。
                     <strong>報酬額の高さで掲載順位を決めることはしません。</strong>
                   </td>
@@ -486,7 +490,7 @@ export default function AboutPage() {
             </ul>
 
             <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
-              最終更新：{SITE_FACTS.updatedAtLabel}
+              最終更新：{PAGE_UPDATED_LABEL}
             </p>
           </article>
         </div>

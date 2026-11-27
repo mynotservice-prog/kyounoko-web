@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { AffiliateLink, type AffiliateLinkProps } from '@/components/affiliate/AffiliateLink';
+import type { AffiliatePlacement } from '@/lib/affiliate-placement';
 
 export type RelatedItemsCTAProps = {
   /** 表示する商品（空配列なら何も描画しない） */
   items: AffiliateLinkProps[];
   /** 見出しラベル（未指定時は「この記事を読んだ方におすすめの商品」） */
   label?: string;
+  /** GA4 affiliate_click の placement（lib/affiliate-placement.ts） */
+  placement: AffiliatePlacement;
 };
 
 /**
@@ -16,7 +19,7 @@ export type RelatedItemsCTAProps = {
  * - デスクトップでは横長 2 カラム、モバイルでは 1 カラムに
  * - items が空なら null（セクション自体を出さない）
  */
-export function RelatedItemsCTA({ items, label }: RelatedItemsCTAProps) {
+export function RelatedItemsCTA({ items, label, placement }: RelatedItemsCTAProps) {
   if (!items || items.length === 0) return null;
 
   const heading = label ?? 'この記事を読んだ方におすすめの商品';
@@ -35,7 +38,7 @@ export function RelatedItemsCTA({ items, label }: RelatedItemsCTAProps) {
       <h3 className="related-items-cta-title">{heading}</h3>
       <div className="related-items-cta-grid">
         {items.map((item) => (
-          <AffiliateLink key={item.href + item.title} {...item} />
+          <AffiliateLink key={item.href + item.title} {...item} placement={placement} />
         ))}
       </div>
     </section>

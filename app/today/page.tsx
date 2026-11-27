@@ -1069,6 +1069,7 @@ export default async function TodayPage({ searchParams }: Props) {
                         price={item.price}
                         provider={item.provider}
                         pr={false}
+                        placement="today-items"
                       />
                     ))}
                   </div>
