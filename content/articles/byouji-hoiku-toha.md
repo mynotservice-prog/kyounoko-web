@@ -70,6 +70,8 @@ legacyHero: /hero/baby-03.webp
 | 民間施設 | 4,000〜8,000円 |
 | 訪問型 | 1時間1,500〜3,000円 |
 
+東京23区の区の事業では、区民の基本の額は2,000円の区が多く、低いのは板橋区の1,500円、高いのは新宿区の病児室の3,500円です。江戸川区は保育料が無料です（下の「東京23区の病児保育」の表）。
+
 ## 利用方法（予約・申込）
 
 ### ステップ
@@ -112,6 +114,42 @@ legacyHero: /hero/baby-03.webp
 | ベビーシッター（病児対応） | 自宅で個別保育。料金は高い |
 | ファミサポ（病児対応会員） | 地域住民の助け合い。対応会員は少なめ |
 | 保育園 | 急性期は登園不可 |
+
+## 東京23区の病児保育（区の公式ページで確認）
+
+2026年11月27日時点で、23区それぞれの公式ページに書かれている内容をまとめました。料金や受付の方法は年度の途中でも変わることがあるので、使う前にお住まいの区のページで確かめてください。
+
+| 区 | 料金（区民・1日） | 事前登録・予約 | 区の案内 |
+| --- | --- | --- | --- |
+| 千代田区 | 2,000円・減免あり | 要（区のポータル）／病児室はメール、病後児室は電話 | [区のページ](https://www.city.chiyoda.lg.jp/koho/kosodate/hoiku/byoji-byogoji.html) |
+| 中央区 | 2,000円・減免あり | 要（LoGoフォーム）／前日に施設へ電話（1施設はネット予約） | [区のページ](https://www.city.chuo.lg.jp/a0025/kosodate/kosodate/shien/azukeru/byougoji.html) |
+| 港区 | 2,000円・減免あり | 区への登録は不要（保育認定が前提）／電話またはWeb | [区のページ](https://www.city.minato.tokyo.jp/kodomo/kodomo/kodomo/hoikuen/service/byoji7.html) |
+| 新宿区 | 病児室 3,500円（4時間未満は2,000円）／病後児室 2,000円・減免あり | 施設ごと（原則必要）／施設へ連絡して予約 | [区のページ](https://www.city.shinjuku.lg.jp/kodomo/hoiku02_001005.html) |
+| 文京区 | 3,000円（朝・夕方の加算がある施設あり） | 要（テオテで施設ごとに登録）／テオテ（Web） | [区のページ](https://www.city.bunkyo.lg.jp/b022/p001657.html) |
+| 台東区 | 2,300円（昼食・おやつ代込み）・減免あり | 要（区へ）／電話 | [区のページ](https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/ichijiazukari/sangojihoiku.html) |
+| 墨田区 | 2,000円・減免あり | 要（テオテ）／テオテ | [区のページ](https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/azukeru/hoiku_service/byouji_byougoji/bo_byouji_hoiku.html) |
+| 江東区 | 2,000円・減免あり | 要（区役所へ）／原則前日。3施設はWeb、ほかは電話 | [区のページ](https://www.city.koto.lg.jp/280307/kodomo/kosodate/service/20788.html) |
+| 品川区 | 病児室 2,000円／病後児室 2,000円（認可保育園の在園児は無料）・減免あり | 病児室は要（テオテ＋施設で面談）／テオテ（1施設は電話） | [区のページ](https://www.city.shinagawa.tokyo.jp/kodomo/hoikuenyochien/1002030/1002034.html) |
+| 目黒区 | 2,100円・減免あり | 施設ごと（毎年度）／施設へ直接（電話が中心） | [区のページ](https://www.city.meguro.tokyo.jp/hoiku/kosodatekyouiku/kosodate/byogojihoiku.html) |
+| 大田区 | 2,500円（「その他の世帯」の額）・減免あり | 施設ごと／施設へ電話 | [区のページ](https://www.city.ota.tokyo.jp/seikatsu/kodomo/hoiku/hoikushisetsu_nyukibo/itijiazuketai/byougoji/byougoji.html) |
+| 世田谷区 | 2,000円・減免あり | 要（区の保育課）／施設ごと（電話・インターネット） | [区のページ](https://www.city.setagaya.lg.jp/02243/1547.html) |
+| 渋谷区 | 2,000円・減免は区のページに記載なし | 施設ごと／Web | [区のページ](https://www.city.shibuya.tokyo.jp/kodomo/hoiku/hoiku-service/byoji_florence.html) |
+| 中野区 | 2,000円（所得税課税世帯の額）・減免あり | 要（区へ・年度ごと）／施設へ電話（1施設はネット予約あり） | [区のページ](https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/mokuteki/ichijihoiku/azukari/byojihoiku.html) |
+| 杉並区 | 2,500円・減免あり | 要（区で登録番号→テオテで施設ごと）／テオテ | [区のページ](https://www.city.suginami.tokyo.jp/s058/1080.html) |
+| 豊島区 | 2,000円（診療所併設型は別に消費税）・減免あり | 要（区の保育課）／施設へ電話 | [区のページ](https://www.city.toshima.lg.jp/452/kosodate/kosodate/byogoji/022883.html) |
+| 北区 | 2,000円＋昼食代500円（区内施設）・減免あり | 要（施設ごと・テオテ）／テオテ（Web） | [区のページ](https://www.city.kita.lg.jp/children-edu/childcare/1002833/1003742/1003746/1003747.html) |
+| 荒川区 | 保育料2,000円＋給食費300円・減免あり | 要（保育園または区役所）／前日までに施設へ電話 | [区のページ](https://www.city.arakawa.tokyo.jp/a037/kosodate/hoikuen/byoji_byogoji.html) |
+| 板橋区 | 1,500円（食事・おやつ代は実費で上限500円）・減免あり | 要（区へ・年度ごと）／施設ごと（電話・インターネット・メール） | [区のページ](https://www.city.itabashi.tokyo.jp/kosodate/azukeru/myouni/1055493.html) |
+| 練馬区 | 保育料2,000円（給食費等は別）・減免あり | 施設ごと／前日までに施設へ（手段は区のページに記載なし） | [区のページ](https://www.city.nerima.tokyo.jp/kosodatekyoiku/kodomo/hoiku/byougoji.html) |
+| 足立区 | 病後児室 2,500円／病児室 2,000円・減免あり | 施設ごと（年度更新）／施設へ電話 | [区のページ](https://www.city.adachi.tokyo.jp/kodomo-unei/k-kyoiku/kosodate/ichiji-byogoji.html) |
+| 葛飾区 | 2,000円（実費がかかる施設あり）・減免あり | 施設ごと／施設ごと（区のページは各施設に確認とのみ） | [区のページ](https://www.city.katsushika.lg.jp/kosodate/1000056/1002333/1002386.html) |
+| 江戸川区 | 無料（保育料。キャンセル料・食事代等は別の場合あり） | 区のページに記載なし（各施設のHPを見るようにとのみ） | [区のページ](https://www.city.edogawa.tokyo.jp/e047/kosodate/kosodate/hoiku/ichiji/byogo.html) |
+
+- 呼び方と中身が区によって違います。台東区は「病後児保育」だけで、病児（急性期）を預かる施設は区の一覧にありません。目黒区も区の事業名は「病後児保育」です。足立区は病後児と病児のページが別で、病児は葛飾区亀有の東部地域病院の病児保育室を使います。北区の一覧には文京区内の駒込病院の保育室が入っていて、料金は3,000円・区の助成の対象外です。
+- 対象年齢も区によって違います。小学生も使える区は、千代田（小2まで・病後児室は就学前まで）、中央（小3まで）、文京（小3まで）、墨田（小6まで）、練馬（10歳未満）、江戸川（小3まで）、葛飾（病児室は小1〜3も）、足立（病児室は小3まで）、北（駒込病院の保育室は小3まで）です。下限も生後4か月から満1歳まで区によって違います。
+- 料金の数え方が区によって違います。台東区の2,300円は昼食・おやつ代込み、足立区のすくすくルーム（平日）の2,500円は保育料2,200円＋給食250円＋おやつ50円です。新宿区は昼食・おやつ代500円が別です。区外に住む人の料金は、港区3,000円・品川区5,000円・渋谷区5,000円です。
+- 休止中の施設があります。目黒区のたんぽぽ病後児保育室は当面休園、中野区の総合東京病院は2026年10月26日から受け入れ休止、北区の東京北医療センターにじのへやは2026年4月1日から休室で再開時期は未定です。
+- ベビーシッターなどが自宅に来る訪問型には、区によって3つの形があります。訪問型の病児保育だけを対象にした区の助成があるのは、千代田・港・台東・目黒・渋谷・豊島です。墨田区（訪問型保育支援事業「はぐ」）・葛飾区（訪問型病後児保育）・新宿区（ファミリー・サポート・センター）は、区の事業として自宅に来てもらう形で、助成ではありません。中央・文京・板橋・江戸川は、ベビーシッター利用支援事業（一時預かり利用支援）で病児・病後児の利用も対象と区のページに書かれています。品川区は病児保育のページでベビーシッター利用支援事業を案内しています。そのほかの区は、区のページに記載がありませんでした。
 
 ## よくある質問
 
