@@ -59,6 +59,8 @@ export const AFFILIATE_TARGET_SLUGS = [
   'toysub-tettei-kaisetsu-2026',
   // 2026-09-16 追加：帰省・旅行の持ち物記事（トイサブ！より商品画像の無償提供）
   'kisei-ryokou-omocha-ikisaki-betsu',
+  // 2026-11-19 追加：おでかけ→おうち遊びの記事（トイサブ！より商品画像の無償提供）
+  'odekake-suki-ouchi-asobi-omocha',
   // 2026-06-16 追加：Z会 通信教育の本命配置先（Z会を直接比較する未登録記事）
   'benesse-vs-zkai-youji',
   'tsuushin-kyouzai-hikaku',
@@ -728,6 +730,18 @@ PRODUCTS.push(
       ),
   ),
 );
+
+// おでかけ→おうち遊びの記事。2026-11-24 リンク先をトイサブ！指定のきょうのこ読者限定ページにした。
+// ファーストセレクションは記事の対象月齢と合わないため外した。
+PRODUCTS.push({
+  id: 'oo-toysub',
+  slug: 'odekake-suki-ouchi-asobi-omocha',
+  provider: 'other',
+  href: 'https://toysub.net/lp-kyounoko/?utm_source=kyounoko&utm_medium=referral&utm_campaign=2611',
+  title: 'トイサブ！【きょうのこ読者限定】初月1円',
+  subtitle: 'プロモーションコード KNK26win1／最低利用期間90日／2027年2月末まで',
+  price: '初月1円・2か月目以降 月額3,980円（税込）',
+});
 
 /**
  * 指定 slug に紐づくアフィリエイト商品を返す。
