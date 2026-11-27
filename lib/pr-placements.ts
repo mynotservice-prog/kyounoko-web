@@ -26,6 +26,12 @@ export type PrPlacement = {
   /** 掲載終了日（日本時間・YYYY-MM-DD・この日を含む） */
   end: string;
   places: PrPlace[];
+  /**
+   * 広告主本人の施設ページ（/spot/<slug>）。掲載期間中は、そのページの冒頭に
+   * 「当サイトの広告主」である旨とPRラベルを出す（ステマ告示の運用基準 第2の2(1)イ。
+   * 対価を払う関係が続く間は、無料のスポットページも自主的な表示とは言いにくいため）。
+   */
+  sponsorSpotSlugs?: string[];
 };
 
 export const PR_PLACEMENTS: PrPlacement[] = [
@@ -44,6 +50,7 @@ export const PR_PLACEMENTS: PrPlacement[] = [
       { kind: 'article', slug: 'shitsunai-asobi-shibuya-tokyo', afterHeading: /室内遊び場\s*8選/ },
       { kind: 'station', slug: 'yoyogi-uehara' },
     ],
+    sponsorSpotSlugs: ['Kids-Base-9vb4'],
   },
 ];
 
@@ -72,6 +79,11 @@ export function getArticlePr(
     if (place && place.kind === 'article') return { pr: p, afterHeading: place.afterHeading };
   }
   return null;
+}
+
+/** 掲載期間中で、このスポットが広告主本人の施設ページなら、その有償PRを返す */
+export function getSpotSponsor(slug: string, now?: Date): PrPlacement | null {
+  return PR_PLACEMENTS.find((p) => isActive(p, now) && (p.sponsorSpotSlugs ?? []).includes(slug)) ?? null;
 }
 
 export function getStationPr(slug: string, now?: Date): PrPlacement | null {
