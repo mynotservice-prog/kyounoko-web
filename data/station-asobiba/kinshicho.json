@@ -1,0 +1,591 @@
+[
+  {
+    "name": "江東橋児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区江東橋一丁目15番4号",
+    "lat": 35.695953,
+    "lng": 139.809738,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/koutoubasi.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/zidoukan/kakusisetu/koutoubasi.html",
+      "http://fukushi.unchusha.com/kotobashi/",
+      "http://fukushi.unchusha.com/kotobashi/program_kosodate.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "乳幼児と保護者・小学生・中高生（運営者の活動区分。乳幼児は0〜3歳児と保護者のプログラムあり）",
+    "hours": "9:00〜20:00（土日祝は19:00まで。小学生は18:00、中高生は20:00まで）",
+    "closed": "年末年始（12月29日〜1月3日）、原則第2日曜日（館内整理日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR錦糸町駅から6分。最寄りバス停は「江東橋」",
+    "notes": "施設は図書室・体育室・遊戯室・図工室兼ゲーム室など（区の案内）。運営は社会福祉法人雲柱社。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "墨田区子育て支援総合センター 交流室",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都墨田区横川五丁目7番4号 すみだ保健子育て総合センター4階",
+    "lat": 35.704685,
+    "lng": 139.818054,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/asobiba/kouryuusitu.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/asobiba/kouryuusitu.html",
+      "https://www.city.sumida.lg.jp/eventcalendar/kodomo_kosodate/zanteikaihou.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kosodate/kosodate_sougouc/index.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "墨田区在住の未就学児と保護者",
+    "hours": "自由遊びの「親子であ・そ・ぼ」は毎週火・水・木曜 10:00〜16:00（予約不要）",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "利用は墨田区在住者のみ。「おれんじたいむ」「こみかんたいむ」等は事前予約制。混雑時は入室を断る場合あり。2027年1月12日から8月末（予定）は工事のため同じ建物の3階305会議室へ仮移転し、「親子であ・そ・ぼ」は休止。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "墨田区横川コミュニティ会館（児童室）",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都墨田区横川五丁目9番1号",
+    "lat": 35.704929,
+    "lng": 139.816772,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/tamokuteki/communitykaikan/yokokawa/gaiyou.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/tamokuteki/communitykaikan/yokokawa/gaiyou.html",
+      "https://www.yokokomi.ashita-ba.co.jp/index.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/tamokuteki/library/riyou/zenkankyukan_201912.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/tamokuteki/communitykaikan/yokokawa/index.html"
+    ],
+    "fee": {
+      "free": true,
+      "text": "無料（行事により材料費等の実費負担あり）"
+    },
+    "ages": "幼児から高校生まで（児童室）",
+    "hours": "児童室: 月〜土 9:00〜19:00（18時以降は中高生優先・小学生は保護者同伴）、日祝 9:00〜17:00",
+    "closed": "年末年始（12月29日〜1月3日）、毎月第3木曜日（館内整理日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営地下鉄・京成線「押上駅」徒歩12分、横川三丁目（バス）徒歩5分",
+    "notes": "遊戯室（積木・輪投げなど幼児向け）・体育室・音楽室・図書室あり。図書室は図書館システム更新のため2026年12月17日〜2027年1月4日休室。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "亀戸児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都江東区亀戸二丁目1番19号",
+    "lat": 35.697941,
+    "lng": 139.82164,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.koto.lg.jp/281012/kodomo/hokago/jidokan/8765.html",
+    "sourceUrls": [
+      "https://www.city.koto.lg.jp/281012/kodomo/hokago/jidokan/8765.html",
+      "https://www.city.koto.lg.jp/281012/kodomo/hokago/jidokan/8754.html",
+      "http://fukushi.unchusha.com/kameido/index.html",
+      "http://fukushi.unchusha.com/kameido/overview.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "乳幼児から高校生世代まで（乳幼児は保護者の付き添いが必要）",
+    "hours": "月〜土 9:00〜19:00、第1・3・5日曜日・こどもの日・敬老の日 9:00〜18:00",
+    "closed": "第2・4日曜日、国民の祝日（こどもの日・敬老の日を除く）、年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "総武線「亀戸」駅と「錦糸町」駅のほぼ中間（運営者の案内）",
+    "notes": "2026年10月1日から入館システムを導入し、利用者全員に利用登録をお願いしている（登録フォームから申請）。乳幼児プログラムや定員のあるイベントは事前予約。午前は主に乳幼児親子向けの年齢別プログラムで、プログラムのない曜日は2階集会室をプレイルームとして開放。運営は社会福祉法人雲柱社。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "住吉子ども家庭支援センター（子育てひろば）",
+    "kind": "kosodate-hiroba",
+    "place": "indoor",
+    "address": "東京都江東区住吉一丁目9番8号（江東区こどもプラザ内）",
+    "lat": 35.687878,
+    "lng": 139.812607,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.koto.lg.jp/281012/shisetsuannai/kyoiku/sonotakodomo/supportcenter/sumiyoshimizube.html",
+    "sourceUrls": [
+      "https://www.city.koto.lg.jp/281012/shisetsuannai/kyoiku/sonotakodomo/supportcenter/sumiyoshimizube.html",
+      "https://www.city.koto.lg.jp/282011/kodomo/kodomoplaza.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "子育てひろば: 火〜土 10:00〜16:30（日・月・祝は16:00まで）",
+    "closed": "年末年始（12月29日〜1月3日）、館内整理日（毎月第3金曜日〈休日の場合は第3木曜日〉及び1月4日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東京メトロ半蔵門線・都営新宿線 住吉駅A1出口より徒歩7分、都バス「住吉一丁目」より徒歩3分",
+    "notes": "利用には登録が必要（区の案内）。こどもプラザ2階には赤ちゃんから遊べるプレイルームがある。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "江東区立こどもプラザ図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都江東区住吉一丁目9番8号（こどもプラザ1階、2階、3階の一部）",
+    "lat": 35.687878,
+    "lng": 139.812607,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.koto.lg.jp/586010/shisetsuannai/kyoiku/toshokan/14086.html",
+    "sourceUrls": [
+      "https://www.city.koto.lg.jp/586010/shisetsuannai/kyoiku/toshokan/14086.html",
+      "https://www.city.koto.lg.jp/282011/kodomo/kodomoplaza.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": "乳幼児から18歳向けの図書と子育て中の保護者向けの図書が中心",
+    "hours": "月〜土 9:00〜20:00、日・祝・休日・12月28日 9:00〜19:00",
+    "closed": "館内整理日（毎月第3金曜日〈祝休日の場合は第3木曜日〉・1月4日）、年末年始（12月29日〜1月3日）、特別整理期間",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "住吉駅（東京メトロ半蔵門線・都営新宿線）A1出口から徒歩7分、都営バス「住吉1丁目」徒歩3分",
+    "notes": "2階に絵本コーナー・児童図書コーナー（低学年）・子育て支援ブックコーナー・おはなしのへや、3階にティーンズコーナー。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "錦糸公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区錦糸四丁目15番1号",
+    "lat": 35.6988852,
+    "lng": 139.8163902,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park14.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park14.html",
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/riyou/mizushisetsu.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR総武線、東京メトロ半蔵門線「錦糸町駅」",
+    "notes": "面積約56,124㎡。主な施設: 複合遊具、ぶらんこ、砂場、健康器具、水施設、ユニバーサルトイレなど。「ちびっこ広場」は児童ゾーンと幼児ゾーンに分かれる。水施設（噴水・ドライミスト等）は7月〜9月の9:00〜16:00。ひがしんアリーナ（墨田区総合体育館）・野球場・テニスコートを併設。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "江東橋公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区江東橋二丁目4番11号",
+    "lat": 35.6938823,
+    "lng": 139.8116276,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park05.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park05.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR総武線、東京メトロ半蔵門線「錦糸町駅」",
+    "notes": "面積約2,180㎡。主な施設: 複合遊具、ぶらんこ、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "錦糸堀公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区江東橋四丁目17番1号",
+    "lat": 35.694687,
+    "lng": 139.8164066,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park07.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park07.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR総武線、東京メトロ半蔵門線「錦糸町駅」",
+    "notes": "面積約1,680㎡。主な施設: 砂場、カッパ像、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "竪川親水公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区江東橋一・二・四・五丁目地先",
+    "lat": 35.693226,
+    "lng": 139.8178071,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park61.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park61.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園（幼児コーナー等は利用時間あり）",
+    "closed": "なし（一部施設は12月29日〜1月3日休み）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR総武線、東京メトロ半蔵門線「錦糸町駅」",
+    "notes": "面積約11,962㎡。主な施設: 複合遊具、ぶらんこ、すべり台、ボール遊び広場、壁当てコーナー、テニスコート、グランドゴルフ場、バリアフリートイレなど。幼児コーナーは9:30〜17:00（12月29日〜1月3日は休み）。ボール遊び広場・壁当てコーナーは9:00〜19:00。テニスコート等は公園管理事務所で当日先着受付。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "日進公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区亀沢三丁目24番3号",
+    "lat": 35.6986198,
+    "lng": 139.8042961,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park10.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park10.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営バス（都02）「石原三丁目」、すみまるくん南部ルート「亀沢三丁目」",
+    "notes": "面積約2,749㎡。主な施設: 複合遊具、鉄棒、砂場、健康器具、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川東公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区横川五丁目2番8号",
+    "lat": 35.703099,
+    "lng": 139.8177518,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park41.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park41.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営バス（草24）（上26）「太平四丁目」",
+    "notes": "面積約1,048㎡。主な施設: 複合遊具、ぶらんこ、ジャングルジム、シーソー、砂場、健康器具、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "横川さんかく公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区横川五丁目9番31号",
+    "lat": 35.7056603,
+    "lng": 139.8178224,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park64.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park64.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "すみまるくん南部ルート「本所警察署・本所防災館入口」",
+    "notes": "面積約1,268㎡。主な施設: 複合遊具、砂場、健康器具、トイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "菊川公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区立川四丁目12番21号",
+    "lat": 35.6911755,
+    "lng": 139.8074672,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park03.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_park/park03.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "常時開園",
+    "closed": "なし",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営新宿線「菊川駅」、都営バス（業10）「立川」",
+    "notes": "面積約2,975㎡。主な施設: 複合遊具、ぶらんこ、すべり台、砂場、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "立川第二児童遊園（安兵衛公園）",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区立川三丁目15番6号",
+    "lat": 35.6919544,
+    "lng": 139.8039081,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park46.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park46.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "面積約973㎡。主な施設: 複合遊具、砂場、バリアフリートイレなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "柳島児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区横川五丁目10番13号",
+    "lat": 35.7049325,
+    "lng": 139.8163475,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park19.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park19.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "面積約515㎡。主な施設: 複合遊具、トンネル遊具、ぶらんこなど。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "菊川橋児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区菊川三丁目13番2号",
+    "lat": 35.6886885,
+    "lng": 139.8090763,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park07.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park07.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "面積約365㎡。主な施設: ぶらんこ、すべり台、シーソー、砂場など。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "きくはな児童遊園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都墨田区緑四丁目2番4号",
+    "lat": 35.693002,
+    "lng": 139.8086724,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park48.html",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/kouen/kunai_park_annai/sumida_zidouteien/park48.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "面積約308㎡。主な施設: ぶらんこ、すべり台、砂場など。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "都立猿江恩賜公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都江東区住吉二丁目、毛利二丁目",
+    "lat": 35.690895,
+    "lng": 139.817719,
+    "geoSource": "gsi",
+    "officialUrl": "https://tokyo-eastpark.com/parksearch/sarueonshi",
+    "sourceUrls": [
+      "https://tokyo-eastpark.com/parksearch/sarueonshi",
+      "https://www.tokyo-park.or.jp/park/sarue/index.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "都営新宿線・東京メトロ半蔵門線「住吉」A3出口徒歩2分、JR総武線「錦糸町」南口徒歩15分",
+    "notes": "面積約145,088㎡。遊具のある「冒険広場」は北園。じゃぶじゃぶ池（全長約300mの流れの上流）は7月1日〜9月30日に稼働。座標は毛利二丁目の代表点（国土地理院）。管理はアメニス東部地区グループ。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ひがしんアリーナ（墨田区総合体育館）屋内プール",
+    "kind": "pool",
+    "place": "indoor",
+    "address": "東京都墨田区錦糸四丁目15番1号（錦糸公園内）",
+    "lat": 35.6994157,
+    "lng": 139.8171884,
+    "geoSource": "official",
+    "officialUrl": "https://www.sumidacity-gym.com/",
+    "sourceUrls": [
+      "https://www.city.sumida.lg.jp/sisetu_info/sports/sumidacitygym.html",
+      "https://www.sumidacity-gym.com/",
+      "https://www.sumidacity-gym.com/guide/kojin/",
+      "https://www.sumidacity-gym.com/guide/kojin/price.php",
+      "https://www.sumidacity-gym.com/facility/",
+      "https://www.sumidacity-gym.com/access/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "プール2時間550円（3歳以上中学生以下は半額）、超過30分ごと130円"
+    },
+    "ages": "3歳以上（おむつが取れていること）。3歳〜小学3年生は18歳以上の保護者同伴（保護者1名につき子ども2名まで）",
+    "hours": "利用時間 9:00〜22:30（営業時間 8:30〜23:00）",
+    "closed": "毎月第3月曜日（祝日の場合は翌日）、年末年始（12月30日〜1月2日）、その他指定日",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR総武線「錦糸町駅」北口より徒歩約3分、東京メトロ半蔵門線「錦糸町駅」4番出口より徒歩約2分（錦糸公園内）",
+    "notes": "1階に屋内プール（メインプール・幼児用プール）。授乳室は3階。登録・予約不要。浮き輪は幼児用プールで直径1m以内のドーナツ型のみ可。",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "NICOPA（ニコパ）錦糸町マルイ",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都墨田区江東橋3-9-10 錦糸町マルイ4F",
+    "lat": 35.695351,
+    "lng": 139.813736,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.0101.co.jp/054/shop-guide/shop-detail.html?shop_id=5691",
+    "sourceUrls": [
+      "https://www.0101.co.jp/054/shop-guide/shop-detail.html?shop_id=5691",
+      "https://www.0101.co.jp/054/info/",
+      "https://www.0101.co.jp/054/facility/",
+      "https://www.0101.co.jp/054/access/"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "10:30〜20:00（キッズパーク「nico ground」は18:00閉店・最終受付17:40）",
+    "closed": null,
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR錦糸町駅南口および東京メトロ半蔵門線1番出口より徒歩1分（錦糸町マルイ）",
+    "notes": "キッズパーク「nico ground」とアミューズメント「NICOPA」。ボールプール付き木製ジャングルジム、インタラクティブゲーム、ベビーコーナーなど（店舗紹介）。授乳室・おむつ替えは錦糸町マルイの設備（4Fベビールーム【授乳室】・各階女子トイレ等のオムツ交換台）。ベビーカー貸出は1F（生後1か月〜4歳）。",
+    "verifiedAt": "2026-11-27"
+  }
+]

@@ -3,6 +3,7 @@
 //
 // 二段ゲート（2026-06-30 薄ページ剪定 step2）:
 //   1) spot系条件(asobiba/kouen/ame-asobiba)は従来方針どおり常に noindex。
+//      例外: 施設台帳のある駅の asobiba（実験47・2026-11-27・lib/station-asobiba.ts）。
 //   2) index 救済リスト（2026-06-30 の GSC 90日で表示実績のある combo・凍結）は無条件 index。
 //   3) 残りは「駅の重要度 × 内容の充実度」で判定:
 //      主要/ターミナル駅 かつ matched件数>=3 のみ index。
@@ -21,6 +22,7 @@ import { STATION_COND_ZERO_TRIAL } from './station-cond-zero-trial';
 import { STATION_COND_LOST_2026_10 } from './station-cond-lost-2026-10';
 import { STATION_COND_LIVE_RAINY } from './station-cond-live-rainy-2026-11';
 import { getConditionStores } from './station-cond-stores';
+import { isStationAsobibaLive } from './station-asobiba';
 import type { ConditionKind, StationConditionSlug } from './station-conditions';
 
 /** 内容充実度ゲートの最小 matched 件数。 */
@@ -64,7 +66,8 @@ export function isStationConditionIndexable(
   kind: ConditionKind,
   scale: StationScale | undefined,
 ): boolean {
-  if (kind === 'spot') return false;
+  // 駅×子供の遊び場は、公式で確かめた施設台帳のある駅だけ配信する（実験47・2026-11-27・lib/station-asobiba.ts）
+  if (kind === 'spot') return condition === 'asobiba' && isStationAsobibaLive(slug);
   // 店単位で作り直した面は、チェーン単位の件数（matchedCount）ではなく根拠のある店の数で決める
   const mode = stationConditionServeMode(slug, condition, scale);
   if (mode !== undefined) return mode !== null;
@@ -89,6 +92,7 @@ export function shouldRedirectStationCondition(
   kind: ConditionKind,
   scale: StationScale | undefined,
 ): boolean {
+  if (kind === 'spot' && condition === 'asobiba' && isStationAsobibaLive(slug)) return false;
   if (kind !== 'spot') {
     const mode = stationConditionServeMode(slug, condition, scale);
     if (mode !== undefined) return !mode && STATION_COND_DEMAND.has(`${slug}/${condition}`);

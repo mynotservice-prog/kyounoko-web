@@ -30,6 +30,7 @@ import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { isStationAsobibaLive, getStationAsobiba } from '@/lib/station-asobiba';
 import { getConditionStores } from '@/lib/station-cond-stores';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
@@ -341,7 +342,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const cond of STATION_CONDITIONS) {
       const k = getConditionKind(cond.slug);
       // 剪定(2026-06): スポット系条件は90日ほぼ表示0のため index/sitemapから除外。
-      if (k === 'spot') continue;
+      if (k === 'spot' && !(cond.slug === 'asobiba' && isStationAsobibaLive(s.slug))) continue;
       let matchedCount = 0;
       if (k === 'restaurant') {
         // 店単位で作り直した面（2026-10-28 Phase 2）は、配信の判定（isStationConditionIndexable→
@@ -350,6 +351,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const cMatched = filterChainsByCondition(chains, cond.slug);
         const iMatched = filterIndiesByCondition(indies, cond.slug);
         matchedCount = cMatched.length + iMatched.length;
+      } else if (cond.slug === 'asobiba' && isStationAsobibaLive(s.slug)) {
+        // 施設台帳型（実験47）: 台帳の件数で数え、同区の代表駅への集約はしない（駅ごとに中身が違う）
+        matchedCount = getStationAsobiba(s.slug)!.counts.total;
       } else {
         if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
         matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;

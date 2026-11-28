@@ -50,6 +50,15 @@ import { conditionEvidenceCount } from '@/lib/station-evidence';
 import { buildStoreItemListLd, buildConditionStoresLd } from '@/lib/station-ld';
 import { EvidenceChips, EVIDENCE_CHIPS_NOTE } from '@/components/station/EvidenceChips';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
+import {
+  getStationAsobiba,
+  isStationAsobibaLive,
+  listStationAsobibaLive,
+  buildAsobibaFaq,
+  buildAsobibaLd,
+} from '@/lib/station-asobiba';
+import { StationAsobibaView } from '@/components/station/StationAsobibaView';
+import { withSpotLinks } from '@/lib/station-asobiba-spot-link';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -94,6 +103,8 @@ export async function generateStaticParams() {
       }
     }
   }
+  // 駅×子供の遊び場（施設台帳のある駅だけ・実験47）
+  for (const s of listStationAsobibaLive()) params.push({ slug: s, condition: 'asobiba' });
   return params;
 }
 
@@ -108,6 +119,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: 'ページが見つかりません',
       robots: { index: false, follow: false },
+    };
+  }
+  // 駅×子供の遊び場（施設台帳型・実験47）。題は検索の語「<駅> 子供 遊び場」に合わせ、件数と公式で確かめた設備を出す
+  if (condition === 'asobiba' && isStationAsobibaLive(slug)) {
+    const a = getStationAsobiba(slug)!;
+    const nm = anyStation!.name;
+    const c = a.counts;
+    const parks = a.facilities.filter((f) => f.kind === 'park').length;
+    // 公式に無料と書かれた施設が3か所以上ある駅だけ、題に無料の数を出す（少ない数は弱く見える）
+    const mix = [c.free >= 3 ? `無料${c.free}` : null, c.indoor > 0 ? `屋内${c.indoor}` : null, parks > 0 ? `公園${parks}` : null].filter(Boolean).join('・');
+    const title = `${nm}駅周辺の子供の遊び場${c.total}か所｜${mix}・子連れで何分`;
+    const description = `${nm}駅から直線1.2km以内の子供の遊び場${c.total}か所を、区や施設の公式で1件ずつ確かめて駅に近い順に掲載。${c.free > 0 ? `公式に無料とある施設${c.free}か所、` : ''}屋内${c.indoor}か所、授乳室の記載${c.nursingRoom}か所。子連れで歩く目安の時間と料金・対象年齢つき。`;
+    const ogImages = [{ url: `/api/og?title=${encodeURIComponent(`${nm}駅周辺の子供の遊び場${c.total}か所`)}`, width: 1200, height: 630 }];
+    return {
+      title,
+      description,
+      alternates: { canonical: `/station/${slug}/asobiba` },
+      robots: INDEXABLE_ROBOTS,
+      openGraph: { title, description, type: 'article', url: `https://kyounoko.jp/station/${slug}/asobiba`, images: ogImages },
+      twitter: { card: 'summary_large_image', title, description, images: ogImages.map((i) => i.url) },
     };
   }
   const wardName = station ? (WARD_NAMES[station.ward] ?? '') : (anyStation?.regionLabel ?? '');
@@ -214,6 +245,10 @@ export default async function StationConditionPage({ params }: Props) {
   // 死蔵 long-tail は 404 で面から消す。spot 系は常に noindex（GSC90日でクリック約1）
   // なので全て 404。SEO への影響はゼロ。
   if (kind === 'spot') {
+    // 例外: 施設台帳のある駅の子供の遊び場（実験47・2026-11-27）
+    if (conditionSlug === 'asobiba' && isStationAsobibaLive(slug)) {
+      return <StationAsobibaPage slug={slug} />;
+    }
     notFound();
   }
 
@@ -873,5 +908,68 @@ export default async function StationConditionPage({ params }: Props) {
 
       </V2Frame>
     </>
+  );
+}
+
+
+/** 駅×子供の遊び場（施設台帳型・実験47・2026-11-27）。台帳は lib/station-asobiba-ledger.ts。 */
+function StationAsobibaPage({ slug }: { slug: string }) {
+  const station = getStationBySlug(slug)!;
+  const a = withSpotLinks(getStationAsobiba(slug)!);
+  const wardName = WARD_NAMES[station.ward] ?? '';
+  const faq = buildAsobibaFaq(station.name, a);
+  const faqLd = faqToJsonLd(faq);
+  const itemLd = buildAsobibaLd(station.name, a);
+  // 遊んだあとの食事: お子様メニューを確かめた店（店単位の面）から駅に近い順に5店
+  const kids = getConditionStores(slug, 'kids-menu');
+  const lunch = kids ? [...kids.stores].sort((x, y) => (x.m ?? 9999) - (y.m ?? 9999)).slice(0, 5) : [];
+  const lunchHref =
+    kids && isStationConditionIndexable(slug, 'kids-menu', kids.within1000, 'restaurant', station.scale)
+      ? `/station/${slug}/kids-menu`
+      : null;
+  const otherStations = listStationAsobibaLive()
+    .filter((s) => s !== slug)
+    .map((s) => ({ slug: s, name: findStationBySlug(s)?.name ?? s, total: getStationAsobiba(s)!.counts.total }));
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '駅別子連れランチ', item: 'https://kyounoko.jp/station' },
+      { '@type': 'ListItem', position: 3, name: `${station.name}駅`, item: `https://kyounoko.jp/station/${slug}` },
+      { '@type': 'ListItem', position: 4, name: '子供の遊び場', item: `https://kyounoko.jp/station/${slug}/asobiba` },
+    ],
+  };
+  return (
+    <V2Frame header="sub" active="home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
+      <div className="container">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <Link href="/station">駅別ランチ</Link>
+          <span className="sep">/</span>
+          <Link href={`/station/${slug}`}>{station.name}駅</Link>
+          <span className="sep">/</span>
+          <span>子供の遊び場</span>
+        </nav>
+      </div>
+      <section className="section">
+        <div className="container-narrow">
+          <StationAsobibaView
+            stationName={station.name}
+            stationSlug={slug}
+            wardName={wardName}
+            a={a}
+            faq={faq}
+            lunch={lunch}
+            lunchHref={lunchHref}
+            otherStations={otherStations}
+          />
+        </div>
+      </section>
+    </V2Frame>
   );
 }

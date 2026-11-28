@@ -1,0 +1,406 @@
+[
+  {
+    "name": "千住あずま児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都足立区千住東二丁目21番18号",
+    "lat": 35.745598,
+    "lng": 139.810455,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/juku/j-azuma.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/juku/shisetsu/jukucenter/027.html",
+      "https://www.city.adachi.tokyo.jp/juku/j-azuma.html",
+      "https://www.city.adachi.tokyo.jp/juku/k-kyoiku/kosodate/tsudoinoba-jidokan.html",
+      "https://www.city.adachi.tokyo.jp/juku/jidoukannkosodatesaronn.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし（ランドセル来館の事前登録・利用料は無料）"
+    },
+    "ages": "0歳から18歳未満の児童（児童館子育てサロンは0歳から就学前の乳幼児と保護者）",
+    "hours": "児童館 午前10時〜午後6時（土曜・春休み・夏休み・冬休みは午前9時開館）",
+    "closed": "祝日・館内整理日（月1回）・年末年始（12月29日〜1月3日）。日曜開館は現在休止中",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武牛田駅・京成関屋駅から徒歩3分",
+    "notes": "千住あずま住区センター内。平日10時〜13時は児童館ひろばで乳幼児親子向けの「児童館子育てサロン」。乳幼児専用の子育てサロン専用室あり（月〜土・開館時間内）。館内は靴を脱ぐスペースあり。エレベーター・バリアフリートイレあり",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住河原町児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都足立区千住河原町5番12号",
+    "lat": 35.744625,
+    "lng": 139.795685,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/juku/j-kawarachou.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/juku/shisetsu/jukucenter/028.html",
+      "https://www.city.adachi.tokyo.jp/juku/j-kawarachou.html",
+      "https://www.city.adachi.tokyo.jp/juku/k-kyoiku/kosodate/tsudoinoba-jidokan.html",
+      "https://www.city.adachi.tokyo.jp/juku/jidoukannkosodatesaronn.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし（ランドセル来館の事前登録・利用料は無料）"
+    },
+    "ages": "0歳から18歳未満の児童（児童館子育てサロンは0歳から就学前の乳幼児と保護者）",
+    "hours": "児童館 午前10時〜午後6時（土曜・春休み・夏休み・冬休みは午前9時開館）",
+    "closed": "日曜・祝日・館内整理日（月1回）・年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "京成千住大橋駅から徒歩5分、北千住駅西口から徒歩18分",
+    "notes": "千住河原町住区センター内。平日10時〜13時は児童館ひろばで乳幼児親子向けの「児童館子育てサロン」。駐車場なし。入口スロープ・バリアフリートイレあり（エレベーターなし）",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住本町児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都足立区千住五丁目6番2号",
+    "lat": 35.754871,
+    "lng": 139.803604,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/juku/j-senhon.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/juku/shisetsu/jukucenter/029.html",
+      "https://www.city.adachi.tokyo.jp/juku/j-senhon.html",
+      "https://www.city.adachi.tokyo.jp/juku/k-kyoiku/kosodate/tsudoinoba-jidokan.html",
+      "https://www.city.adachi.tokyo.jp/juku/jidoukannkosodatesaronn.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし（ランドセル来館の事前登録・利用料は無料）"
+    },
+    "ages": "0歳から18歳未満の児童（児童館子育てサロンは0歳から就学前の乳幼児と保護者）",
+    "hours": "児童館 午前10時〜午後6時（土曜・春休み・夏休み・冬休みは午前9時開館）",
+    "closed": "日曜・祝日・館内整理日（月1回）・年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "北千住駅西口から徒歩15分",
+    "notes": "千住本町住区センター内。平日10時〜13時は児童館ひろばで乳幼児親子向けの「児童館子育てサロン」。駐車場なし。バリアフリートイレあり（入口スロープ・エレベーターなし）",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住柳町児童館",
+    "kind": "jidoukan",
+    "place": "indoor",
+    "address": "東京都足立区千住柳町12番5号",
+    "lat": 35.753742,
+    "lng": 139.795959,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/juku/j-yanagichou.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/juku/shisetsu/jukucenter/030.html",
+      "https://www.city.adachi.tokyo.jp/juku/j-yanagichou.html",
+      "https://www.city.adachi.tokyo.jp/juku/k-kyoiku/kosodate/tsudoinoba-jidokan.html",
+      "https://www.city.adachi.tokyo.jp/juku/jidoukannkosodatesaronn.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に入館料の記載なし（ランドセル来館の事前登録・利用料は無料）"
+    },
+    "ages": "0歳から18歳未満の児童（児童館子育てサロンは0歳から就学前の乳幼児と保護者）",
+    "hours": "児童館 午前10時〜午後6時（土曜・春休み・夏休み・冬休みは午前9時開館）",
+    "closed": "日曜・祝日・館内整理日（月1回）・年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "北千住駅西口から徒歩20分",
+    "notes": "千住柳町住区センター内。平日10時〜13時は児童館ひろばで乳幼児親子向けの「児童館子育てサロン」。乳幼児専用の子育てサロン専用室あり（月〜土・開館時間内）。入口スロープ・エレベーター・バリアフリートイレあり",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "足立区立中央図書館",
+    "kind": "library",
+    "place": "indoor",
+    "address": "東京都足立区千住五丁目13番5号（学びピア21内）",
+    "lat": 35.756485,
+    "lng": 139.802155,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/toshokan/shisetsu/toshokan/010.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/toshokan/shisetsu/toshokan/010.html",
+      "https://www.city.adachi.tokyo.jp/toshokan/chuo_ohanashikai.html",
+      "https://www.city.adachi.tokyo.jp/documents/51913/01chuo.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "入館料の記載なし（おはなし会は無料・当日受付）"
+    },
+    "ages": null,
+    "hours": "午前9時〜午後8時（12月28日・1月4日は午後5時まで）",
+    "closed": "毎月最終日（土日祝の場合は直前の金曜）・第2月曜（祝日の場合は第3月曜）・年末年始（12月29日〜1月3日）・特別整理期間（年1回）",
+    "nursingRoom": true,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "北千住駅西口から徒歩15分（はるかぜ「学びピア前」下車徒歩0分）",
+    "notes": "2階に児童コーナー・おはなしのへや・子ども用トイレ・授乳室（館内図）。おはなし会は毎週水・金曜（0〜1歳、2〜3歳、3歳から、小学生向けに時間を分けて開催）。駐車場は有料",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住温水プール（スイミー）",
+    "kind": "pool",
+    "place": "indoor",
+    "address": "東京都足立区千住三丁目30番地（千寿本町小学校内）",
+    "lat": 35.751411,
+    "lng": 139.801468,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/sports/shisetsu/koen/035.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/sports/shisetsu/koen/035.html",
+      "https://adachi-swimmy.jp/",
+      "https://adachi-swimmy.jp/guidance/",
+      "https://adachi-swimmy.jp/guide/",
+      "https://adachi-swimmy.jp/news/502/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "大人（高校生以上）550円・子ども（2歳以上〜中学生）100円"
+    },
+    "ages": "満2歳以上でおむつの取れている方",
+    "hours": "受付 午前9時〜午後8時、遊泳 午前9時30分〜午後8時30分（最終入場午後8時）",
+    "closed": "毎月第3月曜（祝日の場合は翌日・変則月あり）・年末年始（12月29日〜1月3日）",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "JR北千住駅西口から徒歩5分",
+    "notes": "25mプールと幼児用プール（水深0.75m）。小学3年生以下は高校生以上の保護者の同伴が必要（保護者1人につき子ども3人まで）で、付き添いも水着着用。学校教育で使う時間は一般利用不可。駐車場なし",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "ピュアハートキッズランド ポンテポルタ千住",
+    "kind": "indoor-play",
+    "place": "indoor",
+    "address": "東京都足立区千住橋戸町1-13 ポンテポルタ千住2F",
+    "lat": 35.742153,
+    "lng": 139.795258,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.nikke-purekids.jp/shop/senju/",
+    "sourceUrls": [
+      "https://www.nikke-purekids.jp/shop/senju/",
+      "https://www.nikke-purekids.jp/price/"
+    ],
+    "fee": {
+      "free": false,
+      "text": "1日遊び放題 平日1,300円・休日1,600円（大人2人目以降1,100円）、30分ごと 平日450円・休日550円。0歳・1歳は無料。年会費330円（1家族）"
+    },
+    "ages": "小学生以下の子どもと保護者（中学生〜19歳は入場不可）",
+    "hours": "10:00〜19:00（最終入場は閉店30分前）",
+    "closed": "ポンテポルタ千住の休館日に準ずる",
+    "nursingRoom": true,
+    "diaperChange": true,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "京成本線千住大橋駅から徒歩1分（はるかぜ5号「千住大橋駅」徒歩1分）",
+    "notes": "完全会員制で会員証発行時に本人確認書類が必要。子どもだけ・大人だけの利用は不可。休日料金の時期別のお知らせあり。24か月までのベビーパーク、飲食物持ち込み可のカフェあり。駐車場は利用で3時間無料",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住ほんちょう公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住四丁目22番16号",
+    "lat": 35.752636,
+    "lng": 139.803986,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/senjyuhontyou.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/senjyuhontyou.html",
+      "https://www.city.adachi.tokyo.jp/k-iji/takosan.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "北千住駅西口から徒歩約5分",
+    "notes": "赤いタコさんすべり台あり（区の推奨年齢表示は6〜12歳）。千住宿の史跡・旧跡案内図あり",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住東町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住東二丁目20番17号",
+    "lat": 35.744892,
+    "lng": 139.809509,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/takosan.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/takosan.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "タコさんすべり台あり（区の推奨年齢表示は6〜12歳）",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住旭公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住旭町30番1号",
+    "lat": 35.750332,
+    "lng": 139.809326,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/takosan.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/takosan.html",
+      "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/jabjab.html",
+      "https://www.city.adachi.tokyo.jp/documents/57422/jzabuike-map.pdf"
+    ],
+    "fee": {
+      "free": true,
+      "text": "じゃぶじゃぶ池は無料（区公式）"
+    },
+    "ages": "じゃぶじゃぶ池はおむつを使わなくなった就学前の子ども",
+    "hours": "じゃぶじゃぶ池は例年7月上旬〜9月中旬の9:00〜13:00（定休なし）",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "山型のすべり台遊具あり（区「おもしろ遊具マップ2」）。じゃぶじゃぶ池は雨天・低温時などは中止、高校生以上の保護者の付き添いが必要、水遊びパンツ不可",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住大川町35番1号",
+    "lat": 35.756035,
+    "lng": 139.797333,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/jabjab.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/jabjab.html",
+      "https://www.city.adachi.tokyo.jp/documents/57422/jzabuike-map.pdf"
+    ],
+    "fee": {
+      "free": true,
+      "text": "じゃぶじゃぶ池は無料（区公式）"
+    },
+    "ages": "じゃぶじゃぶ池はおむつを使わなくなった就学前の子ども",
+    "hours": "じゃぶじゃぶ池は例年7月上旬〜9月中旬の9:00〜13:00",
+    "closed": "じゃぶじゃぶ池は月曜休み",
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "区のじゃぶじゃぶ池設置公園。雨天・低温時などは中止、高校生以上の保護者の付き添いが必要、水遊びパンツ不可。遊具の記載は公式になし",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住桜木町公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住桜木一丁目7番4号",
+    "lat": 35.750294,
+    "lng": 139.792587,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/ballplay.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/ballplay.html",
+      "https://www.city.adachi.tokyo.jp/documents/29617/bollplaypark1_202608-3.pdf",
+      "https://www.city.adachi.tokyo.jp/documents/29617/bollplaypark1_202608-4.pdf",
+      "https://www.city.adachi.tokyo.jp/documents/37777/senjusakuragi_kanryo.pdf"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": "ボール遊びコーナーは午前8時45分〜夕焼け放送まで（11〜1月は午後4時まで）・夜間閉鎖",
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": null,
+    "notes": "ボール遊びコーナー（砂入り人工芝・2024年11月改修）とバスケットリングあり。遊具の記載は公式になし",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "千住大川端公園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区千住曙町41番10号",
+    "lat": 35.741891,
+    "lng": 139.811799,
+    "geoSource": "official",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/013.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/013.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武牛田駅・京成関屋駅から徒歩5分",
+    "notes": "隅田川沿いの公園。4月中旬〜下旬にツツジ。駐車場なし。遊具の記載は公式になし",
+    "verifiedAt": "2026-11-27"
+  },
+  {
+    "name": "柳原千草園",
+    "kind": "park",
+    "place": "outdoor",
+    "address": "東京都足立区柳原一丁目21番26号",
+    "lat": 35.74506,
+    "lng": 139.81459,
+    "geoSource": "gsi",
+    "officialUrl": "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/yanagoharatigusaen.html",
+    "sourceUrls": [
+      "https://www.city.adachi.tokyo.jp/k-iji/shisetsu/koen/yanagoharatigusaen.html"
+    ],
+    "fee": {
+      "free": null,
+      "text": "公式に料金の記載なし"
+    },
+    "ages": null,
+    "hours": null,
+    "closed": null,
+    "nursingRoom": null,
+    "diaperChange": null,
+    "strollerOk": null,
+    "directFromStation": null,
+    "accessOfficial": "東武牛田駅・京成関屋駅から徒歩約5分",
+    "notes": "季節の草花を楽しむ庭園型の公園（春の広場・夏の庭・秋冬の山）。遊具の記載は公式になし",
+    "verifiedAt": "2026-11-27"
+  }
+]

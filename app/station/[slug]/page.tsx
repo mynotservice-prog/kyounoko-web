@@ -40,6 +40,7 @@ import {
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { isStationAsobibaLive, getStationAsobiba } from '@/lib/station-asobiba';
 import { getConditionStores, getFarVerifiedStores } from '@/lib/station-cond-stores';
 import { getAreaArticleLinks } from '@/lib/area-articles';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
@@ -779,7 +780,9 @@ export default async function StationPage({ params }: Props) {
                 k === 'restaurant'
                   ? filterChainsByCondition(chains, c.slug).length +
                     filterIndiesByCondition(indies, c.slug).length
-                  : filterSpotsByCondition(spotsAll, c.slug).length;
+                  : c.slug === 'asobiba' && isStationAsobibaLive(slug)
+                    ? getStationAsobiba(slug)!.counts.total
+                    : filterSpotsByCondition(spotsAll, c.slug).length;
               // 表示する件数: 設備の条件は根拠のある店の数（業態の条件は従来どおり）。リンクの有無は配信の判定のまま
               const shown =
                 k === 'restaurant'
