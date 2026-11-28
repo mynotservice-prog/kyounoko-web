@@ -27,7 +27,7 @@ seoRelated: 0sai-ikuji-kanzen-map
 legacyHero: /hero/summer-water-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（編集長）](/authors/nagamy)・最終更新 2026年5月
 
 > **このページの使い方**：夏の子育てを8つのテーマに整理しました。気になる項目から読んでください。各セクションの詳細記事リンクから、より深い情報にアクセスできます。
 

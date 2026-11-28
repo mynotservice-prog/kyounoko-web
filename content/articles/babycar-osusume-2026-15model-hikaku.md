@@ -21,7 +21,7 @@ lede: >-
 seoRelated: babycar-erabikata
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜2026年5月時点での指名買い4選
 

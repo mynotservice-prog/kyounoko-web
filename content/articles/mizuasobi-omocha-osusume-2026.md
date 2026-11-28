@@ -26,7 +26,7 @@ seoRelated: katei-pool-osusume-ranking-2026
 legacyHero: /hero/summer-water-03.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜年齢別の水遊びおもちゃ早見表
 

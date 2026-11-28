@@ -24,7 +24,7 @@ seoRelated: kodomo-netsuchusho-3sain-real-2026
 legacyHero: /hero/summer-water-02.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年5月
 
 ## 結論｜シーン別のおすすめタイプ早見表
 

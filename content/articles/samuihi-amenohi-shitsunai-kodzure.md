@@ -25,7 +25,7 @@ lede: >-
 seoRelated: amenohi-indoor-spots-tokyo-15
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年8月
+[著者: ながみー（東京23区在住）](/authors/nagamy)・最終更新 2026年8月
 
 ## 結論｜寒い日・雨の日の行き先は3ステップで決まる
 
