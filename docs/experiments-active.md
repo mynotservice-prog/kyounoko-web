@@ -1138,6 +1138,19 @@ PR #412 とその追加修正（全589駅の台帳更新、対応表の廃止、
 - **リンクの確認（2026-11-10・各1回だけ GET）**: fotowa のリンクは 302 → `fotowa.com`（HTTP 200）、OurPhoto のリンクは 302 → `our-photo.co`（HTTP 200）。どちらも広告主のトップに着いた
 - **交絡**: 七五三の山（11/15）の直前の反映で、クリックの大半を占める1本は反映後に減る見込み。`shichigosan-fukusou-shashin-kanzen` には本文中に同じ fotowa のリンクが以前からある（本文のリンクは `affiliate_click` を送らないので、物差しには入らない）。実験35（神社5本・未公開）が公開されると、関連記事欄と自動内部リンクで9本への流入が増えうる
 
+
+### 46. お祝いの面10本の本文に「自宅でお祝いする場合」のアフィリを1枠（2026-11-27 登録・COO 依頼（社長「変更案を作る」）・PR #511／**本番反映日: 台帳登録後に記入**（社長承認のあと。12/01 のコアアップデートの判定で凍結が解けた後）／**判定日 = 反映日 + 14日**）対照なし
+
+外食チェーンのお食い初め・七五三の記事の、本文の料金の節（見出しに「早見表」を含む最初の H2 の節）の直後に、宅配のお祝い膳（楽天・もしも経由）の1枠を出す。記事の md（本文・title・見出し・updatedAt）は変えない。枠は `lib/celebration-home-offer.ts` の明示の一覧で出し、部品は既存の `InlineItemCTA`（PR ラベル・`rel="sponsored nofollow noopener"`）。
+
+- **処置（10本・対照なし）**: `aiya-okuizome-shichigosan`・`ajino-mingei-okuizome-shichigosan`・`ganko-okuizome-shichigosan`・`kagonoya-okuizome-shichigosan`・`kisoji-okuizome-shichigosan`・`kitaohji-okuizome`・`kora-honten-okuizome-shichigosan`・`shoya-okuizome-shichigosan`・`tonden-okuizome-shichigosan`・`umenohana-okuizome-shichigosan`
+- **外した面と理由**: `bandotaro-okuizome-shichigosan`（実験32の処置）・`sagami-okuizome-shichigosan`（実験32の対照）・行事の記事9本（実験40の処置）・`bandotaro-kodzure-koryaku`（実験25の処置・お祝いの専用面でない）・noindex の記事
+- **計測**: GA4（533628127）のイベント `affiliate_click` のうち `placement` が `article-body-celebration-home` のもの（`item_id` は `celebration-home-oiwaizen-ranran`）。分母は処置10本の自然検索のセッション。窓は反映日の翌日から
+- **合否線は社内の資料で反映前に固定済み**（ここには書かない）
+- **凍結**: 反映日から判定日まで、10本の枠（商品・文言・位置）と題・説明文を変えない（事実訂正は可・記録する）。機械可読ブロック（`frozenSlugs`）には入れない（実験32・40 と同じ扱い。自動内部リンクの出方を動かさないため）
+- **申込型アフィリ第2便との関係**: この試しの判定が出るまで、処置10本を申込型アフィリ第2便（`lib/apply-offers.ts` の `APPLY_PLACEMENTS`）に入れない
+- **AdSense の確認**: AdSense の枠・設定は変えていない。反映した日に実機（スマホ幅）で、枠の直前・直後に In-article の自動広告が入っていないかを見る（2026-08-24 D-5・08-31 P-3）
+
 ### 37. 新しい商業施設の開業ウォッチ（5本まで）— 第1本 アトレ中野・第2本 新綱島MICCA（2026-11-06 登録・社長「新しい商業施設の開業ウォッチを試験で始めて」→ 決定と合否線は `~/.claude/company/reports/2026-11-06/DECISIONS.md` 末尾「きょうのこ 新しい商業施設の開業ウォッチ」/ **公開日 未定**（各記事のPRを COO の検収と社長の指示で fn-release がマージした日）／**判定日 = 5本目の公開日 + 6週**（それまでも各記事の6週目に読み、継続して判定し直す））
 
 首都圏で1〜3か月以内に開業する（または開業直後の）商業施設を週1回拾い、公式のフロアマップ・店舗一覧が出た施設から、子連れ目線の記事を1施設1本で書く。手本は開業直後に出した2本（`jiyugaoka-muse-square-kodzure`・`tofrom-yaesu-kodzure-guide`）。**この実験は攻めの枠の例外で、他の便の本数は減らさない**（DECISIONS）。番号の 35 は下書きPR #428（神社5本）、36 は期間限定商品の定点が使っているので 37 にした。

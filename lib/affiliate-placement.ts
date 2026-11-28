@@ -17,6 +17,7 @@ export type AffiliatePlacement =
   | 'article-end-offer' // 末尾の高単価 1 枠（申込型 > 生協 > 宿予約・ReservationCTA）
   | 'article-end-bridge' // 末尾の幼児食宅配ブリッジ（InlineItemCTA）
   | 'article-end-leisure' // 末尾のレジャー予約ブリッジ（ReservationCTA）
+  | 'article-body-celebration-home' // お祝いの面の本文・料金の節の直後「自宅でお祝いする場合」（InlineItemCTA・lib/celebration-home-offer.ts）
   // --- スポット /spot/[slug] ---
   | 'spot-reservation' // ネット予約・チケット
   | 'spot-travel' // 子連れ宿予約（レジャースポット）

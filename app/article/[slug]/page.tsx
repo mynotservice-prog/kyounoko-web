@@ -78,6 +78,7 @@ import { KkFooter } from '@/components/kk/KkFooter';
 import { KkFacilityInquiryLink } from '@/components/kk/KkFacilityInquiryLink';
 import { getArticlePr } from '@/lib/pr-placements';
 import { PrCard } from '@/components/pr/PrCard';
+import { getCelebrationHomeOffer } from '@/lib/celebration-home-offer';
 
 /**
  * 本文HTML内の <table> を横スクロール用ラッパで包む（2026-09 リニューアル）。
@@ -866,6 +867,17 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ? splitBodyAtSection(renderBodyHtml, articlePr.afterHeading) ?? [renderBodyHtml, '']
     : null;
 
+  // お祝いの面（lib/celebration-home-offer.ts の明示の一覧）: 料金の節（「早見表」の H2）の直後に
+  // 「自宅でお祝いする場合」のアフィリを1枠。おうち遊び・有償PR枠と重ねない。noindex・タイアップには出さない。
+  // 見出しが見つからない記事には出さない（本文末尾へは回さない）。
+  const celebrationHome =
+    homePlaySplit || prSplit || article.noindex || isTieupArticle(article.slug)
+      ? null
+      : getCelebrationHomeOffer(article.slug);
+  const celebrationSplit = celebrationHome
+    ? splitBodyAtSection(renderBodyHtml, celebrationHome.afterHeading)
+    : null;
+
   // 末尾CTA用の関連商品（3点）。
   const endRelatedItems = getRelatedItemsForArticle(
     article.slug,
@@ -1370,6 +1382,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
               <PrCard pr={articlePr.pr} />
               {prSplit[1] && (
                 <div className="prose" dangerouslySetInnerHTML={{ __html: prepareBody(prSplit[1]) }} />
+              )}
+            </>
+          ) : celebrationSplit && celebrationHome ? (
+            <>
+              <div className="prose" dangerouslySetInnerHTML={{ __html: prepareBody(celebrationSplit[0]) }} />
+              <InlineItemCTA
+                item={celebrationHome.item}
+                note={celebrationHome.note}
+                placement="article-body-celebration-home"
+              />
+              {celebrationSplit[1] && (
+                <div className="prose" dangerouslySetInnerHTML={{ __html: prepareBody(celebrationSplit[1]) }} />
               )}
             </>
           ) : (
