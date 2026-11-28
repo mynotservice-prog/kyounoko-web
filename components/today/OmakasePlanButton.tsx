@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { KkIcon } from '@/components/kk/KkIcon';
 import { trackEvent } from '@/lib/analytics';
+import { todayHref } from '@/lib/today-query';
 
 type Candidate = { slug: string; name: string };
 
@@ -33,16 +34,18 @@ export function OmakasePlanButton({
     setBusy(true);
     const pick = candidates[Math.floor(Math.random() * candidates.length)];
     const rnd = () => String(Math.floor(Math.random() * 3));
-    const qs = new URLSearchParams();
-    qs.set('station', pick.slug);
-    if (age) qs.set('age', age);
-    if (weather && weather !== 'any') qs.set('weather', weather);
     // 午前/お昼/午後の候補をランダムに選ぶ（buildOutingPlan 側で候補数で剰余されるため任意値でOK）。
-    qs.set('vm', rnd());
-    qs.set('vl', rnd());
-    qs.set('va', rnd());
+    // URL は正規の並び順で作る（0 は省かれる。lib/today-query.ts）。
+    const href = todayHref({
+      station: pick.slug,
+      age,
+      weather: weather && weather !== 'any' ? weather : undefined,
+      vm: rnd(),
+      vl: rnd(),
+      va: rnd(),
+    });
     trackEvent('today_plan_create', { method: 'omakase', station_slug: pick.slug });
-    router.push(`/today?${qs.toString()}`);
+    router.push(href);
   };
 
   if (candidates.length === 0) return null;

@@ -6,6 +6,12 @@ import {
   readAdminSessionCookie,
   verifyAdminSessionValue,
 } from '@/lib/admin-session';
+import { canonicalSearchQuery, canonicalTodayQuery } from '@/lib/today-query';
+import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
+import { KANSAI_STATIONS } from '@/lib/kansai-stations';
+import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
+import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
+import { REGIONAL_STATIONS } from '@/lib/regional-stations';
 
 /**
  * 1) ボットのクエリ総当たりからコストを守るハード遮断
@@ -88,6 +94,82 @@ function botQueryGuard(req: NextRequest): NextResponse | null {
   return res;
 }
 
+// ===== /today・/search のクエリを正規URLへ寄せる（2026-11-27）=====
+//
+// 背景: 2026-11 下旬にインフラ費が常設ガードの黄信号を超えた。Observability で /today と /search の
+// 関数呼び出しが突出し、キャッシュにほとんど当たっていなかった（名乗りのあるボットは大半当たっていた）。
+// 最大の原因は全ページのヘッダ等の Link 先読み（components/v2/V2Frame.tsx の DYNAMIC_NAV で
+// 止めた）。ここはその残りで、上の botQueryGuard（UA 判定）をすり抜ける呼び出しが、許可外の項目・値・
+// 並び順のゆれでキャッシュキーを増やす分を止める。
+//
+// ここでは UA を見ない。URL だけで決まる正規化なので、応答を保存されても他人に誤配信されない
+// （9/03 の「UA で変わる応答は no-store・302」とは前提が違う）。だから 308 でよい。
+//   /today: lib/today-query.ts の許可リストに無い項目・値は削り、並び順を固定、vm/vl/va は周期5に丸める。
+//           Googlebot も対象。正規化した先は今までどおり noindex・canonical=/today を返すので、
+//           8/17 の「Google に noindex を読ませる」は崩れない（許可外の URL は 308 で索引から外れる）。
+//   /search: q と p だけを残す。q が64文字を超えたら 400。q なしの一覧は CDN に1時間置く。
+//
+// Next.js のクライアント遷移（RSC）も同じ 308 を受けるが、fetch がリダイレクトを追い、正規URLの
+// RSC を受け取って画面遷移する（11/27 に next start で確認: 308 → 200 text/x-component）。
+// middleware からは RSC ヘッダと _rsc が見えない（Next が渡す前に外す）ので区別はしない。
+// 1往復増えないよう、人の導線（フォーム・駅チップ・おまかせ・別の候補・記事末尾の CTA）は
+// lib/today-query.ts の todayHref で正規形の URL を作る。
+let knownStations: Set<string> | null = null;
+function isKnownStation(slug: string): boolean {
+  knownStations ??= new Set(
+    [...TOKYO_STATIONS, ...KANSAI_STATIONS, ...KANAGAWA_STATIONS, ...SAICHI_STATIONS, ...REGIONAL_STATIONS].map(
+      (s) => s.slug,
+    ),
+  );
+  return knownStations.has(slug);
+}
+
+function canonicalRedirect(req: NextRequest, canonical: string): NextResponse | null {
+  const current = req.nextUrl.search.replace(/^\?/, '');
+  if (current === canonical) return null;
+  const url = req.nextUrl.clone();
+  url.search = canonical ? `?${canonical}` : '';
+  const res = NextResponse.redirect(url, 308);
+  // URL だけで決まる応答なので共有キャッシュに置いてよい。許可リストを直したときに古い 308 が
+  // 長く残らないよう1時間にとどめる（next.config.ts が /today に付ける24時間を上書きする）。
+  res.headers.set('Cache-Control', 'public, max-age=3600');
+  res.headers.set('CDN-Cache-Control', 'public, max-age=3600');
+  res.headers.set('Cloudflare-CDN-Cache-Control', 'public, max-age=3600');
+  return res;
+}
+
+function todayCanonicalGuard(req: NextRequest): NextResponse | null {
+  if (!req.nextUrl.search) return null;
+  return canonicalRedirect(req, canonicalTodayQuery(req.nextUrl.searchParams, { isKnownStation }));
+}
+
+function searchGuard(req: NextRequest): NextResponse {
+  const c = canonicalSearchQuery(req.nextUrl.searchParams);
+  if (c.kind === 'too-long') {
+    return new NextResponse('検索語が長すぎます（64文字まで）。', {
+      status: 400,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600',
+        'X-Robots-Tag': 'noindex',
+      },
+    });
+  }
+  const redirect = canonicalRedirect(req, c.query);
+  if (redirect) return redirect;
+  const res = NextResponse.next();
+  // 検索語なしの一覧（記事の五十音順＋ツール）はビルド時のデータだけで決まり、KV を読まない。
+  // force-dynamic のままでも CDN に置けるよう、/today と同じく middleware でヘッダを付ける。
+  // 検索語ありは KV のスポット上書きを即時に反映する設計なので、今までどおり毎回描画する。
+  if (!c.query) {
+    const cache = 'public, max-age=3600, stale-while-revalidate=86400';
+    res.headers.set('Cache-Control', 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400');
+    res.headers.set('CDN-Cache-Control', cache);
+    res.headers.set('Cloudflare-CDN-Cache-Control', cache);
+  }
+  return res;
+}
+
 // ===== /today のCDNキャッシュを日本時間の0時で切る =====
 //
 // /today の「今日の流れ」は、その日が定休日・営業期間外のスポットを候補から外す
@@ -156,7 +238,8 @@ export async function middleware(req: NextRequest) {
   const blocked = botQueryGuard(req);
   if (blocked) return blocked;
 
-  if (req.nextUrl.pathname === '/today') return todayDayBoundedCache();
+  if (req.nextUrl.pathname === '/today') return todayCanonicalGuard(req) ?? todayDayBoundedCache();
+  if (req.nextUrl.pathname === '/search') return searchGuard(req);
 
   const { pathname } = req.nextUrl;
   const isAdminPage = pathname.startsWith('/admin');

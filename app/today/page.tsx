@@ -43,6 +43,7 @@ import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { articleCategoryLabel } from '@/lib/article-categories';
 import { optimizedImgAttrs } from '@/lib/img-optimize';
+import { todayHref } from '@/lib/today-query';
 
 export const revalidate = 3600;
 
@@ -525,11 +526,11 @@ export default async function TodayPage({ searchParams }: Props) {
   const categoryChips = top ? buildRelatedCategoryChips(query, top) : [];
 
   // シェア用URL（条件付きで再現可能なURL）
-  const shareParams = new URLSearchParams();
+  const shareParams: Record<string, string> = {};
   Object.entries(query).forEach(([k, v]) => {
-    if (v && v !== 'any' && v !== 'all') shareParams.set(k, String(v));
+    if (v && v !== 'any' && v !== 'all') shareParams[k] = String(v);
   });
-  const shareUrl = `https://kyounoko.jp/today${shareParams.toString() ? `?${shareParams.toString()}` : ''}`;
+  const shareUrl = `https://kyounoko.jp${todayHref(shareParams)}`;
   const shareTitle = top ? `今日はこれ：${top.title}` : '今日の答え - きょうのこ';
 
   // 「今日の流れ（おでかけ1日プラン）」: 東京23区の駅/区が指定されたら、
@@ -592,7 +593,7 @@ export default async function TodayPage({ searchParams }: Props) {
       const indieHref = anchor.stationSlug
         ? `/station/${anchor.stationSlug}#section-indies`
         : undefined;
-      const planHref = `/today?${new URLSearchParams(outingParams).toString()}`;
+      const planHref = todayHref(outingParams);
       return (
         <V2Frame header="sub" active="today" backHref={planHref}>
           <div className="today-v3">
@@ -600,7 +601,7 @@ export default async function TodayPage({ searchParams }: Props) {
               <nav className="td3-crumb" aria-label="パンくず">
                 <Link href="/">ホーム</Link>
                 <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
-                <Link href={planHref}>今日の流れ</Link>
+                <Link href={planHref} prefetch={false}>今日の流れ</Link>
                 <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
                 <span>子連れで入れるお店</span>
               </nav>
@@ -666,10 +667,10 @@ export default async function TodayPage({ searchParams }: Props) {
       rainPlanRaw && planKey(rainPlanRaw) !== planKey(outingPlan) ? rainPlanRaw : null;
 
     // 「条件を変更する」: 年齢・天気を保ったまま条件入力状態へ戻る
-    const changeQs = new URLSearchParams();
-    if (query.age) changeQs.set('age', query.age);
-    if (query.weather && query.weather !== 'any') changeQs.set('weather', query.weather);
-    const changeHref = changeQs.toString() ? `/today?${changeQs.toString()}` : '/today';
+    const changeHref = todayHref({
+      age: query.age,
+      weather: query.weather && query.weather !== 'any' ? query.weather : undefined,
+    });
 
     return (
       <V2Frame header="sub" active="today" backHref="/today">
@@ -681,7 +682,7 @@ export default async function TodayPage({ searchParams }: Props) {
                 <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
                 <span>今日の流れ</span>
               </nav>
-              <Link href={changeHref} className="td3-changepill" data-ev="today_change_condition">
+              <Link href={changeHref} prefetch={false} className="td3-changepill" data-ev="today_change_condition">
                 <KkIcon name="swap" size={14} sw={2} />
                 条件を変更する
               </Link>
@@ -742,13 +743,12 @@ export default async function TodayPage({ searchParams }: Props) {
   const familyChips = getFamilyFriendlyStations()
     .filter((s) => s.scale !== 'terminal')
     .slice(0, 12);
-  const stationQs = (slug: string) => {
-    const qs = new URLSearchParams();
-    qs.set('station', slug);
-    if (query.age) qs.set('age', query.age);
-    if (query.weather && query.weather !== 'any') qs.set('weather', query.weather);
-    return qs.toString();
-  };
+  const stationHref = (slug: string) =>
+    todayHref({
+      station: slug,
+      age: query.age,
+      weather: query.weather && query.weather !== 'any' ? query.weather : undefined,
+    });
   // 「おまかせ」ボタン用の候補駅（今この画面に出ている駅チップと同じ集合）。
   const omakaseCandidates: { slug: string; name: string }[] = isTokyoPicker
     ? [...terminalChips, ...familyChips].map((s) => ({ slug: s.slug, name: s.name }))
@@ -809,7 +809,7 @@ export default async function TodayPage({ searchParams }: Props) {
             <div className="td3-stgroup-lab">主要ターミナル</div>
             <div className="td3-stlist">
               {terminalChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
+                <Link key={st.slug} href={stationHref(st.slug)} prefetch={false} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                   {st.name}
                 </Link>
               ))}
@@ -817,7 +817,7 @@ export default async function TodayPage({ searchParams }: Props) {
             <div className="td3-stgroup-lab">子育て世帯に人気の駅</div>
             <div className="td3-stlist">
               {familyChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
+                <Link key={st.slug} href={stationHref(st.slug)} prefetch={false} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                   {st.name}
                 </Link>
               ))}
@@ -826,7 +826,7 @@ export default async function TodayPage({ searchParams }: Props) {
         ) : metroChips ? (
           <div className="td3-stlist">
             {metroChips.map((st) => (
-              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
+              <Link key={st.slug} href={stationHref(st.slug)} prefetch={false} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                 {st.name}
               </Link>
             ))}

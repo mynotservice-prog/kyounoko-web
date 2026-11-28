@@ -23,6 +23,7 @@ import { getSpotReservationOffer } from '@/lib/reservation-cta';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { SavePlanButton } from './SavePlanButton';
 import { optimizedImgAttrs } from '@/lib/img-optimize';
+import { nextTodayVariant, todayHref } from '@/lib/today-query';
 
 function spotFacets(s: Spot): string[] {
   const f: string[] = [];
@@ -114,10 +115,9 @@ const VARIANT_PARAM: Record<OutingSlot['key'], string> = {
 };
 
 /** 現在のクエリ(params)を元に、上書き付きの /today URLを作る */
+// 正規の並び順で作る（middleware.ts が並び順・値のゆれを 308 で正規URLへ寄せるため、1往復増やさない）
 function buildHref(params: Record<string, string>, overrides: Record<string, string>): string {
-  const sp = new URLSearchParams(params);
-  for (const [k, v] of Object.entries(overrides)) sp.set(k, v);
-  return `/today?${sp.toString()}`;
+  return todayHref({ ...params, ...overrides });
 }
 
 function slotHref(slot: OutingSlot): string | undefined {
@@ -387,8 +387,8 @@ export function OutingPlanView({
   const reservationOffer = lunch ? getSpotReservationOffer('restaurant') : null;
   const saveLabel = `${anchorLabel}の1日プラン${ageLabel ? `（${ageLabel}）` : ''}`;
 
-  // 「別の流れを見る」= 全スロットの variant を +1
-  const bump = (k: string) => String(Number(params[k] ?? '0') + 1);
+  // 「別の流れを見る」= 全スロットの variant を +1（周期5で最初の候補に戻る。lib/today-query.ts）
+  const bump = (k: string) => nextTodayVariant(params[k]);
   const rerollHref = buildHref(params, {
     vm: bump('vm'),
     vl: bump('vl'),
@@ -446,13 +446,13 @@ export function OutingPlanView({
                   {(canSwap || slot.key === 'lunch') && (
                     <div className="td3-acts">
                       {canSwap && (
-                        <Link href={swapHref} scroll={false} className="td3-act" data-ev="today_swap" data-ev-slot={slot.key}>
+                        <Link href={swapHref} prefetch={false} scroll={false} className="td3-act" data-ev="today_swap" data-ev-slot={slot.key}>
                           <KkIcon name="swap" size={14} />
                           別の候補に変える
                         </Link>
                       )}
                       {slot.key === 'lunch' && (
-                        <Link href={buildHref(params, { slot: 'lunch' })} className="td3-act" data-ev="today_lunch_list">
+                        <Link href={buildHref(params, { slot: 'lunch' })} prefetch={false} className="td3-act" data-ev="today_lunch_list">
                           お昼だけ一覧で見る
                           <KkIcon name="arrow-right" size={14} />
                         </Link>
@@ -509,7 +509,7 @@ export function OutingPlanView({
             .filter(Boolean)
             .join(' → ')}
         />
-        <Link href={rerollHref} scroll={false} className="kk-btn outline td3-reroll" data-ev="today_reroll">
+        <Link href={rerollHref} prefetch={false} scroll={false} className="kk-btn outline td3-reroll" data-ev="today_reroll">
           <KkIcon name="refresh" size={16} />
           別の流れを見る
         </Link>

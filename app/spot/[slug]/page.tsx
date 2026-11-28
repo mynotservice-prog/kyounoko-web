@@ -1085,7 +1085,7 @@ export default async function SpotPage({ params }: Props) {
               footer={
                 stationSlug ? (
                   <p style={{ fontSize: 13.5, margin: '12px 2px 0' }}>
-                    <Link href={`/today?station=${stationSlug}`} className="sv3-textlink">
+                    <Link href={`/today?station=${stationSlug}`} prefetch={false} className="sv3-textlink">
                       <KkIcon name="arrow-right" size={15} sw={2} />
                       {stationLabel}駅を起点に、年齢・天気の条件を変えて1日プランを組み直す
                     </Link>

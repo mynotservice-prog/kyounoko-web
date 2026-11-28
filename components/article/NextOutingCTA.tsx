@@ -6,6 +6,7 @@ import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { getAreaName } from '@/lib/area';
 import type { AreaSlug } from '@/lib/area';
 import { trackEvent } from '@/lib/analytics';
+import { todayHref } from '@/lib/today-query';
 
 /**
  * 「次のお出かけ＝今日の流れ」CTA（リピート設計の中核）。
@@ -26,12 +27,8 @@ export function NextOutingCTA({
   area?: string;
   age?: string;
 }) {
-  const params = new URLSearchParams();
   const hasArea = !!area && area !== 'all';
-  if (hasArea) params.set('area', area as string);
-  if (age) params.set('age', age);
-  params.set('place', 'outside');
-  const href = `/today?${params.toString()}`;
+  const href = todayHref({ age, place: 'outside', area: hasArea ? area : undefined });
 
   let areaLabel = 'お住まいの地域';
   if (hasArea) {
@@ -81,6 +78,7 @@ export function NextOutingCTA({
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
           <Link
             href={href}
+            prefetch={false}
             onClick={() =>
               trackEvent('next_outing_click', { article_slug: slug, area: area ?? 'all' })
             }

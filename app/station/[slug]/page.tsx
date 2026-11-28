@@ -259,7 +259,7 @@ export default async function StationPage({ params }: Props) {
             </div>
 
             {/* 地域ブラウズ → メイン機能「今日の流れ」への接続（おでかけ1日プラン） */}
-            <Link href={`/today?station=${station.slug}`} className="kk-btn stv3-cta">
+            <Link href={`/today?station=${station.slug}`} prefetch={false} className="kk-btn stv3-cta">
               <KkIcon name="today" size={17} color="#fff" />
               この駅で「今日の流れ」を作る（午前あそぶ→お昼→午後）
               <KkIcon name="arrow-right" size={16} color="#fff" />
