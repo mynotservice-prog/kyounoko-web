@@ -131,6 +131,9 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'tokyo-station-babyroom', 'kodomo-renji-mushipan-5min-asa', 'tokyo-kichijoji-kodzure-lunch',
   'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo', 'showa-kinen-koen-kodzure',
   'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
+  // 実験43（チェーン記事の題と冒頭を設備・可否が先に来る形に・2026-11-25 登録）: 処置3本＋対照3本
+  'ohsho-kids-menu', 'kurasushi-kids-menu', 'isomaru-suisan-kodzure-koryaku',
+  'rairaitei-kodzure-koryaku', 'hamasushi-kids-menu', 'matsuya-kodzure-koryaku',
 ]);
 
 /**
@@ -140,8 +143,10 @@ export const FROZEN_TARGET_SLUGS = new Set([
  * 9/25 以降に足したルールのリンクが登録の時点で消え、処置・対照の描画が変わる。
  */
 const R1B_CUTOFF = '2026-10-25';
-const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
-  [
+/** 実験43（2026-11-25 登録）。登録日の翌日にして、登録の時点で既存のリンクが外れないようにする。 */
+const EXP43_CUTOFF = '2026-11-26';
+const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries([
+  ...[
     'reitou-shokuhin-ranking', 'kodomo-grape-itsukara', 'gyuuniku-ryouri-kodomo-okiniiri', 'babyfuku-tatami',
     'kodzure-deli-takeout-10', 'tokyo-kodomo-mushiyoke-spot', 'jiyugaoka-muse-square-kodzure',
     'kurasushi-stroller', 'kodomo-nuts-itsukara', 'puroland-kosodate-guide', 'haneda-t1-babyroom',
@@ -157,7 +162,11 @@ const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
     'tokyo-kichijoji-kodzure-lunch', 'kodomo-shokuji-tachiaruki-taisho', 'okashi-tezukuri-oyatsu-kodomo',
     'showa-kinen-koen-kodzure', 'rinyuushoku-frozen-gekkabetsu', 'tokyo-fuwafuwa-park-20',
   ].map((s) => [s, R1B_CUTOFF]),
-);
+  ...[
+    'ohsho-kids-menu', 'kurasushi-kids-menu', 'isomaru-suisan-kodzure-koryaku',
+    'rairaitei-kodzure-koryaku', 'hamasushi-kids-menu', 'matsuya-kodzure-koryaku',
+  ].map((s) => [s, EXP43_CUTOFF]),
+]);
 
 export function frozenCutoff(slug: string): string {
   return FROZEN_CUTOFF_BY_SLUG[slug] ?? FROZEN_INBOUND_CUTOFF;
