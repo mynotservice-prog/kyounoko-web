@@ -333,7 +333,7 @@ A. **カブト・クワガタは雨の翌朝が狙い目**。雨で樹液が流�
 - **トイレ・授乳室・ベビーベッドなどの設備** — 東京都公園協会の公式バリアフリーマップ（[小山田緑地（2026年2月更新）](https://www.tokyo-park.or.jp/park/oyamadaryokuchi/assets/files/oyamadaryokuchi_bf.pdf)・[長沼公園](https://www.tokyo-park.or.jp/park/naganuma/assets/files/naganuma_bf.pdf)・[大泉中央公園（2026年3月更新）](https://www.tokyo-park.or.jp/park/oizumi-chuo/assets/files/ooizumi-chuo_bf.pdf)、いずれもPDF）。
 - **工事・立入制限などの最新の注意** — [長沼公園のお知らせ](https://www.tokyo-park.or.jp/park/naganuma/news/2026/park_info_29.html)、[砧公園のお知らせ](https://www.tokyo-park.or.jp/park/kinuta/news/2026/2026_8_17.html)（2026年8月確認）。**この種の情報は数日で変わります。出発前にもう一度ご確認ください。**
 - **2026年9月4日の再確認** — 次の公式ページを再取得し、本文の記述と一致することを確かめました（一致した項目にのみ「2026年9月4日再確認」を付けています）。[多摩部の公園パートナーズ「滝山公園」](https://tamaparks.com/kouen/takiyama/)（駐車場なし・採集は原則禁止・バスのアクセス表記）、[小山田緑地](https://www.tokyo-park.or.jp/park/oyamadaryokuchi/)（駐車場無料・9:00〜17:00 夜間閉鎖）、[舎人公園](https://www.tokyo-park.or.jp/park/toneri/)（駐車場料金）、[葛西臨海公園](https://www.tokyo-park.or.jp/park/kasairinkai/)と[砧公園](https://www.tokyo-park.or.jp/park/kinuta/)（駐車場24時間営業）、[高尾登山電鉄「交通アクセス」](https://www.takaotozan.co.jp/trafic/)（市営駐車場の台数・料金、駅から清滝駅まで徒歩約5分）、[神代植物公園のお知らせ](https://www.tokyo-park.or.jp/park/jindai/news/2026/park_info_71.html)（観賞目的の園）。長沼公園は駐車場が無料であることのみ再確認でき、台数・時間は2026年8月の確認のままです。
-- **虫の出やすい時間帯・装備・子どもへの接し方・FAQ** — 運営者ながみー(2歳息子の父・会社員)の子育て経験と、広く共有されている一般的な情報をもとに整理したものです。特定の公的資料を出典としたものではありません。
+- **虫の出やすい時間帯・装備・子どもへの接し方・FAQ** — 運営者ながみー(2歳の子の父・会社員)の子育て経験と、広く共有されている一般的な情報をもとに整理したものです。特定の公的資料を出典としたものではありません。
 
 ※本記事に医師・専門家の監修は入っていません（[監修者紹介](/supervisors)）。虫刺され・熱中症など体調についての判断は**かかりつけの小児科医にご相談**ください。ハチに刺されて全身症状が出た場合など、緊急時はためらわず医療機関を受診してください。
 
