@@ -161,6 +161,42 @@ legacyHero: /hero/parent-child-01.webp
 - 児童館との違いは「親子で過ごす場」か「子どもが遊ぶ場」か、と対象年齢
 - 生後すぐから利用可、まずは気軽に訪問を
 
+## 東京23区の子育て支援センター（区の公式ページで確認）
+
+2026年11月27日時点で、23区それぞれの公式ページに書かれている内容をまとめました。料金や受付の方法は年度の途中でも変わることがあるので、使う前にお住まいの区のページで確かめてください。
+
+| 区 | 区での呼び方 | 区内の数 | 利用料・予約 | 区の案内 |
+| --- | --- | --- | --- | --- |
+| 千代田区 | 子育てひろば（児童館内） | 6（児童館・児童センター） | 無料。年度ごとに入館登録 | [区のページ](https://www.city.chiyoda.lg.jp/koho/kosodate/jidocenter/ichiran/jidocenter.html) |
+| 中央区 | 子育て交流サロン「あかちゃん天国」 | 7（実施場所） | 無料。登録・予約は区のページに記載なし | [区のページ](https://www.city.chuo.lg.jp/a0025/kosodate/kosodate/shien/akachantengoku/akachantengoku.html) |
+| 港区 | 子育てひろば あっぴぃ | 10（あっぴぃ） | 料金は区のページに記載なし。事前登録が必要 | [区のページ](https://www.city.minato.tokyo.jp/kodomo/kodomo/kodomo/shienshisetsu/apii.html) |
+| 新宿区 | 乳幼児親子のひろば（親と子のひろば など） | 8（親と子のひろば・地域子育て支援センター等） | 料金は区のページに記載なし。初回に利用登録（中落合・信濃町） | [区のページ](https://www.city.shinjuku.lg.jp/kodomo/kodomos01_000005.html) |
+| 文京区 | 子育てひろば・地域子育て支援拠点 | 10（区の施設6・地域団体4） | 無料。予約の要否は施設ごとに異なる | [区のページ](https://www.city.bunkyo.lg.jp/b022/p001456/index.html) |
+| 台東区 | 子ども家庭支援センター「あそびひろば」 | 4（あそびひろば） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/shisetsu_asobiba/kodomokateishien/goannai.html) |
+| 墨田区 | 子育てひろば | 2（子育てひろば） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.sumida.lg.jp/sisetu_info/kosodate/kosodatehiroba/kosodate_hiroba.html) |
+| 江東区 | 子ども家庭支援センター（子育てひろば） | 8（子ども家庭支援センター） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.koto.lg.jp/282011/kodomo/kosodate/service/5874.html) |
+| 品川区 | 児童センター（親子のひろば） | 25（児童センター） | 料金は区のページに記載なし。初回に「しなログ」登録 | [区のページ](https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kyoiku/hpg000000194.html) |
+| 目黒区 | 子育てふれあいひろば | 16（区のPDFの表） | 料金は区のページに記載なし。11か所は予約なし、5か所は予約制 | [区のページ](https://www.city.meguro.tokyo.jp/documents/3844/hureaihiroba.pdf) |
+| 大田区 | キッズな子育てひろば・子育てひろば | 10（キッズな4・子育てひろば6） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.ota.tokyo.jp/seikatsu/kodomo/shien/kodomo_katei_shien_c/kosodatehiroba.html) |
+| 世田谷区 | おでかけひろば | 51（区の一覧表） | 無料（イベントは実費の場合あり）。予約が必要な施設もあり | [区のページ](https://www.city.setagaya.lg.jp/02413/1221.html) |
+| 渋谷区 | 子育てひろば（子育て支援センター など） | 20（支援センター5・ひろば4・保育園等11） | 支援センター等は無料。登録は区のページに記載なし | [区のページ](https://www.city.shibuya.tokyo.jp/kodomo/hoiku/kosodate-hiroba/kosodate_hiroba.html) |
+| 中野区 | 子育てひろば | 9（ほかに児童館でも実施） | 無料。登録・予約は区のページに記載なし | [区のページ](https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/mokuteki/odekake/kosodatehiroba/kosodatehiroba.html) |
+| 杉並区 | 子ども・子育てプラザ／つどいの広場 | 10（プラザ7・つどいの広場3） | プラザは区のページに記載なし。つどいの広場（宮前）は無料・予約不要 | [区のページ](https://www.city.suginami.tokyo.jp/s059/1051.html) |
+| 豊島区 | 子ども家庭支援センター「親子遊び広場」／区民ひろば | 区のページからは数えられず | 料金は区のページに記載なし。初回に登録 | [区のページ](https://www.city.toshima.lg.jp/265/kosodate/kosodate/shiencenter/001746/index.html) |
+| 北区 | 北区子育てひろば | 3（民設のひろば） | 無料（一部は材料費）。登録は区のページに記載なし | [区のページ](https://www.city.kita.lg.jp/children-edu/childcare/1002833/1018249/1002902.html) |
+| 荒川区 | 子育て交流サロン | 23（子育て交流サロン） | 無料。登録は区のページに記載なし（一部の催しは要予約） | [区のページ](https://www.city.arakawa.tokyo.jp/a035/kosodate/kosodateshien/koryusalon.html) |
+| 板橋区 | CAP'S（児童館）の乳幼児子育て支援 | 26（児童館） | 料金は区のページに記載なし。入館のたび入館票に記入 | [区のページ](https://www.city.itabashi.tokyo.jp/kosodate/asobiba/jidoukan/1004483.html) |
+| 練馬区 | 子育てのひろば（ぴよぴよ・民設） | 30（ぴよぴよ11・民設19） | 無料。予約不要 | [区のページ](https://www.city.nerima.tokyo.jp/kosodatekyoiku/kodomo/asobi/hiroba.html) |
+| 足立区 | 子育てサロン | 14（拠点型等。ほかに児童館52） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.adachi.tokyo.jp/juku/k-kyoiku/kosodate/tsudoinoba-salon.html) |
+| 葛飾区 | 子育てひろば（主に保育園・こども園内） | 45（区の一覧PDF） | 料金は区のページに記載なし（イベントは実費の場合あり）。登録も記載なし | [区のページ](https://www.city.katsushika.lg.jp/kosodate/1000056/1030197/1002340/1002458.html) |
+| 江戸川区 | 子育てひろば | 20（子育てひろば） | 料金・登録は区のページに記載なし | [区のページ](https://www.city.edogawa.tokyo.jp/e047/kuseijoho/gaiyo/shisetsuguide/bunya/kosodate/hiroba/index.html) |
+
+- 「区内の数」は区ごとに数えたものが違います。千代田区・品川区・板橋区は児童館（児童センター）の数、足立区は子育てサロン（ほかに児童館での実施あり）、世田谷区・練馬区・葛飾区は親子向けのひろばの数です。（ ）内に何を数えたかを書いたので、区どうしの数は比べずに読んでください。
+- 呼び方も対象も区によって違います。児童館の中や子ども家庭支援センターの中にある「ひろば」も含めました。対象は「0〜3歳ごろ」の区と「就学前まで」の区があります。
+- 数には休んでいる施設も入っています。品川区は1館が休館中、足立区は1か所（千住）が改修で休室中、江戸川区は3か所が「現在は中止」です。
+- 「区のページに記載なし」は、料金がかかる、または登録がいらない、という意味ではありません。港区・足立区のページで料金が書かれているのは一時預かりの分だけで、ひろばの利用料ではありません。
+- 江東区（住吉の開設日）と新宿区（子ども家庭支援センターの数）は、区のページ同士で記載が異なります。新宿区の数は新しい方のページによります。
+
 ## よくある質問
 
 ### Q. 子育て支援センターとは？簡単に言うと？

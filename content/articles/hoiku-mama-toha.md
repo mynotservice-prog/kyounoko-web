@@ -115,6 +115,42 @@ legacyHero: /hero/parent-child-01.webp
 | 申込窓口 | 自治体 | 自治体 |
 | 保育料 | 認可と同水準 | 認可水準 |
 
+## 東京23区の保育ママ（区の公式ページで確認）
+
+2026年11月27日時点で、23区それぞれの公式ページに書かれている内容をまとめました。料金や受付の方法は年度の途中でも変わることがあるので、使う前にお住まいの区のページで確かめてください。
+
+| 区 | 実施の形 | 保育料 | 申し込み | 区の案内 |
+| --- | --- | --- | --- | --- |
+| 千代田区 | 区のページに記載なし（現行の施設一覧に掲載なし） | 区のページに記載なし | 区のページに記載なし | [区のページ](https://www.city.chiyoda.lg.jp/koho/kosodate/hoiku/ninka/index.html) |
+| 中央区 | 認可の制度あり。登録者がいないため利用できない（区が明記） | 利用できないため該当なし | 利用できないため該当なし | [区のページ](https://www.city.chuo.lg.jp/a0021/kosodate/kosodate/hoikuen/hoiku/tiikigata/kateitekihoikujigyou.html) |
+| 港区 | 実施なし（区が明記） | 該当なし | 該当なし | [区のページ](https://www.city.minato.tokyo.jp/documents/181738/goannnai09.pdf) |
+| 新宿区 | 認可 | 区（市町村）民税額に応じた額 | 区に申し込む（認可保育園等と同様） | [区のページ](https://www.city.shinjuku.lg.jp/kodomo/file04_07_00028.html) |
+| 文京区 | 認可 | 認可保育園と同様。令和7年9月から基本保育料は無償 | 区の認可保育所等の申し込みへ案内 | [区のページ](https://www.city.bunkyo.lg.jp/b023/p001815.html) |
+| 台東区 | 認可 | 認可保育園と同額 | 区に申し込む（認可保育園と同じ手続き） | [区のページ](https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hoiku_youjikyouiku/hoikutakuji/tiikigata/tiikigata.html) |
+| 墨田区 | 認可 | 通常の保育料は無償 | 区（子ども施設課入園係）に申し込む | [区のページ](https://www.city.sumida.lg.jp/kosodate_kyouiku/kosodate_site/azukeru/hoikuen/ninka_hoiku/hoikumama294.html) |
+| 江東区 | 区独自（家庭福祉員） | 月額47,000円 | 家庭福祉員と直接契約 | [区のページ](https://www.city.koto.lg.jp/280307/kodomo/hoiku/shisetsu/5911.html) |
+| 品川区 | 認可 | 第1子以降の保育料は無償 | 区に申し込む（認可保育園と同様） | [区のページ](https://www.city.shinagawa.tokyo.jp/kodomo/hoikuenyochien/1002036/1002053.html) |
+| 目黒区 | 区独自（家庭福祉員） | 月額25,000円 | 区の窓口に申し込む（利用調整は区） | [区のページ](https://www.city.meguro.tokyo.jp/hoiku/kosodatekyouiku/hoikuennado/fukushiin.html) |
+| 大田区 | 区独自（家庭福祉員） | 月額23,000円（諸雑費を含む） | 区に申し込み、区が保育ママを紹介 | [区のページ](https://www.city.ota.tokyo.jp/seikatsu/kodomo/hoiku/hoikushisetsu_nyukibo/hoikumama.html) |
+| 世田谷区 | 両方（区独自の保育ママと認可） | 区独自: 月額25,000円／認可: 令和7年9月から無償 | 区独自は保育ママと直接契約／認可は区に申し込む | [区のページ](https://www.city.setagaya.lg.jp/02243/1512.html) |
+| 渋谷区 | 認可（入園案内に事業の種類として記載のみ） | 区のページに記載なし | 区のページに記載なし | [区のページ](https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/ec8399edb94d47bcb67b39e60c023835/R9_nyuuennannnai.pdf) |
+| 中野区 | 認可 | 区内に住むすべての子の利用料が無償 | 区に申し込み、利用調整の後に事業者と契約 | [区のページ](https://www.city.tokyo-nakano.lg.jp/kosodate/kosodatesite_ohirune/mokuteki/hoikuen/hoikuen/goannnai/jigyosyoichiran.html) |
+| 杉並区 | 両方（区独自の家庭福祉員と認可） | 区独自: 第1子から基本料金が無料／認可: 無料 | 区独自は直接契約／認可は区に申し込む | [区のページ](https://www.city.suginami.tokyo.jp/s058/1092.html) |
+| 豊島区 | 認可 | 令和7年9月から無償 | 区に申し込む（認可保育所と同じ） | [区のページ](https://www.city.toshima.lg.jp/documents/1921/r8-nyuuennoshiori.pdf) |
+| 北区 | 認可 | 認可保育園と同額 | 区に申し込む（認可保育園と同じ手続き） | [区のページ](https://www.city.kita.lg.jp/children-edu/childcare/1002975/1002976/1002999/1003735.html) |
+| 荒川区 | 両方（区独自の家庭福祉員と認可） | 区独自: 0歳児 月額25,000円・1歳〜3歳未満 月額20,000円／認可: 認可保育園と同様 | 区独自は区の窓口から紹介／認可は区に申し込む | [区のページ](https://www.city.arakawa.tokyo.jp/a037/kosodate/hoikuen/annai.html) |
+| 板橋区 | 認可（家庭福祉員・ベビールーム） | 令和7年9月から無償 | 区に申し込む（区が入所を決める） | [区のページ](https://www.city.itabashi.tokyo.jp/_res/projects/default_project/_page_/001/066/134/r8/r9tebikiallpage.pdf) |
+| 練馬区 | 認可 | 令和7年9月以降、保育料は無料 | 区に申し込む | [区のページ](https://www.city.nerima.tokyo.jp/kosodatekyoiku/kodomo/hoiku/hoikuen/nyuuen/moushikomi/siori-sisetu.files/R9hoikuriyougoannnai.pdf) |
+| 足立区 | 認可 | 令和7年9月から第1子（0〜2歳児クラス・課税世帯）も無料 | 区に申し込む | [区のページ](https://www.city.adachi.tokyo.jp/kodomo-nyuuen/k-kyoiku/kosodate/hoikujo-mama-shigoto.html) |
+| 葛飾区 | 認可 | 無料 | 区に申し込む（事前に事業所との面接が必要） | [区のページ](https://www.city.katsushika.lg.jp/kosodate/1000056/1002333/1027345.html) |
+| 江戸川区 | 区独自（保育ママ）。認可は区内に該当なし（区が明記） | 基本保育料は無償。雑費は月額3,000円 | 区の窓口で説明を受けて申し込む | [区のページ](https://www.city.edogawa.tokyo.jp/e048/kosodate/kosodate/hoiku/nitijou/mama/shokai.html) |
+
+- 「認可」は児童福祉法の家庭的保育事業です。区の利用調整を経て、保育料は認可保育園と同じ扱いになります。「区独自」は、区が認定して月額の保育料を決めている制度です（区の分類は認可外）。呼び方は保育ママ・家庭福祉員・家庭的保育者など、区によって違います。
+- 対象年齢は区で違います。たとえば江戸川区は生後9週（57日）目〜4月1日時点で0歳、大田区は委託開始時に生後43日以上2歳未満、目黒区は保育開始月の初日に生後6か月以上〜3歳未満です。
+- 「無償」「無料」は基本の保育料のことです。時間外や延長の料金、雑費、給食費の扱いは区によって違います。荒川区の区独自の保育料は、第1子の無償化に伴って令和7年9月から減額されています（表の額は区のページに書かれた基本の月額）。
+- 杉並区の区独自の保育料は、区のページ同士で記載が異なります（月額23,000円・25,000円と書かれたページもあります）。表には新しいページの記載を載せました。
+- 中央区は登録者がいないため利用できません。世田谷区の区独自の保育ママは、区の一覧に現在掲載がありません。
+
 ## よくある質問
 
 **Q1. 何歳まで預けられる？**
