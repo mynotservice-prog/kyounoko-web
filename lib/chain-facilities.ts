@@ -581,7 +581,8 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       allergenInfo: V(true, 'ブランド別のアレルギー情報を公開', { sourceUrl: 'https://www.monteroza.co.jp/company/anzen/#allergy', verifiedAt: '2026-10-24', method: 'official-site', scope: 'brand' }),
     },
     extras: [
-      { label: '個室', value: '公式店舗検索で「個室」の表示は322店中268店（2026年9月11日集計）' },
+      { label: '個室', value: '公式店舗検索で「個室」の表示は326店中271店（2026年11月25日集計）' },
+      { label: 'キッズルーム・キッズスペース', value: '公式店舗検索でキッズルーム（個室）183店・キッズスペース（オープン）42店、どちらかは326店中191店（2026年11月25日集計）' },
     ],
   },
   {
