@@ -290,6 +290,25 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       },
     ],
   },
+  // 空港のベビールーム記事の noindex 解除（2026-11-25 社長承認・公式で再照合）。駅TOP→記事の導線
+  'haneda-airport-t2': {
+    tldrExtraItems: [
+      {
+        href: '/article/haneda-t2-babyroom',
+        label: '羽田空港第2ターミナルの授乳室',
+        value: 'ベビールーム21か所（保安検査の前9・後12）を公式の場所一覧で整理',
+      },
+    ],
+  },
+  'haneda-airport-t3': {
+    tldrExtraItems: [
+      {
+        href: '/article/haneda-t3-babyroom',
+        label: '羽田空港第3ターミナルの授乳室',
+        value: 'ベビールーム21か所のうち出国前に使えるのは7か所（公式の場所一覧）',
+      },
+    ],
+  },
   // =========================================================================
   // 越谷レイクタウン
   //
